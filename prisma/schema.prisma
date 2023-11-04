@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+}
+
+model authors {
+  id     String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  bd_ids String[] @db.Uuid
+  bds    bds[]
+  name   String   @unique @db.VarChar(255)
+}
+
+model bds {
+  id              String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  event           events   @relation(fields: [event_ids], references: [id])
+  event_ids       String   @db.Uuid
+  authors         authors  @relation(fields: [author_ids], references: [id])
+  author_ids      String[] @db.Uuid
+  title           String   @unique @db.VarChar(255)
+  publicher       String?
+  publishing_year Int?
+}
+
+model customers {
+  id        String @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name      String @db.VarChar(255)
+  email     String @db.VarChar(255)
+  image_url String @db.VarChar(255)
+}
+
+model events {
+  id       String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name     String   @unique @db.VarChar(255)
+  date     DateTime @unique @db.Date
+  bd_ids   String[] @db.Uuid
+  bds      bds[]
+  fb_event String?
+}
+
+model invoices {
+  id          String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  customer_id String   @db.Uuid
+  amount      Int
+  status      String   @db.VarChar(255)
+  date        DateTime @db.Date
+}
+
+model revenue {
+  month   String @unique @db.VarChar(4)
+  revenue Int
+}
+
+model users {
+  id       String @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name     String @db.VarChar(255)
+  email    String @unique
+  password String
+}

@@ -86,3 +86,11 @@ export type InvoiceForm = {
   amount: number;
   status: 'pending' | 'paid';
 };
+
+export type EventsTable = {
+  id: string;
+  name: string;
+  date: Date
+  bd_ids: string[];
+  fb_event: string;
+}

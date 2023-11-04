@@ -1,4 +1,5 @@
 import { sql } from '@vercel/postgres';
+import prisma from '../../../lib/prisma';
 import {
   CustomerField,
   CustomersTable,
@@ -7,6 +8,7 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
+  EventsTable,
 } from './definitions';
 import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
@@ -231,5 +233,16 @@ export async function getUser(email: string) {
   } catch (error) {
     console.error('Failed to fetch user:', error);
     throw new Error('Failed to fetch user.');
+  }
+}
+
+export async function fetchFilteredEvents(query: string) {
+  noStore();
+  try {
+    const events = await prisma.events
+    return events;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch customer table.');
   }
 }
