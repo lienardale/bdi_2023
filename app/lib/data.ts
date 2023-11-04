@@ -1,5 +1,5 @@
 import { sql } from '@vercel/postgres';
-import prisma from '../../../lib/prisma';
+import { PrismaClient } from '@prisma/client'
 import {
   CustomerField,
   CustomersTable,
@@ -238,9 +238,10 @@ export async function getUser(email: string) {
 
 export async function fetchFilteredEvents(query: string) {
   noStore();
+  const prisma = new PrismaClient()
   try {
-    const events = await prisma.events
-    return events;
+    const events = await prisma.events.findMany()
+    return events as EventsTable[];
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch customer table.');

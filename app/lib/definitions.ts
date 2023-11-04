@@ -87,10 +87,29 @@ export type InvoiceForm = {
   status: 'pending' | 'paid';
 };
 
+export type AuthorsTable = {
+  id: string;
+  bd_ids: string[];
+  bds: BdsTable[];
+  name:string;
+}
+
+export type BdsTable = {
+  id:string;
+  event_ids: string;
+  event: EventsTable
+  author_ids: string[];
+  authors: AuthorsTable[]
+  title: string;
+  publisher: string;
+  publishing_year: number;
+}
+
 export type EventsTable = {
   id: string;
   name: string;
   date: Date
   bd_ids: string[];
+  bds: BdsTable[];
   fb_event: string;
 }
