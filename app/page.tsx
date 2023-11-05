@@ -1,4 +1,4 @@
-import AcmeLogo from '@/app/ui/acme-logo';
+import AcmeLogo from '@/app/ui/bdi-logo';
 import styles from './ui/home.module.css';
 import { lusitana } from './ui/fonts';
 import Image from 'next/image';

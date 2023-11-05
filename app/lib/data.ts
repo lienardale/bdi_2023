@@ -9,9 +9,11 @@ import {
   User,
   Revenue,
   EventsTable,
+  BdsTable,
 } from './definitions';
 import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
+import prisma from './prisma';
 
 export async function fetchRevenue() {
   // Add noStore() here prevent the response from being cached.
@@ -59,29 +61,29 @@ export async function fetchCardData() {
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
     // how to initialize multiple queries in parallel with JS.
-    const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
-    const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
-    const invoiceStatusPromise = sql`SELECT
-         SUM(CASE WHEN status = 'paid' THEN amount ELSE 0 END) AS "paid",
-         SUM(CASE WHEN status = 'pending' THEN amount ELSE 0 END) AS "pending"
-         FROM invoices`;
-
+    const nextEvent = prisma.events.findFirst({
+      orderBy: {
+        date: 'desc',
+      },
+    });
+    const totBdNb = prisma.bds.count()
+    const totAuthNb = prisma.authors.count()
     const data = await Promise.all([
-      invoiceCountPromise,
-      customerCountPromise,
-      invoiceStatusPromise,
+      nextEvent,
+      totBdNb,
+      totAuthNb,
     ]);
 
-    const numberOfInvoices = Number(data[0].rows[0].count ?? '0');
-    const numberOfCustomers = Number(data[1].rows[0].count ?? '0');
-    const totalPaidInvoices = formatCurrency(data[2].rows[0].paid ?? '0');
-    const totalPendingInvoices = formatCurrency(data[2].rows[0].pending ?? '0');
+    const numberOfBds = data[1];
+    const numberOfAuthors = data[2];
+    const nextBdiDate = data[0]?.date.toDateString() || 0;
+    const nextBdiName = data[0]?.name || 0;
 
     return {
-      numberOfCustomers,
-      numberOfInvoices,
-      totalPaidInvoices,
-      totalPendingInvoices,
+      numberOfAuthors,
+      numberOfBds,
+      nextBdiDate,
+      nextBdiName,
     };
   } catch (error) {
     console.error('Database Error:', error);
@@ -240,10 +242,58 @@ export async function fetchFilteredEvents(query: string) {
   noStore();
   const prisma = new PrismaClient()
   try {
-    const events = await prisma.events.findMany()
+    const events = await prisma.events.findMany({
+      orderBy: {
+        date: 'desc',
+      },
+  })
     return events as EventsTable[];
   } catch (err) {
     console.error('Database Error:', err);
-    throw new Error('Failed to fetch customer table.');
+    throw new Error('Failed to fetch events table.');
+  }
+}
+
+export async function fetchEventById(id: string){
+  noStore();
+  const prisma = new PrismaClient()
+  try {
+    const events = await prisma.events.findFirst({
+      where: {
+        id: id
+      }
+    });
+    return events as EventsTable;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch events table.');
+  }
+}
+
+export async function fetchBds() {
+  noStore();
+  const prisma = new PrismaClient()
+  try {
+    const bds = await prisma.bds.findMany()
+    return bds as BdsTable[];
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch bds table.');
+  }
+}
+
+export async function fetchBdsByEventId(id:string){
+  noStore();
+  const prisma = new PrismaClient()
+  try {
+    const bds = await prisma.bds.findMany({
+      where: {
+        event_ids: id
+      }
+    })
+    return bds as BdsTable[];
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch bds table.');
   }
 }

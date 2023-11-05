@@ -1,38 +1,38 @@
 import {
-  BanknotesIcon,
+  CalendarIcon,
   ClockIcon,
   UserGroupIcon,
-  InboxIcon,
+  ChatBubbleLeftIcon,
 } from '@heroicons/react/24/outline';
 import { lusitana } from '@/app/ui/fonts';
 import { fetchCardData } from '@/app/lib/data';
 
 const iconMap = {
-  collected: BanknotesIcon,
-  customers: UserGroupIcon,
-  pending: ClockIcon,
-  invoices: InboxIcon,
+  date: ClockIcon,
+  name: CalendarIcon,
+  bds: ChatBubbleLeftIcon,
+  authors: UserGroupIcon,
 };
 
 export default async function Cards() {
   const {
-    numberOfInvoices,
-    numberOfCustomers,
-    totalPaidInvoices,
-    totalPendingInvoices,
+    numberOfBds,
+    numberOfAuthors,
+    nextBdiDate,
+    nextBdiName,
   } = await fetchCardData();
 
   return (
     <>
       {/* NOTE: comment in this code when you get to this point in the course */}
 
-      <Card title="Collected" value={totalPaidInvoices} type="collected" />
-      <Card title="Pending" value={totalPendingInvoices} type="pending" />
-      <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
+      <Card title="Next event date" value={nextBdiDate} type="date" />
+      <Card title="Next event nb" value={nextBdiName} type="name" />
+      <Card title="Total Bds" value={numberOfBds} type="bds" />
       <Card
-        title="Total Customers"
-        value={numberOfCustomers}
-        type="customers"
+        title="Total Authors"
+        value={numberOfAuthors}
+        type="authors"
       />
     </>
   );
@@ -45,7 +45,7 @@ export function Card({
 }: {
   title: string;
   value: number | string;
-  type: 'invoices' | 'customers' | 'pending' | 'collected';
+  type: 'date' | 'name' | 'bds' | 'authors';
 }) {
   const Icon = iconMap[type];
 

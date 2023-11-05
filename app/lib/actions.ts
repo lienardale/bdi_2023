@@ -79,8 +79,8 @@ export async function createInvoice(prevState: State, formData: FormData) {
         };
     }
 
-    revalidatePath('/dashboard/invoices');
-    redirect('/dashboard/invoices');
+    revalidatePath('/home/invoices');
+    redirect('/home/invoices');
 }
 
 export async function updateInvoice(
@@ -114,8 +114,8 @@ export async function updateInvoice(
     return { message: 'Database Error: Failed to Update Invoice.' };
   }
 
-  revalidatePath('/dashboard/invoices');
-  redirect('/dashboard/invoices');
+  revalidatePath('/home/invoices');
+  redirect('/home/invoices');
 }
 
 export async function deleteInvoice(id: string) {
@@ -123,7 +123,7 @@ export async function deleteInvoice(id: string) {
     
     try {
         await sql`DELETE FROM invoices WHERE id = ${id}`;
-        revalidatePath('/dashboard/invoices');
+        revalidatePath('/home/invoices');
         return { message: 'Deleted Invoice.' };
       } catch (error) {
         return { message: 'Database Error: Failed to Delete Invoice.' };

@@ -1,6 +1,7 @@
 import { lusitana } from '@/app/ui/fonts';
 import Search from '../search';
 import { EventsTable } from '@/app/lib/definitions';
+import Link from 'next/link';
 
 export default async function EventsTable({
   events,
@@ -35,6 +36,7 @@ export default async function EventsTable({
                         </p>
                       </div>
                     </div>
+                    
                     {/* <div className="flex w-full items-center justify-between border-b py-5">
                       <div className="flex w-1/2 flex-col">
                         <p className="text-xs">Pending</p>
@@ -60,10 +62,10 @@ export default async function EventsTable({
                     <th scope="col" className="px-3 py-5 font-medium">
                       Date
                     </th>
-                    {/* <th scope="col" className="px-3 py-5 font-medium">
-                      Total Invoices
-                    </th>
                     <th scope="col" className="px-3 py-5 font-medium">
+                      Link
+                    </th>
+                    {/* <th scope="col" className="px-3 py-5 font-medium">
                       Total Pending
                     </th>
                     <th scope="col" className="px-4 py-5 font-medium">
@@ -83,10 +85,13 @@ export default async function EventsTable({
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {event.date.toDateString()}
                       </td>
-                      {/* <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {event.total_invoices}
-                      </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
+                        <Link
+                          href={`/home/events/${event.id}`}
+                          className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                        >lien</Link>
+                      </td>
+                      {/* <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {event.total_pending}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md">

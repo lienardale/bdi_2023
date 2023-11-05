@@ -97,11 +97,11 @@ export type AuthorsTable = {
 export type BdsTable = {
   id:string;
   event_ids: string;
-  event: EventsTable
+
   author_ids: string[];
-  authors: AuthorsTable[]
+
   title: string;
-  publisher: string;
+  publicher: string;
   publishing_year: number;
 }
 
