@@ -5,7 +5,8 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node -r dotenv/config ./scripts/seed_bdi.js"
+    "seed": "node -r dotenv/config ./scripts/seed_bdi.js",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
