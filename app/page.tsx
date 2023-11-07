@@ -19,7 +19,7 @@ export default function Page() {
       <p
         className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
       >
-            <strong>Welcome to la BDI.</strong> This is the official for the Parisian Bande des Idées brought to you by its team.
+            <strong>Welcome to la BDI.</strong> This is the official website for the Parisian Bande des Idées brought to you by its team.
           </p>
           <Link
             href="/login"
