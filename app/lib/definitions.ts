@@ -99,7 +99,7 @@ export type BdsTable = {
   event_ids: string;
 
   author_ids: string[];
-
+  authors: AuthorsTable[];
   title: string;
   publicher: string;
   publishing_year: number;

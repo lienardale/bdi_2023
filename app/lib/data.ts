@@ -10,6 +10,7 @@ import {
   Revenue,
   EventsTable,
   BdsTable,
+  AuthorsTable
 } from './definitions';
 import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
@@ -246,6 +247,14 @@ export async function fetchFilteredEvents(query: string) {
       orderBy: {
         date: 'desc',
       },
+      include: {
+        bds: {
+          select:{
+            title: true,
+            id: true,
+          }
+        }
+      }
   })
     return events as EventsTable[];
   } catch (err) {
@@ -274,8 +283,30 @@ export async function fetchBds() {
   noStore();
   const prisma = new PrismaClient()
   try {
-    const bds = await prisma.bds.findMany()
+    const bds = await prisma.bds.findMany(
+      {
+        orderBy: {
+          title: 'asc',
+        },
+      }
+    )
     return bds as BdsTable[];
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch bds table.');
+  }
+}
+
+export async function fetchBdById(id:string) {
+  noStore();
+  const prisma = new PrismaClient()
+  try {
+    const bd = await prisma.bds.findFirst({
+      where: {
+        id: id
+      }
+    });
+    return bd as BdsTable;
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch bds table.');
@@ -292,6 +323,39 @@ export async function fetchBdsByEventId(id:string){
       }
     })
     return bds as BdsTable[];
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch bds table.');
+  }
+}
+
+export async function fetchAuthors() {
+  noStore();
+  const prisma = new PrismaClient()
+  try {
+    const authors = await prisma.authors.findMany({
+        orderBy: {
+          name: 'asc',
+        },
+      }
+    )
+    return authors as AuthorsTable[];
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch authors table.');
+  }
+}
+
+export async function fetchAuthorById(id:string) {
+  noStore();
+  const prisma = new PrismaClient()
+  try {
+    const author = await prisma.authors.findFirst({
+      where: {
+        id: id
+      }
+    });
+    return author as AuthorsTable;
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch bds table.');
