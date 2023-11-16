@@ -1602,7 +1602,7 @@ const bds = [
         "author_ids": [
             "59db9499-101d-40c0-985e-a571efe0a417"
         ],
-        "title": " Blues ",
+        "title": "Blues ",
         "publicher": "Mosquito",
         "publishing_year": 2007
     },
@@ -1766,7 +1766,7 @@ const bds = [
         "author_ids": [
             "04a4b3d4-4879-434a-83c5-03f44f0019dc"
         ],
-        "title": " White Trash",
+        "title": "White Trash",
         "publicher": "Ankama",
         "publishing_year": 2016
     },
@@ -1992,7 +1992,7 @@ const bds = [
             "f793a53c-be0b-4c38-97a3-1193d1be9e51"
         ],
         "title": "Scalp ",
-        "publicher": " Futuropolis",
+        "publicher": "Futuropolis",
         "publishing_year": 2017
     },
     {
@@ -2041,7 +2041,7 @@ const bds = [
         "author_ids": [
             "5f4794b2-e231-4e73-9ad9-47d28be5337e"
         ],
-        "title": " Je, François Villon",
+        "title": "Je, François Villon",
         "publicher": "Delcourt",
         "publishing_year": 2017
     },
@@ -4617,7 +4617,7 @@ const authors = [
         "bd_ids": [
             "8aa6b830-bebb-44be-84cc-d425f9ab3388"
         ],
-        "name": " Lee Bermejo"
+        "name": "Lee Bermejo"
     },
     {
         "id": "e2fc4579-5539-43ea-b76b-85fb400dd255",
@@ -4877,7 +4877,7 @@ const authors = [
         "bd_ids": [
             "eb3d8c06-96e6-441d-9994-193a4a1e0ed8"
         ],
-        "name": " Pierre Taki"
+        "name": "Pierre Taki"
     },
     {
         "id": "2f8f21ac-84f4-4bef-bbbd-7f68a58f26a0",
@@ -4934,7 +4934,7 @@ const authors = [
         "bd_ids": [
             "5d8a744e-6acf-4568-bfec-90076efdd15d"
         ],
-        "name": " Hugues Micol"
+        "name": "Hugues Micol"
     },
     {
         "id": "bc736138-0bae-4c61-a746-c0dff3e34169",
@@ -5607,7 +5607,7 @@ const authors = [
         "bd_ids": [
             "6b3b470f-1589-4321-91f1-1c7810ebf6b0"
         ],
-        "name": " Narcissus - Neko Kichiku"
+        "name": "Narcissus - Neko Kichiku"
     },
     {
         "id": "771c93d9-fccc-4424-92e4-0204e60df05e",
