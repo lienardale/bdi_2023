@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: '%s | La BDI',
     default: 'La BDI',
   },
-  description: 'The official BDI website.',
+  description: 'The official BDI\'s website !',
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
 

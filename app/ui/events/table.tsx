@@ -34,22 +34,26 @@ export default async function EventsTable({
                         <p className="text-sm text-gray-500">
                           {event.date.toDateString()}
                         </p>
+                        <p className="text-sm text-gray-500">
+                          {event.bds?.map((bd) => (
+                            <div key={bd.id} className="flex items-center gap-3">
+                              <p>{bd.title}</p>
+                            </div>
+                          ))}
+                        </p>
+                        <br></br>
+                        <p className="text-sm text-gray-500">
+                          <a target="_blank"
+                            href={`${event.fb_event}`}
+                            className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                          >facebook</a>
+                          <Link
+                            href={`/home/events/${event.id}`}
+                            className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                          >lien</Link>
+                        </p>
                       </div>
                     </div>
-                    
-                    {/* <div className="flex w-full items-center justify-between border-b py-5">
-                      <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Pending</p>
-                        <p className="font-medium">{event.total_pending}</p>
-                      </div>
-                      <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Paid</p>
-                        <p className="font-medium">{event.total_paid}</p>
-                      </div>
-                    </div>
-                    <div className="pt-4 text-sm">
-                      <p>{event.total_invoices} invoices</p>
-                    </div> */}
                   </div>
                 ))}
               </div>
