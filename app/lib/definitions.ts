@@ -113,3 +113,33 @@ export type EventsTable = {
   bds: BdsTable[];
   fb_event: string;
 }
+
+export type Author = {
+  id:string;
+  bd_ids: string[];
+  bds: Bd[];
+  event_id: string[];
+  name:string;
+}
+
+export type Bd = {
+  id:string;
+  event_ids: string;
+  event: Event;
+  author_ids: string[];
+  authors: Author[];
+  title: string;
+  publicher: string;
+  publishing_year: number;
+}
+
+export type Event = {
+  id: string;
+  name: string;
+  date: Date
+  bd_ids: string[];
+  bds: Bd[];
+  author_ids: string[];
+  authors: Author[];
+  fb_event: string;
+}

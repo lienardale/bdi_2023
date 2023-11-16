@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "authors" (
-    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "bd_ids" UUID[],
     "name" VARCHAR(255) NOT NULL,
 
@@ -9,7 +9,7 @@ CREATE TABLE "authors" (
 
 -- CreateTable
 CREATE TABLE "bds" (
-    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "event_ids" UUID NOT NULL,
     "author_ids" UUID[],
     "title" VARCHAR(255) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE "bds" (
 
 -- CreateTable
 CREATE TABLE "customers" (
-    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "name" VARCHAR(255) NOT NULL,
     "email" VARCHAR(255) NOT NULL,
     "image_url" VARCHAR(255) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE "customers" (
 
 -- CreateTable
 CREATE TABLE "events" (
-    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "name" VARCHAR(255) NOT NULL,
     "date" DATE NOT NULL,
     "bd_ids" UUID[],
@@ -42,7 +42,7 @@ CREATE TABLE "events" (
 
 -- CreateTable
 CREATE TABLE "invoices" (
-    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "customer_id" UUID NOT NULL,
     "amount" INTEGER NOT NULL,
     "status" VARCHAR(255) NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE "revenue" (
 
 -- CreateTable
 CREATE TABLE "users" (
-    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "name" VARCHAR(255) NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
@@ -84,10 +84,3 @@ CREATE UNIQUE INDEX "revenue_month_key" ON "revenue"("month");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
-
--- AddForeignKey
-ALTER TABLE "bds" ADD CONSTRAINT "bds_event_ids_fkey" FOREIGN KEY ("event_ids") REFERENCES "events"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "bds" ADD CONSTRAINT "bds_author_ids_fkey" FOREIGN KEY ("author_ids") REFERENCES "authors"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
-
