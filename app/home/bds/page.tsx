@@ -1,4 +1,4 @@
-import { fetchBds } from '@/app/lib/data';
+import { fetchFilteredAuthors, fetchFilteredBds } from '@/app/lib/data';
 import BdsTable from '@/app/ui/bds/table';
 import { Metadata } from 'next';
 
@@ -16,11 +16,12 @@ export default async function Page({
 }) {
   const query = searchParams?.query || '';
 
-  const bds = await fetchBds();
+  const bds = await fetchFilteredBds(query);
+  const authors = await fetchFilteredAuthors(query);
 
   return (
     <main>
-      <BdsTable bds={bds} />
+      <BdsTable bds={bds} authors={authors}/>
     </main>
   );
 }

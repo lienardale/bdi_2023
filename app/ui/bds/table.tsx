@@ -1,12 +1,14 @@
 import { lusitana } from '@/app/ui/fonts';
 import Search from '../search';
-import { BdsTable } from '@/app/lib/definitions';
+import { AuthorsTable, BdsTable } from '@/app/lib/definitions';
 import Link from 'next/link';
 
 export default async function BdsTable({
-  bds
+  bds,
+  authors
 }: {
   bds: BdsTable[];
+  authors: AuthorsTable[]
 }) {
   return (
     <div className="w-full">
@@ -24,12 +26,34 @@ export default async function BdsTable({
                     key={bd.id}
                     className="mb-2 w-full rounded-md bg-white p-4"
                   >
-                    <div className="flex items-center justify-between border-b pb-4">
+                    <div className="flex items-center justify-between border-b pb-4 flex-col">
                       <div>
-                        <div className="mb-2 flex items-center">
-                          <div className="flex items-center gap-3">
-                            <p>{bd.title}</p>
+                        <div className="mb-2 flex items-center flex-col">
+                          <p className="flex items-center gap-3">
+                            {bd.title}
+                          </p>
+                          {authors.filter(author => bd.author_ids.includes(author.id)).map((author) => (
+                          <div key={author.id} className="flex items-center gap-3 text-gray-500">
+                            {author.name}
                           </div>
+                        ))}
+                          <p className="text-sm text-gray-500">
+                          {bd.publicher}
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            {bd.publishing_year}
+                          </p>
+                          <br></br>
+                          <p className="text-sm text-gray-500">
+                            <Link
+                              href={`/home/event/${bd.event_ids}`}
+                              className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                            >lien event</Link>
+                            <Link
+                              href={`/home/bds/${bd.id}`}
+                              className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                            >lien bd</Link>
+                          </p>
                         </div>
                         {/* <p className="text-sm text-gray-500">
                           {bd.date.toDateString()}
@@ -86,11 +110,11 @@ export default async function BdsTable({
                         </div>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {bd?.authors?.map((author) => (
-                          <div key={author.id} className="flex items-center gap-3">
-                            <p>{author.name}</p>
-                          </div>
-                        ))}
+                        {authors.filter(author => bd.author_ids.includes(author.id)).map((author) => (
+                              <div key={author.id} className="flex items-center gap-3">
+                                {author.name}
+                              </div>
+                            ))}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {bd.publicher}

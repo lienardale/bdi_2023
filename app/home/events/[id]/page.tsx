@@ -1,14 +1,14 @@
-import { fetchBdsByEventId, fetchEventById } from "@/app/lib/data";
+import { fetchBdsByEventId, fetchEventById, fetchFilteredAuthors, fetchFilteredBds } from "@/app/lib/data";
 import { BdsTable, EventsTable } from "@/app/lib/definitions";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { id: string } }) {
     const id = params.id;
-    const [event, bds]: [EventsTable | undefined, BdsTable[]] = await Promise.all([
-      fetchEventById(id),
-      fetchBdsByEventId(id),
-    ]);
+    const event: EventsTable | undefined = await fetchEventById(id);
+    const bds = await fetchFilteredBds('');
+    const authors = await fetchFilteredAuthors('');
+
     // 
     if (!event) {
       notFound();
@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           </thead>
 
           <tbody className="divide-y divide-gray-200 text-gray-900">
-            {bds.map((bd) => (
+            {bds.filter(bd => event.bd_ids.includes(bd.id)).map((bd) => (
               <tr key={bd.id} className="group">
                 <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
                   <div className="flex items-center gap-3">
@@ -48,8 +48,8 @@ export default async function Page({ params }: { params: { id: string } }) {
                   </div>
                 </td>
                 <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                  {bd.author_ids.map((author_id) =>(
-                    <p key={author_id}>{author_id}</p>
+                  {authors.filter(author => bd.author_ids.includes(author.id)).map((author) =>(
+                    <p key={author.id}>{author.name}</p>
                   ))}
                 </td>
                 <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">

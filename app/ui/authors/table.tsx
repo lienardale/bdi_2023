@@ -1,12 +1,14 @@
 import { lusitana } from '@/app/ui/fonts';
 import Search from '../search';
-import { AuthorsTable } from '@/app/lib/definitions';
+import { AuthorsTable, BdsTable } from '@/app/lib/definitions';
 import Link from 'next/link';
 
 export default async function AuthorsTable({
   authors,
+  bds
 }: {
   authors: AuthorsTable[];
+  bds: BdsTable[];
 }) {
   return (
     <div className="w-full">
@@ -24,32 +26,23 @@ export default async function AuthorsTable({
                     key={author.id}
                     className="mb-2 w-full rounded-md bg-white p-4"
                   >
-                    <div className="flex items-center justify-between border-b pb-4">
+                    <div className="flex items-center justify-between border-b pb-4 flex-col">
                       <div>
-                        <div className="mb-2 flex items-center">
+                        <div className="mb-2 flex items-center flex-col">
                           <div className="flex items-center gap-3">
                             <p>{author.name}</p>
                           </div>
+                          <br></br>
+                          <div className="flex items-center gap-3 flex-col">
+                              {bds.filter(bd => bd.author_ids.includes(author.id)).map((bd) => (
+                                <div key={bd.id} className="flex items-center gap-3">
+                                  <p>{bd.title}</p>
+                                </div>
+                              ))}
+                          </div>         
                         </div>
-                        {/* <p className="text-sm text-gray-500">
-                          {author.date.toDateString()}
-                        </p> */}
                       </div>
                     </div>
-                    
-                    {/* <div className="flex w-full items-center justify-between border-b py-5">
-                      <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Pending</p>
-                        <p className="font-medium">{author.total_pending}</p>
-                      </div>
-                      <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Paid</p>
-                        <p className="font-medium">{author.total_paid}</p>
-                      </div>
-                    </div>
-                    <div className="pt-4 text-sm">
-                      <p>{author.total_invoices} invoices</p>
-                    </div> */}
                   </div>
                 ))}
               </div>
@@ -83,11 +76,11 @@ export default async function AuthorsTable({
                         </div>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {author?.bds?.map((bd) => (
-                          <div key={bd.id} className="flex items-center gap-3">
-                            <p>{bd.title}</p>
-                          </div>
-                        ))}
+                        {bds.filter(bd => bd.author_ids.includes(author.id)).map((bd) => (
+                                <div key={bd.id} className="flex items-center gap-3">
+                                  <p>{bd.title}</p>
+                                </div>
+                              ))}
                       </td>
                       {/* <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {author.date.toDateString()}
