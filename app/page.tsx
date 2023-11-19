@@ -21,12 +21,20 @@ export default function Page() {
       >
             <strong>Welcome to la BDI.</strong> This is the official website for the Parisian Bande des Idées brought to you by its team.
           </p>
-          <Link
-            href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-          >
-            <span>Log in</span>
-          </Link>
+          {/* <div className='flex flex-col justify-between'> */}
+            <Link
+              href="/home"
+              className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+              >
+              <span>Home</span>
+            </Link> 
+            {/* <Link
+              href="/login"
+              className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+              >
+              <span>Log in</span>
+            </Link> */}
+          {/* </div> */}
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}

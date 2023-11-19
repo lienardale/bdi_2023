@@ -1,4 +1,4 @@
-import { fetchFilteredEvents } from '@/app/lib/data';
+import { fetchFilteredAuthors, fetchFilteredBds, fetchFilteredEvents } from '@/app/lib/data';
 import EventsTable from '@/app/ui/events/table';
 import { Metadata } from 'next';
 
@@ -16,11 +16,15 @@ export default async function Page({
 }) {
   const query = searchParams?.query || '';
 
-  const events = await fetchFilteredEvents(query);
+  const [events, bds, authors] = await Promise.all([
+    fetchFilteredEvents(query),
+    fetchFilteredBds(query),
+    fetchFilteredAuthors(query)
+  ])
 
   return (
     <main>
-      <EventsTable events={events} />
+      <EventsTable events={events} authors={authors} bds={bds} />
     </main>
   );
 }

@@ -1,12 +1,16 @@
 import { lusitana } from '@/app/ui/fonts';
 import Search from '../search';
-import { EventsTable } from '@/app/lib/definitions';
+import { AuthorsTable, BdsTable, EventsTable } from '@/app/lib/definitions';
 import Link from 'next/link';
 
 export default async function EventsTable({
   events,
+  authors,
+  bds,
 }: {
   events: EventsTable[];
+  authors: AuthorsTable[];
+  bds: BdsTable[];
 }) {
   return (
     <div className="w-full">
@@ -28,21 +32,28 @@ export default async function EventsTable({
                       <div>
                         <div className="mb-2 flex items-center">
                           <div className="flex items-center gap-3">
-                            <p>{event.name}</p>
+                            {event.name}
                           </div>
                         </div>
                         <p className="text-sm text-gray-500">
                           {event.date.toDateString()}
                         </p>
-                        <p className="text-sm text-gray-500">
-                          {event.bds?.map((bd) => (
-                            <div key={bd.id} className="flex items-center gap-3">
-                              <p>{bd.title}</p>
+                        <div className="text-sm text-gray-500">
+                          {bds.filter(bd => event.bd_ids.includes(bd.id)).map((bd) => (
+                            <div key={bd.id} className="flex items-center gap-3 w-full justify-between">
+                              <div>{bd.title}</div>
+                              <div className='flex flex-col justify-end items-start'>
+                                {authors.filter(author => bd.author_ids.includes(author.id)).map(author => (
+                                  <div key={author.id}>
+                                    {author.name}
+                                  </div>
+                                  ))}
+                                </div>
                             </div>
                           ))}
-                        </p>
+                        </div>
                         <br></br>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-gray-500 justify-evenly flex">
                           <a target="_blank"
                             href={`${event.fb_event}`}
                             className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
@@ -67,6 +78,9 @@ export default async function EventsTable({
                       Bds
                     </th>
                     <th scope="col" className="px-3 py-5 font-medium">
+                      Authors
+                    </th>
+                    <th scope="col" className="px-3 py-5 font-medium">
                       Date
                     </th>
                     <th scope="col" className="px-3 py-5 font-medium">
@@ -87,9 +101,20 @@ export default async function EventsTable({
                         </div>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {event.bds?.map((bd) => (
+                        {bds.filter(bd => event.bd_ids.includes(bd.id)).map((bd) => (
                           <div key={bd.id} className="flex items-center gap-3">
                             <p>{bd.title}</p>
+                          </div>
+                        ))}
+                      </td>
+                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
+                        {bds.filter(bd => event.bd_ids.includes(bd.id)).map((bd) => (
+                          <div key={bd.id} className="flex items-center gap-3">
+                            {authors.filter(author => bd.author_ids.includes(author.id)).map(author => (
+                              <div key={author.id}>
+                                <p>{author.name}</p>
+                              </div>
+                              ))}
                           </div>
                         ))}
                       </td>

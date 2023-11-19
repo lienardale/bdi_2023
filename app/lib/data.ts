@@ -241,7 +241,6 @@ export async function getUser(email: string) {
 
 export async function fetchFilteredEvents(query: string) {
   noStore();
-  const prisma = new PrismaClient()
   try {
     const events = await prisma.events.findMany({
       orderBy: {
@@ -254,9 +253,59 @@ export async function fetchFilteredEvents(query: string) {
             id: true,
           }
         }
+      },
+      where : {
+        OR: [
+          {
+            name: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+        ],
       }
   })
+    const bds = await prisma.bds.findMany(
+      {
+        orderBy: {
+          title: 'asc',
+        },
+      where : {
+        OR: [
+          {
+            title: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+          {
+            publicher: {
+              contains: query,
+              mode: "insensitive",
+            }
+          }
+        ],
+      }
+    },
+    )
+    const authors = await prisma.authors.findMany({
+      orderBy: {
+        name: 'asc',
+      },
+      where : {
+        OR: [
+          {
+            name: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+        ],
+      }
+    },
+  )
     return events as EventsTable[];
+    
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch events table.');
@@ -265,7 +314,6 @@ export async function fetchFilteredEvents(query: string) {
 
 export async function fetchEventById(id: string){
   noStore();
-  const prisma = new PrismaClient()
   try {
     const events = await prisma.events.findFirst({
       where: {
@@ -279,16 +327,32 @@ export async function fetchEventById(id: string){
   }
 }
 
-export async function fetchBds() {
+export async function fetchFilteredBds(query: string) {
   noStore();
-  const prisma = new PrismaClient()
+  
   try {
     const bds = await prisma.bds.findMany(
       {
         orderBy: {
           title: 'asc',
         },
+      where : {
+        OR: [
+          {
+            title: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+          {
+            publicher: {
+              contains: query,
+              mode: "insensitive",
+            }
+          }
+        ],
       }
+    },
     )
     return bds as BdsTable[];
   } catch (err) {
@@ -299,7 +363,6 @@ export async function fetchBds() {
 
 export async function fetchBdById(id:string) {
   noStore();
-  const prisma = new PrismaClient()
   try {
     const bd = await prisma.bds.findFirst({
       where: {
@@ -315,7 +378,6 @@ export async function fetchBdById(id:string) {
 
 export async function fetchBdsByEventId(id:string){
   noStore();
-  const prisma = new PrismaClient()
   try {
     const bds = await prisma.bds.findMany({
       where: {
@@ -329,15 +391,24 @@ export async function fetchBdsByEventId(id:string){
   }
 }
 
-export async function fetchAuthors() {
+export async function fetchFilteredAuthors(query: string) {
   noStore();
-  const prisma = new PrismaClient()
   try {
     const authors = await prisma.authors.findMany({
         orderBy: {
           name: 'asc',
         },
-      }
+        where : {
+          OR: [
+            {
+              name: {
+                contains: query,
+                mode: "insensitive",
+              },
+            },
+          ],
+        }
+      },
     )
     return authors as AuthorsTable[];
   } catch (err) {
@@ -348,7 +419,6 @@ export async function fetchAuthors() {
 
 export async function fetchAuthorById(id:string) {
   noStore();
-  const prisma = new PrismaClient()
   try {
     const author = await prisma.authors.findFirst({
       where: {

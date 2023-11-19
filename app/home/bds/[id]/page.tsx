@@ -1,4 +1,4 @@
-import { fetchBdById } from "@/app/lib/data";
+import { fetchBdById, fetchFilteredAuthors } from "@/app/lib/data";
 import { AuthorsTable, BdsTable, EventsTable } from "@/app/lib/definitions";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -10,15 +10,18 @@ export default async function Page({ params }: { params: { id: string } }) {
       // fetchAuthorsByBdId(id),
       // fetchEventByBdId(id)
     ]);
+    const authors = await fetchFilteredAuthors('');
     if (!bd) {
       notFound();
     }
     return (
       <main>
-        {bd.title}
+        <div className="rounded-md text-left text-m font-bold">
+          {bd.title}
+        </div>
         <br></br>
-        {bd.author_ids?.map((author) =>
-          <div key={author}>{author}</div>
+        {authors.filter(author => bd.author_ids.includes(author.id)).map((author) =>
+          <div key={author.id}>{author.name}</div>
         )}
         <br></br>
         {bd.publicher}

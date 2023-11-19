@@ -1,4 +1,4 @@
-import { fetchAuthors } from '@/app/lib/data';
+import { fetchFilteredAuthors, fetchFilteredBds } from '@/app/lib/data';
 import AuthorsTable from '@/app/ui/authors/table';
 import { Metadata } from 'next';
 
@@ -16,11 +16,12 @@ export default async function Page({
 }) {
   const query = searchParams?.query || '';
 
-  const authors = await fetchAuthors();
+  const authors = await fetchFilteredAuthors(query);
+  const bds = await fetchFilteredBds(query);
 
   return (
     <main>
-      <AuthorsTable authors={authors} />
+      <AuthorsTable authors={authors} bds={bds} />
     </main>
   );
 }
