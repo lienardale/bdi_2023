@@ -1,23 +1,10 @@
+import { PrismaClient } from "@prisma/client";
 
+declare global {
+  var prisma: PrismaClient | undefined;
+}
 
-import { PrismaClient } from '@prisma/client'
+const client = globalThis.prisma || new PrismaClient();
+if (process.env.NODE_ENV !== "production") globalThis.prisma = client;
 
-const prisma = new PrismaClient()
-
-async function main() {
-    const allEvents = await prisma.events.findMany()
-    console.log(allEvents)
-  }
-
-main()
-  .then(async () => {
-    await prisma.$disconnect()
-  })
-  .catch(async (e) => {
-    console.error(e)
-    await prisma.$disconnect()
-    process.exit(1)
-  })
-
-
-  export default prisma;
+export default client;
