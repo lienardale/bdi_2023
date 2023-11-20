@@ -3,7 +3,7 @@ import BdsTable from '@/app/ui/bds/table';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Events',
+  title: 'Bds',
 };
 
 export default async function Page({

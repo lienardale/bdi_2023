@@ -3,7 +3,7 @@ import Search from '../search';
 import { AuthorsTable, BdsTable } from '@/app/lib/definitions';
 import Link from 'next/link';
 
-export default async function AuthorsTable({
+export default async function AllAuthorsTable({
   authors,
   bds
 }: {

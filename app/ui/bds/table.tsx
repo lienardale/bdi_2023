@@ -3,7 +3,7 @@ import Search from '../search';
 import { AuthorsTable, BdsTable } from '@/app/lib/definitions';
 import Link from 'next/link';
 
-export default async function BdsTable({
+export default async function AllBdsTable({
   bds,
   authors
 }: {
@@ -13,7 +13,7 @@ export default async function BdsTable({
   return (
     <div className="w-full">
       <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
-        Events
+        Bds
       </h1>
       <Search placeholder="Search bds..." />
       <div className="mt-6 flow-root">
