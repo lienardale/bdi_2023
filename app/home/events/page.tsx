@@ -18,8 +18,8 @@ export default async function Page({
 
   const [events, bds, authors] = await Promise.all([
     fetchFilteredEvents(query),
-    fetchFilteredBds(query),
-    fetchFilteredAuthors(query)
+    fetchFilteredBds(''),
+    fetchFilteredAuthors('')
   ])
 
   return (

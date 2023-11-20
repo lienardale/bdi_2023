@@ -76,7 +76,7 @@ export default async function AllAuthorsTable({
                         </div>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {bds.filter(bd => bd.author_ids.includes(author.id)).map((bd) => (
+                        {bds.filter(bd => author.bd_ids.includes(bd.id)).map((bd) => (
                                 <div key={bd.id} className="flex items-center gap-3">
                                   <p>{bd.title}</p>
                                 </div>

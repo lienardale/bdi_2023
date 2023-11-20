@@ -17,7 +17,7 @@ export default async function Page({
   const query = searchParams?.query || '';
 
   const bds = await fetchFilteredBds(query);
-  const authors = await fetchFilteredAuthors(query);
+  const authors = await fetchFilteredAuthors('');
 
   return (
     <main>
