@@ -1,0 +1,78 @@
+{
+  "common": {
+    "home": "Home",
+    "events": "Events",
+    "bds": "Comics",
+    "authors": "Authors",
+    "admin": "Admin",
+    "signOut": "Sign Out",
+    "search": "Search...",
+    "back": "Back to list",
+    "link": "link",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "save": "Save",
+    "facebook": "facebook"
+  },
+  "home": {
+    "title": "Home",
+    "nextEventDate": "Next event date",
+    "nextEventName": "Next event",
+    "totalBds": "Total Comics",
+    "totalAuthors": "Total Authors",
+    "recentEvents": "Recent events",
+    "topAuthors": "Top authors",
+    "bdsPerYear": "Comics per year"
+  },
+  "events": {
+    "title": "Events",
+    "name": "Name",
+    "date": "Date",
+    "fbEvent": "Facebook link",
+    "eventLink": "event link",
+    "bdCount": "{count} comic(s)"
+  },
+  "bds": {
+    "title": "Comics",
+    "bdTitle": "Title",
+    "publisher": "Publisher",
+    "year": "Year",
+    "bdi": "BDI",
+    "eventLink": "event link",
+    "bdLink": "comic link",
+    "summary": "Summary",
+    "ean": "EAN",
+    "bdiLink": "BDI Link"
+  },
+  "authors": {
+    "title": "Authors",
+    "name": "Name",
+    "biography": "Biography",
+    "wikipedia": "Wikipedia"
+  },
+  "filters": {
+    "all": "All",
+    "year": "Year",
+    "event": "Event",
+    "publisher": "Publisher"
+  },
+  "admin": {
+    "title": "Administration",
+    "backToSite": "Back to site",
+    "importExport": "CSV Import / Export",
+    "export": "Export",
+    "import": "Import",
+    "exportEvents": "Export events",
+    "exportBds": "Export comics",
+    "exportAuthors": "Export authors",
+    "importType": "Type",
+    "importFile": "CSV file",
+    "importButton": "Import",
+    "enrichment": "Data enrichment",
+    "enrichmentDescription": "Auto-fill missing fields via Open Library and Wikipedia APIs.",
+    "enrichAllBds": "Enrich all comics",
+    "enrichAllAuthors": "Enrich all authors"
+  }
+}

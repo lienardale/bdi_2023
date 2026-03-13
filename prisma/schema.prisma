@@ -4,36 +4,40 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  url = env("LOCAL_POSTGRES_URL")
 }
 
 model Author {
-  id     String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  bd_ids String[] @db.Uuid
-  bds    BdAuthor[]
-  events AuthorEvent[]
-  name   String   @unique @db.VarChar(255)
+  id            String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  bds           BdAuthor[]
+  events        AuthorEvent[]
+  name          String        @unique @db.VarChar(255)
+  bio           String?       @db.Text
+  photo_url     String?       @db.Text
+  wikipedia_url String?       @db.Text
 }
 
 model Bd {
-  id              String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  event_ids       String   @db.Uuid
-  author_ids      String[] @db.Uuid
-  event           Event   @relation(fields: [event_ids], references: [id])
-  authors         BdAuthor[]
-  title           String   @unique @db.VarChar(255)
-  publicher       String?
-  publishing_year Int?
+  id               String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  eventId          String     @db.Uuid
+  event            Event      @relation(fields: [eventId], references: [id])
+  authors          BdAuthor[]
+  title            String     @unique @db.VarChar(255)
+  publisher        String?
+  publishing_year  Int?
+  ean              String?    @db.VarChar(13)
+  summary          String?    @db.Text
+  cover_url        String?    @db.Text
+  publisher_url    String?    @db.Text
+  leslibraires_url String?    @db.Text
 }
 
 model Event {
-  id       String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name     String   @unique @db.VarChar(255)
+  id       String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name     String        @unique @db.VarChar(255)
   bds      Bd[]
   authors  AuthorEvent[]
-  date     DateTime @unique @db.Date
-  bd_ids   String[] @db.Uuid
+  date     DateTime      @unique @db.Date
   fb_event String?
 }
 
@@ -42,23 +46,23 @@ model users {
   name     String @db.VarChar(255)
   email    String @unique
   password String
+  role     String @default("user")
 }
 
 model BdAuthor {
-
-  bd        Bd @relation(fields: [bdId], references: [id])
-  bdId      String @db.Uuid // relation scalar field (used in the `@relation` attribute above)
-  author    Author @relation(fields: [authorId], references: [id])
-  authorId  String @db.Uuid 
+  bd       Bd     @relation(fields: [bdId], references: [id])
+  bdId     String @db.Uuid
+  author   Author @relation(fields: [authorId], references: [id])
+  authorId String @db.Uuid
 
   @@id([authorId, bdId])
 }
 
 model AuthorEvent {
-  author    Author @relation(fields: [authorId], references: [id])
-  event     Event @relation(fields: [eventId], references: [id])
-  authorId  String @db.Uuid
-  eventId   String @db.Uuid
+  author   Author @relation(fields: [authorId], references: [id])
+  event    Event  @relation(fields: [eventId], references: [id])
+  authorId String @db.Uuid
+  eventId  String @db.Uuid
 
   @@id([authorId, eventId])
 }

@@ -1,21 +1,13 @@
-import { lusitana } from '@/app/ui/fonts';
-import Search from '../search';
-import { AuthorsTable, BdsTable } from '@/app/lib/definitions';
+import { BdsTable } from '@/app/lib/definitions';
 import Link from 'next/link';
 
 export default async function AllBdsTable({
   bds,
-  authors
 }: {
   bds: BdsTable[];
-  authors: AuthorsTable[]
 }) {
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
-        Bds
-      </h1>
-      <Search placeholder="Search bds..." />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
@@ -32,48 +24,30 @@ export default async function AllBdsTable({
                           <p className="flex items-center gap-3">
                             {bd.title}
                           </p>
-                          {authors.filter(author => bd.author_ids.includes(author.id)).map((author) => (
-                          <div key={author.id} className="flex items-center gap-3 text-gray-500">
-                            {author.name}
-                          </div>
-                        ))}
+                          {bd.authors.map(({ author }) => (
+                            <div key={author.id} className="flex items-center gap-3 text-gray-500">
+                              {author.name}
+                            </div>
+                          ))}
                           <p className="text-sm text-gray-500">
-                          {bd.publicher}
+                            {bd.publisher}
                           </p>
                           <p className="text-sm text-gray-500">
                             {bd.publishing_year}
                           </p>
-                          <br></br>
-                          <p className="text-sm text-gray-500">
+                          <div className="flex gap-2 mt-2">
                             <Link
-                              href={`/home/event/${bd.event_ids}`}
-                              className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                              href={`/home/events/${bd.eventId}`}
+                              className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
                             >lien event</Link>
                             <Link
                               href={`/home/bds/${bd.id}`}
-                              className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                              className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
                             >lien bd</Link>
-                          </p>
+                          </div>
                         </div>
-                        {/* <p className="text-sm text-gray-500">
-                          {bd.date.toDateString()}
-                        </p> */}
                       </div>
                     </div>
-                    
-                    {/* <div className="flex w-full items-center justify-between border-b py-5">
-                      <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Pending</p>
-                        <p className="font-medium">{bd.total_pending}</p>
-                      </div>
-                      <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Paid</p>
-                        <p className="font-medium">{bd.total_paid}</p>
-                      </div>
-                    </div>
-                    <div className="pt-4 text-sm">
-                      <p>{bd.total_invoices} invoices</p>
-                    </div> */}
                   </div>
                 ))}
               </div>
@@ -110,21 +84,21 @@ export default async function AllBdsTable({
                         </div>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {authors.filter(author => bd.author_ids.includes(author.id)).map((author) => (
-                              <div key={author.id} className="flex items-center gap-3">
-                                {author.name}
-                              </div>
-                            ))}
+                        {bd.authors.map(({ author }) => (
+                          <div key={author.id} className="flex items-center gap-3">
+                            {author.name}
+                          </div>
+                        ))}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {bd.publicher}
+                        {bd.publisher}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {bd.publishing_year}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         <Link
-                          href={`/home/event/${bd.event_ids}`}
+                          href={`/home/events/${bd.eventId}`}
                           className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
                         >lien event</Link>
                       </td>

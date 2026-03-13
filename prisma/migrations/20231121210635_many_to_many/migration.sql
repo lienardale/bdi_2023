@@ -42,7 +42,7 @@ CREATE TABLE "Bd" (
     "event_ids" UUID NOT NULL,
     "author_ids" UUID[],
     "title" VARCHAR(255) NOT NULL,
-    "publicher" TEXT,
+    "publisher" TEXT,
     "publishing_year" INTEGER,
 
     CONSTRAINT "Bd_pkey" PRIMARY KEY ("id")
