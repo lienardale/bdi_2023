@@ -1,0 +1,78 @@
+{
+  "common": {
+    "home": "Accueil",
+    "events": "Événements",
+    "bds": "BDs",
+    "authors": "Auteurs",
+    "admin": "Admin",
+    "signOut": "Déconnexion",
+    "search": "Rechercher...",
+    "back": "Retour à la liste",
+    "link": "lien",
+    "create": "Créer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "facebook": "facebook"
+  },
+  "home": {
+    "title": "Accueil",
+    "nextEventDate": "Date prochain événement",
+    "nextEventName": "Prochain événement",
+    "totalBds": "Total BDs",
+    "totalAuthors": "Total Auteurs",
+    "recentEvents": "Derniers événements",
+    "topAuthors": "Top auteurs",
+    "bdsPerYear": "BDs par année"
+  },
+  "events": {
+    "title": "Événements",
+    "name": "Nom",
+    "date": "Date",
+    "fbEvent": "Lien Facebook",
+    "eventLink": "lien event",
+    "bdCount": "{count} BD(s)"
+  },
+  "bds": {
+    "title": "BDs",
+    "bdTitle": "Titre",
+    "publisher": "Éditeur",
+    "year": "Année",
+    "bdi": "BDI",
+    "eventLink": "lien event",
+    "bdLink": "lien bd",
+    "summary": "Résumé",
+    "ean": "EAN",
+    "bdiLink": "Lien BDI"
+  },
+  "authors": {
+    "title": "Auteurs",
+    "name": "Nom",
+    "biography": "Biographie",
+    "wikipedia": "Wikipedia"
+  },
+  "filters": {
+    "all": "Tous",
+    "year": "Année",
+    "event": "Événement",
+    "publisher": "Éditeur"
+  },
+  "admin": {
+    "title": "Administration",
+    "backToSite": "Retour au site",
+    "importExport": "Import / Export CSV",
+    "export": "Export",
+    "import": "Import",
+    "exportEvents": "Exporter les événements",
+    "exportBds": "Exporter les BDs",
+    "exportAuthors": "Exporter les auteurs",
+    "importType": "Type",
+    "importFile": "Fichier CSV",
+    "importButton": "Importer",
+    "enrichment": "Enrichissement des données",
+    "enrichmentDescription": "Auto-remplir les champs manquants via les APIs Open Library et Wikipedia.",
+    "enrichAllBds": "Enrichir toutes les BDs",
+    "enrichAllAuthors": "Enrichir tous les auteurs"
+  }
+}

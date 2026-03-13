@@ -1,23 +1,14 @@
 import { lusitana } from '@/app/ui/fonts';
-import Search from '../search';
-import { AuthorsTable, BdsTable, EventsTable } from '@/app/lib/definitions';
+import { EventsTable } from '@/app/lib/definitions';
 import Link from 'next/link';
 
 export default async function AllEventsTable({
   events,
-  authors,
-  bds,
 }: {
   events: EventsTable[];
-  authors: AuthorsTable[];
-  bds: BdsTable[];
 }) {
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
-        Events
-      </h1>
-      <Search placeholder="Search events..." />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
@@ -39,16 +30,16 @@ export default async function AllEventsTable({
                           {event.date.toDateString()}
                         </p>
                         <div className="text-sm text-gray-500">
-                          {bds.filter(bd => event.bd_ids.includes(bd.id)).map((bd) => (
+                          {event.bds.map((bd) => (
                             <div key={bd.id} className="flex items-center gap-3 w-full justify-between">
                               <div>{bd.title}</div>
                               <div className='flex flex-col justify-end items-start'>
-                                {authors.filter(author => bd.author_ids.includes(author.id)).map(author => (
+                                {bd.authors.map(({ author }) => (
                                   <div key={author.id}>
                                     {author.name}
                                   </div>
-                                  ))}
-                                </div>
+                                ))}
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -101,20 +92,20 @@ export default async function AllEventsTable({
                         </div>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {bds.filter(bd => event.bd_ids.includes(bd.id)).map((bd) => (
+                        {event.bds.map((bd) => (
                           <div key={bd.id} className="flex items-center gap-3">
                             <p>{bd.title}</p>
                           </div>
                         ))}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {bds.filter(bd => event.bd_ids.includes(bd.id)).map((bd) => (
+                        {event.bds.map((bd) => (
                           <div key={bd.id} className="flex items-center gap-3">
-                            {authors.filter(author => bd.author_ids.includes(author.id)).map(author => (
+                            {bd.authors.map(({ author }) => (
                               <div key={author.id}>
                                 <p>{author.name}</p>
                               </div>
-                              ))}
+                            ))}
                           </div>
                         ))}
                       </td>

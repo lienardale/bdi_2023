@@ -1,6668 +1,8755 @@
 
 const events = [
     {
-        "id": "b5cff1cd-cb95-4e72-9796-58a6ecca2f46",
+        "id": "d3eafa10-a745-5597-94cb-39521449a60e",
         "name": "La Bande des idées #1",
         "date_time": "2014-11-05T19:30:00.000Z",
-        "place": "La tireuse",
         "bd_ids": [
-            "9837328b-2714-41d7-8282-5d4f20878e3e",
-            "9dfb6c7e-6109-4f40-af70-697272e076b5",
-            "1c0a95e8-0e18-49ce-bcd0-628798a8e7c7",
-            "97d205b4-8658-45e4-bdb9-fd98aafae486"
+            "7d723523-0d8a-5c4f-a040-8ff0cca2bc83",
+            "403fb2b2-7948-5aa1-9cbe-2e9e468a9c05",
+            "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98",
+            "79894bab-2308-5561-b5ba-b688a26f6672"
         ],
         "fb_event": "https://www.facebook.com/events/1548027528761948/"
     },
     {
-        "id": "9d983a66-6c70-4e5c-9427-7e9492d1f307",
+        "id": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
         "name": "La Bande des idées #2",
         "date_time": "2014-12-03T19:30:00.000Z",
-        "place": "La tireuse",
         "bd_ids": [
-            "6d92e271-98a9-4bdd-bbfb-fc81d1b35c98",
-            "483eb6fc-720c-488b-b930-2c73d0484dcb",
-            "aac28fd0-a6bd-488f-87d4-8ef1d3a960a0",
-            "0f78fba4-f29f-4d4b-806b-b40cf59d148d"
+            "995dd270-3ead-51df-a96b-919cd922cbea",
+            "76b4d2f1-cdb5-5aae-9479-3daf719d8adb",
+            "06175f53-82fc-5df0-a3d6-33be607df9c8",
+            "8f57610f-1014-5596-8015-17b94899cd58"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10730999_892432464133133_8046229807596859137_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=2959cf0e7720dbab88e5173961891080&oe=5D2405FB"
     },
     {
-        "id": "c1ac732e-01c6-4260-bf2d-ddbcd7537718",
+        "id": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
         "name": "La Bande des idées #3",
         "date_time": "2015-02-11T19:30:00.000Z",
-        "place": "La tireuse",
         "bd_ids": [
-            "7f62e8d4-f79d-4faa-99af-f93ea68668d9",
-            "fa8d1c03-c37a-40ad-a370-0af4e1798eef",
-            "80f58f18-c3d8-4ec3-8246-fca020657281",
-            "dafdab3f-492a-4313-8de3-231b6f2a1241"
+            "dc370931-0191-5023-a121-09e365903d81",
+            "4c2f3bd9-177e-561b-a197-3579528230ae",
+            "75fc73a4-84d6-50f0-99d9-b7445c392bb8",
+            "979cc21c-4c87-5805-b5f5-6f5f3f1606d2"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/1979505_940848045958241_3510145053302013663_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=8269b537190194727d2638704f3d0445&oe=5D19A617"
     },
     {
-        "id": "ecdb7e62-60dd-46b2-92f8-2de6649909a7",
+        "id": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
         "name": "La Bande des idées #4",
         "date_time": "2015-03-10T19:30:00.000Z",
-        "place": "Le More",
         "bd_ids": [
-            "b4a3e5b7-2145-4fd9-88b4-074a4cf07d06",
-            "0d0f34ea-2996-4b7a-99bc-a9399bfe7f58",
-            "22496ff9-3496-46de-831a-85340faea3f1",
-            "20b6a713-d3a9-455c-bb88-8fe7f3d41eb8"
+            "beee135e-1fed-5a0c-9083-dde2ebaec54d",
+            "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d",
+            "db8922f2-954d-5063-9ca0-699e952b7520",
+            "3da21605-8214-54c2-b22c-e217a9c9ce93"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11034300_957113717665007_9217857601948649037_n.jpg?_nc_cat=103&_nc_ht=scontent.fcdg1-1.fna&oh=81f0d6de3f3cdbfddf2b249453cd5ce6&oe=5D1D555D"
     },
     {
-        "id": "398a8532-aa4e-4af4-b59d-9d9eac59802a",
+        "id": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
         "name": "La Bande des idées #5",
-        "date_time": "2015-04-07T18:30:00.000Z",
-        "place": "Chez Raymonde",
+        "date_time": "2015-04-07T19:30:00.000Z",
         "bd_ids": [
-            "f8a0e7bd-c4d2-4cf5-be7c-d419cae142b6",
-            "df2cd8ed-8193-4a5c-98c4-819b81f0efb9",
-            "185ebb47-f707-4b7d-8432-fe8429ef92c6",
-            "d0c5e14f-d469-4e34-a39f-824b9464c4b5"
+            "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9",
+            "43bbd0e5-e692-5e43-950a-eb10bd288972",
+            "f5bfa282-0bba-5c25-819a-7189c4fa979f",
+            "38c7eb79-a784-51a2-bf4e-94b788834ea9"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10474535_973957882647257_8113608325421000787_n.jpg?_nc_cat=110&_nc_ht=scontent.fcdg1-1.fna&oh=f15c6898e1958ad5ffa9c6a534a95f4c&oe=5D26E1F5"
     },
     {
-        "id": "f9a76328-8408-4b28-b69a-51874534c1d0",
+        "id": "5530f067-a32c-51e1-9ad7-97cf775ed705",
         "name": "La Bande des idées #6",
-        "date_time": "2015-05-05T18:30:00.000Z",
-        "place": "Chez Raymonde",
+        "date_time": "2015-05-05T19:30:00.000Z",
         "bd_ids": [
-            "b1971319-3708-4bfd-880a-127ab39fe0b7",
-            "2b6b7ef8-3160-4873-a333-c9ca9f4bab4c",
-            "1dee3094-d880-40c9-80b0-5d101133e631",
-            "9bdc7094-67ec-4e3c-8d23-83b3c090a4d5"
+            "aaa5174a-d012-5a86-83ff-88ee561cee78",
+            "a8f38346-3d87-5afd-9d0c-423aea300f2a",
+            "09bf28a9-0ce1-5a09-a99c-a21fcffed008",
+            "d6cae607-a1ff-5926-a3f2-bb062c84ffb8"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11110292_990154227694289_4228029765977675487_n.jpg?_nc_cat=109&_nc_ht=scontent.fcdg1-1.fna&oh=49cff7095ebfe210da24d43e044cf75b&oe=5D247C54"
     },
     {
-        "id": "04379d4f-2360-4d8f-8668-1dae578a5bca",
+        "id": "2456ad86-5acc-5301-9bd6-90548d61b552",
         "name": "La Bande des idées #7",
-        "date_time": "2015-06-02T18:30:00.000Z",
-        "place": "INFL",
+        "date_time": "2015-06-02T19:30:00.000Z",
         "bd_ids": [
-            "2b48027e-e2c6-404c-bfc9-ef1b40287604",
-            "318f03d3-7f08-445a-bfd8-5d68ebbaa06f",
-            "95d1be36-9e0f-42e8-9b2c-15b4a6996396",
-            "b1063158-c75e-418f-b8cd-0d6402c2d4b4"
+            "ae0bc9de-368c-501b-bad7-5bbbe89576fb",
+            "20d228c3-067c-5067-90c8-cb8cc271fe6f",
+            "fa873fe7-0449-5f89-8fc9-cfe1654b8041",
+            "795622ed-bfb2-50c3-8569-fb6f10d3cddd"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11351345_1006130122763366_7087995029299373561_n.jpg?_nc_cat=108&_nc_ht=scontent.fcdg1-1.fna&oh=98ce37ea32d0cdbbaae6edf9b8232d3b&oe=5D233300"
     },
     {
-        "id": "d5ad51e2-35e8-40a1-821e-f0fc1acb5a2f",
+        "id": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
         "name": "La Bande des idées #8",
-        "date_time": "2015-07-07T18:30:00.000Z",
-        "place": "Chez Raymonde",
+        "date_time": "2015-07-07T19:30:00.000Z",
         "bd_ids": [
-            "ac5e003e-9af3-4c18-9a65-b2eb1459bb2d",
-            "e8f72928-1c18-4a4f-a543-b4fd65be24ee",
-            "decf5783-98fa-4f20-8401-2f78ece8a621",
-            "841b0513-c857-4138-a6fc-5141152167cb"
+            "e49de7c1-067d-5937-b900-075d3a2f7799",
+            "cef800c9-32c9-52ab-bf7c-f734ba6c65db",
+            "7b7682a7-12fd-5c89-81c1-ce4b2ec3cedd",
+            "485c9772-b7f3-5b59-99a0-5bc51d90677a"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10985918_1027020130674365_87534998117886051_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=ea8e749d604e38f1e9846738e72c660c&oe=5D210011"
     },
     {
-        "id": "5d7d6a69-47b2-4b8e-99cf-80d6e067781b",
+        "id": "3b113b35-2d55-51c4-a846-f640bae083f4",
         "name": "La Bande des idées #9",
-        "date_time": "2015-10-05T18:30:00.000Z",
-        "place": "Chez Raymonde",
+        "date_time": "2015-10-05T19:30:00.000Z",
         "bd_ids": [
-            "c61f8f77-2789-4b95-8b1c-fcf969ade6cf",
-            "6cf2a6db-be78-46dd-be21-bf7ee5adf8bf",
-            "8adf0a15-bca3-489e-9ddb-bca1db825b5c",
-            "fed7c074-f2bf-4c81-a54c-188ccd10be8a"
+            "70aad9fb-30b1-5177-8126-c531467c028e",
+            "f9920e4a-7ba8-5f19-8842-ceaf65dd8b9d",
+            "9f0067bc-02b7-50da-a83e-61b896fc352d",
+            "da2485f6-6f49-5a22-a601-34c06f8fe55f"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t31.0-8/12045710_1075450439164667_5971117612948959248_o.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=2005aa0f4bd6e914288ea3cbbf06b561&oe=5D1A90BF"
     },
     {
-        "id": "87094ab6-7a5e-43c0-83ff-ffc43966a895",
+        "id": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
         "name": "La Bande des idées #10",
         "date_time": "2015-11-02T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "dc7741f6-ff1a-4ce1-8f1a-6e396a643851",
-            "aa88a1ab-20e8-4509-9fd6-44b2d6b93795",
-            "2cb5d4c0-e601-426a-8966-36b1d8f03fde",
-            "544c4e83-030b-4111-b60c-a2ba17c90bf9"
+            "fb96800d-99ad-51c1-a1e8-f27c7d8fbb10",
+            "94bd0510-12eb-51a0-a26e-0c444a702785",
+            "36e7eb28-ed60-5818-bc3a-eb39ae1e3105",
+            "331c85b8-47f5-56b5-bdb2-c4ad8b36a229"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12143197_1088158194560558_7531947012850699320_n.jpg?_nc_cat=103&_nc_ht=scontent.fcdg1-1.fna&oh=8fcf6b47f7fc43af14416790905a7ae4&oe=5D13A4C5"
     },
     {
-        "id": "bafaa200-4f85-4e71-9c14-55819bed02b7",
+        "id": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
         "name": "La Bande des idées #11",
         "date_time": "2015-12-07T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "79a193ae-62aa-47a1-9ab3-bfe22c28e3f8",
-            "07919f9c-c5a2-4180-b589-93059a24ecc6",
-            "cc310992-7cb2-4c69-be8e-be8f8b39aa8f",
-            "7a54d1ff-56af-4861-83c5-76c749b5bb4f"
+            "6dcd8372-864e-593c-aa7b-d1c4421ca80a",
+            "ee4b52be-c659-5eff-ae4e-44cebfeb024c",
+            "e9a8d3e6-7671-5522-9438-1ca74a7d4a54",
+            "bab472e5-dba8-56e8-94b4-eaca12df0767"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12299298_1103504503025927_7896546280449256768_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=d0cf1655bccbc7a5ce24bb2427075636&oe=5CE1E329"
     },
     {
-        "id": "2e03a317-da5c-443f-955f-1997ae1581e9",
+        "id": "fc63aa8e-600f-5543-807f-73035f19248e",
         "name": "La Bande des idées #12",
         "date_time": "2016-01-04T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "68363bbb-e008-4e5c-8909-3072c62ef5a5",
-            "e2b21d71-6571-4a6e-8f7b-3bff310a0ed2",
-            "9d3ed2f9-0019-40b0-aa62-5e865b1d0bc9",
-            "8b7f7874-332c-49e0-8535-334bddb11f01"
+            "5879ed08-b528-54fa-b889-cb9b6654c5e6",
+            "c8efe667-cfa0-5265-92b3-8f32fbeb53b1",
+            "0ee6ba43-46ad-5c80-8a2e-5114850d943b",
+            "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12366279_1115525188490525_3444939567555188617_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=eed31df2dc72374d64e21c71c9d94404&oe=5CE15C43"
     },
     {
-        "id": "023de01d-d75b-4cbc-a6c3-315b3f651697",
+        "id": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
         "name": "La Bande des idées #13",
         "date_time": "2016-02-01T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "e7f39044-2efd-4fe4-9b57-5fa2a1590245",
-            "a3c2d740-478d-47e6-be1e-099e6e599a70",
-            "ae77446d-f628-4f88-9131-4a2ccdedb708",
-            "bbebf137-b5dc-410c-913f-330e1a8c74f8"
+            "5cad8b88-954e-5800-bf00-9a0844b4317d",
+            "a1271973-c370-5a5f-a7d4-8feb30577f49",
+            "169ce90d-4993-5277-b4b4-898b948ae30b",
+            "c11af8d5-9a5d-5d5d-8a37-806ab326e55e"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12552899_1136429603066750_5278756872253066615_n.jpg?_nc_cat=108&_nc_ht=scontent.fcdg1-1.fna&oh=87aede4a8f4785bbe0c060b70ada5e39&oe=5D190012"
     },
     {
-        "id": "e9179f24-75bf-4edd-95c7-fa3fafdc56df",
+        "id": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
         "name": "La Bande des idées #14",
         "date_time": "2016-03-07T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "44a2a8b0-fdb2-4e23-a414-8bc5586d0cc4",
-            "7b6a1587-c8e8-4193-84c9-d569c958e996",
-            "cc9396b7-2326-4a15-87b5-0d1289e4bae5",
-            "f0ffd3a4-44a2-4cfa-95a7-f167aa1f5c50"
+            "112b74f7-40f7-535a-aab9-b13d3c94c4d2",
+            "acef282e-003f-5e71-a1db-09b55471da17",
+            "429db244-0244-5954-aed2-67933069011e",
+            "a287fabc-b371-534f-b5ae-bce6b907b35f"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12670605_1147488151960895_4559904947676418394_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=b0bbf60421aba76321873b82c2394a07&oe=5D1FC826"
     },
     {
-        "id": "37eec61c-9c9e-44f0-a1fd-cb5c5b2af062",
+        "id": "634fc1df-6058-5247-a08c-fad69ce34c2e",
         "name": "La Bande des idées #15",
-        "date_time": "2016-04-04T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2016-04-04T19:30:00.000Z",
         "bd_ids": [
-            "9b95323f-bf69-435c-854e-0bf889858abc",
-            "8aa6b830-bebb-44be-84cc-d425f9ab3388",
-            "7762d745-ca18-4fa5-aa16-0b3654d6771d",
-            "a8462b03-8492-4472-8002-c89b27823b7d"
+            "ea17e67e-3aed-5734-bee3-23d291cb2e65",
+            "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4",
+            "1fe8553a-dc4f-557c-b0c8-ed285d25d513",
+            "d7db5c18-6776-5197-b68c-f61569bd178a"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12376363_1180131635363213_4825001361981708091_n.jpg?_nc_cat=111&_nc_ht=scontent.fcdg1-1.fna&oh=e3961e663509c86cc1a543edcaf18a58&oe=5D2174C7"
     },
     {
-        "id": "add91edb-1da1-4a8a-8863-52f54c16b4d2",
+        "id": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
         "name": "La Bande des idées #16",
-        "date_time": "2016-05-02T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2016-05-02T19:30:00.000Z",
         "bd_ids": [
-            "c84b5aa1-f3fe-419b-bbd6-f4fcbd0068c7",
-            "a58f2002-64b2-4173-a0d2-b2baa53cc3f7",
-            "2282b360-5b82-47b3-bd99-040f244d8b33",
-            "3a29775a-58db-44c9-8f04-32724a992514"
+            "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32",
+            "f2860692-948f-5d47-b998-60f799a21268",
+            "69f9074f-83c0-57ba-977b-1125d2fbae16",
+            "e71a06a2-fc10-56f0-b0a6-f5b1ec6ce8d4"
         ],
         "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11140352_1199781990064844_3792389615048652994_n.jpg?_nc_cat=101&_nc_ht=scontent.fcdg1-1.fna&oh=2b5ac277c88d4bf7ddea7177c940df5d&oe=5D23FD22"
     },
     {
-        "id": "e10c773d-375d-4a2b-8ea8-b92afe15490b",
+        "id": "b0b01187-3e41-530a-b69d-1b778156244a",
         "name": "La Bande des idées #17",
-        "date_time": "2016-05-30T18:30:00.000Z",
-        "place": "INFL",
+        "date_time": "2016-05-30T19:30:00.000Z",
         "bd_ids": [
-            "c61ee2e3-1ff6-402c-b7ee-70044dff2c05",
-            "63fc3e2e-509f-4975-92c2-b345ffe71c21",
-            "133c203a-404a-46e2-b5d7-06ed678faed9",
-            "f1af01fc-de66-46c7-ac71-86723fb7333a"
+            "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3",
+            "80fb2922-29f9-5231-ba34-224676df214b",
+            "31218cb7-1c1c-5c1e-ba45-3383eb2db2a4",
+            "d6777df6-7ff7-5d60-883a-8b4a3ea24742"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/13177596_1211136378929405_1892386029205842518_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=5a9a5d2b3599ffd40817ef828cf4a1a8&oe=5D0C02F6"
     },
     {
-        "id": "529bb8be-b0ee-49e6-9483-e7a846ee1cb8",
+        "id": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
         "name": "La Bande des idées #18",
-        "date_time": "2016-06-27T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2016-06-27T19:30:00.000Z",
         "bd_ids": [
-            "21261c65-9ddf-41e2-aa90-684aee72bfea",
-            "5f0a53d3-a4ce-4e8c-8e74-035cd7baf402",
-            "fd2216f3-86cb-45a0-abd3-8282a9941449",
-            "d9cbe6ee-f2c7-4784-8da4-94f337f380a2"
+            "0f4c7769-b9a0-5d86-90c2-0dab9cdecac5",
+            "50457d0a-d275-54ae-a701-73038d4557e5",
+            "ff97eec9-4561-5965-b9fd-31a81ed88ca1",
+            "f6807abd-c884-551c-ad68-32d7182e64bc"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/13407301_1238484292861280_6451655614105249900_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=df4846c734f72e874d04eaffc4768d04&oe=5D20A24E"
     },
     {
-        "id": "cd58631c-d97d-4eb9-b83d-79e86ea2dee6",
+        "id": "acaef519-c1b3-5690-84b1-d8fb25759813",
         "name": "La Bande des idées #19",
-        "date_time": "2016-10-03T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2016-10-03T19:30:00.000Z",
         "bd_ids": [
-            "5a0db9c8-76bd-4a10-813d-0e7009715bf6",
-            "a0065c78-fb76-4032-8788-94915c650bf9",
-            "1fb1c50a-e5a8-4a81-86cd-2e057cfbf362",
-            "18d79c90-700b-4993-bec7-19f63303b8f1"
+            "13cec0e3-d7e3-54da-be39-8ea04750452b",
+            "4855cab9-a793-5a3b-b9ed-a1ae11a4cb96",
+            "b84e2de9-9773-5fb3-b098-95600aabefb4",
+            "6abe3396-863c-534c-ab1f-f19543d6c60d"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14445970_1315239218519120_3949106291008340937_n.jpg?_nc_cat=104&_nc_ht=scontent-cdt1-1.xx&oh=ddb2df967a65262bfa152111e5ffb94f&oe=5D122887"
     },
     {
-        "id": "699114d7-eaeb-4d59-9f03-0949139e6858",
+        "id": "81b7b345-17ae-599b-8c17-b38aafc42040",
         "name": "La Bande des idées #20",
         "date_time": "2016-11-07T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "02b50c9c-26c5-4f2d-bc02-6265cf2f1dd2",
-            "260a3ad5-c71a-427c-a993-b6de8353bf4d",
-            "d7322f2e-20cf-443f-9cdf-418eb2ce894b",
-            "04bd1af9-b38b-4ec1-9216-71b9b3506dc9"
+            "72f2081f-6273-5dc2-8c7b-28dc3370c098",
+            "2e080007-73f3-551b-9c26-e8e9ebec19d2",
+            "b5c177d6-e429-538f-84b3-6f857b20a7a4",
+            "9491f949-140c-5092-9add-d05dc3983fe1"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14656390_1348809808495394_2113809148631383691_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=b0f5c231715e9622620d5a087deeb3c4&oe=5D1E3BF4"
     },
     {
-        "id": "4c8b4b0b-644b-4635-9daa-f42c06d935bb",
+        "id": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
         "name": "La Bande des idées #21",
         "date_time": "2016-12-05T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "dec9d8b9-0d07-4f1a-8a11-c8a1b2cf87cb",
-            "7b05f634-5e92-4062-abd1-596ac6fd7c16",
-            "d7242bf9-c263-4771-be0f-d9ef2e5a0dd1",
-            "2d48fc30-54fa-4f31-82c0-a9bfba8b9603"
+            "bde8dc28-1f8e-58e9-8de4-8efd46178c54",
+            "9ac45906-4b6a-5ca4-805b-f64aec4b90bc",
+            "c4a296ae-92a4-59dc-9301-4a603a7cffd0",
+            "562e5012-19b0-5794-aa0e-4636a143312f"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/15317992_1378414108868297_8537428629914642930_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=4f2577a1db897ce8f2cc0303d196a81f&oe=5D0D270F"
     },
     {
-        "id": "b161fb21-e5e9-412f-a21e-738dd90c401c",
+        "id": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
         "name": "La Bande des idées #22",
         "date_time": "2017-01-09T19:30:00.000Z",
-        "place": "Lou Pascalou spéciale Editeurs",
         "bd_ids": [
-            "87e60d20-59f1-4924-95ec-0e7ceb2c97b7",
-            "7eca1ef7-3646-4a55-a3cb-8e01c640afd2",
-            "eb3d8c06-96e6-441d-9994-193a4a1e0ed8",
-            "87aa44a4-88c8-4edd-95dd-2768a158291d"
+            "163d1778-437a-5b0b-a41c-477e1740f9d6",
+            "3ffeb194-5cc8-5d05-ade9-964f5999aa79",
+            "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc",
+            "0d8ca287-8e3d-55a9-9f4f-bbe8a1a62c40"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/15871469_1424933184216389_7395848885661616025_n.jpg?_nc_cat=105&_nc_ht=scontent-cdt1-1.xx&oh=d8e710850d8dcac116318c43d7b702dd&oe=5D0CEDB8"
     },
     {
-        "id": "d437ec10-452b-423a-803b-764de5c4bb12",
+        "id": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
         "name": "La Bande des idées #23",
         "date_time": "2017-02-06T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "68333986-ec2a-432e-b0d3-01f1af5a08fa",
-            "0c094574-f045-4afe-aab1-1991e3f73038",
-            "ddc79cf0-9ca6-4387-8144-e9a4f1bd5e48",
-            "9b115329-df81-44f9-ba1b-b1327c521dd6"
+            "5a7dd53b-1495-5663-bea2-733fedd1d228",
+            "4335f95a-162b-55fd-bc33-9ae6270eaa96",
+            "92d4a711-7df9-52a6-aef4-35cf71bbc16a",
+            "09bd361d-294b-548e-81d2-a24ce73e755a"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/16174676_1446297115413329_25349491156172291_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=ba287790c316e3b7b3a70e3f2a8a0926&oe=5CDB318B"
     },
     {
-        "id": "6106d81c-d277-4ff1-9328-75fbc17ca7dd",
+        "id": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
         "name": "La Bande des idées #24",
         "date_time": "2017-03-06T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "4f8dea1e-faa0-4846-8e58-c7ff8061f18c",
-            "5d8a744e-6acf-4568-bfec-90076efdd15d",
-            "8875dd68-c114-4607-a22c-814f63cdf8ef",
-            "2a5b964e-bcb1-4d6d-8881-4619be269d45"
+            "1d56642e-0dc1-5f4a-aae2-0fa94df543fd",
+            "7c7c3feb-134e-5fcd-8be5-c580ee005cb1",
+            "d6aa2f0e-42e0-5e88-9aca-0f988aaf0156",
+            "8a70367d-933d-5179-ad05-41d287a8027e"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17021581_1477042082338832_3691963312336295706_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=33fdbd4d536bb781b9a327d4d23129fd&oe=5CDF58FD"
     },
     {
-        "id": "b8a99398-62c4-47bc-92b9-71251e02244c",
+        "id": "a162a1f8-1fec-55a0-838d-7c9173f88142",
         "name": "La Bande des idées #25",
-        "date_time": "2017-04-23T18:30:00.000Z",
-        "place": "PULP",
+        "date_time": "2017-04-23T19:30:00.000Z",
         "bd_ids": [
-            "918e7bb8-79ba-4c24-a1e5-f9036bb5e5ff",
-            "eb5a184a-1ab0-47c2-b218-660e665b821c",
-            "bde07241-cf98-4656-aa39-680af7870fda",
-            "b47e711b-de66-48ef-b10b-05974bff1965"
+            "264198c3-9db1-53e1-9cf2-57062511f327",
+            "fb7e1f82-d227-5650-85b7-c44a4f634109",
+            "9915da9c-e3bf-579d-9399-0cca6f6854ed",
+            "871a5231-dd60-5c65-9b18-723b1565ffa1"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/18010067_1534433169933056_8998104558482823340_n.png?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=3735eced4a065370c325fdc250192ac2&oe=5D222119"
     },
     {
-        "id": "bfd89c4f-4c44-462f-ac5b-4a466896b86c",
+        "id": "4773d958-16dc-5d09-ac56-048ca6df63b8",
         "name": "La Bande des idées #26",
-        "date_time": "2017-05-20T18:30:00.000Z",
-        "place": "INFL",
+        "date_time": "2017-05-20T19:30:00.000Z",
         "bd_ids": [
-            "3b7ef2d4-0591-47d4-8342-25313b20e4bd",
-            "ea970a7d-22cd-45d6-adf1-171eb3158a46",
-            "b67d484d-bdc3-4b55-8016-fcc8888f8daf",
-            "a7c27edc-6210-478f-92c0-923909545863"
+            "975d271b-e1e0-54f8-9273-2debfe877e0f",
+            "49643a22-7c3c-590e-909d-2b458a3c9812",
+            "5a8ed5c1-88a2-5654-88d7-c1d974ade6b3",
+            "1446edf4-27ba-5484-9124-b0655c28fa02"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/18581711_1575887865787586_1170839975577071079_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=ac2e3d6a9270ef980f606b5828258a91&oe=5CDAEDE3"
     },
     {
-        "id": "ab70e3c1-1489-4f3f-91f9-9caa4a613d17",
+        "id": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
         "name": "La Bande des idées #27",
-        "date_time": "2017-07-03T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2017-07-03T19:30:00.000Z",
         "bd_ids": [
-            "79fd88d0-0746-4fe1-88c7-40c324c4892e",
-            "e11b43f6-94c8-48dc-b4ec-99e990bd5588",
-            "d2f06936-01e9-4522-9324-6a43409fdbdc",
-            "726e5233-d34f-486e-8bbf-fcc2be0a459e"
+            "5864aefd-c512-5acd-bfd4-654a9577e01f",
+            "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa",
+            "a3a08375-70c5-5185-aa11-1970757201c6",
+            "506574d1-5d79-5ea8-a30b-2de7549df7f9"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/37524150_2047152531994448_2390556574792810496_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=637b59310d095b7388aadaf5c4010b0b&oe=5D0F2BF5"
     },
     {
-        "id": "a4aed15d-d3d3-4f09-970b-dbd7e7ee7ebf",
+        "id": "962b55da-7635-5b79-975c-44b8cd63497b",
         "name": "La Bande des idées #28",
-        "date_time": "2017-10-02T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2017-10-02T19:30:00.000Z",
         "bd_ids": [
-            "b85a54be-6111-4953-8676-bccd25db62c3",
-            "4adafaec-5e72-4867-8c4d-4ff81ccf7afe",
-            "fa250d04-5e87-414b-b4a6-a5b9c01d56f3",
-            "1177f6dc-bea1-4fe6-bfe5-42d3918c118f"
+            "ff441b8a-e7d8-56d6-889a-43edd430e38d",
+            "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c",
+            "83e86609-2b52-52ab-b6f2-454f3f4f1588",
+            "87fa356f-0b28-50f7-ad0f-7608ec05705e"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/22046588_1707879375921767_1666208443553365186_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=146ceeafdefcc34b497a7b6229245fc1&oe=5D1BFBB4"
     },
     {
-        "id": "39bbe6f9-0b92-4a07-9e10-d033f6ba3374",
+        "id": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
         "name": "La Bande des idées #29",
         "date_time": "2017-11-06T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "556a73d0-f56c-49a2-b539-c6cec6d10d79",
-            "a9a6023a-eb50-4880-956f-2c556bf16d8d",
-            "a4d978f9-f4a9-4f7b-a6aa-40268098da6f",
-            "e13cfc35-f148-40f6-9fbd-f709e6509ccf"
+            "a968de90-88cc-5e8a-b553-d7298afa9d74",
+            "9c926764-7669-5585-8219-0f0fb31f3498",
+            "920c0bc3-909f-517c-8194-eec53442da3a",
+            "765d65d1-e762-5976-bda4-410a49745faf"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23031599_1743463929029978_3200352309829749099_n.png?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=dcc0d21138f350951af49c9985e3c396&oe=5CDB925F"
     },
     {
-        "id": "9ca2aa20-b0f1-4981-b385-fa11d4e6e89e",
+        "id": "016d6e71-04fa-5718-bbc4-42c714e709a9",
         "name": "La Bande des idées #30",
         "date_time": "2017-12-04T19:30:00.000Z",
-        "place": "Lou Pascalou spéciale Manga",
         "bd_ids": [
-            "0c501de6-11ae-4547-bc27-1ae3594e4b2e",
-            "fc8d6453-e11f-46cd-9c3e-bcb2fa058153",
-            "ee1d8db0-78a6-4451-813e-161ae7804c28",
-            "ea9ede06-9721-4071-915c-a28701b2d7ff"
+            "b7cfe93d-0614-51ed-9121-129779a36201",
+            "3c1a9222-8bc6-5dc9-9f80-8d86851d8aec",
+            "18b43f2b-e8c9-553e-92e1-c13027830753",
+            "42bcdd54-8a27-5fbc-b679-565b1ae82f57"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/l/t1.0-9/23755668_1767369796639391_1277478686325266492_n.jpg?_nc_cat=100&_nc_ht=scontent-cdt1-1.xx&oh=d24a0a9fba0afa43ea3fde5e8e31eb64&oe=5D103A7E"
     },
     {
-        "id": "ab534cf7-7c88-415b-8075-3cfa5a2fd5ab",
+        "id": "99984239-be4b-5527-ac6f-2efffaa923c7",
         "name": "La Bande des idées #31",
         "date_time": "2018-01-08T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "a73dc820-47d6-4cc9-98a0-2016b5302ba5",
-            "9b9ed6ff-a964-46b2-8d6c-33264a38ed89",
-            "3b7728e5-da60-4eae-b985-68a7442c9ddb",
-            "13036c2c-766c-461c-8e52-585e09bf13b9"
+            "0ef59048-c3fb-5ea8-b650-75dafe1998cf",
+            "2e7c3a72-b7fc-5260-a119-e8a94af085e5",
+            "06ce7cf3-e238-5bb4-80c8-2000e8c536c7",
+            "37e7a325-c27f-5f10-a2d6-21765d017dd8"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/26168857_1810957948947242_2756578082164197469_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=209178d9bf3619558a680e48bf576525&oe=5D0DB4D1"
     },
     {
-        "id": "b5a648b9-0f77-491f-b411-87e4d6e25eca",
+        "id": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
         "name": "La Bande des idées #32",
         "date_time": "2018-02-05T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "4c67106e-6394-4285-babe-1e271bc893aa",
-            "968f0bd4-1823-4917-a181-705dea7809e5",
-            "1b24a8b5-6f13-4811-af34-afcbeb1b4402",
-            "57934b9d-e44e-4b5c-9f78-118f4987b51c"
+            "4bc94c79-035d-558e-85ae-c08e1baee587",
+            "b8354485-7ce8-5d1c-a71b-bca27475f6c7",
+            "5be2ee50-4405-56c2-b59f-fbdc8438e45e",
+            "68213172-a9fb-5a77-9b90-2668f465ed84"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/27067504_1841112142598489_7184528437488560486_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=ff206716f00ef4ce4919a58ce1f06bc0&oe=5D260DF2"
     },
     {
-        "id": "adec57ba-dd04-4935-8af4-e23b06e954cd",
+        "id": "10c922a7-8e8b-50ca-ae70-0e9dad0db06b",
         "name": "La Bande des idées #33",
-        "date_time": "2018-04-08T18:30:00.000Z",
-        "place": "PULP",
+        "date_time": "2018-04-08T19:30:00.000Z",
         "bd_ids": [
-            "bb900a34-0714-4224-9330-aab2eef9360c",
-            "e0748971-c1c4-46d4-b527-1d40b9eedfad",
-            "f4368a21-09d6-44bb-bea5-d6bc40cf3589",
-            "7962dc63-867c-403b-95b2-4437d199349f"
+            "d7561c34-87ed-5351-9dcd-cabcdda88eb9",
+            "ef41686b-1031-581f-a454-351eef12c49b",
+            "9b7133ae-5594-5171-a72d-28be9d48ac38"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/29573175_1909178212458548_6510851018372175617_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=9fea07126eba712a6071ab80b0da0b26&oe=5D0FF1B1"
     },
     {
-        "id": "764bc51a-e873-4fdf-8e9b-6ad4e2e6ade8",
+        "id": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
         "name": "La Bande des idées #35",
-        "date_time": "2018-05-14T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2018-05-14T19:30:00.000Z",
         "bd_ids": [
-            "d07311c3-121f-443e-911c-ba10b847ac4d",
-            "d487009b-3274-4f6b-88f3-93d79f63e57d",
-            "a4546cf5-74bd-428c-85c6-3ace1e626c2b",
-            "43399c57-14b4-49c4-9cb2-b8da1038fd0f"
+            "a2edcba9-4069-57fa-860a-9b0f656b7911",
+            "2ab19c62-8468-5b16-99a6-f5b97153b993",
+            "e0f10239-868a-5cde-b6dd-9c94fed8d7b5",
+            "4752dff7-0fcb-5360-a636-374577c0b313"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/31945380_1947020325341003_8619787290471825408_n.jpg?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=c6f78b3917a6dbe2c7bbf840a08b3291&oe=5D1CB347"
     },
     {
-        "id": "f3859652-92e0-4e99-a7d7-e260178e4f37",
+        "id": "2fc305c6-f0c7-5462-9a45-89241614c418",
         "name": "La Bande des idées #36",
-        "date_time": "2018-06-04T18:30:00.000Z",
-        "place": "INFL",
+        "date_time": "2018-06-04T19:30:00.000Z",
         "bd_ids": [
-            "7e57e358-7a6e-458d-9e0c-279316ee73c9",
-            "9f7f05c7-03e4-4d37-bb11-cb59bfe74378",
-            "5e20c93a-c966-4f0a-97ca-d5b1465b7509",
-            "d4d0c874-7a59-4292-81d6-bb9cca65e012"
+            "0e432312-5b7e-50f8-afba-7869c1256706",
+            "8f885326-1105-5c04-9cb9-1df0a0d79080",
+            "3d3f33fa-274c-5750-bbe8-b8a37f599031",
+            "967b3863-f429-58b5-804c-12a7b22632fd"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/33765875_1968566439853058_6763955458291007488_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=f324ce96fc252504653a7e91e01b5416&oe=5D1BF9A6"
     },
     {
-        "id": "d4b537f7-e09b-4bc1-a86d-c44e843772e7",
+        "id": "07171107-88be-5a83-be43-0205a9c53237",
         "name": "La Bande des idées #37",
-        "date_time": "2018-09-03T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2018-09-03T19:30:00.000Z",
         "bd_ids": [
-            "3d74136e-402f-46bd-a10b-c2001960d7e0",
-            "9267d4a4-aa59-4e49-b8a9-bd93c656d440",
-            "947c1604-40bf-44c8-a4b2-fedb8ccbb8a7",
-            "0c295e7c-43b0-4358-af34-a7a59d7ee528"
+            "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19",
+            "7cb93591-7dde-59e6-9afd-dc565a390435",
+            "d0acc909-4425-5267-a65a-41d9ca5be16b",
+            "c5f4a66e-a9f9-530f-8694-d73e0c2f8e4c"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/40054328_2110024205707280_5284287186995249152_n.jpg?_nc_cat=106&_nc_ht=scontent-cdt1-1.xx&oh=d835e0a4f5ae72f3625a9632b6f28ffc&oe=5CE1A0FC"
     },
     {
-        "id": "e67b3cce-70cf-45b7-92fc-ddd577fd8b76",
+        "id": "437bf521-fecc-5100-9170-e59fe3b5a117",
         "name": "La Bande des idées #38",
-        "date_time": "2018-10-01T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2018-10-01T19:30:00.000Z",
         "bd_ids": [
-            "d672e2c0-86ae-4866-bc03-22df7758ba0f",
-            "6d970069-2daf-415d-8fce-e7c580198c08",
-            "c7e2b439-1d33-41f5-9b4a-bac4db9e906d",
-            "01784d90-3013-4d2a-b196-02c5ca9d89e5"
+            "395b6a6b-7acb-5a84-8ddf-e855409977b8",
+            "0fe6b6ee-7baa-56dc-ab21-40f63a87421b",
+            "27aa754b-ec29-5d31-aac3-143f9055fdb5",
+            "21bdadd2-bb70-57c4-9fac-bb1eef30acc0"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/42607884_2150476651662035_5013794029343604736_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=93564aeb260afe78d0e73f61770e62f6&oe=5D2378B2"
     },
     {
-        "id": "11a2fae9-fd48-48d9-8be6-78794f777370",
+        "id": "19afc03b-0b2f-5102-946c-c27a7158332e",
         "name": "La Bande des idées #39",
         "date_time": "2018-11-05T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "df45700b-9447-4114-9378-501ada45121a",
-            "1b31f45f-e604-4169-a18a-cc5d2fed12f1",
-            "38ef5543-c51d-4e0e-85c5-f9602f08df8e",
-            "408aab5a-c1a0-4ddc-abea-dc65d96e4991"
+            "a487bacd-3e60-5db3-9c0f-e8167d21ca9d",
+            "7a876a7a-5b64-5cde-9870-ecb1aa6d034c",
+            "6a5e1b8a-0898-5cbd-b53c-ffcb5fb7bb59",
+            "8347cdbe-e853-583d-a6f8-3288b8bb55a5"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/44245490_2179972502045783_4181771306905108480_n.jpg?_nc_cat=107&_nc_ht=scontent-cdt1-1.xx&oh=2c6394761f1a6c1081c8700b6dee5c5f&oe=5D28EB26"
     },
     {
-        "id": "65692249-d18c-453d-b1e3-07b8b78b0300",
+        "id": "75bd8d09-d669-50a0-a00c-48987b2b9472",
         "name": "La Bande des idées #40",
         "date_time": "2018-12-03T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "26652315-38d4-4a35-b281-361ccb094001",
-            "196f3a61-3d18-4691-b8da-feb5595ca3aa",
-            "631bb284-70fd-4da7-91e2-90e614e67c8c",
-            "79983150-030a-4ce6-bd49-e6405381a023"
+            "c77e8572-a4d7-5a3e-b772-31dd942e9d39",
+            "4bb23804-0bcf-59c4-b051-ebf483efde5f",
+            "7e408fbd-928f-56ab-b646-d972f5e24698",
+            "21801dc4-dd74-5bc0-881d-89f0328bcfcf"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/46494379_2228673830508983_6424827537838309376_n.jpg?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=9c9f9dea8af43fa38d8db1298c47de0a&oe=5D1EDA91"
     },
     {
-        "id": "bcc10f56-a38a-483b-9682-1dd84422e7dd",
+        "id": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
         "name": "La Bande des idées #41",
         "date_time": "2018-01-07T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "76b225a8-e09e-43ad-bc51-d0ede04dfae6",
-            "6593257f-7abd-40a0-b5cb-d5eda93cc72d",
-            "abb8cc20-6856-4ce9-8e74-4ab5f53459f7",
-            "caed7b26-7d28-4b8b-96fa-f5ba6b0708e3"
+            "b4e6e54b-c87a-5158-b824-bba62706d262",
+            "344c953c-2f98-510e-9642-b193cc079eeb",
+            "b543747f-1269-5f2c-98d3-13188b27d9b0",
+            "795ed7d3-240b-5db3-8a23-41fe5531f853"
         ],
         "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/48393030_2271348946241471_7781236312232689664_n.jpg?_nc_cat=104&_nc_ht=scontent-cdt1-1.xx&oh=18704fae68530b7984f67b6a4a044c05&oe=5D0F4B4F"
     },
     {
-        "id": "d1c78cc4-db48-4eba-81ae-bfcaefa46064",
+        "id": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
         "name": "La Bande des idées #42",
-        "date_time": "2019-02-04T19:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2018-02-04T19:30:00.000Z",
         "bd_ids": [
-            "73d66c2d-961d-44fd-8658-ac2aedc8f06f",
-            "c50a4895-751a-46ed-80f2-cea9bfd0d18b",
-            "252cc3f7-1bba-42ba-8e94-8074459b747b",
-            "ec6c67d5-9c05-4351-a587-c0d41aa4c6ee"
+            "0a1fa77f-b0ff-55a3-ba65-d274ab0605d3",
+            "91796292-f679-5dc3-8e16-f53e3cd37480",
+            "5c0d585f-9e55-51fb-bb16-f98389cb7ce4",
+            "08e65064-e95c-5215-8c3d-adb674683828"
         ],
-        "fb_event": "https://www.facebook.com/events/233681017522001/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
+        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/50210461_2325301247512907_1931457551904276480_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=e28ec1fc8e95d9828339de2b7c570a31&oe=5D257638"
     },
     {
-        "id": "bec4d70f-58e9-411f-ad59-27c711fa50c5",
+        "id": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
         "name": "La Bande des idées #43",
-        "date_time": "2019-03-04T19:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2018-03-04T19:30:00.000Z",
         "bd_ids": [
-            "043cff6c-cb74-43e6-971c-e6110d9e2f27",
-            "7835715e-20e5-443d-9724-624d40d985a4",
-            "e6112d7d-6e1a-458f-8799-f65bd5c22873",
-            "fa6004ee-f525-41da-bc6c-36a7a5622a89"
+            "3d70b2d5-2977-5edc-972d-5f5e66124eef",
+            "bf4fe76d-85e6-5b2b-8093-bd397f29ccc2",
+            "8ac3624a-93f8-5771-975b-942423b399b5",
+            "45654738-801a-54ec-a4da-363363691092"
         ],
-        "fb_event": "https://www.facebook.com/events/757773357953306/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
+        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/53071290_2382826551760376_4380486648983453696_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=67247ee1f3b53b3757069833001c06d5&oe=5D1CE030"
     },
     {
-        "id": "b3482fa3-0a65-4302-baa5-97bacce97ec8",
+        "id": "e3653545-0c2a-50bd-8d14-699d252b53a9",
         "name": "La Bande des idées #44",
-        "date_time": "2019-04-01T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2019-04-01T19:30:00.000Z",
         "bd_ids": [
-            "60078e92-6be3-40b8-b32f-d4bc75546c1a",
-            "e7304430-58b2-4838-847c-4943209a3bd5",
-            "2643f241-2486-4df0-949c-6fe63054ba4c",
-            "2be2b625-fd04-48cb-8e78-57beeccc99fe"
+            "6a77cc15-294a-5114-8d5f-73d5d402ab51",
+            "20804294-4e09-50cd-94bd-8372e5d99a58",
+            "85b4afe0-39bc-53e9-b894-84624222cc7d",
+            "9a9a15ba-5c4a-5d05-9b95-0f346d811cf6"
         ],
         "fb_event": "https://www.facebook.com/events/285763049007863/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "36f78162-f50f-488e-bfc9-b09bb8ac5674",
+        "id": "611db4de-5ee6-5c83-83c5-af36e6222068",
         "name": "La Bande des idées #45",
-        "date_time": "2019-05-06T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2019-05-06T19:30:00.000Z",
         "bd_ids": [
-            "329e3a2e-851b-4155-b797-56ab386f9828",
-            "25b3ba4d-df17-478a-baf1-678a113ab661",
-            "6b3b470f-1589-4321-91f1-1c7810ebf6b0",
-            "6570b8db-360b-4681-bda9-ea63b9ade0e3"
+            "a9faa5b6-9672-510a-bd92-634e3aeb2240",
+            "4d775666-080c-5f46-ab43-983746584a96",
+            "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71",
+            "6719474d-ed51-5f92-8278-3646bb92c03b"
         ],
         "fb_event": "https://www.facebook.com/events/325704408128713/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "93f6571c-9c24-47e1-acf5-37c903acb458",
+        "id": "35935fa2-a008-5d4a-837d-ff51e42f0123",
         "name": "La Bande des idées #46",
-        "date_time": "2019-06-03T18:30:00.000Z",
-        "place": "INFL",
+        "date_time": "2019-06-03T19:30:00.000Z",
         "bd_ids": [
-            "33e079a6-8300-41e0-89c9-9138fc721fa3",
-            "0a763474-59be-4d4d-842b-e8a87e3b5c2a",
-            "2d464d90-09e0-4a74-a6cb-11aa4707840d",
-            "dd65af09-b8d4-4f1e-8c0e-94a6ff2dd456"
+            "e4e1d8bd-5c94-57eb-9b76-45b0d2e3c1b7",
+            "0a23fbe5-b7b7-547f-95ef-c8e4c169ba84",
+            "8b193f6b-8fc9-5dd4-8f86-3dffe109ace2",
+            "0eb55165-0714-592e-b967-ca0d76ba06ff"
         ],
         "fb_event": "https://www.facebook.com/events/1129332163916912/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "ab1b5b1b-8e69-4189-895b-6d8a48ef7301",
+        "id": "15afad0f-6a49-5a5d-9361-e696250a3993",
         "name": "La Bande des idées #47",
-        "date_time": "2019-07-01T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2019-07-01T19:30:00.000Z",
         "bd_ids": [
-            "9a219ea3-7c4d-4c65-8282-bb468fd39ff8",
-            "da436e28-681d-4b0b-a7cc-5c41be6e5dfd",
-            "7369cf71-bc79-4782-898d-89aae5bd0d0f",
-            "d5cb5a85-29fb-41ca-a1f8-a91897dec5f9"
+            "455fed83-1d56-56f4-b2e3-46efbcc1f0e1",
+            "ea9613e4-c0a1-5a88-b2a4-fc986c9f2240",
+            "935c5f25-3edb-5853-91ea-c0c75d211ba5",
+            "99f43ae7-65c3-5f0b-bd9a-336ad6735fea"
         ],
         "fb_event": "https://www.facebook.com/events/356507151919604/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "4923261b-9025-4b34-ac73-2524e1cdb9e2",
+        "id": "943ef86c-2f3d-5418-811c-3984ec44218e",
         "name": "La Bande des idées #48",
-        "date_time": "2019-09-02T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2019-09-02T19:30:00.000Z",
         "bd_ids": [
-            "0a0b8618-67eb-4543-b87c-6fabc445c15e",
-            "6089b7a5-d1d8-461b-879d-f349e16f2a67",
-            "c3580b81-adb7-4cbd-b637-250ecdf25da9",
-            "b8485509-5331-4ba0-8312-e9d89ccb1a36"
+            "3d6f3134-2abf-5826-9462-12df423eeb00",
+            "90a07961-765f-588b-a9b1-147327ff19e6",
+            "b6e3995c-deef-5246-a9b0-df3a38e0f7e8",
+            "fa63dd8d-c49f-5a56-9f07-8f6fbbb45dbc"
         ],
         "fb_event": "https://www.facebook.com/events/665582067287940/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "56e93d7e-3798-4701-9ae9-0476bf42e699",
+        "id": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
         "name": "La Bande des idées #49",
-        "date_time": "2019-10-07T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2019-10-07T19:30:00.000Z",
         "bd_ids": [
-            "57bb05d5-adf6-4342-ab0a-43bab1d59c22",
-            "d88295d6-0bca-428a-851a-80987a29d2a0",
-            "1d42cc42-1077-49d3-8b75-db877029bb42",
-            "ff05196e-e410-4a4a-aac4-e772ce00d110"
+            "91f06cb8-a704-5705-b48a-2015fa0dd6b8",
+            "9c1164e3-301e-5075-af2f-013c819bb56a",
+            "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea",
+            "809c07eb-4cdb-564d-801f-810e13afae93"
         ],
         "fb_event": "https://www.facebook.com/events/2474036006005538/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "9393d772-ee89-40e5-8cd9-e9bf1bc5ca7a",
+        "id": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
         "name": "La Bande des idées #50",
         "date_time": "2019-11-04T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "d1471f01-3748-42cc-ba08-d0ede9019b3a",
-            "c0e65c01-b0db-47e2-81d6-77afe1d6533c",
-            "c158ae8d-8bf0-40fe-9e74-4a64e049e7be",
-            "d904b85f-2832-46a5-98ba-2eb9c4301655"
+            "04614ebb-df6b-5425-9f49-a953190b114f",
+            "fff5e173-faf5-5091-b143-91036a35047d",
+            "88083fb1-f033-50a2-a26a-84921246605c",
+            "41a293e2-8d3d-5933-9188-f01edc26eb0c"
         ],
         "fb_event": "https://www.facebook.com/events/2533623426867287/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "284b2104-e062-4f7e-a13a-670b27d4c678",
+        "id": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
         "name": "La Bande des idées #51",
         "date_time": "2019-11-27T19:30:00.000Z",
-        "place": "Salon du livre jeunesse de Montreuil",
         "bd_ids": [
-            "737423f3-8af9-41a0-ae84-cdae38fd365b",
-            "83446e84-f4d0-47c9-a6d3-b9b6214ab07f",
-            "16b282a3-fe42-4ab2-96a6-f3d58df16dc0",
-            "14ffec37-5d23-4c76-8985-df12cfa9a51b"
+            "d535ad5b-baf2-54af-b3d5-17d8b52332ff",
+            "dcc25ccb-bc58-5f18-9a49-a54fc52fdcf3",
+            "4e54d086-2092-5623-81ce-cdb52ee354a3",
+            "33368bc9-256a-520a-88cc-b78bd19c6dce"
         ],
         "fb_event": "https://www.facebook.com/events/509526156269235/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "4de7f226-35d8-4f48-bfcd-7466c8280cc7",
+        "id": "282002d3-3314-58cb-a08c-56d1b660f8ed",
         "name": "La Bande des idées #52",
         "date_time": "2019-12-02T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "c3cbd26b-6184-4fa6-9d42-ca3f9ce7dbc8",
-            "29a4b784-45b9-46cb-8117-e9d3fb007080",
-            "933749ac-48d9-4c0d-bad4-3afabeb39c06",
-            "f8ab7eee-3e2e-4b16-aba2-c9a59b8a14e6"
+            "1346fd40-465d-50a8-9dbf-1b3db2f2f962",
+            "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a",
+            "5664c22b-88d2-5a47-bf61-fb3e4f657a0b",
+            "56fc148f-32d4-5cb2-a0e4-8eee0f478cfb"
         ],
         "fb_event": "https://www.facebook.com/events/1143293975868038/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "b89fa215-2567-4f8b-89f9-47043ff842dd",
+        "id": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
         "name": "La Bande des idées #53",
         "date_time": "2020-01-06T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "eac2f8b0-cabe-4894-9435-1f97d78d48fe",
-            "b504945d-dcd2-470d-a9d8-757e479d97c4",
-            "07b9a55d-d923-4b11-adb6-6fa6bba48d69",
-            "9a011c39-92ab-4a08-89fb-3df45b43c28d"
+            "5cf79362-fbc8-5768-a71e-da1f3da4979b",
+            "99cf5bac-a6b4-5fa0-ace7-3b6acdda880b",
+            "6486c644-9f52-5b81-8121-a07c9ca820d3",
+            "a07deabb-ba5c-5b23-bd86-e977a8865e6c"
         ],
         "fb_event": "https://www.facebook.com/events/778287175971506/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "fb274520-64ff-437d-8a96-f040bee4f143",
+        "id": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
         "name": "La Bande des idées #54",
         "date_time": "2020-02-03T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "326f6947-69d5-48c5-bde6-d677cc8798ed",
-            "8fc8c100-bb70-4f24-aa74-a45ba3446b6f",
-            "4fdbeb31-7b0d-4d1d-8988-7bdb87ddc45a",
-            "56fdc40f-69be-4035-b59b-699c226561aa"
+            "3852be01-9880-52eb-8493-9b3a5758e58f",
+            "7769da5e-26ce-5da9-bec0-7a649cbadc21",
+            "e897052f-d4f2-5e42-9731-c4f7b672d891",
+            "a5c2edd4-0e57-5aff-ad51-1da715ae3f5e"
         ],
         "fb_event": "https://www.facebook.com/events/1552168821619081/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "6d4b6a62-4e7f-4610-be61-4b1c1a845c41",
+        "id": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
         "name": "La Bande des idées #55",
         "date_time": "2020-03-02T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "ab9ce207-aa63-4ca6-8da9-950c138c1baf",
-            "444e2a08-2137-4443-b54b-391d78a1993f",
-            "d8c5e849-fb06-40c6-9aea-5a6bbeb02c39",
-            "0dcd78e3-5959-49a8-8629-6c45614781c9"
+            "126597e8-c9b9-59ea-bd95-81b0e7b61342",
+            "f85336b5-f4df-5112-a405-cf0dbd14fd50",
+            "531a885c-829a-59e3-9ce8-4af27ee228e2",
+            "ef0b7e38-3627-5f6e-b460-3e92a56d3a13"
         ],
         "fb_event": "https://www.facebook.com/events/2274982579461524/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "990d2d91-5d4d-4297-99b5-5e019f92ca2d",
+        "id": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
         "name": "La Bande des idées #56",
-        "date_time": "2020-09-07T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2020-09-07T19:30:00.000Z",
         "bd_ids": [
-            "5c7410fa-ebbe-45eb-9220-408ccc32ab20",
-            "cc3f1f7d-d2cd-480d-be8a-a8576ee58578",
-            "2dc58737-0d8e-47e8-a87a-5ad7e5503a85",
-            "bfe6030b-1434-44a7-9021-53283dbd1273"
+            "f82923f6-8cff-5419-927a-c3db18e9992f",
+            "12865e73-340e-5385-a1c0-8dcd99f6ad82",
+            "58bf1586-0770-5e05-9d5e-84b033947d1f",
+            "9f71560e-9697-518d-a092-a2e73ca2c608"
         ],
         "fb_event": "https://www.facebook.com/events/337707800690646/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "0f972454-26f3-4b6e-9fc0-7c88147ca38e",
-        "name": "La Bande des idées #58",
-        "date_time": "2021-07-05T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "id": "e0863d9e-e93d-525a-9dbb-89140edf2588",
+        "name": "La Bande des idées #57",
+        "date_time": "2020-09-11T19:30:00.000Z",
         "bd_ids": [
-            "0fbd40ef-65de-4124-9e33-a874d5e085d3",
-            "887f7488-2373-4576-8876-f51332f4e643",
-            "41c38156-5a10-494d-b733-bea90b557b5d",
-            "46b68b9b-4ff9-4943-8c1b-5a7264c726b0"
+            "e36d75cf-f479-5e9b-b009-eecbf2f6e86d",
+            "d0b3e70f-1430-5736-8b87-84b725afaebe",
+            "e2e2f078-9136-5fed-a6e2-ddc3cde39297",
+            "16564728-90ed-5edc-8eae-08a5f7785cff"
+        ],
+        "fb_event": "https://www.facebook.com/events/1500880476772063/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
+    },
+    {
+        "id": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
+        "name": "La Bande des idées #58",
+        "date_time": "2021-07-05T19:30:00.000Z",
+        "bd_ids": [
+            "7655deef-be68-561d-a942-3a401c24343e",
+            "2a776a76-0486-5fa8-a693-0507a23edda8",
+            "e0079da4-868b-589a-8dc6-7c04973b026b",
+            "2a5e1c5f-476c-5d4e-81f3-2b78cb856e41"
         ],
         "fb_event": "https://www.facebook.com/events/234358424838579/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "41cbf971-bc71-41f5-b1b2-3c3c88b894d4",
+        "id": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
         "name": "La Bande des idées #59",
-        "date_time": "2021-09-06T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2021-09-06T19:30:00.000Z",
         "bd_ids": [
-            "fe0e427f-efba-4b50-9b02-c3ae30ddc7a7",
-            "47cef4c1-8b7b-4f09-86d8-25822941de64",
-            "6e688dc8-ab38-4938-9365-2a20aa38ad43",
-            "3e4e9cbb-f6da-4146-be0a-d079a3e52f4c"
+            "473edb56-8483-5f87-ae9a-226e5639da7c",
+            "d8f9a56b-3061-5c16-9cce-1d231de67319",
+            "cd0cdc46-bfd4-5850-beaf-3019f10e3e7b",
+            "1a3f1d17-bebd-5ddb-abe3-9533675f24a8"
         ],
         "fb_event": "https://www.facebook.com/events/277491040426073/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     },
     {
-        "id": "dbbba8a3-9008-459a-ab7f-2d50cee07b1c",
+        "id": "090131b6-3b33-5b91-ac22-f73f60f5d347",
         "name": "La Bande des idées #60",
-        "date_time": "2021-10-04T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2021-10-04T19:30:00.000Z",
         "bd_ids": [
-            "28a37eed-3501-417e-ba76-31b87a800af0",
-            "ee45b12e-be45-43cd-938d-a53e397cbe18",
-            "d9745546-e622-4733-b87f-a0a5688b1df4",
-            "76169f95-c21a-4b01-989b-1307bf7df4fb"
+            "609fe001-1408-54fc-8686-1a7094aaa0da",
+            "493aa385-71e1-5b94-937d-fc270fd2d7bc",
+            "209120cd-8ef2-5051-9030-5750844215c5",
+            "00b764c7-9e57-5a44-8922-76ffc6c0c006"
         ],
         "fb_event": "facebook.com/events/831818477405291/"
     },
     {
-        "id": "25158dcb-aafe-4208-93e5-402ee5550351",
+        "id": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
         "name": "La Bande des idées #61",
         "date_time": "2021-11-08T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "60b64f87-ad3d-4b19-bac7-96fb71c764d4",
-            "264d71b4-d0a3-4bed-abd7-6f92e203b66a",
-            "52a84f92-94e5-4c41-8c84-5536bb325785",
-            "3583574e-8ac4-4c2b-ad46-318b7e9b984c"
+            "385f1264-4b26-5572-b2a8-10343d26cc7c",
+            "2f0d945f-bd63-5967-9a57-844e20b11675",
+            "045e3ca9-5744-52bb-ba4c-d69f08e9c343",
+            "98a1d8c6-853d-5970-b117-ace76d927b91"
         ],
         "fb_event": "https://www.facebook.com/events/565369727882126"
     },
     {
-        "id": "608e41a0-b7c8-4c5f-b963-e08e25bfa30f",
+        "id": "e17498f8-e03e-5e24-8a88-9c976c869054",
         "name": "La Bande des idées #62",
         "date_time": "2021-12-06T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "661d54ce-0447-4480-8645-0a9359d74e9d",
-            "0006f168-e4b9-4f39-b084-b2ef577ecb6c",
-            "d037dbb0-95d9-493a-9ecd-1190f94114bf",
-            "d6e853e9-ec23-4c5c-bf28-c642d717d813"
+            "0527534f-2c66-5d92-94d5-e579f45fd919",
+            "5bebe1b3-ed45-5b99-bc12-026abccc686e",
+            "45a36e4f-7780-53c1-b774-353b3aa6e85e",
+            "be84548c-9e26-56ea-a97d-bdf4b9653250"
         ],
         "fb_event": "https://www.facebook.com/events/288789526481300/"
     },
     {
-        "id": "235984e6-b97f-4b86-83c2-6e6218dac201",
+        "id": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
         "name": "La Bande des idées #63",
         "date_time": "2022-03-07T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "eb72c9ca-7708-4893-bbd0-cc4bcb4c10bb",
-            "b800a0b4-d0bf-4eef-98fd-eb6b6945730c",
-            "deb6a40b-1aa5-4793-b920-819d3c45f771",
-            "8f5a5f64-0c09-4d91-a880-cf27b49af28a"
+            "04c7c967-43b9-5255-a016-a6a6713ccaf0",
+            "808def66-0261-5fb0-adf1-2e8c3f8761d8",
+            "6cbc856d-bbf3-517d-8096-69dcf2e9b270",
+            "122a0172-06d1-548d-a796-547d56b7fa4c"
         ],
         "fb_event": "https://www.facebook.com/events/3198494570473230/"
     },
     {
-        "id": "382724e6-6ab9-4ee2-bb02-872468fbf6c3",
+        "id": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
         "name": "La Bande des idées #64",
-        "date_time": "2022-04-04T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2022-04-04T19:30:00.000Z",
         "bd_ids": [
-            "b6205488-535e-4ab5-8d78-c666ab181924",
-            "a592d86a-ceab-4297-9066-ec239d86d928",
-            "f1cac98d-5482-4096-b338-b9348508ea71",
-            "5a1fc99e-7226-44a8-8b90-3a596c905d62"
+            "e37157f2-efbb-508a-bc47-17a90bc02c84",
+            "ad666457-dc66-5f79-a8e2-24d71257ce29",
+            "deb20c8e-015a-5c9c-9686-1111263e8a0a",
+            "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b"
         ],
         "fb_event": "https://www.facebook.com/events/515214300290482/"
     },
     {
-        "id": "a19336d6-8956-44ff-982a-23c4c1811db2",
+        "id": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
         "name": "La Bande des idées #65",
-        "date_time": "2022-05-02T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2022-05-02T19:30:00.000Z",
         "bd_ids": [
-            "30972a11-ce0f-455a-912d-dd18180a288f",
-            "d57ca31a-04e4-425b-b46b-6487fba5433d",
-            "2cbcdd79-9173-424b-8da0-3e21407d9141",
-            "9664424f-0a4a-458e-9842-38ad9a9f9981"
+            "2d214a1a-d718-56ca-b4b1-daecd27fbc70",
+            "553ba159-d15e-5f69-a159-fc28c71edeca",
+            "0e8111d0-2e90-54c7-88b1-43b0e0881cc9",
+            "ed1239f8-6705-59cc-89fa-0f58a386644e"
         ],
         "fb_event": "https://www.facebook.com/events/326501759551822/"
     },
     {
-        "id": "c3c1895c-138e-468b-8d20-6d30c4747ffa",
+        "id": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
         "name": "La Bande des idées #66",
-        "date_time": "2022-06-13T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2022-06-13T19:30:00.000Z",
         "bd_ids": [
-            "5cf9aef6-a860-465e-b3de-b71e5ed3ad52",
-            "10b7c424-efbe-4e5e-b745-dc7bbf43419d",
-            "d21b6dc4-f035-451a-b298-5ea12d121bf2",
-            "1280aea7-1bf3-4d78-b06f-893b6a55120f"
+            "259a0454-9500-5b1b-be3c-1039abe5838a",
+            "5b09fc60-7852-5dd7-85fd-47d06d44ac08",
+            "5792de8a-229c-5f32-9cd0-3d9421f85b62",
+            "d77af3ef-1018-580f-8b4b-bdac6993c4b9"
         ],
         "fb_event": "https://www.facebook.com/events/561044688714389/"
     },
     {
-        "id": "384211cb-f23e-412e-9fbc-a67e3f2e8cf2",
+        "id": "208965ad-c1ba-5935-ad9c-599ec120152f",
         "name": "La Bande des idées #67",
-        "date_time": "2022-07-04T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2022-07-04T19:30:00.000Z",
         "bd_ids": [
-            "ad6826dd-66bb-4368-9fea-a3d4e2940950",
-            "e60958a0-3816-4539-adf1-d2a46980ff37",
-            "32a82284-7946-4e47-8340-b27b5284bd33",
-            "3d99edc2-320d-40c6-afb7-6fe6f0d74218"
+            "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d",
+            "93c55d49-da91-53a8-9384-a9e74f86fe92",
+            "81d0933e-90f7-5b74-b9fb-ba27cc47fa12",
+            "bb95f1ee-35e4-5172-bcf9-11aa19d39885"
         ],
         "fb_event": "https://www.facebook.com/events/525967912554941/"
     },
     {
-        "id": "05f5234e-1ada-49bb-8d2e-70fdc1f1a4c8",
+        "id": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
         "name": "La Bande des idées #68",
-        "date_time": "2022-09-05T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2022-09-05T19:30:00.000Z",
         "bd_ids": [
-            "5dddd4b5-b6ea-47eb-aba1-a1674407062f",
-            "43d5ef22-338f-4fab-abf4-67d62fe20303",
-            "61ef1c6e-e67f-4b23-9d81-a1e072692243",
-            "be27430d-56d2-400a-88b6-9bea5091760c"
+            "219fdb59-446f-5ec8-ada8-aa3432778341",
+            "7e0fbd51-70be-5b79-b9fd-fdcbdbe6784d",
+            "67a5f9be-05e5-5595-a37f-a5ab7ac9952b",
+            "fbb83c90-bc31-53bb-82f1-62a4921b7b66"
         ],
         "fb_event": "https://www.facebook.com/events/446752527364617/"
     },
     {
-        "id": "f052b5df-3bbb-4e44-92f0-9cae29a7a0d3",
+        "id": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
         "name": "La Bande des idées #69",
-        "date_time": "2022-10-03T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2022-10-03T19:30:00.000Z",
         "bd_ids": [
-            "0961f4d3-5936-4b66-9800-bd58594b14dd",
-            "a171a8c1-a41b-4819-bf75-f5cbf317e4a9",
-            "a22be781-b756-479c-9b07-49d14dbfe115",
-            "dbbb9055-2fcd-4c61-9e3c-6c3cd1049073"
+            "2f23ec7b-6aa5-5cf5-b8ac-331ee184fe94",
+            "90278e20-06f0-50f8-a8f0-04b97acfe3ce",
+            "aa142d80-6e53-53cf-ad01-13c8af2060cf",
+            "22bae3a8-139b-5a3f-932f-80fc901d43af"
         ],
         "fb_event": "https://www.facebook.com/events/616184793487017/"
     },
     {
-        "id": "d7614821-9356-40b6-86fc-147339ef4653",
+        "id": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
         "name": "La Bande des idées #70",
         "date_time": "2022-11-07T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "e66cef9f-1330-45c7-8150-25e513b5c815",
-            "050168ed-704e-4af1-a157-28a0d9b64a28",
-            "d0b0edca-9266-4efc-a486-d29097e2242e",
-            "04357713-2296-45c0-96ec-013cf76f0555"
+            "621f773d-d0aa-5e22-bf81-c530967a1fbe",
+            "8b049e1b-5908-5c4b-972e-d34e04c6ab0c",
+            "a88d2dfe-e823-5455-b5a7-a9eea7604db2",
+            "20219cc1-6639-5762-9325-1f565d5143ce"
         ],
         "fb_event": "https://www.facebook.com/events/793465931802389/"
     },
     {
-        "id": "6940b273-a361-447e-a43c-9fb38791bbbd",
+        "id": "8057115a-7249-5288-a959-7f770b0707da",
         "name": "La Bande des idées #71",
         "date_time": "2022-12-05T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "3a5190d9-2fc1-4d9d-8bb3-b6486544188b",
-            "103a3488-8304-4ac1-be48-e961422e00ab",
-            "443d9b5f-e604-4a43-a7b6-597223d61433",
-            "d0459ba7-41e7-4ede-9723-f035a39ba603"
+            "7c33cd89-18a5-55ee-a927-d33a3b91a4d4",
+            "8e76ff82-caba-5256-b56f-36fdcc09b8cc",
+            "6f40ce09-c1fc-56c3-b191-aaef5f620982",
+            "6285af41-5732-5e84-907f-7c1c6393c5e5"
         ],
         "fb_event": "https://www.facebook.com/events/1126501241325870/"
     },
     {
-        "id": "6ec8bf4a-f850-44a6-bad4-9b6a20668d75",
+        "id": "1320b429-70e2-593e-976d-0cc9646e88c8",
         "name": "La Bande des idées #72",
         "date_time": "2023-01-09T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "6387807b-c0d4-4033-ae3f-1d470a14bf8a",
-            "bee977d0-48cb-40a1-863e-30e3ea984fea",
-            "f295cbec-ea77-4d9f-ab55-a16a804a6b7b",
-            "f16a4613-f3c7-41ae-ab86-edb172a2f014"
+            "e316844c-27bd-5037-a0f8-1327a62e748f",
+            "92d5d028-df2f-5e50-b4b7-9887ae2f807b",
+            "80e320c2-11e7-595b-89ba-24b81ea6d621",
+            "8faa03ae-f8f4-5b68-9059-c0c628f85707"
         ],
         "fb_event": "https://www.facebook.com/events/434532382115033/"
     },
     {
-        "id": "d6d7f298-3e4d-4e38-b214-dc743b00aeba",
+        "id": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
         "name": "La Bande des idées #73",
         "date_time": "2023-02-06T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "724f8952-b997-41a6-a9f4-bd94bb42208f",
-            "6c7014a7-23ee-4a66-94d8-4b708e396b2a",
-            "3a0f134b-631e-4efd-b6d7-f6c0e4d95b14",
-            "c61b220d-dad2-414c-a2a6-3f46b005189f"
+            "af8eb788-7a27-5205-84b1-ae1298595b7d",
+            "f6c7005e-7b64-5eef-844a-2ac4acdc1b07",
+            "406eb059-e7e8-54f1-8f89-cddea6c629e0",
+            "f865a993-10dd-5daf-9303-db5328540034"
         ],
         "fb_event": "https://www.facebook.com/events/898411191495073/"
     },
     {
-        "id": "d0644c7b-5668-4c00-bea5-fef1cf88fa03",
+        "id": "ec126adf-2c87-51c4-b109-22b7689339ad",
         "name": "La Bande des idées #74",
         "date_time": "2023-03-13T19:30:00.000Z",
-        "place": "Lou Pascalou",
         "bd_ids": [
-            "9a44eed3-8486-4189-834b-2a749faf37c1",
-            "d81c4802-be52-4789-9858-667bf492eff7",
-            "ef63fb63-05a0-4a15-95b2-20f10afd4738",
-            "265a9b74-91b6-4fa6-89b8-3b9f753b5f70"
+            "ec050548-66da-5642-af27-79ee4e0f5571",
+            "a363d9bd-8981-5155-9eb6-c9cef10c231a",
+            "01c74bc6-960a-58b3-9069-ca12ec2fb9b4",
+            "e00d76ed-0c5c-5fcb-b972-355c57612e91"
         ],
         "fb_event": "https://www.facebook.com/events/1359635898192804/"
     },
     {
-        "id": "76fbd112-41aa-458e-9fd7-361a1fccc138",
+        "id": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
         "name": "La Bande des idées #75",
-        "date_time": "2023-04-03T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2023-04-03T19:30:00.000Z",
         "bd_ids": [
-            "01f186db-6fb9-4ce6-bccc-0e7f67e0fa5d",
-            "e364f0b3-3c71-43e2-b5b2-d044267789b7",
-            "65941638-57e8-4b43-9393-4a188384df7f",
-            "4def763c-a278-4cae-8921-5c5c99a40602"
+            "b86b53b5-7121-5fae-8ed9-50fc48076812",
+            "4926fa87-8fac-59ea-b462-beaa8865b399",
+            "b2b56cf4-189b-5c0f-b0a9-b3f4944df2f8",
+            "904c9d20-f81a-591d-b110-2e457f6d8f60"
         ],
         "fb_event": "https://www.facebook.com/events/213242371310791/"
     },
     {
-        "id": "e0b936ab-9cae-486a-a859-122ebcffa158",
+        "id": "2412bc73-7636-5bb4-84b3-059088f2b82f",
         "name": "La Bande des idées #76",
-        "date_time": "2023-05-15T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2023-05-15T19:30:00.000Z",
         "bd_ids": [
-            "9849d0fb-de46-42e2-b9ec-1f2a74c254e3",
-            "817983d2-70bc-4f42-9cf9-8854a6d7e0a8",
-            "61477d1d-701c-47b4-9d55-4cff9985f013",
-            "d41dedf2-057c-45a7-89e6-b7727a67528e"
+            "24c15eca-cdd6-52e2-ae02-ca99c6a37884",
+            "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa",
+            "df990528-33c4-5c15-87e0-ad4119be24f3",
+            "47a951d2-d847-566a-9180-6dad63037708"
         ],
         "fb_event": "https://www.facebook.com/events/942395466984150/"
     },
     {
-        "id": "89121a96-bd90-4cda-a2bc-18271f7999bb",
+        "id": "f229dbf3-e754-590d-a0b4-23b74e28cc7a",
         "name": "La Bande des idées #77",
-        "date_time": "2023-06-05T18:30:00.000Z",
-        "place": "Lou Pascalou",
-        "bd_ids": [
-            "53a87d9c-551f-4c10-80e7-90dad34e84b6",
-            "d94dad26-a882-47e8-ac48-607954a5fb2d",
-            "be34ca28-abfd-4d3b-bb59-c5961ef637c6",
-            "e47b1f4a-0075-4e76-94a3-a07de280442a"
-        ],
+        "date_time": "2023-06-05T19:30:00.000Z",
+        "bd_ids": [],
         "fb_event": "https://www.facebook.com/events/622624873248708"
     },
     {
-        "id": "2a531696-466b-46ff-bab3-047dc4c931a1",
+        "id": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
         "name": "La Bande des idées #78",
-        "date_time": "2023-07-03T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2023-07-03T19:30:00.000Z",
         "bd_ids": [
-            "8da64abb-1f3a-44e6-9a38-bd628e997883",
-            "9c352d35-ddb1-49e0-9d29-dd8f97c6f138",
-            "74599d05-e1b7-42cc-bb41-90a5b84160a5",
-            "284b8e31-9a99-47f0-a8c9-d902cbd8742b"
+            "f2ece642-d63f-5322-8208-0d755268b0a7",
+            "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5",
+            "233df3dc-5aec-5505-b208-b7dad00c99b1",
+            "903acafa-4e30-5dcb-85ec-e2d1ce52d741"
         ],
-        "fb_event": ""
+        "fb_event": null
     },
     {
-        "id": "a1420041-db91-47b1-b214-f1c7a789ec2f",
+        "id": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
         "name": "La Bande des idées #79",
-        "date_time": "2023-09-04T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2023-09-04T19:30:00.000Z",
         "bd_ids": [
-            "d2b4ca4a-5a64-4546-b0f5-b77bbb649ae6",
-            "5c001731-5ba7-4f1c-8e76-c5829cdd01f4",
-            "253a3ad4-9c82-4044-a2d2-f46a7a115c79",
-            "e75b098a-9668-4d90-884d-6d8a9de04570"
+            "d7d58ce0-3034-5dc1-ad26-f2ba302c0559",
+            "73418c95-df6c-50b9-8713-0cd6437ca1e8",
+            "32c39747-541d-55b3-b217-835c9e26ffdb",
+            "12d42d70-3a3c-5d61-bf59-ac8cc63ba0a5"
         ],
         "fb_event": "https://www.facebook.com/events/2394873167358468"
     },
     {
-        "id": "2f490061-006b-4049-b9b0-50bd43f1e01e",
+        "id": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
         "name": "La Bande des idées #80",
-        "date_time": "2023-10-02T18:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2023-10-02T19:30:00.000Z",
         "bd_ids": [
-            "df4b209f-4f75-42c0-ba12-931bf2ec8d09",
-            "71715508-a825-48ba-9aa2-7b9344cc40fb",
-            "f306c5c5-4e13-49ae-b405-bfb31acb88db",
-            "1a6c7e8a-ac9e-42cf-95b9-6278b473158a"
+            "0600c708-f469-5a62-87d6-0081966be2b0",
+            "28c74fd2-511a-5728-a28e-8876fa62ece8",
+            "c7de24d2-2e14-55d4-9ba8-d7999551971b",
+            "5ce81c2c-23ca-5bfe-899a-011a2c38e9e0"
         ],
         "fb_event": "https://www.facebook.com/events/1019108149125333"
     },
     {
-        "id": "7a94cd40-0496-4305-8139-1e2e9aafa262",
+        "id": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
         "name": "La Bande des idées #81",
-        "date_time": "2023-11-03T19:30:00.000Z",
-        "place": "Lou Pascalou",
+        "date_time": "2023-11-06T19:30:00.000Z",
         "bd_ids": [
-            "f187ca91-71f5-4be5-835b-d30ea420ef82",
-            "8f2c53cc-b68e-49e7-ab67-3235bafb5ab8",
-            "52c539de-36d2-4891-9567-a011cb63cae1",
-            "d71a934a-a526-4b36-94b3-a7dd3b0de248"
+            "46840f52-8e72-51fa-8308-bfe9e584b7c8",
+            "66419695-ae35-53a0-b7db-55e99b5d6b02",
+            "970a07a3-e2a0-5c36-bf0f-9a6f4ea83dad",
+            "945ced24-f871-580c-a2cd-e55da6520b39"
         ],
         "fb_event": "https://www.facebook.com/events/1715263022310108"
     },
+    {
+        "id": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
+        "name": "La Bande des idées #82",
+        "date_time": "2023-12-04T19:30:00.000Z",
+        "bd_ids": [
+            "f276e705-9146-5580-823a-15d8c2591660",
+            "714b0f37-f73f-5508-825c-281074c8aebe",
+            "c63fb7f3-28e9-51b0-a879-a22cae604ae9",
+            "76da166c-6887-58fe-839c-5ceb1d79b8ee"
+        ],
+        "fb_event": "https://www.facebook.com/events/1563147154518585"
+    },
+    {
+        "id": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
+        "name": "La Bande des idées #83",
+        "date_time": "2024-01-08T19:30:00.000Z",
+        "bd_ids": [
+            "4fe38dd6-5f77-5f47-8a7d-4a869f44334a",
+            "ca07d9e7-2615-5857-8ff2-c8a481345db9",
+            "f9700842-783a-547b-b038-f388c81263c4",
+            "e7880ee2-b182-5a13-8a84-f3877bd0a932"
+        ],
+        "fb_event": "https://www.facebook.com/events/871004508030312/"
+    },
+    {
+        "id": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
+        "name": "La Bande des idées #84",
+        "date_time": "2024-02-05T19:30:00.000Z",
+        "bd_ids": [
+            "c36e3da5-0be8-5732-a555-fb7a2b9adc95",
+            "a0258b1a-9505-561d-a6a8-ca69479420d8",
+            "677a0a0d-9f0e-5524-892e-5feeda95fa37",
+            "5ee6ce29-7b61-53b4-8994-a0a2e783cf92"
+        ],
+        "fb_event": "https://www.facebook.com/events/394766139896709/"
+    },
+    {
+        "id": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
+        "name": "La Bande des idées #85",
+        "date_time": "2024-03-04T19:30:00.000Z",
+        "bd_ids": [
+            "af4e1bb1-ecf0-5912-8197-9d9e0b210b72",
+            "fc30f32a-3e20-5385-b28a-7439ee532389",
+            "aa01d166-f99b-5537-9d2f-99f433ffdc97",
+            "fc62fcaa-84ef-5a91-a79d-34ee62b436ef"
+        ],
+        "fb_event": "https://www.facebook.com/events/309085812162790/"
+    },
+    {
+        "id": "b6b7fc5a-d592-5d96-854f-05558c763187",
+        "name": "La Bande des idées #86",
+        "date_time": "2024-04-08T19:30:00.000Z",
+        "bd_ids": [
+            "8a50365e-9da9-59dd-bc97-969ed43c22c7",
+            "515abf3f-be71-5dc5-a79a-662cd25fccf6",
+            "0c7c6682-3287-56d0-a8d6-82aea0648529",
+            "debf7682-e9ad-587d-a814-efdeaad2c9e7"
+        ],
+        "fb_event": "https://www.facebook.com/events/7457885997592030/"
+    },
+    {
+        "id": "075999c0-bbf4-5524-9f02-8526d66cd913",
+        "name": "La Bande des idées #87",
+        "date_time": "2024-05-06T19:30:00.000Z",
+        "bd_ids": [
+            "e2102e41-2abb-59a4-b7fe-8d4ecc23e1da",
+            "956b5864-d695-5e4f-b6f3-48078e019fe0",
+            "ab707df2-5f9e-5bce-ba06-da7fc0e88bfd",
+            "bde7b6df-1144-56af-8a15-03f3710adb93"
+        ],
+        "fb_event": "https://www.facebook.com/events/788288109916410/"
+    },
+    {
+        "id": "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85",
+        "name": "La Bande des idées #88",
+        "date_time": "2024-06-03T19:30:00.000Z",
+        "bd_ids": [
+            "52b5768f-92ea-5ea0-864c-f91c838da16c",
+            "13a95766-1ae7-52fc-8158-e51115b8fa4a",
+            "531a885c-829a-59e3-9ce8-4af27ee228e2",
+            "39c9b8b4-fc17-5fb3-bda6-7f183cca54c7"
+        ],
+        "fb_event": "https://www.facebook.com/events/1440004920219390/"
+    },
+    {
+        "id": "7a658366-6710-5724-859d-c94de9e9d9ab",
+        "name": "La Bande des idées #89",
+        "date_time": "2024-07-22T19:30:00.000Z",
+        "bd_ids": [
+            "a01a8124-f371-5a31-a90b-8bcf85d43a7c",
+            "321c2793-05ba-57fa-abc0-2c59c7c6aaa3",
+            "5d75aa1d-71ee-5ee7-be23-59e9d10c519a",
+            "6d437cee-8870-53d7-bffa-9aba1bb92823"
+        ],
+        "fb_event": "https://www.facebook.com/events/1255888845377371/"
+    },
+    {
+        "id": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
+        "name": "La Bande des idées #90",
+        "date_time": "2024-09-02T19:30:00.000Z",
+        "bd_ids": [
+            "1ed863f9-5aea-574a-8e7a-8a8f061235e5",
+            "48a7b58b-aa17-5b0d-98ec-fe8a997395c0",
+            "b089120d-7f10-5457-96b1-b233822e6f5e",
+            "330732a9-e0e1-5cf1-a00d-ecd08a2bc222"
+        ],
+        "fb_event": "https://www.instagram.com/p/C_AzrjcMqvb/"
+    },
+    {
+        "id": "d22485f9-9242-5a72-bc1e-9c223c27134d",
+        "name": "La Bande des idées #91",
+        "date_time": "2024-10-07T19:30:00.000Z",
+        "bd_ids": [
+            "d0773c0e-efce-5e3f-b88c-b401e6925875",
+            "4aa33079-62c2-5233-88ae-8e754c339e59",
+            "1de89bb4-2d86-543c-845e-fba8f42fc847",
+            "e6eb00f3-e29c-59a5-bf7e-7ca9a65fcd33"
+        ],
+        "fb_event": "https://www.instagram.com/p/C_8EccYsbUx/"
+    },
+    {
+        "id": "826204d2-0a18-5f15-81c0-1f9730761358",
+        "name": "La Bande des idées #92",
+        "date_time": "2024-11-04T19:30:00.000Z",
+        "bd_ids": [
+            "a9f1ba28-8e3f-5925-8f8c-bd63fb271d1b",
+            "06d42289-e3ad-57c0-aade-03088507faa9",
+            "34373ae6-8241-5dfd-ac94-c657bd97af69",
+            "0829463a-3433-53e5-ac54-605311f73a69"
+        ],
+        "fb_event": "https://www.instagram.com/p/DBd6vEesFeI/"
+    },
+    {
+        "id": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
+        "name": "La Bande des idées #93",
+        "date_time": "2024-12-02T19:30:00.000Z",
+        "bd_ids": [
+            "f95d6e61-6426-5b0b-9311-b9e8ecb36b78",
+            "fdf7972d-6b2b-5ace-9939-d1b83cedae14",
+            "0f55b110-f82c-5092-8299-3149fdc8c9c9",
+            "19a60d41-85b5-5230-8e6c-e5537981a6f4"
+        ],
+        "fb_event": "https://www.facebook.com/events/553573667638100/"
+    },
+    {
+        "id": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
+        "name": "La Bande des idées #94",
+        "date_time": "2025-01-06T19:30:00.000Z",
+        "bd_ids": [
+            "c2f61a7e-3816-5686-b9e5-d9556ee77049",
+            "e98c4039-8132-5dd6-9489-661fca8f7743",
+            "e24b2289-3eba-5581-9e3b-7c3d08251f70",
+            "fb6cbc79-3c98-5889-838a-b334b7606395"
+        ],
+        "fb_event": "https://www.facebook.com/events/479647325144303/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
+        "name": "La Bande des idées #95",
+        "date_time": "2025-02-10T19:30:00.000Z",
+        "bd_ids": [
+            "b0b3870c-0997-5868-bd23-6e08e3cc0aac",
+            "1c9e35cc-80d4-5dce-8e80-2874fe876600",
+            "4066190a-e2a3-5eda-bb01-cd996e6b7eda",
+            "dd62a84b-d5d0-581d-85ff-398583396ee1"
+        ],
+        "fb_event": "https://www.facebook.com/events/1358841528627237/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
+        "name": "La Bande des idées #96",
+        "date_time": "2025-03-03T19:30:00.000Z",
+        "bd_ids": [
+            "c7c00974-55df-5ddb-9094-599a49fedc04",
+            "9a3852a3-baa8-5f2a-aba2-fe494ac3d2d7",
+            "d3ae501d-a740-50fa-9b36-23681a63e221",
+            "9e1ead2f-e94b-51c4-a530-25ff413b4630"
+        ],
+        "fb_event": "https://www.facebook.com/events/2532313316972641/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "12815554-e509-5c87-be90-52d0ba1546af",
+        "name": "La Bande des idées #97",
+        "date_time": "2025-04-07T19:30:00.000Z",
+        "bd_ids": [
+            "1d9f61ac-e443-5d00-95d6-232abbc96584",
+            "8f3dfff9-18f4-517b-956a-375093f86315",
+            "9fb8bc86-0c68-5c44-a864-1bd65f4c4114",
+            "69fc7e78-c691-52d1-9568-ff25b698eaab"
+        ],
+        "fb_event": "https://www.facebook.com/events/657561693409078/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
+        "name": "La Bande des idées #98",
+        "date_time": "2025-05-05T19:30:00.000Z",
+        "bd_ids": [
+            "c503e169-f7e8-50eb-bba0-7d391d6a17ce",
+            "ebab55bf-6f8b-5ebe-8a63-63805845355c",
+            "599583d1-2538-5fdb-ad77-90fc339b3178",
+            "510487fd-029b-5a3b-9700-0d11d9582757"
+        ],
+        "fb_event": "https://www.facebook.com/events/1251013476581314/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "2e34799f-dc59-5357-a523-c317961dfd16",
+        "name": "La Bande des idées #99",
+        "date_time": "2025-06-02T19:30:00.000Z",
+        "bd_ids": [
+            "3dddd453-4856-5647-b862-58ee435de96b",
+            "78e93b93-fff0-5559-a078-8ca878174a6c",
+            "71b57a4d-63c6-5220-b416-c2eacf41695e",
+            "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c"
+        ],
+        "fb_event": "https://www.facebook.com/events/1709530526598425/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "6421a785-8d16-50f9-8661-42b747c21434",
+        "name": "La Bande des idées #100",
+        "date_time": "2025-07-04T19:30:00.000Z",
+        "bd_ids": [],
+        "fb_event": "https://www.facebook.com/events/1257620832398570/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "e86ed83c-1690-5160-a736-d4ab397e1adf",
+        "name": "La Bande des idées #101",
+        "date_time": "2025-09-01T19:30:00.000Z",
+        "bd_ids": [
+            "1c16dd39-9b71-570b-adf9-dd949b0876ed",
+            "7ecc3faa-7448-57ea-b3c3-3fe72ddd322b",
+            "2577974a-9695-5f41-94a9-6ba5ebd90174",
+            "89d152e7-f57c-5b0e-8d95-8f5fad2dc896"
+        ],
+        "fb_event": "https://www.facebook.com/events/1113986430616293/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
+        "name": "La Bande des idées #102",
+        "date_time": "2025-10-06T19:30:00.000Z",
+        "bd_ids": [
+            "55173791-1d25-5974-be37-4ae3bfac5225",
+            "d2606770-6e64-56ad-9f24-2c1734030214",
+            "ba70089b-dc50-5706-ae33-e7b7f3d3c4ed",
+            "c422ca47-19e7-5530-96ae-3099c5ec9dc8"
+        ],
+        "fb_event": "https://www.facebook.com/events/2504069616626345/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "b148c708-8268-57c5-987d-7c673b310cee",
+        "name": "La Bande des idées #103",
+        "date_time": "2025-11-03T19:30:00.000Z",
+        "bd_ids": [
+            "7b60d495-19b6-5aec-83d2-df40acb1d3e8",
+            "7afa0be1-9f65-5af9-b8ca-8febc5ccfa4a",
+            "ec34073f-32f3-5b74-8e70-eb2e9937a36f",
+            "fd110a14-3cb4-5407-a837-b3bae1c9b278"
+        ],
+        "fb_event": "https://www.facebook.com/events/2437286006666177/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
+        "name": "La Bande des idées #104",
+        "date_time": "2025-12-01T19:30:00.000Z",
+        "bd_ids": [
+            "af92af68-880b-54ec-9b11-b63ac826149b",
+            "0227a664-60ac-5e77-bb89-031cf0893d1e",
+            "bb2f4bd6-ea0d-5028-bd8d-d3eb6437888c",
+            "543529b3-41ab-5afc-a381-7ed1bfab677b"
+        ],
+        "fb_event": "https://www.facebook.com/events/1729177091288597/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
+        "name": "La Bande des idées #105",
+        "date_time": "2026-01-05T19:30:00.000Z",
+        "bd_ids": [
+            "11d7eace-ebf2-59d3-a330-cd442d3557a3",
+            "1bc85f3d-8932-5b00-b6fd-333b32ee53b9",
+            "605a6f52-dfac-5d30-9135-70f21673a9c9",
+            "a8920edf-9eb7-5296-9429-4a13002c70c4"
+        ],
+        "fb_event": "https://www.facebook.com/events/1582503946101897/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
+        "name": "La Bande des idées #106",
+        "date_time": "2026-02-02T19:30:00.000Z",
+        "bd_ids": [
+            "980619c8-13ee-54cf-960c-0ad3a452965b",
+            "80dbe48d-5ef6-50a1-8f93-23619b07cbde",
+            "30dd4d30-1325-557c-b42b-6ad0894bf6b8",
+            "50afc3e1-c60e-5915-b756-8b0760228a32"
+        ],
+        "fb_event": "https://www.facebook.com/events/740030845824250/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    },
+    {
+        "id": "59b9a96e-b2d0-5d31-9167-293aed303df5",
+        "name": "La Bande des idées #107",
+        "date_time": "2026-03-02T19:30:00.000Z",
+        "bd_ids": [
+            "8a2399e8-979b-5ac8-9645-0c778e3f4edc",
+            "5cad8b88-954e-5800-bf00-9a0844b4317d",
+            "22420ca8-73c3-508a-a4ca-2f9378f14338",
+            "46c2d81c-4961-5353-9c99-230e81b565d0"
+        ],
+        "fb_event": "https://www.facebook.com/events/1291476083029606/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+    }
 ];
 
 const bds = [
     {
-        "id": "9837328b-2714-41d7-8282-5d4f20878e3e",
-        "event_ids": "b5cff1cd-cb95-4e72-9796-58a6ecca2f46",
-        "author_ids": [
-            "1a9f4b83-eed9-4091-821a-47f2febaf4f9"
-        ],
+        "id": "7d723523-0d8a-5c4f-a040-8ff0cca2bc83",
         "title": "Nightly News",
-        "publicher": "Urban",
+        "event_ids": "d3eafa10-a745-5597-94cb-39521449a60e",
+        "author_ids": [
+            "fd51ff5e-d84e-5eae-8cd0-e095e96e3dba"
+        ],
+        "publisher": "Urban",
         "publishing_year": 2014
     },
     {
-        "id": "9dfb6c7e-6109-4f40-af70-697272e076b5",
-        "event_ids": "b5cff1cd-cb95-4e72-9796-58a6ecca2f46",
-        "author_ids": [
-            "520f828f-dc61-4955-ac0f-e2cc3c516d6d"
-        ],
+        "id": "403fb2b2-7948-5aa1-9cbe-2e9e468a9c05",
         "title": "Album de famille",
-        "publicher": "L'agrume",
+        "event_ids": "d3eafa10-a745-5597-94cb-39521449a60e",
+        "author_ids": [
+            "2503e0ea-8931-5458-afc8-90b272d6baa0"
+        ],
+        "publisher": "L'agrume",
         "publishing_year": 2014
     },
     {
-        "id": "1c0a95e8-0e18-49ce-bcd0-628798a8e7c7",
-        "event_ids": "b5cff1cd-cb95-4e72-9796-58a6ecca2f46",
-        "author_ids": [
-            "2c3f82f4-d67a-4edb-a067-87568d4b6853",
-            "af3cae40-92f1-47b6-8529-41c15bcd8319"
-        ],
+        "id": "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98",
         "title": "Plus si entente",
-        "publicher": "Actes Sud",
+        "event_ids": "d3eafa10-a745-5597-94cb-39521449a60e",
+        "author_ids": [
+            "bdb4565e-067f-56ca-8936-a076246543f4",
+            "2027444e-c012-54a3-aec8-f68484ffe1eb"
+        ],
+        "publisher": "Actes Sud",
         "publishing_year": 2014
     },
     {
-        "id": "97d205b4-8658-45e4-bdb9-fd98aafae486",
-        "event_ids": "b5cff1cd-cb95-4e72-9796-58a6ecca2f46",
-        "author_ids": [
-            "f3d8fdc0-23ca-48cf-895c-d09100648645"
-        ],
+        "id": "79894bab-2308-5561-b5ba-b688a26f6672",
         "title": "Saveur coco",
-        "publicher": "Dargaud",
+        "event_ids": "d3eafa10-a745-5597-94cb-39521449a60e",
+        "author_ids": [
+            "a7e5dfca-337c-58a2-8dfb-d1469b851bd9"
+        ],
+        "publisher": "Dargaud",
         "publishing_year": 2013
     },
     {
-        "id": "6d92e271-98a9-4bdd-bbfb-fc81d1b35c98",
-        "event_ids": "9d983a66-6c70-4e5c-9427-7e9492d1f307",
-        "author_ids": [
-            "87c77482-6aa5-4c28-9c44-25ec02b18acf"
-        ],
+        "id": "995dd270-3ead-51df-a96b-919cd922cbea",
         "title": "Magic pen",
-        "publicher": "Casterman",
+        "event_ids": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
+        "author_ids": [
+            "43871c3f-7878-50fd-8691-838780202913"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2014
     },
     {
-        "id": "483eb6fc-720c-488b-b930-2c73d0484dcb",
-        "event_ids": "9d983a66-6c70-4e5c-9427-7e9492d1f307",
-        "author_ids": [
-            "bbba6b5b-829f-4869-b697-e1c9bda26a93"
-        ],
+        "id": "76b4d2f1-cdb5-5aae-9479-3daf719d8adb",
         "title": "Palepoli",
-        "publicher": "IMHO",
+        "event_ids": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
+        "author_ids": [
+            "bd00fc5a-20dc-576b-bad2-a3336306d052"
+        ],
+        "publisher": "IMHO",
         "publishing_year": 2012
     },
     {
-        "id": "aac28fd0-a6bd-488f-87d4-8ef1d3a960a0",
-        "event_ids": "9d983a66-6c70-4e5c-9427-7e9492d1f307",
-        "author_ids": [
-            "a5c3db57-9e8f-4024-aabd-36e933f875bb",
-            "1ee7fed9-03e1-42a8-91ff-5c7d2ae89136"
-        ],
+        "id": "06175f53-82fc-5df0-a3d6-33be607df9c8",
         "title": "Love in vain",
-        "publicher": "Glénat",
+        "event_ids": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
+        "author_ids": [
+            "402fbda6-fe33-5e95-a64c-4385f9029a38",
+            "499e8af8-50a7-57f3-8d89-f5d793796f9d"
+        ],
+        "publisher": "Glénat",
         "publishing_year": 2014
     },
     {
-        "id": "0f78fba4-f29f-4d4b-806b-b40cf59d148d",
-        "event_ids": "9d983a66-6c70-4e5c-9427-7e9492d1f307",
-        "author_ids": [
-            "d031ff67-2ca9-4010-b90c-34b187f11a00"
-        ],
+        "id": "8f57610f-1014-5596-8015-17b94899cd58",
         "title": "Panthere",
-        "publicher": "Actes Sud",
+        "event_ids": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
+        "author_ids": [
+            "5140c72e-436a-5c58-85af-fde4a31bd1da"
+        ],
+        "publisher": "Actes Sud",
         "publishing_year": 2014
     },
     {
-        "id": "7f62e8d4-f79d-4faa-99af-f93ea68668d9",
-        "event_ids": "c1ac732e-01c6-4260-bf2d-ddbcd7537718",
-        "author_ids": [
-            "17fa2207-fee1-4160-9f63-b122b8c28c58",
-            "c6d3878c-fce5-415d-b75d-d9b1065547dd"
-        ],
-        "title": "Superman identité secrète",
-        "publicher": "Urban Comics",
-        "publishing_year": 2014
-    },
-    {
-        "id": "fa8d1c03-c37a-40ad-a370-0af4e1798eef",
-        "event_ids": "c1ac732e-01c6-4260-bf2d-ddbcd7537718",
-        "author_ids": [
-            "b0279423-9377-4db4-a1ad-675ee78a01f9",
-            "abbb0316-5bb5-4998-919f-9ab9e23f4273"
-        ],
-        "title": "La lune est blanche",
-        "publicher": "Futuropolis",
-        "publishing_year": 2014
-    },
-    {
-        "id": "80f58f18-c3d8-4ec3-8246-fca020657281",
-        "event_ids": "c1ac732e-01c6-4260-bf2d-ddbcd7537718",
-        "author_ids": [
-            "a5c3db57-9e8f-4024-aabd-36e933f875bb",
-            "1ee7fed9-03e1-42a8-91ff-5c7d2ae89136"
-        ],
-        "title": "Mind game",
-        "publicher": "IMHO",
-        "publishing_year": 2014
-    },
-    {
-        "id": "dafdab3f-492a-4313-8de3-231b6f2a1241",
-        "event_ids": "c1ac732e-01c6-4260-bf2d-ddbcd7537718",
-        "author_ids": [
-            "4acc321b-0543-4d13-bc83-88d92d27435c"
-        ],
+        "id": "dc370931-0191-5023-a121-09e365903d81",
         "title": "Elle",
-        "publicher": "L'association",
+        "event_ids": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
+        "author_ids": [
+            "298957cc-14c1-506e-b3d1-61603cbccd87"
+        ],
+        "publisher": "L' association",
         "publishing_year": 2014
     },
     {
-        "id": "b4a3e5b7-2145-4fd9-88b4-074a4cf07d06",
-        "event_ids": "ecdb7e62-60dd-46b2-92f8-2de6649909a7",
+        "id": "4c2f3bd9-177e-561b-a197-3579528230ae",
+        "title": "La lune est blanche",
+        "event_ids": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
         "author_ids": [
-            "0d638f28-ab4b-417b-a336-abd38a7959f8"
+            "72a26f1a-77d7-531c-a4f4-2018eeb616ce",
+            "b678c865-cc90-539b-8e87-b8b7bd979836"
         ],
+        "publisher": "Futuropolis",
+        "publishing_year": 2014
+    },
+    {
+        "id": "75fc73a4-84d6-50f0-99d9-b7445c392bb8",
+        "title": "Mind game",
+        "event_ids": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
+        "author_ids": [
+            "402fbda6-fe33-5e95-a64c-4385f9029a38",
+            "499e8af8-50a7-57f3-8d89-f5d793796f9d"
+        ],
+        "publisher": "IMHO",
+        "publishing_year": 2014
+    },
+    {
+        "id": "979cc21c-4c87-5805-b5f5-6f5f3f1606d2",
+        "title": "Superman identité secrète",
+        "event_ids": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
+        "author_ids": [
+            "6b6badf0-ebf9-58a7-8c65-f1d065349439",
+            "fa90699d-7b23-523d-b295-cb62820b4f9b"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": 2014
+    },
+    {
+        "id": "beee135e-1fed-5a0c-9083-dde2ebaec54d",
         "title": "Gros bois",
-        "publicher": "Les enfants rouges",
+        "event_ids": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
+        "author_ids": [
+            "0cf5be42-674c-5e17-9e49-7fb184b1431c"
+        ],
+        "publisher": "Les enfants rouges",
         "publishing_year": 2014
     },
     {
-        "id": "0d0f34ea-2996-4b7a-99bc-a9399bfe7f58",
-        "event_ids": "ecdb7e62-60dd-46b2-92f8-2de6649909a7",
-        "author_ids": [
-            "3cebdb24-65e1-4ec0-b321-24eb518b025d",
-            "378c8d98-2378-4b9f-a924-f0fa75695716"
-        ],
+        "id": "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d",
         "title": "The Wake",
-        "publicher": "Urban Comics",
+        "event_ids": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
+        "author_ids": [
+            "d4584704-3ebe-5a6f-b8f9-bf17fa741a33",
+            "f2c424bc-1c49-51c1-b24c-e35a2aa03969"
+        ],
+        "publisher": "Urban Comics",
         "publishing_year": 2015
     },
     {
-        "id": "22496ff9-3496-46de-831a-85340faea3f1",
-        "event_ids": "ecdb7e62-60dd-46b2-92f8-2de6649909a7",
-        "author_ids": [
-            "e051e53f-3da0-4eca-b0f6-eb2bc68e029b",
-            "00109334-6058-439c-b242-7267bfb8d255"
-        ],
+        "id": "db8922f2-954d-5063-9ca0-699e952b7520",
         "title": "Little tulip",
-        "publicher": "Le Lombard",
+        "event_ids": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
+        "author_ids": [
+            "3bb69f39-439a-56b4-8c8b-84229ff231ba",
+            "4d4f91cb-cbe7-5303-8271-d641cf6a6221"
+        ],
+        "publisher": "Le Lombard",
         "publishing_year": 2014
     },
     {
-        "id": "20b6a713-d3a9-455c-bb88-8fe7f3d41eb8",
-        "event_ids": "ecdb7e62-60dd-46b2-92f8-2de6649909a7",
-        "author_ids": [
-            "1565c0e9-fdbe-49af-93e5-39f6e48fd2c6"
-        ],
+        "id": "3da21605-8214-54c2-b22c-e217a9c9ce93",
         "title": "Un vrai guerrier ne meurt jamais même si ça signifie la mort",
-        "publicher": "Arbitraire",
+        "event_ids": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
+        "author_ids": [
+            "0eb89bcb-1cb8-54fb-84dd-ae9d7268c805"
+        ],
+        "publisher": "Arbitraire",
         "publishing_year": 2015
     },
     {
-        "id": "f8a0e7bd-c4d2-4cf5-be7c-d419cae142b6",
-        "event_ids": "398a8532-aa4e-4af4-b59d-9d9eac59802a",
-        "author_ids": [
-            "6c149804-848f-498d-a169-e6602d77139b",
-            "0887b524-374e-489e-8c72-530ba3f83ae4"
-        ],
+        "id": "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9",
         "title": "La colère de Fantomas",
-        "publicher": "Dargaud",
+        "event_ids": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
+        "author_ids": [
+            "95fa1c0a-912a-55cc-8056-f531d33f882e",
+            "48f4c9b6-4f07-53ad-bd78-dfc79b024297"
+        ],
+        "publisher": "Dargaud",
         "publishing_year": 2015
     },
     {
-        "id": "df2cd8ed-8193-4a5c-98c4-819b81f0efb9",
-        "event_ids": "398a8532-aa4e-4af4-b59d-9d9eac59802a",
-        "author_ids": [
-            "31c09700-f274-44c4-a757-f4c2e0d1aab8"
-        ],
+        "id": "43bbd0e5-e692-5e43-950a-eb10bd288972",
         "title": "En temps de guerre",
-        "publicher": "Misma",
+        "event_ids": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
+        "author_ids": [
+            "54ffe919-5f0b-553a-bd79-e6c9314fe6ba"
+        ],
+        "publisher": "Misma",
         "publishing_year": 2015
     },
     {
-        "id": "185ebb47-f707-4b7d-8432-fe8429ef92c6",
-        "event_ids": "398a8532-aa4e-4af4-b59d-9d9eac59802a",
-        "author_ids": [
-            "d197353d-b2d6-4b00-b5ea-e85d029b09fb"
-        ],
+        "id": "f5bfa282-0bba-5c25-819a-7189c4fa979f",
         "title": "Poison City",
-        "publicher": "Ki-Oon",
+        "event_ids": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
+        "author_ids": [
+            "f22a840a-ae7b-585b-b790-d0e5e0a22043"
+        ],
+        "publisher": "Ki-Oon",
         "publishing_year": 2015
     },
     {
-        "id": "d0c5e14f-d469-4e34-a39f-824b9464c4b5",
-        "event_ids": "398a8532-aa4e-4af4-b59d-9d9eac59802a",
-        "author_ids": [
-            "32c246b1-faab-45ec-a221-3255ebbef9a3"
-        ],
+        "id": "38c7eb79-a784-51a2-bf4e-94b788834ea9",
         "title": "Une tête bien vide",
-        "publicher": "Atrabile",
+        "event_ids": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
+        "author_ids": [
+            "617cfc5a-f2fa-5b31-9e82-f0e71d742d38"
+        ],
+        "publisher": "Atrabile",
         "publishing_year": 2015
     },
     {
-        "id": "b1971319-3708-4bfd-880a-127ab39fe0b7",
-        "event_ids": "f9a76328-8408-4b28-b69a-51874534c1d0",
-        "author_ids": [
-            "a6fda75a-6d4c-40c2-a19f-cc5dab5bd4dc",
-            "5be467a5-e4cf-4594-bd74-4f2bda595bbb"
-        ],
+        "id": "aaa5174a-d012-5a86-83ff-88ee561cee78",
         "title": "All-Star Superman",
-        "publicher": "Urban Comics",
+        "event_ids": "5530f067-a32c-51e1-9ad7-97cf775ed705",
+        "author_ids": [
+            "82b73354-e24a-5897-a4d7-a14c69097c14",
+            "950aea29-52b1-5b38-916e-69bd7222eed0"
+        ],
+        "publisher": "Urban Comics",
         "publishing_year": 2013
     },
     {
-        "id": "2b6b7ef8-3160-4873-a333-c9ca9f4bab4c",
-        "event_ids": "f9a76328-8408-4b28-b69a-51874534c1d0",
-        "author_ids": [
-            "00528d2d-1c56-4793-8876-cc985ba1f2c9",
-            "ed4a3b26-5777-4ff6-a66a-081f73b353db"
-        ],
+        "id": "a8f38346-3d87-5afd-9d0c-423aea300f2a",
         "title": "Rose Profond",
-        "publicher": "Casterman",
+        "event_ids": "5530f067-a32c-51e1-9ad7-97cf775ed705",
+        "author_ids": [
+            "e2973a8e-b6fe-5378-b489-513f29620f71",
+            "06153a78-09a9-505d-94b2-6d01b716bd24"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2015
     },
     {
-        "id": "1dee3094-d880-40c9-80b0-5d101133e631",
-        "event_ids": "f9a76328-8408-4b28-b69a-51874534c1d0",
-        "author_ids": [
-            "ccd29f6c-8bc5-4193-8450-4dee78b3ed66"
-        ],
+        "id": "09bf28a9-0ce1-5a09-a99c-a21fcffed008",
         "title": "La tendresse des pierres",
-        "publicher": "Magnani",
+        "event_ids": "5530f067-a32c-51e1-9ad7-97cf775ed705",
+        "author_ids": [
+            "f51793e5-443e-5f81-a04e-65fb91a807e1"
+        ],
+        "publisher": "Magnani",
         "publishing_year": 2013
     },
     {
-        "id": "9bdc7094-67ec-4e3c-8d23-83b3c090a4d5",
-        "event_ids": "f9a76328-8408-4b28-b69a-51874534c1d0",
-        "author_ids": [
-            "b2ca8b96-7210-4c87-964d-c3523246fa6b"
-        ],
+        "id": "d6cae607-a1ff-5926-a3f2-bb062c84ffb8",
         "title": "L'encyclopedie des débuts de la terre",
-        "publicher": "Casterman",
+        "event_ids": "5530f067-a32c-51e1-9ad7-97cf775ed705",
+        "author_ids": [
+            "d8152d45-6327-555b-bab0-5773452caeed"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2015
     },
     {
-        "id": "2b48027e-e2c6-404c-bfc9-ef1b40287604",
-        "event_ids": "04379d4f-2360-4d8f-8668-1dae578a5bca",
-        "author_ids": [
-            "17cbcd69-8615-4c77-ae4f-37e243e90627"
-        ],
+        "id": "ae0bc9de-368c-501b-bad7-5bbbe89576fb",
         "title": "La république du catch",
-        "publicher": "Casterman",
+        "event_ids": "2456ad86-5acc-5301-9bd6-90548d61b552",
+        "author_ids": [
+            "e09ec5a1-670e-5f3d-9f32-349c029bac21"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2013
     },
     {
-        "id": "318f03d3-7f08-445a-bfd8-5d68ebbaa06f",
-        "event_ids": "04379d4f-2360-4d8f-8668-1dae578a5bca",
-        "author_ids": [
-            "cfb2a830-d34f-4497-8f21-1e10da1e11ce",
-            "5405cd43-79fa-4700-8e92-a78861043e12"
-        ],
+        "id": "20d228c3-067c-5067-90c8-cb8cc271fe6f",
         "title": "Six-Gun Gorilla",
-        "publicher": "Ankama",
+        "event_ids": "2456ad86-5acc-5301-9bd6-90548d61b552",
+        "author_ids": [
+            "61b42f2a-c779-5680-b591-6e6128f1a1b7",
+            "42648312-3057-56f3-a03c-346bc337f3f8"
+        ],
+        "publisher": "Ankama",
         "publishing_year": 2015
     },
     {
-        "id": "95d1be36-9e0f-42e8-9b2c-15b4a6996396",
-        "event_ids": "04379d4f-2360-4d8f-8668-1dae578a5bca",
-        "author_ids": [
-            "7ed0eab4-d4fa-4206-a56a-5f0f595dd73c"
-        ],
+        "id": "fa873fe7-0449-5f89-8fc9-cfe1654b8041",
         "title": "Renégat",
-        "publicher": "The Hoochie Coochie",
+        "event_ids": "2456ad86-5acc-5301-9bd6-90548d61b552",
+        "author_ids": [
+            "8de0a770-0d52-5e17-97db-ef10383eb7e6"
+        ],
+        "publisher": "The Hoochie Coochie",
         "publishing_year": 2012
     },
     {
-        "id": "b1063158-c75e-418f-b8cd-0d6402c2d4b4",
-        "event_ids": "04379d4f-2360-4d8f-8668-1dae578a5bca",
-        "author_ids": [
-            "cb4ccbd8-6560-4b25-bbfe-043dbea37a38",
-            "96d9274c-8122-47fc-b0e2-cdf579fbeb25"
-        ],
+        "id": "795622ed-bfb2-50c3-8569-fb6f10d3cddd",
         "title": "Jolies ténèbres",
-        "publicher": "Dupuis",
+        "event_ids": "2456ad86-5acc-5301-9bd6-90548d61b552",
+        "author_ids": [
+            "742c3aed-25a1-5152-a908-bd41647dc69a",
+            "b818290e-2fbd-585a-828a-479920a33e88"
+        ],
+        "publisher": "Dupuis",
         "publishing_year": 2009
     },
     {
-        "id": "ac5e003e-9af3-4c18-9a65-b2eb1459bb2d",
-        "event_ids": "d5ad51e2-35e8-40a1-821e-f0fc1acb5a2f",
-        "author_ids": [
-            "e9a8b682-9c1c-4e79-9562-b088063d655c"
-        ],
+        "id": "e49de7c1-067d-5937-b900-075d3a2f7799",
         "title": "Le sculpteur",
-        "publicher": "Rue de Sèvre",
+        "event_ids": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
+        "author_ids": [
+            "3c63d44c-9b4f-596e-9bd5-84c3786f15dd"
+        ],
+        "publisher": "Rue de Sèvre",
         "publishing_year": 2015
     },
     {
-        "id": "e8f72928-1c18-4a4f-a543-b4fd65be24ee",
-        "event_ids": "d5ad51e2-35e8-40a1-821e-f0fc1acb5a2f",
-        "author_ids": [
-            "6e9927b7-1075-4594-8320-293f31680715"
-        ],
+        "id": "cef800c9-32c9-52ab-bf7c-f734ba6c65db",
         "title": "Daddy's girl",
-        "publicher": "L'Association",
+        "event_ids": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
+        "author_ids": [
+            "32df707a-3433-582f-b61e-ae27388d4713"
+        ],
+        "publisher": "L'Association",
         "publishing_year": 1996
     },
     {
-        "id": "decf5783-98fa-4f20-8401-2f78ece8a621",
-        "event_ids": "d5ad51e2-35e8-40a1-821e-f0fc1acb5a2f",
-        "author_ids": [
-            "9771d944-b2b7-4efc-a281-ef2a8f34da39"
-        ],
+        "id": "7b7682a7-12fd-5c89-81c1-ce4b2ec3cedd",
         "title": "La fille de la plage",
-        "publicher": "IMHO",
+        "event_ids": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
+        "author_ids": [
+            "b4e9729a-f1c7-5994-b791-a4c365333f5b"
+        ],
+        "publisher": "IMHO",
         "publishing_year": 2014
     },
     {
-        "id": "841b0513-c857-4138-a6fc-5141152167cb",
-        "event_ids": "d5ad51e2-35e8-40a1-821e-f0fc1acb5a2f",
-        "author_ids": [
-            "8cfb6b3a-2fec-44dc-a760-4b21f417a6bf"
-        ],
+        "id": "485c9772-b7f3-5b59-99a0-5bc51d90677a",
         "title": "Racket",
-        "publicher": "Futuropolis",
+        "event_ids": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
+        "author_ids": [
+            "000c49b2-0453-5107-a06f-58c9b1fea271"
+        ],
+        "publisher": "Futuropolis",
         "publishing_year": 2015
     },
     {
-        "id": "c61f8f77-2789-4b95-8b1c-fcf969ade6cf",
-        "event_ids": "5d7d6a69-47b2-4b8e-99cf-80d6e067781b",
-        "author_ids": [
-            "528ad92c-e8c3-430b-b704-335182979b14"
-        ],
+        "id": "70aad9fb-30b1-5177-8126-c531467c028e",
         "title": "Fraction",
-        "publicher": "IMHO",
+        "event_ids": "3b113b35-2d55-51c4-a846-f640bae083f4",
+        "author_ids": [
+            "b4ba44f4-199f-5988-8479-e4422af71a49"
+        ],
+        "publisher": "IMHO",
         "publishing_year": 2012
     },
     {
-        "id": "6cf2a6db-be78-46dd-be21-bf7ee5adf8bf",
-        "event_ids": "5d7d6a69-47b2-4b8e-99cf-80d6e067781b",
-        "author_ids": [
-            "7db3ec78-f112-490d-a834-a6333706d83a"
-        ],
+        "id": "f9920e4a-7ba8-5f19-8842-ceaf65dd8b9d",
         "title": "Titeuf - Bienvenue en adolescence",
-        "publicher": "Glénat",
+        "event_ids": "3b113b35-2d55-51c4-a846-f640bae083f4",
+        "author_ids": [
+            "94dabec5-6d21-52f5-bcb2-0298eeca942e"
+        ],
+        "publisher": "Glénat",
         "publishing_year": 2015
     },
     {
-        "id": "8adf0a15-bca3-489e-9ddb-bca1db825b5c",
-        "event_ids": "5d7d6a69-47b2-4b8e-99cf-80d6e067781b",
-        "author_ids": [
-            "22509f8e-8545-4529-9dc6-e9bc8a787ea9"
-        ],
+        "id": "9f0067bc-02b7-50da-a83e-61b896fc352d",
         "title": "Hobo Mom",
-        "publicher": "L'Employé du Moi",
+        "event_ids": "3b113b35-2d55-51c4-a846-f640bae083f4",
+        "author_ids": [
+            "40a78c44-4310-5562-8dc7-76d43d290bda"
+        ],
+        "publisher": "L'Employé du Moi",
         "publishing_year": 2015
     },
     {
-        "id": "fed7c074-f2bf-4c81-a54c-188ccd10be8a",
-        "event_ids": "5d7d6a69-47b2-4b8e-99cf-80d6e067781b",
-        "author_ids": [
-            "77702c18-ddbd-4154-8c7d-de48eff24e53"
-        ],
+        "id": "da2485f6-6f49-5a22-a601-34c06f8fe55f",
         "title": "Pauline à Paris",
-        "publicher": "FLBLB",
+        "event_ids": "3b113b35-2d55-51c4-a846-f640bae083f4",
+        "author_ids": [
+            "86b380e5-e629-5310-a14c-a81874f5b0be"
+        ],
+        "publisher": "FLBLB",
         "publishing_year": 2015
     },
     {
-        "id": "dc7741f6-ff1a-4ce1-8f1a-6e396a643851",
-        "event_ids": "87094ab6-7a5e-43c0-83ff-ffc43966a895",
+        "id": "fb96800d-99ad-51c1-a1e8-f27c7d8fbb10",
+        "title": "Cigish",
+        "event_ids": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
         "author_ids": [
-            "199ac1dd-8a42-4219-9edc-885aa2f2e061"
+            "b51e43e0-93f2-5e19-a4ea-6c9847f8a7e3"
         ],
-        "title": "Cigish ",
-        "publicher": "Ankama",
+        "publisher": "Ankama",
         "publishing_year": 2015
     },
     {
-        "id": "aa88a1ab-20e8-4509-9fd6-44b2d6b93795",
-        "event_ids": "87094ab6-7a5e-43c0-83ff-ffc43966a895",
+        "id": "94bd0510-12eb-51a0-a26e-0c444a702785",
+        "title": "Le grand méchant renard",
+        "event_ids": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
         "author_ids": [
-            "cbb6014a-07d7-426d-93c5-ac6d4367fccc"
+            "bb4e4e79-2608-504d-8924-888397c60925"
         ],
-        "title": "Le grand méchant renard ",
-        "publicher": "Delcourt",
+        "publisher": "Delcourt",
         "publishing_year": 2015
     },
     {
-        "id": "2cb5d4c0-e601-426a-8966-36b1d8f03fde",
-        "event_ids": "87094ab6-7a5e-43c0-83ff-ffc43966a895",
+        "id": "36e7eb28-ed60-5818-bc3a-eb39ae1e3105",
+        "title": "Tel qu'en lui même enfin",
+        "event_ids": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
         "author_ids": [
-            "c1c20b38-9aa1-4c24-9d75-242b1ccc8a5b"
+            "073d9082-a5d3-506a-985d-eb0aebe059a8"
         ],
-        "title": "Tel qu'en lui même enfin ",
-        "publicher": "L'Association",
+        "publisher": "L'Association",
         "publishing_year": 2015
     },
     {
-        "id": "544c4e83-030b-4111-b60c-a2ba17c90bf9",
-        "event_ids": "87094ab6-7a5e-43c0-83ff-ffc43966a895",
+        "id": "331c85b8-47f5-56b5-bdb2-c4ad8b36a229",
+        "title": "Mitterand, un jeune homme de droite",
+        "event_ids": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
         "author_ids": [
-            "0672196f-e5e9-4b86-a209-0284176cd1a9",
-            "af2d2066-742e-4c37-87dd-5ec19ca76b92"
+            "ce0db7bb-6bd3-522e-bc15-0b4f81ad598e",
+            "ecb4c9b9-3668-504e-b85a-91058c2412a2"
         ],
-        "title": "Mitterand, un jeune homme de droite ",
-        "publicher": "Rue de Sèvres",
+        "publisher": "Rue de Sèvres",
         "publishing_year": 2015
     },
     {
-        "id": "79a193ae-62aa-47a1-9ab3-bfe22c28e3f8",
-        "event_ids": "bafaa200-4f85-4e71-9c14-55819bed02b7",
+        "id": "6dcd8372-864e-593c-aa7b-d1c4421ca80a",
+        "title": "Facteur pour femmes",
+        "event_ids": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
         "author_ids": [
-            "e0652252-b61d-467c-baa2-d6433cf20ae4",
-            "dca0114b-1e58-4fde-ba1b-aadd872f9291"
+            "e9d80524-250a-5eed-b35a-7c4e80bac050",
+            "9425decb-3a8b-5e37-aac5-5ccb7a8b06d7"
         ],
-        "title": "Facteur pour femmes  ",
-        "publicher": "Grand Angle",
+        "publisher": "Grand Angle",
         "publishing_year": 2015
     },
     {
-        "id": "07919f9c-c5a2-4180-b589-93059a24ecc6",
-        "event_ids": "bafaa200-4f85-4e71-9c14-55819bed02b7",
+        "id": "ee4b52be-c659-5eff-ae4e-44cebfeb024c",
+        "title": "Trashed",
+        "event_ids": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
         "author_ids": [
-            "31bd3c0d-4725-47bf-a006-9ee45f9af777"
+            "96f050f1-d364-5995-835b-e0735f743da1"
         ],
-        "title": "Trashed ",
-        "publicher": "çà et là",
+        "publisher": "çà et là",
         "publishing_year": 2015
     },
     {
-        "id": "cc310992-7cb2-4c69-be8e-be8f8b39aa8f",
-        "event_ids": "bafaa200-4f85-4e71-9c14-55819bed02b7",
-        "author_ids": [
-            "bbe69749-c1ff-4eea-9751-07ff84a64e3c"
-        ],
+        "id": "e9a8d3e6-7671-5522-9438-1ca74a7d4a54",
         "title": "Ladyboy vs Yakuzas",
-        "publicher": "Akata",
+        "event_ids": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
+        "author_ids": [
+            "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e"
+        ],
+        "publisher": "Akata",
         "publishing_year": 2015
     },
     {
-        "id": "7a54d1ff-56af-4861-83c5-76c749b5bb4f",
-        "event_ids": "bafaa200-4f85-4e71-9c14-55819bed02b7",
+        "id": "bab472e5-dba8-56e8-94b4-eaca12df0767",
+        "title": "Le temps est proche",
+        "event_ids": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
         "author_ids": [
-            "039505f8-da2d-4bf2-9a44-5ec918a31ca4"
+            "0de81355-7467-5c84-ac5a-fda83bddd329"
         ],
-        "title": "Le temps est proche ",
-        "publicher": "The Hoochie Coochie",
+        "publisher": "The Hoochie Coochie",
         "publishing_year": 2012
     },
     {
-        "id": "68363bbb-e008-4e5c-8909-3072c62ef5a5",
-        "event_ids": "2e03a317-da5c-443f-955f-1997ae1581e9",
+        "id": "5879ed08-b528-54fa-b889-cb9b6654c5e6",
+        "title": "Comment faire fortune en juin 40",
+        "event_ids": "fc63aa8e-600f-5543-807f-73035f19248e",
         "author_ids": [
-            "4d85c11f-6697-4c24-91d7-4fab4d80b208",
-            "ad490815-e831-4afd-8704-49c2052f7dc2"
+            "55310ba7-320a-5abb-8b39-eff41549b0f1",
+            "5c38e890-27df-567f-9c6f-bcec8ceea617",
+            "a0303dba-bfa5-5dbc-8c2a-7cc1352a5f7e"
         ],
-        "title": "Comment faire fortune en juin 40 ",
-        "publicher": "Casterman ",
+        "publisher": "Casterman",
         "publishing_year": 2015
     },
     {
-        "id": "e2b21d71-6571-4a6e-8f7b-3bff310a0ed2",
-        "event_ids": "2e03a317-da5c-443f-955f-1997ae1581e9",
+        "id": "c8efe667-cfa0-5265-92b3-8f32fbeb53b1",
+        "title": "Gazoline l'intégrale",
+        "event_ids": "fc63aa8e-600f-5543-807f-73035f19248e",
         "author_ids": [
-            "41171ad6-6975-434e-817e-b52bf5c2b119"
+            "33d9e522-4553-5c30-84d9-90627de2766d"
         ],
-        "title": "Gazoline l'intégrale ",
-        "publicher": "Les Requins Marteaux ",
+        "publisher": "Les Requins Marteaux",
         "publishing_year": 2015
     },
     {
-        "id": "9d3ed2f9-0019-40b0-aa62-5e865b1d0bc9",
-        "event_ids": "2e03a317-da5c-443f-955f-1997ae1581e9",
+        "id": "0ee6ba43-46ad-5c80-8a2e-5114850d943b",
+        "title": "Vater und sohn",
+        "event_ids": "fc63aa8e-600f-5543-807f-73035f19248e",
         "author_ids": [
-            "f7682244-3bb2-407d-9649-82b4ea86bac6"
+            "6784186c-7620-5323-ba49-f65e51e6ae6f"
         ],
-        "title": "Vater und sohn ",
-        "publicher": "Warum / Vraoum",
+        "publisher": "Warum / Vraoum",
         "publishing_year": 2015
     },
     {
-        "id": "8b7f7874-332c-49e0-8535-334bddb11f01",
-        "event_ids": "2e03a317-da5c-443f-955f-1997ae1581e9",
+        "id": "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe",
+        "title": "Green Lantern & Green Arrow",
+        "event_ids": "fc63aa8e-600f-5543-807f-73035f19248e",
         "author_ids": [
-            "b7fc069a-373c-4b62-a9f4-1fe1755d4b88",
-            "de271203-5671-47d2-8cef-7423c5cb9e40"
+            "1447e129-555d-532d-8df9-d42e6407feef",
+            "21ea33cb-1507-5e60-80c3-10871c80788b",
+            "dd7e20bf-bcd1-5b90-a7d5-96c2ef461276"
         ],
-        "title": "Green Lantern & Green Arrow ",
-        "publicher": "Urban Comics",
+        "publisher": "Urban Comics",
         "publishing_year": 2014
     },
     {
-        "id": "e7f39044-2efd-4fe4-9b57-5fa2a1590245",
-        "event_ids": "023de01d-d75b-4cbc-a6c3-315b3f651697",
+        "id": "5cad8b88-954e-5800-bf00-9a0844b4317d",
+        "title": "Carnet de santé foireuse",
+        "event_ids": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
         "author_ids": [
-            "7df04d0f-d270-49f7-891b-5efe94165489"
+            "93d9e02c-ca19-59ba-a0ff-fe436c3a55bf"
         ],
-        "title": "Carnet de santé foireuse ",
-        "publicher": "Delcourt",
+        "publisher": "Delcourt",
         "publishing_year": 2016
     },
     {
-        "id": "a3c2d740-478d-47e6-be1e-099e6e599a70",
-        "event_ids": "023de01d-d75b-4cbc-a6c3-315b3f651697",
+        "id": "a1271973-c370-5a5f-a7d4-8feb30577f49",
+        "title": "Dernier arpenteur des sables",
+        "event_ids": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
         "author_ids": [
-            "6146da58-13e6-467e-96d3-b8ba915ca62d"
+            "fbc80bf7-51eb-58fc-b8c2-66228d9518a3"
         ],
-        "title": "Dernier arpenteur des sables ",
-        "publicher": "Cambourakis",
+        "publisher": "Cambourakis",
         "publishing_year": 2015
     },
     {
-        "id": "ae77446d-f628-4f88-9131-4a2ccdedb708",
-        "event_ids": "023de01d-d75b-4cbc-a6c3-315b3f651697",
+        "id": "169ce90d-4993-5277-b4b4-898b948ae30b",
+        "title": "Feu de paille",
+        "event_ids": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
         "author_ids": [
-            "13b0104e-4fe5-4c37-b523-22b27d38a76c"
+            "0ca16d5c-a8ba-5db2-9f06-f74b056d9c83"
         ],
-        "title": "Feu de paille ",
-        "publicher": "6 Pieds Sous Terre",
+        "publisher": "6 Pieds Sous Terre",
         "publishing_year": 2015
     },
     {
-        "id": "bbebf137-b5dc-410c-913f-330e1a8c74f8",
-        "event_ids": "023de01d-d75b-4cbc-a6c3-315b3f651697",
+        "id": "c11af8d5-9a5d-5d5d-8a37-806ab326e55e",
+        "title": "Stigmates",
+        "event_ids": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
         "author_ids": [
-            "9e273540-7600-478f-9d37-97af39416389"
+            "1a15581a-5279-5430-876c-2e8ffa8ff9a9"
         ],
-        "title": "Stigmates ",
-        "publicher": "Casterman",
+        "publisher": "Casterman",
         "publishing_year": 2015
     },
     {
-        "id": "44a2a8b0-fdb2-4e23-a414-8bc5586d0cc4",
-        "event_ids": "e9179f24-75bf-4edd-95c7-fa3fafdc56df",
+        "id": "112b74f7-40f7-535a-aab9-b13d3c94c4d2",
+        "title": "Punk Rock Jesus",
+        "event_ids": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
         "author_ids": [
-            "378c8d98-2378-4b9f-a924-f0fa75695716"
+            "f2c424bc-1c49-51c1-b24c-e35a2aa03969"
         ],
-        "title": "Punk Rock Jesus ",
-        "publicher": "Urban Comics",
+        "publisher": "Urban Comics",
         "publishing_year": 2013
     },
     {
-        "id": "7b6a1587-c8e8-4193-84c9-d569c958e996",
-        "event_ids": "e9179f24-75bf-4edd-95c7-fa3fafdc56df",
+        "id": "acef282e-003f-5e71-a1db-09b55471da17",
+        "title": "L'attente infinie",
+        "event_ids": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
         "author_ids": [
-            "d8ad7782-4b56-4f5e-8a12-307b373c76ca"
+            "c1ffebeb-922e-5aec-a97e-43302c30360d"
         ],
-        "title": "L'attente infinie ",
-        "publicher": "L'Agrume ",
+        "publisher": "L'Agrume",
         "publishing_year": 2015
     },
     {
-        "id": "cc9396b7-2326-4a15-87b5-0d1289e4bae5",
-        "event_ids": "e9179f24-75bf-4edd-95c7-fa3fafdc56df",
+        "id": "429db244-0244-5954-aed2-67933069011e",
+        "title": "La paresse du panda",
+        "event_ids": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
         "author_ids": [
-            "d5ddbd34-419a-4b0b-a5c7-e2ef19dfb912"
+            "d0b44328-312e-5462-94fc-6071926328cf"
         ],
-        "title": "La paresse du panda ",
-        "publicher": "Casterman ",
+        "publisher": "Casterman",
         "publishing_year": 2016
     },
     {
-        "id": "f0ffd3a4-44a2-4cfa-95a7-f167aa1f5c50",
-        "event_ids": "e9179f24-75bf-4edd-95c7-fa3fafdc56df",
+        "id": "a287fabc-b371-534f-b5ae-bce6b907b35f",
+        "title": "Blues",
+        "event_ids": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
         "author_ids": [
-            "59db9499-101d-40c0-985e-a571efe0a417"
+            "64050749-07c1-53a7-82b9-41a75f355e82"
         ],
-        "title": "Blues ",
-        "publicher": "Mosquito",
+        "publisher": "Mosquito",
         "publishing_year": 2007
     },
     {
-        "id": "9b95323f-bf69-435c-854e-0bf889858abc",
-        "event_ids": "37eec61c-9c9e-44f0-a1fd-cb5c5b2af062",
+        "id": "ea17e67e-3aed-5734-bee3-23d291cb2e65",
+        "title": "Ici",
+        "event_ids": "634fc1df-6058-5247-a08c-fad69ce34c2e",
         "author_ids": [
-            "3b7990f3-ffdc-4aaf-8282-bdc7ef575675"
+            "d95d8155-cb3d-51b6-aa89-a6c1c7d4efda"
         ],
-        "title": "Ici ",
-        "publicher": "Casterman",
+        "publisher": "Casterman",
         "publishing_year": 2015
     },
     {
-        "id": "8aa6b830-bebb-44be-84cc-d425f9ab3388",
-        "event_ids": "37eec61c-9c9e-44f0-a1fd-cb5c5b2af062",
+        "id": "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4",
+        "title": "Luthor",
+        "event_ids": "634fc1df-6058-5247-a08c-fad69ce34c2e",
         "author_ids": [
-            "bd031c38-2184-4cf1-b770-00331fc44097",
-            "f0d24823-900f-45ec-b44f-22172a335715"
+            "307d6d57-5e9c-5093-81f8-c14ebd1a70bf",
+            "87b5bd4e-962b-5128-b63a-fcb5a620a097"
         ],
-        "title": "Luthor ",
-        "publicher": "Urban Comics ",
+        "publisher": "Urban Comics",
         "publishing_year": 2016
     },
     {
-        "id": "7762d745-ca18-4fa5-aa16-0b3654d6771d",
-        "event_ids": "37eec61c-9c9e-44f0-a1fd-cb5c5b2af062",
-        "author_ids": [
-            "e2fc4579-5539-43ea-b76b-85fb400dd255"
-        ],
+        "id": "1fe8553a-dc4f-557c-b0c8-ed285d25d513",
         "title": "Capitaine Mulet",
-        "publicher": "Editions 2024",
+        "event_ids": "634fc1df-6058-5247-a08c-fad69ce34c2e",
+        "author_ids": [
+            "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57"
+        ],
+        "publisher": "Editions 2024",
         "publishing_year": 2016
     },
     {
-        "id": "a8462b03-8492-4472-8002-c89b27823b7d",
-        "event_ids": "37eec61c-9c9e-44f0-a1fd-cb5c5b2af062",
-        "author_ids": [
-            "4640fbfa-8482-450f-8493-b61ecbf62160"
-        ],
+        "id": "d7db5c18-6776-5197-b68c-f61569bd178a",
         "title": "Commando Culotte",
-        "publicher": "Ankama ",
+        "event_ids": "634fc1df-6058-5247-a08c-fad69ce34c2e",
+        "author_ids": [
+            "07e138d4-c5e0-5e13-81c4-b924dca78d61"
+        ],
+        "publisher": "Ankama",
         "publishing_year": 2016
     },
     {
-        "id": "c84b5aa1-f3fe-419b-bbd6-f4fcbd0068c7",
-        "event_ids": "add91edb-1da1-4a8a-8863-52f54c16b4d2",
-        "author_ids": [
-            "9c8e529b-11ac-4509-8e2d-7a4b4ba9da05",
-            "58a01ea1-ef53-4d6c-9bcf-eda744bb6019"
-        ],
+        "id": "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32",
         "title": "Mickey's craziest adventures",
-        "publicher": "Glénat",
+        "event_ids": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
+        "author_ids": [
+            "29c51d18-72d7-5715-8d93-7f49418467af",
+            "63e6bbf9-501c-5cab-a447-df8eca94278c"
+        ],
+        "publisher": "Glénat",
         "publishing_year": 2016
     },
     {
-        "id": "a58f2002-64b2-4173-a0d2-b2baa53cc3f7",
-        "event_ids": "add91edb-1da1-4a8a-8863-52f54c16b4d2",
+        "id": "f2860692-948f-5d47-b998-60f799a21268",
+        "title": "Presque",
+        "event_ids": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
         "author_ids": [
-            "00156837-15de-439f-a583-ef51d8fd79d8"
+            "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2"
         ],
-        "title": "Presque ",
-        "publicher": "Les Rêveurs",
+        "publisher": "Les Rêveurs",
         "publishing_year": 2010
     },
     {
-        "id": "2282b360-5b82-47b3-bd99-040f244d8b33",
-        "event_ids": "add91edb-1da1-4a8a-8863-52f54c16b4d2",
-        "author_ids": [
-            "78e00a51-08fc-4e7b-84da-0a74ec24d385"
-        ],
+        "id": "69f9074f-83c0-57ba-977b-1125d2fbae16",
         "title": "Medley",
-        "publicher": "Même Pas Mal",
+        "event_ids": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
+        "author_ids": [
+            "5ad0a9e1-5ffa-5c14-a110-f2130ce3514f"
+        ],
+        "publisher": "Même Pas Mal",
         "publishing_year": 2016
     },
     {
-        "id": "3a29775a-58db-44c9-8f04-32724a992514",
-        "event_ids": "add91edb-1da1-4a8a-8863-52f54c16b4d2",
-        "author_ids": [
-            "250a5622-232e-44f7-b49a-9a0a43cf1d17"
-        ],
+        "id": "e71a06a2-fc10-56f0-b0a6-f5b1ec6ce8d4",
         "title": "Journal",
-        "publicher": "L'Agrume",
+        "event_ids": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
+        "author_ids": [
+            "e7bad250-6da0-56ae-ab7c-bb32c2243587"
+        ],
+        "publisher": "L'Agrume",
         "publishing_year": 2014
     },
     {
-        "id": "c61ee2e3-1ff6-402c-b7ee-70044dff2c05",
-        "event_ids": "e10c773d-375d-4a2b-8ea8-b92afe15490b",
-        "author_ids": [
-            "19149627-44ca-4287-9d07-3f74fa921ccf",
-            "e1d9cf70-e117-41dc-aae7-75959c26fb55"
-        ],
+        "id": "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3",
         "title": "L'odeur des garçons affamés",
-        "publicher": "Casterman BD",
+        "event_ids": "b0b01187-3e41-530a-b69d-1b778156244a",
+        "author_ids": [
+            "5dffb67a-5aac-5df7-8cff-c42c4085749e",
+            "2f4e23e5-9feb-53ab-beae-4555370c8f0d"
+        ],
+        "publisher": "Casterman BD",
         "publishing_year": 2016
     },
     {
-        "id": "63fc3e2e-509f-4975-92c2-b345ffe71c21",
-        "event_ids": "e10c773d-375d-4a2b-8ea8-b92afe15490b",
-        "author_ids": [
-            "87cecf66-1a08-4023-a266-24f382020ade"
-        ],
+        "id": "80fb2922-29f9-5231-ba34-224676df214b",
         "title": "Le confesseur sauvage",
-        "publicher": "Glénat ",
+        "event_ids": "b0b01187-3e41-530a-b69d-1b778156244a",
+        "author_ids": [
+            "7fe75a35-1d64-517a-885f-630c30ee6ba0"
+        ],
+        "publisher": "Glénat",
         "publishing_year": 2015
     },
     {
-        "id": "133c203a-404a-46e2-b5d7-06ed678faed9",
-        "event_ids": "e10c773d-375d-4a2b-8ea8-b92afe15490b",
+        "id": "31218cb7-1c1c-5c1e-ba45-3383eb2db2a4",
+        "title": "Orange",
+        "event_ids": "b0b01187-3e41-530a-b69d-1b778156244a",
         "author_ids": [
-            "0b953c3d-b5b9-4698-ba81-e372b37e5b39"
+            "c5e6aaf1-2b53-5f0e-bce2-0c4c94f86c6f"
         ],
-        "title": "Orange ",
-        "publicher": "Akata",
+        "publisher": "Akata",
         "publishing_year": 2014
     },
     {
-        "id": "f1af01fc-de66-46c7-ac71-86723fb7333a",
-        "event_ids": "e10c773d-375d-4a2b-8ea8-b92afe15490b",
-        "author_ids": [
-            "87eeebe2-96d8-4a25-ba10-76a69e45568f"
-        ],
+        "id": "d6777df6-7ff7-5d60-883a-8b4a3ea24742",
         "title": "Les spectateurs",
-        "publicher": "Casterman BD",
+        "event_ids": "b0b01187-3e41-530a-b69d-1b778156244a",
+        "author_ids": [
+            "09ba303e-ed68-5c29-bac3-42f3ca9dc165"
+        ],
+        "publisher": "Casterman BD",
         "publishing_year": 2016
     },
     {
-        "id": "21261c65-9ddf-41e2-aa90-684aee72bfea",
-        "event_ids": "529bb8be-b0ee-49e6-9483-e7a846ee1cb8",
+        "id": "0f4c7769-b9a0-5d86-90c2-0dab9cdecac5",
+        "title": "L'homme qui tua Lucky Luke",
+        "event_ids": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
         "author_ids": [
-            "6b7ad95e-29bf-496b-97ca-d6b31613701b"
+            "453525aa-7f27-5d42-ba7b-d5459af791fc"
         ],
-        "title": "L'homme qui tua Lucky Luke ",
-        "publicher": "Casterman",
+        "publisher": "Casterman",
         "publishing_year": 2016
     },
     {
-        "id": "5f0a53d3-a4ce-4e8c-8e74-035cd7baf402",
-        "event_ids": "529bb8be-b0ee-49e6-9483-e7a846ee1cb8",
+        "id": "50457d0a-d275-54ae-a701-73038d4557e5",
+        "title": "Hors-jeu",
+        "event_ids": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
         "author_ids": [
-            "4bb67e74-60f0-49f9-9e84-992febe745b2"
+            "a1538e2c-43f9-5a42-8d71-008ad928bf75"
         ],
-        "title": "Hors-jeu ",
-        "publicher": "L'Agrume",
+        "publisher": "L'Agrume",
         "publishing_year": 2016
     },
     {
-        "id": "fd2216f3-86cb-45a0-abd3-8282a9941449",
-        "event_ids": "529bb8be-b0ee-49e6-9483-e7a846ee1cb8",
+        "id": "ff97eec9-4561-5965-b9fd-31a81ed88ca1",
+        "title": "Le concile des arbres",
+        "event_ids": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
         "author_ids": [
-            "2098f939-b8d9-4669-b9f8-4187ec360935",
-            "68a260e6-370e-4666-8c06-a3197367853e"
+            "d9ccf51f-773d-5fc2-96b6-c595993dc4d5",
+            "9329ecf2-fb88-5cda-93d0-4d796212135a"
         ],
-        "title": "Le concile des arbres ",
-        "publicher": "Dargaud",
+        "publisher": "Dargaud",
         "publishing_year": 2016
     },
     {
-        "id": "d9cbe6ee-f2c7-4784-8da4-94f337f380a2",
-        "event_ids": "529bb8be-b0ee-49e6-9483-e7a846ee1cb8",
-        "author_ids": [
-            "04a4b3d4-4879-434a-83c5-03f44f0019dc"
-        ],
+        "id": "f6807abd-c884-551c-ad68-32d7182e64bc",
         "title": "White Trash",
-        "publicher": "Ankama",
+        "event_ids": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
+        "author_ids": [
+            "c533d6df-4b35-5261-9157-fa3cef0e4088"
+        ],
+        "publisher": "Ankama",
         "publishing_year": 2016
     },
     {
-        "id": "5a0db9c8-76bd-4a10-813d-0e7009715bf6",
-        "event_ids": "cd58631c-d97d-4eb9-b83d-79e86ea2dee6",
-        "author_ids": [
-            "dbd5197a-8552-4789-a5ef-4a6fed37a87f"
-        ],
+        "id": "13cec0e3-d7e3-54da-be39-8ea04750452b",
         "title": "Kobane Calling",
-        "publicher": "Cambourakis​",
+        "event_ids": "acaef519-c1b3-5690-84b1-d8fb25759813",
+        "author_ids": [
+            "8d89626c-33ca-5927-9738-0bf520f4b52e"
+        ],
+        "publisher": "Cambourakis​",
         "publishing_year": 2016
     },
     {
-        "id": "a0065c78-fb76-4032-8788-94915c650bf9",
-        "event_ids": "cd58631c-d97d-4eb9-b83d-79e86ea2dee6",
-        "author_ids": [
-            "bc2d0245-6ba9-4c8d-9be0-0c3c95a63bdf"
-        ],
+        "id": "4855cab9-a793-5a3b-b9ed-a1ae11a4cb96",
         "title": "L'origine du monde",
-        "publicher": "Rackham",
+        "event_ids": "acaef519-c1b3-5690-84b1-d8fb25759813",
+        "author_ids": [
+            "6036d73a-1f6b-581b-8e41-74a385c4be82"
+        ],
+        "publisher": "Rackham",
         "publishing_year": 2016
     },
     {
-        "id": "1fb1c50a-e5a8-4a81-86cd-2e057cfbf362",
-        "event_ids": "cd58631c-d97d-4eb9-b83d-79e86ea2dee6",
-        "author_ids": [
-            "70ab6138-a571-46af-8d94-11b0ced6aad3",
-            "faabcd3c-6ff7-4366-b92c-6c5546fd4934"
-        ],
+        "id": "b84e2de9-9773-5fb3-b098-95600aabefb4",
         "title": "Les fils d'El Topo",
-        "publicher": "Glénat ",
+        "event_ids": "acaef519-c1b3-5690-84b1-d8fb25759813",
+        "author_ids": [
+            "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b",
+            "a0b94843-ddbb-5e2e-94f4-31715a79ae96"
+        ],
+        "publisher": "Glénat",
         "publishing_year": 2016
     },
     {
-        "id": "18d79c90-700b-4993-bec7-19f63303b8f1",
-        "event_ids": "cd58631c-d97d-4eb9-b83d-79e86ea2dee6",
-        "author_ids": [
-            "e3a189cc-defd-44b6-9d66-350d8dab7c2c"
-        ],
+        "id": "6abe3396-863c-534c-ab1f-f19543d6c60d",
         "title": "Gros Ours et Petit Lapin",
-        "publicher": "Misma ",
+        "event_ids": "acaef519-c1b3-5690-84b1-d8fb25759813",
+        "author_ids": [
+            "8d7dbf62-af3b-5183-9758-a74bff3e93b2"
+        ],
+        "publisher": "Misma",
         "publishing_year": 2016
     },
     {
-        "id": "02b50c9c-26c5-4f2d-bc02-6265cf2f1dd2",
-        "event_ids": "699114d7-eaeb-4d59-9f03-0949139e6858",
+        "id": "72f2081f-6273-5dc2-8c7b-28dc3370c098",
+        "title": "Ghost World",
+        "event_ids": "81b7b345-17ae-599b-8c17-b38aafc42040",
         "author_ids": [
-            "03a28ac0-5bef-461d-a766-8d13fa54cb33"
+            "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8"
         ],
-        "title": "Ghost World ",
-        "publicher": "Cornélius",
+        "publisher": "Cornélius",
         "publishing_year": 2016
     },
     {
-        "id": "260a3ad5-c71a-427c-a993-b6de8353bf4d",
-        "event_ids": "699114d7-eaeb-4d59-9f03-0949139e6858",
+        "id": "2e080007-73f3-551b-9c26-e8e9ebec19d2",
+        "title": "Gunnm",
+        "event_ids": "81b7b345-17ae-599b-8c17-b38aafc42040",
         "author_ids": [
-            "c2c4ca20-a216-40d2-877c-3add5b966e9e"
+            "65e00d00-102a-5d11-a8ee-1ae12e5f8022"
         ],
-        "title": "Gunnm ",
-        "publicher": "Glénat ",
+        "publisher": "Glénat",
         "publishing_year": 2016
     },
     {
-        "id": "d7322f2e-20cf-443f-9cdf-418eb2ce894b",
-        "event_ids": "699114d7-eaeb-4d59-9f03-0949139e6858",
+        "id": "b5c177d6-e429-538f-84b3-6f857b20a7a4",
+        "title": "Vive la marée !",
+        "event_ids": "81b7b345-17ae-599b-8c17-b38aafc42040",
         "author_ids": [
-            "49cdcf61-fb89-49e9-a643-e81334bf166d",
-            "a9860b83-fd0c-4acb-9e5a-805a2edb89b1"
+            "343a491e-3575-5f01-bd10-fce806418d2d",
+            "63d2e556-4c79-555b-afec-1eb4a3f509a5"
         ],
-        "title": "Vive la marée ! ",
-        "publicher": "Futuropolis",
+        "publisher": "Futuropolis",
         "publishing_year": 2015
     },
     {
-        "id": "04bd1af9-b38b-4ec1-9216-71b9b3506dc9",
-        "event_ids": "699114d7-eaeb-4d59-9f03-0949139e6858",
+        "id": "9491f949-140c-5092-9add-d05dc3983fe1",
+        "title": "Monsieur Léotard",
+        "event_ids": "81b7b345-17ae-599b-8c17-b38aafc42040",
         "author_ids": [
-            "9a6b7cd5-434b-4a9f-895f-5cd5a3b1ff93",
-            "43191601-56fc-4f9c-9594-175f4416b2a0"
+            "eb457afe-c7d7-5465-91f5-1f76bbd153d4",
+            "aabdfb6d-def7-59e7-aef7-caf4f826425e"
         ],
-        "title": "Monsieur Léotard ",
-        "publicher": "Çà et là",
+        "publisher": "Çà et là",
         "publishing_year": 2016
     },
     {
-        "id": "dec9d8b9-0d07-4f1a-8a11-c8a1b2cf87cb",
-        "event_ids": "4c8b4b0b-644b-4635-9daa-f42c06d935bb",
-        "author_ids": [
-            "5b24a560-d0fa-479d-a4e9-f1b4f4da709e"
-        ],
+        "id": "bde8dc28-1f8e-58e9-8de4-8efd46178c54",
         "title": "L'essentiel de Gouines à suivre",
-        "publicher": "Même Pas Mal",
+        "event_ids": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
+        "author_ids": [
+            "c31ac25f-8577-51a4-8112-3280350d8f34"
+        ],
+        "publisher": "Même Pas Mal",
         "publishing_year": 2016
     },
     {
-        "id": "7b05f634-5e92-4062-abd1-596ac6fd7c16",
-        "event_ids": "4c8b4b0b-644b-4635-9daa-f42c06d935bb",
-        "author_ids": [
-            "bd146353-2748-4678-aa3d-972fce2aad3d",
-            "2902a7fb-128d-4439-aae4-4e6e8bf5deeb"
-        ],
+        "id": "9ac45906-4b6a-5ca4-805b-f64aec4b90bc",
         "title": "Spirou, La lumière de Bornéo",
-        "publicher": "Dupuis",
+        "event_ids": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
+        "author_ids": [
+            "f780ae12-bdb3-5934-a7eb-c1a220d6c1f7",
+            "095fe88f-e6bc-523c-a338-d927d8a46767"
+        ],
+        "publisher": "Dupuis",
         "publishing_year": 2016
     },
     {
-        "id": "d7242bf9-c263-4771-be0f-d9ef2e5a0dd1",
-        "event_ids": "4c8b4b0b-644b-4635-9daa-f42c06d935bb",
-        "author_ids": [
-            "9f2dce06-3b5b-4cf7-84d5-1b6b28f725c1"
-        ],
+        "id": "c4a296ae-92a4-59dc-9301-4a603a7cffd0",
         "title": "Police Lunaire",
-        "publicher": "Editions 2024",
+        "event_ids": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
+        "author_ids": [
+            "82f0f18e-ef7e-5f41-8047-ad16d91e05e4"
+        ],
+        "publisher": "Editions 2024",
         "publishing_year": 2016
     },
     {
-        "id": "2d48fc30-54fa-4f31-82c0-a9bfba8b9603",
-        "event_ids": "4c8b4b0b-644b-4635-9daa-f42c06d935bb",
-        "author_ids": [
-            "55f47e88-dc2a-4f36-a686-af6aadb2ed32"
-        ],
+        "id": "562e5012-19b0-5794-aa0e-4636a143312f",
         "title": "Aventures de Luther Arkwright",
-        "publicher": "Kymera Comics",
+        "event_ids": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
+        "author_ids": [
+            "2f89aaac-ebdd-5a34-a0a8-e93588b567e4"
+        ],
+        "publisher": "Kymera Comics",
         "publishing_year": 2006
     },
     {
-        "id": "87e60d20-59f1-4924-95ec-0e7ceb2c97b7",
-        "event_ids": "b161fb21-e5e9-412f-a21e-738dd90c401c",
-        "author_ids": [
-            "b4c688e5-531b-47e6-9cdd-97e015c6dfc2"
-        ],
+        "id": "163d1778-437a-5b0b-a41c-477e1740f9d6",
         "title": "Cot Cot",
-        "publicher": "Atrabile",
+        "event_ids": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
+        "author_ids": [
+            "74fe19ba-aed1-535a-b8e0-d23ecae07b52"
+        ],
+        "publisher": "Atrabile",
         "publishing_year": 2003
     },
     {
-        "id": "7eca1ef7-3646-4a55-a3cb-8e01c640afd2",
-        "event_ids": "b161fb21-e5e9-412f-a21e-738dd90c401c",
+        "id": "3ffeb194-5cc8-5d05-ade9-964f5999aa79",
+        "title": "Une féssée et au lit",
+        "event_ids": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
         "author_ids": [
-            "f778f028-7b27-4f0e-8bb4-020a4b4d98af"
+            "aedca89a-5fbd-5370-bd4f-613e59392e1e"
         ],
-        "title": "Une féssée et au lit ",
-        "publicher": "The Hoochie Coochie",
+        "publisher": "The Hoochie Coochie",
         "publishing_year": 2016
     },
     {
-        "id": "eb3d8c06-96e6-441d-9994-193a4a1e0ed8",
-        "event_ids": "b161fb21-e5e9-412f-a21e-738dd90c401c",
-        "author_ids": [
-            "face7b58-63e9-41e7-95a5-17512ddd3172",
-            "2f8f21ac-84f4-4bef-bbbd-7f68a58f26a0"
-        ],
+        "id": "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc",
         "title": "Heartful Company",
-        "publicher": "IMHO",
+        "event_ids": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
+        "author_ids": [
+            "ecc84076-df42-5c48-b1a3-d3d8a57b3771",
+            "bd3ae08f-db85-5ec7-997d-14285b672739"
+        ],
+        "publisher": "IMHO",
         "publishing_year": 2013
     },
     {
-        "id": "87aa44a4-88c8-4edd-95dd-2768a158291d",
-        "event_ids": "b161fb21-e5e9-412f-a21e-738dd90c401c",
+        "id": "0d8ca287-8e3d-55a9-9f4f-bbe8a1a62c40",
+        "title": "Super Sourde",
+        "event_ids": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
         "author_ids": [
-            "877f1493-82d7-49b3-aec6-0b1dcffc62aa"
+            "160a3ea0-3de2-5647-bd35-de0856ad7ff1"
         ],
-        "title": "Super Sourde ",
-        "publicher": "Les Arènes",
+        "publisher": "Les Arènes",
         "publishing_year": 2015
     },
     {
-        "id": "68333986-ec2a-432e-b0d3-01f1af5a08fa",
-        "event_ids": "d437ec10-452b-423a-803b-764de5c4bb12",
-        "author_ids": [
-            "f66cd3d6-01b4-412b-a54e-4ba2ea973cd0"
-        ],
+        "id": "5a7dd53b-1495-5663-bea2-733fedd1d228",
         "title": "Stupor Mundi",
-        "publicher": "Gallimard BD",
+        "event_ids": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
+        "author_ids": [
+            "b84a8b0d-c5d4-50a0-98ca-7499c46b7968"
+        ],
+        "publisher": "Gallimard BD",
         "publishing_year": 2016
     },
     {
-        "id": "0c094574-f045-4afe-aab1-1991e3f73038",
-        "event_ids": "d437ec10-452b-423a-803b-764de5c4bb12",
-        "author_ids": [
-            "f09f7044-463d-4c00-a3ed-c4dd2e3833c7"
-        ],
+        "id": "4335f95a-162b-55fd-bc33-9ae6270eaa96",
         "title": "Otto l'homme réécrit",
-        "publicher": "Delcourt",
+        "event_ids": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
+        "author_ids": [
+            "a0e8081c-c789-5249-a9ad-938d911d3d15"
+        ],
+        "publisher": "Delcourt",
         "publishing_year": 2016
     },
     {
-        "id": "ddc79cf0-9ca6-4387-8144-e9a4f1bd5e48",
-        "event_ids": "d437ec10-452b-423a-803b-764de5c4bb12",
-        "author_ids": [
-            "c6ab5deb-0e83-47fa-b68a-ecb889768c05"
-        ],
+        "id": "92d4a711-7df9-52a6-aef4-35cf71bbc16a",
         "title": "Tulipe",
-        "publicher": "Editions 2024",
+        "event_ids": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
+        "author_ids": [
+            "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57"
+        ],
+        "publisher": "Editions 2024",
         "publishing_year": 2016
     },
     {
-        "id": "9b115329-df81-44f9-ba1b-b1327c521dd6",
-        "event_ids": "d437ec10-452b-423a-803b-764de5c4bb12",
+        "id": "09bd361d-294b-548e-81d2-a24ce73e755a",
+        "title": "La pipe de Marcos",
+        "event_ids": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
         "author_ids": [
-            "39777947-538d-4128-9b96-aba4e39ac2bf"
+            "5a27bd93-6368-5a71-863e-b2984c27b7da"
         ],
-        "title": "La pipe de Marcos ",
-        "publicher": "Rackham",
+        "publisher": "Rackham",
         "publishing_year": 2005
     },
     {
-        "id": "4f8dea1e-faa0-4846-8e58-c7ff8061f18c",
-        "event_ids": "6106d81c-d277-4ff1-9328-75fbc17ca7dd",
-        "author_ids": [
-            "e94d7d4d-aed1-4a6a-8670-a45ec947c402"
-        ],
+        "id": "1d56642e-0dc1-5f4a-aae2-0fa94df543fd",
         "title": "Shangri-la",
-        "publicher": "Ankama ",
+        "event_ids": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
+        "author_ids": [
+            "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b"
+        ],
+        "publisher": "Ankama",
         "publishing_year": 2016
     },
     {
-        "id": "5d8a744e-6acf-4568-bfec-90076efdd15d",
-        "event_ids": "6106d81c-d277-4ff1-9328-75fbc17ca7dd",
+        "id": "7c7c3feb-134e-5fcd-8be5-c580ee005cb1",
+        "title": "Scalp",
+        "event_ids": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
         "author_ids": [
-            "f793a53c-be0b-4c38-97a3-1193d1be9e51"
+            "8fe7fe5d-f5d1-57fa-9b23-8613e9714774"
         ],
-        "title": "Scalp ",
-        "publicher": "Futuropolis",
+        "publisher": "Futuropolis",
         "publishing_year": 2017
     },
     {
-        "id": "8875dd68-c114-4607-a22c-814f63cdf8ef",
-        "event_ids": "6106d81c-d277-4ff1-9328-75fbc17ca7dd",
-        "author_ids": [
-            "bc736138-0bae-4c61-a746-c0dff3e34169"
-        ],
+        "id": "d6aa2f0e-42e0-5e88-9aca-0f988aaf0156",
         "title": "Charlie Chan hock Chye",
-        "publicher": "Urban Comics",
+        "event_ids": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
+        "author_ids": [
+            "0afb0661-1df4-536c-9666-10c4b38bb243"
+        ],
+        "publisher": "Urban Comics",
         "publishing_year": 2017
     },
     {
-        "id": "2a5b964e-bcb1-4d6d-8881-4619be269d45",
-        "event_ids": "6106d81c-d277-4ff1-9328-75fbc17ca7dd",
+        "id": "8a70367d-933d-5179-ad05-41d287a8027e",
+        "title": "Pelote dans la fumée",
+        "event_ids": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
         "author_ids": [
-            "cefd2112-f0ff-4397-aead-7fb5fea8653d"
+            "1f5f75e0-7638-50f5-80af-9cd35b1db3a9"
         ],
-        "title": "Pelote dans la fumée ",
-        "publicher": "Actes Sud Bd",
+        "publisher": "Actes Sud Bd",
         "publishing_year": 2013
     },
     {
-        "id": "918e7bb8-79ba-4c24-a1e5-f9036bb5e5ff",
-        "event_ids": "b8a99398-62c4-47bc-92b9-71251e02244c",
-        "author_ids": [
-            "f4fa88d9-b703-4020-a019-9a056f84ce28"
-        ],
+        "id": "264198c3-9db1-53e1-9cf2-57062511f327",
         "title": "Sunny",
-        "publicher": "Kana",
+        "event_ids": "a162a1f8-1fec-55a0-838d-7c9173f88142",
+        "author_ids": [
+            "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3"
+        ],
+        "publisher": "Kana",
         "publishing_year": 2014
     },
     {
-        "id": "eb5a184a-1ab0-47c2-b218-660e665b821c",
-        "event_ids": "b8a99398-62c4-47bc-92b9-71251e02244c",
-        "author_ids": [
-            "f23b8747-0a4f-4034-a94a-8199471ba742"
-        ],
+        "id": "fb7e1f82-d227-5650-85b7-c44a4f634109",
         "title": "Louis Riel",
-        "publicher": "La Pastèque",
+        "event_ids": "a162a1f8-1fec-55a0-838d-7c9173f88142",
+        "author_ids": [
+            "cdc82420-f432-5f59-a469-f2e496e2ec4d"
+        ],
+        "publisher": "La Pastèque",
         "publishing_year": 2004
     },
     {
-        "id": "bde07241-cf98-4656-aa39-680af7870fda",
-        "event_ids": "b8a99398-62c4-47bc-92b9-71251e02244c",
-        "author_ids": [
-            "5f4794b2-e231-4e73-9ad9-47d28be5337e"
-        ],
+        "id": "9915da9c-e3bf-579d-9399-0cca6f6854ed",
         "title": "Je, François Villon",
-        "publicher": "Delcourt",
+        "event_ids": "a162a1f8-1fec-55a0-838d-7c9173f88142",
+        "author_ids": [
+            "37c48d00-bc91-517c-b977-e253bcc19204"
+        ],
+        "publisher": "Delcourt",
         "publishing_year": 2017
     },
     {
-        "id": "b47e711b-de66-48ef-b10b-05974bff1965",
-        "event_ids": "b8a99398-62c4-47bc-92b9-71251e02244c",
+        "id": "871a5231-dd60-5c65-9b18-723b1565ffa1",
+        "title": "La structure est pourrie camarade",
+        "event_ids": "a162a1f8-1fec-55a0-838d-7c9173f88142",
         "author_ids": [
-            "f6fb84c5-6704-4dac-bb9e-c7a90f373e11",
-            "cd8e396b-7187-4f51-bcac-706cef2e3eb1"
+            "d7ebbe2d-e613-5ff8-939b-63886c183c10",
+            "6c202026-ad9b-5d9f-a7cb-35d1e0009667"
         ],
-        "title": "La structure est pourrie camarade ",
-        "publicher": "Actes Sud Bd ",
+        "publisher": "Actes Sud Bd",
         "publishing_year": 2017
     },
     {
-        "id": "3b7ef2d4-0591-47d4-8342-25313b20e4bd",
-        "event_ids": "bfd89c4f-4c44-462f-ac5b-4a466896b86c",
-        "author_ids": [
-            "ef815062-23c3-42d2-b4f0-c8addb8d47d5"
-        ],
+        "id": "975d271b-e1e0-54f8-9273-2debfe877e0f",
         "title": "Une soeur",
-        "publicher": "Casterman",
+        "event_ids": "4773d958-16dc-5d09-ac56-048ca6df63b8",
+        "author_ids": [
+            "552512e4-a3e7-5246-89cf-9ddee4ca5e17"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2017
     },
     {
-        "id": "ea970a7d-22cd-45d6-adf1-171eb3158a46",
-        "event_ids": "bfd89c4f-4c44-462f-ac5b-4a466896b86c",
+        "id": "49643a22-7c3c-590e-909d-2b458a3c9812",
+        "title": "Solanin",
+        "event_ids": "4773d958-16dc-5d09-ac56-048ca6df63b8",
         "author_ids": [
-            "9771d944-b2b7-4efc-a281-ef2a8f34da39"
+            "b4e9729a-f1c7-5994-b791-a4c365333f5b"
         ],
-        "title": "Solanin ",
-        "publicher": "Kana",
+        "publisher": "Kana",
         "publishing_year": 2007
     },
     {
-        "id": "b67d484d-bdc3-4b55-8016-fcc8888f8daf",
-        "event_ids": "bfd89c4f-4c44-462f-ac5b-4a466896b86c",
+        "id": "5a8ed5c1-88a2-5654-88d7-c1d974ade6b3",
+        "title": "Quoi de plus normal qu'infliger la vie?",
+        "event_ids": "4773d958-16dc-5d09-ac56-048ca6df63b8",
         "author_ids": [
-            "591be1b0-2c88-45fa-90f3-c00595a23338"
+            "38a340c0-3423-5b21-8f83-9db6313b7522"
         ],
-        "title": "Quoi de plus normal qu'infliger la vie? ",
-        "publicher": "Arbitraire",
+        "publisher": "Arbitraire",
         "publishing_year": 2016
     },
     {
-        "id": "a7c27edc-6210-478f-92c0-923909545863",
-        "event_ids": "bfd89c4f-4c44-462f-ac5b-4a466896b86c",
-        "author_ids": [
-            "10d7976b-70ae-45e4-ab01-84cc262709e1"
-        ],
+        "id": "1446edf4-27ba-5484-9124-b0655c28fa02",
         "title": "Big Kids",
-        "publicher": "Atrabile ",
+        "event_ids": "4773d958-16dc-5d09-ac56-048ca6df63b8",
+        "author_ids": [
+            "befc47ec-c72f-58e3-8519-a28173853443"
+        ],
+        "publisher": "Atrabile",
         "publishing_year": 2017
     },
     {
-        "id": "79fd88d0-0746-4fe1-88c7-40c324c4892e",
-        "event_ids": "ab70e3c1-1489-4f3f-91f9-9caa4a613d17",
-        "author_ids": [
-            "9f01f9af-a7bf-49d8-8483-27694f4f2316",
-            "bdf5ab50-c5a7-40ed-8a9b-615253814621"
-        ],
+        "id": "5864aefd-c512-5acd-bfd4-654a9577e01f",
         "title": "C'est un oiseau",
-        "publicher": "Urban Comics",
+        "event_ids": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
+        "author_ids": [
+            "c49f0cdc-1a16-51f1-aec9-b96dbb3ecfab",
+            "f32dd3ed-2196-56e7-bb1a-41d07e59b2f7"
+        ],
+        "publisher": "Urban Comics",
         "publishing_year": 2016
     },
     {
-        "id": "e11b43f6-94c8-48dc-b4ec-99e990bd5588",
-        "event_ids": "ab70e3c1-1489-4f3f-91f9-9caa4a613d17",
-        "author_ids": [
-            "9c9159df-8fa1-4d3f-b612-94f9e6fc8f2b",
-            "fa6ba8bd-c2d5-4529-a23c-c98a89c05ef5"
-        ],
+        "id": "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa",
         "title": "Paysage après la bataille",
-        "publicher": "Actes Sud BD",
+        "event_ids": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
+        "author_ids": [
+            "bf478f85-abfd-5914-acc2-eb7ae099bad6",
+            "b0f40b74-5f7d-5e03-9420-f2c5732abccf"
+        ],
+        "publisher": "Actes Sud BD",
         "publishing_year": 2016
     },
     {
-        "id": "d2f06936-01e9-4522-9324-6a43409fdbdc",
-        "event_ids": "ab70e3c1-1489-4f3f-91f9-9caa4a613d17",
-        "author_ids": [
-            "b371b940-7fda-4c6f-a73a-e160ac216734"
-        ],
+        "id": "a3a08375-70c5-5185-aa11-1970757201c6",
         "title": "Carnation",
-        "publicher": "Casterman ",
+        "event_ids": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
+        "author_ids": [
+            "c8a55c08-f0a1-57c9-a276-d164183edeb8"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2017
     },
     {
-        "id": "726e5233-d34f-486e-8bbf-fcc2be0a459e",
-        "event_ids": "ab70e3c1-1489-4f3f-91f9-9caa4a613d17",
+        "id": "506574d1-5d79-5ea8-a30b-2de7549df7f9",
+        "title": "Le Cauchemar argenté",
+        "event_ids": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
         "author_ids": [
-            "c4fad532-1f27-4fcb-b79c-5a0087ba188a"
+            "926f14bf-2ff3-58be-b4a8-bfc69cd4f9fb"
         ],
-        "title": "Le Cauchemar argenté ",
-        "publicher": "Mosquito",
+        "publisher": "Mosquito",
         "publishing_year": 2017
     },
     {
-        "id": "b85a54be-6111-4953-8676-bccd25db62c3",
-        "event_ids": "a4aed15d-d3d3-4f09-970b-dbd7e7ee7ebf",
-        "author_ids": [
-            "6dea086b-e0c0-42b7-bca7-4668be9f4a57"
-        ],
+        "id": "ff441b8a-e7d8-56d6-889a-43edd430e38d",
         "title": "Epiphania",
-        "publicher": "Casterman ",
+        "event_ids": "962b55da-7635-5b79-975c-44b8cd63497b",
+        "author_ids": [
+            "d98bf4ce-fabc-518d-9a7b-415fda62817e"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2017
     },
     {
-        "id": "4adafaec-5e72-4867-8c4d-4ff81ccf7afe",
-        "event_ids": "a4aed15d-d3d3-4f09-970b-dbd7e7ee7ebf",
-        "author_ids": [
-            "18170fd9-bf5e-45b1-a63b-53f9bdaa5169",
-            "9370b973-74e7-4883-ba8d-01fc793a1f67"
-        ],
+        "id": "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c",
         "title": "Never go home",
-        "publicher": "Glénat Comics",
+        "event_ids": "962b55da-7635-5b79-975c-44b8cd63497b",
+        "author_ids": [
+            "b52d45f1-1dd3-55f6-bb85-67fcb65cea0b",
+            "e0985a1b-4ff4-5b75-8ca7-3067999c69d5",
+            "91ea0576-e99f-559b-8107-43c5a962ce61"
+        ],
+        "publisher": "Glénat Comics",
         "publishing_year": 2017
     },
     {
-        "id": "fa250d04-5e87-414b-b4a6-a5b9c01d56f3",
-        "event_ids": "a4aed15d-d3d3-4f09-970b-dbd7e7ee7ebf",
-        "author_ids": [
-            "63656738-febc-49c6-8ed2-38bbafd77bd5"
-        ],
+        "id": "83e86609-2b52-52ab-b6f2-454f3f4f1588",
         "title": "Cendres",
-        "publicher": "Rackham",
+        "event_ids": "962b55da-7635-5b79-975c-44b8cd63497b",
+        "author_ids": [
+            "ef93712c-4767-58cf-bde5-b0d4e4447cc3"
+        ],
+        "publisher": "Rackham",
         "publishing_year": 2015
     },
     {
-        "id": "1177f6dc-bea1-4fe6-bfe5-42d3918c118f",
-        "event_ids": "a4aed15d-d3d3-4f09-970b-dbd7e7ee7ebf",
-        "author_ids": [
-            "dcaab106-09cc-4251-80dd-54b4e2746ea2"
-        ],
+        "id": "87fa356f-0b28-50f7-ad0f-7608ec05705e",
         "title": "Johnny Ryan touche le fond",
-        "publicher": "Misma ",
+        "event_ids": "962b55da-7635-5b79-975c-44b8cd63497b",
+        "author_ids": [
+            "b3477ea0-acf7-5378-921f-003ae0d32b4b"
+        ],
+        "publisher": "Misma",
         "publishing_year": 2017
     },
     {
-        "id": "556a73d0-f56c-49a2-b539-c6cec6d10d79",
-        "event_ids": "39bbe6f9-0b92-4a07-9e10-d033f6ba3374",
-        "author_ids": [
-            "e4f6685e-b734-4937-8447-ac154d645d17"
-        ],
+        "id": "a968de90-88cc-5e8a-b553-d7298afa9d74",
         "title": "La saga de Grimr",
-        "publicher": "Delcourt",
+        "event_ids": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
+        "author_ids": [
+            "035c9f3a-3ce1-5d0c-8ea8-44c33fa53465"
+        ],
+        "publisher": "Delcourt",
         "publishing_year": 2017
     },
     {
-        "id": "a9a6023a-eb50-4880-956f-2c556bf16d8d",
-        "event_ids": "39bbe6f9-0b92-4a07-9e10-d033f6ba3374",
-        "author_ids": [
-            "eacffa63-695a-4a05-9822-e6329ca489a2",
-            "483d6339-e533-4aeb-879b-fa214b09fbb9"
-        ],
+        "id": "9c926764-7669-5585-8219-0f0fb31f3498",
         "title": "Betty Boob",
-        "publicher": "Casterman",
+        "event_ids": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
+        "author_ids": [
+            "1cb65ab4-91ec-58a4-b86b-15848303925f",
+            "48f4c9b6-4f07-53ad-bd78-dfc79b024297"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2017
     },
     {
-        "id": "a4d978f9-f4a9-4f7b-a6aa-40268098da6f",
-        "event_ids": "39bbe6f9-0b92-4a07-9e10-d033f6ba3374",
+        "id": "920c0bc3-909f-517c-8194-eec53442da3a",
+        "title": "FUN",
+        "event_ids": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
         "author_ids": [
-            "e59eb4de-feeb-4a78-9cbe-d0e2461cc5f7",
-            "0ffeff96-670a-4c83-84cf-c1cee514de6b"
+            "e8be046b-4ab7-5bf1-b064-43221857647d",
+            "a12a8cd7-361a-5455-a8da-350b55b581b1"
         ],
-        "title": "FUN ",
-        "publicher": "Ici Même",
+        "publisher": "Ici Même",
         "publishing_year": 2015
     },
     {
-        "id": "e13cfc35-f148-40f6-9fbd-f709e6509ccf",
-        "event_ids": "39bbe6f9-0b92-4a07-9e10-d033f6ba3374",
-        "author_ids": [
-            "da440fd5-0c24-4359-a8d0-82cf12aaa1ff"
-        ],
+        "id": "765d65d1-e762-5976-bda4-410a49745faf",
         "title": "Anarcoma",
-        "publicher": "Misma",
+        "event_ids": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
+        "author_ids": [
+            "db9a12ff-381c-54a8-847d-511a1a18e953"
+        ],
+        "publisher": "Misma",
         "publishing_year": 2017
     },
     {
-        "id": "0c501de6-11ae-4547-bc27-1ae3594e4b2e",
-        "event_ids": "9ca2aa20-b0f1-4981-b385-fa11d4e6e89e",
+        "id": "b7cfe93d-0614-51ed-9121-129779a36201",
+        "title": "My Hero Academia",
+        "event_ids": "016d6e71-04fa-5718-bbc4-42c714e709a9",
         "author_ids": [
-            "8e0c8be0-f631-4fa2-85af-24762daefbd5"
+            "685f38e5-4320-5e62-9650-764382aed9a2"
         ],
-        "title": "My Hero Academia ",
-        "publicher": "Ki-oon ",
+        "publisher": "Ki-oon",
         "publishing_year": 2014
     },
     {
-        "id": "fc8d6453-e11f-46cd-9c3e-bcb2fa058153",
-        "event_ids": "9ca2aa20-b0f1-4981-b385-fa11d4e6e89e",
-        "author_ids": [
-            "9771d944-b2b7-4efc-a281-ef2a8f34da39"
-        ],
+        "id": "3c1a9222-8bc6-5dc9-9f80-8d86851d8aec",
         "title": "Dead Dead Demon's De dedede Destruction",
-        "publicher": "Kana",
+        "event_ids": "016d6e71-04fa-5718-bbc4-42c714e709a9",
+        "author_ids": [
+            "b4e9729a-f1c7-5994-b791-a4c365333f5b"
+        ],
+        "publisher": "Kana",
         "publishing_year": 2016
     },
     {
-        "id": "ee1d8db0-78a6-4451-813e-161ae7804c28",
-        "event_ids": "9ca2aa20-b0f1-4981-b385-fa11d4e6e89e",
-        "author_ids": [
-            "528ad92c-e8c3-430b-b704-335182979b14"
-        ],
+        "id": "18b43f2b-e8c9-553e-92e1-c13027830753",
         "title": "Une collision accidentelle sur le chemin de l’école peut elle donner lieu à un baiser ?",
-        "publicher": "IMHO",
+        "event_ids": "016d6e71-04fa-5718-bbc4-42c714e709a9",
+        "author_ids": [
+            "b4ba44f4-199f-5988-8479-e4422af71a49"
+        ],
+        "publisher": "IMHO",
         "publishing_year": 2013
     },
     {
-        "id": "ea9ede06-9721-4071-915c-a28701b2d7ff",
-        "event_ids": "9ca2aa20-b0f1-4981-b385-fa11d4e6e89e",
-        "author_ids": [
-            "12e6f712-5af7-436d-9774-446d47b97ef2"
-        ],
+        "id": "42bcdd54-8a27-5fbc-b679-565b1ae82f57",
         "title": "Kitaro le repoussant",
-        "publicher": "Cornélius",
+        "event_ids": "016d6e71-04fa-5718-bbc4-42c714e709a9",
+        "author_ids": [
+            "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1"
+        ],
+        "publisher": "Cornélius",
         "publishing_year": 2011
     },
     {
-        "id": "76b225a8-e09e-43ad-bc51-d0ede04dfae6",
-        "event_ids": "bcc10f56-a38a-483b-9682-1dd84422e7dd",
+        "id": "0ef59048-c3fb-5ea8-b650-75dafe1998cf",
+        "title": "The Wicked + The Divine",
+        "event_ids": "99984239-be4b-5527-ac6f-2efffaa923c7",
         "author_ids": [
-            "93c6e561-9f12-430f-acea-872859f620c1"
+            "081b0e0b-4da2-5f56-bf65-0bd4159a6420",
+            "0708b86c-85b5-5300-9cd9-a2bda4f0a606"
         ],
-        "title": "Eclat(s) d’âme",
-        "publicher": "Akata ",
-        "publishing_year": 2018
-    },
-    {
-        "id": "6593257f-7abd-40a0-b5cb-d5eda93cc72d",
-        "event_ids": "bcc10f56-a38a-483b-9682-1dd84422e7dd",
-        "author_ids": [
-            "c6dea800-c370-4feb-a0b6-101046c29311"
-        ],
-        "title": "Sweet Thoot",
-        "publicher": "Urban Comics",
-        "publishing_year": 2015
-    },
-    {
-        "id": "abb8cc20-6856-4ce9-8e74-4ab5f53459f7",
-        "event_ids": "bcc10f56-a38a-483b-9682-1dd84422e7dd",
-        "author_ids": [
-            "2b715592-d62b-4b6d-ad85-ba516f3eeed7"
-        ],
-        "title": "Héroïque fantaisie",
-        "publicher": "Les Requins Marteaux",
-        "publishing_year": 2018
-    },
-    {
-        "id": "caed7b26-7d28-4b8b-96fa-f5ba6b0708e3",
-        "event_ids": "bcc10f56-a38a-483b-9682-1dd84422e7dd",
-        "author_ids": [
-            "c5dc4890-c4d6-4386-9e7f-1f0ad16f790e",
-            "339892af-d49f-4b2f-9473-d18dc875e280"
-        ],
-        "title": "Belleville story",
-        "publicher": "Dargaud",
-        "publishing_year": 2013
-    },
-    {
-        "id": "a73dc820-47d6-4cc9-98a0-2016b5302ba5",
-        "event_ids": "ab534cf7-7c88-415b-8075-3cfa5a2fd5ab",
-        "author_ids": [
-            "1f7f55f9-df9a-420c-9cb8-9f7917d8711a",
-            "c3308e06-0f22-4678-bbdb-b7edd98e5061"
-        ],
-        "title": "The Wicked + The Divine ",
-        "publicher": "Glénat Comics",
+        "publisher": "Glénat Comics",
         "publishing_year": 2016
     },
     {
-        "id": "9b9ed6ff-a964-46b2-8d6c-33264a38ed89",
-        "event_ids": "ab534cf7-7c88-415b-8075-3cfa5a2fd5ab",
-        "author_ids": [
-            "a5e163bc-9ce2-4f63-bc14-b86b92f0533f"
-        ],
+        "id": "2e7c3a72-b7fc-5260-a119-e8a94af085e5",
         "title": "Arsène Schrauwen",
-        "publicher": "L'Association",
+        "event_ids": "99984239-be4b-5527-ac6f-2efffaa923c7",
+        "author_ids": [
+            "a730029a-5fc8-5f2d-83ee-d08a20957c8c"
+        ],
+        "publisher": "L'Association",
         "publishing_year": 2015
     },
     {
-        "id": "3b7728e5-da60-4eae-b985-68a7442c9ddb",
-        "event_ids": "ab534cf7-7c88-415b-8075-3cfa5a2fd5ab",
-        "author_ids": [
-            "8a721baf-f11e-44dd-90a9-10f62f4f9659"
-        ],
+        "id": "06ce7cf3-e238-5bb4-80c8-2000e8c536c7",
         "title": "Comtesse",
-        "publicher": "Les Requins Marteaux ",
+        "event_ids": "99984239-be4b-5527-ac6f-2efffaa923c7",
+        "author_ids": [
+            "df9128c9-cec9-53c8-8729-617042111988"
+        ],
+        "publisher": "Les Requins Marteaux",
         "publishing_year": 2010
     },
     {
-        "id": "13036c2c-766c-461c-8e52-585e09bf13b9",
-        "event_ids": "ab534cf7-7c88-415b-8075-3cfa5a2fd5ab",
+        "id": "37e7a325-c27f-5f10-a2d6-21765d017dd8",
+        "title": "Soft City",
+        "event_ids": "99984239-be4b-5527-ac6f-2efffaa923c7",
         "author_ids": [
-            "a331721d-5788-4098-a56d-f465cc68cbf1"
+            "be1bbed6-3d2a-5949-9210-263612f09011"
         ],
-        "title": "Soft City ",
-        "publicher": "Editions Inculte ",
+        "publisher": "Editions Inculte",
         "publishing_year": 2017
     },
     {
-        "id": "4c67106e-6394-4285-babe-1e271bc893aa",
-        "event_ids": "b5a648b9-0f77-491f-b411-87e4d6e25eca",
-        "author_ids": [
-            "ecc4c44d-2b5b-4d59-8ff4-af6409e3714b"
-        ],
+        "id": "4bc94c79-035d-558e-85ae-c08e1baee587",
         "title": "Alors que j'essayais d'être quelqu'un de bien",
-        "publicher": "Çà et là",
+        "event_ids": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
+        "author_ids": [
+            "ce395aec-bccb-5983-acf4-6da1f7dc05d3"
+        ],
+        "publisher": "Çà et là",
         "publishing_year": 2017
     },
     {
-        "id": "968f0bd4-1823-4917-a181-705dea7809e5",
-        "event_ids": "b5a648b9-0f77-491f-b411-87e4d6e25eca",
+        "id": "b8354485-7ce8-5d1c-a71b-bca27475f6c7",
+        "title": "Les derniers jours d'un immortel",
+        "event_ids": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
         "author_ids": [
-            "b3d99bd2-39b4-4a55-af68-480cd0384c64",
-            "b43daf0e-8150-4977-af17-67c91669a903"
+            "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87",
+            "4d8e72d3-3b12-548b-b11e-25da6ce04060"
         ],
-        "title": "Les derniers jours d'un immortel ",
-        "publicher": "Futuropolis ",
+        "publisher": "Futuropolis",
         "publishing_year": 2013
     },
     {
-        "id": "1b24a8b5-6f13-4811-af34-afcbeb1b4402",
-        "event_ids": "b5a648b9-0f77-491f-b411-87e4d6e25eca",
+        "id": "5be2ee50-4405-56c2-b59f-fbdc8438e45e",
+        "title": "Emma G. Wilford",
+        "event_ids": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
         "author_ids": [
-            "2902a7fb-128d-4439-aae4-4e6e8bf5deeb",
-            "ea1c1caa-5231-4250-a9f5-d70d36832573"
+            "095fe88f-e6bc-523c-a338-d927d8a46767",
+            "2a1ed255-67b2-58cd-b606-8c8dd612fa86"
         ],
-        "title": "Emma G. Wilford ",
-        "publicher": "Soleil",
+        "publisher": "Soleil",
         "publishing_year": 2017
     },
     {
-        "id": "57934b9d-e44e-4b5c-9f78-118f4987b51c",
-        "event_ids": "b5a648b9-0f77-491f-b411-87e4d6e25eca",
+        "id": "68213172-a9fb-5a77-9b90-2668f465ed84",
+        "title": "Black Dog",
+        "event_ids": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
         "author_ids": [
-            "e55be3fb-19af-4090-9988-228ece42b510"
+            "a296e419-1a8d-59a9-a3cd-d3ee5ba81fc9"
         ],
-        "title": "Black Dog ",
-        "publicher": "Glénat BD",
+        "publisher": "Glénat BD",
         "publishing_year": 2017
     },
     {
-        "id": "bb900a34-0714-4224-9330-aab2eef9360c",
-        "event_ids": "adec57ba-dd04-4935-8af4-e23b06e954cd",
-        "author_ids": [
-            "c47abea8-4d05-44f0-b19f-ff14eeed083f"
-        ],
+        "id": "d7561c34-87ed-5351-9dcd-cabcdda88eb9",
         "title": "Les aventures de Freddy Lombard, La comète de Carthage",
-        "publicher": "Les Humanoïdes Associés",
+        "event_ids": "10c922a7-8e8b-50ca-ae70-0e9dad0db06b",
+        "author_ids": [
+            "ae96a2ee-5217-5ca6-b422-07d3393e3b41"
+        ],
+        "publisher": "Les Humanoïdes Associés",
         "publishing_year": 2014
     },
     {
-        "id": "e0748971-c1c4-46d4-b527-1d40b9eedfad",
-        "event_ids": "adec57ba-dd04-4935-8af4-e23b06e954cd",
+        "id": "ef41686b-1031-581f-a454-351eef12c49b",
+        "title": "Ailefroide, altitude 3 954",
+        "event_ids": "10c922a7-8e8b-50ca-ae70-0e9dad0db06b",
         "author_ids": [
-            "b927e804-ecc3-4764-8990-9b61636c8ae6"
+            "289863c6-a5cf-5a8e-ac03-c19aae5a032f"
         ],
-        "title": "Ailefroide, altitude 3 954 ",
-        "publicher": "Casterman",
+        "publisher": "Casterman",
         "publishing_year": 2018
     },
     {
-        "id": "f4368a21-09d6-44bb-bea5-d6bc40cf3589",
-        "event_ids": "adec57ba-dd04-4935-8af4-e23b06e954cd",
+        "id": "9b7133ae-5594-5171-a72d-28be9d48ac38",
+        "title": "Décris-Ravage",
+        "event_ids": "10c922a7-8e8b-50ca-ae70-0e9dad0db06b",
         "author_ids": [
-            "908b3def-dd7f-4c09-9eb0-6465c502ebd4",
-            "7ed0eab4-d4fa-4206-a56a-5f0f595dd73c"
+            "28ec0041-d45e-5c0f-855e-36d755e3a8cc",
+            "8de0a770-0d52-5e17-97db-ef10383eb7e6"
         ],
-        "title": "Décris-Ravage ",
-        "publicher": "Atrabile",
+        "publisher": "Atrabile",
         "publishing_year": 2016
     },
     {
-        "id": "7962dc63-867c-403b-95b2-4437d199349f",
-        "event_ids": "adec57ba-dd04-4935-8af4-e23b06e954cd",
-        "author_ids": [
-            "9bfc12f6-8d6f-499a-9539-70afb5c603ab"
-        ],
-        "title": "",
-        "publicher": "/",
-    },
-    {
-        "id": "d07311c3-121f-443e-911c-ba10b847ac4d",
-        "event_ids": "764bc51a-e873-4fdf-8e9b-6ad4e2e6ade8",
-        "author_ids": [
-            "e1d9cf70-e117-41dc-aae7-75959c26fb55"
-        ],
+        "id": "a2edcba9-4069-57fa-860a-9b0f656b7911",
         "title": "Pilules Bleues",
-        "publicher": "Atrabile",
+        "event_ids": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
+        "author_ids": [
+            "2f4e23e5-9feb-53ab-beae-4555370c8f0d"
+        ],
+        "publisher": "Atrabile",
         "publishing_year": 2001
     },
     {
-        "id": "d487009b-3274-4f6b-88f3-93d79f63e57d",
-        "event_ids": "764bc51a-e873-4fdf-8e9b-6ad4e2e6ade8",
-        "author_ids": [
-            "ef1c0731-0a3d-4053-8749-78ed22335357"
-        ],
+        "id": "2ab19c62-8468-5b16-99a6-f5b97153b993",
         "title": "Jupiter's Legacy T1 et 2",
-        "publicher": "Panini Comics France",
+        "event_ids": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
+        "author_ids": [
+            "5867fc24-0362-5151-a5c0-a8846e846594",
+            "950aea29-52b1-5b38-916e-69bd7222eed0"
+        ],
+        "publisher": "Panini Comics France",
         "publishing_year": 2016
     },
     {
-        "id": "a4546cf5-74bd-428c-85c6-3ace1e626c2b",
-        "event_ids": "764bc51a-e873-4fdf-8e9b-6ad4e2e6ade8",
-        "author_ids": [
-            "59a5e6cd-a735-4776-99c4-d556d6660d5d"
-        ],
+        "id": "e0f10239-868a-5cde-b6dd-9c94fed8d7b5",
         "title": "Contes ordinaires d'une société résignée",
-        "publicher": "Fluide Glacial",
+        "event_ids": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
+        "author_ids": [
+            "226380ae-66d4-55d7-bf85-5d57c33b16c8"
+        ],
+        "publisher": "Fluide Glacial",
         "publishing_year": 2018
     },
     {
-        "id": "43399c57-14b4-49c4-9cb2-b8da1038fd0f",
-        "event_ids": "764bc51a-e873-4fdf-8e9b-6ad4e2e6ade8",
-        "author_ids": [
-            "00ef117f-f2b3-4f4d-9a40-947fe991eb30",
-            "3e6bc045-f92d-41f7-9456-a5ec22a1d85b"
-        ],
+        "id": "4752dff7-0fcb-5360-a636-374577c0b313",
         "title": "Chaque jour Dracula",
-        "publicher": "Delcourt",
+        "event_ids": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
+        "author_ids": [
+            "dccf230a-7e53-53fc-8c68-d313d60245f3",
+            "035010a7-3a33-5cdf-b3bc-237e47b1ac05"
+        ],
+        "publisher": "Delcourt",
         "publishing_year": 2018
     },
     {
-        "id": "7e57e358-7a6e-458d-9e0c-279316ee73c9",
-        "event_ids": "f3859652-92e0-4e99-a7d7-e260178e4f37",
-        "author_ids": [
-            "6037c1f8-1376-469f-99de-66a21b570550",
-            "bf898eb2-8127-4c2f-b9ba-b96562abc7ed"
-        ],
+        "id": "0e432312-5b7e-50f8-afba-7869c1256706",
         "title": "Y le dernier homme",
-        "publicher": "Urban Comics",
+        "event_ids": "2fc305c6-f0c7-5462-9a45-89241614c418",
+        "author_ids": [
+            "ed1a4f6d-3f61-5ebf-95d6-dffa1b57b17e",
+            "04714650-136f-580a-ba12-2816571f86cf"
+        ],
+        "publisher": "Urban Comics",
         "publishing_year": 2012
     },
     {
-        "id": "9f7f05c7-03e4-4d37-bb11-cb59bfe74378",
-        "event_ids": "f3859652-92e0-4e99-a7d7-e260178e4f37",
+        "id": "8f885326-1105-5c04-9cb9-1df0a0d79080",
+        "title": "Alcoolique",
+        "event_ids": "2fc305c6-f0c7-5462-9a45-89241614c418",
         "author_ids": [
-            "0e54e2dd-2167-4769-b889-a5bd79f5d0a0",
-            "92ec30c1-be30-4788-9004-99ed8d116153"
+            "eeab9dd3-5b67-53d1-8012-0b2cc71f0442",
+            "44528b19-7eac-5aab-8e73-bbc8f7c11c8b"
         ],
-        "title": "Alcoolique ",
-        "publicher": "Monsieur Toussaint Louverture ",
+        "publisher": "Monsieur Toussaint Louverture",
         "publishing_year": 2015
     },
     {
-        "id": "5e20c93a-c966-4f0a-97ca-d5b1465b7509",
-        "event_ids": "f3859652-92e0-4e99-a7d7-e260178e4f37",
-        "author_ids": [
-            "0e51d467-2f1e-45f2-9efd-b221dae75989"
-        ],
+        "id": "3d3f33fa-274c-5750-bbe8-b8a37f599031",
         "title": "Bouche du diable",
-        "publicher": "Casterman ",
+        "event_ids": "2fc305c6-f0c7-5462-9a45-89241614c418",
+        "author_ids": [
+            "1b65525f-ca97-5987-ac69-2799896f5fbf",
+            "012cf8c2-f922-5759-a7c4-244fe42ff33d"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 1990
     },
     {
-        "id": "d4d0c874-7a59-4292-81d6-bb9cca65e012",
-        "event_ids": "f3859652-92e0-4e99-a7d7-e260178e4f37",
+        "id": "967b3863-f429-58b5-804c-12a7b22632fd",
+        "title": "Mémoires d’un frêne",
+        "event_ids": "2fc305c6-f0c7-5462-9a45-89241614c418",
         "author_ids": [
-            "fd327d6e-965c-4141-9b8a-53916d8130c6"
+            "e0661633-2b9b-5f5f-8b1c-9dc7473c5037"
         ],
-        "title": "Mémoires d’un frêne ",
-        "publicher": "Rue de l’échiquier ",
+        "publisher": "Rue de l’échiquier",
         "publishing_year": 2018
     },
     {
-        "id": "3d74136e-402f-46bd-a10b-c2001960d7e0",
-        "event_ids": "d4b537f7-e09b-4bc1-a86d-c44e843772e7",
-        "author_ids": [
-            "9c85f219-dacc-4ed0-b6e5-2ec8b24cc0a9",
-            "3dbe47a8-ac12-4627-8b52-1b5e99f4ccb7"
-        ],
+        "id": "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19",
         "title": "Deadly class",
-        "publicher": "Urban Comics",
+        "event_ids": "07171107-88be-5a83-be43-0205a9c53237",
+        "author_ids": [
+            "8f8828b6-eed2-5ab6-8658-c165aa638119",
+            "66b3e971-8a48-589a-bb44-75fb4755cf25"
+        ],
+        "publisher": "Urban Comics",
         "publishing_year": 2015
     },
     {
-        "id": "9267d4a4-aa59-4e49-b8a9-bd93c656d440",
-        "event_ids": "d4b537f7-e09b-4bc1-a86d-c44e843772e7",
-        "author_ids": [
-            "ffdd403a-53eb-461f-87f8-8b0b7e5fab57"
-        ],
+        "id": "7cb93591-7dde-59e6-9afd-dc565a390435",
         "title": "Moi ce que j'aime c'est les monstres",
-        "publicher": "Monsieur Toussaint Louverture",
+        "event_ids": "07171107-88be-5a83-be43-0205a9c53237",
+        "author_ids": [
+            "a4c619ad-7880-5c8f-aeef-ac6c22630f6d"
+        ],
+        "publisher": "Monsieur Toussaint Louverture",
         "publishing_year": 2018
     },
     {
-        "id": "947c1604-40bf-44c8-a4b2-fedb8ccbb8a7",
-        "event_ids": "d4b537f7-e09b-4bc1-a86d-c44e843772e7",
-        "author_ids": [
-            "fd83cde9-eb47-46c5-b349-0b2ff16006ee"
-        ],
+        "id": "d0acc909-4425-5267-a65a-41d9ca5be16b",
         "title": "Mimikaki",
-        "publicher": "Le Lézard Noir",
+        "event_ids": "07171107-88be-5a83-be43-0205a9c53237",
+        "author_ids": [
+            "f405fdc1-4877-50a2-b054-8198ebc80a55"
+        ],
+        "publisher": "Le Lézard Noir",
         "publishing_year": 2018
     },
     {
-        "id": "0c295e7c-43b0-4358-af34-a7a59d7ee528",
-        "event_ids": "d4b537f7-e09b-4bc1-a86d-c44e843772e7",
-        "author_ids": [
-            "07ce9f2c-4087-4b1c-95ea-c93416a400b5"
-        ],
+        "id": "c5f4a66e-a9f9-530f-8694-d73e0c2f8e4c",
         "title": "Beverly",
-        "publicher": "Presque Lune",
+        "event_ids": "07171107-88be-5a83-be43-0205a9c53237",
+        "author_ids": [
+            "ef2a5874-3ec2-5b7d-b363-c8c94498ec1a"
+        ],
+        "publisher": "Presque Lune",
         "publishing_year": 2017
     },
     {
-        "id": "d672e2c0-86ae-4866-bc03-22df7758ba0f",
-        "event_ids": "e67b3cce-70cf-45b7-92fc-ddd577fd8b76",
-        "author_ids": [
-            "8b6b2d64-1bf2-4c38-a0a2-f560c948a753"
-        ],
+        "id": "395b6a6b-7acb-5a84-8ddf-e855409977b8",
         "title": "Seconds",
-        "publicher": "Dargaud",
+        "event_ids": "437bf521-fecc-5100-9170-e59fe3b5a117",
+        "author_ids": [
+            "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3"
+        ],
+        "publisher": "Dargaud",
         "publishing_year": 2014
     },
     {
-        "id": "6d970069-2daf-415d-8fce-e7c580198c08",
-        "event_ids": "e67b3cce-70cf-45b7-92fc-ddd577fd8b76",
+        "id": "0fe6b6ee-7baa-56dc-ab21-40f63a87421b",
+        "title": "L'ère des cristaux",
+        "event_ids": "437bf521-fecc-5100-9170-e59fe3b5a117",
         "author_ids": [
-            "a7716069-d9e0-4e78-b52c-43b8e3a35aad"
+            "9e03747d-9a8a-5a37-bef0-6c60c93c5600"
         ],
-        "title": "L'ère des cristaux ",
-        "publicher": "Glénat Manga",
+        "publisher": "Glénat Manga",
         "publishing_year": 2016
     },
     {
-        "id": "c7e2b439-1d33-41f5-9b4a-bac4db9e906d",
-        "event_ids": "e67b3cce-70cf-45b7-92fc-ddd577fd8b76",
-        "author_ids": [
-            "1a50247a-d858-4297-b975-39e955a6d5ee"
-        ],
+        "id": "27aa754b-ec29-5d31-aac3-143f9055fdb5",
         "title": "Boris l'enfant patate",
-        "publicher": "Misma",
+        "event_ids": "437bf521-fecc-5100-9170-e59fe3b5a117",
+        "author_ids": [
+            "c53c562f-90cf-52c7-852e-ba4fa5778897"
+        ],
+        "publisher": "Misma",
         "publishing_year": 2018
     },
     {
-        "id": "01784d90-3013-4d2a-b196-02c5ca9d89e5",
-        "event_ids": "e67b3cce-70cf-45b7-92fc-ddd577fd8b76",
+        "id": "21bdadd2-bb70-57c4-9fac-bb1eef30acc0",
+        "title": "Le Grand mort",
+        "event_ids": "437bf521-fecc-5100-9170-e59fe3b5a117",
         "author_ids": [
-            "47cfca4a-823f-4243-99a7-252d489e7c1e",
-            "7e71ca9e-5ced-483f-8a78-01a5833af710"
+            "a353a8e9-4956-50a4-b70d-e0b753fcf522",
+            "f7afb30f-e1e2-556c-9c9a-43825f33af8f",
+            "7118c1e0-6a54-5867-b9b0-151ba357e1c8"
         ],
-        "title": "Le Grand mort ",
-        "publicher": "Vents d'Ouest",
+        "publisher": "Vents d'Ouest",
         "publishing_year": 2007
     },
     {
-        "id": "df45700b-9447-4114-9378-501ada45121a",
-        "event_ids": "11a2fae9-fd48-48d9-8be6-78794f777370",
-        "author_ids": [
-            "ad3697c8-e391-42e8-a7c8-acb406db1a31"
-        ],
+        "id": "a487bacd-3e60-5db3-9c0f-e8167d21ca9d",
         "title": "Les filles de Salem",
-        "publicher": "Dargaud",
+        "event_ids": "19afc03b-0b2f-5102-946c-c27a7158332e",
+        "author_ids": [
+            "34342b16-3119-579b-9c61-ef99940a8224"
+        ],
+        "publisher": "Dargaud",
         "publishing_year": 2018
     },
     {
-        "id": "1b31f45f-e604-4169-a18a-cc5d2fed12f1",
-        "event_ids": "11a2fae9-fd48-48d9-8be6-78794f777370",
-        "author_ids": [
-            "312c861d-2a64-4d12-9e8f-821ea6397c36"
-        ],
+        "id": "7a876a7a-5b64-5cde-9870-ecb1aa6d034c",
         "title": "Jojo bizarre adventure - Diamond is unbreakable",
-        "publicher": "Delcourt/Tonkam",
+        "event_ids": "19afc03b-0b2f-5102-946c-c27a7158332e",
+        "author_ids": [
+            "03cdc5ac-b075-5ab7-9fc8-3d64cdf0096d"
+        ],
+        "publisher": "Delcourt/Tonkam",
         "publishing_year": 2015
     },
     {
-        "id": "38ef5543-c51d-4e0e-85c5-f9602f08df8e",
-        "event_ids": "11a2fae9-fd48-48d9-8be6-78794f777370",
-        "author_ids": [
-            "b5e9e9bb-290e-46f1-9e77-2a0b80d168ac"
-        ],
+        "id": "6a5e1b8a-0898-5cbd-b53c-ffcb5fb7bb59",
         "title": "Dernier test avant l'apocalypse",
-        "publicher": "Delcourt/Tonkam",
+        "event_ids": "19afc03b-0b2f-5102-946c-c27a7158332e",
+        "author_ids": [
+            "a3c116a8-7515-5b5a-808f-6912b470b716"
+        ],
+        "publisher": "Delcourt/Tonkam",
         "publishing_year": 2013
     },
     {
-        "id": "408aab5a-c1a0-4ddc-abea-dc65d96e4991",
-        "event_ids": "11a2fae9-fd48-48d9-8be6-78794f777370",
-        "author_ids": [
-            "47f54a00-29cd-4254-a69f-ab9eaaf411a0"
-        ],
+        "id": "8347cdbe-e853-583d-a6f8-3288b8bb55a5",
         "title": "La mère et la mort",
-        "publicher": "Le Tripode",
+        "event_ids": "19afc03b-0b2f-5102-946c-c27a7158332e",
+        "author_ids": [
+            "84220ea6-51be-54b2-8524-36bc6a1ad7c5"
+        ],
+        "publisher": "Le Tripode",
         "publishing_year": 2018
     },
     {
-        "id": "26652315-38d4-4a35-b281-361ccb094001",
-        "event_ids": "65692249-d18c-453d-b1e3-07b8b78b0300",
-        "author_ids": [
-            "befd2db3-2045-41eb-a2b0-23497c633249"
-        ],
+        "id": "c77e8572-a4d7-5a3e-b772-31dd942e9d39",
         "title": "Journal d’un ingénu et L’espoir malgré tout",
-        "publicher": "Dupuis",
+        "event_ids": "75bd8d09-d669-50a0-a00c-48987b2b9472",
+        "author_ids": [
+            "2d4623d8-e667-5373-b0e8-0933cc33d64e"
+        ],
+        "publisher": "Dupuis",
         "publishing_year": 2018
     },
     {
-        "id": "196f3a61-3d18-4691-b8da-feb5595ca3aa",
-        "event_ids": "65692249-d18c-453d-b1e3-07b8b78b0300",
-        "author_ids": [
-            "2f26e3f0-f74c-4c93-989b-ec4caf1b4ffd",
-            "f966ed4c-33e7-461b-98fb-1213203489c7"
-        ],
+        "id": "4bb23804-0bcf-59c4-b051-ebf483efde5f",
         "title": "Gideon falls",
-        "publicher": "Urban Comics",
+        "event_ids": "75bd8d09-d669-50a0-a00c-48987b2b9472",
+        "author_ids": [
+            "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0",
+            "b4be3d64-8025-58ce-8c65-532412a7a00a"
+        ],
+        "publisher": "Urban Comics",
         "publishing_year": 2018
     },
     {
-        "id": "631bb284-70fd-4da7-91e2-90e614e67c8c",
-        "event_ids": "65692249-d18c-453d-b1e3-07b8b78b0300",
-        "author_ids": [
-            "314f0a06-25e3-4852-8067-ade7d0a98dab"
-        ],
+        "id": "7e408fbd-928f-56ab-b646-d972f5e24698",
         "title": "Horreur cosmique",
-        "publicher": "Rackham",
+        "event_ids": "75bd8d09-d669-50a0-a00c-48987b2b9472",
+        "author_ids": [
+            "cc2cbfb1-a137-5c56-8a23-2671597ab919",
+            "0e19ff22-af4d-56a0-abcc-86cb2a09490d"
+        ],
+        "publisher": "Rackham",
         "publishing_year": 2015
     },
     {
-        "id": "79983150-030a-4ce6-bd49-e6405381a023",
-        "event_ids": "65692249-d18c-453d-b1e3-07b8b78b0300",
-        "author_ids": [
-            "23ab0adb-98a0-449e-9b5a-297eae0f28c2"
-        ],
+        "id": "21801dc4-dd74-5bc0-881d-89f0328bcfcf",
         "title": "L’art de la vulve une obscénité ?",
-        "publicher": "Presque Lune",
+        "event_ids": "75bd8d09-d669-50a0-a00c-48987b2b9472",
+        "author_ids": [
+            "1c483a7c-e6bb-582a-8792-0cc4e649f4d0"
+        ],
+        "publisher": "Presque Lune",
         "publishing_year": 2018
     },
     {
-        "id": "73d66c2d-961d-44fd-8658-ac2aedc8f06f",
-        "event_ids": "d1c78cc4-db48-4eba-81ae-bfcaefa46064",
+        "id": "b4e6e54b-c87a-5158-b824-bba62706d262",
+        "title": "Eclat(s) d’âme",
+        "event_ids": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
         "author_ids": [
-            "021a09f2-0ce8-43bb-8306-080696b0110f"
+            "458151c8-dc97-5fef-8d61-bef98aaace70"
         ],
+        "publisher": "Akata",
+        "publishing_year": 2018
+    },
+    {
+        "id": "344c953c-2f98-510e-9642-b193cc079eeb",
+        "title": "Sweet Thoot",
+        "event_ids": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
+        "author_ids": [
+            "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": 2015
+    },
+    {
+        "id": "b543747f-1269-5f2c-98d3-13188b27d9b0",
+        "title": "Héroïque fantaisie",
+        "event_ids": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
+        "author_ids": [
+            "28cc0b40-521b-52be-b4d4-a956755eb971"
+        ],
+        "publisher": "Les Requins Marteaux",
+        "publishing_year": 2018
+    },
+    {
+        "id": "795ed7d3-240b-5db3-8a23-41fe5531f853",
+        "title": "Belleville story",
+        "event_ids": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
+        "author_ids": [
+            "27924509-cf04-5879-b755-b018b8bb79a4",
+            "fd980b15-243b-5a7e-98a4-46024c3809b9"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": 2013
+    },
+    {
+        "id": "0a1fa77f-b0ff-55a3-ba65-d274ab0605d3",
         "title": "La terre des fils",
-        "publicher": "Futuropolis",
+        "event_ids": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
+        "author_ids": [
+            "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5"
+        ],
+        "publisher": "Futuropolis",
+        "publishing_year": 2017
     },
     {
-        "id": "c50a4895-751a-46ed-80f2-cea9bfd0d18b",
-        "event_ids": "d1c78cc4-db48-4eba-81ae-bfcaefa46064",
-        "author_ids": [
-            "04d9e0c5-3b35-41b4-b8be-8c10ad6bc5f1"
-        ],
+        "id": "91796292-f679-5dc3-8e16-f53e3cd37480",
         "title": "Comme un frisson",
-        "publicher": "Vide Cocagne",
+        "event_ids": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
+        "author_ids": [
+            "0334ed05-27b2-5dea-b180-3ab2692d85e7"
+        ],
+        "publisher": "Vide Cocagne",
+        "publishing_year": 2018
     },
     {
-        "id": "252cc3f7-1bba-42ba-8e94-8074459b747b",
-        "event_ids": "d1c78cc4-db48-4eba-81ae-bfcaefa46064",
-        "author_ids": [
-            "03a28ac0-5bef-461d-a766-8d13fa54cb33"
-        ],
+        "id": "5c0d585f-9e55-51fb-bb16-f98389cb7ce4",
         "title": "Patience",
-        "publicher": "Cornélius",
-    },
-    {
-        "id": "ec6c67d5-9c05-4351-a587-c0d41aa4c6ee",
-        "event_ids": "d1c78cc4-db48-4eba-81ae-bfcaefa46064",
+        "event_ids": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
         "author_ids": [
-            "edb44c6d-62cc-46de-8467-da1fdb9247e0",
-            "38fab6de-e596-4316-89c1-c2cb0701867d"
+            "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8"
         ],
-        "title": "les nuits d'aksehir",
-        "publicher": "",
-    },
-    {
-        "id": "043cff6c-cb74-43e6-971c-e6110d9e2f27",
-        "event_ids": "bec4d70f-58e9-411f-ad59-27c711fa50c5",
-        "author_ids": [
-            "260acd8f-d351-41e4-a97a-3ddf5cbfc5e9",
-            "4393af7e-96bb-4d99-8495-22883a543227"
-        ],
-        "title": "La balade nationale",
-        "publicher": "La Découverte",
-    },
-    {
-        "id": "7835715e-20e5-443d-9724-624d40d985a4",
-        "event_ids": "bec4d70f-58e9-411f-ad59-27c711fa50c5",
-        "author_ids": [
-            "91335036-2186-4049-a4f1-f93d135067b6"
-        ],
-        "title": "Beastars",
-        "publicher": "Ki-oon",
-    },
-    {
-        "id": "e6112d7d-6e1a-458f-8799-f65bd5c22873",
-        "event_ids": "bec4d70f-58e9-411f-ad59-27c711fa50c5",
-        "author_ids": [
-            "a886bbbe-2392-459b-a313-237d51b8edb2"
-        ],
-        "title": "Dans un rayon de soleil",
-        "publicher": "Gallimard BD",
-    },
-    {
-        "id": "fa6004ee-f525-41da-bc6c-36a7a5622a89",
-        "event_ids": "bec4d70f-58e9-411f-ad59-27c711fa50c5",
-        "author_ids": [
-            "0430b663-53f1-4bf4-9e22-935f4fe80270"
-        ],
-        "title": "Macadam Byzance",
-        "publicher": "Fluide Glacial",
-    },
-    {
-        "id": "60078e92-6be3-40b8-b32f-d4bc75546c1a",
-        "event_ids": "b3482fa3-0a65-4302-baa5-97bacce97ec8",
-        "author_ids": [
-            "d6eaf1b2-8a24-47be-9865-3f192421aa99",
-            "d6eaf1b2-8a24-18be-9865-3f192421aa99"
-        ],
-        "title": "Le dernier Atlas",
-        "publicher": "Dupuis",
-    },
-    {
-        "id": "e7304430-58b2-4838-847c-4943209a3bd5",
-        "event_ids": "b3482fa3-0a65-4302-baa5-97bacce97ec8",
-        "author_ids": [
-            "bdc8dd70-b0a5-4c77-9e84-69e2a7c2aa00"
-        ],
-        "title": "Extases",
-        "publicher": "Casterman BD",
-    },
-    {
-        "id": "2643f241-2486-4df0-949c-6fe63054ba4c",
-        "event_ids": "b3482fa3-0a65-4302-baa5-97bacce97ec8",
-        "author_ids": [
-            "b90821de-4ae2-4d5e-8545-33b2ea61e699"
-        ],
-        "title": "Extremity",
-        "publicher": "Delcourt Comics",
-    },
-    {
-        "id": "2be2b625-fd04-48cb-8e78-57beeccc99fe",
-        "event_ids": "b3482fa3-0a65-4302-baa5-97bacce97ec8",
-        "author_ids": [
-            "119fad93-3a94-4039-a57a-215639cd17f4"
-        ],
-        "title": "MW",
-        "publicher": "Delcourt/Tonkam",
-    },
-    {
-        "id": "329e3a2e-851b-4155-b797-56ab386f9828",
-        "event_ids": "36f78162-f50f-488e-bfc9-b09bb8ac5674",
-        "author_ids": [
-            "9376f8e3-9a2b-40be-87f2-99e568431e69"
-        ],
-        "title": "My home hero",
-        "publicher": "Kurokawa",
-    },
-    {
-        "id": "25b3ba4d-df17-478a-baf1-678a113ab661",
-        "event_ids": "36f78162-f50f-488e-bfc9-b09bb8ac5674",
-        "author_ids": [
-            "fd152aa0-5085-40de-844d-2d3f571dd7cd"
-        ],
-        "title": "Planètes",
-        "publicher": "Panini Collections",
-    },
-    {
-        "id": "6b3b470f-1589-4321-91f1-1c7810ebf6b0",
-        "event_ids": "36f78162-f50f-488e-bfc9-b09bb8ac5674",
-        "author_ids": [
-            "d0b45263-4c88-475b-898c-4efebec6b14c"
-        ],
-        "title": "In these words",
-        "publicher": "Manga Taifu",
-    },
-    {
-        "id": "6570b8db-360b-4681-bda9-ea63b9ade0e3",
-        "event_ids": "36f78162-f50f-488e-bfc9-b09bb8ac5674",
-        "author_ids": [
-            "771c93d9-fccc-4424-92e4-0204e60df05e"
-        ],
-        "title": "Bride stories",
-        "publicher": "Ki-oon ",
-    },
-    {
-        "id": "33e079a6-8300-41e0-89c9-9138fc721fa3",
-        "event_ids": "93f6571c-9c24-47e1-acf5-37c903acb458",
-        "author_ids": [
-            "14a44f46-8fd7-43db-b51e-57e4570659f3"
-        ],
-        "title": "NESKA",
-        "publicher": "Delcourt",
-    },
-    {
-        "id": "0a763474-59be-4d4d-842b-e8a87e3b5c2a",
-        "event_ids": "93f6571c-9c24-47e1-acf5-37c903acb458",
-        "author_ids": [
-            "a76fc636-222c-4133-951d-aa66299548be"
-        ],
-        "title": "TED DRÔLE DE COCO",
-        "publicher": "Atrabile",
-    },
-    {
-        "id": "2d464d90-09e0-4a74-a6cb-11aa4707840d",
-        "event_ids": "93f6571c-9c24-47e1-acf5-37c903acb458",
-        "author_ids": [
-            "08472fc0-6404-4796-8a18-6faf83baa869"
-        ],
-        "title": "BEZIMENA",
-        "publicher": "Ici Même",
-    },
-    {
-        "id": "dd65af09-b8d4-4f1e-8c0e-94a6ff2dd456",
-        "event_ids": "93f6571c-9c24-47e1-acf5-37c903acb458",
-        "author_ids": [
-            "f66fc529-37ad-482a-a741-69b5f19df21a",
-            "325dd3e8-18ce-4659-a45e-0f2a13ebf632"
-        ],
-        "title": "SHERIFF OF BABYLON",
-        "publicher": "Urban Comics",
-    },
-    {
-        "id": "9a219ea3-7c4d-4c65-8282-bb468fd39ff8",
-        "event_ids": "ab1b5b1b-8e69-4189-895b-6d8a48ef7301",
-        "author_ids": [
-            "b98a189e-1c4c-4660-8f9d-1a4d4e857674"
-        ],
-        "title": "Maléfiques",
-        "publicher": "L'Association",
-    },
-    {
-        "id": "da436e28-681d-4b0b-a7cc-5c41be6e5dfd",
-        "event_ids": "ab1b5b1b-8e69-4189-895b-6d8a48ef7301",
-        "author_ids": [
-            "c1ccb6c0-d280-414c-b4b2-47ec0c0895c8"
-        ],
-        "title": "Gokinjo",
-        "publicher": "Delcourt",
-    },
-    {
-        "id": "7369cf71-bc79-4782-898d-89aae5bd0d0f",
-        "event_ids": "ab1b5b1b-8e69-4189-895b-6d8a48ef7301",
-        "author_ids": [
-            "9ea9be5a-e746-430e-877b-22b0ea9ddc18",
-            "8a68ea0e-097e-4042-aec6-1ab82311012e"
-        ],
-        "title": "Le trône d’argile",
-        "publicher": "Delcourt",
-    },
-    {
-        "id": "d5cb5a85-29fb-41ca-a1f8-a91897dec5f9",
-        "event_ids": "ab1b5b1b-8e69-4189-895b-6d8a48ef7301",
-        "author_ids": [
-            "1da78ed3-af1c-4dac-bb00-84d635aa0620"
-        ],
-        "title": "Jean Doux et le mystère de la disquette molle",
-        "publicher": "Delcourt",
-    },
-    {
-        "id": "0a0b8618-67eb-4543-b87c-6fabc445c15e",
-        "event_ids": "4923261b-9025-4b34-ac73-2524e1cdb9e2",
-        "author_ids": [
-            "8d54f27c-f777-45f7-a990-149c419afe48"
-        ],
-        "title": "Passions",
-        "publicher": "Fluide Glacial",
-    },
-    {
-        "id": "6089b7a5-d1d8-461b-879d-f349e16f2a67",
-        "event_ids": "4923261b-9025-4b34-ac73-2524e1cdb9e2",
-        "author_ids": [
-            "4575c4f7-9063-49e5-bd57-fe93b757ff1f"
-        ],
-        "title": "Saison des Roses",
-        "publicher": "FLBLB",
-    },
-    {
-        "id": "c3580b81-adb7-4cbd-b637-250ecdf25da9",
-        "event_ids": "4923261b-9025-4b34-ac73-2524e1cdb9e2",
-        "author_ids": [
-            "f66fc529-37ad-482a-a741-69b5f19df21a",
-            "325dd3e8-18ce-4659-a45e-0f2a13ebf632"
-        ],
-        "title": "Mister Miracle",
-        "publicher": "Urban Comics",
-    },
-    {
-        "id": "b8485509-5331-4ba0-8312-e9d89ccb1a36",
-        "event_ids": "4923261b-9025-4b34-ac73-2524e1cdb9e2",
-        "author_ids": [
-            "2b34252e-2158-41e9-9fd1-55aa415094e6"
-        ],
-        "title": "Opus",
-        "publicher": "IMHO",
-    },
-    {
-        "id": "57bb05d5-adf6-4342-ab0a-43bab1d59c22",
-        "event_ids": "56e93d7e-3798-4701-9ae9-0476bf42e699",
-        "author_ids": [
-            "fd0db1db-a64f-4940-8ed6-2dca33cd5fa9",
-            "8ed669a5-64b8-495f-b5f2-973d3de3d04b"
-        ],
-        "title": "The Unwritten ",
-        "publicher": "Urban Comics",
-    },
-    {
-        "id": "d88295d6-0bca-428a-851a-80987a29d2a0",
-        "event_ids": "56e93d7e-3798-4701-9ae9-0476bf42e699",
-        "author_ids": [
-            "ad9a6d8f-b708-49e6-8822-5f69e9746480",
-            "dd0de719-19e5-4e5a-8146-8622b807c491"
-        ],
-        "title": "Magic order",
-        "publicher": "Panini Comics France",
-    },
-    {
-        "id": "1d42cc42-1077-49d3-8b75-db877029bb42",
-        "event_ids": "56e93d7e-3798-4701-9ae9-0476bf42e699",
-        "author_ids": [
-            "0a13257e-eff6-49f5-a119-9d46b9e2baf5",
-            "28769132-23c1-4782-bbad-791e3b931c27"
-        ],
-        "title": "Black panther ennemi d'état",
-        "publicher": "Panini Comics France",
-    },
-    {
-        "id": "ff05196e-e410-4a4a-aac4-e772ce00d110",
-        "event_ids": "56e93d7e-3798-4701-9ae9-0476bf42e699",
-        "author_ids": [
-            "bb2bab6c-1bbc-42dd-b42d-487e35ed6cee",
-            "b3ddd181-cce0-47d4-ad65-1d86f16ca7b5"
-        ],
-        "title": "Luke Cage",
-        "publicher": "Panini Comics France",
-    },
-    {
-        "id": "d1471f01-3748-42cc-ba08-d0ede9019b3a",
-        "event_ids": "9393d772-ee89-40e5-8cd9-e9bf1bc5ca7a",
-        "author_ids": [
-            "a6b7da42-eb45-489f-b16c-d9cca380b410"
-        ],
-        "title": "Préférence système",
-        "publicher": "Denoël Graphic",
-    },
-    {
-        "id": "c0e65c01-b0db-47e2-81d6-77afe1d6533c",
-        "event_ids": "9393d772-ee89-40e5-8cd9-e9bf1bc5ca7a",
-        "author_ids": [
-            "6f2e0b66-96f6-4b52-b457-f7b99b38a85a"
-        ],
-        "title": "In Waves",
-        "publicher": "Casterman",
-    },
-    {
-        "id": "c158ae8d-8bf0-40fe-9e74-4a64e049e7be",
-        "event_ids": "9393d772-ee89-40e5-8cd9-e9bf1bc5ca7a",
-        "author_ids": [
-            "2e4a7330-60fa-496c-bdf9-75c366863f92",
-            "24b2d539-cd9c-421b-95ee-8399709da8bc"
-        ],
-        "title": "Bergères guerrières",
-        "publicher": "Glenat",
-    },
-    {
-        "id": "d904b85f-2832-46a5-98ba-2eb9c4301655",
-        "event_ids": "9393d772-ee89-40e5-8cd9-e9bf1bc5ca7a",
-        "author_ids": [
-            "0bee8e5c-f59e-4ad0-a1b3-c29c861f6db3"
-        ],
-        "title": "Bakemonogatari",
-        "publicher": "Pika",
-    },
-    {
-        "id": "737423f3-8af9-41a0-ae84-cdae38fd365b",
-        "event_ids": "284b2104-e062-4f7e-a13a-670b27d4c678",
-        "author_ids": [
-            "4575c4f7-9063-49e5-bd57-fe93b757ff1f"
-        ],
-        "title": "Saison des roses",
-        "publicher": "FLBLB",
-    },
-    {
-        "id": "83446e84-f4d0-47c9-a6d3-b9b6214ab07f",
-        "event_ids": "284b2104-e062-4f7e-a13a-670b27d4c678",
-        "author_ids": [
-            "cf809222-3023-4b6b-afcc-c9bb0ca3e444"
-        ],
-        "title": "Nako",
-        "publicher": "Michel Lafon",
-    },
-    {
-        "id": "16b282a3-fe42-4ab2-96a6-f3d58df16dc0",
-        "event_ids": "284b2104-e062-4f7e-a13a-670b27d4c678",
-        "author_ids": [
-            "53877398-42b7-432b-910c-28d5820308d0"
-        ],
-        "title": "Raowl",
-        "publicher": "dupuis",
-    },
-    {
-        "id": "14ffec37-5d23-4c76-8985-df12cfa9a51b",
-        "event_ids": "284b2104-e062-4f7e-a13a-670b27d4c678",
-        "author_ids": [
-            "7c2ab163-71e6-443c-89c1-269635260d0c"
-        ],
-        "title": "Peau de mille bêtes",
-        "publicher": "Delcourt",
-    },
-    {
-        "id": "c3cbd26b-6184-4fa6-9d42-ca3f9ce7dbc8",
-        "event_ids": "4de7f226-35d8-4f48-bfcd-7466c8280cc7",
-        "author_ids": [
-            "f23b8747-0a4f-4034-a94a-8199471ba742"
-        ],
-        "title": "23 prostituées",
-        "publicher": "Cornelius",
-    },
-    {
-        "id": "29a4b784-45b9-46cb-8117-e9d3fb007080",
-        "event_ids": "4de7f226-35d8-4f48-bfcd-7466c8280cc7",
-        "author_ids": [
-            "bbe69749-c1ff-4eea-9751-07ff84a64e3c",
-            "bf5a450d-a58f-4158-ba9d-a455d6a58c2e"
-        ],
-        "title": "La virginité passée 30 an",
-        "publicher": "Akata",
-    },
-    {
-        "id": "933749ac-48d9-4c0d-bad4-3afabeb39c06",
-        "event_ids": "4de7f226-35d8-4f48-bfcd-7466c8280cc7",
-        "author_ids": [
-            "8a721baf-f11e-44dd-90a9-10f62f4f9659"
-        ],
-        "title": "Déesse",
-        "publicher": "Les Requins Marteaux",
-    },
-    {
-        "id": "f8ab7eee-3e2e-4b16-aba2-c9a59b8a14e6",
-        "event_ids": "4de7f226-35d8-4f48-bfcd-7466c8280cc7",
-        "author_ids": [
-            "1fa15760-fec2-439c-ae15-9fe2b6a07b65"
-        ],
-        "title": "Otto ou l'île miroir",
-        "publicher": 2024,
-    },
-    {
-        "id": "eac2f8b0-cabe-4894-9435-1f97d78d48fe",
-        "event_ids": "b89fa215-2567-4f8b-89f9-47043ff842dd",
-        "author_ids": [
-            "afb472e6-b869-4d53-b1d2-cd24620aabf8"
-        ],
-        "title": "LEVANTS",
-        "publicher": "Atrabile",
-    },
-    {
-        "id": "b504945d-dcd2-470d-a9d8-757e479d97c4",
-        "event_ids": "b89fa215-2567-4f8b-89f9-47043ff842dd",
-        "author_ids": [
-            "1799978d-fa64-4c2e-9cdd-4166d5429bfc"
-        ],
-        "title": "QUENOTTE et Le Monde fantastique",
-        "publicher": "Casterman",
-    },
-    {
-        "id": "07b9a55d-d923-4b11-adb6-6fa6bba48d69",
-        "event_ids": "b89fa215-2567-4f8b-89f9-47043ff842dd",
-        "author_ids": [
-            "8b6b2d64-1bf2-4c38-a0a2-f560c948a753",
-            "dbd2393c-6627-447a-adae-3d47c6f2eefa"
-        ],
-        "title": "SNOTGIRL",
-        "publicher": "Glénat",
-    },
-    {
-        "id": "9a011c39-92ab-4a08-89fb-3df45b43c28d",
-        "event_ids": "b89fa215-2567-4f8b-89f9-47043ff842dd",
-        "author_ids": [
-            "4c9c194b-541f-4faa-a562-ea9b28f3a28a",
-            "050bbcd9-e04a-4c59-895a-59114156c235"
-        ],
-        "title": "ULTRALAZER",
-        "publicher": "Delcourt",
-    },
-    {
-        "id": "326f6947-69d5-48c5-bde6-d677cc8798ed",
-        "event_ids": "fb274520-64ff-437d-8a96-f040bee4f143",
-        "author_ids": [
-            "c8499147-6933-4022-a0a5-d5ae61d43353"
-        ],
-        "title": "Senso",
-        "publicher": "Delcourt",
-    },
-    {
-        "id": "8fc8c100-bb70-4f24-aa74-a45ba3446b6f",
-        "event_ids": "fb274520-64ff-437d-8a96-f040bee4f143",
-        "author_ids": [
-            "ad4f4791-6489-4339-9ffe-ecf7c08ec792",
-            "0a1614e7-7a41-4725-923f-d53f9d433c42"
-        ],
-        "title": "Kindom Come",
-        "publicher": "Urban Comics",
-    },
-    {
-        "id": "4fdbeb31-7b0d-4d1d-8988-7bdb87ddc45a",
-        "event_ids": "fb274520-64ff-437d-8a96-f040bee4f143",
-        "author_ids": [
-            "88b53369-9a85-421b-86bf-f15207493881",
-            "4e560600-32c3-4ed2-b9ce-ecac969d1788"
-        ],
-        "title": "Dr. Stone",
-        "publicher": "Glénat",
-    },
-    {
-        "id": "56fdc40f-69be-4035-b59b-699c226561aa",
-        "event_ids": "fb274520-64ff-437d-8a96-f040bee4f143",
-        "author_ids": [
-            "94286d79-132f-48ea-a218-23c14a39ecf1"
-        ],
-        "title": "Comment le roi a perdu la tête",
-        "publicher": "çà et là",
-    },
-    {
-        "id": "ab9ce207-aa63-4ca6-8da9-950c138c1baf",
-        "event_ids": "6d4b6a62-4e7f-4610-be61-4b1c1a845c41",
-        "author_ids": [
-            "245bb48c-1b6d-4335-8481-1888e29b7c9a"
-        ],
-        "title": "Toujours tout foutre en l'air",
-        "publicher": "Revival",
-    },
-    {
-        "id": "444e2a08-2137-4443-b54b-391d78a1993f",
-        "event_ids": "6d4b6a62-4e7f-4610-be61-4b1c1a845c41",
-        "author_ids": [
-            "ec6c909d-8f84-4f2b-babc-0554155605f1",
-            "3d054bbd-9eb8-468a-99cd-1567f8e85e82"
-        ],
-        "title": "Commissaire Kouamé",
-        "publicher": "Gallimard BD",
-    },
-    {
-        "id": "d8c5e849-fb06-40c6-9aea-5a6bbeb02c39",
-        "event_ids": "6d4b6a62-4e7f-4610-be61-4b1c1a845c41",
-        "author_ids": [
-            "5948f0eb-e387-4716-ab56-392bef8d1089"
-        ],
-        "title": "Nimona",
-        "publicher": "Dargaud",
-    },
-    {
-        "id": "0dcd78e3-5959-49a8-8629-6c45614781c9",
-        "event_ids": "6d4b6a62-4e7f-4610-be61-4b1c1a845c41",
-        "author_ids": [
-            "92a385f5-519c-4715-acdc-598cfdd1729c",
-            "0315f923-4d88-4ab2-89bb-da27348e7948"
-        ],
-        "title": "Pretty Deadly",
-        "publicher": "Glénat BD",
-    },
-    {
-        "id": "5c7410fa-ebbe-45eb-9220-408ccc32ab20",
-        "event_ids": "990d2d91-5d4d-4297-99b5-5e019f92ca2d",
-        "author_ids": [
-            "e94d7d4d-aed1-4a6a-8670-a45ec947c402"
-        ],
-        "title": "Carbone & Silicium",
-        "publicher": "Ankama",
-    },
-    {
-        "id": "cc3f1f7d-d2cd-480d-be8a-a8576ee58578",
-        "event_ids": "990d2d91-5d4d-4297-99b5-5e019f92ca2d",
-        "author_ids": [
-            "5467ed08-4eb1-428b-8a18-5288cef03b50"
-        ],
-        "title": "Capacity",
-        "publicher": "Ici Même",
-    },
-    {
-        "id": "2dc58737-0d8e-47e8-a87a-5ad7e5503a85",
-        "event_ids": "990d2d91-5d4d-4297-99b5-5e019f92ca2d",
-        "author_ids": [
-            "a599d445-4e90-4e7f-87f5-da3718d53b71",
-            "1d857bb4-739b-4a95-b300-ac0e764289a6"
-        ],
-        "title": "Les Ombres",
-        "publicher": "Dargaud",
-    },
-    {
-        "id": "bfe6030b-1434-44a7-9021-53283dbd1273",
-        "event_ids": "990d2d91-5d4d-4297-99b5-5e019f92ca2d",
-        "author_ids": [
-            "90380431-13d5-4f17-a93c-0ac63c5b292d",
-            "d792c939-a90a-4581-8ab7-5572a145953e"
-        ],
-        "title": "Le cycle de Cyann",
-        "publicher": "Casterman",
-    },
-    {
-        "id": "0fbd40ef-65de-4124-9e33-a874d5e085d3",
-        "event_ids": "0f972454-26f3-4b6e-9fc0-7c88147ca38e",
-        "author_ids": [
-            "b77e67e0-4be5-45f2-8510-c02e59cdc5dc"
-        ],
-        "title": "Snapdragon",
-        "publicher": "Kinaye",
-    },
-    {
-        "id": "887f7488-2373-4576-8876-f51332f4e643",
-        "event_ids": "0f972454-26f3-4b6e-9fc0-7c88147ca38e",
-        "author_ids": [
-            "dc2db786-4819-4d5a-b0dc-938203f948d0",
-            "a600ed2b-0660-4bfc-bd72-6f8bc6a68e1c"
-        ],
-        "title": "Le divin scénario",
-        "publicher": "Actes Sud",
-    },
-    {
-        "id": "41c38156-5a10-494d-b733-bea90b557b5d",
-        "event_ids": "0f972454-26f3-4b6e-9fc0-7c88147ca38e",
-        "author_ids": [
-            "d706c336-3cf3-466c-b939-3a73c2fb8045"
-        ],
-        "title": "Kimi le vieux chien",
-        "publicher": "Misma",
-    },
-    {
-        "id": "46b68b9b-4ff9-4943-8c1b-5a7264c726b0",
-        "event_ids": "0f972454-26f3-4b6e-9fc0-7c88147ca38e",
-        "author_ids": [
-            "731f03c7-f2e5-4c5a-bc6e-32504d114610"
-        ],
-        "title": "Mashle",
-        "publicher": "Kazé",
-    },
-    {
-        "id": "fe0e427f-efba-4b50-9b02-c3ae30ddc7a7",
-        "event_ids": "41cbf971-bc71-41f5-b1b2-3c3c88b894d4",
-        "author_ids": [
-            "4158b3ff-f6ab-416c-9c7d-08b32094dc37"
-        ],
-        "title": "Tokyo Tarareba Girls",
-        "publicher": "lézard Noir",
-    },
-    {
-        "id": "47cef4c1-8b7b-4f09-86d8-25822941de64",
-        "event_ids": "41cbf971-bc71-41f5-b1b2-3c3c88b894d4",
-        "author_ids": [
-            "e08b7863-5dc3-4a34-bdff-db7dbc962c97",
-            "aa07e1cf-d92c-41ad-8136-28c9a41bf942"
-        ],
-        "title": "Something is Killing the Children",
-        "publicher": "Urban Comics",
-    },
-    {
-        "id": "6e688dc8-ab38-4938-9365-2a20aa38ad43",
-        "event_ids": "41cbf971-bc71-41f5-b1b2-3c3c88b894d4",
-        "author_ids": [
-            "bc52712d-0934-4896-869c-7281ff934b5b"
-        ],
-        "title": "Tomino la maudite",
-        "publicher": "Casterman",
-    },
-    {
-        "id": "3e4e9cbb-f6da-4146-be0a-d079a3e52f4c",
-        "event_ids": "41cbf971-bc71-41f5-b1b2-3c3c88b894d4",
-        "author_ids": [
-            "9579e675-68b3-4e65-9827-36305076f6ac"
-        ],
-        "title": "Le Jeu des hirondelles",
-        "publicher": "Cambourakis",
-    },
-    {
-        "id": "28a37eed-3501-417e-ba76-31b87a800af0",
-        "event_ids": "dbbba8a3-9008-459a-ab7f-2d50cee07b1c",
-        "author_ids": [
-            "ba630706-a95d-4fd0-9ca6-566da679b28b"
-        ],
-        "title": "Les contes de la crypte",
-        "publicher": "Akileos",
-        "publishing_year": 2020
-    },
-    {
-        "id": "ee45b12e-be45-43cd-938d-a53e397cbe18",
-        "event_ids": "dbbba8a3-9008-459a-ab7f-2d50cee07b1c",
-        "author_ids": [
-            "a7ce50ee-85f1-42cb-95c6-97118215b739"
-        ],
-        "title": "L'Autoroute du Soleil",
-        "publicher": "Casterman",
+        "publisher": "Cornélius",
         "publishing_year": 2016
     },
     {
-        "id": "d9745546-e622-4733-b87f-a0a5688b1df4",
-        "event_ids": "dbbba8a3-9008-459a-ab7f-2d50cee07b1c",
+        "id": "08e65064-e95c-5215-8c3d-adb674683828",
+        "title": "Les nuits d'aksehir",
+        "event_ids": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
         "author_ids": [
-            "6792acb8-3269-469f-a01b-5f814a582161"
+            "37d869e4-02d9-5885-a0c5-62e7f626e80d"
         ],
-        "title": "Flippette & Venere",
-        "publicher": "Delcourt",
+        "publisher": "Akata",
+        "publishing_year": 2017
+    },
+    {
+        "id": "3d70b2d5-2977-5edc-972d-5f5e66124eef",
+        "title": "La balade nationale",
+        "event_ids": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
+        "author_ids": [
+            "11ccdb5b-b14e-5297-93a6-144b65c6a374",
+            "0fa6efdf-5b59-5497-a4a0-2412cc8f2249"
+        ],
+        "publisher": "La Découverte",
+        "publishing_year": 2017
+    },
+    {
+        "id": "bf4fe76d-85e6-5b2b-8093-bd397f29ccc2",
+        "title": "Beastars",
+        "event_ids": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
+        "author_ids": [
+            "5becded1-8df8-5719-8df7-76a7c8641ec1"
+        ],
+        "publisher": "Ki-oon",
+        "publishing_year": 2019
+    },
+    {
+        "id": "8ac3624a-93f8-5771-975b-942423b399b5",
+        "title": "Dans un rayon de soleil",
+        "event_ids": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
+        "author_ids": [
+            "5210ee98-eddf-5485-bec1-870d0de8270b"
+        ],
+        "publisher": "Gallimard BD",
+        "publishing_year": 2019
+    },
+    {
+        "id": "45654738-801a-54ec-a4da-363363691092",
+        "title": "Macadam Byzance",
+        "event_ids": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
+        "author_ids": [
+            "5e40aaad-a8ad-59d4-8f7c-0fc6c135a0cd",
+            "e60fbf0f-6d78-5335-af27-7dca3f46b9b0"
+        ],
+        "publisher": "Fluide Glacial",
+        "publishing_year": 2019
+    },
+    {
+        "id": "6a77cc15-294a-5114-8d5f-73d5d402ab51",
+        "title": "Le dernier Atlas",
+        "event_ids": "e3653545-0c2a-50bd-8d14-699d252b53a9",
+        "author_ids": [
+            "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87",
+            "4d8e72d3-3b12-548b-b11e-25da6ce04060"
+        ],
+        "publisher": "Dupuis",
+        "publishing_year": null
+    },
+    {
+        "id": "20804294-4e09-50cd-94bd-8372e5d99a58",
+        "title": "Extases",
+        "event_ids": "e3653545-0c2a-50bd-8d14-699d252b53a9",
+        "author_ids": [
+            "dfb60faa-598f-5699-8b2f-01a78e66cd35"
+        ],
+        "publisher": "Casterman BD",
+        "publishing_year": null
+    },
+    {
+        "id": "85b4afe0-39bc-53e9-b894-84624222cc7d",
+        "title": "Extremity",
+        "event_ids": "e3653545-0c2a-50bd-8d14-699d252b53a9",
+        "author_ids": [
+            "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5"
+        ],
+        "publisher": "Delcourt Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "9a9a15ba-5c4a-5d05-9b95-0f346d811cf6",
+        "title": "MW",
+        "event_ids": "e3653545-0c2a-50bd-8d14-699d252b53a9",
+        "author_ids": [
+            "91077797-d951-5025-a095-fef1a2b3bb5f"
+        ],
+        "publisher": "Delcourt/Tonkam",
+        "publishing_year": null
+    },
+    {
+        "id": "a9faa5b6-9672-510a-bd92-634e3aeb2240",
+        "title": "My home hero",
+        "event_ids": "611db4de-5ee6-5c83-83c5-af36e6222068",
+        "author_ids": [
+            "2e7138da-8cc1-50d9-846f-ea5c74a98cf7",
+            "4c6305bb-724f-5f86-ae00-73e45454b903"
+        ],
+        "publisher": "Kurokawa",
+        "publishing_year": null
+    },
+    {
+        "id": "4d775666-080c-5f46-ab43-983746584a96",
+        "title": "Planètes",
+        "event_ids": "611db4de-5ee6-5c83-83c5-af36e6222068",
+        "author_ids": [
+            "183f199f-a026-5761-9ec8-c69c66040044"
+        ],
+        "publisher": "Panini Collections",
+        "publishing_year": null
+    },
+    {
+        "id": "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71",
+        "title": "In these words",
+        "event_ids": "611db4de-5ee6-5c83-83c5-af36e6222068",
+        "author_ids": [
+            "05eb8f95-5ac9-5a9c-8111-7901bcf3d397",
+            "019a8caf-92e3-54b4-8add-539931bc8478"
+        ],
+        "publisher": "Manga Taifu",
+        "publishing_year": null
+    },
+    {
+        "id": "6719474d-ed51-5f92-8278-3646bb92c03b",
+        "title": "Bride stories",
+        "event_ids": "611db4de-5ee6-5c83-83c5-af36e6222068",
+        "author_ids": [],
+        "publisher": "Ki-oon",
+        "publishing_year": null
+    },
+    {
+        "id": "e4e1d8bd-5c94-57eb-9b76-45b0d2e3c1b7",
+        "title": "NESKA",
+        "event_ids": "35935fa2-a008-5d4a-837d-ff51e42f0123",
+        "author_ids": [
+            "6b955294-0c6d-5b47-8a7f-7a46611b7aa4"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "0a23fbe5-b7b7-547f-95ef-c8e4c169ba84",
+        "title": "TED DRÔLE DE COCO",
+        "event_ids": "35935fa2-a008-5d4a-837d-ff51e42f0123",
+        "author_ids": [
+            "d055575f-870c-5ed6-8371-8ede4af900c1"
+        ],
+        "publisher": "Atrabile",
+        "publishing_year": null
+    },
+    {
+        "id": "8b193f6b-8fc9-5dd4-8f86-3dffe109ace2",
+        "title": "BEZIMENA",
+        "event_ids": "35935fa2-a008-5d4a-837d-ff51e42f0123",
+        "author_ids": [
+            "77897035-979e-5c77-9015-a3d636adb490"
+        ],
+        "publisher": "Ici Même",
+        "publishing_year": null
+    },
+    {
+        "id": "0eb55165-0714-592e-b967-ca0d76ba06ff",
+        "title": "SHERIFF OF BABYLON",
+        "event_ids": "35935fa2-a008-5d4a-837d-ff51e42f0123",
+        "author_ids": [
+            "67021253-b3f9-5131-a5a1-6f1e6996c8bd",
+            "cd86941a-d2f6-535f-bb9b-ae9e1a277c61"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "455fed83-1d56-56f4-b2e3-46efbcc1f0e1",
+        "title": "Maléfiques",
+        "event_ids": "15afad0f-6a49-5a5d-9361-e696250a3993",
+        "author_ids": [
+            "e5020b23-1913-5091-8e95-fb8deb0a3b96"
+        ],
+        "publisher": "L'Association",
+        "publishing_year": null
+    },
+    {
+        "id": "ea9613e4-c0a1-5a88-b2a4-fc986c9f2240",
+        "title": "Gokinjo",
+        "event_ids": "15afad0f-6a49-5a5d-9361-e696250a3993",
+        "author_ids": [
+            "6dc1449e-5778-5046-ae1c-0025d5d15b13"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "935c5f25-3edb-5853-91ea-c0c75d211ba5",
+        "title": "Le trône d’argile",
+        "event_ids": "15afad0f-6a49-5a5d-9361-e696250a3993",
+        "author_ids": [
+            "63afd855-4f1d-51bb-a5c5-faf4676934bd",
+            "731fd7b0-dd35-5c0e-a77b-6d21464732f8",
+            "7dc8b037-9a91-58d1-8b32-74b2c39834f2",
+            "4f07590b-71c7-574a-a119-11a46258f06a"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "99f43ae7-65c3-5f0b-bd9a-336ad6735fea",
+        "title": "Jean Doux et le mystère de la disquette molle",
+        "event_ids": "15afad0f-6a49-5a5d-9361-e696250a3993",
+        "author_ids": [
+            "089c60ee-cedc-54f3-9c4d-9414af218b1b"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "3d6f3134-2abf-5826-9462-12df423eeb00",
+        "title": "Passions",
+        "event_ids": "943ef86c-2f3d-5418-811c-3984ec44218e",
+        "author_ids": [
+            "2149320d-2c93-5c48-92dd-fd4a4b4a2916"
+        ],
+        "publisher": "Fluide Glacial",
+        "publishing_year": null
+    },
+    {
+        "id": "90a07961-765f-588b-a9b1-147327ff19e6",
+        "title": "Saison des Roses",
+        "event_ids": "943ef86c-2f3d-5418-811c-3984ec44218e",
+        "author_ids": [
+            "92d63259-a236-5255-8a90-bf9776649674"
+        ],
+        "publisher": "FLBLB",
+        "publishing_year": null
+    },
+    {
+        "id": "b6e3995c-deef-5246-a9b0-df3a38e0f7e8",
+        "title": "Mister Miracle",
+        "event_ids": "943ef86c-2f3d-5418-811c-3984ec44218e",
+        "author_ids": [
+            "67021253-b3f9-5131-a5a1-6f1e6996c8bd",
+            "cd86941a-d2f6-535f-bb9b-ae9e1a277c61"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "fa63dd8d-c49f-5a56-9f07-8f6fbbb45dbc",
+        "title": "Opus",
+        "event_ids": "943ef86c-2f3d-5418-811c-3984ec44218e",
+        "author_ids": [
+            "2d4e035b-babd-5524-8a3e-9bcba6e75ec5"
+        ],
+        "publisher": "IMHO",
+        "publishing_year": null
+    },
+    {
+        "id": "91f06cb8-a704-5705-b48a-2015fa0dd6b8",
+        "title": "The Unwritten",
+        "event_ids": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
+        "author_ids": [
+            "ac8ec002-305d-51dd-96b9-2c2c6d35b9ab",
+            "4622e2be-836f-5c71-a681-8a7b8692853d"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "9c1164e3-301e-5075-af2f-013c819bb56a",
+        "title": "Magic order",
+        "event_ids": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
+        "author_ids": [
+            "5867fc24-0362-5151-a5c0-a8846e846594",
+            "a35e9edb-f6b1-5319-a1b2-1d16cc509e2a"
+        ],
+        "publisher": "Panini Comics France",
+        "publishing_year": null
+    },
+    {
+        "id": "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea",
+        "title": "Black panther ennemi d'état",
+        "event_ids": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
+        "author_ids": [
+            "40790dc7-7194-5449-98fe-ccc3f6fa7767",
+            "2e83f03b-61b3-5559-8c7b-9f91ce6434b7"
+        ],
+        "publisher": "Panini Comics France",
+        "publishing_year": null
+    },
+    {
+        "id": "809c07eb-4cdb-564d-801f-810e13afae93",
+        "title": "Luke Cage",
+        "event_ids": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
+        "author_ids": [
+            "86408786-4e90-52b4-aa67-30066872af26",
+            "fe17f662-7b96-54eb-a378-d165448e83c6"
+        ],
+        "publisher": "Panini Comics France",
+        "publishing_year": null
+    },
+    {
+        "id": "04614ebb-df6b-5425-9f49-a953190b114f",
+        "title": "Préférence système",
+        "event_ids": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
+        "author_ids": [
+            "10666593-e9d3-5312-90c8-4ef8d1e3cebe"
+        ],
+        "publisher": "Denoël Graphic",
+        "publishing_year": null
+    },
+    {
+        "id": "fff5e173-faf5-5091-b143-91036a35047d",
+        "title": "In Waves",
+        "event_ids": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
+        "author_ids": [
+            "b9adbafa-9486-52d4-bfd9-7072efd368ae"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
+    },
+    {
+        "id": "88083fb1-f033-50a2-a26a-84921246605c",
+        "title": "Bergères guerrières",
+        "event_ids": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
+        "author_ids": [
+            "1a7ad751-eef5-54c6-af64-bf354fc1c6bb",
+            "8ebd502e-0353-5076-9daf-ef5e18c72f6c"
+        ],
+        "publisher": "Glenat",
+        "publishing_year": null
+    },
+    {
+        "id": "41a293e2-8d3d-5933-9188-f01edc26eb0c",
+        "title": "Bakemonogatari",
+        "event_ids": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
+        "author_ids": [],
+        "publisher": "Pika",
+        "publishing_year": null
+    },
+    {
+        "id": "d535ad5b-baf2-54af-b3d5-17d8b52332ff",
+        "title": "Saison des roses",
+        "event_ids": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
+        "author_ids": [
+            "92d63259-a236-5255-8a90-bf9776649674"
+        ],
+        "publisher": "FLBLB",
+        "publishing_year": null
+    },
+    {
+        "id": "dcc25ccb-bc58-5f18-9a49-a54fc52fdcf3",
+        "title": "Nako",
+        "event_ids": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
+        "author_ids": [
+            "d16f0632-6f42-5729-a856-4a25f9e5396d"
+        ],
+        "publisher": "Michel Lafon",
+        "publishing_year": null
+    },
+    {
+        "id": "4e54d086-2092-5623-81ce-cdb52ee354a3",
+        "title": "Raowl",
+        "event_ids": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
+        "author_ids": [
+            "0d6d184b-a29e-53a7-8833-1d8d959e8b67"
+        ],
+        "publisher": "dupuis",
+        "publishing_year": null
+    },
+    {
+        "id": "33368bc9-256a-520a-88cc-b78bd19c6dce",
+        "title": "Peau de mille bêtes",
+        "event_ids": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
+        "author_ids": [
+            "35a4d2db-5e22-555d-bdcc-c806c0ae5f35"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "1346fd40-465d-50a8-9dbf-1b3db2f2f962",
+        "title": "23 prostituées",
+        "event_ids": "282002d3-3314-58cb-a08c-56d1b660f8ed",
+        "author_ids": [
+            "cdc82420-f432-5f59-a469-f2e496e2ec4d"
+        ],
+        "publisher": "Cornelius",
+        "publishing_year": null
+    },
+    {
+        "id": "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a",
+        "title": "La virginité passée 30 an",
+        "event_ids": "282002d3-3314-58cb-a08c-56d1b660f8ed",
+        "author_ids": [
+            "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e",
+            "101177af-518d-573a-9f37-7d1907f8557a",
+            "f95bf41f-d4da-5636-8d31-4a16f45f86ae"
+        ],
+        "publisher": "Akata",
+        "publishing_year": null
+    },
+    {
+        "id": "5664c22b-88d2-5a47-bf61-fb3e4f657a0b",
+        "title": "Déesse",
+        "event_ids": "282002d3-3314-58cb-a08c-56d1b660f8ed",
+        "author_ids": [
+            "df9128c9-cec9-53c8-8729-617042111988"
+        ],
+        "publisher": "Les Requins Marteaux",
+        "publishing_year": null
+    },
+    {
+        "id": "56fc148f-32d4-5cb2-a0e4-8eee0f478cfb",
+        "title": "Otto ou l'île miroir",
+        "event_ids": "282002d3-3314-58cb-a08c-56d1b660f8ed",
+        "author_ids": [
+            "79173c52-b077-58b7-9de5-213f60a8f298"
+        ],
+        "publisher": "2024",
+        "publishing_year": null
+    },
+    {
+        "id": "5cf79362-fbc8-5768-a71e-da1f3da4979b",
+        "title": "LEVANTS",
+        "event_ids": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
+        "author_ids": [
+            "21e8c9b3-1fc6-5b3f-9c64-fbc955194792"
+        ],
+        "publisher": "Atrabile",
+        "publishing_year": null
+    },
+    {
+        "id": "99cf5bac-a6b4-5fa0-ace7-3b6acdda880b",
+        "title": "QUENOTTE et Le Monde fantastique",
+        "event_ids": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
+        "author_ids": [
+            "ec7b8039-9647-53bd-98df-c4980ff84587"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
+    },
+    {
+        "id": "6486c644-9f52-5b81-8121-a07c9ca820d3",
+        "title": "SNOTGIRL",
+        "event_ids": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
+        "author_ids": [
+            "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3",
+            "cd9ac32b-5e63-5ee4-a040-0a08d8da008c"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
+    },
+    {
+        "id": "a07deabb-ba5c-5b23-bd86-e977a8865e6c",
+        "title": "ULTRALAZER",
+        "event_ids": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
+        "author_ids": [
+            "5bd9bdce-2827-5048-84b1-476815daaeff",
+            "96ee5e02-42ba-5540-b8a7-b2b639a577bb",
+            "aaff7554-0102-5996-beae-0993b356a202"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "3852be01-9880-52eb-8493-9b3a5758e58f",
+        "title": "Senso",
+        "event_ids": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
+        "author_ids": [
+            "95d147eb-c140-5339-ad8e-0d09bd1bb49f"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "7769da5e-26ce-5da9-bec0-7a649cbadc21",
+        "title": "Kindom Come",
+        "event_ids": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
+        "author_ids": [
+            "643adc5f-050b-514f-855f-2ff87a990c08",
+            "cf7a99fa-a50c-569b-b9bd-f5e5c1769357"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "e897052f-d4f2-5e42-9731-c4f7b672d891",
+        "title": "Dr. Stone",
+        "event_ids": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
+        "author_ids": [
+            "c3a1940c-7540-5034-8b6c-ca60b59520b3",
+            "68134aa4-2f64-5303-a042-788e170ddea9"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
+    },
+    {
+        "id": "a5c2edd4-0e57-5aff-ad51-1da715ae3f5e",
+        "title": "Comment le roi a perdu la tête",
+        "event_ids": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
+        "author_ids": [
+            "a367fe72-04a8-59a8-955b-882054715ed1"
+        ],
+        "publisher": "çà et là",
+        "publishing_year": null
+    },
+    {
+        "id": "126597e8-c9b9-59ea-bd95-81b0e7b61342",
+        "title": "Toujours tout foutre en l'air",
+        "event_ids": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
+        "author_ids": [
+            "7dcf6112-1145-5af4-82fb-e9b92015aa1d"
+        ],
+        "publisher": "Revival",
+        "publishing_year": null
+    },
+    {
+        "id": "f85336b5-f4df-5112-a405-cf0dbd14fd50",
+        "title": "Commissaire Kouamé",
+        "event_ids": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
+        "author_ids": [
+            "ecb145e1-13b8-59fa-8422-1fbb2a505946",
+            "aadfc208-0268-5ff7-b840-57b854a09cce"
+        ],
+        "publisher": "Gallimard BD",
+        "publishing_year": null
+    },
+    {
+        "id": "531a885c-829a-59e3-9ce8-4af27ee228e2",
+        "title": "Nimona",
+        "event_ids": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
+        "author_ids": [
+            "beb683f9-838a-5ab5-915e-50e5ee57e66f"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "ef0b7e38-3627-5f6e-b460-3e92a56d3a13",
+        "title": "Pretty Deadly",
+        "event_ids": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
+        "author_ids": [
+            "a6b81f1d-dc27-5aa3-877e-d3e6bd44907d",
+            "e00c6e9a-cecb-5393-9a29-204cb3947ce9"
+        ],
+        "publisher": "Glénat BD",
+        "publishing_year": null
+    },
+    {
+        "id": "f82923f6-8cff-5419-927a-c3db18e9992f",
+        "title": "Carbone & Silicium",
+        "event_ids": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
+        "author_ids": [
+            "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b"
+        ],
+        "publisher": "Ankama",
+        "publishing_year": null
+    },
+    {
+        "id": "12865e73-340e-5385-a1c0-8dcd99f6ad82",
+        "title": "Capacity",
+        "event_ids": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
+        "author_ids": [
+            "e02ab7f1-a215-5b6d-a012-ed8916473101"
+        ],
+        "publisher": "Ici Même",
+        "publishing_year": null
+    },
+    {
+        "id": "58bf1586-0770-5e05-9d5e-84b033947d1f",
+        "title": "Les Ombres",
+        "event_ids": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
+        "author_ids": [
+            "635f02aa-96a4-5530-bbea-013c415c8290",
+            "09a3b727-757e-5f3a-84f0-75b4364f9c63"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "9f71560e-9697-518d-a092-a2e73ca2c608",
+        "title": "Le cycle de Cyann",
+        "event_ids": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
+        "author_ids": [
+            "a98cd576-0496-5016-8738-c111b1250f68",
+            "85773f9c-27a8-5d21-9786-fad52ff3180e"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
+    },
+    {
+        "id": "e36d75cf-f479-5e9b-b009-eecbf2f6e86d",
+        "title": "Le Tigre des neiges",
+        "event_ids": "e0863d9e-e93d-525a-9dbb-89140edf2588",
+        "author_ids": [],
+        "publisher": null,
+        "publishing_year": null
+    },
+    {
+        "id": "d0b3e70f-1430-5736-8b87-84b725afaebe",
+        "title": "Runaways",
+        "event_ids": "e0863d9e-e93d-525a-9dbb-89140edf2588",
+        "author_ids": [],
+        "publisher": null,
+        "publishing_year": null
+    },
+    {
+        "id": "e2e2f078-9136-5fed-a6e2-ddc3cde39297",
+        "title": "Citéville",
+        "event_ids": "e0863d9e-e93d-525a-9dbb-89140edf2588",
+        "author_ids": [],
+        "publisher": null,
+        "publishing_year": null
+    },
+    {
+        "id": "16564728-90ed-5edc-8eae-08a5f7785cff",
+        "title": "Peau d'homme",
+        "event_ids": "e0863d9e-e93d-525a-9dbb-89140edf2588",
+        "author_ids": [],
+        "publisher": null,
+        "publishing_year": null
+    },
+    {
+        "id": "7655deef-be68-561d-a942-3a401c24343e",
+        "title": "Snapdragon",
+        "event_ids": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
+        "author_ids": [
+            "4a7a4f1c-41b7-5fc8-920d-ac55b12d15d1"
+        ],
+        "publisher": "Kinaye",
+        "publishing_year": null
+    },
+    {
+        "id": "2a776a76-0486-5fa8-a693-0507a23edda8",
+        "title": "Le divin scénario",
+        "event_ids": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
+        "author_ids": [
+            "f6acf67b-3605-510c-89f9-da99c5668419",
+            "588613c4-6e68-5359-ada6-29b7ff634885"
+        ],
+        "publisher": "Actes Sud",
+        "publishing_year": null
+    },
+    {
+        "id": "e0079da4-868b-589a-8dc6-7c04973b026b",
+        "title": "Kimi le vieux chien",
+        "event_ids": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
+        "author_ids": [
+            "8d7dbf62-af3b-5183-9758-a74bff3e93b2"
+        ],
+        "publisher": "Misma",
+        "publishing_year": null
+    },
+    {
+        "id": "2a5e1c5f-476c-5d4e-81f3-2b78cb856e41",
+        "title": "Mashle",
+        "event_ids": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
+        "author_ids": [
+            "fd8a5c80-b148-5a48-a880-d38d2e74bf5a"
+        ],
+        "publisher": "Kazé",
+        "publishing_year": null
+    },
+    {
+        "id": "473edb56-8483-5f87-ae9a-226e5639da7c",
+        "title": "Tokyo Tarareba Girls",
+        "event_ids": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
+        "author_ids": [
+            "a257ccd6-592f-5169-9247-729f4a009e2d"
+        ],
+        "publisher": "lézard Noir",
+        "publishing_year": null
+    },
+    {
+        "id": "d8f9a56b-3061-5c16-9cce-1d231de67319",
+        "title": "Something is Killing the Children",
+        "event_ids": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
+        "author_ids": [
+            "11132b63-24cf-5e0c-87e3-f82a28ac89e8",
+            "11b97ae6-9bb9-56c9-914a-c8e0fe79156c"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "cd0cdc46-bfd4-5850-beaf-3019f10e3e7b",
+        "title": "Tomino la maudite",
+        "event_ids": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
+        "author_ids": [
+            "2bd1623e-7f3d-543a-b05c-628bb3e6d6b4"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
+    },
+    {
+        "id": "1a3f1d17-bebd-5ddb-abe3-9533675f24a8",
+        "title": "Le Jeu des hirondelles",
+        "event_ids": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
+        "author_ids": [
+            "56030257-e26e-53d8-9d62-6471ba32ecce"
+        ],
+        "publisher": "Cambourakis",
+        "publishing_year": null
+    },
+    {
+        "id": "609fe001-1408-54fc-8686-1a7094aaa0da",
+        "title": "Les contes de la crypte",
+        "event_ids": "090131b6-3b33-5b91-ac22-f73f60f5d347",
+        "author_ids": [
+            "581a5d0a-41d0-54b0-8ccb-9f5dac37c4e3"
+        ],
+        "publisher": "Akileos",
         "publishing_year": 2020
     },
     {
-        "id": "76169f95-c21a-4b01-989b-1307bf7df4fb",
-        "event_ids": "dbbba8a3-9008-459a-ab7f-2d50cee07b1c",
+        "id": "493aa385-71e1-5b94-937d-fc270fd2d7bc",
+        "title": "L'Autoroute du Soleil",
+        "event_ids": "090131b6-3b33-5b91-ac22-f73f60f5d347",
         "author_ids": [
-            "5ae8be72-41e9-4ec8-8c05-9a4d5a87f973"
+            "23c4dbf2-da76-5959-b5c8-de2b87f8dc74"
         ],
+        "publisher": "Casterman",
+        "publishing_year": 2016
+    },
+    {
+        "id": "209120cd-8ef2-5051-9030-5750844215c5",
+        "title": "Flippette & Venere",
+        "event_ids": "090131b6-3b33-5b91-ac22-f73f60f5d347",
+        "author_ids": [
+            "8c05c235-5085-5da5-975c-95a3ec03a0ce"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": 2020
+    },
+    {
+        "id": "00b764c7-9e57-5a44-8922-76ffc6c0c006",
         "title": "Soleil mécanique",
-        "publicher": "Ca et la",
+        "event_ids": "090131b6-3b33-5b91-ac22-f73f60f5d347",
+        "author_ids": [
+            "f1c41fdd-a85b-58e1-b10d-1c31f9803326"
+        ],
+        "publisher": "Ca et la",
         "publishing_year": 2021
     },
     {
-        "id": "60b64f87-ad3d-4b19-bac7-96fb71c764d4",
-        "event_ids": "25158dcb-aafe-4208-93e5-402ee5550351",
-        "author_ids": [
-            "32bc5b2f-a245-4fbf-b784-f046c655593b"
-        ],
+        "id": "385f1264-4b26-5572-b2a8-10343d26cc7c",
         "title": "Megg Mogg And Owl - Maximal Spleen",
-        "publicher": "Misma",
+        "event_ids": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
+        "author_ids": [
+            "06ae0839-7b89-5d3a-bf83-99dc6830803a"
+        ],
+        "publisher": "Misma",
         "publishing_year": 2014
     },
     {
-        "id": "264d71b4-d0a3-4bed-abd7-6f92e203b66a",
-        "event_ids": "25158dcb-aafe-4208-93e5-402ee5550351",
-        "author_ids": [
-            "c4b39cbf-335e-4f90-950d-e1d8fdf9aa7b"
-        ],
+        "id": "2f0d945f-bd63-5967-9a57-844e20b11675",
         "title": "Le privilège des Dieux",
-        "publicher": "Les requins Marteaux",
+        "event_ids": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
+        "author_ids": [
+            "eb5d6e96-6e8e-5188-8ea6-58cc19c59957"
+        ],
+        "publisher": "Les requins Marteaux",
         "publishing_year": 2020
     },
     {
-        "id": "52a84f92-94e5-4c41-8c84-5536bb325785",
-        "event_ids": "25158dcb-aafe-4208-93e5-402ee5550351",
-        "author_ids": [
-            "6c91c3c7-318d-4b09-9785-dc936de8c4bd",
-            "7c2ab163-71e6-443c-89c1-269635260d0c"
-        ],
+        "id": "045e3ca9-5744-52bb-ba4c-d69f08e9c343",
         "title": "Blanc Autour",
-        "publicher": "DARGAUD",
+        "event_ids": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
+        "author_ids": [
+            "7116930d-8c4e-548c-b9e6-248dafce1360",
+            "35a4d2db-5e22-555d-bdcc-c806c0ae5f35"
+        ],
+        "publisher": "DARGAUD",
         "publishing_year": 2021
     },
     {
-        "id": "3583574e-8ac4-4c2b-ad46-318b7e9b984c",
-        "event_ids": "25158dcb-aafe-4208-93e5-402ee5550351",
-        "author_ids": [
-            "6de6c7f6-b089-44b3-9e93-b6f65a9c8b08"
-        ],
+        "id": "98a1d8c6-853d-5970-b117-ace76d927b91",
         "title": "Salammbô",
-        "publicher": "Glenat",
+        "event_ids": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
+        "author_ids": [
+            "141dc09a-4241-51b4-a81e-5402d1647f96"
+        ],
+        "publisher": "Glenat",
         "publishing_year": 1991
     },
     {
-        "id": "661d54ce-0447-4480-8645-0a9359d74e9d",
-        "event_ids": "608e41a0-b7c8-4c5f-b963-e08e25bfa30f",
-        "author_ids": [
-            "8a721baf-f11e-44dd-90a9-10f62f4f9659"
-        ],
+        "id": "0527534f-2c66-5d92-94d5-e579f45fd919",
         "title": "Idéal Standard",
-        "publicher": "Dargaud",
+        "event_ids": "e17498f8-e03e-5e24-8a88-9c976c869054",
+        "author_ids": [
+            "df9128c9-cec9-53c8-8729-617042111988"
+        ],
+        "publisher": "Dargaud",
         "publishing_year": 2017
     },
     {
-        "id": "0006f168-e4b9-4f39-b084-b2ef577ecb6c",
-        "event_ids": "608e41a0-b7c8-4c5f-b963-e08e25bfa30f",
-        "author_ids": [
-            "75571453-cc79-44b9-84c5-f2ccb9ef2a7e"
-        ],
+        "id": "5bebe1b3-ed45-5b99-bc12-026abccc686e",
         "title": "Les Sentiments du prince Charles",
-        "publicher": "Rackham",
+        "event_ids": "e17498f8-e03e-5e24-8a88-9c976c869054",
+        "author_ids": [
+            "6036d73a-1f6b-581b-8e41-74a385c4be82"
+        ],
+        "publisher": "Rackham",
         "publishing_year": 2012
     },
     {
-        "id": "d037dbb0-95d9-493a-9ecd-1190f94114bf",
-        "event_ids": "608e41a0-b7c8-4c5f-b963-e08e25bfa30f",
-        "author_ids": [
-            "a454b3a7-1ffd-4fb4-9f53-985d594b1f48"
-        ],
+        "id": "45a36e4f-7780-53c1-b774-353b3aa6e85e",
         "title": "Kwoloon Généric Romance",
-        "publicher": "Kana",
+        "event_ids": "e17498f8-e03e-5e24-8a88-9c976c869054",
+        "author_ids": [
+            "b6ec5ccc-d0ec-5f4f-971f-7e1f961f15f1"
+        ],
+        "publisher": "Kana",
         "publishing_year": 2021
     },
     {
-        "id": "d6e853e9-ec23-4c5c-bf28-c642d717d813",
-        "event_ids": "608e41a0-b7c8-4c5f-b963-e08e25bfa30f",
-        "author_ids": [
-            "e99d950d-4b91-40d7-af13-29e5198694e9"
-        ],
+        "id": "be84548c-9e26-56ea-a97d-bdf4b9653250",
         "title": "Moins qu'hier (plus que demain)",
-        "publicher": "Glenat",
+        "event_ids": "e17498f8-e03e-5e24-8a88-9c976c869054",
+        "author_ids": [
+            "831f7cc9-9ad6-5358-8ca1-1d671a6cb6f1"
+        ],
+        "publisher": "Glenat",
         "publishing_year": 2018
     },
     {
-        "id": "eb72c9ca-7708-4893-bbd0-cc4bcb4c10bb",
-        "event_ids": "235984e6-b97f-4b86-83c2-6e6218dac201",
-        "author_ids": [
-            "d7991a95-7d2a-4b0a-bdf8-9cbbe2b47294"
-        ],
+        "id": "04c7c967-43b9-5255-a016-a6a6713ccaf0",
         "title": "Anaïs Nin - Sur la mer des mensonges",
-        "publicher": "Casterman",
+        "event_ids": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
+        "author_ids": [
+            "a1b4ee86-d88a-5c9f-a04e-fb542537c0f0"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2020
     },
     {
-        "id": "b800a0b4-d0bf-4eef-98fd-eb6b6945730c",
-        "event_ids": "235984e6-b97f-4b86-83c2-6e6218dac201",
-        "author_ids": [
-            "a8348caa-7ee1-4f76-94bb-cc12413805bd",
-            "9c15fd9b-1d20-47ec-b25d-36cca1942512"
-        ],
+        "id": "808def66-0261-5fb0-adf1-2e8c3f8761d8",
         "title": "Justice League - Crise d'identité",
-        "publicher": "Urban Comics",
+        "event_ids": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
+        "author_ids": [
+            "566e776d-c9d5-52e2-8388-6dad7d49b424",
+            "b922cef3-2fc8-568f-a16c-87f17c81465e"
+        ],
+        "publisher": "Urban Comics",
         "publishing_year": 2013
     },
     {
-        "id": "deb6a40b-1aa5-4793-b920-819d3c45f771",
-        "event_ids": "235984e6-b97f-4b86-83c2-6e6218dac201",
-        "author_ids": [
-            "5702d555-1426-4c05-9a3a-f2045e38ad48"
-        ],
+        "id": "6cbc856d-bbf3-517d-8096-69dcf2e9b270",
         "title": "Les 100 nuits de Héros",
-        "publicher": "Casterman",
+        "event_ids": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
+        "author_ids": [
+            "d8152d45-6327-555b-bab0-5773452caeed"
+        ],
+        "publisher": "Casterman",
         "publishing_year": 2017
     },
     {
-        "id": "8f5a5f64-0c09-4d91-a880-cf27b49af28a",
-        "event_ids": "235984e6-b97f-4b86-83c2-6e6218dac201",
-        "author_ids": [
-            "a6b7da42-eb45-489f-b16c-d9cca380b410",
-            "79fa8dcb-f93d-419b-9efc-93f7107ef3fd"
-        ],
+        "id": "122a0172-06d1-548d-a796-547d56b7fa4c",
         "title": "Malavalle",
-        "publicher": "Realistes",
+        "event_ids": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
+        "author_ids": [
+            "10666593-e9d3-5312-90c8-4ef8d1e3cebe",
+            "3f2d648d-6795-56c7-a81a-4a98b852b1a0"
+        ],
+        "publisher": "Realistes",
         "publishing_year": 2021
     },
     {
-        "id": "b6205488-535e-4ab5-8d78-c666ab181924",
-        "event_ids": "382724e6-6ab9-4ee2-bb02-872468fbf6c3",
-        "author_ids": [
-            "bc644775-281e-4b4b-80ee-14e68801138e",
-            "18b29054-32de-4afe-a484-8e15049ea707"
-        ],
+        "id": "e37157f2-efbb-508a-bc47-17a90bc02c84",
         "title": "Lanfeust de Troy",
-        "publicher": "Soleil",
+        "event_ids": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
+        "author_ids": [
+            "9d6057a1-8a84-5712-9f8c-4f2e530b2f34",
+            "5b576627-0b89-5180-bd78-cb87eb672cd0"
+        ],
+        "publisher": "Soleil",
+        "publishing_year": null
     },
     {
-        "id": "a592d86a-ceab-4297-9066-ec239d86d928",
-        "event_ids": "382724e6-6ab9-4ee2-bb02-872468fbf6c3",
-        "author_ids": [
-            "95d60487-5c29-42dc-a57c-109926b3cd72"
-        ],
+        "id": "ad666457-dc66-5f79-a8e2-24d71257ce29",
         "title": "I am the Eggman",
-        "publicher": "L'Association",
+        "event_ids": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
+        "author_ids": [
+            "0f40eecd-24cf-5c5c-8330-f71cda6d02c3"
+        ],
+        "publisher": "L'Association",
+        "publishing_year": null
     },
     {
-        "id": "f1cac98d-5482-4096-b338-b9348508ea71",
-        "event_ids": "382724e6-6ab9-4ee2-bb02-872468fbf6c3",
-        "author_ids": [
-            "1049f66b-4be9-4864-9e60-b446a50e5486"
-        ],
+        "id": "deb20c8e-015a-5c9c-9686-1111263e8a0a",
         "title": "Violette Morris - à abattre par tous moyens",
-        "publicher": "Futuropolis",
+        "event_ids": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
+        "author_ids": [
+            "cd5b8826-38e8-5380-86f3-a2d6735d723a",
+            "1f55bd80-400f-5c7c-98ed-d29a9fff6cbe",
+            "030b9850-5805-5d5d-b8ef-9d9d2f42cdd6",
+            "b791b4d4-8740-554d-ad07-82218d8bb7ed"
+        ],
+        "publisher": "Futuropolis",
+        "publishing_year": null
     },
     {
-        "id": "5a1fc99e-7226-44a8-8b90-3a596c905d62",
-        "event_ids": "382724e6-6ab9-4ee2-bb02-872468fbf6c3",
-        "author_ids": [
-            "44c81285-9060-4fc3-9058-88a84404d563",
-            "3f45bfec-9a03-44a6-a5fa-d18b231a9ede"
-        ],
+        "id": "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b",
         "title": "Lock and Key",
-        "publicher": "Hicomics",
+        "event_ids": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
+        "author_ids": [
+            "604f3749-8f3e-5862-a9e5-04fa037f26c0",
+            "38ca6247-1af6-574c-b8c6-2ce51282d966"
+        ],
+        "publisher": "Hicomics",
+        "publishing_year": null
     },
     {
-        "id": "30972a11-ce0f-455a-912d-dd18180a288f",
-        "event_ids": "a19336d6-8956-44ff-982a-23c4c1811db2",
-        "author_ids": [
-            "124e0e9a-680b-47e5-9369-4d46af4c6916"
-        ],
+        "id": "2d214a1a-d718-56ca-b4b1-daecd27fbc70",
         "title": "Un visage familier",
-        "publicher": "Atrabile",
+        "event_ids": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
+        "author_ids": [
+            "befc47ec-c72f-58e3-8519-a28173853443"
+        ],
+        "publisher": "Atrabile",
+        "publishing_year": null
     },
     {
-        "id": "d57ca31a-04e4-425b-b46b-6487fba5433d",
-        "event_ids": "a19336d6-8956-44ff-982a-23c4c1811db2",
-        "author_ids": [
-            "528ad92c-e8c3-430b-b704-335182979b14"
-        ],
+        "id": "553ba159-d15e-5f69-a159-fc28c71edeca",
         "title": "La Princesse du château sans fin",
-        "publicher": "Huber éditions",
+        "event_ids": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
+        "author_ids": [
+            "b4ba44f4-199f-5988-8479-e4422af71a49"
+        ],
+        "publisher": "Huber éditions",
+        "publishing_year": null
     },
     {
-        "id": "2cbcdd79-9173-424b-8da0-3e21407d9141",
-        "event_ids": "a19336d6-8956-44ff-982a-23c4c1811db2",
-        "author_ids": [
-            "77edfd2d-2e92-467e-8d4b-f527cf669847"
-        ],
+        "id": "0e8111d0-2e90-54c7-88b1-43b0e0881cc9",
         "title": "Ecoute, jolie Marcia",
-        "publicher": "ça et là",
+        "event_ids": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
+        "author_ids": [
+            "faf147b2-0071-53bc-bd91-a89be82a3bde"
+        ],
+        "publisher": "ça et là",
+        "publishing_year": null
     },
     {
-        "id": "9664424f-0a4a-458e-9842-38ad9a9f9981",
-        "event_ids": "a19336d6-8956-44ff-982a-23c4c1811db2",
-        "author_ids": [
-            "f1aad872-d67c-4a8d-8dfb-1e83755dab77"
-        ],
+        "id": "ed1239f8-6705-59cc-89fa-0f58a386644e",
         "title": "Panorama",
-        "publicher": "Delirium",
+        "event_ids": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
+        "author_ids": [
+            "c5b9e189-2937-5717-9cfa-4bf3ca95975e"
+        ],
+        "publisher": "Delirium",
+        "publishing_year": null
     },
     {
-        "id": "5cf9aef6-a860-465e-b3de-b71e5ed3ad52",
-        "event_ids": "c3c1895c-138e-468b-8d20-6d30c4747ffa",
-        "author_ids": [
-            "3782ed5f-f0e2-48b0-a736-e486ad47c766"
-        ],
+        "id": "259a0454-9500-5b1b-be3c-1039abe5838a",
         "title": "Boys Run the Riot",
-        "publicher": "Akata",
+        "event_ids": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
+        "author_ids": [
+            "eae3e547-17c4-5a9d-9f08-a099870e7427"
+        ],
+        "publisher": "Akata",
+        "publishing_year": null
     },
     {
-        "id": "10b7c424-efbe-4e5e-b745-dc7bbf43419d",
-        "event_ids": "c3c1895c-138e-468b-8d20-6d30c4747ffa",
-        "author_ids": [
-            "460a4c27-ec54-4a88-99d7-97870b7a9052"
-        ],
+        "id": "5b09fc60-7852-5dd7-85fd-47d06d44ac08",
         "title": "Journal 1&2",
-        "publicher": "Delcourt",
+        "event_ids": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
+        "author_ids": [
+            "1e2535bc-1306-5edf-a096-6619d1fc69f0"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
     },
     {
-        "id": "d21b6dc4-f035-451a-b298-5ea12d121bf2",
-        "event_ids": "c3c1895c-138e-468b-8d20-6d30c4747ffa",
-        "author_ids": [
-            "c3366491-fb72-4891-b722-a7adf9a1f5b6",
-            "81a1ebcc-c014-4a4b-8e32-d824866d6897"
-        ],
+        "id": "5792de8a-229c-5f32-9cd0-3d9421f85b62",
         "title": "La fille dans l'écran",
-        "publicher": "Marabulles",
+        "event_ids": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
+        "author_ids": [
+            "517fda5b-0d2f-5cb9-a689-38ded1fc1732",
+            "f98adb03-4782-5e7d-858c-cea66c569d0a"
+        ],
+        "publisher": "Marabulles",
+        "publishing_year": null
     },
     {
-        "id": "1280aea7-1bf3-4d78-b06f-893b6a55120f",
-        "event_ids": "c3c1895c-138e-468b-8d20-6d30c4747ffa",
-        "author_ids": [
-            "c4774e7e-5b03-41ce-9539-ab8931cf60dd",
-            "f9e4ad69-35aa-425d-8cc8-8191bb955e36"
-        ],
+        "id": "d77af3ef-1018-580f-8b4b-bdac6993c4b9",
         "title": "La Nuit Mange le jour",
-        "publicher": "Glénat",
+        "event_ids": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
+        "author_ids": [
+            "4102d5a8-722f-5280-a290-ccc976747c79",
+            "a0ad17df-cc7c-5579-a3f6-7fea6f6b69f5"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
     },
     {
-        "id": "ad6826dd-66bb-4368-9fea-a3d4e2940950",
-        "event_ids": "384211cb-f23e-412e-9fbc-a67e3f2e8cf2",
-        "author_ids": [
-            "e5e07c31-f78d-4da5-8678-8baa1e1b7e92",
-            "96522350-09d9-4814-9e9b-f9be1c7b8380"
-        ],
+        "id": "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d",
         "title": "Emma CakeCup",
-        "publicher": "Jungle",
+        "event_ids": "208965ad-c1ba-5935-ad9c-599ec120152f",
+        "author_ids": [
+            "002b8b8f-eaec-50aa-b1a9-dd32ff43ef58",
+            "c6c2e2e5-de20-5485-a998-76541abafe3e"
+        ],
+        "publisher": "Jungle",
+        "publishing_year": null
     },
     {
-        "id": "e60958a0-3816-4539-adf1-d2a46980ff37",
-        "event_ids": "384211cb-f23e-412e-9fbc-a67e3f2e8cf2",
-        "author_ids": [
-            "bc18a61e-97a6-43b7-9796-165c47769f6d"
-        ],
+        "id": "93c55d49-da91-53a8-9384-a9e74f86fe92",
         "title": "Papa Situations",
-        "publicher": "Dupuis",
+        "event_ids": "208965ad-c1ba-5935-ad9c-599ec120152f",
+        "author_ids": [
+            "3ecb51cb-7330-5551-b059-2bc07bbe2220"
+        ],
+        "publisher": "Dupuis",
+        "publishing_year": null
     },
     {
-        "id": "32a82284-7946-4e47-8340-b27b5284bd33",
-        "event_ids": "384211cb-f23e-412e-9fbc-a67e3f2e8cf2",
-        "author_ids": [
-            "7af22cc0-3de8-4810-9137-752af104e2bd",
-            "f83231cc-e354-428f-9b86-7bc1f897fb36"
-        ],
+        "id": "81d0933e-90f7-5b74-b9fb-ba27cc47fa12",
         "title": "Bleak",
-        "publicher": "LINK DIGITAL",
+        "event_ids": "208965ad-c1ba-5935-ad9c-599ec120152f",
+        "author_ids": [
+            "9ebb375a-570f-5d10-af89-e2581554813f",
+            "67a61400-02a1-5e8a-815f-efe1aaff4044"
+        ],
+        "publisher": "LINK DIGITAL",
         "publishing_year": 2022
     },
     {
-        "id": "3d99edc2-320d-40c6-afb7-6fe6f0d74218",
-        "event_ids": "384211cb-f23e-412e-9fbc-a67e3f2e8cf2",
-        "author_ids": [
-            "f0938613-319c-44fd-9a69-1954fe31bd6b",
-            "d0e6f805-86ca-443a-b232-0df55c0b2f48"
-        ],
+        "id": "bb95f1ee-35e4-5172-bcf9-11aa19d39885",
         "title": "Roger et ses humains",
-        "publicher": "Dupuis",
+        "event_ids": "208965ad-c1ba-5935-ad9c-599ec120152f",
+        "author_ids": [
+            "740a55f0-b066-529c-aad3-be7706f65d0c",
+            "728ca873-d312-575d-b216-7d2f31953628"
+        ],
+        "publisher": "Dupuis",
+        "publishing_year": null
     },
     {
-        "id": "5dddd4b5-b6ea-47eb-aba1-a1674407062f",
-        "event_ids": "05f5234e-1ada-49bb-8d2e-70fdc1f1a4c8",
-        "author_ids": [
-            "587df2c1-95f1-4946-8d76-66f573bf5879",
-            "268533a2-fb58-4d97-8e82-3431d522e1f7"
-        ],
+        "id": "219fdb59-446f-5ec8-ada8-aa3432778341",
         "title": "Transperceneige",
-        "publicher": "Casterman",
+        "event_ids": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
+        "author_ids": [
+            "4262dd32-264e-5b27-89d4-b8f1d948b32c",
+            "acaa9413-e232-5de0-95fa-e139a9ece44f",
+            "5d4b528a-9838-5b47-9940-6c3506237d97"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
     },
     {
-        "id": "43d5ef22-338f-4fab-abf4-67d62fe20303",
-        "event_ids": "05f5234e-1ada-49bb-8d2e-70fdc1f1a4c8",
-        "author_ids": [
-            "4af38992-25d9-4ad1-b10e-7af8b692234b"
-        ],
+        "id": "7e0fbd51-70be-5b79-b9fd-fdcbdbe6784d",
         "title": "Des-agréments d'un voyage d'agrément",
-        "publicher": 2024,
+        "event_ids": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
+        "author_ids": [
+            "1a18f2fb-0d2c-54c5-a763-fdadef46f041"
+        ],
+        "publisher": "2024",
+        "publishing_year": null
     },
     {
-        "id": "61ef1c6e-e67f-4b23-9d81-a1e072692243",
-        "event_ids": "05f5234e-1ada-49bb-8d2e-70fdc1f1a4c8",
-        "author_ids": [
-            "b90821de-4ae2-4d5e-8545-33b2ea61e699"
-        ],
+        "id": "67a5f9be-05e5-5595-a37f-a5ab7ac9952b",
         "title": "Wonder Woman Dead Earth",
-        "publicher": "Urban",
+        "event_ids": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
+        "author_ids": [
+            "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5"
+        ],
+        "publisher": "Urban",
+        "publishing_year": null
     },
     {
-        "id": "be27430d-56d2-400a-88b6-9bea5091760c",
-        "event_ids": "05f5234e-1ada-49bb-8d2e-70fdc1f1a4c8",
-        "author_ids": [
-            "0afa169d-6b56-4d27-b25f-da578f3969f2",
-            "4d359aec-bd17-4c5e-8def-d2a85f35eebf"
-        ],
+        "id": "fbb83c90-bc31-53bb-82f1-62a4921b7b66",
         "title": "Idées Noires",
-        "publicher": "",
+        "event_ids": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
+        "author_ids": [
+            "c86e250b-e9c3-59aa-869a-9ab8b53022f1"
+        ],
+        "publisher": "Fluide Glacial",
+        "publishing_year": null
     },
     {
-        "id": "0961f4d3-5936-4b66-9800-bd58594b14dd",
-        "event_ids": "f052b5df-3bbb-4e44-92f0-9cae29a7a0d3",
-        "author_ids": [
-            "b98a189e-1c4c-4660-8f9d-1a4d4e857674"
-        ],
+        "id": "2f23ec7b-6aa5-5cf5-b8ac-331ee184fe94",
         "title": "Coney Island Baby",
-        "publicher": "l’Association",
+        "event_ids": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
+        "author_ids": [
+            "e5020b23-1913-5091-8e95-fb8deb0a3b96"
+        ],
+        "publisher": "l’Association",
+        "publishing_year": null
     },
     {
-        "id": "a171a8c1-a41b-4819-bf75-f5cbf317e4a9",
-        "event_ids": "f052b5df-3bbb-4e44-92f0-9cae29a7a0d3",
-        "author_ids": [
-            "9771d944-b2b7-4efc-a281-ef2a8f34da39"
-        ],
+        "id": "90278e20-06f0-50f8-a8f0-04b97acfe3ce",
         "title": "la Fille de la plage",
-        "publicher": "éditions IMHO",
+        "event_ids": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
+        "author_ids": [
+            "b4e9729a-f1c7-5994-b791-a4c365333f5b"
+        ],
+        "publisher": "éditions IMHO",
+        "publishing_year": null
     },
     {
-        "id": "a22be781-b756-479c-9b07-49d14dbfe115",
-        "event_ids": "f052b5df-3bbb-4e44-92f0-9cae29a7a0d3",
-        "author_ids": [
-            "fa5f3845-c71f-40b8-89a3-69229297fd48"
-        ],
+        "id": "aa142d80-6e53-53cf-ad01-13c8af2060cf",
         "title": "Fraise et Chocolat",
-        "publicher": "Les Impressions Nouvelles",
+        "event_ids": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
+        "author_ids": [
+            "f42b2254-0bb6-589f-b754-788623bc0690"
+        ],
+        "publisher": "es Impressions Nouvelles",
+        "publishing_year": null
     },
     {
-        "id": "dbbb9055-2fcd-4c61-9e3c-6c3cd1049073",
-        "event_ids": "f052b5df-3bbb-4e44-92f0-9cae29a7a0d3",
-        "author_ids": [
-            "a76fc636-222c-4133-951d-aa66299548be"
-        ],
+        "id": "22bae3a8-139b-5a3f-932f-80fc901d43af",
         "title": "L’Origine du Monstre",
-        "publicher": "Requins Marteaux",
+        "event_ids": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
+        "author_ids": [
+            "d055575f-870c-5ed6-8371-8ede4af900c1"
+        ],
+        "publisher": "Requins Marteaux",
+        "publishing_year": null
     },
     {
-        "id": "e66cef9f-1330-45c7-8150-25e513b5c815",
-        "event_ids": "d7614821-9356-40b6-86fc-147339ef4653",
-        "author_ids": [
-            "e1d9cf70-e117-41dc-aae7-75959c26fb55",
-            "a6b9f674-d57c-4f30-ac57-3034b169b58d"
-        ],
+        "id": "621f773d-d0aa-5e22-bf81-c530967a1fbe",
         "title": "Koma",
-        "publicher": "les Humanoïdes Associés",
+        "event_ids": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
+        "author_ids": [
+            "70125cb3-0e45-5bc9-9aef-4cbb67edb051",
+            "d665cfb4-c5db-586a-ad00-d7483be1868f"
+        ],
+        "publisher": "les Humanoïdes Associés",
+        "publishing_year": null
     },
     {
-        "id": "050168ed-704e-4af1-a157-28a0d9b64a28",
-        "event_ids": "d7614821-9356-40b6-86fc-147339ef4653",
-        "author_ids": [
-            "cbf19bcf-9d83-4e24-872c-2e3cf084215d"
-        ],
+        "id": "8b049e1b-5908-5c4b-972e-d34e04c6ab0c",
         "title": "Mind MGMT",
-        "publicher": "éditions Monsieur Toussaint Louverture",
+        "event_ids": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
+        "author_ids": [
+            "088ef0e0-f6d5-5b0b-8bbe-34adf8a69a86"
+        ],
+        "publisher": "éditions Monsieur Toussaint Louverture",
+        "publishing_year": null
     },
     {
-        "id": "d0b0edca-9266-4efc-a486-d29097e2242e",
-        "event_ids": "d7614821-9356-40b6-86fc-147339ef4653",
-        "author_ids": [
-            "12990e4b-bbb8-42ef-ad57-be791c80b447"
-        ],
+        "id": "a88d2dfe-e823-5455-b5a7-a9eea7604db2",
         "title": "Toonzie",
-        "publicher": 2024,
+        "event_ids": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
+        "author_ids": [
+            "55a709af-cd36-5f34-9454-177b62ab1b72"
+        ],
+        "publisher": "2024",
+        "publishing_year": null
     },
     {
-        "id": "04357713-2296-45c0-96ec-013cf76f0555",
-        "event_ids": "d7614821-9356-40b6-86fc-147339ef4653",
-        "author_ids": [
-            "5b24a560-d0fa-479d-a4e9-f1b4f4da709e"
-        ],
+        "id": "20219cc1-6639-5762-9325-1f565d5143ce",
         "title": "Fun Home",
-        "publicher": "Denoël Graphic",
+        "event_ids": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
+        "author_ids": [
+            "c31ac25f-8577-51a4-8112-3280350d8f34"
+        ],
+        "publisher": "Denoël Graphic",
+        "publishing_year": null
     },
     {
-        "id": "3a5190d9-2fc1-4d9d-8bb3-b6486544188b",
-        "event_ids": "6940b273-a361-447e-a43c-9fb38791bbbd",
-        "author_ids": [
-            "1a96800c-9ee0-4fac-a7f2-6beef2ced1e2"
-        ],
+        "id": "7c33cd89-18a5-55ee-a927-d33a3b91a4d4",
         "title": "Le Grand Vide",
-        "publicher": 2024,
+        "event_ids": "8057115a-7249-5288-a959-7f770b0707da",
+        "author_ids": [
+            "6c618371-acaa-57cf-916f-31d5288f8285"
+        ],
+        "publisher": "2024",
+        "publishing_year": null
     },
     {
-        "id": "103a3488-8304-4ac1-be48-e961422e00ab",
-        "event_ids": "6940b273-a361-447e-a43c-9fb38791bbbd",
-        "author_ids": [
-            "83366d2a-d263-49f2-a949-6fb68e1a0c60"
-        ],
+        "id": "8e76ff82-caba-5256-b56f-36fdcc09b8cc",
         "title": "DanDaDan",
-        "publicher": "Crunchyroll",
+        "event_ids": "8057115a-7249-5288-a959-7f770b0707da",
+        "author_ids": [
+            "0d7a1f2e-614f-5f9b-9eb0-e977c4413fbc"
+        ],
+        "publisher": "Crunchyroll",
+        "publishing_year": null
     },
     {
-        "id": "443d9b5f-e604-4a43-a7b6-597223d61433",
-        "event_ids": "6940b273-a361-447e-a43c-9fb38791bbbd",
-        "author_ids": [
-            "6ce8a4e1-313e-43de-874e-0bfb90eb9851",
-            "fa5f3845-c71f-40b8-89a3-69229297fd48"
-        ],
+        "id": "6f40ce09-c1fc-56c3-b191-aaef5f620982",
         "title": "Comme un Chef",
-        "publicher": "Casterman",
+        "event_ids": "8057115a-7249-5288-a959-7f770b0707da",
+        "author_ids": [
+            "0cc64c64-f713-57ca-a315-70087758c502",
+            "f42b2254-0bb6-589f-b754-788623bc0690"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
     },
     {
-        "id": "d0459ba7-41e7-4ede-9723-f035a39ba603",
-        "event_ids": "6940b273-a361-447e-a43c-9fb38791bbbd",
-        "author_ids": [
-            "be151f91-1b43-442b-97d8-d2dbefbae79c"
-        ],
+        "id": "6285af41-5732-5e84-907f-7c1c6393c5e5",
         "title": "Le Chemisier",
-        "publicher": "Casterman",
+        "event_ids": "8057115a-7249-5288-a959-7f770b0707da",
+        "author_ids": [
+            "552512e4-a3e7-5246-89cf-9ddee4ca5e17"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
     },
     {
-        "id": "6387807b-c0d4-4033-ae3f-1d470a14bf8a",
-        "event_ids": "6ec8bf4a-f850-44a6-bad4-9b6a20668d75",
-        "author_ids": [
-            "34f55739-ed92-4357-8286-d2a7147fc1ca"
-        ],
+        "id": "e316844c-27bd-5037-a0f8-1327a62e748f",
         "title": "Bébé Fille",
-        "publicher": "Même Pas Mal",
+        "event_ids": "1320b429-70e2-593e-976d-0cc9646e88c8",
+        "author_ids": [
+            "9a3c0069-aa3f-5826-9ef1-9f344244d3dc"
+        ],
+        "publisher": "Même Pas Mal",
+        "publishing_year": null
     },
     {
-        "id": "bee977d0-48cb-40a1-863e-30e3ea984fea",
-        "event_ids": "6ec8bf4a-f850-44a6-bad4-9b6a20668d75",
-        "author_ids": [
-            "ad8000d5-119b-4b98-beac-cb433f7d45b8",
-            "fd159c30-75b7-4303-8b4b-9c61712e271b"
-        ],
+        "id": "92d5d028-df2f-5e50-b4b7-9887ae2f807b",
         "title": "Toutes les morts de Laila Starr",
-        "publicher": "Urban Comics",
+        "event_ids": "1320b429-70e2-593e-976d-0cc9646e88c8",
+        "author_ids": [
+            "4eee69a6-88fd-5e48-b8f5-dd582920a450",
+            "94b0e949-b89d-5ea5-b0b9-7cbd0ac73da4"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
     },
     {
-        "id": "f295cbec-ea77-4d9f-ab55-a16a804a6b7b",
-        "event_ids": "6ec8bf4a-f850-44a6-bad4-9b6a20668d75",
-        "author_ids": [
-            "119fad93-3a94-4039-a57a-215639cd17f4"
-        ],
+        "id": "80e320c2-11e7-595b-89ba-24b81ea6d621",
         "title": "Phénix, L’oiseau de feu",
-        "publicher": "Delcourt",
+        "event_ids": "1320b429-70e2-593e-976d-0cc9646e88c8",
+        "author_ids": [
+            "91077797-d951-5025-a095-fef1a2b3bb5f"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
     },
     {
-        "id": "f16a4613-f3c7-41ae-ab86-edb172a2f014",
-        "event_ids": "6ec8bf4a-f850-44a6-bad4-9b6a20668d75",
-        "author_ids": [
-            "a600ed2b-0660-4bfc-bd72-6f8bc6a68e1c"
-        ],
+        "id": "8faa03ae-f8f4-5b68-9059-c0c628f85707",
         "title": "Le Dieu Vagabond",
-        "publicher": "Sarbacane",
+        "event_ids": "1320b429-70e2-593e-976d-0cc9646e88c8",
+        "author_ids": [
+            "588613c4-6e68-5359-ada6-29b7ff634885"
+        ],
+        "publisher": "Sarbacane",
+        "publishing_year": null
     },
     {
-        "id": "724f8952-b997-41a6-a9f4-bd94bb42208f",
-        "event_ids": "d6d7f298-3e4d-4e38-b214-dc743b00aeba",
-        "author_ids": [
-            "ff9d6a73-b08b-4430-a82a-f9b1076435e6"
-        ],
+        "id": "af8eb788-7a27-5205-84b1-ae1298595b7d",
         "title": "Whiskey and New York",
-        "publicher": "l’Agrume",
+        "event_ids": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
+        "author_ids": [
+            "c1ffebeb-922e-5aec-a97e-43302c30360d"
+        ],
+        "publisher": "l’Agrume",
+        "publishing_year": null
     },
     {
-        "id": "6c7014a7-23ee-4a66-94d8-4b708e396b2a",
-        "event_ids": "d6d7f298-3e4d-4e38-b214-dc743b00aeba",
-        "author_ids": [
-            "328169c4-050f-42c4-977f-d88871fd4940"
-        ],
+        "id": "f6c7005e-7b64-5eef-844a-2ac4acdc1b07",
         "title": "Le Bestiaire du Crépuscule",
-        "publicher": "Dupuis",
+        "event_ids": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
+        "author_ids": [
+            "48aace14-0b8f-5dc9-aee0-2b52c883a081"
+        ],
+        "publisher": "Dupuis",
+        "publishing_year": null
     },
     {
-        "id": "3a0f134b-631e-4efd-b6d7-f6c0e4d95b14",
-        "event_ids": "d6d7f298-3e4d-4e38-b214-dc743b00aeba",
-        "author_ids": [
-            "af6278fe-b556-4dbf-a964-f1c62f933e48"
-        ],
+        "id": "406eb059-e7e8-54f1-8f89-cddea6c629e0",
         "title": "Les Sauvages",
-        "publicher": "Actes Sud/ L’An 2",
+        "event_ids": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
+        "author_ids": [
+            "6ada2d73-1f4e-5954-8c72-bc0404fa4307"
+        ],
+        "publisher": "Actes Sud/ L’An 2",
+        "publishing_year": null
     },
     {
-        "id": "c61b220d-dad2-414c-a2a6-3f46b005189f",
-        "event_ids": "d6d7f298-3e4d-4e38-b214-dc743b00aeba",
-        "author_ids": [
-            "d36f58dd-6bb1-452e-a305-a597cf37f083"
-        ],
+        "id": "f865a993-10dd-5daf-9303-db5328540034",
         "title": "La Marque Jaune",
-        "publicher": "Dargaud",
+        "event_ids": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
+        "author_ids": [
+            "f88b6be4-be83-553a-9a10-0c3ff88d9c71"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
     },
     {
-        "id": "9a44eed3-8486-4189-834b-2a749faf37c1",
-        "event_ids": "d0644c7b-5668-4c00-bea5-fef1cf88fa03",
-        "author_ids": [
-            "ed8121d7-3ef2-4d8b-b460-1d3a6b252790"
-        ],
+        "id": "ec050548-66da-5642-af27-79ee4e0f5571",
         "title": "La dernière comédie de Paolo Pinnochio",
-        "publicher": "Tanibis",
+        "event_ids": "ec126adf-2c87-51c4-b109-22b7689339ad",
+        "author_ids": [
+            "ec3adb15-c596-5229-b64a-d324f9941ab6"
+        ],
+        "publisher": "Tanibis",
+        "publishing_year": null
     },
     {
-        "id": "d81c4802-be52-4789-9858-667bf492eff7",
-        "event_ids": "d0644c7b-5668-4c00-bea5-fef1cf88fa03",
-        "author_ids": [
-            "b98a189e-1c4c-4660-8f9d-1a4d4e857674"
-        ],
+        "id": "a363d9bd-8981-5155-9eb6-c9cef10c231a",
         "title": "Madones et Putains",
-        "publicher": "Dupuis",
+        "event_ids": "ec126adf-2c87-51c4-b109-22b7689339ad",
+        "author_ids": [
+            "e5020b23-1913-5091-8e95-fb8deb0a3b96"
+        ],
+        "publisher": "Dupuis",
+        "publishing_year": null
     },
     {
-        "id": "ef63fb63-05a0-4a15-95b2-20f10afd4738",
-        "event_ids": "d0644c7b-5668-4c00-bea5-fef1cf88fa03",
-        "author_ids": [
-            "e0d31434-7f73-4b9a-9d59-5be96d1f623b"
-        ],
+        "id": "01c74bc6-960a-58b3-9069-ca12ec2fb9b4",
         "title": "le Choeur des Femmes",
-        "publicher": "Lombard",
+        "event_ids": "ec126adf-2c87-51c4-b109-22b7689339ad",
+        "author_ids": [
+            "901b17fe-09a8-5b9f-9f5d-a73d92a26547"
+        ],
+        "publisher": "Lombard",
+        "publishing_year": null
     },
     {
-        "id": "265a9b74-91b6-4fa6-89b8-3b9f753b5f70",
-        "event_ids": "d0644c7b-5668-4c00-bea5-fef1cf88fa03",
-        "author_ids": [
-            "1121b2f3-0459-4ce6-a176-7bbfe53739f9"
-        ],
+        "id": "e00d76ed-0c5c-5fcb-b972-355c57612e91",
         "title": "La Mer à boire",
-        "publicher": 2024,
+        "event_ids": "ec126adf-2c87-51c4-b109-22b7689339ad",
+        "author_ids": [
+            "c75bf8ef-b761-59b7-aa36-7db51b472618"
+        ],
+        "publisher": "2024",
+        "publishing_year": null
     },
     {
-        "id": "01f186db-6fb9-4ce6-bccc-0e7f67e0fa5d",
-        "event_ids": "76fbd112-41aa-458e-9fd7-361a1fccc138",
-        "author_ids": [
-            "57edd48a-bce5-4778-a73b-bd1dd269e6f7"
-        ],
+        "id": "b86b53b5-7121-5fae-8ed9-50fc48076812",
         "title": "Bunker",
-        "publicher": "Dupuis",
+        "event_ids": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
+        "author_ids": [
+            "2822bd0a-4242-59a8-a4dd-2a9d553c94f0"
+        ],
+        "publisher": "Dupuis",
+        "publishing_year": null
     },
     {
-        "id": "e364f0b3-3c71-43e2-b5b2-d044267789b7",
-        "event_ids": "76fbd112-41aa-458e-9fd7-361a1fccc138",
-        "author_ids": [
-            "78ec581e-7541-44b3-bec0-6c318d4cf40a"
-        ],
+        "id": "4926fa87-8fac-59ea-b462-beaa8865b399",
         "title": "Tokyo Alien Bros",
-        "publicher": "Lézard Noir",
+        "event_ids": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
+        "author_ids": [
+            "7036c4fd-e408-5618-af2e-9baaff128651"
+        ],
+        "publisher": "Lézard Noir",
+        "publishing_year": null
     },
     {
-        "id": "65941638-57e8-4b43-9393-4a188384df7f",
-        "event_ids": "76fbd112-41aa-458e-9fd7-361a1fccc138",
-        "author_ids": [
-            "632214f5-2138-4a07-a4b7-d90e4760de67"
-        ],
+        "id": "b2b56cf4-189b-5c0f-b0a9-b3f4944df2f8",
         "title": "Corps Vivante",
-        "publicher": "Pow Pow",
+        "event_ids": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
+        "author_ids": [
+            "e7bad250-6da0-56ae-ab7c-bb32c2243587"
+        ],
+        "publisher": "Pow Pow",
+        "publishing_year": null
     },
     {
-        "id": "4def763c-a278-4cae-8921-5c5c99a40602",
-        "event_ids": "76fbd112-41aa-458e-9fd7-361a1fccc138",
-        "author_ids": [
-            "58a56d75-229b-4a16-97d1-08debeac3b17"
-        ],
+        "id": "904c9d20-f81a-591d-b110-2e457f6d8f60",
         "title": "Koko n'aime pas le capitalisme",
-        "publicher": "bandes détournées",
+        "event_ids": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
+        "author_ids": [
+            "54bfd2ce-3cf6-5269-8baa-e3571399f282"
+        ],
+        "publisher": "bandes détournées",
+        "publishing_year": null
     },
     {
-        "id": "9849d0fb-de46-42e2-b9ec-1f2a74c254e3",
-        "event_ids": "e0b936ab-9cae-486a-a859-122ebcffa158",
-        "author_ids": [
-            "8b6b2d64-1bf2-4c38-a0a2-f560c948a753"
-        ],
+        "id": "24c15eca-cdd6-52e2-ae02-ca99c6a37884",
         "title": "Scott Pilgrim",
-        "publicher": "HiComics",
+        "event_ids": "2412bc73-7636-5bb4-84b3-059088f2b82f",
+        "author_ids": [
+            "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3"
+        ],
+        "publisher": "HiComics",
+        "publishing_year": null
     },
     {
-        "id": "817983d2-70bc-4f42-9cf9-8854a6d7e0a8",
-        "event_ids": "e0b936ab-9cae-486a-a859-122ebcffa158",
-        "author_ids": [
-            "0609829d-260b-4dfb-8de3-31bc465ca62d",
-            "42866795-a77c-4c31-a308-6b95cf174538"
-        ],
+        "id": "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa",
         "title": "Dark Knight, une histoire vraie",
-        "publicher": "Urban Comics",
+        "event_ids": "2412bc73-7636-5bb4-84b3-059088f2b82f",
+        "author_ids": [
+            "3614d1a7-ee71-5831-acc7-36feb510177c",
+            "8f0a123e-a29e-5620-989c-8b6e9bc9f3de"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
     },
     {
-        "id": "61477d1d-701c-47b4-9d55-4cff9985f013",
-        "event_ids": "e0b936ab-9cae-486a-a859-122ebcffa158",
-        "author_ids": [
-            "e08b7863-5dc3-4a34-bdff-db7dbc962c97"
-        ],
+        "id": "df990528-33c4-5c15-87e0-ad4119be24f3",
         "title": "The Nice house on the lake",
-        "publicher": "Urban Comics",
+        "event_ids": "2412bc73-7636-5bb4-84b3-059088f2b82f",
+        "author_ids": [
+            "11132b63-24cf-5e0c-87e3-f82a28ac89e8"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
     },
     {
-        "id": "d41dedf2-057c-45a7-89e6-b7727a67528e",
-        "event_ids": "e0b936ab-9cae-486a-a859-122ebcffa158",
-        "author_ids": [
-            "6a9d306f-ded4-480a-a622-e87fd1df2a8a"
-        ],
+        "id": "47a951d2-d847-566a-9180-6dad63037708",
         "title": "Motor Girl",
-        "publicher": "Delcourt",
+        "event_ids": "2412bc73-7636-5bb4-84b3-059088f2b82f",
+        "author_ids": [
+            "d7afa3d1-9cbc-5630-9a1e-36550ba2ae00"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
     },
     {
-        "id": "8da64abb-1f3a-44e6-9a38-bd628e997883",
-        "event_ids": "2a531696-466b-46ff-bab3-047dc4c931a1",
-        "author_ids": [
-            "e00e166e-6b09-4da6-991c-bf5806c2b41f"
-        ],
+        "id": "f2ece642-d63f-5322-8208-0d755268b0a7",
         "title": "Les ignorants",
-        "publicher": "Futuropolis",
+        "event_ids": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
+        "author_ids": [
+            "81eb6653-4aac-5e37-b82d-5e6552f5669a"
+        ],
+        "publisher": "Futuropolis",
         "publishing_year": 2011
     },
     {
-        "id": "9c352d35-ddb1-49e0-9d29-dd8f97c6f138",
-        "event_ids": "2a531696-466b-46ff-bab3-047dc4c931a1",
-        "author_ids": [
-            "09f6836a-d7c1-45f0-9ea1-b28a94903449",
-            "a14606f3-f393-4f45-b45d-879166cbe24d"
-        ],
+        "id": "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5",
         "title": "La caste des metas-Barons",
-        "publicher": "Les humanoides associes",
+        "event_ids": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
+        "author_ids": [
+            "10a532a2-fbf4-5e12-af99-152a45092deb",
+            "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b"
+        ],
+        "publisher": "Les humanoides associes",
         "publishing_year": 2002
     },
     {
-        "id": "74599d05-e1b7-42cc-bb41-90a5b84160a5",
-        "event_ids": "2a531696-466b-46ff-bab3-047dc4c931a1",
-        "author_ids": [
-            "00f6d063-ed87-468a-8ec3-b7753d14c2dc"
-        ],
+        "id": "233df3dc-5aec-5505-b208-b7dad00c99b1",
         "title": "Berserk",
-        "publicher": "Glenat",
+        "event_ids": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
+        "author_ids": [
+            "5687b7c6-fc2f-5234-8443-9dccba2dbe03"
+        ],
+        "publisher": "Glenat",
         "publishing_year": 1997
     },
     {
-        "id": "284b8e31-9a99-47f0-a8c9-d902cbd8742b",
-        "event_ids": "2a531696-466b-46ff-bab3-047dc4c931a1",
-        "author_ids": [
-            "4f9d59b1-ccf6-42e0-8419-9ebc5fd658fc"
-        ],
+        "id": "903acafa-4e30-5dcb-85ec-e2d1ce52d741",
         "title": "Pinocchio",
-        "publicher": "Les requins Marteaux",
+        "event_ids": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
+        "author_ids": [
+            "fd5a8b65-5f73-54a0-a57e-54dfea8abc8c"
+        ],
+        "publisher": "Les requins Marteaux",
         "publishing_year": 2008
     },
     {
-        "id": "d2b4ca4a-5a64-4546-b0f5-b77bbb649ae6",
-        "event_ids": "a1420041-db91-47b1-b214-f1c7a789ec2f",
-        "author_ids": [
-            "4aa08b43-74be-48fb-ab77-efa5f2f447f8",
-            "64c10e34-e31a-4c77-b063-52b09ea26acd"
-        ],
+        "id": "d7d58ce0-3034-5dc1-ad26-f2ba302c0559",
         "title": "Time Paradox Ghostwriter",
-        "publicher": "Crunchyroll/Kazé",
+        "event_ids": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
+        "author_ids": [
+            "e5d3b413-fc6e-5914-a5e2-4cca6c66a3b4",
+            "a613ac87-f316-5eb1-a41b-c629d3975868"
+        ],
+        "publisher": "Crunchyroll/Kazé",
+        "publishing_year": null
     },
     {
-        "id": "5c001731-5ba7-4f1c-8e76-c5829cdd01f4",
-        "event_ids": "a1420041-db91-47b1-b214-f1c7a789ec2f",
-        "author_ids": [
-            "72f1a81e-d6e6-4088-af3a-ddc091a9841d"
-        ],
+        "id": "73418c95-df6c-50b9-8713-0cd6437ca1e8",
         "title": "Le Goût de la nectarine",
-        "publicher": "Sarbacane",
+        "event_ids": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
+        "author_ids": [
+            "1f638d4e-04ec-5db9-840e-ac7e034bf933"
+        ],
+        "publisher": "Sarbacane",
+        "publishing_year": null
     },
     {
-        "id": "253a3ad4-9c82-4044-a2d2-f46a7a115c79",
-        "event_ids": "a1420041-db91-47b1-b214-f1c7a789ec2f",
-        "author_ids": [
-            "6614fda8-545b-4388-b1e1-90f65d47debc",
-            "3788f205-7458-461b-8c63-b4b45ad7d396"
-        ],
+        "id": "32c39747-541d-55b3-b217-835c9e26ffdb",
         "title": "Doc Frankenstein",
-        "publicher": "Huginn & Muninn",
+        "event_ids": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
+        "author_ids": [
+            "f8f3e6c7-7f1c-5fa4-95b3-e5943256b388",
+            "cb340fda-dc8b-599c-9ba4-114eff1ad741"
+        ],
+        "publisher": "Huginn & Muninn",
+        "publishing_year": null
     },
     {
-        "id": "e75b098a-9668-4d90-884d-6d8a9de04570",
-        "event_ids": "a1420041-db91-47b1-b214-f1c7a789ec2f",
-        "author_ids": [
-            "7f161fe5-a4bc-4f2d-8f73-c6b14e55f362"
-        ],
+        "id": "12d42d70-3a3c-5d61-bf59-ac8cc63ba0a5",
         "title": "Malgré tout",
-        "publicher": "Dargaud",
+        "event_ids": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
+        "author_ids": [
+            "35cf1a17-190f-5618-a7fe-4554e75983f4"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
     },
     {
-        "id": "df4b209f-4f75-42c0-ba12-931bf2ec8d09",
-        "event_ids": "2f490061-006b-4049-b9b0-50bd43f1e01e",
-        "author_ids": [
-            "afb472e6-b869-4d53-b1d2-cd24620aabf8"
-        ],
+        "id": "0600c708-f469-5a62-87d6-0081966be2b0",
         "title": "Le fils de l'ours père",
-        "publicher": "Hoochie Coochie",
+        "event_ids": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
+        "author_ids": [
+            "21e8c9b3-1fc6-5b3f-9c64-fbc955194792"
+        ],
+        "publisher": "Hoochie Coochie",
+        "publishing_year": null
     },
     {
-        "id": "71715508-a825-48ba-9aa2-7b9344cc40fb",
-        "event_ids": "2f490061-006b-4049-b9b0-50bd43f1e01e",
-        "author_ids": [
-            "75901091-953e-449d-ab80-e8be64e68805"
-        ],
+        "id": "28c74fd2-511a-5728-a28e-8876fa62ece8",
         "title": "la fille maudite du capitaine pirate",
-        "publicher": "éditions de la Cerise",
+        "event_ids": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
+        "author_ids": [
+            "bc5f45bb-b47a-5c9e-9452-990ca3ac5f9a"
+        ],
+        "publisher": "éditions de la Cerise",
+        "publishing_year": null
     },
     {
-        "id": "f306c5c5-4e13-49ae-b405-bfb31acb88db",
-        "event_ids": "2f490061-006b-4049-b9b0-50bd43f1e01e",
-        "author_ids": [
-            "04d9e0c5-3b35-41b4-b8be-8c10ad6bc5f1"
-        ],
+        "id": "c7de24d2-2e14-55d4-9ba8-d7999551971b",
         "title": "Ils Brûlent",
-        "publicher": "6 pieds sous terre",
+        "event_ids": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
+        "author_ids": [
+            "0334ed05-27b2-5dea-b180-3ab2692d85e7"
+        ],
+        "publisher": "6 pieds sous terre",
+        "publishing_year": null
     },
     {
-        "id": "1a6c7e8a-ac9e-42cf-95b9-6278b473158a",
-        "event_ids": "2f490061-006b-4049-b9b0-50bd43f1e01e",
-        "author_ids": [
-            "903e9893-760b-452a-800f-4eec652cd73e"
-        ],
+        "id": "5ce81c2c-23ca-5bfe-899a-011a2c38e9e0",
         "title": "Hoka Hey !",
-        "publicher": "Rue de Sèvres (Label 619)",
+        "event_ids": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
+        "author_ids": [
+            "591a05fd-7b21-55d5-bd3a-0214e741d120"
+        ],
+        "publisher": "Rue de Sèvres (Label 619)",
+        "publishing_year": null
     },
     {
-        "id": "f187ca91-71f5-4be5-835b-d30ea420ef82",
-        "event_ids": "7a94cd40-0496-4305-8139-1e2e9aafa262",
-        "author_ids": [
-            "e1d9cf70-e117-41dc-aae7-75959c26fb55"
-        ],
+        "id": "46840f52-8e72-51fa-8308-bfe9e584b7c8",
         "title": "Lupus",
-        "publicher": "Atrabile",
+        "event_ids": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
+        "author_ids": [
+            "2f4e23e5-9feb-53ab-beae-4555370c8f0d"
+        ],
+        "publisher": "Atrabile",
+        "publishing_year": null
     },
     {
-        "id": "8f2c53cc-b68e-49e7-ab67-3235bafb5ab8",
-        "event_ids": "7a94cd40-0496-4305-8139-1e2e9aafa262",
-        "author_ids": [
-            "2902a7fb-128d-4439-aae4-4e6e8bf5deeb",
-            "b2747248-11cf-4ebd-8725-d29d45217123"
-        ],
+        "id": "66419695-ae35-53a0-b7db-55e99b5d6b02",
         "title": "la Baleine Bibliothèque",
-        "publicher": "le Lombard",
+        "event_ids": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
+        "author_ids": [
+            "095fe88f-e6bc-523c-a338-d927d8a46767",
+            "b64f17a8-7cde-5016-a0ba-5e4599ad52f2"
+        ],
+        "publisher": "le Lombard",
+        "publishing_year": null
     },
     {
-        "id": "52c539de-36d2-4891-9567-a011cb63cae1",
-        "event_ids": "7a94cd40-0496-4305-8139-1e2e9aafa262",
-        "author_ids": [
-            "12e6f712-5af7-436d-9774-446d47b97ef2"
-        ],
+        "id": "970a07a3-e2a0-5c36-bf0f-9a6f4ea83dad",
         "title": "NononBa",
-        "publicher": "Cornelius",
+        "event_ids": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
+        "author_ids": [
+            "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1"
+        ],
+        "publisher": "Cornelius",
+        "publishing_year": null
     },
     {
-        "id": "d71a934a-a526-4b36-94b3-a7dd3b0de248",
-        "event_ids": "7a94cd40-0496-4305-8139-1e2e9aafa262",
-        "author_ids": [
-            "9f2dce06-3b5b-4cf7-84d5-1b6b28f725c1"
-        ],
+        "id": "945ced24-f871-580c-a2cd-e55da6520b39",
         "title": "la Revanche des Bibliothécaires",
-        "publicher": 2024,
+        "event_ids": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
+        "author_ids": [
+            "82f0f18e-ef7e-5f41-8047-ad16d91e05e4"
+        ],
+        "publisher": "2024",
+        "publishing_year": null
     },
+    {
+        "id": "f276e705-9146-5580-823a-15d8c2591660",
+        "title": "Dope Rider",
+        "event_ids": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
+        "author_ids": [
+            "12d81cb8-0977-5c8d-95e1-546f5eddf90d"
+        ],
+        "publisher": "Tanibis",
+        "publishing_year": null
+    },
+    {
+        "id": "714b0f37-f73f-5508-825c-281074c8aebe",
+        "title": "Une nuit avec toi",
+        "event_ids": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
+        "author_ids": [
+            "3147fff6-a2e8-5fc8-8085-78440711c1b3"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
+    },
+    {
+        "id": "c63fb7f3-28e9-51b0-a879-a22cae604ae9",
+        "title": "Pluto",
+        "event_ids": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
+        "author_ids": [
+            "96909ed8-afbc-51b4-828e-cf484c613c2d"
+        ],
+        "publisher": "Kana",
+        "publishing_year": null
+    },
+    {
+        "id": "76da166c-6887-58fe-839c-5ceb1d79b8ee",
+        "title": "Boule de Feu",
+        "event_ids": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
+        "author_ids": [
+            "24f5b427-235c-5460-9de0-85f11a01139a"
+        ],
+        "publisher": "2024",
+        "publishing_year": null
+    },
+    {
+        "id": "4fe38dd6-5f77-5f47-8a7d-4a869f44334a",
+        "title": "Cauchemar",
+        "event_ids": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
+        "author_ids": [
+            "3b40ac72-a75f-5c79-bd75-a460f955ae58"
+        ],
+        "publisher": "l'Employé du moi",
+        "publishing_year": null
+    },
+    {
+        "id": "ca07d9e7-2615-5857-8ff2-c8a481345db9",
+        "title": "Mécanique Céleste",
+        "event_ids": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
+        "author_ids": [
+            "671a3790-6703-5f60-93f7-4c8096394838"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "f9700842-783a-547b-b038-f388c81263c4",
+        "title": "Shit is Real",
+        "event_ids": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
+        "author_ids": [
+            "86f3e63b-c414-594e-af58-abfb190ddea2"
+        ],
+        "publisher": "l'Employé du moi",
+        "publishing_year": null
+    },
+    {
+        "id": "e7880ee2-b182-5a13-8a84-f3877bd0a932",
+        "title": "Evol",
+        "event_ids": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
+        "author_ids": [
+            "7a222e55-c2c0-5fff-acc7-4a9c36238f5f"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "c36e3da5-0be8-5732-a555-fb7a2b9adc95",
+        "title": "La Terre des fils",
+        "event_ids": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
+        "author_ids": [
+            "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5"
+        ],
+        "publisher": "Futuropolis",
+        "publishing_year": null
+    },
+    {
+        "id": "a0258b1a-9505-561d-a6a8-ca69479420d8",
+        "title": "Le Jeune Albert",
+        "event_ids": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
+        "author_ids": [
+            "ae96a2ee-5217-5ca6-b422-07d3393e3b41"
+        ],
+        "publisher": "Les Humanoïdes Associés",
+        "publishing_year": null
+    },
+    {
+        "id": "677a0a0d-9f0e-5524-892e-5feeda95fa37",
+        "title": "Revanche",
+        "event_ids": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
+        "author_ids": [
+            "2c1293b1-0b71-5d73-9217-34bf2c597b62"
+        ],
+        "publisher": "Hoochie Coochie",
+        "publishing_year": null
+    },
+    {
+        "id": "5ee6ce29-7b61-53b4-8994-a0a2e783cf92",
+        "title": "Bone",
+        "event_ids": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
+        "author_ids": [
+            "41d4d07a-dd5b-575e-8575-182029f2ffbc"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "af4e1bb1-ecf0-5912-8197-9d9e0b210b72",
+        "title": "Bagarre Érotique",
+        "event_ids": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
+        "author_ids": [
+            "b28aa578-42b6-53f0-ba2e-0e91a837d1cc"
+        ],
+        "publisher": "Anne Carrière",
+        "publishing_year": null
+    },
+    {
+        "id": "fc30f32a-3e20-5385-b28a-7439ee532389",
+        "title": "Philémon - le Naufragé du \"A\"",
+        "event_ids": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
+        "author_ids": [
+            "2c5d1ecf-6832-57d5-b546-c500ad06204d"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "aa01d166-f99b-5537-9d2f-99f433ffdc97",
+        "title": "Des maux à dire",
+        "event_ids": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
+        "author_ids": [
+            "61d33246-60ce-54a8-9d34-3b08a03ebd0a"
+        ],
+        "publisher": "Sarbacane",
+        "publishing_year": null
+    },
+    {
+        "id": "fc62fcaa-84ef-5a91-a79d-34ee62b436ef",
+        "title": "Les Guerres de Lucas",
+        "event_ids": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
+        "author_ids": [
+            "0609ba11-9dd6-51a2-a1fa-5945569f3a15",
+            "2b7ad5e3-6b65-5786-bd5f-d02f8bcdde29"
+        ],
+        "publisher": "Deman",
+        "publishing_year": null
+    },
+    {
+        "id": "8a50365e-9da9-59dd-bc97-969ed43c22c7",
+        "title": "Far Sector",
+        "event_ids": "b6b7fc5a-d592-5d96-854f-05558c763187",
+        "author_ids": [
+            "57a7df47-868e-598d-8320-562a491eec09",
+            "29e81ba3-c9a8-5437-a577-2324e84c2a22"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "515abf3f-be71-5dc5-a79a-662cd25fccf6",
+        "title": "Play With Fire",
+        "event_ids": "b6b7fc5a-d592-5d96-854f-05558c763187",
+        "author_ids": [
+            "c9b6be22-065c-5547-a9aa-9db3a027d1e6"
+        ],
+        "publisher": "Ici Même",
+        "publishing_year": null
+    },
+    {
+        "id": "0c7c6682-3287-56d0-a8d6-82aea0648529",
+        "title": "Nobles Paysans",
+        "event_ids": "b6b7fc5a-d592-5d96-854f-05558c763187",
+        "author_ids": [
+            "c8a7e06b-5246-59d8-988d-2f1dfc3dcbe7"
+        ],
+        "publisher": "Kurokawa",
+        "publishing_year": null
+    },
+    {
+        "id": "debf7682-e9ad-587d-a814-efdeaad2c9e7",
+        "title": "Forté",
+        "event_ids": "b6b7fc5a-d592-5d96-854f-05558c763187",
+        "author_ids": [
+            "0399b1c8-5e87-58d3-8ea8-63453280e3bb",
+            "83cd0cff-b455-5d5f-b0d2-1620f35ecd54"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "e2102e41-2abb-59a4-b7fe-8d4ecc23e1da",
+        "title": "Kageki Shojo saison 0",
+        "event_ids": "075999c0-bbf4-5524-9f02-8526d66cd913",
+        "author_ids": [
+            "5c77edf3-4fb1-52ab-ab5c-229c1eb836e8"
+        ],
+        "publisher": "Noeve Grafx",
+        "publishing_year": null
+    },
+    {
+        "id": "956b5864-d695-5e4f-b6f3-48078e019fe0",
+        "title": "Gotham Central",
+        "event_ids": "075999c0-bbf4-5524-9f02-8526d66cd913",
+        "author_ids": [
+            "eb085332-9b22-53f0-a527-1e929572ab5a",
+            "00db3447-5ed5-5ba8-a2af-2dd9199c5602"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "ab707df2-5f9e-5bce-ba06-da7fc0e88bfd",
+        "title": "Cardcaptor Sakura",
+        "event_ids": "075999c0-bbf4-5524-9f02-8526d66cd913",
+        "author_ids": [
+            "969606f1-a82b-5683-8a38-a91089eb9598"
+        ],
+        "publisher": "Pika",
+        "publishing_year": null
+    },
+    {
+        "id": "bde7b6df-1144-56af-8a15-03f3710adb93",
+        "title": "Ici même",
+        "event_ids": "075999c0-bbf4-5524-9f02-8526d66cd913",
+        "author_ids": [
+            "f00e5d5f-7bc4-58c0-98a0-7c48ff1b2ead",
+            "8519e2d5-a656-5ce0-9642-74f939ba1e60"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
+    },
+    {
+        "id": "52b5768f-92ea-5ea0-864c-f91c838da16c",
+        "title": "Cosmoknights",
+        "event_ids": "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85",
+        "author_ids": [
+            "e1d64487-9066-57a4-a82b-f95b1f11a41f"
+        ],
+        "publisher": "Bliss",
+        "publishing_year": null
+    },
+    {
+        "id": "13a95766-1ae7-52fc-8158-e51115b8fa4a",
+        "title": "René•e au bois dormant",
+        "event_ids": "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85",
+        "author_ids": [
+            "cc4653dc-b615-54e5-bac1-c35dc48d1341"
+        ],
+        "publisher": "sarbacane",
+        "publishing_year": null
+    },
+    {
+        "id": "39c9b8b4-fc17-5fb3-bda6-7f183cca54c7",
+        "title": "Clémence en colère",
+        "event_ids": "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85",
+        "author_ids": [
+            "07e138d4-c5e0-5e13-81c4-b924dca78d61"
+        ],
+        "publisher": "La Ville Brûle",
+        "publishing_year": null
+    },
+    {
+        "id": "a01a8124-f371-5a31-a90b-8bcf85d43a7c",
+        "title": "titre oublié BD avec grenouille",
+        "event_ids": "7a658366-6710-5724-859d-c94de9e9d9ab",
+        "author_ids": [],
+        "publisher": null,
+        "publishing_year": null
+    },
+    {
+        "id": "321c2793-05ba-57fa-abc0-2c59c7c6aaa3",
+        "title": "Blacksad pour de faux",
+        "event_ids": "7a658366-6710-5724-859d-c94de9e9d9ab",
+        "author_ids": [],
+        "publisher": null,
+        "publishing_year": null
+    },
+    {
+        "id": "5d75aa1d-71ee-5ee7-be23-59e9d10c519a",
+        "title": "Titre oublié manga avec enfant",
+        "event_ids": "7a658366-6710-5724-859d-c94de9e9d9ab",
+        "author_ids": [],
+        "publisher": null,
+        "publishing_year": null
+    },
+    {
+        "id": "6d437cee-8870-53d7-bffa-9aba1bb92823",
+        "title": "Un picsou qui ressemble à Bernard Arnault",
+        "event_ids": "7a658366-6710-5724-859d-c94de9e9d9ab",
+        "author_ids": [],
+        "publisher": null,
+        "publishing_year": null
+    },
+    {
+        "id": "1ed863f9-5aea-574a-8e7a-8a8f061235e5",
+        "title": "Oiseaux de papier",
+        "event_ids": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
+        "author_ids": [
+            "e91e7e71-ed2e-5acb-a42e-2ad624b8ab41"
+        ],
+        "publisher": "ça et là",
+        "publishing_year": null
+    },
+    {
+        "id": "48a7b58b-aa17-5b0d-98ec-fe8a997395c0",
+        "title": "Demande à Modigliani",
+        "event_ids": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
+        "author_ids": [
+            "2d932312-b0bc-5bac-9c2d-dfe07ecede95"
+        ],
+        "publisher": "Naban",
+        "publishing_year": null
+    },
+    {
+        "id": "b089120d-7f10-5457-96b1-b233822e6f5e",
+        "title": "Harleen",
+        "event_ids": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
+        "author_ids": [
+            "60d5489b-14e3-518b-9109-e042747d08ff"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "330732a9-e0e1-5cf1-a00d-ecd08a2bc222",
+        "title": "Ma famille imaginaire",
+        "event_ids": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
+        "author_ids": [
+            "98f266c0-cb80-5d14-8e5c-697e49b48751"
+        ],
+        "publisher": "L'Agrume",
+        "publishing_year": null
+    },
+    {
+        "id": "d0773c0e-efce-5e3f-b88c-b401e6925875",
+        "title": "Barbara l'entre-deux monde",
+        "event_ids": "d22485f9-9242-5a72-bc1e-9c223c27134d",
+        "author_ids": [
+            "45d6dbf8-fbd9-578b-9e9f-8402dc2d31e7"
+        ],
+        "publisher": "Akata",
+        "publishing_year": null
+    },
+    {
+        "id": "4aa33079-62c2-5233-88ae-8e754c339e59",
+        "title": "Clementine",
+        "event_ids": "d22485f9-9242-5a72-bc1e-9c223c27134d",
+        "author_ids": [
+            "57c07569-26eb-52d4-ab34-f8c8caa94ccc"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "1de89bb4-2d86-543c-845e-fba8f42fc847",
+        "title": "Un Orage par jour",
+        "event_ids": "d22485f9-9242-5a72-bc1e-9c223c27134d",
+        "author_ids": [
+            "da949bb6-12f0-5d85-b093-d2ec26926f91"
+        ],
+        "publisher": "Keribus",
+        "publishing_year": null
+    },
+    {
+        "id": "e6eb00f3-e29c-59a5-bf7e-7ca9a65fcd33",
+        "title": "La Route",
+        "event_ids": "d22485f9-9242-5a72-bc1e-9c223c27134d",
+        "author_ids": [
+            "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "a9f1ba28-8e3f-5925-8f8c-bd63fb271d1b",
+        "title": "Dai Dark",
+        "event_ids": "826204d2-0a18-5f15-81c0-1f9730761358",
+        "author_ids": [
+            "2c0a8d04-1eac-5612-a1c7-676822d9ad90"
+        ],
+        "publisher": "Soleil",
+        "publishing_year": null
+    },
+    {
+        "id": "06d42289-e3ad-57c0-aade-03088507faa9",
+        "title": "Les Contes de la mansarde",
+        "event_ids": "826204d2-0a18-5f15-81c0-1f9730761358",
+        "author_ids": [
+            "206efe6f-29f9-5386-b123-f2bbd3f27f6d",
+            "d52a43df-2aa2-547e-b98d-830dec705d02"
+        ],
+        "publisher": "L'Employé du moi",
+        "publishing_year": null
+    },
+    {
+        "id": "34373ae6-8241-5dfd-ac94-c657bd97af69",
+        "title": "Slava T01",
+        "event_ids": "826204d2-0a18-5f15-81c0-1f9730761358",
+        "author_ids": [
+            "3c90a47b-00bd-5d72-b26e-14e9361de953"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "0829463a-3433-53e5-ac54-605311f73a69",
+        "title": "It's Lonely at the Center of the Earth",
+        "event_ids": "826204d2-0a18-5f15-81c0-1f9730761358",
+        "author_ids": [
+            "ec033c79-cf70-5028-8b1d-6b02cccf0b5c"
+        ],
+        "publisher": "Hi Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "f95d6e61-6426-5b0b-9311-b9e8ecb36b78",
+        "title": "Mekka Nikki",
+        "event_ids": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
+        "author_ids": [
+            "25a92ac6-0606-546b-91d9-21824fdc82a1",
+            "ee98cfb4-9b32-5356-b3be-337badf7aa02"
+        ],
+        "publisher": "Les Humanoïdes associés",
+        "publishing_year": null
+    },
+    {
+        "id": "fdf7972d-6b2b-5ace-9939-d1b83cedae14",
+        "title": "Le Cas David Zimmerman",
+        "event_ids": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
+        "author_ids": [
+            "3b934034-aca9-5ef9-a4d4-f0dbf63716dd",
+            "a531559e-8dbe-5b47-b3b7-b6e452214bd7"
+        ],
+        "publisher": "Sarbacane",
+        "publishing_year": null
+    },
+    {
+        "id": "0f55b110-f82c-5092-8299-3149fdc8c9c9",
+        "title": "Au-Dedans",
+        "event_ids": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
+        "author_ids": [
+            "bed4e616-fb1a-51d5-8789-d3a7c519765c"
+        ],
+        "publisher": "404",
+        "publishing_year": null
+    },
+    {
+        "id": "19a60d41-85b5-5230-8e6c-e5537981a6f4",
+        "title": "Malgré tout je suis ici",
+        "event_ids": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
+        "author_ids": [],
+        "publisher": "l'Association",
+        "publishing_year": null
+    },
+    {
+        "id": "c2f61a7e-3816-5686-b9e5-d9556ee77049",
+        "title": "l'Amour Après",
+        "event_ids": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
+        "author_ids": [
+            "c6bfc388-ba3c-5aa7-b627-d7528e7b7f95",
+            "ff780b2f-973b-5b78-8aaf-b22f31bc1bb4"
+        ],
+        "publisher": "Virages Graphiques",
+        "publishing_year": null
+    },
+    {
+        "id": "e98c4039-8132-5dd6-9489-661fca8f7743",
+        "title": "Adieu Eri",
+        "event_ids": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
+        "author_ids": [
+            "e2139e97-c7d1-5124-b077-ea4291aa3032"
+        ],
+        "publisher": "Crunchyroll",
+        "publishing_year": null
+    },
+    {
+        "id": "e24b2289-3eba-5581-9e3b-7c3d08251f70",
+        "title": "Walicho",
+        "event_ids": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
+        "author_ids": [
+            "11f8a644-a339-59d8-af48-8b26d8709fbd"
+        ],
+        "publisher": "Ça et là",
+        "publishing_year": null
+    },
+    {
+        "id": "fb6cbc79-3c98-5889-838a-b334b7606395",
+        "title": "Chair à Canon",
+        "event_ids": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
+        "author_ids": [
+            "ae7b2afb-f773-5588-a836-7f22fa49d247"
+        ],
+        "publisher": "Flblb",
+        "publishing_year": null
+    },
+    {
+        "id": "b0b3870c-0997-5868-bd23-6e08e3cc0aac",
+        "title": "Mobile Suit Gundam - The origin",
+        "event_ids": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
+        "author_ids": [
+            "06d2e44e-3bc3-5c38-80b2-d2bc46f5a2d5"
+        ],
+        "publisher": "Vega",
+        "publishing_year": null
+    },
+    {
+        "id": "1c9e35cc-80d4-5dce-8e80-2874fe876600",
+        "title": "Les Ames enflammées",
+        "event_ids": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
+        "author_ids": [
+            "bac10044-bf28-587c-bf43-2ca135089535"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
+    },
+    {
+        "id": "4066190a-e2a3-5eda-bb01-cd996e6b7eda",
+        "title": "Planetarium Ghost Travel",
+        "event_ids": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
+        "author_ids": [
+            "5ffbe2d2-ae0e-55cf-b3ab-8c691acbaddf"
+        ],
+        "publisher": "Renard Doré",
+        "publishing_year": null
+    },
+    {
+        "id": "dd62a84b-d5d0-581d-85ff-398583396ee1",
+        "title": "Gloutons et Dragons",
+        "event_ids": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
+        "author_ids": [
+            "ac8b85c4-99d5-5de7-a631-34672a8a642e"
+        ],
+        "publisher": "Sakka",
+        "publishing_year": null
+    },
+    {
+        "id": "c7c00974-55df-5ddb-9094-599a49fedc04",
+        "title": "Manger",
+        "event_ids": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
+        "author_ids": [
+            "ce1989f6-f25c-5cf4-9899-cb4528ed5422"
+        ],
+        "publisher": "Cambourakis",
+        "publishing_year": null
+    },
+    {
+        "id": "9a3852a3-baa8-5f2a-aba2-fe494ac3d2d7",
+        "title": "Agughia",
+        "event_ids": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
+        "author_ids": [
+            "8fe7fe5d-f5d1-57fa-9b23-8613e9714774"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "d3ae501d-a740-50fa-9b36-23681a63e221",
+        "title": "Je voudrais me suicider mais j'ai pas le temps",
+        "event_ids": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
+        "author_ids": [
+            "31387e90-fc18-5d6c-8a6a-6bd2ceef6053",
+            "542d6a4e-eee5-5d28-b43b-1522bc6c23b7"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "9e1ead2f-e94b-51c4-a530-25ff413b4630",
+        "title": "L'enfantôme",
+        "event_ids": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
+        "author_ids": [
+            "8c3c54b4-5338-5cf9-9db4-e376482d841b"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
+    },
+    {
+        "id": "1d9f61ac-e443-5d00-95d6-232abbc96584",
+        "title": "Journal d'une disparition",
+        "event_ids": "12815554-e509-5c87-be90-52d0ba1546af",
+        "author_ids": [
+            "0b088127-8e8e-5e67-aade-8ee924e23e14"
+        ],
+        "publisher": "Kana",
+        "publishing_year": null
+    },
+    {
+        "id": "8f3dfff9-18f4-517b-956a-375093f86315",
+        "title": "Ballades",
+        "event_ids": "12815554-e509-5c87-be90-52d0ba1546af",
+        "author_ids": [
+            "d34f9a45-6215-5a8a-b4d6-dfb9d6a92541"
+        ],
+        "publisher": "Atrabile",
+        "publishing_year": null
+    },
+    {
+        "id": "9fb8bc86-0c68-5c44-a864-1bd65f4c4114",
+        "title": "Julius Corentin Acquefacques, prisonnier des rêves - L'origines",
+        "event_ids": "12815554-e509-5c87-be90-52d0ba1546af",
+        "author_ids": [
+            "a0e8081c-c789-5249-a9ad-938d911d3d15"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "69fc7e78-c691-52d1-9568-ff25b698eaab",
+        "title": "Âme augmentée",
+        "event_ids": "12815554-e509-5c87-be90-52d0ba1546af",
+        "author_ids": [
+            "1895a4c2-2cf2-5967-b5b1-2b87bfb4c910"
+        ],
+        "publisher": "404 graphics",
+        "publishing_year": null
+    },
+    {
+        "id": "c503e169-f7e8-50eb-bba0-7d391d6a17ce",
+        "title": "Petite Forêt",
+        "event_ids": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
+        "author_ids": [
+            "a47f6301-1e18-51f0-8386-ac488ee37b7c"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "ebab55bf-6f8b-5ebe-8a63-63805845355c",
+        "title": "Stigma, odyssée sporale",
+        "event_ids": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
+        "author_ids": [
+            "e6332846-dc60-5a6c-83ab-f5180adb17d5"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
+    },
+    {
+        "id": "599583d1-2538-5fdb-ad77-90fc339b3178",
+        "title": "Sentimental Kiss",
+        "event_ids": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
+        "author_ids": [
+            "e582c7f5-c5b4-5f7e-ac05-d3296bfd9708"
+        ],
+        "publisher": "l'Employé du moi",
+        "publishing_year": null
+    },
+    {
+        "id": "510487fd-029b-5a3b-9700-0d11d9582757",
+        "title": "Le Roi Méduse",
+        "event_ids": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
+        "author_ids": [
+            "5140c72e-436a-5c58-85af-fde4a31bd1da"
+        ],
+        "publisher": "Actes Sud BD",
+        "publishing_year": null
+    },
+    {
+        "id": "3dddd453-4856-5647-b862-58ee435de96b",
+        "title": "Le Nirvana est ici",
+        "event_ids": "2e34799f-dc59-5357-a523-c317961dfd16",
+        "author_ids": [
+            "5a24ef24-132a-56bc-aef0-b3b1529d528e"
+        ],
+        "publisher": "Seuil",
+        "publishing_year": null
+    },
+    {
+        "id": "78e93b93-fff0-5559-a078-8ca878174a6c",
+        "title": "Solitude d'un autre genre",
+        "event_ids": "2e34799f-dc59-5357-a523-c317961dfd16",
+        "author_ids": [
+            "091254d8-d0c9-5726-a5c2-f19e2f7c8d92"
+        ],
+        "publisher": "Pika",
+        "publishing_year": null
+    },
+    {
+        "id": "71b57a4d-63c6-5220-b416-c2eacf41695e",
+        "title": "Le Requiem du roi des roses",
+        "event_ids": "2e34799f-dc59-5357-a523-c317961dfd16",
+        "author_ids": [
+            "3732fd8e-96c9-58f7-8134-54e3af2e2b77"
+        ],
+        "publisher": "Kioon",
+        "publishing_year": null
+    },
+    {
+        "id": "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c",
+        "title": "La Montagne entre nous",
+        "event_ids": "2e34799f-dc59-5357-a523-c317961dfd16",
+        "author_ids": [
+            "e9c52477-ae82-5bb5-862b-fe4d54df2502",
+            "787e0d65-0fe6-5b9f-a9ec-1afe8993ea3d"
+        ],
+        "publisher": "Sarbacane",
+        "publishing_year": null
+    },
+    {
+        "id": "1c16dd39-9b71-570b-adf9-dd949b0876ed",
+        "title": "Batman et robin - Année 1",
+        "event_ids": "e86ed83c-1690-5160-a736-d4ab397e1adf",
+        "author_ids": [
+            "c87d7744-49cb-5480-8fd5-ac0903b18d99",
+            "643adc5f-050b-514f-855f-2ff87a990c08"
+        ],
+        "publisher": "Urban",
+        "publishing_year": null
+    },
+    {
+        "id": "7ecc3faa-7448-57ea-b3c3-3fe72ddd322b",
+        "title": "Tokyo ces jours-ci",
+        "event_ids": "e86ed83c-1690-5160-a736-d4ab397e1adf",
+        "author_ids": [
+            "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3"
+        ],
+        "publisher": "Kana",
+        "publishing_year": null
+    },
+    {
+        "id": "2577974a-9695-5f41-94a9-6ba5ebd90174",
+        "title": "Parker - La Proie",
+        "event_ids": "e86ed83c-1690-5160-a736-d4ab397e1adf",
+        "author_ids": [
+            "16787ee4-56ac-5736-b0b0-2d831ee42d6c",
+            "f149dc55-7d01-5e6c-89f4-ed837f8de8b5"
+        ],
+        "publisher": "Dupuis",
+        "publishing_year": null
+    },
+    {
+        "id": "89d152e7-f57c-5b0e-8d95-8f5fad2dc896",
+        "title": "Poulet aux prunes",
+        "event_ids": "e86ed83c-1690-5160-a736-d4ab397e1adf",
+        "author_ids": [
+            "9f6d02b9-d58d-521b-bac5-a096f26c125a"
+        ],
+        "publisher": "l'Association",
+        "publishing_year": null
+    },
+    {
+        "id": "55173791-1d25-5974-be37-4ae3bfac5225",
+        "title": "Poème du vent et des arbres",
+        "event_ids": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
+        "author_ids": [
+            "d6e87a93-7b87-56df-b0b5-784f597acfd5"
+        ],
+        "publisher": "Naban",
+        "publishing_year": null
+    },
+    {
+        "id": "d2606770-6e64-56ad-9f24-2c1734030214",
+        "title": "Alyte",
+        "event_ids": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
+        "author_ids": [
+            "fab79174-cd77-5bff-8ef0-204115fd6685"
+        ],
+        "publisher": "2042",
+        "publishing_year": null
+    },
+    {
+        "id": "ba70089b-dc50-5706-ae33-e7b7f3d3c4ed",
+        "title": "Come Over Come Over",
+        "event_ids": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
+        "author_ids": [
+            "044a392b-edae-5a8b-bf64-8bc911b445b8"
+        ],
+        "publisher": "Ça et Là",
+        "publishing_year": null
+    },
+    {
+        "id": "c422ca47-19e7-5530-96ae-3099c5ec9dc8",
+        "title": "Hollywood menteur",
+        "event_ids": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
+        "author_ids": [
+            "466e5af5-67e4-5fcb-b087-0e8d4f1a7ed6"
+        ],
+        "publisher": "Futuropolis",
+        "publishing_year": null
+    },
+    {
+        "id": "7b60d495-19b6-5aec-83d2-df40acb1d3e8",
+        "title": "Les faux lieux",
+        "event_ids": "b148c708-8268-57c5-987d-7c673b310cee",
+        "author_ids": [
+            "cf14aca0-99b7-5e93-bac5-cc55c93da085"
+        ],
+        "publisher": "Akileos",
+        "publishing_year": null
+    },
+    {
+        "id": "7afa0be1-9f65-5af9-b8ca-8febc5ccfa4a",
+        "title": "Oh, Lenny",
+        "event_ids": "b148c708-8268-57c5-987d-7c673b310cee",
+        "author_ids": [
+            "413f2343-f0c5-5672-aa0a-050973a682f9"
+        ],
+        "publisher": "Tanibis",
+        "publishing_year": null
+    },
+    {
+        "id": "ec34073f-32f3-5b74-8e70-eb2e9937a36f",
+        "title": "Ranma 1/2",
+        "event_ids": "b148c708-8268-57c5-987d-7c673b310cee",
+        "author_ids": [
+            "aea68d40-ddb1-5354-b4e8-5fb4dbca4c9e"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
+    },
+    {
+        "id": "fd110a14-3cb4-5407-a837-b3bae1c9b278",
+        "title": "Les Yeux d'Alex",
+        "event_ids": "b148c708-8268-57c5-987d-7c673b310cee",
+        "author_ids": [
+            "cb6b2c97-9182-501d-90a0-2c812dd7d641"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
+    },
+    {
+        "id": "af92af68-880b-54ec-9b11-b63ac826149b",
+        "title": "Billy Bat",
+        "event_ids": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
+        "author_ids": [
+            "96909ed8-afbc-51b4-828e-cf484c613c2d"
+        ],
+        "publisher": "Pika",
+        "publishing_year": null
+    },
+    {
+        "id": "0227a664-60ac-5e77-bb89-031cf0893d1e",
+        "title": "Road to Nowhere",
+        "event_ids": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
+        "author_ids": [
+            "e7455245-dd03-5c13-a656-e0c6420e9265"
+        ],
+        "publisher": "Misma",
+        "publishing_year": null
+    },
+    {
+        "id": "bb2f4bd6-ea0d-5028-bd8d-d3eb6437888c",
+        "title": "Ushima, l'usurier de l'ombre",
+        "event_ids": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
+        "author_ids": [
+            "3ed49b39-8117-577d-ba13-6ac94a9e388b"
+        ],
+        "publisher": "Kana",
+        "publishing_year": null
+    },
+    {
+        "id": "543529b3-41ab-5afc-a381-7ed1bfab677b",
+        "title": "Soichi",
+        "event_ids": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
+        "author_ids": [
+            "bac0e452-b75b-5cc7-a4e4-ad8adf9ba347"
+        ],
+        "publisher": "Mangetsu",
+        "publishing_year": null
+    },
+    {
+        "id": "11d7eace-ebf2-59d3-a330-cd442d3557a3",
+        "title": "Quand souffle le vent",
+        "event_ids": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
+        "author_ids": [
+            "4abb5d53-7a59-5901-8c93-7de96ba7c098"
+        ],
+        "publisher": "Tanibis",
+        "publishing_year": null
+    },
+    {
+        "id": "1bc85f3d-8932-5b00-b6fd-333b32ee53b9",
+        "title": "Saint-Elme",
+        "event_ids": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
+        "author_ids": [
+            "3254de0b-373e-565d-9416-53a8316474c8",
+            "2f4e23e5-9feb-53ab-beae-4555370c8f0d"
+        ],
+        "publisher": "Delcourt",
+        "publishing_year": null
+    },
+    {
+        "id": "605a6f52-dfac-5d30-9135-70f21673a9c9",
+        "title": "Lettre à Blue bird",
+        "event_ids": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
+        "author_ids": [
+            "bb3b2c50-6f6f-552e-a8aa-c43c4c7b9427"
+        ],
+        "publisher": "Frémok",
+        "publishing_year": null
+    },
+    {
+        "id": "a8920edf-9eb7-5296-9429-4a13002c70c4",
+        "title": "Sacrifice",
+        "event_ids": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
+        "author_ids": [
+            "f7168e39-bf20-5d5a-91f5-7b0b971b588c",
+            "8b277120-560b-5807-b3c5-c0a546bce427"
+        ],
+        "publisher": "Urban",
+        "publishing_year": null
+    },
+    {
+        "id": "980619c8-13ee-54cf-960c-0ad3a452965b",
+        "title": "Helen de Wyndhorn",
+        "event_ids": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
+        "author_ids": [
+            "67021253-b3f9-5131-a5a1-6f1e6996c8bd",
+            "04566a81-2c42-5f40-84bf-169e9ff41670"
+        ],
+        "publisher": "Glénat",
+        "publishing_year": null
+    },
+    {
+        "id": "80dbe48d-5ef6-50a1-8f93-23619b07cbde",
+        "title": "Abélard",
+        "event_ids": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
+        "author_ids": [
+            "7a56b388-39a7-5b66-af71-1a9304760e4a",
+            "a7e5dfca-337c-58a2-8dfb-d1469b851bd9"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "30dd4d30-1325-557c-b42b-6ad0894bf6b8",
+        "title": "Il y a longtemps que je t'aime",
+        "event_ids": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
+        "author_ids": [
+            "da90896c-8026-554d-a736-441570b78261"
+        ],
+        "publisher": "Casterman",
+        "publishing_year": null
+    },
+    {
+        "id": "50afc3e1-c60e-5915-b756-8b0760228a32",
+        "title": "Pilou l'apprenti gigolo",
+        "event_ids": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
+        "author_ids": [
+            "04cef3b4-6b2a-5efc-85f2-2a0ff95481cd"
+        ],
+        "publisher": "IMHO",
+        "publishing_year": null
+    },
+    {
+        "id": "8a2399e8-979b-5ac8-9645-0c778e3f4edc",
+        "title": "Absolute Batman",
+        "event_ids": "59b9a96e-b2d0-5d31-9167-293aed303df5",
+        "author_ids": [
+            "d4584704-3ebe-5a6f-b8f9-bf17fa741a33",
+            "dfaa83f5-acf7-5b22-baf7-0bf497056f9e"
+        ],
+        "publisher": "Urban Comics",
+        "publishing_year": null
+    },
+    {
+        "id": "22420ca8-73c3-508a-a4ca-2f9378f14338",
+        "title": "Tête de chien",
+        "event_ids": "59b9a96e-b2d0-5d31-9167-293aed303df5",
+        "author_ids": [
+            "2ceec585-d739-59b6-948a-6b8117a74f5e",
+            "d1a00a6a-c6a2-526c-8bca-05745c2bdcc0"
+        ],
+        "publisher": "Dargaud",
+        "publishing_year": null
+    },
+    {
+        "id": "46c2d81c-4961-5353-9c99-230e81b565d0",
+        "title": "Soli Deo Gloria",
+        "event_ids": "59b9a96e-b2d0-5d31-9167-293aed303df5",
+        "author_ids": [
+            "69eb4ee1-b8a0-50b0-adec-5f64e115725a",
+            "1a9c1499-d284-5ffe-9045-4e3918619a42"
+        ],
+        "publisher": "Dupuis",
+        "publishing_year": null
+    }
 ];
 
 const authors = [
     {
-        "id": "1a9f4b83-eed9-4091-821a-47f2febaf4f9",
+        "id": "fd51ff5e-d84e-5eae-8cd0-e095e96e3dba",
+        "name": "Jonathan Hickman",
         "bd_ids": [
-            "9837328b-2714-41d7-8282-5d4f20878e3e"
-        ],
-        "name": "Jonathan Hickman"
+            "7d723523-0d8a-5c4f-a040-8ff0cca2bc83"
+        ]
     },
     {
-        "id": "520f828f-dc61-4955-ac0f-e2cc3c516d6d",
+        "id": "2503e0ea-8931-5458-afc8-90b272d6baa0",
+        "name": "Asa Grennvall",
         "bd_ids": [
-            "9dfb6c7e-6109-4f40-af70-697272e076b5"
-        ],
-        "name": "Asa Grennvall"
+            "403fb2b2-7948-5aa1-9cbe-2e9e468a9c05"
+        ]
     },
     {
-        "id": "2c3f82f4-d67a-4edb-a067-87568d4b6853",
+        "id": "bdb4565e-067f-56ca-8936-a076246543f4",
+        "name": "Dominique Goblet",
         "bd_ids": [
-            "1c0a95e8-0e18-49ce-bcd0-628798a8e7c7"
-        ],
-        "name": "Dominique Goblet"
+            "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98"
+        ]
     },
     {
-        "id": "af3cae40-92f1-47b6-8529-41c15bcd8319",
+        "id": "2027444e-c012-54a3-aec8-f68484ffe1eb",
+        "name": "Kai Pfeiffer",
         "bd_ids": [
-            "1c0a95e8-0e18-49ce-bcd0-628798a8e7c7"
-        ],
-        "name": "Kai Pfeiffer"
+            "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98"
+        ]
     },
     {
-        "id": "f3d8fdc0-23ca-48cf-895c-d09100648645",
+        "id": "a7e5dfca-337c-58a2-8dfb-d1469b851bd9",
+        "name": "Renaud Dillies",
         "bd_ids": [
-            "97d205b4-8658-45e4-bdb9-fd98aafae486"
-        ],
-        "name": "Renaud Dillies"
+            "79894bab-2308-5561-b5ba-b688a26f6672",
+            "80dbe48d-5ef6-50a1-8f93-23619b07cbde"
+        ]
     },
     {
-        "id": "87c77482-6aa5-4c28-9c44-25ec02b18acf",
+        "id": "43871c3f-7878-50fd-8691-838780202913",
+        "name": "Dylan Horrocks",
         "bd_ids": [
-            "6d92e271-98a9-4bdd-bbfb-fc81d1b35c98"
-        ],
-        "name": "Dylan Horrocks"
+            "995dd270-3ead-51df-a96b-919cd922cbea"
+        ]
     },
     {
-        "id": "bbba6b5b-829f-4869-b697-e1c9bda26a93",
+        "id": "bd00fc5a-20dc-576b-bad2-a3336306d052",
+        "name": "Usamaru Furuya",
         "bd_ids": [
-            "483eb6fc-720c-488b-b930-2c73d0484dcb"
-        ],
-        "name": "Usamaru Furuya"
+            "76b4d2f1-cdb5-5aae-9479-3daf719d8adb"
+        ]
     },
     {
-        "id": "d031ff67-2ca9-4010-b90c-34b187f11a00",
+        "id": "402fbda6-fe33-5e95-a64c-4385f9029a38",
+        "name": "Jean-Michel Dupont",
         "bd_ids": [
-            "0f78fba4-f29f-4d4b-806b-b40cf59d148d"
-        ],
-        "name": "Brecht Evens"
+            "06175f53-82fc-5df0-a3d6-33be607df9c8",
+            "75fc73a4-84d6-50f0-99d9-b7445c392bb8"
+        ]
     },
     {
-        "id": "17fa2207-fee1-4160-9f63-b122b8c28c58",
+        "id": "499e8af8-50a7-57f3-8d89-f5d793796f9d",
+        "name": "Mezzo",
         "bd_ids": [
-            "7f62e8d4-f79d-4faa-99af-f93ea68668d9"
-        ],
-        "name": "Kurt Busiek"
+            "06175f53-82fc-5df0-a3d6-33be607df9c8",
+            "75fc73a4-84d6-50f0-99d9-b7445c392bb8"
+        ]
     },
     {
-        "id": "c6d3878c-fce5-415d-b75d-d9b1065547dd",
+        "id": "5140c72e-436a-5c58-85af-fde4a31bd1da",
+        "name": "Brecht Evens",
         "bd_ids": [
-            "7f62e8d4-f79d-4faa-99af-f93ea68668d9"
-        ],
-        "name": "Stuart Immonen"
+            "8f57610f-1014-5596-8015-17b94899cd58",
+            "510487fd-029b-5a3b-9700-0d11d9582757"
+        ]
     },
     {
-        "id": "b0279423-9377-4db4-a1ad-675ee78a01f9",
+        "id": "298957cc-14c1-506e-b3d1-61603cbccd87",
+        "name": "Francis Masse",
         "bd_ids": [
-            "fa8d1c03-c37a-40ad-a370-0af4e1798eef"
-        ],
-        "name": "Francois Lepage"
+            "dc370931-0191-5023-a121-09e365903d81"
+        ]
     },
     {
-        "id": "abbb0316-5bb5-4998-919f-9ab9e23f4273",
+        "id": "72a26f1a-77d7-531c-a4f4-2018eeb616ce",
+        "name": "Francois Lepage",
         "bd_ids": [
-            "fa8d1c03-c37a-40ad-a370-0af4e1798eef"
-        ],
-        "name": "Emmanuel Lepage"
+            "4c2f3bd9-177e-561b-a197-3579528230ae"
+        ]
     },
     {
-        "id": "a5c3db57-9e8f-4024-aabd-36e933f875bb",
+        "id": "b678c865-cc90-539b-8e87-b8b7bd979836",
+        "name": "Emmanuel Lepage",
         "bd_ids": [
-            "80f58f18-c3d8-4ec3-8246-fca020657281",
-            "aac28fd0-a6bd-488f-87d4-8ef1d3a960a0"
-        ],
-        "name": "Jean-Michel Dupont"
+            "4c2f3bd9-177e-561b-a197-3579528230ae"
+        ]
     },
     {
-        "id": "1ee7fed9-03e1-42a8-91ff-5c7d2ae89136",
+        "id": "6b6badf0-ebf9-58a7-8c65-f1d065349439",
+        "name": "Kurt Busiek",
         "bd_ids": [
-            "80f58f18-c3d8-4ec3-8246-fca020657281",
-            "aac28fd0-a6bd-488f-87d4-8ef1d3a960a0"
-        ],
-        "name": "Mezzo"
+            "979cc21c-4c87-5805-b5f5-6f5f3f1606d2"
+        ]
     },
     {
-        "id": "4acc321b-0543-4d13-bc83-88d92d27435c",
+        "id": "fa90699d-7b23-523d-b295-cb62820b4f9b",
+        "name": "Stuart Immonen",
         "bd_ids": [
-            "dafdab3f-492a-4313-8de3-231b6f2a1241"
-        ],
-        "name": "Francis Masse"
+            "979cc21c-4c87-5805-b5f5-6f5f3f1606d2"
+        ]
     },
     {
-        "id": "0d638f28-ab4b-417b-a336-abd38a7959f8",
+        "id": "0cf5be42-674c-5e17-9e49-7fb184b1431c",
+        "name": "Jérémy Le Corvaisier",
         "bd_ids": [
-            "b4a3e5b7-2145-4fd9-88b4-074a4cf07d06"
-        ],
-        "name": "Jérély Le Corvaisier"
+            "beee135e-1fed-5a0c-9083-dde2ebaec54d"
+        ]
     },
     {
-        "id": "3cebdb24-65e1-4ec0-b321-24eb518b025d",
+        "id": "d4584704-3ebe-5a6f-b8f9-bf17fa741a33",
+        "name": "Scott Snyder",
         "bd_ids": [
-            "0d0f34ea-2996-4b7a-99bc-a9399bfe7f58"
-        ],
-        "name": "Scott Snyder"
+            "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d",
+            "8a2399e8-979b-5ac8-9645-0c778e3f4edc"
+        ]
     },
     {
-        "id": "378c8d98-2378-4b9f-a924-f0fa75695716",
+        "id": "f2c424bc-1c49-51c1-b24c-e35a2aa03969",
+        "name": "Sean Murphy",
         "bd_ids": [
-            "0d0f34ea-2996-4b7a-99bc-a9399bfe7f58",
-            "44a2a8b0-fdb2-4e23-a414-8bc5586d0cc4"
-        ],
-        "name": "Sean Murphy"
+            "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d",
+            "112b74f7-40f7-535a-aab9-b13d3c94c4d2"
+        ]
     },
     {
-        "id": "e051e53f-3da0-4eca-b0f6-eb2bc68e029b",
+        "id": "3bb69f39-439a-56b4-8c8b-84229ff231ba",
+        "name": "Jerome Charyn",
         "bd_ids": [
-            "22496ff9-3496-46de-831a-85340faea3f1"
-        ],
-        "name": "Jerome Charyn"
+            "db8922f2-954d-5063-9ca0-699e952b7520"
+        ]
     },
     {
-        "id": "00109334-6058-439c-b242-7267bfb8d255",
+        "id": "4d4f91cb-cbe7-5303-8271-d641cf6a6221",
+        "name": "Francois Boucq",
         "bd_ids": [
-            "22496ff9-3496-46de-831a-85340faea3f1"
-        ],
-        "name": "Francois Boucq"
+            "db8922f2-954d-5063-9ca0-699e952b7520"
+        ]
     },
     {
-        "id": "1565c0e9-fdbe-49af-93e5-39f6e48fd2c6",
+        "id": "0eb89bcb-1cb8-54fb-84dd-ae9d7268c805",
+        "name": "Antoine Marchalot",
         "bd_ids": [
-            "20b6a713-d3a9-455c-bb88-8fe7f3d41eb8"
-        ],
-        "name": "Antoine Marchelot"
+            "3da21605-8214-54c2-b22c-e217a9c9ce93"
+        ]
     },
     {
-        "id": "6c149804-848f-498d-a169-e6602d77139b",
+        "id": "95fa1c0a-912a-55cc-8056-f531d33f882e",
+        "name": "Olivier Bocquet",
         "bd_ids": [
-            "f8a0e7bd-c4d2-4cf5-be7c-d419cae142b6"
-        ],
-        "name": "Olivier Bocquet"
+            "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9"
+        ]
     },
     {
-        "id": "0887b524-374e-489e-8c72-530ba3f83ae4",
+        "id": "48f4c9b6-4f07-53ad-bd78-dfc79b024297",
+        "name": "Julie Rocheleau",
         "bd_ids": [
-            "f8a0e7bd-c4d2-4cf5-be7c-d419cae142b6"
-        ],
-        "name": "Julie Rocheleai"
+            "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9",
+            "9c926764-7669-5585-8219-0f0fb31f3498"
+        ]
     },
     {
-        "id": "31c09700-f274-44c4-a757-f4c2e0d1aab8",
+        "id": "54ffe919-5f0b-553a-bd79-e6c9314fe6ba",
+        "name": "Delphine Panique",
         "bd_ids": [
-            "df2cd8ed-8193-4a5c-98c4-819b81f0efb9"
-        ],
-        "name": "Delphine Panique"
+            "43bbd0e5-e692-5e43-950a-eb10bd288972"
+        ]
     },
     {
-        "id": "d197353d-b2d6-4b00-b5ea-e85d029b09fb",
+        "id": "f22a840a-ae7b-585b-b790-d0e5e0a22043",
+        "name": "Tetsuya Tsutsui",
         "bd_ids": [
-            "185ebb47-f707-4b7d-8432-fe8429ef92c6"
-        ],
-        "name": "Tetsuya Tsutsui"
+            "f5bfa282-0bba-5c25-819a-7189c4fa979f"
+        ]
     },
     {
-        "id": "32c246b1-faab-45ec-a221-3255ebbef9a3",
+        "id": "617cfc5a-f2fa-5b31-9e82-f0e71d742d38",
+        "name": "Gilbert Hernandez",
         "bd_ids": [
-            "d0c5e14f-d469-4e34-a39f-824b9464c4b5"
-        ],
-        "name": "Gilbert Hernandez"
+            "38c7eb79-a784-51a2-bf4e-94b788834ea9"
+        ]
     },
     {
-        "id": "a6fda75a-6d4c-40c2-a19f-cc5dab5bd4dc",
+        "id": "82b73354-e24a-5897-a4d7-a14c69097c14",
+        "name": "Grant Morrison",
         "bd_ids": [
-            "b1971319-3708-4bfd-880a-127ab39fe0b7"
-        ],
-        "name": "Grant Morrison"
+            "aaa5174a-d012-5a86-83ff-88ee561cee78"
+        ]
     },
     {
-        "id": "5be467a5-e4cf-4594-bd74-4f2bda595bbb",
+        "id": "950aea29-52b1-5b38-916e-69bd7222eed0",
+        "name": "Frank Quitely",
         "bd_ids": [
-            "b1971319-3708-4bfd-880a-127ab39fe0b7"
-        ],
-        "name": "Franl Quitely"
+            "aaa5174a-d012-5a86-83ff-88ee561cee78",
+            "2ab19c62-8468-5b16-99a6-f5b97153b993"
+        ]
     },
     {
-        "id": "00528d2d-1c56-4793-8876-cc985ba1f2c9",
+        "id": "e2973a8e-b6fe-5378-b489-513f29620f71",
+        "name": "Jean-Pierre Dionnet",
         "bd_ids": [
-            "2b6b7ef8-3160-4873-a333-c9ca9f4bab4c"
-        ],
-        "name": "Jean-Pierre Dionnet"
+            "a8f38346-3d87-5afd-9d0c-423aea300f2a"
+        ]
     },
     {
-        "id": "ed4a3b26-5777-4ff6-a66a-081f73b353db",
+        "id": "06153a78-09a9-505d-94b2-6d01b716bd24",
+        "name": "Michel Pirus",
         "bd_ids": [
-            "2b6b7ef8-3160-4873-a333-c9ca9f4bab4c"
-        ],
-        "name": "Michel Pirus"
+            "a8f38346-3d87-5afd-9d0c-423aea300f2a"
+        ]
     },
     {
-        "id": "ccd29f6c-8bc5-4193-8450-4dee78b3ed66",
+        "id": "f51793e5-443e-5f81-a04e-65fb91a807e1",
+        "name": "Marion Fayolle",
         "bd_ids": [
-            "1dee3094-d880-40c9-80b0-5d101133e631"
-        ],
-        "name": "Marion Fayolle"
+            "09bf28a9-0ce1-5a09-a99c-a21fcffed008"
+        ]
     },
     {
-        "id": "b2ca8b96-7210-4c87-964d-c3523246fa6b",
+        "id": "d8152d45-6327-555b-bab0-5773452caeed",
+        "name": "Isabel Greenberg",
         "bd_ids": [
-            "9bdc7094-67ec-4e3c-8d23-83b3c090a4d5"
-        ],
-        "name": "Isabel Greenberg"
+            "d6cae607-a1ff-5926-a3f2-bb062c84ffb8",
+            "6cbc856d-bbf3-517d-8096-69dcf2e9b270"
+        ]
     },
     {
-        "id": "17cbcd69-8615-4c77-ae4f-37e243e90627",
+        "id": "e09ec5a1-670e-5f3d-9f32-349c029bac21",
+        "name": "Nicolas de Crécy",
         "bd_ids": [
-            "2b48027e-e2c6-404c-bfc9-ef1b40287604"
-        ],
-        "name": "Nicolas de Crécy"
+            "ae0bc9de-368c-501b-bad7-5bbbe89576fb"
+        ]
     },
     {
-        "id": "cfb2a830-d34f-4497-8f21-1e10da1e11ce",
+        "id": "61b42f2a-c779-5680-b591-6e6128f1a1b7",
+        "name": "Simon Spurrier",
         "bd_ids": [
-            "318f03d3-7f08-445a-bfd8-5d68ebbaa06f"
-        ],
-        "name": "Simon Spurrier"
+            "20d228c3-067c-5067-90c8-cb8cc271fe6f"
+        ]
     },
     {
-        "id": "5405cd43-79fa-4700-8e92-a78861043e12",
+        "id": "42648312-3057-56f3-a03c-346bc337f3f8",
+        "name": "Jeff Stokely",
         "bd_ids": [
-            "318f03d3-7f08-445a-bfd8-5d68ebbaa06f"
-        ],
-        "name": "Jeff Stokely"
+            "20d228c3-067c-5067-90c8-cb8cc271fe6f"
+        ]
     },
     {
-        "id": "7ed0eab4-d4fa-4206-a56a-5f0f595dd73c",
+        "id": "8de0a770-0d52-5e17-97db-ef10383eb7e6",
+        "name": "Alex Baladi",
         "bd_ids": [
-            "95d1be36-9e0f-42e8-9b2c-15b4a6996396",
-            "f4368a21-09d6-44bb-bea5-d6bc40cf3589"
-        ],
-        "name": "Alex Baladi"
+            "fa873fe7-0449-5f89-8fc9-cfe1654b8041",
+            "9b7133ae-5594-5171-a72d-28be9d48ac38"
+        ]
     },
     {
-        "id": "cb4ccbd8-6560-4b25-bbfe-043dbea37a38",
+        "id": "742c3aed-25a1-5152-a908-bd41647dc69a",
+        "name": "Vehlmann",
         "bd_ids": [
-            "b1063158-c75e-418f-b8cd-0d6402c2d4b4"
-        ],
-        "name": "Vehlmann"
+            "795622ed-bfb2-50c3-8569-fb6f10d3cddd"
+        ]
     },
     {
-        "id": "96d9274c-8122-47fc-b0e2-cdf579fbeb25",
+        "id": "b818290e-2fbd-585a-828a-479920a33e88",
+        "name": "Kerascoët",
         "bd_ids": [
-            "b1063158-c75e-418f-b8cd-0d6402c2d4b4"
-        ],
-        "name": "Kerascoët"
+            "795622ed-bfb2-50c3-8569-fb6f10d3cddd"
+        ]
     },
     {
-        "id": "e9a8b682-9c1c-4e79-9562-b088063d655c",
+        "id": "3c63d44c-9b4f-596e-9bd5-84c3786f15dd",
+        "name": "Scott McCloud",
         "bd_ids": [
-            "ac5e003e-9af3-4c18-9a65-b2eb1459bb2d"
-        ],
-        "name": "Scott McCloud"
+            "e49de7c1-067d-5937-b900-075d3a2f7799"
+        ]
     },
     {
-        "id": "6e9927b7-1075-4594-8320-293f31680715",
+        "id": "32df707a-3433-582f-b61e-ae27388d4713",
+        "name": "Debbie Drechsler",
         "bd_ids": [
-            "e8f72928-1c18-4a4f-a543-b4fd65be24ee"
-        ],
-        "name": "Debby Drechsler"
+            "cef800c9-32c9-52ab-bf7c-f734ba6c65db"
+        ]
     },
     {
-        "id": "9771d944-b2b7-4efc-a281-ef2a8f34da39",
+        "id": "b4e9729a-f1c7-5994-b791-a4c365333f5b",
+        "name": "Inio Asano",
         "bd_ids": [
-            "decf5783-98fa-4f20-8401-2f78ece8a621",
-            "ea970a7d-22cd-45d6-adf1-171eb3158a46",
-            "fc8d6453-e11f-46cd-9c3e-bcb2fa058153",
-            "a171a8c1-a41b-4819-bf75-f5cbf317e4a9"
-        ],
-        "name": "Inio Asano"
+            "7b7682a7-12fd-5c89-81c1-ce4b2ec3cedd",
+            "49643a22-7c3c-590e-909d-2b458a3c9812",
+            "3c1a9222-8bc6-5dc9-9f80-8d86851d8aec",
+            "90278e20-06f0-50f8-a8f0-04b97acfe3ce"
+        ]
     },
     {
-        "id": "8cfb6b3a-2fec-44dc-a760-4b21f417a6bf",
+        "id": "000c49b2-0453-5107-a06f-58c9b1fea271",
+        "name": "Stéphane Levallois",
         "bd_ids": [
-            "841b0513-c857-4138-a6fc-5141152167cb"
-        ],
-        "name": "Stéphane Levallois"
+            "485c9772-b7f3-5b59-99a0-5bc51d90677a"
+        ]
     },
     {
-        "id": "528ad92c-e8c3-430b-b704-335182979b14",
+        "id": "b4ba44f4-199f-5988-8479-e4422af71a49",
+        "name": "Shintaro Kago",
         "bd_ids": [
-            "c61f8f77-2789-4b95-8b1c-fcf969ade6cf",
-            "ee1d8db0-78a6-4451-813e-161ae7804c28",
-            "d57ca31a-04e4-425b-b46b-6487fba5433d"
-        ],
-        "name": "Shintaro Kago"
+            "70aad9fb-30b1-5177-8126-c531467c028e",
+            "18b43f2b-e8c9-553e-92e1-c13027830753",
+            "553ba159-d15e-5f69-a159-fc28c71edeca"
+        ]
     },
     {
-        "id": "7db3ec78-f112-490d-a834-a6333706d83a",
+        "id": "94dabec5-6d21-52f5-bcb2-0298eeca942e",
+        "name": "Zep",
         "bd_ids": [
-            "6cf2a6db-be78-46dd-be21-bf7ee5adf8bf"
-        ],
-        "name": "Zep"
+            "f9920e4a-7ba8-5f19-8842-ceaf65dd8b9d"
+        ]
     },
     {
-        "id": "22509f8e-8545-4529-9dc6-e9bc8a787ea9",
+        "id": "40a78c44-4310-5562-8dc7-76d43d290bda",
+        "name": "Max de Radiguès",
         "bd_ids": [
-            "8adf0a15-bca3-489e-9ddb-bca1db825b5c"
-        ],
-        "name": "Max de Radiguès"
+            "9f0067bc-02b7-50da-a83e-61b896fc352d"
+        ]
     },
     {
-        "id": "77702c18-ddbd-4154-8c7d-de48eff24e53",
+        "id": "86b380e5-e629-5310-a14c-a81874f5b0be",
+        "name": "Benoit Vidal",
         "bd_ids": [
-            "fed7c074-f2bf-4c81-a54c-188ccd10be8a"
-        ],
-        "name": "Benoit Vidal"
+            "da2485f6-6f49-5a22-a601-34c06f8fe55f"
+        ]
     },
     {
-        "id": "199ac1dd-8a42-4219-9edc-885aa2f2e061",
+        "id": "b51e43e0-93f2-5e19-a4ea-6c9847f8a7e3",
+        "name": "Florence Dupré la Tour",
         "bd_ids": [
-            "dc7741f6-ff1a-4ce1-8f1a-6e396a643851"
-        ],
-        "name": "Florence Dupré la Tour "
+            "fb96800d-99ad-51c1-a1e8-f27c7d8fbb10"
+        ]
     },
     {
-        "id": "cbb6014a-07d7-426d-93c5-ac6d4367fccc",
+        "id": "bb4e4e79-2608-504d-8924-888397c60925",
+        "name": "Benjamin Renner",
         "bd_ids": [
-            "aa88a1ab-20e8-4509-9fd6-44b2d6b93795"
-        ],
-        "name": "Benjamin Renner "
+            "94bd0510-12eb-51a0-a26e-0c444a702785"
+        ]
     },
     {
-        "id": "c1c20b38-9aa1-4c24-9d75-242b1ccc8a5b",
+        "id": "073d9082-a5d3-506a-985d-eb0aebe059a8",
+        "name": "Killoffer",
         "bd_ids": [
-            "2cb5d4c0-e601-426a-8966-36b1d8f03fde"
-        ],
-        "name": "Killoffer "
+            "36e7eb28-ed60-5818-bc3a-eb39ae1e3105"
+        ]
     },
     {
-        "id": "0672196f-e5e9-4b86-a209-0284176cd1a9",
+        "id": "ce0db7bb-6bd3-522e-bc15-0b4f81ad598e",
+        "name": "Philippe Richelle",
         "bd_ids": [
-            "544c4e83-030b-4111-b60c-a2ba17c90bf9"
-        ],
-        "name": "Philippe Richelle"
+            "331c85b8-47f5-56b5-bdb2-c4ad8b36a229"
+        ]
     },
     {
-        "id": "af2d2066-742e-4c37-87dd-5ec19ca76b92",
+        "id": "ecb4c9b9-3668-504e-b85a-91058c2412a2",
+        "name": "Frédéric Rébéna",
         "bd_ids": [
-            "544c4e83-030b-4111-b60c-a2ba17c90bf9"
-        ],
-        "name": "Frédéric Rébéna "
+            "331c85b8-47f5-56b5-bdb2-c4ad8b36a229"
+        ]
     },
     {
-        "id": "e0652252-b61d-467c-baa2-d6433cf20ae4",
+        "id": "e9d80524-250a-5eed-b35a-7c4e80bac050",
+        "name": "Didier Quella-Guyot",
         "bd_ids": [
-            "79a193ae-62aa-47a1-9ab3-bfe22c28e3f8"
-        ],
-        "name": "Didier Quella-Guyot "
+            "6dcd8372-864e-593c-aa7b-d1c4421ca80a"
+        ]
     },
     {
-        "id": "dca0114b-1e58-4fde-ba1b-aadd872f9291",
+        "id": "9425decb-3a8b-5e37-aac5-5ccb7a8b06d7",
+        "name": "Sébastien Morice",
         "bd_ids": [
-            "79a193ae-62aa-47a1-9ab3-bfe22c28e3f8"
-        ],
-        "name": "Sébastien Morice "
+            "6dcd8372-864e-593c-aa7b-d1c4421ca80a"
+        ]
     },
     {
-        "id": "31bd3c0d-4725-47bf-a006-9ee45f9af777",
+        "id": "96f050f1-d364-5995-835b-e0735f743da1",
+        "name": "Derf Backderf",
         "bd_ids": [
-            "07919f9c-c5a2-4180-b589-93059a24ecc6"
-        ],
-        "name": "Derf Backderf "
+            "ee4b52be-c659-5eff-ae4e-44cebfeb024c"
+        ]
     },
     {
-        "id": "bbe69749-c1ff-4eea-9751-07ff84a64e3c",
+        "id": "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e",
+        "name": "Toshifumi Sakurai",
         "bd_ids": [
-            "cc310992-7cb2-4c69-be8e-be8f8b39aa8f",
-            "29a4b784-45b9-46cb-8117-e9d3fb007080"
-        ],
-        "name": "Toshifumi Sakurai"
+            "e9a8d3e6-7671-5522-9438-1ca74a7d4a54",
+            "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"
+        ]
     },
     {
-        "id": "039505f8-da2d-4bf2-9a44-5ec918a31ca4",
+        "id": "0de81355-7467-5c84-ac5a-fda83bddd329",
+        "name": "Christopher Hittinger",
         "bd_ids": [
-            "7a54d1ff-56af-4861-83c5-76c749b5bb4f"
-        ],
-        "name": "Christopher Hittinger "
+            "bab472e5-dba8-56e8-94b4-eaca12df0767"
+        ]
     },
     {
-        "id": "4d85c11f-6697-4c24-91d7-4fab4d80b208",
+        "id": "55310ba7-320a-5abb-8b39-eff41549b0f1",
+        "name": "Fabien Nury",
         "bd_ids": [
-            "68363bbb-e008-4e5c-8909-3072c62ef5a5"
-        ],
-        "name": "Fabien Nury, Xavier Dorison "
+            "5879ed08-b528-54fa-b889-cb9b6654c5e6"
+        ]
     },
     {
-        "id": "ad490815-e831-4afd-8704-49c2052f7dc2",
+        "id": "5c38e890-27df-567f-9c6f-bcec8ceea617",
+        "name": "Xavier Dorison",
         "bd_ids": [
-            "68363bbb-e008-4e5c-8909-3072c62ef5a5"
-        ],
-        "name": "Laurent Astier "
+            "5879ed08-b528-54fa-b889-cb9b6654c5e6"
+        ]
     },
     {
-        "id": "41171ad6-6975-434e-817e-b52bf5c2b119",
+        "id": "a0303dba-bfa5-5dbc-8c2a-7cc1352a5f7e",
+        "name": "Laurent Astier",
         "bd_ids": [
-            "e2b21d71-6571-4a6e-8f7b-3bff310a0ed2"
-        ],
-        "name": "Jano "
+            "5879ed08-b528-54fa-b889-cb9b6654c5e6"
+        ]
     },
     {
-        "id": "f7682244-3bb2-407d-9649-82b4ea86bac6",
+        "id": "33d9e522-4553-5c30-84d9-90627de2766d",
+        "name": "Jano",
         "bd_ids": [
-            "9d3ed2f9-0019-40b0-aa62-5e865b1d0bc9"
-        ],
-        "name": "Erich Ohser  "
+            "c8efe667-cfa0-5265-92b3-8f32fbeb53b1"
+        ]
     },
     {
-        "id": "b7fc069a-373c-4b62-a9f4-1fe1755d4b88",
+        "id": "6784186c-7620-5323-ba49-f65e51e6ae6f",
+        "name": "Erich Ohser",
         "bd_ids": [
-            "8b7f7874-332c-49e0-8535-334bddb11f01"
-        ],
-        "name": "Dennis O'Neil "
+            "0ee6ba43-46ad-5c80-8a2e-5114850d943b"
+        ]
     },
     {
-        "id": "de271203-5671-47d2-8cef-7423c5cb9e40",
+        "id": "1447e129-555d-532d-8df9-d42e6407feef",
+        "name": "Dennis O'Neil",
         "bd_ids": [
-            "8b7f7874-332c-49e0-8535-334bddb11f01"
-        ],
-        "name": "Neal Adams, Dan Adkins"
+            "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"
+        ]
     },
     {
-        "id": "7df04d0f-d270-49f7-891b-5efe94165489",
+        "id": "21ea33cb-1507-5e60-80c3-10871c80788b",
+        "name": "Neal Adams",
         "bd_ids": [
-            "e7f39044-2efd-4fe4-9b57-5fa2a1590245"
-        ],
-        "name": "Pozla"
+            "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"
+        ]
     },
     {
-        "id": "6146da58-13e6-467e-96d3-b8ba915ca62d",
+        "id": "dd7e20bf-bcd1-5b90-a7d5-96c2ef461276",
+        "name": "Dan Adkins",
         "bd_ids": [
-            "a3c2d740-478d-47e6-be1e-099e6e599a70"
-        ],
-        "name": "Jay Hosler"
+            "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"
+        ]
     },
     {
-        "id": "13b0104e-4fe5-4c37-b523-22b27d38a76c",
+        "id": "93d9e02c-ca19-59ba-a0ff-fe436c3a55bf",
+        "name": "Pozla",
         "bd_ids": [
-            "ae77446d-f628-4f88-9131-4a2ccdedb708"
-        ],
-        "name": "Adrien Demont "
+            "5cad8b88-954e-5800-bf00-9a0844b4317d"
+        ]
     },
     {
-        "id": "9e273540-7600-478f-9d37-97af39416389",
+        "id": "fbc80bf7-51eb-58fc-b8c2-66228d9518a3",
+        "name": "Jay Hosler",
         "bd_ids": [
-            "bbebf137-b5dc-410c-913f-330e1a8c74f8"
-        ],
-        "name": "Lorenzo Mattotti "
+            "a1271973-c370-5a5f-a7d4-8feb30577f49"
+        ]
     },
     {
-        "id": "d8ad7782-4b56-4f5e-8a12-307b373c76ca",
+        "id": "0ca16d5c-a8ba-5db2-9f06-f74b056d9c83",
+        "name": "Adrien Demont",
         "bd_ids": [
-            "7b6a1587-c8e8-4193-84c9-d569c958e996"
-        ],
-        "name": "Julia Wertz "
+            "169ce90d-4993-5277-b4b4-898b948ae30b"
+        ]
     },
     {
-        "id": "d5ddbd34-419a-4b0b-a5c7-e2ef19dfb912",
+        "id": "1a15581a-5279-5430-876c-2e8ffa8ff9a9",
+        "name": "Lorenzo Mattotti",
         "bd_ids": [
-            "cc9396b7-2326-4a15-87b5-0d1289e4bae5"
-        ],
-        "name": "Fred Bernard"
+            "c11af8d5-9a5d-5d5d-8a37-806ab326e55e"
+        ]
     },
     {
-        "id": "59db9499-101d-40c0-985e-a571efe0a417",
+        "id": "c1ffebeb-922e-5aec-a97e-43302c30360d",
+        "name": "Julia Wertz",
         "bd_ids": [
-            "f0ffd3a4-44a2-4cfa-95a7-f167aa1f5c50"
-        ],
-        "name": "Sergio Toppi "
+            "acef282e-003f-5e71-a1db-09b55471da17",
+            "af8eb788-7a27-5205-84b1-ae1298595b7d"
+        ]
     },
     {
-        "id": "3b7990f3-ffdc-4aaf-8282-bdc7ef575675",
+        "id": "d0b44328-312e-5462-94fc-6071926328cf",
+        "name": "Fred Bernard",
         "bd_ids": [
-            "9b95323f-bf69-435c-854e-0bf889858abc"
-        ],
-        "name": "Richard McGuire"
+            "429db244-0244-5954-aed2-67933069011e"
+        ]
     },
     {
-        "id": "bd031c38-2184-4cf1-b770-00331fc44097",
+        "id": "64050749-07c1-53a7-82b9-41a75f355e82",
+        "name": "Sergio Toppi",
         "bd_ids": [
-            "8aa6b830-bebb-44be-84cc-d425f9ab3388"
-        ],
-        "name": "Brian Azzarello"
+            "a287fabc-b371-534f-b5ae-bce6b907b35f"
+        ]
     },
     {
-        "id": "f0d24823-900f-45ec-b44f-22172a335715",
+        "id": "d95d8155-cb3d-51b6-aa89-a6c1c7d4efda",
+        "name": "Richard McGuire",
         "bd_ids": [
-            "8aa6b830-bebb-44be-84cc-d425f9ab3388"
-        ],
-        "name": "Lee Bermejo"
+            "ea17e67e-3aed-5734-bee3-23d291cb2e65"
+        ]
     },
     {
-        "id": "e2fc4579-5539-43ea-b76b-85fb400dd255",
+        "id": "307d6d57-5e9c-5093-81f8-c14ebd1a70bf",
+        "name": "Brian Azzarello",
         "bd_ids": [
-            "7762d745-ca18-4fa5-aa16-0b3654d6771d"
-        ],
-        "name": "Sophie Guerrive  "
+            "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4"
+        ]
     },
     {
-        "id": "4640fbfa-8482-450f-8493-b61ecbf62160",
+        "id": "87b5bd4e-962b-5128-b63a-fcb5a620a097",
+        "name": "Lee Bermejo",
         "bd_ids": [
-            "a8462b03-8492-4472-8002-c89b27823b7d"
-        ],
-        "name": "Mirion Malle"
+            "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4"
+        ]
     },
     {
-        "id": "9c8e529b-11ac-4509-8e2d-7a4b4ba9da05",
+        "id": "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57",
+        "name": "Sophie Guerrive",
         "bd_ids": [
-            "c84b5aa1-f3fe-419b-bbd6-f4fcbd0068c7"
-        ],
-        "name": "Lewis Trondheim "
+            "1fe8553a-dc4f-557c-b0c8-ed285d25d513",
+            "92d4a711-7df9-52a6-aef4-35cf71bbc16a"
+        ]
     },
     {
-        "id": "58a01ea1-ef53-4d6c-9bcf-eda744bb6019",
+        "id": "07e138d4-c5e0-5e13-81c4-b924dca78d61",
+        "name": "Mirion Malle",
         "bd_ids": [
-            "c84b5aa1-f3fe-419b-bbd6-f4fcbd0068c7"
-        ],
-        "name": "Nicolas Keramidas "
+            "d7db5c18-6776-5197-b68c-f61569bd178a",
+            "39c9b8b4-fc17-5fb3-bda6-7f183cca54c7"
+        ]
     },
     {
-        "id": "00156837-15de-439f-a583-ef51d8fd79d8",
+        "id": "29c51d18-72d7-5715-8d93-7f49418467af",
+        "name": "Lewis Trondheim",
         "bd_ids": [
-            "a58f2002-64b2-4173-a0d2-b2baa53cc3f7"
-        ],
-        "name": "Manu Larcenet "
+            "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32"
+        ]
     },
     {
-        "id": "78e00a51-08fc-4e7b-84da-0a74ec24d385",
+        "id": "63e6bbf9-501c-5cab-a447-df8eca94278c",
+        "name": "Nicolas Keramidas",
         "bd_ids": [
-            "2282b360-5b82-47b3-bd99-040f244d8b33"
-        ],
-        "name": "Emre Orhun"
+            "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32"
+        ]
     },
     {
-        "id": "250a5622-232e-44f7-b49a-9a0a43cf1d17",
+        "id": "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2",
+        "name": "Manu Larcenet",
         "bd_ids": [
-            "3a29775a-58db-44c9-8f04-32724a992514"
-        ],
-        "name": "Julie Delporte "
+            "f2860692-948f-5d47-b998-60f799a21268",
+            "e6eb00f3-e29c-59a5-bf7e-7ca9a65fcd33"
+        ]
     },
     {
-        "id": "19149627-44ca-4287-9d07-3f74fa921ccf",
+        "id": "5ad0a9e1-5ffa-5c14-a110-f2130ce3514f",
+        "name": "Emre Orhun",
         "bd_ids": [
-            "c61ee2e3-1ff6-402c-b7ee-70044dff2c05"
-        ],
-        "name": "Loo Hui Phang "
+            "69f9074f-83c0-57ba-977b-1125d2fbae16"
+        ]
     },
     {
-        "id": "e1d9cf70-e117-41dc-aae7-75959c26fb55",
+        "id": "e7bad250-6da0-56ae-ab7c-bb32c2243587",
+        "name": "Julie Delporte",
         "bd_ids": [
-            "c61ee2e3-1ff6-402c-b7ee-70044dff2c05",
-            "d07311c3-121f-443e-911c-ba10b847ac4d",
-            "e66cef9f-1330-45c7-8150-25e513b5c815",
-            "f187ca91-71f5-4be5-835b-d30ea420ef82"
-        ],
-        "name": "Frederik Peeters"
+            "e71a06a2-fc10-56f0-b0a6-f5b1ec6ce8d4",
+            "b2b56cf4-189b-5c0f-b0a9-b3f4944df2f8"
+        ]
     },
     {
-        "id": "87cecf66-1a08-4023-a266-24f382020ade",
+        "id": "5dffb67a-5aac-5df7-8cff-c42c4085749e",
+        "name": "Loo Hui Phang",
         "bd_ids": [
-            "63fc3e2e-509f-4975-92c2-b345ffe71c21"
-        ],
-        "name": "Philippe Foerster"
+            "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3"
+        ]
     },
     {
-        "id": "0b953c3d-b5b9-4698-ba81-e372b37e5b39",
+        "id": "2f4e23e5-9feb-53ab-beae-4555370c8f0d",
+        "name": "Frederik Peeters",
         "bd_ids": [
-            "133c203a-404a-46e2-b5d7-06ed678faed9"
-        ],
-        "name": "Takano Ichigo"
+            "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3",
+            "a2edcba9-4069-57fa-860a-9b0f656b7911",
+            "46840f52-8e72-51fa-8308-bfe9e584b7c8",
+            "1bc85f3d-8932-5b00-b6fd-333b32ee53b9"
+        ]
     },
     {
-        "id": "87eeebe2-96d8-4a25-ba10-76a69e45568f",
+        "id": "7fe75a35-1d64-517a-885f-630c30ee6ba0",
+        "name": "Philippe Foerster",
         "bd_ids": [
-            "f1af01fc-de66-46c7-ac71-86723fb7333a"
-        ],
-        "name": "Victor Hussenot"
+            "80fb2922-29f9-5231-ba34-224676df214b"
+        ]
     },
     {
-        "id": "6b7ad95e-29bf-496b-97ca-d6b31613701b",
+        "id": "c5e6aaf1-2b53-5f0e-bce2-0c4c94f86c6f",
+        "name": "Takano Ichigo",
         "bd_ids": [
-            "21261c65-9ddf-41e2-aa90-684aee72bfea"
-        ],
-        "name": "Matthieu Bonhomme"
+            "31218cb7-1c1c-5c1e-ba45-3383eb2db2a4"
+        ]
     },
     {
-        "id": "4bb67e74-60f0-49f9-9e84-992febe745b2",
+        "id": "09ba303e-ed68-5c29-bac3-42f3ca9dc165",
+        "name": "Victor Hussenot",
         "bd_ids": [
-            "5f0a53d3-a4ce-4e8c-8e74-035cd7baf402"
-        ],
-        "name": "Matthieu Chiara"
+            "d6777df6-7ff7-5d60-883a-8b4a3ea24742"
+        ]
     },
     {
-        "id": "2098f939-b8d9-4669-b9f8-4187ec360935",
+        "id": "453525aa-7f27-5d42-ba7b-d5459af791fc",
+        "name": "Matthieu Bonhomme",
         "bd_ids": [
-            "fd2216f3-86cb-45a0-abd3-8282a9941449"
-        ],
-        "name": "Pierre Boisserie "
+            "0f4c7769-b9a0-5d86-90c2-0dab9cdecac5"
+        ]
     },
     {
-        "id": "68a260e6-370e-4666-8c06-a3197367853e",
+        "id": "a1538e2c-43f9-5a42-8d71-008ad928bf75",
+        "name": "Matthieu Chiara",
         "bd_ids": [
-            "fd2216f3-86cb-45a0-abd3-8282a9941449"
-        ],
-        "name": "Nicolas Bara"
+            "50457d0a-d275-54ae-a701-73038d4557e5"
+        ]
     },
     {
-        "id": "04a4b3d4-4879-434a-83c5-03f44f0019dc",
+        "id": "d9ccf51f-773d-5fc2-96b6-c595993dc4d5",
+        "name": "Pierre Boisserie",
         "bd_ids": [
-            "d9cbe6ee-f2c7-4784-8da4-94f337f380a2"
-        ],
-        "name": "Martin Emond "
+            "ff97eec9-4561-5965-b9fd-31a81ed88ca1"
+        ]
     },
     {
-        "id": "dbd5197a-8552-4789-a5ef-4a6fed37a87f",
+        "id": "9329ecf2-fb88-5cda-93d0-4d796212135a",
+        "name": "Nicolas Bara",
         "bd_ids": [
-            "5a0db9c8-76bd-4a10-813d-0e7009715bf6"
-        ],
-        "name": "Zerocalcare​"
+            "ff97eec9-4561-5965-b9fd-31a81ed88ca1"
+        ]
     },
     {
-        "id": "bc2d0245-6ba9-4c8d-9be0-0c3c95a63bdf",
+        "id": "c533d6df-4b35-5261-9157-fa3cef0e4088",
+        "name": "Martin Emond",
         "bd_ids": [
-            "a0065c78-fb76-4032-8788-94915c650bf9"
-        ],
-        "name": "Liv Strömquist​ "
+            "f6807abd-c884-551c-ad68-32d7182e64bc"
+        ]
     },
     {
-        "id": "70ab6138-a571-46af-8d94-11b0ced6aad3",
+        "id": "8d89626c-33ca-5927-9738-0bf520f4b52e",
+        "name": "Zerocalcare",
         "bd_ids": [
-            "1fb1c50a-e5a8-4a81-86cd-2e057cfbf362"
-        ],
-        "name": "Alejandro Jodorowsky​ "
+            "13cec0e3-d7e3-54da-be39-8ea04750452b"
+        ]
     },
     {
-        "id": "faabcd3c-6ff7-4366-b92c-6c5546fd4934",
+        "id": "6036d73a-1f6b-581b-8e41-74a385c4be82",
+        "name": "Liv Strömquist",
         "bd_ids": [
-            "1fb1c50a-e5a8-4a81-86cd-2e057cfbf362"
-        ],
-        "name": "Ladrönn"
+            "4855cab9-a793-5a3b-b9ed-a1ae11a4cb96",
+            "5bebe1b3-ed45-5b99-bc12-026abccc686e"
+        ]
     },
     {
-        "id": "e3a189cc-defd-44b6-9d66-350d8dab7c2c",
+        "id": "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b",
+        "name": "Alejandro Jodorowsky",
         "bd_ids": [
-            "18d79c90-700b-4993-bec7-19f63303b8f1"
-        ],
-        "name": "Nylso​ "
+            "b84e2de9-9773-5fb3-b098-95600aabefb4",
+            "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5"
+        ]
     },
     {
-        "id": "03a28ac0-5bef-461d-a766-8d13fa54cb33",
+        "id": "a0b94843-ddbb-5e2e-94f4-31715a79ae96",
+        "name": "Ladrönn",
         "bd_ids": [
-            "02b50c9c-26c5-4f2d-bc02-6265cf2f1dd2",
-            "252cc3f7-1bba-42ba-8e94-8074459b747b"
-        ],
-        "name": "Daniel Clowes"
+            "b84e2de9-9773-5fb3-b098-95600aabefb4"
+        ]
     },
     {
-        "id": "c2c4ca20-a216-40d2-877c-3add5b966e9e",
+        "id": "8d7dbf62-af3b-5183-9758-a74bff3e93b2",
+        "name": "Nylso",
         "bd_ids": [
-            "260a3ad5-c71a-427c-a993-b6de8353bf4d"
-        ],
-        "name": "Yukito Kishiro "
+            "6abe3396-863c-534c-ab1f-f19543d6c60d",
+            "e0079da4-868b-589a-8dc6-7c04973b026b"
+        ]
     },
     {
-        "id": "49cdcf61-fb89-49e9-a643-e81334bf166d",
+        "id": "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8",
+        "name": "Daniel Clowes",
         "bd_ids": [
-            "d7322f2e-20cf-443f-9cdf-418eb2ce894b"
-        ],
-        "name": "Pascal Rabaté"
+            "72f2081f-6273-5dc2-8c7b-28dc3370c098",
+            "5c0d585f-9e55-51fb-bb16-f98389cb7ce4"
+        ]
     },
     {
-        "id": "a9860b83-fd0c-4acb-9e5a-805a2edb89b1",
+        "id": "65e00d00-102a-5d11-a8ee-1ae12e5f8022",
+        "name": "Yukito Kishiro",
         "bd_ids": [
-            "d7322f2e-20cf-443f-9cdf-418eb2ce894b"
-        ],
-        "name": "David Prudhomme"
+            "2e080007-73f3-551b-9c26-e8e9ebec19d2"
+        ]
     },
     {
-        "id": "9a6b7cd5-434b-4a9f-895f-5cd5a3b1ff93",
+        "id": "343a491e-3575-5f01-bd10-fce806418d2d",
+        "name": "Pascal Rabaté",
         "bd_ids": [
-            "04bd1af9-b38b-4ec1-9216-71b9b3506dc9"
-        ],
-        "name": "Edie Campbel"
+            "b5c177d6-e429-538f-84b3-6f857b20a7a4"
+        ]
     },
     {
-        "id": "43191601-56fc-4f9c-9594-175f4416b2a0",
+        "id": "63d2e556-4c79-555b-afec-1eb4a3f509a5",
+        "name": "David Prudhomme",
         "bd_ids": [
-            "04bd1af9-b38b-4ec1-9216-71b9b3506dc9"
-        ],
-        "name": "Dan Best"
+            "b5c177d6-e429-538f-84b3-6f857b20a7a4"
+        ]
     },
     {
-        "id": "5b24a560-d0fa-479d-a4e9-f1b4f4da709e",
+        "id": "eb457afe-c7d7-5465-91f5-1f76bbd153d4",
+        "name": "Eddie Campbell",
         "bd_ids": [
-            "dec9d8b9-0d07-4f1a-8a11-c8a1b2cf87cb",
-            "04357713-2296-45c0-96ec-013cf76f0555"
-        ],
-        "name": "Alison Bechdel"
+            "9491f949-140c-5092-9add-d05dc3983fe1"
+        ]
     },
     {
-        "id": "bd146353-2748-4678-aa3d-972fce2aad3d",
+        "id": "aabdfb6d-def7-59e7-aef7-caf4f826425e",
+        "name": "Dan Best",
         "bd_ids": [
-            "7b05f634-5e92-4062-abd1-596ac6fd7c16"
-        ],
-        "name": "Frank Pé "
+            "9491f949-140c-5092-9add-d05dc3983fe1"
+        ]
     },
     {
-        "id": "2902a7fb-128d-4439-aae4-4e6e8bf5deeb",
+        "id": "c31ac25f-8577-51a4-8112-3280350d8f34",
+        "name": "Alison Bechdel",
         "bd_ids": [
-            "7b05f634-5e92-4062-abd1-596ac6fd7c16",
-            "1b24a8b5-6f13-4811-af34-afcbeb1b4402",
-            "8f2c53cc-b68e-49e7-ab67-3235bafb5ab8"
-        ],
-        "name": "Zidrou"
+            "bde8dc28-1f8e-58e9-8de4-8efd46178c54",
+            "20219cc1-6639-5762-9325-1f565d5143ce"
+        ]
     },
     {
-        "id": "9f2dce06-3b5b-4cf7-84d5-1b6b28f725c1",
+        "id": "f780ae12-bdb3-5934-a7eb-c1a220d6c1f7",
+        "name": "Frank Pé",
         "bd_ids": [
-            "d7242bf9-c263-4771-be0f-d9ef2e5a0dd1",
-            "d71a934a-a526-4b36-94b3-a7dd3b0de248"
-        ],
-        "name": "Tom Gauld"
+            "9ac45906-4b6a-5ca4-805b-f64aec4b90bc"
+        ]
     },
     {
-        "id": "55f47e88-dc2a-4f36-a686-af6aadb2ed32",
+        "id": "095fe88f-e6bc-523c-a338-d927d8a46767",
+        "name": "Zidrou",
         "bd_ids": [
-            "2d48fc30-54fa-4f31-82c0-a9bfba8b9603"
-        ],
-        "name": "Bryan Talbot"
+            "9ac45906-4b6a-5ca4-805b-f64aec4b90bc",
+            "5be2ee50-4405-56c2-b59f-fbdc8438e45e",
+            "66419695-ae35-53a0-b7db-55e99b5d6b02"
+        ]
     },
     {
-        "id": "b4c688e5-531b-47e6-9cdd-97e015c6dfc2",
+        "id": "82f0f18e-ef7e-5f41-8047-ad16d91e05e4",
+        "name": "Tom Gauld",
         "bd_ids": [
-            "87e60d20-59f1-4924-95ec-0e7ceb2c97b7"
-        ],
-        "name": "Ibn Al Rabin"
+            "c4a296ae-92a4-59dc-9301-4a603a7cffd0",
+            "945ced24-f871-580c-a2cd-e55da6520b39"
+        ]
     },
     {
-        "id": "f778f028-7b27-4f0e-8bb4-020a4b4d98af",
+        "id": "2f89aaac-ebdd-5a34-a0a8-e93588b567e4",
+        "name": "Bryan Talbot",
         "bd_ids": [
-            "7eca1ef7-3646-4a55-a3cb-8e01c640afd2"
-        ],
-        "name": "Boris Délevègue"
+            "562e5012-19b0-5794-aa0e-4636a143312f"
+        ]
     },
     {
-        "id": "face7b58-63e9-41e7-95a5-17512ddd3172",
+        "id": "74fe19ba-aed1-535a-b8e0-d23ecae07b52",
+        "name": "Ibn Al Rabin",
         "bd_ids": [
-            "eb3d8c06-96e6-441d-9994-193a4a1e0ed8"
-        ],
-        "name": "Pierre Taki"
+            "163d1778-437a-5b0b-a41c-477e1740f9d6"
+        ]
     },
     {
-        "id": "2f8f21ac-84f4-4bef-bbbd-7f68a58f26a0",
+        "id": "aedca89a-5fbd-5370-bd4f-613e59392e1e",
+        "name": "Boris Délevègue",
         "bd_ids": [
-            "eb3d8c06-96e6-441d-9994-193a4a1e0ed8"
-        ],
-        "name": "Man Gatarou"
+            "3ffeb194-5cc8-5d05-ade9-964f5999aa79"
+        ]
     },
     {
-        "id": "877f1493-82d7-49b3-aec6-0b1dcffc62aa",
+        "id": "ecc84076-df42-5c48-b1a3-d3d8a57b3771",
+        "name": "Pierre Taki",
         "bd_ids": [
-            "87aa44a4-88c8-4edd-95dd-2768a158291d"
-        ],
-        "name": "Cece Bell"
+            "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc"
+        ]
     },
     {
-        "id": "f66cd3d6-01b4-412b-a54e-4ba2ea973cd0",
+        "id": "bd3ae08f-db85-5ec7-997d-14285b672739",
+        "name": "Man Gatarou",
         "bd_ids": [
-            "68333986-ec2a-432e-b0d3-01f1af5a08fa"
-        ],
-        "name": "Néjib"
+            "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc"
+        ]
     },
     {
-        "id": "f09f7044-463d-4c00-a3ed-c4dd2e3833c7",
+        "id": "160a3ea0-3de2-5647-bd35-de0856ad7ff1",
+        "name": "Cece Bell",
         "bd_ids": [
-            "0c094574-f045-4afe-aab1-1991e3f73038"
-        ],
-        "name": "Marc-Antoine Mathieu"
+            "0d8ca287-8e3d-55a9-9f4f-bbe8a1a62c40"
+        ]
     },
     {
-        "id": "c6ab5deb-0e83-47fa-b68a-ecb889768c05",
+        "id": "b84a8b0d-c5d4-50a0-98ca-7499c46b7968",
+        "name": "Néjib",
         "bd_ids": [
-            "ddc79cf0-9ca6-4387-8144-e9a4f1bd5e48"
-        ],
-        "name": "Sophie Guerrive"
+            "5a7dd53b-1495-5663-bea2-733fedd1d228"
+        ]
     },
     {
-        "id": "39777947-538d-4128-9b96-aba4e39ac2bf",
+        "id": "a0e8081c-c789-5249-a9ad-938d911d3d15",
+        "name": "Marc-Antoine Mathieu",
         "bd_ids": [
-            "9b115329-df81-44f9-ba1b-b1327c521dd6"
-        ],
-        "name": "Javier de Isusi "
+            "4335f95a-162b-55fd-bc33-9ae6270eaa96",
+            "9fb8bc86-0c68-5c44-a864-1bd65f4c4114"
+        ]
     },
     {
-        "id": "e94d7d4d-aed1-4a6a-8670-a45ec947c402",
+        "id": "5a27bd93-6368-5a71-863e-b2984c27b7da",
+        "name": "Javier de Isusi",
         "bd_ids": [
-            "4f8dea1e-faa0-4846-8e58-c7ff8061f18c",
-            "5c7410fa-ebbe-45eb-9220-408ccc32ab20"
-        ],
-        "name": "Mathieu Bablet"
+            "09bd361d-294b-548e-81d2-a24ce73e755a"
+        ]
     },
     {
-        "id": "f793a53c-be0b-4c38-97a3-1193d1be9e51",
+        "id": "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b",
+        "name": "Mathieu Bablet",
         "bd_ids": [
-            "5d8a744e-6acf-4568-bfec-90076efdd15d"
-        ],
-        "name": "Hugues Micol"
+            "1d56642e-0dc1-5f4a-aae2-0fa94df543fd",
+            "f82923f6-8cff-5419-927a-c3db18e9992f"
+        ]
     },
     {
-        "id": "bc736138-0bae-4c61-a746-c0dff3e34169",
+        "id": "8fe7fe5d-f5d1-57fa-9b23-8613e9714774",
+        "name": "Hugues Micol",
         "bd_ids": [
-            "8875dd68-c114-4607-a22c-814f63cdf8ef"
-        ],
-        "name": "Sonny Liew"
+            "7c7c3feb-134e-5fcd-8be5-c580ee005cb1",
+            "9a3852a3-baa8-5f2a-aba2-fe494ac3d2d7"
+        ]
     },
     {
-        "id": "cefd2112-f0ff-4397-aead-7fb5fea8653d",
+        "id": "0afb0661-1df4-536c-9666-10c4b38bb243",
+        "name": "Sonny Liew",
         "bd_ids": [
-            "2a5b964e-bcb1-4d6d-8881-4619be269d45"
-        ],
-        "name": "Miroslav Sekulic-Struja"
+            "d6aa2f0e-42e0-5e88-9aca-0f988aaf0156"
+        ]
     },
     {
-        "id": "f4fa88d9-b703-4020-a019-9a056f84ce28",
+        "id": "1f5f75e0-7638-50f5-80af-9cd35b1db3a9",
+        "name": "Miroslav Sekulic-Struja",
         "bd_ids": [
-            "918e7bb8-79ba-4c24-a1e5-f9036bb5e5ff"
-        ],
-        "name": "Taiyou Matsumoto"
+            "8a70367d-933d-5179-ad05-41d287a8027e"
+        ]
     },
     {
-        "id": "f23b8747-0a4f-4034-a94a-8199471ba742",
+        "id": "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3",
+        "name": "Taiyou Matsumoto",
         "bd_ids": [
-            "eb5a184a-1ab0-47c2-b218-660e665b821c",
-            "c3cbd26b-6184-4fa6-9d42-ca3f9ce7dbc8"
-        ],
-        "name": "Chester Brown"
+            "264198c3-9db1-53e1-9cf2-57062511f327",
+            "7ecc3faa-7448-57ea-b3c3-3fe72ddd322b"
+        ]
     },
     {
-        "id": "5f4794b2-e231-4e73-9ad9-47d28be5337e",
+        "id": "cdc82420-f432-5f59-a469-f2e496e2ec4d",
+        "name": "Chester Brown",
         "bd_ids": [
-            "bde07241-cf98-4656-aa39-680af7870fda"
-        ],
-        "name": "Luigi Critone"
+            "fb7e1f82-d227-5650-85b7-c44a4f634109",
+            "1346fd40-465d-50a8-9dbf-1b3db2f2f962"
+        ]
     },
     {
-        "id": "f6fb84c5-6704-4dac-bb9e-c7a90f373e11",
+        "id": "37c48d00-bc91-517c-b977-e253bcc19204",
+        "name": "Luigi Critone",
         "bd_ids": [
-            "b47e711b-de66-48ef-b10b-05974bff1965"
-        ],
-        "name": "Yann Kebbi "
+            "9915da9c-e3bf-579d-9399-0cca6f6854ed"
+        ]
     },
     {
-        "id": "cd8e396b-7187-4f51-bcac-706cef2e3eb1",
+        "id": "d7ebbe2d-e613-5ff8-939b-63886c183c10",
+        "name": "Yann Kebbi",
         "bd_ids": [
-            "b47e711b-de66-48ef-b10b-05974bff1965"
-        ],
-        "name": "Viken Berberian "
+            "871a5231-dd60-5c65-9b18-723b1565ffa1"
+        ]
     },
     {
-        "id": "ef815062-23c3-42d2-b4f0-c8addb8d47d5",
+        "id": "6c202026-ad9b-5d9f-a7cb-35d1e0009667",
+        "name": "Viken Berberian",
         "bd_ids": [
-            "3b7ef2d4-0591-47d4-8342-25313b20e4bd"
-        ],
-        "name": "Bastien Vives"
+            "871a5231-dd60-5c65-9b18-723b1565ffa1"
+        ]
     },
     {
-        "id": "591be1b0-2c88-45fa-90f3-c00595a23338",
+        "id": "552512e4-a3e7-5246-89cf-9ddee4ca5e17",
+        "name": "Bastien Vivès",
         "bd_ids": [
-            "b67d484d-bdc3-4b55-8016-fcc8888f8daf"
-        ],
-        "name": "Oriane Lassus"
+            "975d271b-e1e0-54f8-9273-2debfe877e0f",
+            "6285af41-5732-5e84-907f-7c1c6393c5e5"
+        ]
     },
     {
-        "id": "10d7976b-70ae-45e4-ab01-84cc262709e1",
+        "id": "38a340c0-3423-5b21-8f83-9db6313b7522",
+        "name": "Oriane Lassus",
         "bd_ids": [
-            "a7c27edc-6210-478f-92c0-923909545863"
-        ],
-        "name": "Michael DeForge"
+            "5a8ed5c1-88a2-5654-88d7-c1d974ade6b3"
+        ]
     },
     {
-        "id": "9f01f9af-a7bf-49d8-8483-27694f4f2316",
+        "id": "befc47ec-c72f-58e3-8519-a28173853443",
+        "name": "Michael DeForge",
         "bd_ids": [
-            "79fd88d0-0746-4fe1-88c7-40c324c4892e"
-        ],
-        "name": "Steven Seagle"
+            "1446edf4-27ba-5484-9124-b0655c28fa02",
+            "2d214a1a-d718-56ca-b4b1-daecd27fbc70"
+        ]
     },
     {
-        "id": "bdf5ab50-c5a7-40ed-8a9b-615253814621",
+        "id": "c49f0cdc-1a16-51f1-aec9-b96dbb3ecfab",
+        "name": "Steven Seagle",
         "bd_ids": [
-            "79fd88d0-0746-4fe1-88c7-40c324c4892e"
-        ],
-        "name": "Teddy Kristiansen"
+            "5864aefd-c512-5acd-bfd4-654a9577e01f"
+        ]
     },
     {
-        "id": "9c9159df-8fa1-4d3f-b612-94f9e6fc8f2b",
+        "id": "f32dd3ed-2196-56e7-bb1a-41d07e59b2f7",
+        "name": "Teddy Kristiansen",
         "bd_ids": [
-            "e11b43f6-94c8-48dc-b4ec-99e990bd5588"
-        ],
-        "name": "Éric Lambé "
+            "5864aefd-c512-5acd-bfd4-654a9577e01f"
+        ]
     },
     {
-        "id": "fa6ba8bd-c2d5-4529-a23c-c98a89c05ef5",
+        "id": "bf478f85-abfd-5914-acc2-eb7ae099bad6",
+        "name": "Éric Lambé",
         "bd_ids": [
-            "e11b43f6-94c8-48dc-b4ec-99e990bd5588"
-        ],
-        "name": "Philippe de Pierpont"
+            "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa"
+        ]
     },
     {
-        "id": "b371b940-7fda-4c6f-a73a-e160ac216734",
+        "id": "b0f40b74-5f7d-5e03-9420-f2c5732abccf",
+        "name": "Philippe de Pierpont",
         "bd_ids": [
-            "d2f06936-01e9-4522-9324-6a43409fdbdc"
-        ],
-        "name": "Xavier Mussat "
+            "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa"
+        ]
     },
     {
-        "id": "c4fad532-1f27-4fcb-b79c-5a0087ba188a",
+        "id": "c8a55c08-f0a1-57c9-a276-d164183edeb8",
+        "name": "Xavier Mussat",
         "bd_ids": [
-            "726e5233-d34f-486e-8bbf-fcc2be0a459e"
-        ],
-        "name": "Grégoire Bouchard"
+            "a3a08375-70c5-5185-aa11-1970757201c6"
+        ]
     },
     {
-        "id": "6dea086b-e0c0-42b7-bca7-4668be9f4a57",
+        "id": "926f14bf-2ff3-58be-b4a8-bfc69cd4f9fb",
+        "name": "Grégoire Bouchard",
         "bd_ids": [
-            "b85a54be-6111-4953-8676-bccd25db62c3"
-        ],
-        "name": "Ludovic Debeurme "
+            "506574d1-5d79-5ea8-a30b-2de7549df7f9"
+        ]
     },
     {
-        "id": "18170fd9-bf5e-45b1-a63b-53f9bdaa5169",
+        "id": "d98bf4ce-fabc-518d-9a7b-415fda62817e",
+        "name": "Ludovic Debeurme",
         "bd_ids": [
-            "4adafaec-5e72-4867-8c4d-4ff81ccf7afe"
-        ],
-        "name": "Matthew Rosenberg et Patrick Kindlon"
+            "ff441b8a-e7d8-56d6-889a-43edd430e38d"
+        ]
     },
     {
-        "id": "9370b973-74e7-4883-ba8d-01fc793a1f67",
+        "id": "b52d45f1-1dd3-55f6-bb85-67fcb65cea0b",
+        "name": "Matthew Rosenberg",
         "bd_ids": [
-            "4adafaec-5e72-4867-8c4d-4ff81ccf7afe"
-        ],
-        "name": "Josh hood"
+            "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"
+        ]
     },
     {
-        "id": "63656738-febc-49c6-8ed2-38bbafd77bd5",
+        "id": "e0985a1b-4ff4-5b75-8ca7-3067999c69d5",
+        "name": "Patrick Kindlon",
         "bd_ids": [
-            "fa250d04-5e87-414b-b4a6-a5b9c01d56f3"
-        ],
-        "name": "Álvaro Ortiz"
+            "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"
+        ]
     },
     {
-        "id": "dcaab106-09cc-4251-80dd-54b4e2746ea2",
+        "id": "91ea0576-e99f-559b-8107-43c5a962ce61",
+        "name": "Josh hood",
         "bd_ids": [
-            "1177f6dc-bea1-4fe6-bfe5-42d3918c118f"
-        ],
-        "name": "Johnny Ryan"
+            "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"
+        ]
     },
     {
-        "id": "e4f6685e-b734-4937-8447-ac154d645d17",
+        "id": "ef93712c-4767-58cf-bde5-b0d4e4447cc3",
+        "name": "Álvaro Ortiz",
         "bd_ids": [
-            "556a73d0-f56c-49a2-b539-c6cec6d10d79"
-        ],
-        "name": "Moreau Jérémie"
+            "83e86609-2b52-52ab-b6f2-454f3f4f1588"
+        ]
     },
     {
-        "id": "eacffa63-695a-4a05-9822-e6329ca489a2",
+        "id": "b3477ea0-acf7-5378-921f-003ae0d32b4b",
+        "name": "Johnny Ryan",
         "bd_ids": [
-            "a9a6023a-eb50-4880-956f-2c556bf16d8d"
-        ],
-        "name": "Vero Cazot"
+            "87fa356f-0b28-50f7-ad0f-7608ec05705e"
+        ]
     },
     {
-        "id": "483d6339-e533-4aeb-879b-fa214b09fbb9",
+        "id": "035c9f3a-3ce1-5d0c-8ea8-44c33fa53465",
+        "name": "Moreau Jérémie",
         "bd_ids": [
-            "a9a6023a-eb50-4880-956f-2c556bf16d8d"
-        ],
-        "name": "Julie Rocheleau "
+            "a968de90-88cc-5e8a-b553-d7298afa9d74"
+        ]
     },
     {
-        "id": "e59eb4de-feeb-4a78-9cbe-d0e2461cc5f7",
+        "id": "1cb65ab4-91ec-58a4-b86b-15848303925f",
+        "name": "Vero Cazot",
         "bd_ids": [
-            "a4d978f9-f4a9-4f7b-a6aa-40268098da6f"
-        ],
-        "name": "Paolo Bacilieri "
+            "9c926764-7669-5585-8219-0f0fb31f3498"
+        ]
     },
     {
-        "id": "0ffeff96-670a-4c83-84cf-c1cee514de6b",
+        "id": "e8be046b-4ab7-5bf1-b064-43221857647d",
+        "name": "Paolo Bacilieri",
         "bd_ids": [
-            "a4d978f9-f4a9-4f7b-a6aa-40268098da6f"
-        ],
-        "name": "Ufficio stampa"
+            "920c0bc3-909f-517c-8194-eec53442da3a"
+        ]
     },
     {
-        "id": "da440fd5-0c24-4359-a8d0-82cf12aaa1ff",
+        "id": "a12a8cd7-361a-5455-a8da-350b55b581b1",
+        "name": "Ufficio stampa",
         "bd_ids": [
-            "e13cfc35-f148-40f6-9fbd-f709e6509ccf"
-        ],
-        "name": "Nazario"
+            "920c0bc3-909f-517c-8194-eec53442da3a"
+        ]
     },
     {
-        "id": "8e0c8be0-f631-4fa2-85af-24762daefbd5",
+        "id": "db9a12ff-381c-54a8-847d-511a1a18e953",
+        "name": "Nazario",
         "bd_ids": [
-            "0c501de6-11ae-4547-bc27-1ae3594e4b2e"
-        ],
-        "name": "Kōhei Horikoshii"
+            "765d65d1-e762-5976-bda4-410a49745faf"
+        ]
     },
     {
-        "id": "12e6f712-5af7-436d-9774-446d47b97ef2",
+        "id": "685f38e5-4320-5e62-9650-764382aed9a2",
+        "name": "Kōhei Horikoshi",
         "bd_ids": [
-            "ea9ede06-9721-4071-915c-a28701b2d7ff",
-            "52c539de-36d2-4891-9567-a011cb63cae1"
-        ],
-        "name": "Shigeru Mizuki"
+            "b7cfe93d-0614-51ed-9121-129779a36201"
+        ]
     },
     {
-        "id": "93c6e561-9f12-430f-acea-872859f620c1",
+        "id": "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1",
+        "name": "Shigeru Mizuki",
         "bd_ids": [
-            "76b225a8-e09e-43ad-bc51-d0ede04dfae6"
-        ],
-        "name": "Yuhki Kamatani "
+            "42bcdd54-8a27-5fbc-b679-565b1ae82f57",
+            "970a07a3-e2a0-5c36-bf0f-9a6f4ea83dad"
+        ]
     },
     {
-        "id": "c6dea800-c370-4feb-a0b6-101046c29311",
+        "id": "081b0e0b-4da2-5f56-bf65-0bd4159a6420",
+        "name": "Kieron Gillen",
         "bd_ids": [
-            "6593257f-7abd-40a0-b5cb-d5eda93cc72d"
-        ],
-        "name": "Jeff Lemire"
+            "0ef59048-c3fb-5ea8-b650-75dafe1998cf"
+        ]
     },
     {
-        "id": "2b715592-d62b-4b6d-ad85-ba516f3eeed7",
+        "id": "0708b86c-85b5-5300-9cd9-a2bda4f0a606",
+        "name": "Jamie McKelvie",
         "bd_ids": [
-            "abb8cc20-6856-4ce9-8e74-4ab5f53459f7"
-        ],
-        "name": "Olivier Texier"
+            "0ef59048-c3fb-5ea8-b650-75dafe1998cf"
+        ]
     },
     {
-        "id": "c5dc4890-c4d6-4386-9e7f-1f0ad16f790e",
+        "id": "a730029a-5fc8-5f2d-83ee-d08a20957c8c",
+        "name": "Olivier Schrauwen",
         "bd_ids": [
-            "caed7b26-7d28-4b8b-96fa-f5ba6b0708e3"
-        ],
-        "name": "Arnaud Malherbe"
+            "2e7c3a72-b7fc-5260-a119-e8a94af085e5"
+        ]
     },
     {
-        "id": "339892af-d49f-4b2f-9473-d18dc875e280",
+        "id": "df9128c9-cec9-53c8-8729-617042111988",
+        "name": "Aude Picault",
         "bd_ids": [
-            "caed7b26-7d28-4b8b-96fa-f5ba6b0708e3"
-        ],
-        "name": "Vincent Perriot "
+            "06ce7cf3-e238-5bb4-80c8-2000e8c536c7",
+            "5664c22b-88d2-5a47-bf61-fb3e4f657a0b",
+            "0527534f-2c66-5d92-94d5-e579f45fd919"
+        ]
     },
     {
-        "id": "1f7f55f9-df9a-420c-9cb8-9f7917d8711a",
+        "id": "be1bbed6-3d2a-5949-9210-263612f09011",
+        "name": "Hariton Pushwagner",
         "bd_ids": [
-            "a73dc820-47d6-4cc9-98a0-2016b5302ba5"
-        ],
-        "name": "Kieron Gillen "
+            "37e7a325-c27f-5f10-a2d6-21765d017dd8"
+        ]
     },
     {
-        "id": "c3308e06-0f22-4678-bbdb-b7edd98e5061",
+        "id": "ce395aec-bccb-5983-acf4-6da1f7dc05d3",
+        "name": "Ulli Lust",
         "bd_ids": [
-            "a73dc820-47d6-4cc9-98a0-2016b5302ba5"
-        ],
-        "name": "Jamie McKelvie"
+            "4bc94c79-035d-558e-85ae-c08e1baee587"
+        ]
     },
     {
-        "id": "a5e163bc-9ce2-4f63-bc14-b86b92f0533f",
+        "id": "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87",
+        "name": "Fabien Vehlmann",
         "bd_ids": [
-            "9b9ed6ff-a964-46b2-8d6c-33264a38ed89"
-        ],
-        "name": "Olivier Schrauwen"
+            "b8354485-7ce8-5d1c-a71b-bca27475f6c7",
+            "6a77cc15-294a-5114-8d5f-73d5d402ab51"
+        ]
     },
     {
-        "id": "8a721baf-f11e-44dd-90a9-10f62f4f9659",
+        "id": "4d8e72d3-3b12-548b-b11e-25da6ce04060",
+        "name": "Gwen de Bonneval",
         "bd_ids": [
-            "3b7728e5-da60-4eae-b985-68a7442c9ddb",
-            "933749ac-48d9-4c0d-bad4-3afabeb39c06",
-            "661d54ce-0447-4480-8645-0a9359d74e9d"
-        ],
-        "name": "Aude Picault"
+            "b8354485-7ce8-5d1c-a71b-bca27475f6c7",
+            "6a77cc15-294a-5114-8d5f-73d5d402ab51"
+        ]
     },
     {
-        "id": "a331721d-5788-4098-a56d-f465cc68cbf1",
+        "id": "2a1ed255-67b2-58cd-b606-8c8dd612fa86",
+        "name": "Edith",
         "bd_ids": [
-            "13036c2c-766c-461c-8e52-585e09bf13b9"
-        ],
-        "name": "Hariton Pushwagner "
+            "5be2ee50-4405-56c2-b59f-fbdc8438e45e"
+        ]
     },
     {
-        "id": "ecc4c44d-2b5b-4d59-8ff4-af6409e3714b",
+        "id": "a296e419-1a8d-59a9-a3cd-d3ee5ba81fc9",
+        "name": "Dave McKean",
         "bd_ids": [
-            "4c67106e-6394-4285-babe-1e271bc893aa"
-        ],
-        "name": "Ulli Lust"
+            "68213172-a9fb-5a77-9b90-2668f465ed84"
+        ]
     },
     {
-        "id": "b3d99bd2-39b4-4a55-af68-480cd0384c64",
+        "id": "ae96a2ee-5217-5ca6-b422-07d3393e3b41",
+        "name": "Chaland",
         "bd_ids": [
-            "968f0bd4-1823-4917-a181-705dea7809e5"
-        ],
-        "name": "Fabien Vehlmann "
+            "d7561c34-87ed-5351-9dcd-cabcdda88eb9",
+            "a0258b1a-9505-561d-a6a8-ca69479420d8"
+        ]
     },
     {
-        "id": "b43daf0e-8150-4977-af17-67c91669a903",
+        "id": "289863c6-a5cf-5a8e-ac03-c19aae5a032f",
+        "name": "Jean-marc Rochette",
         "bd_ids": [
-            "968f0bd4-1823-4917-a181-705dea7809e5"
-        ],
-        "name": "Gwen de Bonneval "
+            "ef41686b-1031-581f-a454-351eef12c49b"
+        ]
     },
-    // {
-    //     "id": "22c45b64-2b63-4919-a737-a2bd613ded45",
-    //     "bd_ids": [
-    //         "1b24a8b5-6f13-4811-af34-afcbeb1b4402"
-    //     ],
-    //     "name": "Zidrou "
-    // },
     {
-        "id": "ea1c1caa-5231-4250-a9f5-d70d36832573",
+        "id": "28ec0041-d45e-5c0f-855e-36d755e3a8cc",
+        "name": "Adeline Rosenstein",
         "bd_ids": [
-            "1b24a8b5-6f13-4811-af34-afcbeb1b4402"
-        ],
-        "name": "Edith "
+            "9b7133ae-5594-5171-a72d-28be9d48ac38"
+        ]
     },
     {
-        "id": "e55be3fb-19af-4090-9988-228ece42b510",
+        "id": "5867fc24-0362-5151-a5c0-a8846e846594",
+        "name": "Mark Millar",
         "bd_ids": [
-            "57934b9d-e44e-4b5c-9f78-118f4987b51c"
-        ],
-        "name": "Dave McKean"
+            "2ab19c62-8468-5b16-99a6-f5b97153b993",
+            "9c1164e3-301e-5075-af2f-013c819bb56a"
+        ]
     },
     {
-        "id": "c47abea8-4d05-44f0-b19f-ff14eeed083f",
+        "id": "226380ae-66d4-55d7-bf85-5d57c33b16c8",
+        "name": "Ersin Karabulut",
         "bd_ids": [
-            "bb900a34-0714-4224-9330-aab2eef9360c"
-        ],
-        "name": "Chaland"
+            "e0f10239-868a-5cde-b6dd-9c94fed8d7b5"
+        ]
     },
     {
-        "id": "b927e804-ecc3-4764-8990-9b61636c8ae6",
+        "id": "dccf230a-7e53-53fc-8c68-d313d60245f3",
+        "name": "Loïc Clément",
         "bd_ids": [
-            "e0748971-c1c4-46d4-b527-1d40b9eedfad"
-        ],
-        "name": "Jean-marc Rochette "
+            "4752dff7-0fcb-5360-a636-374577c0b313"
+        ]
     },
     {
-        "id": "908b3def-dd7f-4c09-9eb0-6465c502ebd4",
+        "id": "035010a7-3a33-5cdf-b3bc-237e47b1ac05",
+        "name": "Clément Lefèvre",
         "bd_ids": [
-            "f4368a21-09d6-44bb-bea5-d6bc40cf3589"
-        ],
-        "name": "Adeline Rosenstein "
+            "4752dff7-0fcb-5360-a636-374577c0b313"
+        ]
     },
     {
-        "id": "ef1c0731-0a3d-4053-8749-78ed22335357",
+        "id": "ed1a4f6d-3f61-5ebf-95d6-dffa1b57b17e",
+        "name": "Brian K Vaughan",
         "bd_ids": [
-            "d487009b-3274-4f6b-88f3-93d79f63e57d"
-        ],
-        "name": "Mark Millar et Frank Quitely"
+            "0e432312-5b7e-50f8-afba-7869c1256706"
+        ]
     },
     {
-        "id": "59a5e6cd-a735-4776-99c4-d556d6660d5d",
+        "id": "04714650-136f-580a-ba12-2816571f86cf",
+        "name": "Pia Guerra",
         "bd_ids": [
-            "a4546cf5-74bd-428c-85c6-3ace1e626c2b"
-        ],
-        "name": "Ersin Karabulut"
+            "0e432312-5b7e-50f8-afba-7869c1256706"
+        ]
     },
     {
-        "id": "00ef117f-f2b3-4f4d-9a40-947fe991eb30",
+        "id": "eeab9dd3-5b67-53d1-8012-0b2cc71f0442",
+        "name": "Jonathan Ames",
         "bd_ids": [
-            "43399c57-14b4-49c4-9cb2-b8da1038fd0f"
-        ],
-        "name": "Loïc Clément "
+            "8f885326-1105-5c04-9cb9-1df0a0d79080"
+        ]
     },
     {
-        "id": "3e6bc045-f92d-41f7-9456-a5ec22a1d85b",
+        "id": "44528b19-7eac-5aab-8e73-bbc8f7c11c8b",
+        "name": "Dean Haspiel",
         "bd_ids": [
-            "43399c57-14b4-49c4-9cb2-b8da1038fd0f"
-        ],
-        "name": "Clément Lefèvre"
+            "8f885326-1105-5c04-9cb9-1df0a0d79080"
+        ]
     },
     {
-        "id": "6037c1f8-1376-469f-99de-66a21b570550",
+        "id": "1b65525f-ca97-5987-ac69-2799896f5fbf",
+        "name": "Charyn",
         "bd_ids": [
-            "7e57e358-7a6e-458d-9e0c-279316ee73c9"
-        ],
-        "name": "Brian K Vaughan"
+            "3d3f33fa-274c-5750-bbe8-b8a37f599031"
+        ]
     },
     {
-        "id": "bf898eb2-8127-4c2f-b9ba-b96562abc7ed",
+        "id": "012cf8c2-f922-5759-a7c4-244fe42ff33d",
+        "name": "Boucq",
         "bd_ids": [
-            "7e57e358-7a6e-458d-9e0c-279316ee73c9"
-        ],
-        "name": "Pia Guerra"
+            "3d3f33fa-274c-5750-bbe8-b8a37f599031"
+        ]
     },
     {
-        "id": "0e54e2dd-2167-4769-b889-a5bd79f5d0a0",
+        "id": "e0661633-2b9b-5f5f-8b1c-9dc7473c5037",
+        "name": "Park Kun-Wong",
         "bd_ids": [
-            "9f7f05c7-03e4-4d37-bb11-cb59bfe74378"
-        ],
-        "name": "Jonathan Ames "
+            "967b3863-f429-58b5-804c-12a7b22632fd"
+        ]
     },
     {
-        "id": "92ec30c1-be30-4788-9004-99ed8d116153",
+        "id": "8f8828b6-eed2-5ab6-8658-c165aa638119",
+        "name": "Remender Rick",
         "bd_ids": [
-            "9f7f05c7-03e4-4d37-bb11-cb59bfe74378"
-        ],
-        "name": "Dean Haspiel"
+            "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19"
+        ]
     },
     {
-        "id": "0e51d467-2f1e-45f2-9efd-b221dae75989",
+        "id": "66b3e971-8a48-589a-bb44-75fb4755cf25",
+        "name": "Craig Wes",
         "bd_ids": [
-            "5e20c93a-c966-4f0a-97ca-d5b1465b7509"
-        ],
-        "name": "Charyn et Boucq"
+            "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19"
+        ]
     },
     {
-        "id": "fd327d6e-965c-4141-9b8a-53916d8130c6",
+        "id": "a4c619ad-7880-5c8f-aeef-ac6c22630f6d",
+        "name": "Emil Ferris",
         "bd_ids": [
-            "d4d0c874-7a59-4292-81d6-bb9cca65e012"
-        ],
-        "name": "Park Kun-Wong"
+            "7cb93591-7dde-59e6-9afd-dc565a390435"
+        ]
     },
     {
-        "id": "9c85f219-dacc-4ed0-b6e5-2ec8b24cc0a9",
+        "id": "f405fdc1-4877-50a2-b054-8198ebc80a55",
+        "name": "Yarô Abe",
         "bd_ids": [
-            "3d74136e-402f-46bd-a10b-c2001960d7e0"
-        ],
-        "name": "Remender Rick"
+            "d0acc909-4425-5267-a65a-41d9ca5be16b"
+        ]
     },
     {
-        "id": "3dbe47a8-ac12-4627-8b52-1b5e99f4ccb7",
+        "id": "ef2a5874-3ec2-5b7d-b363-c8c94498ec1a",
+        "name": "Nick drnaso",
         "bd_ids": [
-            "3d74136e-402f-46bd-a10b-c2001960d7e0"
-        ],
-        "name": "Craig Wes"
+            "c5f4a66e-a9f9-530f-8694-d73e0c2f8e4c"
+        ]
     },
     {
-        "id": "ffdd403a-53eb-461f-87f8-8b0b7e5fab57",
+        "id": "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3",
+        "name": "Bryan Lee O'Malley",
         "bd_ids": [
-            "9267d4a4-aa59-4e49-b8a9-bd93c656d440"
-        ],
-        "name": "Emil Ferris "
+            "395b6a6b-7acb-5a84-8ddf-e855409977b8",
+            "6486c644-9f52-5b81-8121-a07c9ca820d3",
+            "24c15eca-cdd6-52e2-ae02-ca99c6a37884"
+        ]
     },
     {
-        "id": "fd83cde9-eb47-46c5-b349-0b2ff16006ee",
+        "id": "9e03747d-9a8a-5a37-bef0-6c60c93c5600",
+        "name": "Haruko Ichikawa",
         "bd_ids": [
-            "947c1604-40bf-44c8-a4b2-fedb8ccbb8a7"
-        ],
-        "name": "Yarô Abe"
+            "0fe6b6ee-7baa-56dc-ab21-40f63a87421b"
+        ]
     },
     {
-        "id": "07ce9f2c-4087-4b1c-95ea-c93416a400b5",
+        "id": "c53c562f-90cf-52c7-852e-ba4fa5778897",
+        "name": "Anne Simon",
         "bd_ids": [
-            "0c295e7c-43b0-4358-af34-a7a59d7ee528"
-        ],
-        "name": "Nick drnaso"
+            "27aa754b-ec29-5d31-aac3-143f9055fdb5"
+        ]
     },
     {
-        "id": "8b6b2d64-1bf2-4c38-a0a2-f560c948a753",
+        "id": "a353a8e9-4956-50a4-b70d-e0b753fcf522",
+        "name": "Régis Loisel",
         "bd_ids": [
-            "d672e2c0-86ae-4866-bc03-22df7758ba0f",
-            "07b9a55d-d923-4b11-adb6-6fa6bba48d69",
-            "9849d0fb-de46-42e2-b9ec-1f2a74c254e3"
-        ],
-        "name": "Bryan Lee O'Malley"
+            "21bdadd2-bb70-57c4-9fac-bb1eef30acc0"
+        ]
     },
     {
-        "id": "a7716069-d9e0-4e78-b52c-43b8e3a35aad",
+        "id": "f7afb30f-e1e2-556c-9c9a-43825f33af8f",
+        "name": "Jean-Blaise Djian",
         "bd_ids": [
-            "6d970069-2daf-415d-8fce-e7c580198c08"
-        ],
-        "name": "Haruko Ichikawa"
+            "21bdadd2-bb70-57c4-9fac-bb1eef30acc0"
+        ]
     },
     {
-        "id": "1a50247a-d858-4297-b975-39e955a6d5ee",
+        "id": "7118c1e0-6a54-5867-b9b0-151ba357e1c8",
+        "name": "Vincent Mallié",
         "bd_ids": [
-            "c7e2b439-1d33-41f5-9b4a-bac4db9e906d"
-        ],
-        "name": "Anne Simon"
+            "21bdadd2-bb70-57c4-9fac-bb1eef30acc0"
+        ]
     },
     {
-        "id": "47cfca4a-823f-4243-99a7-252d489e7c1e",
+        "id": "34342b16-3119-579b-9c61-ef99940a8224",
+        "name": "Thomas Gilbert",
         "bd_ids": [
-            "01784d90-3013-4d2a-b196-02c5ca9d89e5"
-        ],
-        "name": "Régis Loisel et Jean-Blaise Djian"
+            "a487bacd-3e60-5db3-9c0f-e8167d21ca9d"
+        ]
     },
     {
-        "id": "7e71ca9e-5ced-483f-8a78-01a5833af710",
+        "id": "03cdc5ac-b075-5ab7-9fc8-3d64cdf0096d",
+        "name": "Hirohiko ARAKI",
         "bd_ids": [
-            "01784d90-3013-4d2a-b196-02c5ca9d89e5"
-        ],
-        "name": "Vincent Mallié"
+            "7a876a7a-5b64-5cde-9870-ecb1aa6d034c"
+        ]
     },
     {
-        "id": "ad3697c8-e391-42e8-a7c8-acb406db1a31",
+        "id": "a3c116a8-7515-5b5a-808f-6912b470b716",
+        "name": "Tom Kaczynski",
         "bd_ids": [
-            "df45700b-9447-4114-9378-501ada45121a"
-        ],
-        "name": "Thomas Gilbert"
+            "6a5e1b8a-0898-5cbd-b53c-ffcb5fb7bb59"
+        ]
     },
     {
-        "id": "312c861d-2a64-4d12-9e8f-821ea6397c36",
+        "id": "84220ea6-51be-54b2-8524-36bc6a1ad7c5",
+        "name": "Nicolás Arispe",
         "bd_ids": [
-            "1b31f45f-e604-4169-a18a-cc5d2fed12f1"
-        ],
-        "name": "Hirohiko ARAKI"
+            "8347cdbe-e853-583d-a6f8-3288b8bb55a5"
+        ]
     },
     {
-        "id": "b5e9e9bb-290e-46f1-9e77-2a0b80d168ac",
+        "id": "2d4623d8-e667-5373-b0e8-0933cc33d64e",
+        "name": "Émile Bravo",
         "bd_ids": [
-            "38ef5543-c51d-4e0e-85c5-f9602f08df8e"
-        ],
-        "name": "Tom KACZYNSKI "
+            "c77e8572-a4d7-5a3e-b772-31dd942e9d39"
+        ]
     },
     {
-        "id": "47f54a00-29cd-4254-a69f-ab9eaaf411a0",
+        "id": "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0",
+        "name": "Jeff Lemire",
         "bd_ids": [
-            "408aab5a-c1a0-4ddc-abea-dc65d96e4991"
-        ],
-        "name": "Nicolás Arispe"
+            "4bb23804-0bcf-59c4-b051-ebf483efde5f",
+            "344c953c-2f98-510e-9642-b193cc079eeb"
+        ]
     },
     {
-        "id": "befd2db3-2045-41eb-a2b0-23497c633249",
+        "id": "b4be3d64-8025-58ce-8c65-532412a7a00a",
+        "name": "Andrea Sorrentino",
         "bd_ids": [
-            "26652315-38d4-4a35-b281-361ccb094001"
-        ],
-        "name": "Émile Bravo"
+            "4bb23804-0bcf-59c4-b051-ebf483efde5f"
+        ]
     },
     {
-        "id": "2f26e3f0-f74c-4c93-989b-ec4caf1b4ffd",
+        "id": "cc2cbfb1-a137-5c56-8a23-2671597ab919",
+        "name": "Peppe Koivunen",
         "bd_ids": [
-            "196f3a61-3d18-4691-b8da-feb5595ca3aa"
-        ],
-        "name": "Jeff Lemire "
+            "7e408fbd-928f-56ab-b646-d972f5e24698"
+        ]
     },
     {
-        "id": "f966ed4c-33e7-461b-98fb-1213203489c7",
+        "id": "0e19ff22-af4d-56a0-abcc-86cb2a09490d",
+        "name": "Aapo Rapi",
         "bd_ids": [
-            "196f3a61-3d18-4691-b8da-feb5595ca3aa"
-        ],
-        "name": "Andrea Sorrentino"
+            "7e408fbd-928f-56ab-b646-d972f5e24698"
+        ]
     },
     {
-        "id": "314f0a06-25e3-4852-8067-ade7d0a98dab",
+        "id": "1c483a7c-e6bb-582a-8792-0cc4e649f4d0",
+        "name": "Rokudenashiko",
         "bd_ids": [
-            "631bb284-70fd-4da7-91e2-90e614e67c8c"
-        ],
-        "name": "Peppe Koivunen et Aapo Rapi "
+            "21801dc4-dd74-5bc0-881d-89f0328bcfcf"
+        ]
     },
     {
-        "id": "23ab0adb-98a0-449e-9b5a-297eae0f28c2",
+        "id": "458151c8-dc97-5fef-8d61-bef98aaace70",
+        "name": "Yuhki Kamatani",
         "bd_ids": [
-            "79983150-030a-4ce6-bd49-e6405381a023"
-        ],
-        "name": "Rokudenashiko "
+            "b4e6e54b-c87a-5158-b824-bba62706d262"
+        ]
     },
     {
-        "id": "021a09f2-0ce8-43bb-8306-080696b0110f",
+        "id": "28cc0b40-521b-52be-b4d4-a956755eb971",
+        "name": "Olivier Texier",
         "bd_ids": [
-            "73d66c2d-961d-44fd-8658-ac2aedc8f06f"
-        ],
-        "name": "Gipi "
+            "b543747f-1269-5f2c-98d3-13188b27d9b0"
+        ]
     },
     {
-        "id": "04d9e0c5-3b35-41b4-b8be-8c10ad6bc5f1",
+        "id": "27924509-cf04-5879-b755-b018b8bb79a4",
+        "name": "Arnaud Malherbe",
         "bd_ids": [
-            "c50a4895-751a-46ed-80f2-cea9bfd0d18b",
-            "f306c5c5-4e13-49ae-b405-bfb31acb88db"
-        ],
-        "name": "Aniss El Hamouri"
+            "795ed7d3-240b-5db3-8a23-41fe5531f853"
+        ]
     },
     {
-        "id": "edb44c6d-62cc-46de-8467-da1fdb9247e0",
+        "id": "fd980b15-243b-5a7e-98a4-46024c3809b9",
+        "name": "Vincent Perriot",
         "bd_ids": [
-            "ec6c67d5-9c05-4351-a587-c0d41aa4c6ee"
-        ],
-        "name": "Ichikawa Raku"
+            "795ed7d3-240b-5db3-8a23-41fe5531f853"
+        ]
     },
     {
-        "id": "38fab6de-e596-4316-89c1-c2cb0701867d",
+        "id": "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5",
+        "name": "Gipi",
         "bd_ids": [
-            "ec6c67d5-9c05-4351-a587-c0d41aa4c6ee"
-        ],
-        "name": "Akata"
+            "0a1fa77f-b0ff-55a3-ba65-d274ab0605d3",
+            "c36e3da5-0be8-5732-a555-fb7a2b9adc95"
+        ]
     },
     {
-        "id": "260acd8f-d351-41e4-a97a-3ddf5cbfc5e9",
+        "id": "0334ed05-27b2-5dea-b180-3ab2692d85e7",
+        "name": "Aniss El Hamouri",
         "bd_ids": [
-            "043cff6c-cb74-43e6-971c-e6110d9e2f27"
-        ],
-        "name": "Venayre et Davodeau"
+            "91796292-f679-5dc3-8e16-f53e3cd37480",
+            "c7de24d2-2e14-55d4-9ba8-d7999551971b"
+        ]
     },
     {
-        "id": "4393af7e-96bb-4d99-8495-22883a543227",
+        "id": "37d869e4-02d9-5885-a0c5-62e7f626e80d",
+        "name": "Ichikawa Raku",
         "bd_ids": [
-            "043cff6c-cb74-43e6-971c-e6110d9e2f27"
-        ],
-        "name": "Davodeau"
+            "08e65064-e95c-5215-8c3d-adb674683828"
+        ]
     },
     {
-        "id": "91335036-2186-4049-a4f1-f93d135067b6",
+        "id": "11ccdb5b-b14e-5297-93a6-144b65c6a374",
+        "name": "Venayre",
         "bd_ids": [
-            "7835715e-20e5-443d-9724-624d40d985a4"
-        ],
-        "name": "Itagaki"
+            "3d70b2d5-2977-5edc-972d-5f5e66124eef"
+        ]
     },
     {
-        "id": "a886bbbe-2392-459b-a313-237d51b8edb2",
+        "id": "0fa6efdf-5b59-5497-a4a0-2412cc8f2249",
+        "name": "Davodeau",
         "bd_ids": [
-            "e6112d7d-6e1a-458f-8799-f65bd5c22873"
-        ],
-        "name": "Walden"
+            "3d70b2d5-2977-5edc-972d-5f5e66124eef"
+        ]
     },
     {
-        "id": "0430b663-53f1-4bf4-9e22-935f4fe80270",
+        "id": "5becded1-8df8-5719-8df7-76a7c8641ec1",
+        "name": "Itagaki",
         "bd_ids": [
-            "fa6004ee-f525-41da-bc6c-36a7a5622a89"
-        ],
-        "name": "Starsky et Place"
+            "bf4fe76d-85e6-5b2b-8093-bd397f29ccc2"
+        ]
     },
     {
-        "id": "d6eaf1b2-8a24-47be-9865-3f192421aa99",
+        "id": "5210ee98-eddf-5485-bec1-870d0de8270b",
+        "name": "Walden",
         "bd_ids": [
-            "60078e92-6be3-40b8-b32f-d4bc75546c1a"
-        ],
-        "name": "Gwen de Bonneval"
+            "8ac3624a-93f8-5771-975b-942423b399b5"
+        ]
     },
     {
-        "id": "d6eaf1b2-8a24-18be-9865-3f192421aa99",
+        "id": "5e40aaad-a8ad-59d4-8f7c-0fc6c135a0cd",
+        "name": "Pierrick Starsky",
         "bd_ids": [
-            "60078e92-6be3-40b8-b32f-d4bc75546c1a"
-        ],
-        "name": "Fabien Vehlmann"
+            "45654738-801a-54ec-a4da-363363691092"
+        ]
     },
     {
-        "id": "bdc8dd70-b0a5-4c77-9e84-69e2a7c2aa00",
+        "id": "e60fbf0f-6d78-5335-af27-7dca3f46b9b0",
+        "name": "Pierre Place",
         "bd_ids": [
-            "e7304430-58b2-4838-847c-4943209a3bd5"
-        ],
-        "name": "Jean-Louis Tripp"
+            "45654738-801a-54ec-a4da-363363691092"
+        ]
     },
     {
-        "id": "b90821de-4ae2-4d5e-8545-33b2ea61e699",
+        "id": "dfb60faa-598f-5699-8b2f-01a78e66cd35",
+        "name": "Jean-Louis Tripp",
         "bd_ids": [
-            "2643f241-2486-4df0-949c-6fe63054ba4c",
-            "61ef1c6e-e67f-4b23-9d81-a1e072692243"
-        ],
-        "name": "Daniel Warren Johnson"
+            "20804294-4e09-50cd-94bd-8372e5d99a58"
+        ]
     },
     {
-        "id": "9376f8e3-9a2b-40be-87f2-99e568431e69",
+        "id": "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5",
+        "name": "Daniel Warren Johnson",
         "bd_ids": [
-            "329e3a2e-851b-4155-b797-56ab386f9828"
-        ],
-        "name": "Naoki Yamakawa"
+            "85b4afe0-39bc-53e9-b894-84624222cc7d",
+            "67a5f9be-05e5-5595-a37f-a5ab7ac9952b"
+        ]
     },
     {
-        "id": "9376f8e3-9a2b-41be-87f2-99e568431e69",
+        "id": "91077797-d951-5025-a095-fef1a2b3bb5f",
+        "name": "Osamu Tezuka",
         "bd_ids": [
-            "329e3a2e-851b-4155-b797-56ab386f9828"
-        ],
-        "name": "Masashi Asaki"
+            "9a9a15ba-5c4a-5d05-9b95-0f346d811cf6",
+            "80e320c2-11e7-595b-89ba-24b81ea6d621"
+        ]
     },
     {
-        "id": "fd152aa0-5085-40de-844d-2d3f571dd7cd",
+        "id": "2e7138da-8cc1-50d9-846f-ea5c74a98cf7",
+        "name": "Naoki Yamakawa",
         "bd_ids": [
-            "25b3ba4d-df17-478a-baf1-678a113ab661"
-        ],
-        "name": "Makoto Yukimura"
+            "a9faa5b6-9672-510a-bd92-634e3aeb2240"
+        ]
     },
     {
-        "id": "d0b45263-4c88-475b-898c-4efebec6b14c",
+        "id": "4c6305bb-724f-5f86-ae00-73e45454b903",
+        "name": "Masashi Asaki",
         "bd_ids": [
-            "6b3b470f-1589-4321-91f1-1c7810ebf6b0"
-        ],
-        "name": "TogaQ"
+            "a9faa5b6-9672-510a-bd92-634e3aeb2240"
+        ]
     },
     {
-        "id": "d0b45263-4c89-475b-898c-4efebec6b14c",
+        "id": "183f199f-a026-5761-9ec8-c69c66040044",
+        "name": "Makoto Yukimura",
         "bd_ids": [
-            "6b3b470f-1589-4321-91f1-1c7810ebf6b0"
-        ],
-        "name": "Narcissus - Neko Kichiku"
+            "4d775666-080c-5f46-ab43-983746584a96"
+        ]
     },
     {
-        "id": "771c93d9-fccc-4424-92e4-0204e60df05e",
+        "id": "05eb8f95-5ac9-5a9c-8111-7901bcf3d397",
+        "name": "TogaQ",
         "bd_ids": [
-            "6570b8db-360b-4681-bda9-ea63b9ade0e3"
-        ],
-        "name": "Kaoru Mori"
+            "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71"
+        ]
     },
     {
-        "id": "14a44f46-8fd7-43db-b51e-57e4570659f3",
+        "id": "019a8caf-92e3-54b4-8add-539931bc8478",
+        "name": "Narcissus - Neko Kichiku",
         "bd_ids": [
-            "33e079a6-8300-41e0-89c9-9138fc721fa3"
-        ],
-        "name": "Louise Joor"
+            "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71"
+        ]
     },
     {
-        "id": "a76fc636-222c-4133-951d-aa66299548be",
+        "id": "6b955294-0c6d-5b47-8a7f-7a46611b7aa4",
+        "name": "Louise Joor",
         "bd_ids": [
-            "0a763474-59be-4d4d-842b-e8a87e3b5c2a",
-            "dbbb9055-2fcd-4c61-9e3c-6c3cd1049073"
-        ],
-        "name": "Emilie Gleason"
+            "e4e1d8bd-5c94-57eb-9b76-45b0d2e3c1b7"
+        ]
     },
     {
-        "id": "08472fc0-6404-4796-8a18-6faf83baa869",
+        "id": "d055575f-870c-5ed6-8371-8ede4af900c1",
+        "name": "Emilie Gleason",
         "bd_ids": [
-            "2d464d90-09e0-4a74-a6cb-11aa4707840d"
-        ],
-        "name": "Nina Bunjevac"
+            "0a23fbe5-b7b7-547f-95ef-c8e4c169ba84",
+            "22bae3a8-139b-5a3f-932f-80fc901d43af"
+        ]
     },
     {
-        "id": "f66fc529-37ad-482a-a741-69b5f19df21a",
+        "id": "77897035-979e-5c77-9015-a3d636adb490",
+        "name": "Nina Bunjevac",
         "bd_ids": [
-            "dd65af09-b8d4-4f1e-8c0e-94a6ff2dd456",
-            "c3580b81-adb7-4cbd-b637-250ecdf25da9"
-        ],
-        "name": "Tom King"
+            "8b193f6b-8fc9-5dd4-8f86-3dffe109ace2"
+        ]
     },
     {
-        "id": "325dd3e8-18ce-4659-a45e-0f2a13ebf632",
+        "id": "67021253-b3f9-5131-a5a1-6f1e6996c8bd",
+        "name": "Tom King",
         "bd_ids": [
-            "dd65af09-b8d4-4f1e-8c0e-94a6ff2dd456",
-            "c3580b81-adb7-4cbd-b637-250ecdf25da9"
-        ],
-        "name": "Mitch Gerads"
+            "0eb55165-0714-592e-b967-ca0d76ba06ff",
+            "b6e3995c-deef-5246-a9b0-df3a38e0f7e8",
+            "980619c8-13ee-54cf-960c-0ad3a452965b"
+        ]
     },
     {
-        "id": "b98a189e-1c4c-4660-8f9d-1a4d4e857674",
+        "id": "cd86941a-d2f6-535f-bb9b-ae9e1a277c61",
+        "name": "Mitch Gerads",
         "bd_ids": [
-            "9a219ea3-7c4d-4c65-8282-bb468fd39ff8",
-            "0961f4d3-5936-4b66-9800-bd58594b14dd",
-            "d81c4802-be52-4789-9858-667bf492eff7"
-        ],
-        "name": "Nine Antico"
+            "0eb55165-0714-592e-b967-ca0d76ba06ff",
+            "b6e3995c-deef-5246-a9b0-df3a38e0f7e8"
+        ]
     },
     {
-        "id": "c1ccb6c0-d280-414c-b4b2-47ec0c0895c8",
+        "id": "e5020b23-1913-5091-8e95-fb8deb0a3b96",
+        "name": "Nine Antico",
         "bd_ids": [
-            "da436e28-681d-4b0b-a7cc-5c41be6e5dfd"
-        ],
-        "name": "Ai Yazawa"
+            "455fed83-1d56-56f4-b2e3-46efbcc1f0e1",
+            "2f23ec7b-6aa5-5cf5-b8ac-331ee184fe94",
+            "a363d9bd-8981-5155-9eb6-c9cef10c231a"
+        ]
     },
     {
-        "id": "9ea9be5a-e746-430e-877b-22b0ea9ddc18",
+        "id": "6dc1449e-5778-5046-ae1c-0025d5d15b13",
+        "name": "Ai Yazawa",
         "bd_ids": [
-            "7369cf71-bc79-4782-898d-89aae5bd0d0f"
-        ],
-        "name": "Nicolas Jarry, France Richemond"
+            "ea9613e4-c0a1-5a88-b2a4-fc986c9f2240"
+        ]
     },
     {
-        "id": "8a68ea0e-097e-4042-aec6-1ab82311012e",
+        "id": "63afd855-4f1d-51bb-a5c5-faf4676934bd",
+        "name": "Nicolas Jarry",
         "bd_ids": [
-            "7369cf71-bc79-4782-898d-89aae5bd0d0f"
-        ],
-        "name": "Theo Caneschi et Lorenzo Pieri"
+            "935c5f25-3edb-5853-91ea-c0c75d211ba5"
+        ]
     },
     {
-        "id": "1da78ed3-af1c-4dac-bb00-84d635aa0620",
+        "id": "731fd7b0-dd35-5c0e-a77b-6d21464732f8",
+        "name": "France Richemond",
         "bd_ids": [
-            "d5cb5a85-29fb-41ca-a1f8-a91897dec5f9"
-        ],
-        "name": "Philippe Valette"
+            "935c5f25-3edb-5853-91ea-c0c75d211ba5"
+        ]
     },
     {
-        "id": "8d54f27c-f777-45f7-a990-149c419afe48",
+        "id": "7dc8b037-9a91-58d1-8b32-74b2c39834f2",
+        "name": "Theo Caneschi",
         "bd_ids": [
-            "0a0b8618-67eb-4543-b87c-6fabc445c15e"
-        ],
-        "name": "Goossens"
+            "935c5f25-3edb-5853-91ea-c0c75d211ba5"
+        ]
     },
     {
-        "id": "4575c4f7-9063-49e5-bd57-fe93b757ff1f",
+        "id": "4f07590b-71c7-574a-a119-11a46258f06a",
+        "name": "Lorenzo Pieri",
         "bd_ids": [
-            "6089b7a5-d1d8-461b-879d-f349e16f2a67",
-            "737423f3-8af9-41a0-ae84-cdae38fd365b"
-        ],
-        "name": "Chloé Wary"
+            "935c5f25-3edb-5853-91ea-c0c75d211ba5"
+        ]
     },
     {
-        "id": "2b34252e-2158-41e9-9fd1-55aa415094e6",
+        "id": "089c60ee-cedc-54f3-9c4d-9414af218b1b",
+        "name": "Philippe Valette",
         "bd_ids": [
-            "b8485509-5331-4ba0-8312-e9d89ccb1a36"
-        ],
-        "name": "Satoshi Kon"
+            "99f43ae7-65c3-5f0b-bd9a-336ad6735fea"
+        ]
     },
     {
-        "id": "fd0db1db-a64f-4940-8ed6-2dca33cd5fa9",
+        "id": "2149320d-2c93-5c48-92dd-fd4a4b4a2916",
+        "name": "Goossens",
         "bd_ids": [
-            "57bb05d5-adf6-4342-ab0a-43bab1d59c22"
-        ],
-        "name": "Mike Carey"
+            "3d6f3134-2abf-5826-9462-12df423eeb00"
+        ]
     },
     {
-        "id": "8ed669a5-64b8-495f-b5f2-973d3de3d04b",
+        "id": "92d63259-a236-5255-8a90-bf9776649674",
+        "name": "Chloé Wary",
         "bd_ids": [
-            "57bb05d5-adf6-4342-ab0a-43bab1d59c22"
-        ],
-        "name": "Peter Gross"
+            "90a07961-765f-588b-a9b1-147327ff19e6",
+            "d535ad5b-baf2-54af-b3d5-17d8b52332ff"
+        ]
     },
     {
-        "id": "ad9a6d8f-b708-49e6-8822-5f69e9746480",
+        "id": "2d4e035b-babd-5524-8a3e-9bcba6e75ec5",
+        "name": "Satoshi Kon",
         "bd_ids": [
-            "d88295d6-0bca-428a-851a-80987a29d2a0"
-        ],
-        "name": "Mark Millar"
+            "fa63dd8d-c49f-5a56-9f07-8f6fbbb45dbc"
+        ]
     },
     {
-        "id": "dd0de719-19e5-4e5a-8146-8622b807c491",
+        "id": "ac8ec002-305d-51dd-96b9-2c2c6d35b9ab",
+        "name": "Mike Carey",
         "bd_ids": [
-            "d88295d6-0bca-428a-851a-80987a29d2a0"
-        ],
-        "name": "Olivier Coipel"
+            "91f06cb8-a704-5705-b48a-2015fa0dd6b8"
+        ]
     },
     {
-        "id": "0a13257e-eff6-49f5-a119-9d46b9e2baf5",
+        "id": "4622e2be-836f-5c71-a681-8a7b8692853d",
+        "name": "Peter Gross",
         "bd_ids": [
-            "1d42cc42-1077-49d3-8b75-db877029bb42"
-        ],
-        "name": "Joe Quesada"
+            "91f06cb8-a704-5705-b48a-2015fa0dd6b8"
+        ]
     },
     {
-        "id": "28769132-23c1-4782-bbad-791e3b931c27",
+        "id": "a35e9edb-f6b1-5319-a1b2-1d16cc509e2a",
+        "name": "Olivier Coipel",
         "bd_ids": [
-            "1d42cc42-1077-49d3-8b75-db877029bb42"
-        ],
-        "name": "Christopher Priest"
+            "9c1164e3-301e-5075-af2f-013c819bb56a"
+        ]
     },
     {
-        "id": "bb2bab6c-1bbc-42dd-b42d-487e35ed6cee",
+        "id": "40790dc7-7194-5449-98fe-ccc3f6fa7767",
+        "name": "Joe Quesada",
         "bd_ids": [
-            "ff05196e-e410-4a4a-aac4-e772ce00d110"
-        ],
-        "name": "Azarello"
+            "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea"
+        ]
     },
     {
-        "id": "b3ddd181-cce0-47d4-ad65-1d86f16ca7b5",
+        "id": "2e83f03b-61b3-5559-8c7b-9f91ce6434b7",
+        "name": "Christopher Priest",
         "bd_ids": [
-            "ff05196e-e410-4a4a-aac4-e772ce00d110"
-        ],
-        "name": "Corben"
+            "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea"
+        ]
     },
     {
-        "id": "a6b7da42-eb45-489f-b16c-d9cca380b410",
+        "id": "86408786-4e90-52b4-aa67-30066872af26",
+        "name": "Azarello",
         "bd_ids": [
-            "d1471f01-3748-42cc-ba08-d0ede9019b3a",
-            "8f5a5f64-0c09-4d91-a880-cf27b49af28a"
-        ],
-        "name": "Ugo Bienvenu"
+            "809c07eb-4cdb-564d-801f-810e13afae93"
+        ]
     },
     {
-        "id": "6f2e0b66-96f6-4b52-b457-f7b99b38a85a",
+        "id": "fe17f662-7b96-54eb-a378-d165448e83c6",
+        "name": "Corben",
         "bd_ids": [
-            "c0e65c01-b0db-47e2-81d6-77afe1d6533c"
-        ],
-        "name": "AJ Dungo"
+            "809c07eb-4cdb-564d-801f-810e13afae93"
+        ]
     },
     {
-        "id": "2e4a7330-60fa-496c-bdf9-75c366863f92",
+        "id": "10666593-e9d3-5312-90c8-4ef8d1e3cebe",
+        "name": "Ugo Bienvenu",
         "bd_ids": [
-            "c158ae8d-8bf0-40fe-9e74-4a64e049e7be"
-        ],
-        "name": "Amélie Fléchais"
+            "04614ebb-df6b-5425-9f49-a953190b114f",
+            "122a0172-06d1-548d-a796-547d56b7fa4c"
+        ]
     },
     {
-        "id": "24b2d539-cd9c-421b-95ee-8399709da8bc",
+        "id": "b9adbafa-9486-52d4-bfd9-7072efd368ae",
+        "name": "AJ Dungo",
         "bd_ids": [
-            "c158ae8d-8bf0-40fe-9e74-4a64e049e7be"
-        ],
-        "name": "Jonathan Garnier"
+            "fff5e173-faf5-5091-b143-91036a35047d"
+        ]
     },
     {
-        "id": "0bee8e5c-f59e-4ad0-a1b3-c29c861f6db3",
+        "id": "1a7ad751-eef5-54c6-af64-bf354fc1c6bb",
+        "name": "Amélie Fléchais",
         "bd_ids": [
-            "d904b85f-2832-46a5-98ba-2eb9c4301655"
-        ],
-        "name": "Nishio Ishin"
+            "88083fb1-f033-50a2-a26a-84921246605c"
+        ]
     },
     {
-        "id": "0bee8e5c-f49e-4ad0-a1b3-c29c861f6db3",
+        "id": "8ebd502e-0353-5076-9daf-ef5e18c72f6c",
+        "name": "Jonathan Garnier",
         "bd_ids": [
-            "d904b85f-2832-46a5-98ba-2eb9c4301655"
-        ],
-        "name": "Vofan"
+            "88083fb1-f033-50a2-a26a-84921246605c"
+        ]
     },
     {
-        "id": "cf809222-3023-4b6b-afcc-c9bb0ca3e444",
+        "id": "d16f0632-6f42-5729-a856-4a25f9e5396d",
+        "name": "Max",
         "bd_ids": [
-            "83446e84-f4d0-47c9-a6d3-b9b6214ab07f"
-        ],
-        "name": "Max"
+            "dcc25ccb-bc58-5f18-9a49-a54fc52fdcf3"
+        ]
     },
     {
-        "id": "53877398-42b7-432b-910c-28d5820308d0",
+        "id": "0d6d184b-a29e-53a7-8833-1d8d959e8b67",
+        "name": "Tebo",
         "bd_ids": [
-            "16b282a3-fe42-4ab2-96a6-f3d58df16dc0"
-        ],
-        "name": "Tebo"
+            "4e54d086-2092-5623-81ce-cdb52ee354a3"
+        ]
     },
     {
-        "id": "7c2ab163-71e6-443c-89c1-269635260d0c",
+        "id": "35a4d2db-5e22-555d-bdcc-c806c0ae5f35",
+        "name": "Stéphane Fert",
         "bd_ids": [
-            "14ffec37-5d23-4c76-8985-df12cfa9a51b",
-            "52a84f92-94e5-4c41-8c84-5536bb325785"
-        ],
-        "name": "Stéphane Fert"
+            "33368bc9-256a-520a-88cc-b78bd19c6dce",
+            "045e3ca9-5744-52bb-ba4c-d69f08e9c343"
+        ]
     },
     {
-        "id": "bf5a450d-a58f-4158-ba9d-a455d6a58c2e",
+        "id": "101177af-518d-573a-9f37-7d1907f8557a",
+        "name": "Bargain Sakurai",
         "bd_ids": [
-            "29a4b784-45b9-46cb-8117-e9d3fb007080"
-        ],
-        "name": "Bargain Sakurai et Atsuhiko Nakamura"
+            "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"
+        ]
     },
     {
-        "id": "1fa15760-fec2-439c-ae15-9fe2b6a07b65",
+        "id": "f95bf41f-d4da-5636-8d31-4a16f45f86ae",
+        "name": "Atsuhiko Nakamura",
         "bd_ids": [
-            "f8ab7eee-3e2e-4b16-aba2-c9a59b8a14e6"
-        ],
-        "name": "Anne-Margot Ramstein"
+            "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"
+        ]
     },
     {
-        "id": "afb472e6-b869-4d53-b1d2-cd24620aabf8",
+        "id": "79173c52-b077-58b7-9de5-213f60a8f298",
+        "name": "Anne-Margot Ramstein",
         "bd_ids": [
-            "eac2f8b0-cabe-4894-9435-1f97d78d48fe",
-            "df4b209f-4f75-42c0-ba12-931bf2ec8d09"
-        ],
-        "name": "Nicolas Presl"
+            "56fc148f-32d4-5cb2-a0e4-8eee0f478cfb"
+        ]
     },
     {
-        "id": "1799978d-fa64-4c2e-9cdd-4166d5429bfc",
+        "id": "21e8c9b3-1fc6-5b3f-9c64-fbc955194792",
+        "name": "Nicolas Presl",
         "bd_ids": [
-            "b504945d-dcd2-470d-a9d8-757e479d97c4"
-        ],
-        "name": "Ryô Hirano"
+            "5cf79362-fbc8-5768-a71e-da1f3da4979b",
+            "0600c708-f469-5a62-87d6-0081966be2b0"
+        ]
     },
     {
-        "id": "dbd2393c-6627-447a-adae-3d47c6f2eefa",
+        "id": "ec7b8039-9647-53bd-98df-c4980ff84587",
+        "name": "Ryô Hirano",
         "bd_ids": [
-            "07b9a55d-d923-4b11-adb6-6fa6bba48d69"
-        ],
-        "name": "Leslie Hung"
+            "99cf5bac-a6b4-5fa0-ace7-3b6acdda880b"
+        ]
     },
     {
-        "id": "4c9c194b-541f-4faa-a562-ea9b28f3a28a",
+        "id": "cd9ac32b-5e63-5ee4-a040-0a08d8da008c",
+        "name": "Leslie Hung",
         "bd_ids": [
-            "9a011c39-92ab-4a08-89fb-3df45b43c28d"
-        ],
-        "name": "Pauline Giraud, Maxence Henry"
+            "6486c644-9f52-5b81-8121-a07c9ca820d3"
+        ]
     },
     {
-        "id": "050bbcd9-e04a-4c59-895a-59114156c235",
+        "id": "5bd9bdce-2827-5048-84b1-476815daaeff",
+        "name": "Pauline Giraud",
         "bd_ids": [
-            "9a011c39-92ab-4a08-89fb-3df45b43c28d"
-        ],
-        "name": "Yvan Duque"
+            "a07deabb-ba5c-5b23-bd86-e977a8865e6c"
+        ]
     },
     {
-        "id": "c8499147-6933-4022-a0a5-d5ae61d43353",
+        "id": "96ee5e02-42ba-5540-b8a7-b2b639a577bb",
+        "name": "Maxence Henry",
         "bd_ids": [
-            "326f6947-69d5-48c5-bde6-d677cc8798ed"
-        ],
-        "name": "Alfred"
+            "a07deabb-ba5c-5b23-bd86-e977a8865e6c"
+        ]
     },
     {
-        "id": "ad4f4791-6489-4339-9ffe-ecf7c08ec792",
+        "id": "aaff7554-0102-5996-beae-0993b356a202",
+        "name": "Yvan Duque",
         "bd_ids": [
-            "8fc8c100-bb70-4f24-aa74-a45ba3446b6f"
-        ],
-        "name": "Mark Waid"
+            "a07deabb-ba5c-5b23-bd86-e977a8865e6c"
+        ]
     },
     {
-        "id": "0a1614e7-7a41-4725-923f-d53f9d433c42",
+        "id": "95d147eb-c140-5339-ad8e-0d09bd1bb49f",
+        "name": "Alfred",
         "bd_ids": [
-            "8fc8c100-bb70-4f24-aa74-a45ba3446b6f"
-        ],
-        "name": "Alex Ross"
+            "3852be01-9880-52eb-8493-9b3a5758e58f"
+        ]
     },
     {
-        "id": "88b53369-9a85-421b-86bf-f15207493881",
+        "id": "643adc5f-050b-514f-855f-2ff87a990c08",
+        "name": "Mark Waid",
         "bd_ids": [
-            "4fdbeb31-7b0d-4d1d-8988-7bdb87ddc45a"
-        ],
-        "name": "Riichiro Inagaki"
+            "7769da5e-26ce-5da9-bec0-7a649cbadc21",
+            "1c16dd39-9b71-570b-adf9-dd949b0876ed"
+        ]
     },
     {
-        "id": "4e560600-32c3-4ed2-b9ce-ecac969d1788",
+        "id": "cf7a99fa-a50c-569b-b9bd-f5e5c1769357",
+        "name": "Alex Ross",
         "bd_ids": [
-            "4fdbeb31-7b0d-4d1d-8988-7bdb87ddc45a"
-        ],
-        "name": "Boichi"
+            "7769da5e-26ce-5da9-bec0-7a649cbadc21"
+        ]
     },
     {
-        "id": "94286d79-132f-48ea-a218-23c14a39ecf1",
+        "id": "c3a1940c-7540-5034-8b6c-ca60b59520b3",
+        "name": "Riichiro Inagaki",
         "bd_ids": [
-            "56fdc40f-69be-4035-b59b-699c226561aa"
-        ],
-        "name": "Ville Ranta"
+            "e897052f-d4f2-5e42-9731-c4f7b672d891"
+        ]
     },
     {
-        "id": "245bb48c-1b6d-4335-8481-1888e29b7c9a",
+        "id": "68134aa4-2f64-5303-a042-788e170ddea9",
+        "name": "Boichi",
         "bd_ids": [
-            "ab9ce207-aa63-4ca6-8da9-950c138c1baf"
-        ],
-        "name": "Moa Romanova"
+            "e897052f-d4f2-5e42-9731-c4f7b672d891"
+        ]
     },
     {
-        "id": "ec6c909d-8f84-4f2b-babc-0554155605f1",
+        "id": "a367fe72-04a8-59a8-955b-882054715ed1",
+        "name": "Ville Ranta",
         "bd_ids": [
-            "444e2a08-2137-4443-b54b-391d78a1993f"
-        ],
-        "name": "Marguerite Abouet"
+            "a5c2edd4-0e57-5aff-ad51-1da715ae3f5e"
+        ]
     },
     {
-        "id": "3d054bbd-9eb8-468a-99cd-1567f8e85e82",
+        "id": "7dcf6112-1145-5af4-82fb-e9b92015aa1d",
+        "name": "Moa Romanova",
         "bd_ids": [
-            "444e2a08-2137-4443-b54b-391d78a1993f"
-        ],
-        "name": "Donatien Mary"
+            "126597e8-c9b9-59ea-bd95-81b0e7b61342"
+        ]
     },
     {
-        "id": "5948f0eb-e387-4716-ab56-392bef8d1089",
+        "id": "ecb145e1-13b8-59fa-8422-1fbb2a505946",
+        "name": "Marguerite Abouet",
         "bd_ids": [
-            "d8c5e849-fb06-40c6-9aea-5a6bbeb02c39"
-        ],
-        "name": "Noëlle Steveson"
+            "f85336b5-f4df-5112-a405-cf0dbd14fd50"
+        ]
     },
     {
-        "id": "92a385f5-519c-4715-acdc-598cfdd1729c",
+        "id": "aadfc208-0268-5ff7-b840-57b854a09cce",
+        "name": "Donatien Mary",
         "bd_ids": [
-            "0dcd78e3-5959-49a8-8629-6c45614781c9"
-        ],
-        "name": "Kelly Sue DeConnick"
+            "f85336b5-f4df-5112-a405-cf0dbd14fd50"
+        ]
     },
     {
-        "id": "0315f923-4d88-4ab2-89bb-da27348e7948",
+        "id": "beb683f9-838a-5ab5-915e-50e5ee57e66f",
+        "name": "Noëlle Steveson",
         "bd_ids": [
-            "0dcd78e3-5959-49a8-8629-6c45614781c9"
-        ],
-        "name": "Emma Ríos"
+            "531a885c-829a-59e3-9ce8-4af27ee228e2"
+        ]
     },
     {
-        "id": "5467ed08-4eb1-428b-8a18-5288cef03b50",
+        "id": "a6b81f1d-dc27-5aa3-877e-d3e6bd44907d",
+        "name": "Kelly Sue DeConnick",
         "bd_ids": [
-            "cc3f1f7d-d2cd-480d-be8a-a8576ee58578"
-        ],
-        "name": "Theo Ellsworth"
+            "ef0b7e38-3627-5f6e-b460-3e92a56d3a13"
+        ]
     },
     {
-        "id": "a599d445-4e90-4e7f-87f5-da3718d53b71",
+        "id": "e00c6e9a-cecb-5393-9a29-204cb3947ce9",
+        "name": "Emma Ríos",
         "bd_ids": [
-            "2dc58737-0d8e-47e8-a87a-5ad7e5503a85"
-        ],
-        "name": "Vincent Zabus"
+            "ef0b7e38-3627-5f6e-b460-3e92a56d3a13"
+        ]
     },
     {
-        "id": "1d857bb4-739b-4a95-b300-ac0e764289a6",
+        "id": "e02ab7f1-a215-5b6d-a012-ed8916473101",
+        "name": "Theo Ellsworth",
         "bd_ids": [
-            "2dc58737-0d8e-47e8-a87a-5ad7e5503a85"
-        ],
-        "name": "Hippolyte"
+            "12865e73-340e-5385-a1c0-8dcd99f6ad82"
+        ]
     },
     {
-        "id": "90380431-13d5-4f17-a93c-0ac63c5b292d",
+        "id": "635f02aa-96a4-5530-bbea-013c415c8290",
+        "name": "Vincent Zabus",
         "bd_ids": [
-            "bfe6030b-1434-44a7-9021-53283dbd1273"
-        ],
-        "name": "Claude Lacroix"
+            "58bf1586-0770-5e05-9d5e-84b033947d1f"
+        ]
     },
     {
-        "id": "d792c939-a90a-4581-8ab7-5572a145953e",
+        "id": "09a3b727-757e-5f3a-84f0-75b4364f9c63",
+        "name": "Hippolyte",
         "bd_ids": [
-            "bfe6030b-1434-44a7-9021-53283dbd1273"
-        ],
-        "name": "François Bourgeon"
+            "58bf1586-0770-5e05-9d5e-84b033947d1f"
+        ]
     },
     {
-        "id": "b77e67e0-4be5-45f2-8510-c02e59cdc5dc",
+        "id": "a98cd576-0496-5016-8738-c111b1250f68",
+        "name": "Claude Lacroix",
         "bd_ids": [
-            "0fbd40ef-65de-4124-9e33-a874d5e085d3"
-        ],
-        "name": "Kat Leyh "
+            "9f71560e-9697-518d-a092-a2e73ca2c608"
+        ]
     },
     {
-        "id": "dc2db786-4819-4d5a-b0dc-938203f948d0",
+        "id": "85773f9c-27a8-5d21-9786-fad52ff3180e",
+        "name": "François Bourgeon",
         "bd_ids": [
-            "887f7488-2373-4576-8876-f51332f4e643"
-        ],
-        "name": "Jacky Benetaud"
+            "9f71560e-9697-518d-a092-a2e73ca2c608"
+        ]
     },
     {
-        "id": "a600ed2b-0660-4bfc-bd72-6f8bc6a68e1c",
+        "id": "4a7a4f1c-41b7-5fc8-920d-ac55b12d15d1",
+        "name": "Kat Leyh",
         "bd_ids": [
-            "887f7488-2373-4576-8876-f51332f4e643",
-            "f16a4613-f3c7-41ae-ab86-edb172a2f014"
-        ],
-        "name": "Fabrizio Dori"
+            "7655deef-be68-561d-a942-3a401c24343e"
+        ]
     },
     {
-        "id": "d706c336-3cf3-466c-b939-3a73c2fb8045",
+        "id": "f6acf67b-3605-510c-89f9-da99c5668419",
+        "name": "Jacky Benetaud",
         "bd_ids": [
-            "41c38156-5a10-494d-b733-bea90b557b5d"
-        ],
-        "name": "Nylso"
+            "2a776a76-0486-5fa8-a693-0507a23edda8"
+        ]
     },
     {
-        "id": "731f03c7-f2e5-4c5a-bc6e-32504d114610",
+        "id": "588613c4-6e68-5359-ada6-29b7ff634885",
+        "name": "Fabrizio Dori",
         "bd_ids": [
-            "46b68b9b-4ff9-4943-8c1b-5a7264c726b0"
-        ],
-        "name": "Komoto Hajime"
+            "2a776a76-0486-5fa8-a693-0507a23edda8",
+            "8faa03ae-f8f4-5b68-9059-c0c628f85707"
+        ]
     },
     {
-        "id": "4158b3ff-f6ab-416c-9c7d-08b32094dc37",
+        "id": "fd8a5c80-b148-5a48-a880-d38d2e74bf5a",
+        "name": "Komoto Hajime",
         "bd_ids": [
-            "fe0e427f-efba-4b50-9b02-c3ae30ddc7a7"
-        ],
-        "name": "Akiko Higashimura "
+            "2a5e1c5f-476c-5d4e-81f3-2b78cb856e41"
+        ]
     },
     {
-        "id": "e08b7863-5dc3-4a34-bdff-db7dbc962c97",
+        "id": "a257ccd6-592f-5169-9247-729f4a009e2d",
+        "name": "Akiko Higashimura",
         "bd_ids": [
-            "47cef4c1-8b7b-4f09-86d8-25822941de64",
-            "61477d1d-701c-47b4-9d55-4cff9985f013"
-        ],
-        "name": "James Tynion IV"
+            "473edb56-8483-5f87-ae9a-226e5639da7c"
+        ]
     },
     {
-        "id": "aa07e1cf-d92c-41ad-8136-28c9a41bf942",
+        "id": "11132b63-24cf-5e0c-87e3-f82a28ac89e8",
+        "name": "James Tynion IV",
         "bd_ids": [
-            "47cef4c1-8b7b-4f09-86d8-25822941de64"
-        ],
-        "name": "Werther Dell'Edera"
+            "d8f9a56b-3061-5c16-9cce-1d231de67319",
+            "df990528-33c4-5c15-87e0-ad4119be24f3"
+        ]
     },
     {
-        "id": "bc52712d-0934-4896-869c-7281ff934b5b",
+        "id": "11b97ae6-9bb9-56c9-914a-c8e0fe79156c",
+        "name": "Werther Dell'Edera",
         "bd_ids": [
-            "6e688dc8-ab38-4938-9365-2a20aa38ad43"
-        ],
-        "name": "Suehiro Maruo"
+            "d8f9a56b-3061-5c16-9cce-1d231de67319"
+        ]
     },
     {
-        "id": "9579e675-68b3-4e65-9827-36305076f6ac",
+        "id": "2bd1623e-7f3d-543a-b05c-628bb3e6d6b4",
+        "name": "Suehiro Maruo",
         "bd_ids": [
-            "3e4e9cbb-f6da-4146-be0a-d079a3e52f4c"
-        ],
-        "name": "Zeina Abiracheb"
+            "cd0cdc46-bfd4-5850-beaf-3019f10e3e7b"
+        ]
     },
     {
-        "id": "ba630706-a95d-4fd0-9ca6-566da679b28b",
+        "id": "56030257-e26e-53d8-9d62-6471ba32ecce",
+        "name": "Zeina Abiracheb",
         "bd_ids": [
-            "28a37eed-3501-417e-ba76-31b87a800af0"
-        ],
-        "name": "collectif"
+            "1a3f1d17-bebd-5ddb-abe3-9533675f24a8"
+        ]
     },
     {
-        "id": "a7ce50ee-85f1-42cb-95c6-97118215b739",
+        "id": "581a5d0a-41d0-54b0-8ccb-9f5dac37c4e3",
+        "name": "collectif",
         "bd_ids": [
-            "ee45b12e-be45-43cd-938d-a53e397cbe18"
-        ],
-        "name": "Baru"
+            "609fe001-1408-54fc-8686-1a7094aaa0da"
+        ]
     },
     {
-        "id": "6792acb8-3269-469f-a01b-5f814a582161",
+        "id": "23c4dbf2-da76-5959-b5c8-de2b87f8dc74",
+        "name": "Baru",
         "bd_ids": [
-            "d9745546-e622-4733-b87f-a0a5688b1df4"
-        ],
-        "name": "Lucrèce Andreae"
+            "493aa385-71e1-5b94-937d-fc270fd2d7bc"
+        ]
     },
     {
-        "id": "5ae8be72-41e9-4ec8-8c05-9a4d5a87f973",
+        "id": "8c05c235-5085-5da5-975c-95a3ec03a0ce",
+        "name": "Lucrèce Andreae",
         "bd_ids": [
-            "76169f95-c21a-4b01-989b-1307bf7df4fb"
-        ],
-        "name": "Lukasz Wojciechowski"
+            "209120cd-8ef2-5051-9030-5750844215c5"
+        ]
     },
     {
-        "id": "32bc5b2f-a245-4fbf-b784-f046c655593b",
+        "id": "f1c41fdd-a85b-58e1-b10d-1c31f9803326",
+        "name": "Lukasz Wojciechowski",
         "bd_ids": [
-            "60b64f87-ad3d-4b19-bac7-96fb71c764d4"
-        ],
-        "name": "Simon Hanselmann"
+            "00b764c7-9e57-5a44-8922-76ffc6c0c006"
+        ]
     },
     {
-        "id": "c4b39cbf-335e-4f90-950d-e1d8fdf9aa7b",
+        "id": "06ae0839-7b89-5d3a-bf83-99dc6830803a",
+        "name": "Simon Hanselmann",
         "bd_ids": [
-            "264d71b4-d0a3-4bed-abd7-6f92e203b66a"
-        ],
-        "name": "Geoffroy Monde"
+            "385f1264-4b26-5572-b2a8-10343d26cc7c"
+        ]
     },
     {
-        "id": "6c91c3c7-318d-4b09-9785-dc936de8c4bd",
+        "id": "eb5d6e96-6e8e-5188-8ea6-58cc19c59957",
+        "name": "Geoffroy Monde",
         "bd_ids": [
-            "52a84f92-94e5-4c41-8c84-5536bb325785"
-        ],
-        "name": "Wilfrid Lupano"
+            "2f0d945f-bd63-5967-9a57-844e20b11675"
+        ]
     },
     {
-        "id": "6de6c7f6-b089-44b3-9e93-b6f65a9c8b08",
+        "id": "7116930d-8c4e-548c-b9e6-248dafce1360",
+        "name": "Wilfrid Lupano",
         "bd_ids": [
-            "3583574e-8ac4-4c2b-ad46-318b7e9b984c"
-        ],
-        "name": "Philippe Druillet"
+            "045e3ca9-5744-52bb-ba4c-d69f08e9c343"
+        ]
     },
     {
-        "id": "75571453-cc79-44b9-84c5-f2ccb9ef2a7e",
+        "id": "141dc09a-4241-51b4-a81e-5402d1647f96",
+        "name": "Philippe Druillet",
         "bd_ids": [
-            "0006f168-e4b9-4f39-b084-b2ef577ecb6c"
-        ],
-        "name": "Liv Stromquist"
+            "98a1d8c6-853d-5970-b117-ace76d927b91"
+        ]
     },
     {
-        "id": "a454b3a7-1ffd-4fb4-9f53-985d594b1f48",
+        "id": "b6ec5ccc-d0ec-5f4f-971f-7e1f961f15f1",
+        "name": "Jun Mayuzuli",
         "bd_ids": [
-            "d037dbb0-95d9-493a-9ecd-1190f94114bf"
-        ],
-        "name": "Jun Mayuzuli"
+            "45a36e4f-7780-53c1-b774-353b3aa6e85e"
+        ]
     },
     {
-        "id": "e99d950d-4b91-40d7-af13-29e5198694e9",
+        "id": "831f7cc9-9ad6-5358-8ca1-1d671a6cb6f1",
+        "name": "Fabcaro",
         "bd_ids": [
-            "d6e853e9-ec23-4c5c-bf28-c642d717d813"
-        ],
-        "name": "Fabcaro"
+            "be84548c-9e26-56ea-a97d-bdf4b9653250"
+        ]
     },
     {
-        "id": "d7991a95-7d2a-4b0a-bdf8-9cbbe2b47294",
+        "id": "a1b4ee86-d88a-5c9f-a04e-fb542537c0f0",
+        "name": "Léonie Bischoff",
         "bd_ids": [
-            "eb72c9ca-7708-4893-bbd0-cc4bcb4c10bb"
-        ],
-        "name": "Léonie Bischoff"
+            "04c7c967-43b9-5255-a016-a6a6713ccaf0"
+        ]
     },
     {
-        "id": "a8348caa-7ee1-4f76-94bb-cc12413805bd",
+        "id": "566e776d-c9d5-52e2-8388-6dad7d49b424",
+        "name": "Brad Metzler",
         "bd_ids": [
-            "b800a0b4-d0bf-4eef-98fd-eb6b6945730c"
-        ],
-        "name": "Brad Metzler"
+            "808def66-0261-5fb0-adf1-2e8c3f8761d8"
+        ]
     },
     {
-        "id": "9c15fd9b-1d20-47ec-b25d-36cca1942512",
+        "id": "b922cef3-2fc8-568f-a16c-87f17c81465e",
+        "name": "Rags Morales",
         "bd_ids": [
-            "b800a0b4-d0bf-4eef-98fd-eb6b6945730c"
-        ],
-        "name": "Rags Morales "
+            "808def66-0261-5fb0-adf1-2e8c3f8761d8"
+        ]
     },
     {
-        "id": "5702d555-1426-4c05-9a3a-f2045e38ad48",
+        "id": "3f2d648d-6795-56c7-a81a-4a98b852b1a0",
+        "name": "Josselin Facon",
         "bd_ids": [
-            "deb6a40b-1aa5-4793-b920-819d3c45f771"
-        ],
-        "name": "Isabel Greenberg "
+            "122a0172-06d1-548d-a796-547d56b7fa4c"
+        ]
     },
     {
-        "id": "79fa8dcb-f93d-419b-9efc-93f7107ef3fd",
+        "id": "9d6057a1-8a84-5712-9f8c-4f2e530b2f34",
+        "name": "Arleston",
         "bd_ids": [
-            "8f5a5f64-0c09-4d91-a880-cf27b49af28a"
-        ],
-        "name": "Josselin Facon"
+            "e37157f2-efbb-508a-bc47-17a90bc02c84"
+        ]
     },
     {
-        "id": "bc644775-281e-4b4b-80ee-14e68801138e",
+        "id": "5b576627-0b89-5180-bd78-cb87eb672cd0",
+        "name": "Tarquin",
         "bd_ids": [
-            "b6205488-535e-4ab5-8d78-c666ab181924"
-        ],
-        "name": "Arleston"
+            "e37157f2-efbb-508a-bc47-17a90bc02c84"
+        ]
     },
     {
-        "id": "18b29054-32de-4afe-a484-8e15049ea707",
+        "id": "0f40eecd-24cf-5c5c-8330-f71cda6d02c3",
+        "name": "José Parrondo",
         "bd_ids": [
-            "b6205488-535e-4ab5-8d78-c666ab181924"
-        ],
-        "name": "Tarquin"
+            "ad666457-dc66-5f79-a8e2-24d71257ce29"
+        ]
     },
     {
-        "id": "95d60487-5c29-42dc-a57c-109926b3cd72",
+        "id": "cd5b8826-38e8-5380-86f3-a2d6735d723a",
+        "name": "Rey",
         "bd_ids": [
-            "a592d86a-ceab-4297-9066-ec239d86d928"
-        ],
-        "name": "José Parrondo"
+            "deb20c8e-015a-5c9c-9686-1111263e8a0a"
+        ]
     },
     {
-        "id": "1049f66b-4be9-4864-9e60-b446a50e5486",
+        "id": "1f55bd80-400f-5c7c-98ed-d29a9fff6cbe",
+        "name": "Galic",
         "bd_ids": [
-            "f1cac98d-5482-4096-b338-b9348508ea71"
-        ],
-        "name": "Rey, Galic, Kris et Bonnet"
+            "deb20c8e-015a-5c9c-9686-1111263e8a0a"
+        ]
     },
     {
-        "id": "44c81285-9060-4fc3-9058-88a84404d563",
+        "id": "030b9850-5805-5d5d-b8ef-9d9d2f42cdd6",
+        "name": "Kris",
         "bd_ids": [
-            "5a1fc99e-7226-44a8-8b90-3a596c905d62"
-        ],
-        "name": "Hill"
+            "deb20c8e-015a-5c9c-9686-1111263e8a0a"
+        ]
     },
     {
-        "id": "3f45bfec-9a03-44a6-a5fa-d18b231a9ede",
+        "id": "b791b4d4-8740-554d-ad07-82218d8bb7ed",
+        "name": "Bonnet",
         "bd_ids": [
-            "5a1fc99e-7226-44a8-8b90-3a596c905d62"
-        ],
-        "name": "Rodriguez"
+            "deb20c8e-015a-5c9c-9686-1111263e8a0a"
+        ]
     },
     {
-        "id": "124e0e9a-680b-47e5-9369-4d46af4c6916",
+        "id": "604f3749-8f3e-5862-a9e5-04fa037f26c0",
+        "name": "Hill",
         "bd_ids": [
-            "30972a11-ce0f-455a-912d-dd18180a288f"
-        ],
-        "name": "Michael Deforges"
+            "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b"
+        ]
     },
     {
-        "id": "77edfd2d-2e92-467e-8d4b-f527cf669847",
+        "id": "38ca6247-1af6-574c-b8c6-2ce51282d966",
+        "name": "Rodriguez",
         "bd_ids": [
-            "2cbcdd79-9173-424b-8da0-3e21407d9141"
-        ],
-        "name": "Marcello Quintanilha"
+            "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b"
+        ]
     },
     {
-        "id": "f1aad872-d67c-4a8d-8dfb-1e83755dab77",
+        "id": "faf147b2-0071-53bc-bd91-a89be82a3bde",
+        "name": "Marcello Quintanilha",
         "bd_ids": [
-            "9664424f-0a4a-458e-9842-38ad9a9f9981"
-        ],
-        "name": "Michel Fiffe"
+            "0e8111d0-2e90-54c7-88b1-43b0e0881cc9"
+        ]
     },
     {
-        "id": "3782ed5f-f0e2-48b0-a736-e486ad47c766",
+        "id": "c5b9e189-2937-5717-9cfa-4bf3ca95975e",
+        "name": "Michel Fiffe",
         "bd_ids": [
-            "5cf9aef6-a860-465e-b3de-b71e5ed3ad52"
-        ],
-        "name": "Keito Gaku"
+            "ed1239f8-6705-59cc-89fa-0f58a386644e"
+        ]
     },
     {
-        "id": "460a4c27-ec54-4a88-99d7-97870b7a9052",
+        "id": "eae3e547-17c4-5a9d-9f08-a099870e7427",
+        "name": "Keito Gaku",
         "bd_ids": [
-            "10b7c424-efbe-4e5e-b745-dc7bbf43419d"
-        ],
-        "name": "Fabrice Neaud"
+            "259a0454-9500-5b1b-be3c-1039abe5838a"
+        ]
     },
     {
-        "id": "c3366491-fb72-4891-b722-a7adf9a1f5b6",
+        "id": "1e2535bc-1306-5edf-a096-6619d1fc69f0",
+        "name": "Fabrice Neaud",
         "bd_ids": [
-            "d21b6dc4-f035-451a-b298-5ea12d121bf2"
-        ],
-        "name": "Manon Desveaux"
+            "5b09fc60-7852-5dd7-85fd-47d06d44ac08"
+        ]
     },
     {
-        "id": "81a1ebcc-c014-4a4b-8e32-d824866d6897",
+        "id": "517fda5b-0d2f-5cb9-a689-38ded1fc1732",
+        "name": "Manon Desveaux",
         "bd_ids": [
-            "d21b6dc4-f035-451a-b298-5ea12d121bf2"
-        ],
-        "name": "Lou Lubie"
+            "5792de8a-229c-5f32-9cd0-3d9421f85b62"
+        ]
     },
     {
-        "id": "c4774e7e-5b03-41ce-9539-ab8931cf60dd",
+        "id": "f98adb03-4782-5e7d-858c-cea66c569d0a",
+        "name": "Lou Lubie",
         "bd_ids": [
-            "1280aea7-1bf3-4d78-b06f-893b6a55120f"
-        ],
-        "name": "Burckel"
+            "5792de8a-229c-5f32-9cd0-3d9421f85b62"
+        ]
     },
     {
-        "id": "f9e4ad69-35aa-425d-8cc8-8191bb955e36",
+        "id": "4102d5a8-722f-5280-a290-ccc976747c79",
+        "name": "Burckel",
         "bd_ids": [
-            "1280aea7-1bf3-4d78-b06f-893b6a55120f"
-        ],
-        "name": "Hubert"
+            "d77af3ef-1018-580f-8b4b-bdac6993c4b9"
+        ]
     },
     {
-        "id": "e5e07c31-f78d-4da5-8678-8baa1e1b7e92",
+        "id": "a0ad17df-cc7c-5579-a3f6-7fea6f6b69f5",
+        "name": "Hubert",
         "bd_ids": [
-            "ad6826dd-66bb-4368-9fea-a3d4e2940950"
-        ],
-        "name": "Emma CakeCup"
+            "d77af3ef-1018-580f-8b4b-bdac6993c4b9"
+        ]
     },
     {
-        "id": "96522350-09d9-4814-9e9b-f9be1c7b8380",
+        "id": "002b8b8f-eaec-50aa-b1a9-dd32ff43ef58",
+        "name": "Emma CakeCup",
         "bd_ids": [
-            "ad6826dd-66bb-4368-9fea-a3d4e2940950"
-        ],
-        "name": "Pauline Roland"
+            "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d"
+        ]
     },
     {
-        "id": "bc18a61e-97a6-43b7-9796-165c47769f6d",
+        "id": "c6c2e2e5-de20-5485-a998-76541abafe3e",
+        "name": "Pauline Roland",
         "bd_ids": [
-            "e60958a0-3816-4539-adf1-d2a46980ff37"
-        ],
-        "name": "Karim Mahfouf"
+            "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d"
+        ]
     },
     {
-        "id": "7af22cc0-3de8-4810-9137-752af104e2bd",
+        "id": "3ecb51cb-7330-5551-b059-2bc07bbe2220",
+        "name": "Karim Mahfouf",
         "bd_ids": [
-            "32a82284-7946-4e47-8340-b27b5284bd33"
-        ],
-        "name": "Squeezie 7 Guillaume Natas"
+            "93c55d49-da91-53a8-9384-a9e74f86fe92"
+        ]
     },
     {
-        "id": "f83231cc-e354-428f-9b86-7bc1f897fb36",
+        "id": "9ebb375a-570f-5d10-af89-e2581554813f",
+        "name": "Squeezie 7 Guillaume Natas",
         "bd_ids": [
-            "32a82284-7946-4e47-8340-b27b5284bd33"
-        ],
-        "name": "Karensac"
+            "81d0933e-90f7-5b74-b9fb-ba27cc47fa12"
+        ]
     },
     {
-        "id": "f0938613-319c-44fd-9a69-1954fe31bd6b",
+        "id": "67a61400-02a1-5e8a-815f-efe1aaff4044",
+        "name": "Karensac",
         "bd_ids": [
-            "3d99edc2-320d-40c6-afb7-6fe6f0d74218"
-        ],
-        "name": "Cyprien"
+            "81d0933e-90f7-5b74-b9fb-ba27cc47fa12"
+        ]
     },
     {
-        "id": "d0e6f805-86ca-443a-b232-0df55c0b2f48",
+        "id": "740a55f0-b066-529c-aad3-be7706f65d0c",
+        "name": "Cyprien",
         "bd_ids": [
-            "3d99edc2-320d-40c6-afb7-6fe6f0d74218"
-        ],
-        "name": "Paka"
+            "bb95f1ee-35e4-5172-bcf9-11aa19d39885"
+        ]
     },
     {
-        "id": "587df2c1-95f1-4946-8d76-66f573bf5879",
+        "id": "728ca873-d312-575d-b216-7d2f31953628",
+        "name": "Paka",
         "bd_ids": [
-            "5dddd4b5-b6ea-47eb-aba1-a1674407062f"
-        ],
-        "name": "Lob"
+            "bb95f1ee-35e4-5172-bcf9-11aa19d39885"
+        ]
     },
     {
-        "id": "268533a2-fb58-4d97-8e82-3431d522e1f7",
+        "id": "4262dd32-264e-5b27-89d4-b8f1d948b32c",
+        "name": "Lob",
         "bd_ids": [
-            "5dddd4b5-b6ea-47eb-aba1-a1674407062f"
-        ],
-        "name": "Rochette et Legrand"
+            "219fdb59-446f-5ec8-ada8-aa3432778341"
+        ]
     },
     {
-        "id": "4af38992-25d9-4ad1-b10e-7af8b692234b",
+        "id": "acaa9413-e232-5de0-95fa-e139a9ece44f",
+        "name": "Rochette",
         "bd_ids": [
-            "43d5ef22-338f-4fab-abf4-67d62fe20303"
-        ],
-        "name": "Gustave Doré"
+            "219fdb59-446f-5ec8-ada8-aa3432778341"
+        ]
     },
     {
-        "id": "0afa169d-6b56-4d27-b25f-da578f3969f2",
+        "id": "5d4b528a-9838-5b47-9940-6c3506237d97",
+        "name": "Legrand",
         "bd_ids": [
-            "be27430d-56d2-400a-88b6-9bea5091760c"
-        ],
-        "name": "Frankin"
+            "219fdb59-446f-5ec8-ada8-aa3432778341"
+        ]
     },
     {
-        "id": "4d359aec-bd17-4c5e-8def-d2a85f35eebf",
+        "id": "1a18f2fb-0d2c-54c5-a763-fdadef46f041",
+        "name": "Gustave Doré",
         "bd_ids": [
-            "be27430d-56d2-400a-88b6-9bea5091760c"
-        ],
-        "name": "Fluide Glacial"
+            "7e0fbd51-70be-5b79-b9fd-fdcbdbe6784d"
+        ]
     },
     {
-        "id": "fa5f3845-c71f-40b8-89a3-69229297fd48",
+        "id": "c86e250b-e9c3-59aa-869a-9ab8b53022f1",
+        "name": "Franquin",
         "bd_ids": [
-            "a22be781-b756-479c-9b07-49d14dbfe115",
-            "443d9b5f-e604-4a43-a7b6-597223d61433"
-        ],
-        "name": "Aurélia Aurita"
+            "fbb83c90-bc31-53bb-82f1-62a4921b7b66"
+        ]
     },
     {
-        "id": "a6b9f674-d57c-4f30-ac57-3034b169b58d",
+        "id": "f42b2254-0bb6-589f-b754-788623bc0690",
+        "name": "Aurélia Aurita",
         "bd_ids": [
-            "e66cef9f-1330-45c7-8150-25e513b5c815"
-        ],
-        "name": "Wazem"
+            "aa142d80-6e53-53cf-ad01-13c8af2060cf",
+            "6f40ce09-c1fc-56c3-b191-aaef5f620982"
+        ]
     },
     {
-        "id": "cbf19bcf-9d83-4e24-872c-2e3cf084215d",
+        "id": "70125cb3-0e45-5bc9-9aef-4cbb67edb051",
+        "name": "Peeters",
         "bd_ids": [
-            "050168ed-704e-4af1-a157-28a0d9b64a28"
-        ],
-        "name": "Matt Kindt"
+            "621f773d-d0aa-5e22-bf81-c530967a1fbe"
+        ]
     },
     {
-        "id": "12990e4b-bbb8-42ef-ad57-be791c80b447",
+        "id": "d665cfb4-c5db-586a-ad00-d7483be1868f",
+        "name": "Wazem",
         "bd_ids": [
-            "d0b0edca-9266-4efc-a486-d29097e2242e"
-        ],
-        "name": "Xavier Bouyssou"
+            "621f773d-d0aa-5e22-bf81-c530967a1fbe"
+        ]
     },
     {
-        "id": "1a96800c-9ee0-4fac-a7f2-6beef2ced1e2",
+        "id": "088ef0e0-f6d5-5b0b-8bbe-34adf8a69a86",
+        "name": "Matt Kindt",
         "bd_ids": [
-            "3a5190d9-2fc1-4d9d-8bb3-b6486544188b"
-        ],
-        "name": "Léa Murawiec"
+            "8b049e1b-5908-5c4b-972e-d34e04c6ab0c"
+        ]
     },
     {
-        "id": "83366d2a-d263-49f2-a949-6fb68e1a0c60",
+        "id": "55a709af-cd36-5f34-9454-177b62ab1b72",
+        "name": "Xavier Bouyssou",
         "bd_ids": [
-            "103a3488-8304-4ac1-be48-e961422e00ab"
-        ],
-        "name": "Yukinobu Tatsu"
+            "a88d2dfe-e823-5455-b5a7-a9eea7604db2"
+        ]
     },
     {
-        "id": "6ce8a4e1-313e-43de-874e-0bfb90eb9851",
+        "id": "6c618371-acaa-57cf-916f-31d5288f8285",
+        "name": "Léa Murawiec",
         "bd_ids": [
-            "443d9b5f-e604-4a43-a7b6-597223d61433"
-        ],
-        "name": "Benoit Peeters"
+            "7c33cd89-18a5-55ee-a927-d33a3b91a4d4"
+        ]
     },
     {
-        "id": "be151f91-1b43-442b-97d8-d2dbefbae79c",
+        "id": "0d7a1f2e-614f-5f9b-9eb0-e977c4413fbc",
+        "name": "Yukinobu Tatsu",
         "bd_ids": [
-            "d0459ba7-41e7-4ede-9723-f035a39ba603"
-        ],
-        "name": "Bastien Vivès"
+            "8e76ff82-caba-5256-b56f-36fdcc09b8cc"
+        ]
     },
     {
-        "id": "34f55739-ed92-4357-8286-d2a7147fc1ca",
+        "id": "0cc64c64-f713-57ca-a315-70087758c502",
+        "name": "Benoit Peeters",
         "bd_ids": [
-            "6387807b-c0d4-4033-ae3f-1d470a14bf8a"
-        ],
-        "name": "Elisa Marraudino"
+            "6f40ce09-c1fc-56c3-b191-aaef5f620982"
+        ]
     },
     {
-        "id": "ad8000d5-119b-4b98-beac-cb433f7d45b8",
+        "id": "9a3c0069-aa3f-5826-9ef1-9f344244d3dc",
+        "name": "Elisa Marraudino",
         "bd_ids": [
-            "bee977d0-48cb-40a1-863e-30e3ea984fea"
-        ],
-        "name": "Ram V"
+            "e316844c-27bd-5037-a0f8-1327a62e748f"
+        ]
     },
     {
-        "id": "fd159c30-75b7-4303-8b4b-9c61712e271b",
+        "id": "4eee69a6-88fd-5e48-b8f5-dd582920a450",
+        "name": "Ram V",
         "bd_ids": [
-            "bee977d0-48cb-40a1-863e-30e3ea984fea"
-        ],
-        "name": "Filipe Andrade"
+            "92d5d028-df2f-5e50-b4b7-9887ae2f807b"
+        ]
     },
     {
-        "id": "119fad93-3a94-4039-a57a-215639cd17f4",
+        "id": "94b0e949-b89d-5ea5-b0b9-7cbd0ac73da4",
+        "name": "Filipe Andrade",
         "bd_ids": [
-            "f295cbec-ea77-4d9f-ab55-a16a804a6b7b",
-            "2be2b625-fd04-48cb-8e78-57beeccc99fe"
-        ],
-        "name": "Osamu Tezuka"
+            "92d5d028-df2f-5e50-b4b7-9887ae2f807b"
+        ]
     },
     {
-        "id": "ff9d6a73-b08b-4430-a82a-f9b1076435e6",
+        "id": "48aace14-0b8f-5dc9-aee0-2b52c883a081",
+        "name": "Daria Schmidtt",
         "bd_ids": [
-            "724f8952-b997-41a6-a9f4-bd94bb42208f"
-        ],
-        "name": "Julia Wertz"
+            "f6c7005e-7b64-5eef-844a-2ac4acdc1b07"
+        ]
     },
     {
-        "id": "328169c4-050f-42c4-977f-d88871fd4940",
+        "id": "6ada2d73-1f4e-5954-8c72-bc0404fa4307",
+        "name": "Lucie Lomova",
         "bd_ids": [
-            "6c7014a7-23ee-4a66-94d8-4b708e396b2a"
-        ],
-        "name": "Daria Schmidtt"
+            "406eb059-e7e8-54f1-8f89-cddea6c629e0"
+        ]
     },
     {
-        "id": "af6278fe-b556-4dbf-a964-f1c62f933e48",
+        "id": "f88b6be4-be83-553a-9a10-0c3ff88d9c71",
+        "name": "Edgar P. Jacobs",
         "bd_ids": [
-            "3a0f134b-631e-4efd-b6d7-f6c0e4d95b14"
-        ],
-        "name": "Lucie Lomova"
+            "f865a993-10dd-5daf-9303-db5328540034"
+        ]
     },
     {
-        "id": "d36f58dd-6bb1-452e-a305-a597cf37f083",
+        "id": "ec3adb15-c596-5229-b64a-d324f9941ab6",
+        "name": "Lucas Varela",
         "bd_ids": [
-            "c61b220d-dad2-414c-a2a6-3f46b005189f"
-        ],
-        "name": "Edgar P. Jacobs"
+            "ec050548-66da-5642-af27-79ee4e0f5571"
+        ]
     },
     {
-        "id": "ed8121d7-3ef2-4d8b-b460-1d3a6b252790",
+        "id": "901b17fe-09a8-5b9f-9f5d-a73d92a26547",
+        "name": "Aude Mermilliod",
         "bd_ids": [
-            "9a44eed3-8486-4189-834b-2a749faf37c1"
-        ],
-        "name": "Lucas Varela"
+            "01c74bc6-960a-58b3-9069-ca12ec2fb9b4"
+        ]
     },
     {
-        "id": "e0d31434-7f73-4b9a-9d59-5be96d1f623b",
+        "id": "c75bf8ef-b761-59b7-aa36-7db51b472618",
+        "name": "Blutch",
         "bd_ids": [
-            "ef63fb63-05a0-4a15-95b2-20f10afd4738"
-        ],
-        "name": "Aude Mermilliod"
+            "e00d76ed-0c5c-5fcb-b972-355c57612e91"
+        ]
     },
     {
-        "id": "1121b2f3-0459-4ce6-a176-7bbfe53739f9",
+        "id": "2822bd0a-4242-59a8-a4dd-2a9d553c94f0",
+        "name": "Poulie",
         "bd_ids": [
-            "265a9b74-91b6-4fa6-89b8-3b9f753b5f70"
-        ],
-        "name": "Blutch"
+            "b86b53b5-7121-5fae-8ed9-50fc48076812"
+        ]
     },
     {
-        "id": "57edd48a-bce5-4778-a73b-bd1dd269e6f7",
+        "id": "7036c4fd-e408-5618-af2e-9baaff128651",
+        "name": "Keigo Shinzo",
         "bd_ids": [
-            "01f186db-6fb9-4ce6-bccc-0e7f67e0fa5d"
-        ],
-        "name": "Poulie"
+            "4926fa87-8fac-59ea-b462-beaa8865b399"
+        ]
     },
     {
-        "id": "78ec581e-7541-44b3-bec0-6c318d4cf40a",
+        "id": "54bfd2ce-3cf6-5269-8baa-e3571399f282",
+        "name": "tienstiens",
         "bd_ids": [
-            "e364f0b3-3c71-43e2-b5b2-d044267789b7"
-        ],
-        "name": "Keigo Shinzo"
+            "904c9d20-f81a-591d-b110-2e457f6d8f60"
+        ]
     },
     {
-        "id": "632214f5-2138-4a07-a4b7-d90e4760de67",
+        "id": "3614d1a7-ee71-5831-acc7-36feb510177c",
+        "name": "Paul Dini",
         "bd_ids": [
-            "65941638-57e8-4b43-9393-4a188384df7f"
-        ],
-        "name": "Julie Delporte"
+            "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa"
+        ]
     },
     {
-        "id": "58a56d75-229b-4a16-97d1-08debeac3b17",
+        "id": "8f0a123e-a29e-5620-989c-8b6e9bc9f3de",
+        "name": "Eduardo Risso",
         "bd_ids": [
-            "4def763c-a278-4cae-8921-5c5c99a40602"
-        ],
-        "name": "Tienstiens"
+            "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa"
+        ]
     },
     {
-        "id": "0609829d-260b-4dfb-8de3-31bc465ca62d",
+        "id": "d7afa3d1-9cbc-5630-9a1e-36550ba2ae00",
+        "name": "Terry Moore",
         "bd_ids": [
-            "817983d2-70bc-4f42-9cf9-8854a6d7e0a8"
-        ],
-        "name": "Paul Dini"
+            "47a951d2-d847-566a-9180-6dad63037708"
+        ]
     },
     {
-        "id": "42866795-a77c-4c31-a308-6b95cf174538",
+        "id": "81eb6653-4aac-5e37-b82d-5e6552f5669a",
+        "name": "Etienne Davodeau",
         "bd_ids": [
-            "817983d2-70bc-4f42-9cf9-8854a6d7e0a8"
-        ],
-        "name": "Eduardo Risso"
+            "f2ece642-d63f-5322-8208-0d755268b0a7"
+        ]
     },
     {
-        "id": "6a9d306f-ded4-480a-a622-e87fd1df2a8a",
+        "id": "10a532a2-fbf4-5e12-af99-152a45092deb",
+        "name": "Juan Giménez",
         "bd_ids": [
-            "d41dedf2-057c-45a7-89e6-b7727a67528e"
-        ],
-        "name": "Terry Moore"
+            "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5"
+        ]
     },
     {
-        "id": "e00e166e-6b09-4da6-991c-bf5806c2b41f",
+        "id": "5687b7c6-fc2f-5234-8443-9dccba2dbe03",
+        "name": "Kentarō Miura",
         "bd_ids": [
-            "8da64abb-1f3a-44e6-9a38-bd628e997883"
-        ],
-        "name": "Etienne Davodeau"
+            "233df3dc-5aec-5505-b208-b7dad00c99b1"
+        ]
     },
     {
-        "id": "09f6836a-d7c1-45f0-9ea1-b28a94903449",
+        "id": "fd5a8b65-5f73-54a0-a57e-54dfea8abc8c",
+        "name": "Winshluss",
         "bd_ids": [
-            "9c352d35-ddb1-49e0-9d29-dd8f97c6f138"
-        ],
-        "name": "Juan Giménez"
+            "903acafa-4e30-5dcb-85ec-e2d1ce52d741"
+        ]
     },
     {
-        "id": "a14606f3-f393-4f45-b45d-879166cbe24d",
+        "id": "e5d3b413-fc6e-5914-a5e2-4cca6c66a3b4",
+        "name": "Kenji",
         "bd_ids": [
-            "9c352d35-ddb1-49e0-9d29-dd8f97c6f138"
-        ],
-        "name": "Alejandro Jodorowsky"
+            "d7d58ce0-3034-5dc1-ad26-f2ba302c0559"
+        ]
     },
     {
-        "id": "00f6d063-ed87-468a-8ec3-b7753d14c2dc",
+        "id": "a613ac87-f316-5eb1-a41b-c629d3975868",
+        "name": "Tsunehiro",
         "bd_ids": [
-            "74599d05-e1b7-42cc-bb41-90a5b84160a5"
-        ],
-        "name": "Kentarō Miura"
+            "d7d58ce0-3034-5dc1-ad26-f2ba302c0559"
+        ]
     },
     {
-        "id": "4f9d59b1-ccf6-42e0-8419-9ebc5fd658fc",
+        "id": "1f638d4e-04ec-5db9-840e-ac7e034bf933",
+        "name": "Lee Lai",
         "bd_ids": [
-            "284b8e31-9a99-47f0-a8c9-d902cbd8742b"
-        ],
-        "name": "Winshluss"
+            "73418c95-df6c-50b9-8713-0cd6437ca1e8"
+        ]
     },
     {
-        "id": "4aa08b43-74be-48fb-ab77-efa5f2f447f8",
+        "id": "f8f3e6c7-7f1c-5fa4-95b3-e5943256b388",
+        "name": "les soeurs Wachowski",
         "bd_ids": [
-            "d2b4ca4a-5a64-4546-b0f5-b77bbb649ae6"
-        ],
-        "name": "Kenji"
+            "32c39747-541d-55b3-b217-835c9e26ffdb"
+        ]
     },
     {
-        "id": "64c10e34-e31a-4c77-b063-52b09ea26acd",
+        "id": "cb340fda-dc8b-599c-9ba4-114eff1ad741",
+        "name": "Skroce",
         "bd_ids": [
-            "d2b4ca4a-5a64-4546-b0f5-b77bbb649ae6"
-        ],
-        "name": "Tsunehiro"
+            "32c39747-541d-55b3-b217-835c9e26ffdb"
+        ]
     },
     {
-        "id": "72f1a81e-d6e6-4088-af3a-ddc091a9841d",
+        "id": "35cf1a17-190f-5618-a7fe-4554e75983f4",
+        "name": "Jordi Lafebre",
         "bd_ids": [
-            "5c001731-5ba7-4f1c-8e76-c5829cdd01f4"
-        ],
-        "name": "Lee Lai"
+            "12d42d70-3a3c-5d61-bf59-ac8cc63ba0a5"
+        ]
     },
     {
-        "id": "6614fda8-545b-4388-b1e1-90f65d47debc",
+        "id": "bc5f45bb-b47a-5c9e-9452-990ca3ac5f9a",
+        "name": "Jérémy Bastian",
         "bd_ids": [
-            "253a3ad4-9c82-4044-a2d2-f46a7a115c79"
-        ],
-        "name": "les soeurs Wachowski"
+            "28c74fd2-511a-5728-a28e-8876fa62ece8"
+        ]
     },
     {
-        "id": "3788f205-7458-461b-8c63-b4b45ad7d396",
+        "id": "591a05fd-7b21-55d5-bd3a-0214e741d120",
+        "name": "Neyef",
         "bd_ids": [
-            "253a3ad4-9c82-4044-a2d2-f46a7a115c79"
-        ],
-        "name": "Skroce"
+            "5ce81c2c-23ca-5bfe-899a-011a2c38e9e0"
+        ]
     },
     {
-        "id": "7f161fe5-a4bc-4f2d-8f73-c6b14e55f362",
+        "id": "b64f17a8-7cde-5016-a0ba-5e4599ad52f2",
+        "name": "Judith Vanistendael",
         "bd_ids": [
-            "e75b098a-9668-4d90-884d-6d8a9de04570"
-        ],
-        "name": "Jordi Lafebre"
+            "66419695-ae35-53a0-b7db-55e99b5d6b02"
+        ]
     },
     {
-        "id": "75901091-953e-449d-ab80-e8be64e68805",
+        "id": "12d81cb8-0977-5c8d-95e1-546f5eddf90d",
+        "name": "Paul Kirchner",
         "bd_ids": [
-            "71715508-a825-48ba-9aa2-7b9344cc40fb"
-        ],
-        "name": "Jérémy Bastian"
+            "f276e705-9146-5580-823a-15d8c2591660"
+        ]
     },
     {
-        "id": "903e9893-760b-452a-800f-4eec652cd73e",
+        "id": "3147fff6-a2e8-5fc8-8085-78440711c1b3",
+        "name": "Maran Hrachyan",
         "bd_ids": [
-            "1a6c7e8a-ac9e-42cf-95b9-6278b473158a"
-        ],
-        "name": "Neyef"
+            "714b0f37-f73f-5508-825c-281074c8aebe"
+        ]
     },
     {
-        "id": "b2747248-11cf-4ebd-8725-d29d45217123",
+        "id": "96909ed8-afbc-51b4-828e-cf484c613c2d",
+        "name": "Naoki Urasawa",
         "bd_ids": [
-            "8f2c53cc-b68e-49e7-ab67-3235bafb5ab8"
-        ],
-        "name": "Judith Vanistendael"
+            "c63fb7f3-28e9-51b0-a879-a22cae604ae9",
+            "af92af68-880b-54ec-9b11-b63ac826149b"
+        ]
     },
+    {
+        "id": "24f5b427-235c-5460-9de0-85f11a01139a",
+        "name": "Anouk Ricard",
+        "bd_ids": [
+            "76da166c-6887-58fe-839c-5ceb1d79b8ee"
+        ]
+    },
+    {
+        "id": "3b40ac72-a75f-5c79-bd75-a460f955ae58",
+        "name": "Pierre Ferrero",
+        "bd_ids": [
+            "4fe38dd6-5f77-5f47-8a7d-4a869f44334a"
+        ]
+    },
+    {
+        "id": "671a3790-6703-5f60-93f7-4c8096394838",
+        "name": "Merwan",
+        "bd_ids": [
+            "ca07d9e7-2615-5857-8ff2-c8a481345db9"
+        ]
+    },
+    {
+        "id": "86f3e63b-c414-594e-af58-abfb190ddea2",
+        "name": "Aisha Franz",
+        "bd_ids": [
+            "f9700842-783a-547b-b038-f388c81263c4"
+        ]
+    },
+    {
+        "id": "7a222e55-c2c0-5fff-acc7-4a9c36238f5f",
+        "name": "Atsushi Kaneko",
+        "bd_ids": [
+            "e7880ee2-b182-5a13-8a84-f3877bd0a932"
+        ]
+    },
+    {
+        "id": "2c1293b1-0b71-5d73-9217-34bf2c597b62",
+        "name": "Baladi",
+        "bd_ids": [
+            "677a0a0d-9f0e-5524-892e-5feeda95fa37"
+        ]
+    },
+    {
+        "id": "41d4d07a-dd5b-575e-8575-182029f2ffbc",
+        "name": "Smith",
+        "bd_ids": [
+            "5ee6ce29-7b61-53b4-8994-a0a2e783cf92"
+        ]
+    },
+    {
+        "id": "b28aa578-42b6-53f0-ba2e-0e91a837d1cc",
+        "name": "Klou",
+        "bd_ids": [
+            "af4e1bb1-ecf0-5912-8197-9d9e0b210b72"
+        ]
+    },
+    {
+        "id": "2c5d1ecf-6832-57d5-b546-c500ad06204d",
+        "name": "Fred",
+        "bd_ids": [
+            "fc30f32a-3e20-5385-b28a-7439ee532389"
+        ]
+    },
+    {
+        "id": "61d33246-60ce-54a8-9d34-3b08a03ebd0a",
+        "name": "Bea Lema",
+        "bd_ids": [
+            "aa01d166-f99b-5537-9d2f-99f433ffdc97"
+        ]
+    },
+    {
+        "id": "0609ba11-9dd6-51a2-a1fa-5945569f3a15",
+        "name": "Renaud Roche",
+        "bd_ids": [
+            "fc62fcaa-84ef-5a91-a79d-34ee62b436ef"
+        ]
+    },
+    {
+        "id": "2b7ad5e3-6b65-5786-bd5f-d02f8bcdde29",
+        "name": "Laurent Hopman",
+        "bd_ids": [
+            "fc62fcaa-84ef-5a91-a79d-34ee62b436ef"
+        ]
+    },
+    {
+        "id": "57a7df47-868e-598d-8320-562a491eec09",
+        "name": "Jemisin",
+        "bd_ids": [
+            "8a50365e-9da9-59dd-bc97-969ed43c22c7"
+        ]
+    },
+    {
+        "id": "29e81ba3-c9a8-5437-a577-2324e84c2a22",
+        "name": "Campbell",
+        "bd_ids": [
+            "8a50365e-9da9-59dd-bc97-969ed43c22c7"
+        ]
+    },
+    {
+        "id": "c9b6be22-065c-5547-a9aa-9db3a027d1e6",
+        "name": "Balboa",
+        "bd_ids": [
+            "515abf3f-be71-5dc5-a79a-662cd25fccf6"
+        ]
+    },
+    {
+        "id": "c8a7e06b-5246-59d8-988d-2f1dfc3dcbe7",
+        "name": "Arakawa",
+        "bd_ids": [
+            "0c7c6682-3287-56d0-a8d6-82aea0648529"
+        ]
+    },
+    {
+        "id": "0399b1c8-5e87-58d3-8ea8-63453280e3bb",
+        "name": "Heugel",
+        "bd_ids": [
+            "debf7682-e9ad-587d-a814-efdeaad2c9e7"
+        ]
+    },
+    {
+        "id": "83cd0cff-b455-5d5f-b0d2-1620f35ecd54",
+        "name": "Consigny",
+        "bd_ids": [
+            "debf7682-e9ad-587d-a814-efdeaad2c9e7"
+        ]
+    },
+    {
+        "id": "5c77edf3-4fb1-52ab-ab5c-229c1eb836e8",
+        "name": "Saiki Kumiko",
+        "bd_ids": [
+            "e2102e41-2abb-59a4-b7fe-8d4ecc23e1da"
+        ]
+    },
+    {
+        "id": "eb085332-9b22-53f0-a527-1e929572ab5a",
+        "name": "Brubaker",
+        "bd_ids": [
+            "956b5864-d695-5e4f-b6f3-48078e019fe0"
+        ]
+    },
+    {
+        "id": "00db3447-5ed5-5ba8-a2af-2dd9199c5602",
+        "name": "Ruka",
+        "bd_ids": [
+            "956b5864-d695-5e4f-b6f3-48078e019fe0"
+        ]
+    },
+    {
+        "id": "969606f1-a82b-5683-8a38-a91089eb9598",
+        "name": "Clamp",
+        "bd_ids": [
+            "ab707df2-5f9e-5bce-ba06-da7fc0e88bfd"
+        ]
+    },
+    {
+        "id": "f00e5d5f-7bc4-58c0-98a0-7c48ff1b2ead",
+        "name": "Forest",
+        "bd_ids": [
+            "bde7b6df-1144-56af-8a15-03f3710adb93"
+        ]
+    },
+    {
+        "id": "8519e2d5-a656-5ce0-9642-74f939ba1e60",
+        "name": "Tardi",
+        "bd_ids": [
+            "bde7b6df-1144-56af-8a15-03f3710adb93"
+        ]
+    },
+    {
+        "id": "e1d64487-9066-57a4-a82b-f95b1f11a41f",
+        "name": "Hannah Templer",
+        "bd_ids": [
+            "52b5768f-92ea-5ea0-864c-f91c838da16c"
+        ]
+    },
+    {
+        "id": "cc4653dc-b615-54e5-bac1-c35dc48d1341",
+        "name": "Elene Usdin",
+        "bd_ids": [
+            "13a95766-1ae7-52fc-8158-e51115b8fa4a"
+        ]
+    },
+    {
+        "id": "5a3e0ea6-adbe-572e-9cdf-9074ad4b7dcf",
+        "name": "ND Stevenson",
+        "bd_ids": []
+    },
+    {
+        "id": "e91e7e71-ed2e-5acb-a42e-2ad624b8ab41",
+        "name": "Mana Neyestani",
+        "bd_ids": [
+            "1ed863f9-5aea-574a-8e7a-8a8f061235e5"
+        ]
+    },
+    {
+        "id": "2d932312-b0bc-5bac-9c2d-dfe07ecede95",
+        "name": "Ikue Aizawa",
+        "bd_ids": [
+            "48a7b58b-aa17-5b0d-98ec-fe8a997395c0"
+        ]
+    },
+    {
+        "id": "60d5489b-14e3-518b-9109-e042747d08ff",
+        "name": "Stepan Sejic",
+        "bd_ids": [
+            "b089120d-7f10-5457-96b1-b233822e6f5e"
+        ]
+    },
+    {
+        "id": "98f266c0-cb80-5d14-8e5c-697e49b48751",
+        "name": "Edith Chambon",
+        "bd_ids": [
+            "330732a9-e0e1-5cf1-a00d-ecd08a2bc222"
+        ]
+    },
+    {
+        "id": "45d6dbf8-fbd9-578b-9e9f-8402dc2d31e7",
+        "name": "Moto Hagio",
+        "bd_ids": [
+            "d0773c0e-efce-5e3f-b88c-b401e6925875"
+        ]
+    },
+    {
+        "id": "57c07569-26eb-52d4-ab34-f8c8caa94ccc",
+        "name": "Tillie Walden",
+        "bd_ids": [
+            "4aa33079-62c2-5233-88ae-8e754c339e59"
+        ]
+    },
+    {
+        "id": "da949bb6-12f0-5d85-b093-d2ec26926f91",
+        "name": "André Déraine",
+        "bd_ids": [
+            "1de89bb4-2d86-543c-845e-fba8f42fc847"
+        ]
+    },
+    {
+        "id": "2c0a8d04-1eac-5612-a1c7-676822d9ad90",
+        "name": "Q Hayashida",
+        "bd_ids": [
+            "a9f1ba28-8e3f-5925-8f8c-bd63fb271d1b"
+        ]
+    },
+    {
+        "id": "206efe6f-29f9-5386-b123-f2bbd3f27f6d",
+        "name": "Iris Pouy",
+        "bd_ids": [
+            "06d42289-e3ad-57c0-aade-03088507faa9"
+        ]
+    },
+    {
+        "id": "d52a43df-2aa2-547e-b98d-830dec705d02",
+        "name": "Elizabeth Holleville",
+        "bd_ids": [
+            "06d42289-e3ad-57c0-aade-03088507faa9"
+        ]
+    },
+    {
+        "id": "3c90a47b-00bd-5d72-b26e-14e9361de953",
+        "name": "Pierre-Henry Gomont",
+        "bd_ids": [
+            "34373ae6-8241-5dfd-ac94-c657bd97af69"
+        ]
+    },
+    {
+        "id": "ec033c79-cf70-5028-8b1d-6b02cccf0b5c",
+        "name": "Zoe Thorogood",
+        "bd_ids": [
+            "0829463a-3433-53e5-ac54-605311f73a69"
+        ]
+    },
+    {
+        "id": "25a92ac6-0606-546b-91d9-21824fdc82a1",
+        "name": "Felix Laurent",
+        "bd_ids": [
+            "f95d6e61-6426-5b0b-9311-b9e8ecb36b78"
+        ]
+    },
+    {
+        "id": "ee98cfb4-9b32-5356-b3be-337badf7aa02",
+        "name": "Exaheva",
+        "bd_ids": [
+            "f95d6e61-6426-5b0b-9311-b9e8ecb36b78"
+        ]
+    },
+    {
+        "id": "3b934034-aca9-5ef9-a4d4-f0dbf63716dd",
+        "name": "Luca Harari",
+        "bd_ids": [
+            "fdf7972d-6b2b-5ace-9939-d1b83cedae14"
+        ]
+    },
+    {
+        "id": "a531559e-8dbe-5b47-b3b7-b6e452214bd7",
+        "name": "Arthur Harari",
+        "bd_ids": [
+            "fdf7972d-6b2b-5ace-9939-d1b83cedae14"
+        ]
+    },
+    {
+        "id": "bed4e616-fb1a-51d5-8789-d3a7c519765c",
+        "name": "Will McPhail",
+        "bd_ids": [
+            "0f55b110-f82c-5092-8299-3149fdc8c9c9"
+        ]
+    },
+    {
+        "id": "c6bfc388-ba3c-5aa7-b627-d7528e7b7f95",
+        "name": "Baptiste Sornin",
+        "bd_ids": [
+            "c2f61a7e-3816-5686-b9e5-d9556ee77049"
+        ]
+    },
+    {
+        "id": "ff780b2f-973b-5b78-8aaf-b22f31bc1bb4",
+        "name": "Marie Baudet",
+        "bd_ids": [
+            "c2f61a7e-3816-5686-b9e5-d9556ee77049"
+        ]
+    },
+    {
+        "id": "e2139e97-c7d1-5124-b077-ea4291aa3032",
+        "name": "Tatsuki Fujimoto",
+        "bd_ids": [
+            "e98c4039-8132-5dd6-9489-661fca8f7743"
+        ]
+    },
+    {
+        "id": "11f8a644-a339-59d8-af48-8b26d8709fbd",
+        "name": "Sole Otero",
+        "bd_ids": [
+            "e24b2289-3eba-5581-9e3b-7c3d08251f70"
+        ]
+    },
+    {
+        "id": "ae7b2afb-f773-5588-a836-7f22fa49d247",
+        "name": "Ahora Travé",
+        "bd_ids": [
+            "fb6cbc79-3c98-5889-838a-b334b7606395"
+        ]
+    },
+    {
+        "id": "06d2e44e-3bc3-5c38-80b2-d2bc46f5a2d5",
+        "name": "Yoshijazu Yasuhiko",
+        "bd_ids": [
+            "b0b3870c-0997-5868-bd23-6e08e3cc0aac"
+        ]
+    },
+    {
+        "id": "bac10044-bf28-587c-bf43-2ca135089535",
+        "name": "Tsuru Ringo Star",
+        "bd_ids": [
+            "1c9e35cc-80d4-5dce-8e80-2874fe876600"
+        ]
+    },
+    {
+        "id": "5ffbe2d2-ae0e-55cf-b3ab-8c691acbaddf",
+        "name": "Sakana Sakatsuki",
+        "bd_ids": [
+            "4066190a-e2a3-5eda-bb01-cd996e6b7eda"
+        ]
+    },
+    {
+        "id": "ac8b85c4-99d5-5de7-a631-34672a8a642e",
+        "name": "Ryôko Kui",
+        "bd_ids": [
+            "dd62a84b-d5d0-581d-85ff-398583396ee1"
+        ]
+    },
+    {
+        "id": "ce1989f6-f25c-5cf4-9899-cb4528ed5422",
+        "name": "Eleonor Marchal",
+        "bd_ids": [
+            "c7c00974-55df-5ddb-9094-599a49fedc04"
+        ]
+    },
+    {
+        "id": "31387e90-fc18-5d6c-8a6a-6bd2ceef6053",
+        "name": "Florence Cestac",
+        "bd_ids": [
+            "d3ae501d-a740-50fa-9b36-23681a63e221"
+        ]
+    },
+    {
+        "id": "542d6a4e-eee5-5d28-b43b-1522bc6c23b7",
+        "name": "Jean Teulé",
+        "bd_ids": [
+            "d3ae501d-a740-50fa-9b36-23681a63e221"
+        ]
+    },
+    {
+        "id": "8c3c54b4-5338-5cf9-9db4-e376482d841b",
+        "name": "Jim Bishop",
+        "bd_ids": [
+            "9e1ead2f-e94b-51c4-a530-25ff413b4630"
+        ]
+    },
+    {
+        "id": "0b088127-8e8e-5e67-aade-8ee924e23e14",
+        "name": "Hideo Azuma",
+        "bd_ids": [
+            "1d9f61ac-e443-5d00-95d6-232abbc96584"
+        ]
+    },
+    {
+        "id": "d34f9a45-6215-5a8a-b4d6-dfb9d6a92541",
+        "name": "Camille Potte",
+        "bd_ids": [
+            "8f3dfff9-18f4-517b-956a-375093f86315"
+        ]
+    },
+    {
+        "id": "1895a4c2-2cf2-5967-b5b1-2b87bfb4c910",
+        "name": "Ezra Cleytan Daniels",
+        "bd_ids": [
+            "69fc7e78-c691-52d1-9568-ff25b698eaab"
+        ]
+    },
+    {
+        "id": "a47f6301-1e18-51f0-8386-ac488ee37b7c",
+        "name": "Daisuke Igarachi",
+        "bd_ids": [
+            "c503e169-f7e8-50eb-bba0-7d391d6a17ce"
+        ]
+    },
+    {
+        "id": "e6332846-dc60-5a6c-83ab-f5180adb17d5",
+        "name": "Quentin Rigaud",
+        "bd_ids": [
+            "ebab55bf-6f8b-5ebe-8a63-63805845355c"
+        ]
+    },
+    {
+        "id": "e582c7f5-c5b4-5f7e-ac05-d3296bfd9708",
+        "name": "Camille Van Hoof",
+        "bd_ids": [
+            "599583d1-2538-5fdb-ad77-90fc339b3178"
+        ]
+    },
+    {
+        "id": "5a24ef24-132a-56bc-aef0-b3b1529d528e",
+        "name": "Mikael Ross",
+        "bd_ids": [
+            "3dddd453-4856-5647-b862-58ee435de96b"
+        ]
+    },
+    {
+        "id": "091254d8-d0c9-5726-a5c2-f19e2f7c8d92",
+        "name": "Kabi Nagata",
+        "bd_ids": [
+            "78e93b93-fff0-5559-a078-8ca878174a6c"
+        ]
+    },
+    {
+        "id": "3732fd8e-96c9-58f7-8134-54e3af2e2b77",
+        "name": "Aya Kanno",
+        "bd_ids": [
+            "71b57a4d-63c6-5220-b416-c2eacf41695e"
+        ]
+    },
+    {
+        "id": "e9c52477-ae82-5bb5-862b-fe4d54df2502",
+        "name": "Marcel Shorjian",
+        "bd_ids": [
+            "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c"
+        ]
+    },
+    {
+        "id": "787e0d65-0fe6-5b9f-a9ec-1afe8993ea3d",
+        "name": "Jeanne Sterkers",
+        "bd_ids": [
+            "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c"
+        ]
+    },
+    {
+        "id": "c87d7744-49cb-5480-8fd5-ac0903b18d99",
+        "name": "Chris Samnee",
+        "bd_ids": [
+            "1c16dd39-9b71-570b-adf9-dd949b0876ed"
+        ]
+    },
+    {
+        "id": "16787ee4-56ac-5736-b0b0-2d831ee42d6c",
+        "name": "Richard Stark",
+        "bd_ids": [
+            "2577974a-9695-5f41-94a9-6ba5ebd90174"
+        ]
+    },
+    {
+        "id": "f149dc55-7d01-5e6c-89f4-ed837f8de8b5",
+        "name": "Kieran Headline",
+        "bd_ids": [
+            "2577974a-9695-5f41-94a9-6ba5ebd90174"
+        ]
+    },
+    {
+        "id": "9f6d02b9-d58d-521b-bac5-a096f26c125a",
+        "name": "Marjane Satrapi",
+        "bd_ids": [
+            "89d152e7-f57c-5b0e-8d95-8f5fad2dc896"
+        ]
+    },
+    {
+        "id": "d6e87a93-7b87-56df-b0b5-784f597acfd5",
+        "name": "Keiko Takemiya",
+        "bd_ids": [
+            "55173791-1d25-5974-be37-4ae3bfac5225"
+        ]
+    },
+    {
+        "id": "fab79174-cd77-5bff-8ef0-204115fd6685",
+        "name": "Jérémie Moreau",
+        "bd_ids": [
+            "d2606770-6e64-56ad-9f24-2c1734030214"
+        ]
+    },
+    {
+        "id": "044a392b-edae-5a8b-bf64-8bc911b445b8",
+        "name": "Lynda Barry",
+        "bd_ids": [
+            "ba70089b-dc50-5706-ae33-e7b7f3d3c4ed"
+        ]
+    },
+    {
+        "id": "466e5af5-67e4-5fcb-b087-0e8d4f1a7ed6",
+        "name": "Luz",
+        "bd_ids": [
+            "c422ca47-19e7-5530-96ae-3099c5ec9dc8"
+        ]
+    },
+    {
+        "id": "cf14aca0-99b7-5e93-bac5-cc55c93da085",
+        "name": "Lorelei L'Affeter",
+        "bd_ids": [
+            "7b60d495-19b6-5aec-83d2-df40acb1d3e8"
+        ]
+    },
+    {
+        "id": "413f2343-f0c5-5672-aa0a-050973a682f9",
+        "name": "Aurélien Maury",
+        "bd_ids": [
+            "7afa0be1-9f65-5af9-b8ca-8febc5ccfa4a"
+        ]
+    },
+    {
+        "id": "aea68d40-ddb1-5354-b4e8-5fb4dbca4c9e",
+        "name": "Rumiko Takahashi",
+        "bd_ids": [
+            "ec34073f-32f3-5b74-8e70-eb2e9937a36f"
+        ]
+    },
+    {
+        "id": "cb6b2c97-9182-501d-90a0-2c812dd7d641",
+        "name": "Claire Fauvel",
+        "bd_ids": [
+            "fd110a14-3cb4-5407-a837-b3bae1c9b278"
+        ]
+    },
+    {
+        "id": "e7455245-dd03-5c13-a656-e0c6420e9265",
+        "name": "Pao Yen Ding",
+        "bd_ids": [
+            "0227a664-60ac-5e77-bb89-031cf0893d1e"
+        ]
+    },
+    {
+        "id": "3ed49b39-8117-577d-ba13-6ac94a9e388b",
+        "name": "Shohei Manabe",
+        "bd_ids": [
+            "bb2f4bd6-ea0d-5028-bd8d-d3eb6437888c"
+        ]
+    },
+    {
+        "id": "bac0e452-b75b-5cc7-a4e4-ad8adf9ba347",
+        "name": "Junji Ito",
+        "bd_ids": [
+            "543529b3-41ab-5afc-a381-7ed1bfab677b"
+        ]
+    },
+    {
+        "id": "4abb5d53-7a59-5901-8c93-7de96ba7c098",
+        "name": "Raymond Briggs",
+        "bd_ids": [
+            "11d7eace-ebf2-59d3-a330-cd442d3557a3"
+        ]
+    },
+    {
+        "id": "3254de0b-373e-565d-9416-53a8316474c8",
+        "name": "Serge Lehmann",
+        "bd_ids": [
+            "1bc85f3d-8932-5b00-b6fd-333b32ee53b9"
+        ]
+    },
+    {
+        "id": "bb3b2c50-6f6f-552e-a8aa-c43c4c7b9427",
+        "name": "Pig Paddle Mannimarco",
+        "bd_ids": [
+            "605a6f52-dfac-5d30-9135-70f21673a9c9"
+        ]
+    },
+    {
+        "id": "f7168e39-bf20-5d5a-91f5-7b0b971b588c",
+        "name": "Rick Remender",
+        "bd_ids": [
+            "a8920edf-9eb7-5296-9429-4a13002c70c4"
+        ]
+    },
+    {
+        "id": "8b277120-560b-5807-b3c5-c0a546bce427",
+        "name": "Max Fiumara",
+        "bd_ids": [
+            "a8920edf-9eb7-5296-9429-4a13002c70c4"
+        ]
+    },
+    {
+        "id": "04566a81-2c42-5f40-84bf-169e9ff41670",
+        "name": "Bilquis Evely",
+        "bd_ids": [
+            "980619c8-13ee-54cf-960c-0ad3a452965b"
+        ]
+    },
+    {
+        "id": "7a56b388-39a7-5b66-af71-1a9304760e4a",
+        "name": "Régis Hautières",
+        "bd_ids": [
+            "80dbe48d-5ef6-50a1-8f93-23619b07cbde"
+        ]
+    },
+    {
+        "id": "da90896c-8026-554d-a736-441570b78261",
+        "name": "Marie Spénale",
+        "bd_ids": [
+            "30dd4d30-1325-557c-b42b-6ad0894bf6b8"
+        ]
+    },
+    {
+        "id": "04cef3b4-6b2a-5efc-85f2-2a0ff95481cd",
+        "name": "Junko Mizuno",
+        "bd_ids": [
+            "50afc3e1-c60e-5915-b756-8b0760228a32"
+        ]
+    },
+    {
+        "id": "dfaa83f5-acf7-5b22-baf7-0bf497056f9e",
+        "name": "Nick Dragotta",
+        "bd_ids": [
+            "8a2399e8-979b-5ac8-9645-0c778e3f4edc"
+        ]
+    },
+    {
+        "id": "2ceec585-d739-59b6-948a-6b8117a74f5e",
+        "name": "Vincent Brugeas",
+        "bd_ids": [
+            "22420ca8-73c3-508a-a4ca-2f9378f14338"
+        ]
+    },
+    {
+        "id": "d1a00a6a-c6a2-526c-8bca-05745c2bdcc0",
+        "name": "Ronan Toulhoat",
+        "bd_ids": [
+            "22420ca8-73c3-508a-a4ca-2f9378f14338"
+        ]
+    },
+    {
+        "id": "69eb4ee1-b8a0-50b0-adec-5f64e115725a",
+        "name": "Jean-Christophe Deveney",
+        "bd_ids": [
+            "46c2d81c-4961-5353-9c99-230e81b565d0"
+        ]
+    },
+    {
+        "id": "1a9c1499-d284-5ffe-9045-4e3918619a42",
+        "name": "Edouard Cour",
+        "bd_ids": [
+            "46c2d81c-4961-5353-9c99-230e81b565d0"
+        ]
+    }
 ];
 
 module.exports = {
     events,
     bds,
     authors,
-  };
-  
+};

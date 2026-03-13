@@ -1,388 +1,246 @@
-import { sql } from '@vercel/postgres';
 import {
-  CustomerField,
-  CustomersTable,
-  InvoiceForm,
-  InvoicesTable,
-  LatestInvoiceRaw,
-  User,
-  Revenue,
   EventsTable,
   BdsTable,
   AuthorsTable
 } from './definitions';
-import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
 import prisma from './prisma';
-
-export async function fetchRevenue() {
-  // Add noStore() here prevent the response from being cached.
-  // This is equivalent to in fetch(..., {cache: 'no-store'}).
-  noStore();
-
-  try {
-
-    const data = await sql<Revenue>`SELECT * FROM revenue`;
-
-    console.log('Data fetch complete after 3 seconds.');
-
-    return data.rows;
-  } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch revenue data.');
-  }
-}
-
-export async function fetchLatestInvoices() {
-  noStore();
-  try {
-
-    const data = await sql<LatestInvoiceRaw>`
-      SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
-      FROM invoices
-      JOIN customers ON invoices.customer_id = customers.id
-      ORDER BY invoices.date DESC
-      LIMIT 5`;
-
-    const latestInvoices = data.rows.map((invoice) => ({
-      ...invoice,
-      amount: formatCurrency(invoice.amount),
-    }));
-    return latestInvoices;
-  } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch the latest invoices.');
-  }
-}
 
 export async function fetchCardData() {
   noStore();
   try {
-    // You can probably combine these into a single SQL query
-    // However, we are intentionally splitting them to demonstrate
-    // how to initialize multiple queries in parallel with JS.
-    const nextEvent = prisma.events.findFirst({
-      orderBy: {
-        date: 'desc',
-      },
-    });
-    const totBdNb = prisma.bds.count()
-    const totAuthNb = prisma.authors.count()
-    const data = await Promise.all([
-      nextEvent,
-      totBdNb,
-      totAuthNb,
+    const [nextEvent, numberOfBds, numberOfAuthors] = await Promise.all([
+      prisma.event.findFirst({ orderBy: { date: 'desc' } }),
+      prisma.bd.count(),
+      prisma.author.count(),
     ]);
-
-    const numberOfBds = data[1];
-    const numberOfAuthors = data[2];
-    const nextBdiDate = data[0]?.date.toDateString() || 0;
-    const nextBdiName = data[0]?.name || 0;
 
     return {
       numberOfAuthors,
       numberOfBds,
-      nextBdiDate,
-      nextBdiName,
+      nextBdiDate: nextEvent?.date.toDateString() || '',
+      nextBdiName: nextEvent?.name || '',
     };
   } catch (error) {
     console.error('Database Error:', error);
-    throw new Error('Failed to card data.');
+    throw new Error('Failed to fetch card data.');
   }
 }
 
-const ITEMS_PER_PAGE = 6;
-export async function fetchFilteredInvoices(
-  query: string,
-  currentPage: number,
-) {
+export async function fetchDashboardData() {
   noStore();
-  const offset = (currentPage - 1) * ITEMS_PER_PAGE;
-
   try {
-    const invoices = await sql<InvoicesTable>`
-      SELECT
-        invoices.id,
-        invoices.amount,
-        invoices.date,
-        invoices.status,
-        customers.name,
-        customers.email,
-        customers.image_url
-      FROM invoices
-      JOIN customers ON invoices.customer_id = customers.id
-      WHERE
-        customers.name ILIKE ${`%${query}%`} OR
-        customers.email ILIKE ${`%${query}%`} OR
-        invoices.amount::text ILIKE ${`%${query}%`} OR
-        invoices.date::text ILIKE ${`%${query}%`} OR
-        invoices.status ILIKE ${`%${query}%`}
-      ORDER BY invoices.date DESC
-      LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
-    `;
+    const [totalEvents, totalBds, totalAuthors, recentEvents, topAuthors, bdsPerYear] = await Promise.all([
+      prisma.event.count(),
+      prisma.bd.count(),
+      prisma.author.count(),
+      prisma.event.findMany({
+        orderBy: { date: 'desc' },
+        take: 5,
+        include: {
+          bds: { select: { id: true } },
+        },
+      }),
+      prisma.author.findMany({
+        orderBy: { bds: { _count: 'desc' } },
+        take: 5,
+        include: {
+          _count: { select: { bds: true } },
+        },
+      }),
+      prisma.bd.groupBy({
+        by: ['publishing_year'],
+        _count: { id: true },
+        where: { publishing_year: { not: null } },
+        orderBy: { publishing_year: 'asc' },
+      }),
+    ]);
 
-    return invoices.rows;
+    return {
+      totalEvents,
+      totalBds,
+      totalAuthors,
+      recentEvents,
+      topAuthors,
+      bdsPerYear: bdsPerYear.map(g => ({
+        year: g.publishing_year!,
+        count: g._count.id,
+      })),
+    };
   } catch (error) {
     console.error('Database Error:', error);
-    throw new Error('Failed to fetch invoices.');
+    throw new Error('Failed to fetch dashboard data.');
   }
 }
 
-export async function fetchInvoicesPages(query: string) {
+// --- Filter option fetchers ---
+
+export async function fetchEventYears(): Promise<number[]> {
+  noStore();
+  const events = await prisma.event.findMany({
+    select: { date: true },
+    orderBy: { date: 'desc' },
+  });
+  const years = Array.from(new Set(events.map(e => e.date.getFullYear())));
+  return years.sort((a, b) => b - a);
+}
+
+export async function fetchEventOptions(): Promise<{ id: string; name: string }[]> {
+  noStore();
+  return prisma.event.findMany({
+    select: { id: true, name: true },
+    orderBy: { date: 'desc' },
+  });
+}
+
+export async function fetchPublishers(): Promise<string[]> {
+  noStore();
+  const bds = await prisma.bd.findMany({
+    select: { publisher: true },
+    where: { publisher: { not: null } },
+    distinct: ['publisher'],
+    orderBy: { publisher: 'asc' },
+  });
+  return bds.map(b => b.publisher!);
+}
+
+export async function fetchBdYears(): Promise<number[]> {
+  noStore();
+  const bds = await prisma.bd.findMany({
+    select: { publishing_year: true },
+    where: { publishing_year: { not: null } },
+    distinct: ['publishing_year'],
+    orderBy: { publishing_year: 'desc' },
+  });
+  return bds.map(b => b.publishing_year!);
+}
+
+// --- Filtered queries with cross-entity search ---
+
+export async function fetchFilteredEvents(query: string, year?: number) {
   noStore();
   try {
-    const count = await sql`SELECT COUNT(*)
-    FROM invoices
-    JOIN customers ON invoices.customer_id = customers.id
-    WHERE
-      customers.name ILIKE ${`%${query}%`} OR
-      customers.email ILIKE ${`%${query}%`} OR
-      invoices.amount::text ILIKE ${`%${query}%`} OR
-      invoices.date::text ILIKE ${`%${query}%`} OR
-      invoices.status ILIKE ${`%${query}%`}
-  `;
+    const where: any = {};
 
-    const totalPages = Math.ceil(Number(count.rows[0].count) / ITEMS_PER_PAGE);
-    return totalPages;
-  } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch total number of invoices.');
-  }
-}
+    if (query) {
+      where.OR = [
+        { name: { contains: query, mode: "insensitive" } },
+        { bds: { some: { title: { contains: query, mode: "insensitive" } } } },
+        { bds: { some: { authors: { some: { author: { name: { contains: query, mode: "insensitive" } } } } } } },
+      ];
+    }
 
-export async function fetchInvoiceById(id: string) {
-  noStore();
-  try {
-    const data = await sql<InvoiceForm>`
-      SELECT
-        invoices.id,
-        invoices.customer_id,
-        invoices.amount,
-        invoices.status
-      FROM invoices
-      WHERE invoices.id = ${id};
-    `;
+    if (year) {
+      where.date = {
+        gte: new Date(`${year}-01-01`),
+        lt: new Date(`${year + 1}-01-01`),
+      };
+    }
 
-    const invoice = data.rows.map((invoice) => ({
-      ...invoice,
-      // Convert amount from cents to dollars
-      amount: invoice.amount / 100,
-    }));
-
-    return invoice[0];
-  } catch (error) {
-    console.error('Database Error:', error);
-  }
-}
-
-export async function fetchCustomers() {
-  noStore();
-  try {
-    const data = await sql<CustomerField>`
-      SELECT
-        id,
-        name
-      FROM customers
-      ORDER BY name ASC
-    `;
-
-    const customers = data.rows;
-    return customers;
-  } catch (err) {
-    console.error('Database Error:', err);
-    throw new Error('Failed to fetch all customers.');
-  }
-}
-
-export async function fetchFilteredCustomers(query: string) {
-  noStore();
-  try {
-    const data = await sql<CustomersTable>`
-		SELECT
-		  customers.id,
-		  customers.name,
-		  customers.email,
-		  customers.image_url,
-		  COUNT(invoices.id) AS total_invoices,
-		  SUM(CASE WHEN invoices.status = 'pending' THEN invoices.amount ELSE 0 END) AS total_pending,
-		  SUM(CASE WHEN invoices.status = 'paid' THEN invoices.amount ELSE 0 END) AS total_paid
-		FROM customers
-		LEFT JOIN invoices ON customers.id = invoices.customer_id
-		WHERE
-		  customers.name ILIKE ${`%${query}%`} OR
-        customers.email ILIKE ${`%${query}%`}
-		GROUP BY customers.id, customers.name, customers.email, customers.image_url
-		ORDER BY customers.name ASC
-	  `;
-
-    const customers = data.rows.map((customer) => ({
-      ...customer,
-      total_pending: formatCurrency(customer.total_pending),
-      total_paid: formatCurrency(customer.total_paid),
-    }));
-
-    return customers;
-  } catch (err) {
-    console.error('Database Error:', err);
-    throw new Error('Failed to fetch customer table.');
-  }
-}
-
-export async function getUser(email: string) {
-  try {
-    const user = await sql`SELECT * from USERS where email=${email}`;
-    return user.rows[0] as User;
-  } catch (error) {
-    console.error('Failed to fetch user:', error);
-    throw new Error('Failed to fetch user.');
-  }
-}
-
-export async function fetchFilteredEvents(query: string) {
-  noStore();
-  try {
-    const events = await prisma.events.findMany({
-      orderBy: {
-        date: 'desc',
-      },
+    const events = await prisma.event.findMany({
+      orderBy: { date: 'desc' },
       include: {
         bds: {
-          select:{
-            title: true,
+          select: {
             id: true,
+            title: true,
+            authors: {
+              select: {
+                author: {
+                  select: { id: true, name: true }
+                }
+              }
+            }
           }
         }
       },
-      where : {
-        OR: [
-          {
-            name: {
-              contains: query,
-              mode: "insensitive",
-            },
-          },
-        ],
-      }
-  })
-    const bds = await prisma.bds.findMany(
-      {
-        orderBy: {
-          title: 'asc',
-        },
-      where : {
-        OR: [
-          {
-            title: {
-              contains: query,
-              mode: "insensitive",
-            },
-          },
-          {
-            publicher: {
-              contains: query,
-              mode: "insensitive",
-            }
-          }
-        ],
-      }
-    },
-    )
-    const authors = await prisma.authors.findMany({
-      orderBy: {
-        name: 'asc',
-      },
-      where : {
-        OR: [
-          {
-            name: {
-              contains: query,
-              mode: "insensitive",
-            },
-          },
-        ],
-      }
-    },
-  )
+      where,
+    });
     return events as EventsTable[];
-    
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch events table.');
   }
 }
 
-export async function fetchEventById(id: string){
+export async function fetchEventById(id: string) {
   noStore();
   try {
-    const events = await prisma.events.findFirst({
-      where: {
-        id: id
-      }
-    });
-    return events as EventsTable;
-  } catch (err) {
-    console.error('Database Error:', err);
-    throw new Error('Failed to fetch events table.');
-  }
-}
-
-export async function fetchFilteredBds(query: string) {
-  noStore();
-  
-  try {
-    const bds = await prisma.bds.findMany(
-      {
-        orderBy: {
-          title: 'asc',
-        },
-      where : {
-        OR: [
-          {
-            title: {
-              contains: query,
-              mode: "insensitive",
-            },
-          },
-          {
-            publicher: {
-              contains: query,
-              mode: "insensitive",
+    const event = await prisma.event.findFirst({
+      where: { id },
+      include: {
+        bds: {
+          select: {
+            id: true,
+            title: true,
+            publisher: true,
+            publishing_year: true,
+            authors: {
+              select: {
+                author: {
+                  select: { id: true, name: true }
+                }
+              }
             }
           }
-        ],
-      }
-    },
-    )
-    return bds as BdsTable[];
-  } catch (err) {
-    console.error('Database Error:', err);
-    throw new Error('Failed to fetch bds table.');
-  }
-}
-
-export async function fetchBdById(id:string) {
-  noStore();
-  try {
-    const bd = await prisma.bds.findFirst({
-      where: {
-        id: id
+        }
       }
     });
-    return bd as BdsTable;
+    return event as EventsTable | null;
   } catch (err) {
     console.error('Database Error:', err);
-    throw new Error('Failed to fetch bds table.');
+    throw new Error('Failed to fetch event.');
   }
 }
 
-export async function fetchBdsByEventId(id:string){
+export async function fetchFilteredBds(
+  query: string,
+  filters?: { eventId?: string; publisher?: string; year?: number }
+) {
   noStore();
   try {
-    const bds = await prisma.bds.findMany({
-      where: {
-        event_ids: id
-      }
-    })
+    const where: any = {};
+    const andConditions: any[] = [];
+
+    if (query) {
+      andConditions.push({
+        OR: [
+          { title: { contains: query, mode: "insensitive" } },
+          { publisher: { contains: query, mode: "insensitive" } },
+          { authors: { some: { author: { name: { contains: query, mode: "insensitive" } } } } },
+          { event: { name: { contains: query, mode: "insensitive" } } },
+        ],
+      });
+    }
+
+    if (filters?.eventId) {
+      andConditions.push({ eventId: filters.eventId });
+    }
+    if (filters?.publisher) {
+      andConditions.push({ publisher: filters.publisher });
+    }
+    if (filters?.year) {
+      andConditions.push({ publishing_year: filters.year });
+    }
+
+    if (andConditions.length > 0) {
+      where.AND = andConditions;
+    }
+
+    const bds = await prisma.bd.findMany({
+      orderBy: { title: 'asc' },
+      include: {
+        event: { select: { id: true, name: true } },
+        authors: {
+          select: {
+            author: {
+              select: { id: true, name: true }
+            }
+          }
+        }
+      },
+      where,
+    });
     return bds as BdsTable[];
   } catch (err) {
     console.error('Database Error:', err);
@@ -390,25 +248,67 @@ export async function fetchBdsByEventId(id:string){
   }
 }
 
-export async function fetchFilteredAuthors(query: string) {
+export async function fetchBdById(id: string) {
   noStore();
   try {
-    const authors = await prisma.authors.findMany({
-        orderBy: {
-          name: 'asc',
-        },
-        where : {
-          OR: [
-            {
-              name: {
-                contains: query,
-                mode: "insensitive",
-              },
-            },
-          ],
+    const bd = await prisma.bd.findFirst({
+      where: { id },
+      include: {
+        event: { select: { id: true, name: true } },
+        authors: {
+          select: {
+            author: {
+              select: { id: true, name: true }
+            }
+          }
+        }
+      }
+    });
+    return bd as BdsTable | null;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch bd.');
+  }
+}
+
+export async function fetchFilteredAuthors(query: string, eventId?: string) {
+  noStore();
+  try {
+    const where: any = {};
+    const andConditions: any[] = [];
+
+    if (query) {
+      andConditions.push({
+        OR: [
+          { name: { contains: query, mode: "insensitive" } },
+          { bds: { some: { bd: { title: { contains: query, mode: "insensitive" } } } } },
+        ],
+      });
+    }
+
+    if (eventId) {
+      andConditions.push({
+        bds: { some: { bd: { eventId } } },
+      });
+    }
+
+    if (andConditions.length > 0) {
+      where.AND = andConditions;
+    }
+
+    const authors = await prisma.author.findMany({
+      orderBy: { name: 'asc' },
+      include: {
+        bds: {
+          select: {
+            bd: {
+              select: { id: true, title: true }
+            }
+          }
         }
       },
-    )
+      where,
+    });
     return authors as AuthorsTable[];
   } catch (err) {
     console.error('Database Error:', err);
@@ -416,17 +316,24 @@ export async function fetchFilteredAuthors(query: string) {
   }
 }
 
-export async function fetchAuthorById(id:string) {
+export async function fetchAuthorById(id: string) {
   noStore();
   try {
-    const author = await prisma.authors.findFirst({
-      where: {
-        id: id
+    const author = await prisma.author.findFirst({
+      where: { id },
+      include: {
+        bds: {
+          select: {
+            bd: {
+              select: { id: true, title: true }
+            }
+          }
+        }
       }
     });
-    return author as AuthorsTable;
+    return author as AuthorsTable | null;
   } catch (err) {
     console.error('Database Error:', err);
-    throw new Error('Failed to fetch bds table.');
+    throw new Error('Failed to fetch author.');
   }
 }

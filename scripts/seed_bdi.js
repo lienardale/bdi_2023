@@ -57,7 +57,7 @@ async function seedBds(){
             event_ids UUID,
             author_ids UUID[],
             title VARCHAR(255) NOT NULL UNIQUE,
-            publicher TEXT,
+            publisher TEXT,
             publishing_year INT
           );
         `;
@@ -68,8 +68,8 @@ async function seedBds(){
         const insertedBds = await Promise.all(
             bds.map(async (bd) => {
             return sql`
-            INSERT INTO Bd (id, event_ids, author_ids, title, publicher, publishing_year)
-            VALUES (${bd.id}, ${bd.event_ids}, ${bd.author_ids}, ${bd.title}, ${bd.publicher}, ${bd.publishing_year})
+            INSERT INTO Bd (id, event_ids, author_ids, title, publisher, publishing_year)
+            VALUES (${bd.id}, ${bd.event_ids}, ${bd.author_ids}, ${bd.title}, ${bd.publisher}, ${bd.publishing_year})
             ON CONFLICT (id) DO NOTHING;
           `;
           }),

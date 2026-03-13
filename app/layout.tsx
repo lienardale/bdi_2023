@@ -1,24 +1,9 @@
 import '@/app/ui/global.css'
-import {inter} from '@/app/ui/fonts'
-import { Metadata } from 'next';
- 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | La BDI',
-    default: 'La BDI',
-  },
-  description: 'The official BDI\'s website !',
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
-};
 
-export default function RootLayout ({
-  children
+export default function RootLayout({
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
-    </html>
-  )
+  return children;
 }
