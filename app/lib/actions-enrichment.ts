@@ -1,18 +1,11 @@
 'use server';
 
-import { auth } from '@/auth';
 import prisma from './prisma';
+import { requireAdmin } from './auth-utils';
 import { lookupBd, generateLeslibrairesUrl } from './enrichment/ean-lookup';
 import { lookupAuthor } from './enrichment/author-lookup';
 import { fetchOgImage } from './enrichment/og-image';
 import { revalidatePath } from 'next/cache';
-
-async function requireAdmin() {
-  const session = await auth();
-  if (!session?.user || (session.user as any).role !== 'admin') {
-    throw new Error('Unauthorized');
-  }
-}
 
 function delay(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -23,7 +16,10 @@ export async function enrichBd(id: string) {
 
   const bd = await prisma.bd.findUnique({
     where: { id },
-    include: { authors: { select: { author: { select: { name: true } } } } },
+    include: {
+      authors: { select: { author: { select: { name: true } } } },
+      publisherRef: { select: { name: true } },
+    },
   });
   if (!bd) return { message: 'BD not found' };
 
@@ -42,8 +38,9 @@ export async function enrichBd(id: string) {
   if (!bd.leslibraires_url) {
     data.leslibraires_url = generateLeslibrairesUrl(eanForUrl, bd.title);
   }
-  if (!bd.publisher_url && bd.publisher) {
-    data.publisher_url = `https://openlibrary.org/publishers/${encodeURIComponent(bd.publisher)}`;
+  const publisherName = bd.publisherRef?.name || bd.publisher;
+  if (!bd.publisher_url && publisherName) {
+    data.publisher_url = `https://openlibrary.org/publishers/${encodeURIComponent(publisherName)}`;
   }
 
   if (Object.keys(data).length > 0) {
@@ -93,7 +90,10 @@ export async function enrichAllBds() {
         { publication_date: null },
       ],
     },
-    include: { authors: { select: { author: { select: { name: true } } } } },
+    include: {
+      authors: { select: { author: { select: { name: true } } } },
+      publisherRef: { select: { name: true } },
+    },
   });
 
   let enriched = 0;
@@ -111,8 +111,9 @@ export async function enrichAllBds() {
     if (!bd.leslibraires_url) {
       data.leslibraires_url = generateLeslibrairesUrl(result.ean || bd.ean, bd.title);
     }
-    if (!bd.publisher_url && bd.publisher) {
-      data.publisher_url = `https://openlibrary.org/publishers/${encodeURIComponent(bd.publisher)}`;
+    const publisherName = bd.publisherRef?.name || bd.publisher;
+    if (!bd.publisher_url && publisherName) {
+      data.publisher_url = `https://openlibrary.org/publishers/${encodeURIComponent(publisherName)}`;
     }
 
     if (Object.keys(data).length > 0) {

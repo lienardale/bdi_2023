@@ -1,11 +1,7 @@
 import NextAuth from 'next-auth';
 import { authConfig } from './auth.config';
 import Google from 'next-auth/providers/google';
-
-const WHITELISTED_EMAILS = [
-  'alienard.dev@gmail.com',
-  'labandedesidees@gmail.com',
-];
+import { isAdminEmail } from '@/app/lib/admin-emails';
 
 export const { auth, signIn, signOut, handlers } = NextAuth({
   ...authConfig,
@@ -13,7 +9,7 @@ export const { auth, signIn, signOut, handlers } = NextAuth({
     ...authConfig.callbacks,
     async signIn({ account, profile }) {
       if (account?.provider === 'google') {
-        return !!profile?.email && WHITELISTED_EMAILS.includes(profile.email);
+        return !!profile?.email && isAdminEmail(profile.email);
       }
       return false;
     },

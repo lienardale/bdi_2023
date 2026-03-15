@@ -19,7 +19,8 @@
     "confirmDelete": "Confirm deletion",
     "confirmDeleteMessage": "Are you sure you want to delete this item?",
     "noData": "No data available.",
-    "contact": "Contact"
+    "contact": "Contact",
+    "publishers": "Publishers"
   },
   "home": {
     "title": "Home",
@@ -44,7 +45,8 @@
     "hour": "Time",
     "place": "Place",
     "addToCalendar": "Add to calendar",
-    "openMap": "Open in Google Maps"
+    "openMap": "Open in Google Maps",
+    "placePlaceholder": "Search for an address..."
   },
   "bds": {
     "title": "Comics",
@@ -64,7 +66,10 @@
     "multiSelectHint": "Ctrl+click for multi-select",
     "publicationDate": "Publication date",
     "pageCount": "Number of pages",
-    "price": "Price (€)"
+    "price": "Price (€)",
+    "priceShort": "Price",
+    "pages": "Pages",
+    "buy": "Buy"
   },
   "authors": {
     "title": "Authors",
@@ -74,11 +79,24 @@
     "photoUrl": "Photo URL",
     "wikipediaUrl": "Wikipedia URL"
   },
+  "publishers": {
+    "title": "Publishers",
+    "name": "Name",
+    "parent": "Parent publisher",
+    "imprints": "Imprints",
+    "bdCount": "Comic count",
+    "backToBds": "Back to comics",
+    "noBds": "No comics for this publisher.",
+    "parentPublisher": "Parent publisher",
+    "imprintsList": "Imprints",
+    "bdsList": "Comics"
+  },
   "filters": {
     "all": "All",
     "year": "Year",
     "event": "Event",
-    "publisher": "Publisher"
+    "publisher": "Publisher",
+    "author": "Author"
   },
   "contact": {
     "title": "Contact",
@@ -86,6 +104,10 @@
     "email": "Email",
     "facebookPage": "BDI Facebook page",
     "instagramProfile": "@labandedesidees"
+  },
+  "errors": {
+    "forbidden": "You do not have permission to access this page.",
+    "backToHome": "Back to home"
   },
   "admin": {
     "title": "Administration",
@@ -116,6 +138,21 @@
     "viewOnSite": "View on site",
     "enrichmentCoversTitle": "Event covers",
     "enrichmentCoversDesc": "Fetch cover images from Facebook links (OG image).",
-    "enrichAllCovers": "Enrich all covers"
+    "enrichAllCovers": "Enrich all covers",
+    "stats": "Statistics"
+  },
+  "adminStats": {
+    "title": "Statistics",
+    "totalBds": "Total Comics",
+    "totalAuthors": "Total Authors",
+    "totalEvents": "Total Events",
+    "totalPublishers": "Total Publishers",
+    "medianPages": "Pages (median)",
+    "medianPrice": "Price (median)",
+    "avgBdsPerEvent": "Comics / event",
+    "bdsPerYear": "Comics per year",
+    "eventsPerYear": "Events per year",
+    "topAuthors": "Top 10 Authors",
+    "topPublishers": "Top 10 Publishers"
   }
 }

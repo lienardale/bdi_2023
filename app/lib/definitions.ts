@@ -15,6 +15,11 @@ export type AuthorsTable = {
   bds: { bd: { id: string; title: string } }[];
 }
 
+export type PublisherOption = {
+  id: string;
+  name: string;
+};
+
 export type BdsTable = {
   id: string;
   eventId: string;
@@ -22,6 +27,8 @@ export type BdsTable = {
   authors: { author: { id: string; name: string } }[];
   title: string;
   publisher: string | null;
+  publisherId: string | null;
+  publisherRef: { id: string; name: string } | null;
   publishing_year: number | null;
   ean: string | null;
   summary: string | null;
@@ -43,6 +50,7 @@ export type EventsTable = {
     id: string;
     title: string;
     publisher?: string | null;
+    publisherRef?: { id: string; name: string } | null;
     publishing_year?: number | null;
     authors: { author: { id: string; name: string } }[];
   }[];

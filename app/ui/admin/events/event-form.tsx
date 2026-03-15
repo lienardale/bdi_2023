@@ -6,8 +6,8 @@ import { useActionState, useState, useEffect } from 'react';
 import { createEvent, updateEvent, EventState } from '@/app/lib/actions';
 import { useTranslations } from 'next-intl';
 import { EyeIcon } from '@heroicons/react/24/outline';
-import Toast from '@/app/ui/toast';
-import { useToast } from '@/app/ui/use-toast';
+import { toast } from 'sonner';
+import PlaceAutocomplete from '@/app/ui/admin/place-autocomplete';
 
 export default function EventForm({
   event,
@@ -23,21 +23,19 @@ export default function EventForm({
   const tCommon = useTranslations('common');
   const tAdmin = useTranslations('admin');
   const [isDirty, setIsDirty] = useState(false);
-  const { toast, showToast, dismissToast } = useToast();
 
   useEffect(() => {
     if (state.success) {
-      showToast(state.message || 'OK', 'success');
+      toast.success(state.message || 'OK');
       setIsDirty(false);
     } else if (state.message && !state.success) {
-      showToast(state.message, 'error');
+      toast.error(state.message);
     }
   }, [state]);
 
   return (
     <form action={dispatch} onChange={() => setIsDirty(true)}>
-      {toast && <Toast toast={toast} onDismiss={dismissToast} />}
-      <div className="rounded-md bg-gray-50 p-4 md:p-6">
+      <div className="rounded-md bg-card p-4 md:p-6 border border-border">
         <div className="mb-4">
           <label htmlFor="name" className="mb-2 block text-sm font-medium">
             {t('name')}
@@ -47,11 +45,11 @@ export default function EventForm({
             name="name"
             type="text"
             defaultValue={event?.name}
-            className="block w-full rounded-md border border-gray-200 py-2 px-3 text-sm"
+            className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm"
             aria-describedby="name-error"
           />
           {state.errors?.name && (
-            <div id="name-error" className="mt-2 text-sm text-red-500">
+            <div id="name-error" className="mt-2 text-sm text-destructive">
               {state.errors.name.map((e) => <p key={e}>{e}</p>)}
             </div>
           )}
@@ -66,11 +64,11 @@ export default function EventForm({
             name="date"
             type="date"
             defaultValue={event?.date ? new Date(event.date).toISOString().split('T')[0] : ''}
-            className="block w-full rounded-md border border-gray-200 py-2 px-3 text-sm"
+            className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm"
             aria-describedby="date-error"
           />
           {state.errors?.date && (
-            <div id="date-error" className="mt-2 text-sm text-red-500">
+            <div id="date-error" className="mt-2 text-sm text-destructive">
               {state.errors.date.map((e) => <p key={e}>{e}</p>)}
             </div>
           )}
@@ -85,21 +83,15 @@ export default function EventForm({
               id="hour"
               name="hour"
               type="time"
-              defaultValue={event?.hour || ''}
-              className="block w-full rounded-md border border-gray-200 py-2 px-3 text-sm"
+              defaultValue={event?.hour ?? '20:30'}
+              className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm"
             />
           </div>
           <div>
             <label htmlFor="place" className="mb-2 block text-sm font-medium">
               {t('place')}
             </label>
-            <input
-              id="place"
-              name="place"
-              type="text"
-              defaultValue={event?.place || ''}
-              className="block w-full rounded-md border border-gray-200 py-2 px-3 text-sm"
-            />
+            <PlaceAutocomplete defaultValue={event?.place ?? 'Lou Pascalou, 14 Rue des Panoyaux, Paris'} />
           </div>
         </div>
 
@@ -112,12 +104,12 @@ export default function EventForm({
             name="fb_event"
             type="text"
             defaultValue={event?.fb_event || ''}
-            className="block w-full rounded-md border border-gray-200 py-2 px-3 text-sm"
+            className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm"
           />
         </div>
 
         {state.message && (
-          <div className="mt-2 text-sm text-red-500">
+          <div className="mt-2 text-sm text-destructive">
             <p>{state.message}</p>
           </div>
         )}
@@ -125,13 +117,13 @@ export default function EventForm({
       <div className="mt-6 flex justify-end gap-4">
         <Link
           href="/admin/events"
-          className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
+          className="flex h-10 items-center rounded-lg bg-muted px-4 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted/80"
         >
           {tCommon('cancel')}
         </Link>
         {event && (
           <Link href={`/events/${event.id}`}
-            className="flex h-10 items-center gap-2 rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 hover:bg-gray-200">
+            className="flex h-10 items-center gap-2 rounded-lg bg-muted px-4 text-sm font-medium text-muted-foreground hover:bg-muted/80">
             <EyeIcon className="w-4" />
             {tAdmin('viewOnSite')}
           </Link>

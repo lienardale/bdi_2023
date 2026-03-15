@@ -4,7 +4,7 @@ type YearData = { year: number; count: number };
 
 export default function StatsChart({ data, title }: { data: YearData[]; title: string }) {
   if (data.length === 0) {
-    return <p className="mt-4 text-gray-400">{title}</p>;
+    return <p className="mt-4 text-muted-foreground">{title}</p>;
   }
 
   const maxCount = Math.max(...data.map(d => d.count));
@@ -15,19 +15,19 @@ export default function StatsChart({ data, title }: { data: YearData[]; title: s
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         {title}
       </h2>
-      <div className="rounded-xl bg-gray-50 p-4">
-        <div className="flex items-end gap-1 rounded-md bg-white p-4" style={{ height: `${chartHeight + 40}px` }}>
+      <div className="rounded-xl bg-card p-4 border border-border">
+        <div className="flex items-end gap-1 rounded-md bg-background p-4" style={{ height: `${chartHeight + 40}px` }}>
           {data.map((d) => (
             <div key={d.year} className="flex flex-1 flex-col items-center gap-1">
-              <span className="text-xs text-gray-500">{d.count}</span>
+              <span className="text-xs text-muted-foreground">{d.count}</span>
               <div
-                className="w-full rounded-t-sm bg-blue-400"
+                className="w-full rounded-t-sm bg-primary"
                 style={{
                   height: `${maxCount > 0 ? (d.count / maxCount) * chartHeight : 0}px`,
                   minHeight: d.count > 0 ? '4px' : '0',
                 }}
               />
-              <span className="text-xs text-gray-400 -rotate-45 origin-top-left whitespace-nowrap">
+              <span className="text-xs text-muted-foreground/60 -rotate-45 origin-top-left whitespace-nowrap">
                 {d.year}
               </span>
             </div>

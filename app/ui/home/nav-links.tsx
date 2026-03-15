@@ -8,7 +8,7 @@ import {
   EnvelopeIcon,
 } from '@heroicons/react/24/outline';
 import { Link, usePathname } from '@/i18n/routing';
-import clsx from 'clsx';
+import { cn } from '@/app/lib/utils';
 import { useTranslations } from 'next-intl';
 
 export default function NavLinks() {
@@ -31,11 +31,9 @@ export default function NavLinks() {
           <Link
             key={link.href}
             href={link.href}
-            className={clsx(
-              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-brand-yellow/30 hover:text-brand-blue md:flex-none md:justify-start md:p-2 md:px-3',
-              {
-                'bg-brand-yellow/30 text-brand-blue font-semibold': pathname === link.href,
-              },
+            className={cn(
+              'flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium text-sidebar-foreground hover:bg-white hover:text-primary md:flex-none md:justify-start md:p-2 md:px-3',
+              pathname === link.href && 'bg-white text-primary font-semibold',
             )}
           >
             <LinkIcon className="w-6" />

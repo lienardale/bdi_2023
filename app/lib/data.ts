@@ -1,7 +1,8 @@
 import {
   EventsTable,
   BdsTable,
-  AuthorsTable
+  AuthorsTable,
+  PublisherOption,
 } from './definitions';
 import { connection } from 'next/server';
 import prisma from './prisma';
@@ -60,15 +61,12 @@ export async function fetchEventOptions(): Promise<{ id: string; name: string }[
   });
 }
 
-export async function fetchPublishers(): Promise<string[]> {
+export async function fetchPublishers(): Promise<PublisherOption[]> {
   await connection();
-  const bds = await prisma.bd.findMany({
-    select: { publisher: true },
-    where: { publisher: { not: null } },
-    distinct: ['publisher'],
-    orderBy: { publisher: 'asc' },
+  return prisma.publisher.findMany({
+    select: { id: true, name: true },
+    orderBy: { name: 'asc' },
   });
-  return bds.map(b => b.publisher!);
 }
 
 export async function fetchBdYears(): Promise<number[]> {
@@ -82,9 +80,18 @@ export async function fetchBdYears(): Promise<number[]> {
   return bds.map(b => b.publishing_year!);
 }
 
+export async function fetchAuthorOptions(): Promise<{ id: string; name: string }[]> {
+  await connection();
+  const authors = await prisma.author.findMany({
+    select: { id: true, name: true },
+    orderBy: { name: 'asc' },
+  });
+  return authors;
+}
+
 // --- Filtered queries with cross-entity search ---
 
-export async function fetchFilteredEvents(query: string, year?: number) {
+export async function fetchFilteredEvents(query: string, year?: number, sort?: string, order?: string) {
   await connection();
   try {
     const where: any = {};
@@ -104,8 +111,11 @@ export async function fetchFilteredEvents(query: string, year?: number) {
       };
     }
 
+    const dir = order === 'asc' || order === 'desc' ? order : 'desc';
+    const orderBy = sort === 'date' ? { date: dir as 'asc' | 'desc' } : { date: dir as 'asc' | 'desc' };
+
     const events = await prisma.event.findMany({
-      orderBy: { date: 'desc' },
+      orderBy,
       include: {
         bds: {
           select: {
@@ -141,6 +151,7 @@ export async function fetchEventById(id: string) {
             id: true,
             title: true,
             publisher: true,
+            publisherRef: { select: { id: true, name: true } },
             publishing_year: true,
             authors: {
               select: {
@@ -162,7 +173,9 @@ export async function fetchEventById(id: string) {
 
 export async function fetchFilteredBds(
   query: string,
-  filters?: { eventId?: string; publisher?: string; year?: number }
+  filters?: { eventId?: string; publisherId?: string; year?: number; authorId?: string },
+  sort?: string,
+  order?: string,
 ) {
   await connection();
   try {
@@ -173,7 +186,7 @@ export async function fetchFilteredBds(
       andConditions.push({
         OR: [
           { title: { contains: query, mode: "insensitive" } },
-          { publisher: { contains: query, mode: "insensitive" } },
+          { publisherRef: { name: { contains: query, mode: "insensitive" } } },
           { authors: { some: { author: { name: { contains: query, mode: "insensitive" } } } } },
           { event: { name: { contains: query, mode: "insensitive" } } },
         ],
@@ -183,21 +196,35 @@ export async function fetchFilteredBds(
     if (filters?.eventId) {
       andConditions.push({ eventId: filters.eventId });
     }
-    if (filters?.publisher) {
-      andConditions.push({ publisher: filters.publisher });
+    if (filters?.publisherId) {
+      andConditions.push({ publisherId: filters.publisherId });
     }
     if (filters?.year) {
       andConditions.push({ publishing_year: filters.year });
+    }
+    if (filters?.authorId) {
+      andConditions.push({ authors: { some: { authorId: filters.authorId } } });
     }
 
     if (andConditions.length > 0) {
       where.AND = andConditions;
     }
 
+    const dir = (order === 'asc' || order === 'desc' ? order : 'asc') as 'asc' | 'desc';
+    const orderByMap: Record<string, any> = {
+      title: { title: dir },
+      price: { price: dir },
+      pages: { page_count: dir },
+      bdi: { event: { date: dir } },
+    };
+    // 'author' sort is handled in JS after fetch (M2M prevents Prisma-level sort)
+    const orderBy = sort && sort !== 'author' && orderByMap[sort] ? orderByMap[sort] : { title: 'asc' };
+
     const bds = await prisma.bd.findMany({
-      orderBy: { title: 'asc' },
+      orderBy,
       include: {
         event: { select: { id: true, name: true } },
+        publisherRef: { select: { id: true, name: true } },
         authors: {
           select: {
             author: {
@@ -222,6 +249,7 @@ export async function fetchBdById(id: string) {
       where: { id },
       include: {
         event: { select: { id: true, name: true } },
+        publisherRef: { select: { id: true, name: true } },
         authors: {
           select: {
             author: {
@@ -285,7 +313,7 @@ export async function fetchFilteredAuthors(query: string, eventId?: string) {
 
 const ADMIN_PAGE_SIZE = 20;
 
-export async function fetchPaginatedEvents(page: number = 1, query?: string, year?: number) {
+export async function fetchPaginatedEvents(page: number = 1, query?: string, year?: number, sort?: string, order?: string) {
   await connection();
   const where: any = {};
   const andConditions: any[] = [];
@@ -305,9 +333,12 @@ export async function fetchPaginatedEvents(page: number = 1, query?: string, yea
   }
   if (andConditions.length > 0) where.AND = andConditions;
 
+  const dir = order === 'asc' || order === 'desc' ? order : 'desc';
+  const orderBy = sort === 'date' ? { date: dir as 'asc' | 'desc' } : { date: dir as 'asc' | 'desc' };
+
   const [events, total] = await Promise.all([
     prisma.event.findMany({
-      orderBy: { date: 'desc' },
+      orderBy,
       include: {
         bds: { select: { id: true, title: true, authors: { select: { author: { select: { id: true, name: true } } } } } },
       },
@@ -326,7 +357,9 @@ export async function fetchPaginatedEvents(page: number = 1, query?: string, yea
 export async function fetchPaginatedBds(
   page: number = 1,
   query?: string,
-  filters?: { eventId?: string; publisher?: string; year?: number }
+  filters?: { eventId?: string; publisherId?: string; year?: number },
+  sort?: string,
+  order?: string,
 ) {
   await connection();
   const where: any = {};
@@ -336,22 +369,32 @@ export async function fetchPaginatedBds(
     andConditions.push({
       OR: [
         { title: { contains: query, mode: 'insensitive' } },
-        { publisher: { contains: query, mode: 'insensitive' } },
+        { publisherRef: { name: { contains: query, mode: 'insensitive' } } },
         { authors: { some: { author: { name: { contains: query, mode: 'insensitive' } } } } },
         { event: { name: { contains: query, mode: 'insensitive' } } },
       ],
     });
   }
   if (filters?.eventId) andConditions.push({ eventId: filters.eventId });
-  if (filters?.publisher) andConditions.push({ publisher: filters.publisher });
+  if (filters?.publisherId) andConditions.push({ publisherId: filters.publisherId });
   if (filters?.year) andConditions.push({ publishing_year: filters.year });
   if (andConditions.length > 0) where.AND = andConditions;
 
+  const dir = (order === 'asc' || order === 'desc' ? order : 'asc') as 'asc' | 'desc';
+  const orderByMap: Record<string, any> = {
+    title: { title: dir },
+    price: { price: dir },
+    pages: { page_count: dir },
+    bdi: { event: { date: dir } },
+  };
+  const orderBy = sort && orderByMap[sort] ? orderByMap[sort] : { title: 'asc' };
+
   const [bds, total] = await Promise.all([
     prisma.bd.findMany({
-      orderBy: { title: 'asc' },
+      orderBy,
       include: {
         event: { select: { id: true, name: true } },
+        publisherRef: { select: { id: true, name: true } },
         authors: { select: { author: { select: { id: true, name: true } } } },
       },
       skip: (page - 1) * ADMIN_PAGE_SIZE,
@@ -415,4 +458,169 @@ export async function fetchAuthorById(id: string) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch author.');
   }
+}
+
+export async function fetchPublisherById(id: string) {
+  await connection();
+  const publisher = await prisma.publisher.findFirst({
+    where: { id },
+    include: {
+      parent: { select: { id: true, name: true } },
+      imprints: { select: { id: true, name: true } },
+      _count: { select: { bds: true } },
+      bds: {
+        select: {
+          id: true, title: true,
+          authors: { select: { author: { select: { id: true, name: true } } } },
+          event: { select: { id: true, name: true } },
+        },
+        orderBy: { title: 'asc' },
+      },
+    },
+  });
+  return publisher;
+}
+
+export async function fetchPaginatedPublishers(page: number = 1, query?: string) {
+  await connection();
+  const where: any = {};
+
+  if (query) {
+    where.name = { contains: query, mode: 'insensitive' };
+  }
+
+  const [publishers, total] = await Promise.all([
+    prisma.publisher.findMany({
+      orderBy: { name: 'asc' },
+      include: {
+        parent: { select: { id: true, name: true } },
+        _count: { select: { bds: true } },
+      },
+      skip: (page - 1) * ADMIN_PAGE_SIZE,
+      take: ADMIN_PAGE_SIZE,
+      where,
+    }),
+    prisma.publisher.count({ where }),
+  ]);
+  return {
+    data: publishers,
+    totalPages: Math.ceil(total / ADMIN_PAGE_SIZE),
+  };
+}
+
+// --- Stats queries ---
+
+export async function fetchBdsPerYear(): Promise<{ year: number; count: number }[]> {
+  await connection();
+  const result = await prisma.bd.groupBy({
+    by: ['publishing_year'],
+    _count: { id: true },
+    where: { publishing_year: { not: null } },
+    orderBy: { publishing_year: 'asc' },
+  });
+  return result.map(r => ({ year: r.publishing_year!, count: r._count.id }));
+}
+
+export async function fetchEventsPerYear(): Promise<{ year: number; count: number }[]> {
+  await connection();
+  const events = await prisma.event.findMany({
+    select: { date: true },
+  });
+  const counts: Record<number, number> = {};
+  for (const e of events) {
+    const year = e.date.getFullYear();
+    counts[year] = (counts[year] || 0) + 1;
+  }
+  return Object.entries(counts)
+    .map(([year, count]) => ({ year: Number(year), count }))
+    .sort((a, b) => a.year - b.year);
+}
+
+export type TopAuthor = {
+  id: string;
+  name: string;
+  _count: { bds: number };
+};
+
+export async function fetchTopAuthors(limit: number = 10): Promise<TopAuthor[]> {
+  await connection();
+  return prisma.author.findMany({
+    select: {
+      id: true,
+      name: true,
+      _count: { select: { bds: true } },
+    },
+    orderBy: { bds: { _count: 'desc' } },
+    take: limit,
+  });
+}
+
+export type TopPublisher = {
+  id: string;
+  name: string;
+  _count: { bds: number };
+};
+
+export async function fetchTopPublishers(limit: number = 10): Promise<TopPublisher[]> {
+  await connection();
+  return prisma.publisher.findMany({
+    select: {
+      id: true,
+      name: true,
+      _count: { select: { bds: true } },
+    },
+    orderBy: { bds: { _count: 'desc' } },
+    take: limit,
+  });
+}
+
+export type AggregateStats = {
+  totalBds: number;
+  totalAuthors: number;
+  totalEvents: number;
+  totalPublishers: number;
+  medianPages: number | null;
+  medianPrice: number | null;
+  avgBdsPerEvent: number | null;
+};
+
+export async function fetchAggregateStats(): Promise<AggregateStats> {
+  await connection();
+  const [totalBds, totalAuthors, totalEvents, totalPublishers] = await Promise.all([
+    prisma.bd.count(),
+    prisma.author.count(),
+    prisma.event.count(),
+    prisma.publisher.count(),
+  ]);
+
+  // Median pages
+  const pagesData = await prisma.bd.findMany({
+    select: { page_count: true },
+    where: { page_count: { not: null } },
+    orderBy: { page_count: 'asc' },
+  });
+  const pages = pagesData.map(b => b.page_count!);
+  const medianPages = pages.length > 0 ? pages[Math.floor(pages.length / 2)] : null;
+
+  // Median price
+  const pricesData = await prisma.bd.findMany({
+    select: { price: true },
+    where: { price: { not: null } },
+    orderBy: { price: 'asc' },
+  });
+  const prices = pricesData.map(b => Number(b.price));
+  const medianPrice = prices.length > 0 ? prices[Math.floor(prices.length / 2)] : null;
+
+  // Avg BDs per event
+  const avgBdsPerEvent = totalEvents > 0 ? Math.round((totalBds / totalEvents) * 10) / 10 : null;
+
+  return {
+    totalBds,
+    totalAuthors,
+    totalEvents,
+    totalPublishers,
+    medianPages,
+    medianPrice,
+    avgBdsPerEvent,
+  };
 }

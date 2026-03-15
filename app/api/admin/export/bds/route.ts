@@ -1,18 +1,17 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/app/lib/prisma';
 import { generateCsv } from '@/app/lib/csv';
-import { auth } from '@/auth';
+import { requireAdminApi } from '@/app/lib/auth-utils';
 
 export async function GET() {
-  const session = await auth();
-  if (!session?.user || (session.user as any).role !== 'admin') {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  const forbidden = await requireAdminApi();
+  if (forbidden) return forbidden;
 
   const bds = await prisma.bd.findMany({
     orderBy: { title: 'asc' },
     include: {
       event: { select: { name: true } },
+      publisherRef: { select: { name: true } },
       authors: { select: { author: { select: { name: true } } } },
     },
   });
@@ -20,7 +19,7 @@ export async function GET() {
   const data = bds.map(bd => ({
     id: bd.id,
     title: bd.title,
-    publisher: bd.publisher || '',
+    publisher: bd.publisherRef?.name || bd.publisher || '',
     publishing_year: bd.publishing_year || '',
     event: bd.event.name,
     authors: bd.authors.map(a => a.author.name).join('; '),

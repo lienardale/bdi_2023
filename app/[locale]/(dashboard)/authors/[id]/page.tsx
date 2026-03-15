@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
     <main>
       <div className="flex flex-col items-center md:flex-row md:items-start gap-6">
         {author.photo_url && (
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <img
               src={author.photo_url}
               alt={author.name}
@@ -30,7 +30,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
             <a
               href={author.wikipedia_url}
               target="_blank"
-              className="text-sm text-blue-600 hover:underline"
+              className="text-sm text-primary hover:underline"
             >
               Wikipedia
             </a>
@@ -41,7 +41,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       {author.bio && (
         <div className="mt-6">
           <h2 className="font-semibold mb-2">Biographie</h2>
-          <p className="text-sm text-gray-700 leading-relaxed">{author.bio}</p>
+          <p className="text-sm text-foreground/80 leading-relaxed">{author.bio}</p>
         </div>
       )}
 
@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
           <div key={bd.id} className="flex items-center gap-3 mb-2">
             <Link
               href={`/bds/${bd.id}`}
-              className="text-blue-600 hover:underline"
+              className="text-primary hover:underline"
             >{bd.title}</Link>
           </div>
         )}
@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       <div className="mt-6">
         <Link
           href="/authors"
-          className="rounded-md bg-gray-500 px-4 py-2 text-sm text-white transition-colors hover:bg-gray-400"
+          className="rounded-md bg-muted px-4 py-2 text-sm text-foreground transition-colors hover:bg-muted/80"
         >
           Retour à la liste
         </Link>

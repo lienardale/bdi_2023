@@ -886,117 +886,88 @@ Use the BDI logo (`public/logo_bdi.jpg` — black & white comic speech bubbles w
 
 ## 34. Deep UI / Design Rework
 
-**Status:** todo
+**Status:** done
 
-### Context
+### What was done
 
-The previous branding pass (#30) was superficial — only swapped a logo and cover image. The logo is badly integrated (square image dropped into a larger square container, no shape matching). The overall design still looks like a Next.js tutorial app with gray boxes. Need a proper design system with a cohesive color palette, component library, and intentional layout.
+#### Tailwind v3 → v4 Migration
+- Ran `npx @tailwindcss/upgrade` codemod — migrated config to CSS `@theme` directives, updated PostCSS, renamed utility classes
+- Deleted `tailwind.config.ts`, updated `postcss.config.mjs`
+- Added `button { cursor: pointer; }` base style (v4 changed default)
 
-**Brand assets:**
-- `public/logo_bdi.jpg` — Black & white comic speech bubbles with hand-drawn "La Bande des Idées" text, stars, spirals, explosion lines
-- `public/RDI_cover.jpg` — Colorful, chaotic comic-style illustration with bold primary colors
+#### shadcn/ui Foundation
+- Installed shadcn/ui v2 dependencies: `tailwind-merge`, `class-variance-authority`, `tw-animate-css`, `lucide-react`, `sonner`, `shadcn`
+- Created `components.json` with aliases (`@/app/ui/shadcn/` for shadcn components)
+- Added `cn()` utility in `app/lib/utils.ts`
+- Installed shadcn components: Button, Input, Label, Select, Textarea, Table, Card, Skeleton, AlertDialog, Badge, Sonner, Pagination, Breadcrumb, Separator
 
-**Reference globals.css (shadcn/ui style):** Uses CSS custom properties with `oklch` colors, `--primary`, `--secondary`, `--accent`, `--muted`, `--destructive`, `--card`, `--sidebar` semantic tokens, `--radius` for border radius, dark mode support. This is the level of design system sophistication we should target.
+#### Design Tokens (CSS custom properties in `global.css`)
+- `--primary`: `#2563EB` (blue) — buttons, links, active nav, focus rings
+- `--secondary`: `#DC2626` (red) — CTA, destructive, badges
+- `--accent`: `#F4D35E` (yellow) — highlights, hover, tags
+- `--background`: `#FAFAF8` — page background
+- `--foreground`: `#1A1A2E` — body text
+- `--sidebar`: `#2563EB` — sidebar background (blue)
+- All tokens use hex values for WCAG AA compliance (≥4.5:1 contrast)
 
-### Color Palette (extracted from RDI_cover.jpg)
+#### Cycling Card Colors on List Pages
+- Added `.card-cycle` CSS using `nth-child(4n+N)` selectors cycling through 4 background colors: blue (`#2563EB`), orange (`#E86833`), teal (`#2B9A8F`), yellow (`#F4D35E`)
+- Uses CSS custom property overrides (`--card`, `--primary`, `--primary-foreground`, `--muted-foreground`, `--border`) so Tailwind utilities adapt automatically
+- Applied to both mobile cards and desktop table rows on all 3 list pages
 
-Colors visible in the cover: vibrant sky blue (character shirts, "BAF" lettering), bold red (stars, accents, "BANG" lettering), warm yellow/gold (character hair, stars, shirt), black (outlines, background frame, "BANG" text), white (speech bubble, clouds, background), teal/green (character clothes), warm brown/terracotta (ground, "BAF" background), skin tones (peach/beige).
+#### Desktop Table Rework
+- Row spacing with `border-collapse: separate; border-spacing: 0 0.5rem` via `table:has(.card-cycle)` CSS
+- Rounded row edges (first-child left corners, last-child right corners)
+- Percentage-based column widths via `<colgroup>/<col>` for all tables — no lateral scroll
+- **Events table** (15/30/25/18/12%): split event name ("La Bande des Idées" + "#NNN"), French dates, all 5 columns visible
+- **BDs table** (26/20/14/8/8/12/8%): 7 columns — Title, Authors, Publisher, Price, Pages, Libraires ("Acheter" button), BDI (#number link)
+- **Authors table** (35/65%): Name + BDs with internal scroll on long lists
+- All column headers translated (FR/EN) via `getTranslations()`
+- Cells use `overflow-x-auto` for internal scroll when content exceeds column width
 
-**Proposed semantic color mapping:**
+#### Sidebar & Navigation
+- Blue sidebar background (`#2563EB`)
+- Hover/active: white bg + blue text inversion (`hover:bg-white hover:text-primary` / `bg-white text-primary`)
+- Applied consistently across public nav-links, admin sidebar, language switcher, admin/signout buttons
+- Logo blends naturally into blue sidebar
 
-| Token | Color | Source | Usage |
-|-------|-------|--------|-------|
-| `--primary` | Vibrant blue `#2B7DE9` | Blue shirts/lettering | Primary buttons, links, active nav |
-| `--primary-foreground` | White `#FFFFFF` | — | Text on primary |
-| `--secondary` | Bold red `#E63946` | Red stars/accents | CTA buttons, badges, destructive |
-| `--secondary-foreground` | White `#FFFFFF` | — | Text on secondary |
-| `--accent` | Warm yellow `#F4D35E` | Stars/hair | Highlights, hover states, tags |
-| `--accent-foreground` | Dark `#1A1A2E` | — | Text on accent |
-| `--background` | Warm white `#FAFAF8` | Cover white areas | Page background |
-| `--foreground` | Near-black `#1A1A2E` | Black outlines | Body text |
-| `--card` | White `#FFFFFF` | Speech bubbles | Card backgrounds |
-| `--card-foreground` | Near-black `#1A1A2E` | — | Card text |
-| `--muted` | Light gray `#F0EFEB` | — | Disabled states, secondary bg |
-| `--muted-foreground` | Medium gray `#6B7280` | — | Secondary text |
-| `--sidebar` | Near-black `#1A1A2E` | Black frame border | Sidebar bg (dark) |
-| `--sidebar-foreground` | White `#FFFFFF` | — | Sidebar text |
-| `--sidebar-accent` | Blue `#2B7DE9` | — | Active nav item bg |
-| `--destructive` | Red `#DC2626` | — | Delete actions |
-| `--border` | Light warm gray `#E5E4E0` | — | Borders |
-| `--ring` | Blue `#2B7DE9` | — | Focus rings |
+#### Component Replacement
+- Custom Button → shadcn Button (re-export)
+- Custom Toast → Sonner (`toast.success()` / `toast.error()`)
+- Custom Pagination → shadcn Pagination
+- Custom AlertDialog → shadcn AlertDialog (confirm-delete)
+- Custom Breadcrumbs → shadcn Breadcrumb
+- Custom Skeletons → shadcn Skeleton
+- Admin forms: shadcn Input, Label, Textarea, Select
+- Removed `@tailwindcss/forms` plugin
 
-### Phase 1: Foundation (shadcn/ui + design tokens)
+#### BDs Page Filters
+- Replaced Year filter with Author filter (searchable select)
+- Added `fetchAuthorOptions()` query and `authorId` filter support in `fetchFilteredBds()`
+- Added `filters.author` i18n key ("Auteur" / "Author")
 
-- [ ] Install shadcn/ui (`npx shadcn@latest init`) — choose "New York" style, configure CSS variables
-- [ ] Migrate `tailwind.config.ts` to use CSS custom properties (shadcn convention)
-- [ ] Replace `app/ui/global.css` with shadcn-style globals.css using `oklch` or hex CSS vars
-- [ ] Add dark mode support (`dark` class variant)
-- [ ] Replace `@tailwindcss/forms` plugin with shadcn form components
-- [ ] Configure `components.json` for shadcn CLI
+#### i18n Keys Added
+- `bds.priceShort`, `bds.pages`, `bds.buy`, `filters.author` in both `fr.json` and `en.json`
 
-### Phase 2: Logo & Branding Integration
+### Files changed (key files)
 
-- [ ] Fix logo integration in sidenav: remove logo from dark square, use transparent-bg version or clip to speech-bubble shape
-- [ ] Consider making logo SVG or removing white background from JPG
-- [ ] Logo in sidenav should fill the component width naturally, not be a small square in a larger square
-- [ ] Update favicon to proper `.ico` with multiple sizes (16, 32, 48)
-- [ ] Add Open Graph image (`og-image.png`) using cover art
-
-### Phase 3: Component Migration (shadcn/ui components)
-
-- [ ] Replace `app/ui/button.tsx` with shadcn `Button` (variants: default, destructive, outline, ghost)
-- [ ] Replace custom `Toast` with shadcn `Sonner` or `Toast` component
-- [ ] Replace raw `<input>` / `<select>` with shadcn `Input`, `Select`, `Label`
-- [ ] Replace custom pagination with shadcn `Pagination`
-- [ ] Replace confirm-delete dialog with shadcn `AlertDialog`
-- [ ] Replace search input with shadcn `Input` + icon
-- [ ] Add shadcn `Card` for stat cards, detail panels, list items
-- [ ] Add shadcn `Table` for data tables (events, BDs, authors)
-- [ ] Add shadcn `Badge` for tags (publisher, year, event name)
-- [ ] Add shadcn `Skeleton` for loading states
-- [ ] Add shadcn `Separator` for visual dividers
-
-### Phase 4: Layout & Component Positioning Rework
-
-- [ ] **Sidenav:** Redesign as proper shadcn Sidebar with collapsible sections, footer with user avatar
-- [ ] **Home page:** Rework grid — hero banner full-width, stats cards in 2x2 grid with colored left borders (not gray boxes), recent events + top authors side by side with proper card styling
-- [ ] **Stats chart:** Replace hand-rolled bar chart with proper chart component (shadcn charts use Recharts)
-- [ ] **Detail pages:** Use card layout with clear sections, badges for metadata (publisher, year, event)
-- [ ] **List pages:** Proper table with sticky header, sortable columns, row hover states
-- [ ] **Admin forms:** Consistent form layout with labeled sections, proper spacing
-- [ ] **Login page:** Centered card with branding, comic-style decorative elements
-
-### Phase 5: Typography & Polish
-
-- [ ] Keep Bangers for hero/page titles only, use Inter or Geist for body
-- [ ] Comic-book decorative elements: speech bubble shapes for callouts, star accents, bold outlines
-- [ ] Consistent border-radius (use `--radius` token)
-- [ ] Subtle shadows on cards (not flat gray boxes)
-- [ ] Hover/focus states on all interactive elements using brand colors
-- [ ] Smooth transitions on all state changes
-
-### Phase 6: Iteration with User
-
-- [ ] Present 2-3 color palette mockups for user choice
-- [ ] Present sidenav layout options (dark sidebar vs light sidebar vs collapsible)
-- [ ] Present home page layout options (magazine-style vs dashboard-style)
-- [ ] Get user feedback on component style (rounded vs sharp, shadowed vs flat)
-- [ ] Iterate based on feedback before finalizing
-
-### Constraints
-
-- Must remain Next.js 16 + Tailwind CSS 3 compatible
-- shadcn/ui components are copy-paste (no package dependency lock-in)
-- Keep existing functionality — this is purely visual/UX
-- All i18n must continue working
-- WCAG AA contrast ratios on all color combinations
-- Current Tailwind v3 — shadcn/ui v2 may need Tailwind v4 for CSS variables; evaluate upgrade or use v0/v1 pattern
+- `app/ui/global.css` — design tokens, card-cycle CSS, table row spacing
+- `app/ui/events/table.tsx`, `app/ui/bds/table.tsx`, `app/ui/authors/table.tsx` — table rework
+- `app/ui/home/sidenav.tsx`, `app/ui/home/nav-links.tsx` — sidebar styling
+- `app/ui/admin/sidebar.tsx`, `app/[locale]/admin/layout.tsx` — admin sidebar
+- `app/ui/language-switcher.tsx` — language toggle styling
+- `app/[locale]/(dashboard)/bds/page.tsx` — author filter
+- `app/lib/data.ts` — `fetchAuthorOptions()`, `authorId` filter
+- `messages/fr.json`, `messages/en.json` — new i18n keys
+- `components.json`, `app/lib/utils.ts` — shadcn config
+- `app/ui/shadcn/*.tsx` — ~14 shadcn components
+- `package.json`, `postcss.config.mjs` — Tailwind v4 + shadcn deps
 
 ---
 
 ## 35. Home Page Rework
 
-**Status:** todo
+**Status:** done
 
 ### Context
 
@@ -1072,3 +1043,111 @@ The current home page is cluttered with dashboard-style widgets that don't serve
 - `app/lib/data.ts` — simplify `fetchDashboardData` or remove unused parts
 - `next.config.js` — whitelist `img-cache.ulule.com`
 - `messages/fr.json`, `messages/en.json` — add/remove i18n keys
+
+---
+
+## 36. Test Coverage: Reach Near-100%
+
+**Status:** todo
+
+### Goal
+
+Add unit and integration tests to get as close to 100% code coverage as possible. Use `npx vitest run --coverage` to identify uncovered files and branches.
+
+### Current state
+
+- 7 test files, 81 tests passing
+- Covered: Server Actions (`actions.ts`), CSV helpers (`csv.ts`), ICS generation (`ics.ts`), enrichment lookups (`author-lookup.ts`, `ean-lookup.ts`), i18n key parity (`messages.test.ts`), route smoke tests (`routes.test.ts`)
+
+### Todo
+
+- [ ] Run `npx vitest run --coverage` to get a baseline report
+- [ ] `app/lib/data.ts` — test all fetch functions (mock Prisma client)
+- [ ] `app/ui/home/cards.tsx` — test rendering with various data states (upcoming event, no event, missing hour/place)
+- [ ] `app/ui/home/instagram-feed.tsx` — test iframe rendering with shortcodes
+- [ ] `app/ui/admin/` — test form components (author-form, bd-form, event-form)
+- [ ] `app/ui/admin/confirm-delete-button.tsx` — test confirmation dialog flow
+- [ ] `app/ui/admin/pagination.tsx` — test page navigation rendering
+- [ ] `app/api/event/[id]/ics/route.ts` — test ICS API endpoint
+- [ ] `app/api/admin/export/` — test CSV export endpoints
+- [ ] `app/api/admin/import/route.ts` — test CSV import endpoint
+- [ ] `app/api/admin/enrich/route.ts` — test enrichment API endpoint
+- [ ] `app/lib/enrichment/og-image.ts` — test OG image scraping
+- [ ] `app/lib/actions-enrichment.ts` — test enrichment Server Actions
+- [ ] Edge cases: empty database, missing optional fields, invalid inputs, error paths
+- [ ] Branch coverage: test all conditional paths (Zod validation errors, Prisma errors, auth guards)
+
+### Verification
+
+- [ ] `npx vitest run --coverage` shows >= 90% line coverage
+- [ ] `npm run build` passes
+- [ ] No flaky tests (run suite 3 times to confirm)
+
+---
+
+## 37. Publisher / Editor Rework
+
+**Status:** todo
+
+### Problem
+
+Many publishers are duplicated or inconsistent in the `Bd.publisher` free-text field. Some entries are imprints of the same parent publisher (e.g. "Delcourt Comics" and "Delcourt Tonkam" are both imprints of Delcourt). This makes filtering and stats unreliable.
+
+### Todo
+
+- [ ] Create a `Publisher` model in Prisma schema with fields: `id`, `name` (unique), `parent_publisher_id` (self-relation, nullable, for imprints)
+- [ ] Add a `publisherId` FK on `Bd` replacing the free-text `publisher` field
+- [ ] Write a migration script to deduplicate existing publishers: normalize names, merge imprints under parent publishers
+- [ ] Update admin BD form: replace free-text publisher input with a searchable select (or combobox) linked to the Publisher table
+- [ ] Add admin CRUD pages for Publishers (list, create, edit, merge duplicates)
+- [ ] Update filters on BDs list page to use Publisher records instead of raw strings
+- [ ] Update CSV import/export to handle Publisher references
+- [ ] Update enrichment pipeline to match enriched publisher names against existing Publisher records
+- [ ] Keep `publisher` as a legacy read-only field during migration, remove after verification
+
+### Verification
+
+- [ ] No duplicate publishers in the database
+- [ ] Imprints correctly linked to parent publishers
+- [ ] BD filters work with the new Publisher model
+- [ ] CSV import/export handles publishers correctly
+- [ ] All existing tests pass, new tests added for Publisher CRUD
+- [ ] `npm run build` passes
+
+---
+
+## 38. Admin Stats Dashboard
+
+**Status:** todo
+
+### Description
+
+Add a stats/analytics page in the admin back-office displaying key metrics about the collection, both all-time and per-year.
+
+### Todo
+
+- [ ] Create admin stats page at `/admin/stats`
+- [ ] Add nav link in admin sidebar
+- [ ] Key metrics to display:
+  - Total number of comics (BDs)
+  - Total number of authors
+  - Total number of events
+  - Most represented authors (top 10 by number of BDs)
+  - Most represented publishers (top 10 by number of BDs)
+  - BDs per year breakdown (bar chart or table)
+  - Events per year breakdown
+  - Median number of pages per comic
+  - Median price of comics
+  - Average number of BDs per event
+- [ ] Add Prisma queries in `data.ts` for aggregations (counts, groupBy, percentiles)
+- [ ] Display stats since beginning and with a year filter/selector
+- [ ] Reuse `StatsChart` component for visual bar charts where appropriate
+- [ ] Consider using shadcn Card components for metric cards
+
+### Verification
+
+- [ ] Stats page loads and displays all metrics correctly
+- [ ] Year filter works to scope stats to a specific year
+- [ ] Handles edge cases (no data, missing pages/price fields)
+- [ ] `npm run build` passes
+- [ ] Admin-only access enforced

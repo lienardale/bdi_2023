@@ -22,9 +22,9 @@ export default function Toast({
       )}
     >
       {toast.type === 'success' ? (
-        <CheckCircleIcon className="w-5 h-5 flex-shrink-0" />
+        <CheckCircleIcon className="w-5 h-5 shrink-0" />
       ) : (
-        <XCircleIcon className="w-5 h-5 flex-shrink-0" />
+        <XCircleIcon className="w-5 h-5 shrink-0" />
       )}
       <span>{toast.message}</span>
       <button onClick={onDismiss} className="ml-2 hover:opacity-80">

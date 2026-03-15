@@ -2,7 +2,7 @@
 // Usage: node scripts/seedv2.js
 
 const { PrismaClient } = require("@prisma/client");
-const { events, bds, authors, authorEvents } = require("../app/lib/placeholder-bdi-data.js");
+const { events, bds, authors, authorEvents, publishers } = require("../app/lib/placeholder-bdi-data.js");
 
 const prisma = new PrismaClient();
 
@@ -11,6 +11,7 @@ async function main() {
   await prisma.bdAuthor.deleteMany();
   await prisma.authorEvent.deleteMany();
   await prisma.bd.deleteMany();
+  await prisma.publisher.deleteMany();
   await prisma.event.deleteMany();
   await prisma.author.deleteMany();
 
@@ -47,7 +48,24 @@ async function main() {
   }
   console.log(`  Done.`);
 
-  // 3. Seed BDs (with enrichment fields)
+  // 3. Seed Publishers
+  console.log(`Seeding ${publishers.length} publishers...`);
+  // Seed parents first (parentId is null), then imprints
+  const parents = publishers.filter((p) => !p.parentId);
+  const imprints = publishers.filter((p) => p.parentId);
+  for (const pub of parents) {
+    await prisma.publisher.create({
+      data: { id: pub.id, name: pub.name },
+    });
+  }
+  for (const pub of imprints) {
+    await prisma.publisher.create({
+      data: { id: pub.id, name: pub.name, parentId: pub.parentId },
+    });
+  }
+  console.log(`  Done (${parents.length} parents, ${imprints.length} imprints).`);
+
+  // 4. Seed BDs (with enrichment fields)
   console.log(`Seeding ${bds.length} BDs...`);
   for (const bd of bds) {
     await prisma.bd.create({
@@ -56,6 +74,7 @@ async function main() {
         title: bd.title,
         eventId: bd.event_ids,
         publisher: bd.publisher ?? null,
+        publisherId: bd.publisherId ?? null,
         publishing_year: bd.publishing_year ?? null,
         ean: bd.ean ?? null,
         summary: bd.summary ?? null,
@@ -71,7 +90,7 @@ async function main() {
   }
   console.log(`  Done.`);
 
-  // 4. Seed BdAuthor junction table
+  // 5. Seed BdAuthor junction table
   console.log("Seeding BdAuthor links...");
   let bdAuthorCount = 0;
   for (const bd of bds) {
@@ -87,7 +106,7 @@ async function main() {
   }
   console.log(`  ${bdAuthorCount} BdAuthor links created.`);
 
-  // 5. Seed AuthorEvent junction table (from explicit data)
+  // 6. Seed AuthorEvent junction table (from explicit data)
   console.log(`Seeding ${authorEvents.length} AuthorEvent links...`);
   for (const ae of authorEvents) {
     await prisma.authorEvent.create({

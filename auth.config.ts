@@ -1,9 +1,5 @@
 import type { NextAuthConfig } from 'next-auth';
-
-const WHITELISTED_EMAILS = [
-  'alienard.dev@gmail.com',
-  'labandedesidees@gmail.com',
-];
+import { isAdminEmail } from '@/app/lib/admin-emails';
 
 export const authConfig = {
   providers: [],
@@ -13,13 +9,13 @@ export const authConfig = {
   callbacks: {
     async jwt({ token, profile }) {
       if (profile?.email) {
-        token.role = WHITELISTED_EMAILS.includes(profile.email) ? 'admin' : 'user';
+        token.role = isAdminEmail(profile.email) ? 'admin' : 'user';
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
-        (session.user as any).role = token.role;
+        session.user.role = token.role;
       }
       return session;
     },
@@ -43,9 +39,8 @@ export const authConfig = {
 
       if (isOnAdmin) {
         if (!isLoggedIn) return false;
-        const role = (auth?.user as any)?.role;
-        if (role !== 'admin') {
-          return Response.redirect(new URL('/', nextUrl));
+        if (auth?.user?.role !== 'admin') {
+          return Response.redirect(new URL('/forbidden', nextUrl));
         }
         return true;
       }

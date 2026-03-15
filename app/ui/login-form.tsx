@@ -5,19 +5,19 @@ import { signIn } from 'next-auth/react';
 
 export default function LoginForm() {
   return (
-    <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
+    <div className="flex-1 rounded-lg bg-card px-6 pb-4 pt-8 border border-border shadow-sm">
       <div className="flex justify-center mb-4">
         <img src="/logo_bdi.jpg" alt="BDI" className="h-16 object-contain" />
       </div>
-      <h1 className={`${lusitana.className} mb-3 text-2xl text-center text-brand-blue`}>
+      <h1 className={`${lusitana.className} mb-3 text-2xl text-center text-foreground`}>
         Bande des Idées
       </h1>
-      <p className="mb-6 text-sm text-gray-600">
+      <p className="mb-6 text-sm text-muted-foreground">
         Connectez-vous pour accéder au back-office.
       </p>
       <button
         onClick={() => signIn('google', { callbackUrl: '/' })}
-        className="flex w-full items-center justify-center gap-3 rounded-lg bg-white border border-gray-300 px-4 py-3 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 transition-colors"
+        className="flex w-full items-center justify-center gap-3 rounded-lg bg-card border border-border px-4 py-3 text-sm font-medium text-foreground shadow-xs hover:bg-muted transition-colors"
       >
         <svg className="h-5 w-5" viewBox="0 0 24 24">
           <path

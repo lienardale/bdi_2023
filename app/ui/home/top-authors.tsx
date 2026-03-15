@@ -13,20 +13,20 @@ export default function TopAuthors({ authors, title }: { authors: TopAuthor[]; t
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         {title}
       </h2>
-      <div className="rounded-xl bg-gray-50 p-4">
-        <div className="bg-white px-6">
+      <div className="rounded-xl bg-card p-4 border border-border">
+        <div className="bg-background px-6 rounded-lg">
           {authors.map((author, i) => (
             <div
               key={author.id}
-              className={`flex flex-row items-center justify-between py-4 ${i !== 0 ? 'border-t' : ''}`}
+              className={`flex flex-row items-center justify-between py-4 ${i !== 0 ? 'border-t border-border' : ''}`}
             >
               <Link
                 href={`/authors/${author.id}`}
-                className="truncate text-sm font-semibold md:text-base hover:text-blue-600"
+                className="truncate text-sm font-semibold md:text-base hover:text-primary"
               >
                 {author.name}
               </Link>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-muted-foreground">
                 {author._count.bds} BD{author._count.bds > 1 ? 's' : ''}
               </p>
             </div>
