@@ -1,8755 +1,1513 @@
+// Auto-generated from database on 2026-03-15
+// Do not edit manually — regenerate via: npx tsx scripts/dump-seed-data.ts
 
 const events = [
-    {
-        "id": "d3eafa10-a745-5597-94cb-39521449a60e",
-        "name": "La Bande des idées #1",
-        "date_time": "2014-11-05T19:30:00.000Z",
-        "bd_ids": [
-            "7d723523-0d8a-5c4f-a040-8ff0cca2bc83",
-            "403fb2b2-7948-5aa1-9cbe-2e9e468a9c05",
-            "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98",
-            "79894bab-2308-5561-b5ba-b688a26f6672"
-        ],
-        "fb_event": "https://www.facebook.com/events/1548027528761948/"
-    },
-    {
-        "id": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
-        "name": "La Bande des idées #2",
-        "date_time": "2014-12-03T19:30:00.000Z",
-        "bd_ids": [
-            "995dd270-3ead-51df-a96b-919cd922cbea",
-            "76b4d2f1-cdb5-5aae-9479-3daf719d8adb",
-            "06175f53-82fc-5df0-a3d6-33be607df9c8",
-            "8f57610f-1014-5596-8015-17b94899cd58"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10730999_892432464133133_8046229807596859137_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=2959cf0e7720dbab88e5173961891080&oe=5D2405FB"
-    },
-    {
-        "id": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
-        "name": "La Bande des idées #3",
-        "date_time": "2015-02-11T19:30:00.000Z",
-        "bd_ids": [
-            "dc370931-0191-5023-a121-09e365903d81",
-            "4c2f3bd9-177e-561b-a197-3579528230ae",
-            "75fc73a4-84d6-50f0-99d9-b7445c392bb8",
-            "979cc21c-4c87-5805-b5f5-6f5f3f1606d2"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/1979505_940848045958241_3510145053302013663_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=8269b537190194727d2638704f3d0445&oe=5D19A617"
-    },
-    {
-        "id": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
-        "name": "La Bande des idées #4",
-        "date_time": "2015-03-10T19:30:00.000Z",
-        "bd_ids": [
-            "beee135e-1fed-5a0c-9083-dde2ebaec54d",
-            "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d",
-            "db8922f2-954d-5063-9ca0-699e952b7520",
-            "3da21605-8214-54c2-b22c-e217a9c9ce93"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11034300_957113717665007_9217857601948649037_n.jpg?_nc_cat=103&_nc_ht=scontent.fcdg1-1.fna&oh=81f0d6de3f3cdbfddf2b249453cd5ce6&oe=5D1D555D"
-    },
-    {
-        "id": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
-        "name": "La Bande des idées #5",
-        "date_time": "2015-04-07T19:30:00.000Z",
-        "bd_ids": [
-            "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9",
-            "43bbd0e5-e692-5e43-950a-eb10bd288972",
-            "f5bfa282-0bba-5c25-819a-7189c4fa979f",
-            "38c7eb79-a784-51a2-bf4e-94b788834ea9"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10474535_973957882647257_8113608325421000787_n.jpg?_nc_cat=110&_nc_ht=scontent.fcdg1-1.fna&oh=f15c6898e1958ad5ffa9c6a534a95f4c&oe=5D26E1F5"
-    },
-    {
-        "id": "5530f067-a32c-51e1-9ad7-97cf775ed705",
-        "name": "La Bande des idées #6",
-        "date_time": "2015-05-05T19:30:00.000Z",
-        "bd_ids": [
-            "aaa5174a-d012-5a86-83ff-88ee561cee78",
-            "a8f38346-3d87-5afd-9d0c-423aea300f2a",
-            "09bf28a9-0ce1-5a09-a99c-a21fcffed008",
-            "d6cae607-a1ff-5926-a3f2-bb062c84ffb8"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11110292_990154227694289_4228029765977675487_n.jpg?_nc_cat=109&_nc_ht=scontent.fcdg1-1.fna&oh=49cff7095ebfe210da24d43e044cf75b&oe=5D247C54"
-    },
-    {
-        "id": "2456ad86-5acc-5301-9bd6-90548d61b552",
-        "name": "La Bande des idées #7",
-        "date_time": "2015-06-02T19:30:00.000Z",
-        "bd_ids": [
-            "ae0bc9de-368c-501b-bad7-5bbbe89576fb",
-            "20d228c3-067c-5067-90c8-cb8cc271fe6f",
-            "fa873fe7-0449-5f89-8fc9-cfe1654b8041",
-            "795622ed-bfb2-50c3-8569-fb6f10d3cddd"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11351345_1006130122763366_7087995029299373561_n.jpg?_nc_cat=108&_nc_ht=scontent.fcdg1-1.fna&oh=98ce37ea32d0cdbbaae6edf9b8232d3b&oe=5D233300"
-    },
-    {
-        "id": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
-        "name": "La Bande des idées #8",
-        "date_time": "2015-07-07T19:30:00.000Z",
-        "bd_ids": [
-            "e49de7c1-067d-5937-b900-075d3a2f7799",
-            "cef800c9-32c9-52ab-bf7c-f734ba6c65db",
-            "7b7682a7-12fd-5c89-81c1-ce4b2ec3cedd",
-            "485c9772-b7f3-5b59-99a0-5bc51d90677a"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10985918_1027020130674365_87534998117886051_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=ea8e749d604e38f1e9846738e72c660c&oe=5D210011"
-    },
-    {
-        "id": "3b113b35-2d55-51c4-a846-f640bae083f4",
-        "name": "La Bande des idées #9",
-        "date_time": "2015-10-05T19:30:00.000Z",
-        "bd_ids": [
-            "70aad9fb-30b1-5177-8126-c531467c028e",
-            "f9920e4a-7ba8-5f19-8842-ceaf65dd8b9d",
-            "9f0067bc-02b7-50da-a83e-61b896fc352d",
-            "da2485f6-6f49-5a22-a601-34c06f8fe55f"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t31.0-8/12045710_1075450439164667_5971117612948959248_o.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=2005aa0f4bd6e914288ea3cbbf06b561&oe=5D1A90BF"
-    },
-    {
-        "id": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
-        "name": "La Bande des idées #10",
-        "date_time": "2015-11-02T19:30:00.000Z",
-        "bd_ids": [
-            "fb96800d-99ad-51c1-a1e8-f27c7d8fbb10",
-            "94bd0510-12eb-51a0-a26e-0c444a702785",
-            "36e7eb28-ed60-5818-bc3a-eb39ae1e3105",
-            "331c85b8-47f5-56b5-bdb2-c4ad8b36a229"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12143197_1088158194560558_7531947012850699320_n.jpg?_nc_cat=103&_nc_ht=scontent.fcdg1-1.fna&oh=8fcf6b47f7fc43af14416790905a7ae4&oe=5D13A4C5"
-    },
-    {
-        "id": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
-        "name": "La Bande des idées #11",
-        "date_time": "2015-12-07T19:30:00.000Z",
-        "bd_ids": [
-            "6dcd8372-864e-593c-aa7b-d1c4421ca80a",
-            "ee4b52be-c659-5eff-ae4e-44cebfeb024c",
-            "e9a8d3e6-7671-5522-9438-1ca74a7d4a54",
-            "bab472e5-dba8-56e8-94b4-eaca12df0767"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12299298_1103504503025927_7896546280449256768_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=d0cf1655bccbc7a5ce24bb2427075636&oe=5CE1E329"
-    },
-    {
-        "id": "fc63aa8e-600f-5543-807f-73035f19248e",
-        "name": "La Bande des idées #12",
-        "date_time": "2016-01-04T19:30:00.000Z",
-        "bd_ids": [
-            "5879ed08-b528-54fa-b889-cb9b6654c5e6",
-            "c8efe667-cfa0-5265-92b3-8f32fbeb53b1",
-            "0ee6ba43-46ad-5c80-8a2e-5114850d943b",
-            "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12366279_1115525188490525_3444939567555188617_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=eed31df2dc72374d64e21c71c9d94404&oe=5CE15C43"
-    },
-    {
-        "id": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
-        "name": "La Bande des idées #13",
-        "date_time": "2016-02-01T19:30:00.000Z",
-        "bd_ids": [
-            "5cad8b88-954e-5800-bf00-9a0844b4317d",
-            "a1271973-c370-5a5f-a7d4-8feb30577f49",
-            "169ce90d-4993-5277-b4b4-898b948ae30b",
-            "c11af8d5-9a5d-5d5d-8a37-806ab326e55e"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12552899_1136429603066750_5278756872253066615_n.jpg?_nc_cat=108&_nc_ht=scontent.fcdg1-1.fna&oh=87aede4a8f4785bbe0c060b70ada5e39&oe=5D190012"
-    },
-    {
-        "id": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
-        "name": "La Bande des idées #14",
-        "date_time": "2016-03-07T19:30:00.000Z",
-        "bd_ids": [
-            "112b74f7-40f7-535a-aab9-b13d3c94c4d2",
-            "acef282e-003f-5e71-a1db-09b55471da17",
-            "429db244-0244-5954-aed2-67933069011e",
-            "a287fabc-b371-534f-b5ae-bce6b907b35f"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12670605_1147488151960895_4559904947676418394_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=b0bbf60421aba76321873b82c2394a07&oe=5D1FC826"
-    },
-    {
-        "id": "634fc1df-6058-5247-a08c-fad69ce34c2e",
-        "name": "La Bande des idées #15",
-        "date_time": "2016-04-04T19:30:00.000Z",
-        "bd_ids": [
-            "ea17e67e-3aed-5734-bee3-23d291cb2e65",
-            "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4",
-            "1fe8553a-dc4f-557c-b0c8-ed285d25d513",
-            "d7db5c18-6776-5197-b68c-f61569bd178a"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12376363_1180131635363213_4825001361981708091_n.jpg?_nc_cat=111&_nc_ht=scontent.fcdg1-1.fna&oh=e3961e663509c86cc1a543edcaf18a58&oe=5D2174C7"
-    },
-    {
-        "id": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
-        "name": "La Bande des idées #16",
-        "date_time": "2016-05-02T19:30:00.000Z",
-        "bd_ids": [
-            "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32",
-            "f2860692-948f-5d47-b998-60f799a21268",
-            "69f9074f-83c0-57ba-977b-1125d2fbae16",
-            "e71a06a2-fc10-56f0-b0a6-f5b1ec6ce8d4"
-        ],
-        "fb_event": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11140352_1199781990064844_3792389615048652994_n.jpg?_nc_cat=101&_nc_ht=scontent.fcdg1-1.fna&oh=2b5ac277c88d4bf7ddea7177c940df5d&oe=5D23FD22"
-    },
-    {
-        "id": "b0b01187-3e41-530a-b69d-1b778156244a",
-        "name": "La Bande des idées #17",
-        "date_time": "2016-05-30T19:30:00.000Z",
-        "bd_ids": [
-            "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3",
-            "80fb2922-29f9-5231-ba34-224676df214b",
-            "31218cb7-1c1c-5c1e-ba45-3383eb2db2a4",
-            "d6777df6-7ff7-5d60-883a-8b4a3ea24742"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/13177596_1211136378929405_1892386029205842518_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=5a9a5d2b3599ffd40817ef828cf4a1a8&oe=5D0C02F6"
-    },
-    {
-        "id": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
-        "name": "La Bande des idées #18",
-        "date_time": "2016-06-27T19:30:00.000Z",
-        "bd_ids": [
-            "0f4c7769-b9a0-5d86-90c2-0dab9cdecac5",
-            "50457d0a-d275-54ae-a701-73038d4557e5",
-            "ff97eec9-4561-5965-b9fd-31a81ed88ca1",
-            "f6807abd-c884-551c-ad68-32d7182e64bc"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/13407301_1238484292861280_6451655614105249900_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=df4846c734f72e874d04eaffc4768d04&oe=5D20A24E"
-    },
-    {
-        "id": "acaef519-c1b3-5690-84b1-d8fb25759813",
-        "name": "La Bande des idées #19",
-        "date_time": "2016-10-03T19:30:00.000Z",
-        "bd_ids": [
-            "13cec0e3-d7e3-54da-be39-8ea04750452b",
-            "4855cab9-a793-5a3b-b9ed-a1ae11a4cb96",
-            "b84e2de9-9773-5fb3-b098-95600aabefb4",
-            "6abe3396-863c-534c-ab1f-f19543d6c60d"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14445970_1315239218519120_3949106291008340937_n.jpg?_nc_cat=104&_nc_ht=scontent-cdt1-1.xx&oh=ddb2df967a65262bfa152111e5ffb94f&oe=5D122887"
-    },
-    {
-        "id": "81b7b345-17ae-599b-8c17-b38aafc42040",
-        "name": "La Bande des idées #20",
-        "date_time": "2016-11-07T19:30:00.000Z",
-        "bd_ids": [
-            "72f2081f-6273-5dc2-8c7b-28dc3370c098",
-            "2e080007-73f3-551b-9c26-e8e9ebec19d2",
-            "b5c177d6-e429-538f-84b3-6f857b20a7a4",
-            "9491f949-140c-5092-9add-d05dc3983fe1"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14656390_1348809808495394_2113809148631383691_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=b0f5c231715e9622620d5a087deeb3c4&oe=5D1E3BF4"
-    },
-    {
-        "id": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
-        "name": "La Bande des idées #21",
-        "date_time": "2016-12-05T19:30:00.000Z",
-        "bd_ids": [
-            "bde8dc28-1f8e-58e9-8de4-8efd46178c54",
-            "9ac45906-4b6a-5ca4-805b-f64aec4b90bc",
-            "c4a296ae-92a4-59dc-9301-4a603a7cffd0",
-            "562e5012-19b0-5794-aa0e-4636a143312f"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/15317992_1378414108868297_8537428629914642930_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=4f2577a1db897ce8f2cc0303d196a81f&oe=5D0D270F"
-    },
-    {
-        "id": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
-        "name": "La Bande des idées #22",
-        "date_time": "2017-01-09T19:30:00.000Z",
-        "bd_ids": [
-            "163d1778-437a-5b0b-a41c-477e1740f9d6",
-            "3ffeb194-5cc8-5d05-ade9-964f5999aa79",
-            "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc",
-            "0d8ca287-8e3d-55a9-9f4f-bbe8a1a62c40"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/15871469_1424933184216389_7395848885661616025_n.jpg?_nc_cat=105&_nc_ht=scontent-cdt1-1.xx&oh=d8e710850d8dcac116318c43d7b702dd&oe=5D0CEDB8"
-    },
-    {
-        "id": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
-        "name": "La Bande des idées #23",
-        "date_time": "2017-02-06T19:30:00.000Z",
-        "bd_ids": [
-            "5a7dd53b-1495-5663-bea2-733fedd1d228",
-            "4335f95a-162b-55fd-bc33-9ae6270eaa96",
-            "92d4a711-7df9-52a6-aef4-35cf71bbc16a",
-            "09bd361d-294b-548e-81d2-a24ce73e755a"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/16174676_1446297115413329_25349491156172291_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=ba287790c316e3b7b3a70e3f2a8a0926&oe=5CDB318B"
-    },
-    {
-        "id": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
-        "name": "La Bande des idées #24",
-        "date_time": "2017-03-06T19:30:00.000Z",
-        "bd_ids": [
-            "1d56642e-0dc1-5f4a-aae2-0fa94df543fd",
-            "7c7c3feb-134e-5fcd-8be5-c580ee005cb1",
-            "d6aa2f0e-42e0-5e88-9aca-0f988aaf0156",
-            "8a70367d-933d-5179-ad05-41d287a8027e"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17021581_1477042082338832_3691963312336295706_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=33fdbd4d536bb781b9a327d4d23129fd&oe=5CDF58FD"
-    },
-    {
-        "id": "a162a1f8-1fec-55a0-838d-7c9173f88142",
-        "name": "La Bande des idées #25",
-        "date_time": "2017-04-23T19:30:00.000Z",
-        "bd_ids": [
-            "264198c3-9db1-53e1-9cf2-57062511f327",
-            "fb7e1f82-d227-5650-85b7-c44a4f634109",
-            "9915da9c-e3bf-579d-9399-0cca6f6854ed",
-            "871a5231-dd60-5c65-9b18-723b1565ffa1"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/18010067_1534433169933056_8998104558482823340_n.png?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=3735eced4a065370c325fdc250192ac2&oe=5D222119"
-    },
-    {
-        "id": "4773d958-16dc-5d09-ac56-048ca6df63b8",
-        "name": "La Bande des idées #26",
-        "date_time": "2017-05-20T19:30:00.000Z",
-        "bd_ids": [
-            "975d271b-e1e0-54f8-9273-2debfe877e0f",
-            "49643a22-7c3c-590e-909d-2b458a3c9812",
-            "5a8ed5c1-88a2-5654-88d7-c1d974ade6b3",
-            "1446edf4-27ba-5484-9124-b0655c28fa02"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/18581711_1575887865787586_1170839975577071079_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=ac2e3d6a9270ef980f606b5828258a91&oe=5CDAEDE3"
-    },
-    {
-        "id": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
-        "name": "La Bande des idées #27",
-        "date_time": "2017-07-03T19:30:00.000Z",
-        "bd_ids": [
-            "5864aefd-c512-5acd-bfd4-654a9577e01f",
-            "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa",
-            "a3a08375-70c5-5185-aa11-1970757201c6",
-            "506574d1-5d79-5ea8-a30b-2de7549df7f9"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/37524150_2047152531994448_2390556574792810496_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=637b59310d095b7388aadaf5c4010b0b&oe=5D0F2BF5"
-    },
-    {
-        "id": "962b55da-7635-5b79-975c-44b8cd63497b",
-        "name": "La Bande des idées #28",
-        "date_time": "2017-10-02T19:30:00.000Z",
-        "bd_ids": [
-            "ff441b8a-e7d8-56d6-889a-43edd430e38d",
-            "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c",
-            "83e86609-2b52-52ab-b6f2-454f3f4f1588",
-            "87fa356f-0b28-50f7-ad0f-7608ec05705e"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/22046588_1707879375921767_1666208443553365186_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=146ceeafdefcc34b497a7b6229245fc1&oe=5D1BFBB4"
-    },
-    {
-        "id": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
-        "name": "La Bande des idées #29",
-        "date_time": "2017-11-06T19:30:00.000Z",
-        "bd_ids": [
-            "a968de90-88cc-5e8a-b553-d7298afa9d74",
-            "9c926764-7669-5585-8219-0f0fb31f3498",
-            "920c0bc3-909f-517c-8194-eec53442da3a",
-            "765d65d1-e762-5976-bda4-410a49745faf"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23031599_1743463929029978_3200352309829749099_n.png?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=dcc0d21138f350951af49c9985e3c396&oe=5CDB925F"
-    },
-    {
-        "id": "016d6e71-04fa-5718-bbc4-42c714e709a9",
-        "name": "La Bande des idées #30",
-        "date_time": "2017-12-04T19:30:00.000Z",
-        "bd_ids": [
-            "b7cfe93d-0614-51ed-9121-129779a36201",
-            "3c1a9222-8bc6-5dc9-9f80-8d86851d8aec",
-            "18b43f2b-e8c9-553e-92e1-c13027830753",
-            "42bcdd54-8a27-5fbc-b679-565b1ae82f57"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/l/t1.0-9/23755668_1767369796639391_1277478686325266492_n.jpg?_nc_cat=100&_nc_ht=scontent-cdt1-1.xx&oh=d24a0a9fba0afa43ea3fde5e8e31eb64&oe=5D103A7E"
-    },
-    {
-        "id": "99984239-be4b-5527-ac6f-2efffaa923c7",
-        "name": "La Bande des idées #31",
-        "date_time": "2018-01-08T19:30:00.000Z",
-        "bd_ids": [
-            "0ef59048-c3fb-5ea8-b650-75dafe1998cf",
-            "2e7c3a72-b7fc-5260-a119-e8a94af085e5",
-            "06ce7cf3-e238-5bb4-80c8-2000e8c536c7",
-            "37e7a325-c27f-5f10-a2d6-21765d017dd8"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/26168857_1810957948947242_2756578082164197469_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=209178d9bf3619558a680e48bf576525&oe=5D0DB4D1"
-    },
-    {
-        "id": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
-        "name": "La Bande des idées #32",
-        "date_time": "2018-02-05T19:30:00.000Z",
-        "bd_ids": [
-            "4bc94c79-035d-558e-85ae-c08e1baee587",
-            "b8354485-7ce8-5d1c-a71b-bca27475f6c7",
-            "5be2ee50-4405-56c2-b59f-fbdc8438e45e",
-            "68213172-a9fb-5a77-9b90-2668f465ed84"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/27067504_1841112142598489_7184528437488560486_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=ff206716f00ef4ce4919a58ce1f06bc0&oe=5D260DF2"
-    },
-    {
-        "id": "10c922a7-8e8b-50ca-ae70-0e9dad0db06b",
-        "name": "La Bande des idées #33",
-        "date_time": "2018-04-08T19:30:00.000Z",
-        "bd_ids": [
-            "d7561c34-87ed-5351-9dcd-cabcdda88eb9",
-            "ef41686b-1031-581f-a454-351eef12c49b",
-            "9b7133ae-5594-5171-a72d-28be9d48ac38"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/29573175_1909178212458548_6510851018372175617_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=9fea07126eba712a6071ab80b0da0b26&oe=5D0FF1B1"
-    },
-    {
-        "id": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
-        "name": "La Bande des idées #35",
-        "date_time": "2018-05-14T19:30:00.000Z",
-        "bd_ids": [
-            "a2edcba9-4069-57fa-860a-9b0f656b7911",
-            "2ab19c62-8468-5b16-99a6-f5b97153b993",
-            "e0f10239-868a-5cde-b6dd-9c94fed8d7b5",
-            "4752dff7-0fcb-5360-a636-374577c0b313"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/31945380_1947020325341003_8619787290471825408_n.jpg?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=c6f78b3917a6dbe2c7bbf840a08b3291&oe=5D1CB347"
-    },
-    {
-        "id": "2fc305c6-f0c7-5462-9a45-89241614c418",
-        "name": "La Bande des idées #36",
-        "date_time": "2018-06-04T19:30:00.000Z",
-        "bd_ids": [
-            "0e432312-5b7e-50f8-afba-7869c1256706",
-            "8f885326-1105-5c04-9cb9-1df0a0d79080",
-            "3d3f33fa-274c-5750-bbe8-b8a37f599031",
-            "967b3863-f429-58b5-804c-12a7b22632fd"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/33765875_1968566439853058_6763955458291007488_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=f324ce96fc252504653a7e91e01b5416&oe=5D1BF9A6"
-    },
-    {
-        "id": "07171107-88be-5a83-be43-0205a9c53237",
-        "name": "La Bande des idées #37",
-        "date_time": "2018-09-03T19:30:00.000Z",
-        "bd_ids": [
-            "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19",
-            "7cb93591-7dde-59e6-9afd-dc565a390435",
-            "d0acc909-4425-5267-a65a-41d9ca5be16b",
-            "c5f4a66e-a9f9-530f-8694-d73e0c2f8e4c"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/40054328_2110024205707280_5284287186995249152_n.jpg?_nc_cat=106&_nc_ht=scontent-cdt1-1.xx&oh=d835e0a4f5ae72f3625a9632b6f28ffc&oe=5CE1A0FC"
-    },
-    {
-        "id": "437bf521-fecc-5100-9170-e59fe3b5a117",
-        "name": "La Bande des idées #38",
-        "date_time": "2018-10-01T19:30:00.000Z",
-        "bd_ids": [
-            "395b6a6b-7acb-5a84-8ddf-e855409977b8",
-            "0fe6b6ee-7baa-56dc-ab21-40f63a87421b",
-            "27aa754b-ec29-5d31-aac3-143f9055fdb5",
-            "21bdadd2-bb70-57c4-9fac-bb1eef30acc0"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/42607884_2150476651662035_5013794029343604736_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=93564aeb260afe78d0e73f61770e62f6&oe=5D2378B2"
-    },
-    {
-        "id": "19afc03b-0b2f-5102-946c-c27a7158332e",
-        "name": "La Bande des idées #39",
-        "date_time": "2018-11-05T19:30:00.000Z",
-        "bd_ids": [
-            "a487bacd-3e60-5db3-9c0f-e8167d21ca9d",
-            "7a876a7a-5b64-5cde-9870-ecb1aa6d034c",
-            "6a5e1b8a-0898-5cbd-b53c-ffcb5fb7bb59",
-            "8347cdbe-e853-583d-a6f8-3288b8bb55a5"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/44245490_2179972502045783_4181771306905108480_n.jpg?_nc_cat=107&_nc_ht=scontent-cdt1-1.xx&oh=2c6394761f1a6c1081c8700b6dee5c5f&oe=5D28EB26"
-    },
-    {
-        "id": "75bd8d09-d669-50a0-a00c-48987b2b9472",
-        "name": "La Bande des idées #40",
-        "date_time": "2018-12-03T19:30:00.000Z",
-        "bd_ids": [
-            "c77e8572-a4d7-5a3e-b772-31dd942e9d39",
-            "4bb23804-0bcf-59c4-b051-ebf483efde5f",
-            "7e408fbd-928f-56ab-b646-d972f5e24698",
-            "21801dc4-dd74-5bc0-881d-89f0328bcfcf"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/46494379_2228673830508983_6424827537838309376_n.jpg?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=9c9f9dea8af43fa38d8db1298c47de0a&oe=5D1EDA91"
-    },
-    {
-        "id": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
-        "name": "La Bande des idées #41",
-        "date_time": "2018-01-07T19:30:00.000Z",
-        "bd_ids": [
-            "b4e6e54b-c87a-5158-b824-bba62706d262",
-            "344c953c-2f98-510e-9642-b193cc079eeb",
-            "b543747f-1269-5f2c-98d3-13188b27d9b0",
-            "795ed7d3-240b-5db3-8a23-41fe5531f853"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/48393030_2271348946241471_7781236312232689664_n.jpg?_nc_cat=104&_nc_ht=scontent-cdt1-1.xx&oh=18704fae68530b7984f67b6a4a044c05&oe=5D0F4B4F"
-    },
-    {
-        "id": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
-        "name": "La Bande des idées #42",
-        "date_time": "2018-02-04T19:30:00.000Z",
-        "bd_ids": [
-            "0a1fa77f-b0ff-55a3-ba65-d274ab0605d3",
-            "91796292-f679-5dc3-8e16-f53e3cd37480",
-            "5c0d585f-9e55-51fb-bb16-f98389cb7ce4",
-            "08e65064-e95c-5215-8c3d-adb674683828"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/50210461_2325301247512907_1931457551904276480_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=e28ec1fc8e95d9828339de2b7c570a31&oe=5D257638"
-    },
-    {
-        "id": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
-        "name": "La Bande des idées #43",
-        "date_time": "2018-03-04T19:30:00.000Z",
-        "bd_ids": [
-            "3d70b2d5-2977-5edc-972d-5f5e66124eef",
-            "bf4fe76d-85e6-5b2b-8093-bd397f29ccc2",
-            "8ac3624a-93f8-5771-975b-942423b399b5",
-            "45654738-801a-54ec-a4da-363363691092"
-        ],
-        "fb_event": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/53071290_2382826551760376_4380486648983453696_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=67247ee1f3b53b3757069833001c06d5&oe=5D1CE030"
-    },
-    {
-        "id": "e3653545-0c2a-50bd-8d14-699d252b53a9",
-        "name": "La Bande des idées #44",
-        "date_time": "2019-04-01T19:30:00.000Z",
-        "bd_ids": [
-            "6a77cc15-294a-5114-8d5f-73d5d402ab51",
-            "20804294-4e09-50cd-94bd-8372e5d99a58",
-            "85b4afe0-39bc-53e9-b894-84624222cc7d",
-            "9a9a15ba-5c4a-5d05-9b95-0f346d811cf6"
-        ],
-        "fb_event": "https://www.facebook.com/events/285763049007863/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "611db4de-5ee6-5c83-83c5-af36e6222068",
-        "name": "La Bande des idées #45",
-        "date_time": "2019-05-06T19:30:00.000Z",
-        "bd_ids": [
-            "a9faa5b6-9672-510a-bd92-634e3aeb2240",
-            "4d775666-080c-5f46-ab43-983746584a96",
-            "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71",
-            "6719474d-ed51-5f92-8278-3646bb92c03b"
-        ],
-        "fb_event": "https://www.facebook.com/events/325704408128713/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "35935fa2-a008-5d4a-837d-ff51e42f0123",
-        "name": "La Bande des idées #46",
-        "date_time": "2019-06-03T19:30:00.000Z",
-        "bd_ids": [
-            "e4e1d8bd-5c94-57eb-9b76-45b0d2e3c1b7",
-            "0a23fbe5-b7b7-547f-95ef-c8e4c169ba84",
-            "8b193f6b-8fc9-5dd4-8f86-3dffe109ace2",
-            "0eb55165-0714-592e-b967-ca0d76ba06ff"
-        ],
-        "fb_event": "https://www.facebook.com/events/1129332163916912/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "15afad0f-6a49-5a5d-9361-e696250a3993",
-        "name": "La Bande des idées #47",
-        "date_time": "2019-07-01T19:30:00.000Z",
-        "bd_ids": [
-            "455fed83-1d56-56f4-b2e3-46efbcc1f0e1",
-            "ea9613e4-c0a1-5a88-b2a4-fc986c9f2240",
-            "935c5f25-3edb-5853-91ea-c0c75d211ba5",
-            "99f43ae7-65c3-5f0b-bd9a-336ad6735fea"
-        ],
-        "fb_event": "https://www.facebook.com/events/356507151919604/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "943ef86c-2f3d-5418-811c-3984ec44218e",
-        "name": "La Bande des idées #48",
-        "date_time": "2019-09-02T19:30:00.000Z",
-        "bd_ids": [
-            "3d6f3134-2abf-5826-9462-12df423eeb00",
-            "90a07961-765f-588b-a9b1-147327ff19e6",
-            "b6e3995c-deef-5246-a9b0-df3a38e0f7e8",
-            "fa63dd8d-c49f-5a56-9f07-8f6fbbb45dbc"
-        ],
-        "fb_event": "https://www.facebook.com/events/665582067287940/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
-        "name": "La Bande des idées #49",
-        "date_time": "2019-10-07T19:30:00.000Z",
-        "bd_ids": [
-            "91f06cb8-a704-5705-b48a-2015fa0dd6b8",
-            "9c1164e3-301e-5075-af2f-013c819bb56a",
-            "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea",
-            "809c07eb-4cdb-564d-801f-810e13afae93"
-        ],
-        "fb_event": "https://www.facebook.com/events/2474036006005538/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
-        "name": "La Bande des idées #50",
-        "date_time": "2019-11-04T19:30:00.000Z",
-        "bd_ids": [
-            "04614ebb-df6b-5425-9f49-a953190b114f",
-            "fff5e173-faf5-5091-b143-91036a35047d",
-            "88083fb1-f033-50a2-a26a-84921246605c",
-            "41a293e2-8d3d-5933-9188-f01edc26eb0c"
-        ],
-        "fb_event": "https://www.facebook.com/events/2533623426867287/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
-        "name": "La Bande des idées #51",
-        "date_time": "2019-11-27T19:30:00.000Z",
-        "bd_ids": [
-            "d535ad5b-baf2-54af-b3d5-17d8b52332ff",
-            "dcc25ccb-bc58-5f18-9a49-a54fc52fdcf3",
-            "4e54d086-2092-5623-81ce-cdb52ee354a3",
-            "33368bc9-256a-520a-88cc-b78bd19c6dce"
-        ],
-        "fb_event": "https://www.facebook.com/events/509526156269235/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "282002d3-3314-58cb-a08c-56d1b660f8ed",
-        "name": "La Bande des idées #52",
-        "date_time": "2019-12-02T19:30:00.000Z",
-        "bd_ids": [
-            "1346fd40-465d-50a8-9dbf-1b3db2f2f962",
-            "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a",
-            "5664c22b-88d2-5a47-bf61-fb3e4f657a0b",
-            "56fc148f-32d4-5cb2-a0e4-8eee0f478cfb"
-        ],
-        "fb_event": "https://www.facebook.com/events/1143293975868038/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
-        "name": "La Bande des idées #53",
-        "date_time": "2020-01-06T19:30:00.000Z",
-        "bd_ids": [
-            "5cf79362-fbc8-5768-a71e-da1f3da4979b",
-            "99cf5bac-a6b4-5fa0-ace7-3b6acdda880b",
-            "6486c644-9f52-5b81-8121-a07c9ca820d3",
-            "a07deabb-ba5c-5b23-bd86-e977a8865e6c"
-        ],
-        "fb_event": "https://www.facebook.com/events/778287175971506/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
-        "name": "La Bande des idées #54",
-        "date_time": "2020-02-03T19:30:00.000Z",
-        "bd_ids": [
-            "3852be01-9880-52eb-8493-9b3a5758e58f",
-            "7769da5e-26ce-5da9-bec0-7a649cbadc21",
-            "e897052f-d4f2-5e42-9731-c4f7b672d891",
-            "a5c2edd4-0e57-5aff-ad51-1da715ae3f5e"
-        ],
-        "fb_event": "https://www.facebook.com/events/1552168821619081/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
-        "name": "La Bande des idées #55",
-        "date_time": "2020-03-02T19:30:00.000Z",
-        "bd_ids": [
-            "126597e8-c9b9-59ea-bd95-81b0e7b61342",
-            "f85336b5-f4df-5112-a405-cf0dbd14fd50",
-            "531a885c-829a-59e3-9ce8-4af27ee228e2",
-            "ef0b7e38-3627-5f6e-b460-3e92a56d3a13"
-        ],
-        "fb_event": "https://www.facebook.com/events/2274982579461524/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
-        "name": "La Bande des idées #56",
-        "date_time": "2020-09-07T19:30:00.000Z",
-        "bd_ids": [
-            "f82923f6-8cff-5419-927a-c3db18e9992f",
-            "12865e73-340e-5385-a1c0-8dcd99f6ad82",
-            "58bf1586-0770-5e05-9d5e-84b033947d1f",
-            "9f71560e-9697-518d-a092-a2e73ca2c608"
-        ],
-        "fb_event": "https://www.facebook.com/events/337707800690646/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "e0863d9e-e93d-525a-9dbb-89140edf2588",
-        "name": "La Bande des idées #57",
-        "date_time": "2020-09-11T19:30:00.000Z",
-        "bd_ids": [
-            "e36d75cf-f479-5e9b-b009-eecbf2f6e86d",
-            "d0b3e70f-1430-5736-8b87-84b725afaebe",
-            "e2e2f078-9136-5fed-a6e2-ddc3cde39297",
-            "16564728-90ed-5edc-8eae-08a5f7785cff"
-        ],
-        "fb_event": "https://www.facebook.com/events/1500880476772063/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
-        "name": "La Bande des idées #58",
-        "date_time": "2021-07-05T19:30:00.000Z",
-        "bd_ids": [
-            "7655deef-be68-561d-a942-3a401c24343e",
-            "2a776a76-0486-5fa8-a693-0507a23edda8",
-            "e0079da4-868b-589a-8dc6-7c04973b026b",
-            "2a5e1c5f-476c-5d4e-81f3-2b78cb856e41"
-        ],
-        "fb_event": "https://www.facebook.com/events/234358424838579/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
-        "name": "La Bande des idées #59",
-        "date_time": "2021-09-06T19:30:00.000Z",
-        "bd_ids": [
-            "473edb56-8483-5f87-ae9a-226e5639da7c",
-            "d8f9a56b-3061-5c16-9cce-1d231de67319",
-            "cd0cdc46-bfd4-5850-beaf-3019f10e3e7b",
-            "1a3f1d17-bebd-5ddb-abe3-9533675f24a8"
-        ],
-        "fb_event": "https://www.facebook.com/events/277491040426073/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
-    },
-    {
-        "id": "090131b6-3b33-5b91-ac22-f73f60f5d347",
-        "name": "La Bande des idées #60",
-        "date_time": "2021-10-04T19:30:00.000Z",
-        "bd_ids": [
-            "609fe001-1408-54fc-8686-1a7094aaa0da",
-            "493aa385-71e1-5b94-937d-fc270fd2d7bc",
-            "209120cd-8ef2-5051-9030-5750844215c5",
-            "00b764c7-9e57-5a44-8922-76ffc6c0c006"
-        ],
-        "fb_event": "facebook.com/events/831818477405291/"
-    },
-    {
-        "id": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
-        "name": "La Bande des idées #61",
-        "date_time": "2021-11-08T19:30:00.000Z",
-        "bd_ids": [
-            "385f1264-4b26-5572-b2a8-10343d26cc7c",
-            "2f0d945f-bd63-5967-9a57-844e20b11675",
-            "045e3ca9-5744-52bb-ba4c-d69f08e9c343",
-            "98a1d8c6-853d-5970-b117-ace76d927b91"
-        ],
-        "fb_event": "https://www.facebook.com/events/565369727882126"
-    },
-    {
-        "id": "e17498f8-e03e-5e24-8a88-9c976c869054",
-        "name": "La Bande des idées #62",
-        "date_time": "2021-12-06T19:30:00.000Z",
-        "bd_ids": [
-            "0527534f-2c66-5d92-94d5-e579f45fd919",
-            "5bebe1b3-ed45-5b99-bc12-026abccc686e",
-            "45a36e4f-7780-53c1-b774-353b3aa6e85e",
-            "be84548c-9e26-56ea-a97d-bdf4b9653250"
-        ],
-        "fb_event": "https://www.facebook.com/events/288789526481300/"
-    },
-    {
-        "id": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
-        "name": "La Bande des idées #63",
-        "date_time": "2022-03-07T19:30:00.000Z",
-        "bd_ids": [
-            "04c7c967-43b9-5255-a016-a6a6713ccaf0",
-            "808def66-0261-5fb0-adf1-2e8c3f8761d8",
-            "6cbc856d-bbf3-517d-8096-69dcf2e9b270",
-            "122a0172-06d1-548d-a796-547d56b7fa4c"
-        ],
-        "fb_event": "https://www.facebook.com/events/3198494570473230/"
-    },
-    {
-        "id": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
-        "name": "La Bande des idées #64",
-        "date_time": "2022-04-04T19:30:00.000Z",
-        "bd_ids": [
-            "e37157f2-efbb-508a-bc47-17a90bc02c84",
-            "ad666457-dc66-5f79-a8e2-24d71257ce29",
-            "deb20c8e-015a-5c9c-9686-1111263e8a0a",
-            "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b"
-        ],
-        "fb_event": "https://www.facebook.com/events/515214300290482/"
-    },
-    {
-        "id": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
-        "name": "La Bande des idées #65",
-        "date_time": "2022-05-02T19:30:00.000Z",
-        "bd_ids": [
-            "2d214a1a-d718-56ca-b4b1-daecd27fbc70",
-            "553ba159-d15e-5f69-a159-fc28c71edeca",
-            "0e8111d0-2e90-54c7-88b1-43b0e0881cc9",
-            "ed1239f8-6705-59cc-89fa-0f58a386644e"
-        ],
-        "fb_event": "https://www.facebook.com/events/326501759551822/"
-    },
-    {
-        "id": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
-        "name": "La Bande des idées #66",
-        "date_time": "2022-06-13T19:30:00.000Z",
-        "bd_ids": [
-            "259a0454-9500-5b1b-be3c-1039abe5838a",
-            "5b09fc60-7852-5dd7-85fd-47d06d44ac08",
-            "5792de8a-229c-5f32-9cd0-3d9421f85b62",
-            "d77af3ef-1018-580f-8b4b-bdac6993c4b9"
-        ],
-        "fb_event": "https://www.facebook.com/events/561044688714389/"
-    },
-    {
-        "id": "208965ad-c1ba-5935-ad9c-599ec120152f",
-        "name": "La Bande des idées #67",
-        "date_time": "2022-07-04T19:30:00.000Z",
-        "bd_ids": [
-            "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d",
-            "93c55d49-da91-53a8-9384-a9e74f86fe92",
-            "81d0933e-90f7-5b74-b9fb-ba27cc47fa12",
-            "bb95f1ee-35e4-5172-bcf9-11aa19d39885"
-        ],
-        "fb_event": "https://www.facebook.com/events/525967912554941/"
-    },
-    {
-        "id": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
-        "name": "La Bande des idées #68",
-        "date_time": "2022-09-05T19:30:00.000Z",
-        "bd_ids": [
-            "219fdb59-446f-5ec8-ada8-aa3432778341",
-            "7e0fbd51-70be-5b79-b9fd-fdcbdbe6784d",
-            "67a5f9be-05e5-5595-a37f-a5ab7ac9952b",
-            "fbb83c90-bc31-53bb-82f1-62a4921b7b66"
-        ],
-        "fb_event": "https://www.facebook.com/events/446752527364617/"
-    },
-    {
-        "id": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
-        "name": "La Bande des idées #69",
-        "date_time": "2022-10-03T19:30:00.000Z",
-        "bd_ids": [
-            "2f23ec7b-6aa5-5cf5-b8ac-331ee184fe94",
-            "90278e20-06f0-50f8-a8f0-04b97acfe3ce",
-            "aa142d80-6e53-53cf-ad01-13c8af2060cf",
-            "22bae3a8-139b-5a3f-932f-80fc901d43af"
-        ],
-        "fb_event": "https://www.facebook.com/events/616184793487017/"
-    },
-    {
-        "id": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
-        "name": "La Bande des idées #70",
-        "date_time": "2022-11-07T19:30:00.000Z",
-        "bd_ids": [
-            "621f773d-d0aa-5e22-bf81-c530967a1fbe",
-            "8b049e1b-5908-5c4b-972e-d34e04c6ab0c",
-            "a88d2dfe-e823-5455-b5a7-a9eea7604db2",
-            "20219cc1-6639-5762-9325-1f565d5143ce"
-        ],
-        "fb_event": "https://www.facebook.com/events/793465931802389/"
-    },
-    {
-        "id": "8057115a-7249-5288-a959-7f770b0707da",
-        "name": "La Bande des idées #71",
-        "date_time": "2022-12-05T19:30:00.000Z",
-        "bd_ids": [
-            "7c33cd89-18a5-55ee-a927-d33a3b91a4d4",
-            "8e76ff82-caba-5256-b56f-36fdcc09b8cc",
-            "6f40ce09-c1fc-56c3-b191-aaef5f620982",
-            "6285af41-5732-5e84-907f-7c1c6393c5e5"
-        ],
-        "fb_event": "https://www.facebook.com/events/1126501241325870/"
-    },
-    {
-        "id": "1320b429-70e2-593e-976d-0cc9646e88c8",
-        "name": "La Bande des idées #72",
-        "date_time": "2023-01-09T19:30:00.000Z",
-        "bd_ids": [
-            "e316844c-27bd-5037-a0f8-1327a62e748f",
-            "92d5d028-df2f-5e50-b4b7-9887ae2f807b",
-            "80e320c2-11e7-595b-89ba-24b81ea6d621",
-            "8faa03ae-f8f4-5b68-9059-c0c628f85707"
-        ],
-        "fb_event": "https://www.facebook.com/events/434532382115033/"
-    },
-    {
-        "id": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
-        "name": "La Bande des idées #73",
-        "date_time": "2023-02-06T19:30:00.000Z",
-        "bd_ids": [
-            "af8eb788-7a27-5205-84b1-ae1298595b7d",
-            "f6c7005e-7b64-5eef-844a-2ac4acdc1b07",
-            "406eb059-e7e8-54f1-8f89-cddea6c629e0",
-            "f865a993-10dd-5daf-9303-db5328540034"
-        ],
-        "fb_event": "https://www.facebook.com/events/898411191495073/"
-    },
-    {
-        "id": "ec126adf-2c87-51c4-b109-22b7689339ad",
-        "name": "La Bande des idées #74",
-        "date_time": "2023-03-13T19:30:00.000Z",
-        "bd_ids": [
-            "ec050548-66da-5642-af27-79ee4e0f5571",
-            "a363d9bd-8981-5155-9eb6-c9cef10c231a",
-            "01c74bc6-960a-58b3-9069-ca12ec2fb9b4",
-            "e00d76ed-0c5c-5fcb-b972-355c57612e91"
-        ],
-        "fb_event": "https://www.facebook.com/events/1359635898192804/"
-    },
-    {
-        "id": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
-        "name": "La Bande des idées #75",
-        "date_time": "2023-04-03T19:30:00.000Z",
-        "bd_ids": [
-            "b86b53b5-7121-5fae-8ed9-50fc48076812",
-            "4926fa87-8fac-59ea-b462-beaa8865b399",
-            "b2b56cf4-189b-5c0f-b0a9-b3f4944df2f8",
-            "904c9d20-f81a-591d-b110-2e457f6d8f60"
-        ],
-        "fb_event": "https://www.facebook.com/events/213242371310791/"
-    },
-    {
-        "id": "2412bc73-7636-5bb4-84b3-059088f2b82f",
-        "name": "La Bande des idées #76",
-        "date_time": "2023-05-15T19:30:00.000Z",
-        "bd_ids": [
-            "24c15eca-cdd6-52e2-ae02-ca99c6a37884",
-            "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa",
-            "df990528-33c4-5c15-87e0-ad4119be24f3",
-            "47a951d2-d847-566a-9180-6dad63037708"
-        ],
-        "fb_event": "https://www.facebook.com/events/942395466984150/"
-    },
-    {
-        "id": "f229dbf3-e754-590d-a0b4-23b74e28cc7a",
-        "name": "La Bande des idées #77",
-        "date_time": "2023-06-05T19:30:00.000Z",
-        "bd_ids": [],
-        "fb_event": "https://www.facebook.com/events/622624873248708"
-    },
-    {
-        "id": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
-        "name": "La Bande des idées #78",
-        "date_time": "2023-07-03T19:30:00.000Z",
-        "bd_ids": [
-            "f2ece642-d63f-5322-8208-0d755268b0a7",
-            "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5",
-            "233df3dc-5aec-5505-b208-b7dad00c99b1",
-            "903acafa-4e30-5dcb-85ec-e2d1ce52d741"
-        ],
-        "fb_event": null
-    },
-    {
-        "id": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
-        "name": "La Bande des idées #79",
-        "date_time": "2023-09-04T19:30:00.000Z",
-        "bd_ids": [
-            "d7d58ce0-3034-5dc1-ad26-f2ba302c0559",
-            "73418c95-df6c-50b9-8713-0cd6437ca1e8",
-            "32c39747-541d-55b3-b217-835c9e26ffdb",
-            "12d42d70-3a3c-5d61-bf59-ac8cc63ba0a5"
-        ],
-        "fb_event": "https://www.facebook.com/events/2394873167358468"
-    },
-    {
-        "id": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
-        "name": "La Bande des idées #80",
-        "date_time": "2023-10-02T19:30:00.000Z",
-        "bd_ids": [
-            "0600c708-f469-5a62-87d6-0081966be2b0",
-            "28c74fd2-511a-5728-a28e-8876fa62ece8",
-            "c7de24d2-2e14-55d4-9ba8-d7999551971b",
-            "5ce81c2c-23ca-5bfe-899a-011a2c38e9e0"
-        ],
-        "fb_event": "https://www.facebook.com/events/1019108149125333"
-    },
-    {
-        "id": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
-        "name": "La Bande des idées #81",
-        "date_time": "2023-11-06T19:30:00.000Z",
-        "bd_ids": [
-            "46840f52-8e72-51fa-8308-bfe9e584b7c8",
-            "66419695-ae35-53a0-b7db-55e99b5d6b02",
-            "970a07a3-e2a0-5c36-bf0f-9a6f4ea83dad",
-            "945ced24-f871-580c-a2cd-e55da6520b39"
-        ],
-        "fb_event": "https://www.facebook.com/events/1715263022310108"
-    },
-    {
-        "id": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
-        "name": "La Bande des idées #82",
-        "date_time": "2023-12-04T19:30:00.000Z",
-        "bd_ids": [
-            "f276e705-9146-5580-823a-15d8c2591660",
-            "714b0f37-f73f-5508-825c-281074c8aebe",
-            "c63fb7f3-28e9-51b0-a879-a22cae604ae9",
-            "76da166c-6887-58fe-839c-5ceb1d79b8ee"
-        ],
-        "fb_event": "https://www.facebook.com/events/1563147154518585"
-    },
-    {
-        "id": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
-        "name": "La Bande des idées #83",
-        "date_time": "2024-01-08T19:30:00.000Z",
-        "bd_ids": [
-            "4fe38dd6-5f77-5f47-8a7d-4a869f44334a",
-            "ca07d9e7-2615-5857-8ff2-c8a481345db9",
-            "f9700842-783a-547b-b038-f388c81263c4",
-            "e7880ee2-b182-5a13-8a84-f3877bd0a932"
-        ],
-        "fb_event": "https://www.facebook.com/events/871004508030312/"
-    },
-    {
-        "id": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
-        "name": "La Bande des idées #84",
-        "date_time": "2024-02-05T19:30:00.000Z",
-        "bd_ids": [
-            "c36e3da5-0be8-5732-a555-fb7a2b9adc95",
-            "a0258b1a-9505-561d-a6a8-ca69479420d8",
-            "677a0a0d-9f0e-5524-892e-5feeda95fa37",
-            "5ee6ce29-7b61-53b4-8994-a0a2e783cf92"
-        ],
-        "fb_event": "https://www.facebook.com/events/394766139896709/"
-    },
-    {
-        "id": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
-        "name": "La Bande des idées #85",
-        "date_time": "2024-03-04T19:30:00.000Z",
-        "bd_ids": [
-            "af4e1bb1-ecf0-5912-8197-9d9e0b210b72",
-            "fc30f32a-3e20-5385-b28a-7439ee532389",
-            "aa01d166-f99b-5537-9d2f-99f433ffdc97",
-            "fc62fcaa-84ef-5a91-a79d-34ee62b436ef"
-        ],
-        "fb_event": "https://www.facebook.com/events/309085812162790/"
-    },
-    {
-        "id": "b6b7fc5a-d592-5d96-854f-05558c763187",
-        "name": "La Bande des idées #86",
-        "date_time": "2024-04-08T19:30:00.000Z",
-        "bd_ids": [
-            "8a50365e-9da9-59dd-bc97-969ed43c22c7",
-            "515abf3f-be71-5dc5-a79a-662cd25fccf6",
-            "0c7c6682-3287-56d0-a8d6-82aea0648529",
-            "debf7682-e9ad-587d-a814-efdeaad2c9e7"
-        ],
-        "fb_event": "https://www.facebook.com/events/7457885997592030/"
-    },
-    {
-        "id": "075999c0-bbf4-5524-9f02-8526d66cd913",
-        "name": "La Bande des idées #87",
-        "date_time": "2024-05-06T19:30:00.000Z",
-        "bd_ids": [
-            "e2102e41-2abb-59a4-b7fe-8d4ecc23e1da",
-            "956b5864-d695-5e4f-b6f3-48078e019fe0",
-            "ab707df2-5f9e-5bce-ba06-da7fc0e88bfd",
-            "bde7b6df-1144-56af-8a15-03f3710adb93"
-        ],
-        "fb_event": "https://www.facebook.com/events/788288109916410/"
-    },
-    {
-        "id": "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85",
-        "name": "La Bande des idées #88",
-        "date_time": "2024-06-03T19:30:00.000Z",
-        "bd_ids": [
-            "52b5768f-92ea-5ea0-864c-f91c838da16c",
-            "13a95766-1ae7-52fc-8158-e51115b8fa4a",
-            "531a885c-829a-59e3-9ce8-4af27ee228e2",
-            "39c9b8b4-fc17-5fb3-bda6-7f183cca54c7"
-        ],
-        "fb_event": "https://www.facebook.com/events/1440004920219390/"
-    },
-    {
-        "id": "7a658366-6710-5724-859d-c94de9e9d9ab",
-        "name": "La Bande des idées #89",
-        "date_time": "2024-07-22T19:30:00.000Z",
-        "bd_ids": [
-            "a01a8124-f371-5a31-a90b-8bcf85d43a7c",
-            "321c2793-05ba-57fa-abc0-2c59c7c6aaa3",
-            "5d75aa1d-71ee-5ee7-be23-59e9d10c519a",
-            "6d437cee-8870-53d7-bffa-9aba1bb92823"
-        ],
-        "fb_event": "https://www.facebook.com/events/1255888845377371/"
-    },
-    {
-        "id": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
-        "name": "La Bande des idées #90",
-        "date_time": "2024-09-02T19:30:00.000Z",
-        "bd_ids": [
-            "1ed863f9-5aea-574a-8e7a-8a8f061235e5",
-            "48a7b58b-aa17-5b0d-98ec-fe8a997395c0",
-            "b089120d-7f10-5457-96b1-b233822e6f5e",
-            "330732a9-e0e1-5cf1-a00d-ecd08a2bc222"
-        ],
-        "fb_event": "https://www.instagram.com/p/C_AzrjcMqvb/"
-    },
-    {
-        "id": "d22485f9-9242-5a72-bc1e-9c223c27134d",
-        "name": "La Bande des idées #91",
-        "date_time": "2024-10-07T19:30:00.000Z",
-        "bd_ids": [
-            "d0773c0e-efce-5e3f-b88c-b401e6925875",
-            "4aa33079-62c2-5233-88ae-8e754c339e59",
-            "1de89bb4-2d86-543c-845e-fba8f42fc847",
-            "e6eb00f3-e29c-59a5-bf7e-7ca9a65fcd33"
-        ],
-        "fb_event": "https://www.instagram.com/p/C_8EccYsbUx/"
-    },
-    {
-        "id": "826204d2-0a18-5f15-81c0-1f9730761358",
-        "name": "La Bande des idées #92",
-        "date_time": "2024-11-04T19:30:00.000Z",
-        "bd_ids": [
-            "a9f1ba28-8e3f-5925-8f8c-bd63fb271d1b",
-            "06d42289-e3ad-57c0-aade-03088507faa9",
-            "34373ae6-8241-5dfd-ac94-c657bd97af69",
-            "0829463a-3433-53e5-ac54-605311f73a69"
-        ],
-        "fb_event": "https://www.instagram.com/p/DBd6vEesFeI/"
-    },
-    {
-        "id": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
-        "name": "La Bande des idées #93",
-        "date_time": "2024-12-02T19:30:00.000Z",
-        "bd_ids": [
-            "f95d6e61-6426-5b0b-9311-b9e8ecb36b78",
-            "fdf7972d-6b2b-5ace-9939-d1b83cedae14",
-            "0f55b110-f82c-5092-8299-3149fdc8c9c9",
-            "19a60d41-85b5-5230-8e6c-e5537981a6f4"
-        ],
-        "fb_event": "https://www.facebook.com/events/553573667638100/"
-    },
-    {
-        "id": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
-        "name": "La Bande des idées #94",
-        "date_time": "2025-01-06T19:30:00.000Z",
-        "bd_ids": [
-            "c2f61a7e-3816-5686-b9e5-d9556ee77049",
-            "e98c4039-8132-5dd6-9489-661fca8f7743",
-            "e24b2289-3eba-5581-9e3b-7c3d08251f70",
-            "fb6cbc79-3c98-5889-838a-b334b7606395"
-        ],
-        "fb_event": "https://www.facebook.com/events/479647325144303/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
-        "name": "La Bande des idées #95",
-        "date_time": "2025-02-10T19:30:00.000Z",
-        "bd_ids": [
-            "b0b3870c-0997-5868-bd23-6e08e3cc0aac",
-            "1c9e35cc-80d4-5dce-8e80-2874fe876600",
-            "4066190a-e2a3-5eda-bb01-cd996e6b7eda",
-            "dd62a84b-d5d0-581d-85ff-398583396ee1"
-        ],
-        "fb_event": "https://www.facebook.com/events/1358841528627237/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
-        "name": "La Bande des idées #96",
-        "date_time": "2025-03-03T19:30:00.000Z",
-        "bd_ids": [
-            "c7c00974-55df-5ddb-9094-599a49fedc04",
-            "9a3852a3-baa8-5f2a-aba2-fe494ac3d2d7",
-            "d3ae501d-a740-50fa-9b36-23681a63e221",
-            "9e1ead2f-e94b-51c4-a530-25ff413b4630"
-        ],
-        "fb_event": "https://www.facebook.com/events/2532313316972641/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "12815554-e509-5c87-be90-52d0ba1546af",
-        "name": "La Bande des idées #97",
-        "date_time": "2025-04-07T19:30:00.000Z",
-        "bd_ids": [
-            "1d9f61ac-e443-5d00-95d6-232abbc96584",
-            "8f3dfff9-18f4-517b-956a-375093f86315",
-            "9fb8bc86-0c68-5c44-a864-1bd65f4c4114",
-            "69fc7e78-c691-52d1-9568-ff25b698eaab"
-        ],
-        "fb_event": "https://www.facebook.com/events/657561693409078/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
-        "name": "La Bande des idées #98",
-        "date_time": "2025-05-05T19:30:00.000Z",
-        "bd_ids": [
-            "c503e169-f7e8-50eb-bba0-7d391d6a17ce",
-            "ebab55bf-6f8b-5ebe-8a63-63805845355c",
-            "599583d1-2538-5fdb-ad77-90fc339b3178",
-            "510487fd-029b-5a3b-9700-0d11d9582757"
-        ],
-        "fb_event": "https://www.facebook.com/events/1251013476581314/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "2e34799f-dc59-5357-a523-c317961dfd16",
-        "name": "La Bande des idées #99",
-        "date_time": "2025-06-02T19:30:00.000Z",
-        "bd_ids": [
-            "3dddd453-4856-5647-b862-58ee435de96b",
-            "78e93b93-fff0-5559-a078-8ca878174a6c",
-            "71b57a4d-63c6-5220-b416-c2eacf41695e",
-            "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c"
-        ],
-        "fb_event": "https://www.facebook.com/events/1709530526598425/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "6421a785-8d16-50f9-8661-42b747c21434",
-        "name": "La Bande des idées #100",
-        "date_time": "2025-07-04T19:30:00.000Z",
-        "bd_ids": [],
-        "fb_event": "https://www.facebook.com/events/1257620832398570/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "e86ed83c-1690-5160-a736-d4ab397e1adf",
-        "name": "La Bande des idées #101",
-        "date_time": "2025-09-01T19:30:00.000Z",
-        "bd_ids": [
-            "1c16dd39-9b71-570b-adf9-dd949b0876ed",
-            "7ecc3faa-7448-57ea-b3c3-3fe72ddd322b",
-            "2577974a-9695-5f41-94a9-6ba5ebd90174",
-            "89d152e7-f57c-5b0e-8d95-8f5fad2dc896"
-        ],
-        "fb_event": "https://www.facebook.com/events/1113986430616293/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
-        "name": "La Bande des idées #102",
-        "date_time": "2025-10-06T19:30:00.000Z",
-        "bd_ids": [
-            "55173791-1d25-5974-be37-4ae3bfac5225",
-            "d2606770-6e64-56ad-9f24-2c1734030214",
-            "ba70089b-dc50-5706-ae33-e7b7f3d3c4ed",
-            "c422ca47-19e7-5530-96ae-3099c5ec9dc8"
-        ],
-        "fb_event": "https://www.facebook.com/events/2504069616626345/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "b148c708-8268-57c5-987d-7c673b310cee",
-        "name": "La Bande des idées #103",
-        "date_time": "2025-11-03T19:30:00.000Z",
-        "bd_ids": [
-            "7b60d495-19b6-5aec-83d2-df40acb1d3e8",
-            "7afa0be1-9f65-5af9-b8ca-8febc5ccfa4a",
-            "ec34073f-32f3-5b74-8e70-eb2e9937a36f",
-            "fd110a14-3cb4-5407-a837-b3bae1c9b278"
-        ],
-        "fb_event": "https://www.facebook.com/events/2437286006666177/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
-        "name": "La Bande des idées #104",
-        "date_time": "2025-12-01T19:30:00.000Z",
-        "bd_ids": [
-            "af92af68-880b-54ec-9b11-b63ac826149b",
-            "0227a664-60ac-5e77-bb89-031cf0893d1e",
-            "bb2f4bd6-ea0d-5028-bd8d-d3eb6437888c",
-            "543529b3-41ab-5afc-a381-7ed1bfab677b"
-        ],
-        "fb_event": "https://www.facebook.com/events/1729177091288597/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
-        "name": "La Bande des idées #105",
-        "date_time": "2026-01-05T19:30:00.000Z",
-        "bd_ids": [
-            "11d7eace-ebf2-59d3-a330-cd442d3557a3",
-            "1bc85f3d-8932-5b00-b6fd-333b32ee53b9",
-            "605a6f52-dfac-5d30-9135-70f21673a9c9",
-            "a8920edf-9eb7-5296-9429-4a13002c70c4"
-        ],
-        "fb_event": "https://www.facebook.com/events/1582503946101897/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
-        "name": "La Bande des idées #106",
-        "date_time": "2026-02-02T19:30:00.000Z",
-        "bd_ids": [
-            "980619c8-13ee-54cf-960c-0ad3a452965b",
-            "80dbe48d-5ef6-50a1-8f93-23619b07cbde",
-            "30dd4d30-1325-557c-b42b-6ad0894bf6b8",
-            "50afc3e1-c60e-5915-b756-8b0760228a32"
-        ],
-        "fb_event": "https://www.facebook.com/events/740030845824250/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    },
-    {
-        "id": "59b9a96e-b2d0-5d31-9167-293aed303df5",
-        "name": "La Bande des idées #107",
-        "date_time": "2026-03-02T19:30:00.000Z",
-        "bd_ids": [
-            "8a2399e8-979b-5ac8-9645-0c778e3f4edc",
-            "5cad8b88-954e-5800-bf00-9a0844b4317d",
-            "22420ca8-73c3-508a-a4ca-2f9378f14338",
-            "46c2d81c-4961-5353-9c99-230e81b565d0"
-        ],
-        "fb_event": "https://www.facebook.com/events/1291476083029606/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
-    }
-];
-
-const bds = [
-    {
-        "id": "7d723523-0d8a-5c4f-a040-8ff0cca2bc83",
-        "title": "Nightly News",
-        "event_ids": "d3eafa10-a745-5597-94cb-39521449a60e",
-        "author_ids": [
-            "fd51ff5e-d84e-5eae-8cd0-e095e96e3dba"
-        ],
-        "publisher": "Urban",
-        "publishing_year": 2014
-    },
-    {
-        "id": "403fb2b2-7948-5aa1-9cbe-2e9e468a9c05",
-        "title": "Album de famille",
-        "event_ids": "d3eafa10-a745-5597-94cb-39521449a60e",
-        "author_ids": [
-            "2503e0ea-8931-5458-afc8-90b272d6baa0"
-        ],
-        "publisher": "L'agrume",
-        "publishing_year": 2014
-    },
-    {
-        "id": "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98",
-        "title": "Plus si entente",
-        "event_ids": "d3eafa10-a745-5597-94cb-39521449a60e",
-        "author_ids": [
-            "bdb4565e-067f-56ca-8936-a076246543f4",
-            "2027444e-c012-54a3-aec8-f68484ffe1eb"
-        ],
-        "publisher": "Actes Sud",
-        "publishing_year": 2014
-    },
-    {
-        "id": "79894bab-2308-5561-b5ba-b688a26f6672",
-        "title": "Saveur coco",
-        "event_ids": "d3eafa10-a745-5597-94cb-39521449a60e",
-        "author_ids": [
-            "a7e5dfca-337c-58a2-8dfb-d1469b851bd9"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": 2013
-    },
-    {
-        "id": "995dd270-3ead-51df-a96b-919cd922cbea",
-        "title": "Magic pen",
-        "event_ids": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
-        "author_ids": [
-            "43871c3f-7878-50fd-8691-838780202913"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2014
-    },
-    {
-        "id": "76b4d2f1-cdb5-5aae-9479-3daf719d8adb",
-        "title": "Palepoli",
-        "event_ids": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
-        "author_ids": [
-            "bd00fc5a-20dc-576b-bad2-a3336306d052"
-        ],
-        "publisher": "IMHO",
-        "publishing_year": 2012
-    },
-    {
-        "id": "06175f53-82fc-5df0-a3d6-33be607df9c8",
-        "title": "Love in vain",
-        "event_ids": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
-        "author_ids": [
-            "402fbda6-fe33-5e95-a64c-4385f9029a38",
-            "499e8af8-50a7-57f3-8d89-f5d793796f9d"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": 2014
-    },
-    {
-        "id": "8f57610f-1014-5596-8015-17b94899cd58",
-        "title": "Panthere",
-        "event_ids": "d5f75c97-9c89-5bba-b8ae-3a252399c8f9",
-        "author_ids": [
-            "5140c72e-436a-5c58-85af-fde4a31bd1da"
-        ],
-        "publisher": "Actes Sud",
-        "publishing_year": 2014
-    },
-    {
-        "id": "dc370931-0191-5023-a121-09e365903d81",
-        "title": "Elle",
-        "event_ids": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
-        "author_ids": [
-            "298957cc-14c1-506e-b3d1-61603cbccd87"
-        ],
-        "publisher": "L' association",
-        "publishing_year": 2014
-    },
-    {
-        "id": "4c2f3bd9-177e-561b-a197-3579528230ae",
-        "title": "La lune est blanche",
-        "event_ids": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
-        "author_ids": [
-            "72a26f1a-77d7-531c-a4f4-2018eeb616ce",
-            "b678c865-cc90-539b-8e87-b8b7bd979836"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": 2014
-    },
-    {
-        "id": "75fc73a4-84d6-50f0-99d9-b7445c392bb8",
-        "title": "Mind game",
-        "event_ids": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
-        "author_ids": [
-            "402fbda6-fe33-5e95-a64c-4385f9029a38",
-            "499e8af8-50a7-57f3-8d89-f5d793796f9d"
-        ],
-        "publisher": "IMHO",
-        "publishing_year": 2014
-    },
-    {
-        "id": "979cc21c-4c87-5805-b5f5-6f5f3f1606d2",
-        "title": "Superman identité secrète",
-        "event_ids": "defb09ef-c4e5-542b-acdf-e0b5029140ba",
-        "author_ids": [
-            "6b6badf0-ebf9-58a7-8c65-f1d065349439",
-            "fa90699d-7b23-523d-b295-cb62820b4f9b"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2014
-    },
-    {
-        "id": "beee135e-1fed-5a0c-9083-dde2ebaec54d",
-        "title": "Gros bois",
-        "event_ids": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
-        "author_ids": [
-            "0cf5be42-674c-5e17-9e49-7fb184b1431c"
-        ],
-        "publisher": "Les enfants rouges",
-        "publishing_year": 2014
-    },
-    {
-        "id": "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d",
-        "title": "The Wake",
-        "event_ids": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
-        "author_ids": [
-            "d4584704-3ebe-5a6f-b8f9-bf17fa741a33",
-            "f2c424bc-1c49-51c1-b24c-e35a2aa03969"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2015
-    },
-    {
-        "id": "db8922f2-954d-5063-9ca0-699e952b7520",
-        "title": "Little tulip",
-        "event_ids": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
-        "author_ids": [
-            "3bb69f39-439a-56b4-8c8b-84229ff231ba",
-            "4d4f91cb-cbe7-5303-8271-d641cf6a6221"
-        ],
-        "publisher": "Le Lombard",
-        "publishing_year": 2014
-    },
-    {
-        "id": "3da21605-8214-54c2-b22c-e217a9c9ce93",
-        "title": "Un vrai guerrier ne meurt jamais même si ça signifie la mort",
-        "event_ids": "f22d82a6-0cbb-545d-ac4e-4d6766dd929b",
-        "author_ids": [
-            "0eb89bcb-1cb8-54fb-84dd-ae9d7268c805"
-        ],
-        "publisher": "Arbitraire",
-        "publishing_year": 2015
-    },
-    {
-        "id": "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9",
-        "title": "La colère de Fantomas",
-        "event_ids": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
-        "author_ids": [
-            "95fa1c0a-912a-55cc-8056-f531d33f882e",
-            "48f4c9b6-4f07-53ad-bd78-dfc79b024297"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": 2015
-    },
-    {
-        "id": "43bbd0e5-e692-5e43-950a-eb10bd288972",
-        "title": "En temps de guerre",
-        "event_ids": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
-        "author_ids": [
-            "54ffe919-5f0b-553a-bd79-e6c9314fe6ba"
-        ],
-        "publisher": "Misma",
-        "publishing_year": 2015
-    },
-    {
-        "id": "f5bfa282-0bba-5c25-819a-7189c4fa979f",
-        "title": "Poison City",
-        "event_ids": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
-        "author_ids": [
-            "f22a840a-ae7b-585b-b790-d0e5e0a22043"
-        ],
-        "publisher": "Ki-Oon",
-        "publishing_year": 2015
-    },
-    {
-        "id": "38c7eb79-a784-51a2-bf4e-94b788834ea9",
-        "title": "Une tête bien vide",
-        "event_ids": "f9362d2e-7799-5314-8d0f-7bfbebbc45b6",
-        "author_ids": [
-            "617cfc5a-f2fa-5b31-9e82-f0e71d742d38"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": 2015
-    },
-    {
-        "id": "aaa5174a-d012-5a86-83ff-88ee561cee78",
-        "title": "All-Star Superman",
-        "event_ids": "5530f067-a32c-51e1-9ad7-97cf775ed705",
-        "author_ids": [
-            "82b73354-e24a-5897-a4d7-a14c69097c14",
-            "950aea29-52b1-5b38-916e-69bd7222eed0"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2013
-    },
-    {
-        "id": "a8f38346-3d87-5afd-9d0c-423aea300f2a",
-        "title": "Rose Profond",
-        "event_ids": "5530f067-a32c-51e1-9ad7-97cf775ed705",
-        "author_ids": [
-            "e2973a8e-b6fe-5378-b489-513f29620f71",
-            "06153a78-09a9-505d-94b2-6d01b716bd24"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2015
-    },
-    {
-        "id": "09bf28a9-0ce1-5a09-a99c-a21fcffed008",
-        "title": "La tendresse des pierres",
-        "event_ids": "5530f067-a32c-51e1-9ad7-97cf775ed705",
-        "author_ids": [
-            "f51793e5-443e-5f81-a04e-65fb91a807e1"
-        ],
-        "publisher": "Magnani",
-        "publishing_year": 2013
-    },
-    {
-        "id": "d6cae607-a1ff-5926-a3f2-bb062c84ffb8",
-        "title": "L'encyclopedie des débuts de la terre",
-        "event_ids": "5530f067-a32c-51e1-9ad7-97cf775ed705",
-        "author_ids": [
-            "d8152d45-6327-555b-bab0-5773452caeed"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2015
-    },
-    {
-        "id": "ae0bc9de-368c-501b-bad7-5bbbe89576fb",
-        "title": "La république du catch",
-        "event_ids": "2456ad86-5acc-5301-9bd6-90548d61b552",
-        "author_ids": [
-            "e09ec5a1-670e-5f3d-9f32-349c029bac21"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2013
-    },
-    {
-        "id": "20d228c3-067c-5067-90c8-cb8cc271fe6f",
-        "title": "Six-Gun Gorilla",
-        "event_ids": "2456ad86-5acc-5301-9bd6-90548d61b552",
-        "author_ids": [
-            "61b42f2a-c779-5680-b591-6e6128f1a1b7",
-            "42648312-3057-56f3-a03c-346bc337f3f8"
-        ],
-        "publisher": "Ankama",
-        "publishing_year": 2015
-    },
-    {
-        "id": "fa873fe7-0449-5f89-8fc9-cfe1654b8041",
-        "title": "Renégat",
-        "event_ids": "2456ad86-5acc-5301-9bd6-90548d61b552",
-        "author_ids": [
-            "8de0a770-0d52-5e17-97db-ef10383eb7e6"
-        ],
-        "publisher": "The Hoochie Coochie",
-        "publishing_year": 2012
-    },
-    {
-        "id": "795622ed-bfb2-50c3-8569-fb6f10d3cddd",
-        "title": "Jolies ténèbres",
-        "event_ids": "2456ad86-5acc-5301-9bd6-90548d61b552",
-        "author_ids": [
-            "742c3aed-25a1-5152-a908-bd41647dc69a",
-            "b818290e-2fbd-585a-828a-479920a33e88"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": 2009
-    },
-    {
-        "id": "e49de7c1-067d-5937-b900-075d3a2f7799",
-        "title": "Le sculpteur",
-        "event_ids": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
-        "author_ids": [
-            "3c63d44c-9b4f-596e-9bd5-84c3786f15dd"
-        ],
-        "publisher": "Rue de Sèvre",
-        "publishing_year": 2015
-    },
-    {
-        "id": "cef800c9-32c9-52ab-bf7c-f734ba6c65db",
-        "title": "Daddy's girl",
-        "event_ids": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
-        "author_ids": [
-            "32df707a-3433-582f-b61e-ae27388d4713"
-        ],
-        "publisher": "L'Association",
-        "publishing_year": 1996
-    },
-    {
-        "id": "7b7682a7-12fd-5c89-81c1-ce4b2ec3cedd",
-        "title": "La fille de la plage",
-        "event_ids": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
-        "author_ids": [
-            "b4e9729a-f1c7-5994-b791-a4c365333f5b"
-        ],
-        "publisher": "IMHO",
-        "publishing_year": 2014
-    },
-    {
-        "id": "485c9772-b7f3-5b59-99a0-5bc51d90677a",
-        "title": "Racket",
-        "event_ids": "b9550565-c4f9-51fc-b8e1-1259a3c5cc82",
-        "author_ids": [
-            "000c49b2-0453-5107-a06f-58c9b1fea271"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": 2015
-    },
-    {
-        "id": "70aad9fb-30b1-5177-8126-c531467c028e",
-        "title": "Fraction",
-        "event_ids": "3b113b35-2d55-51c4-a846-f640bae083f4",
-        "author_ids": [
-            "b4ba44f4-199f-5988-8479-e4422af71a49"
-        ],
-        "publisher": "IMHO",
-        "publishing_year": 2012
-    },
-    {
-        "id": "f9920e4a-7ba8-5f19-8842-ceaf65dd8b9d",
-        "title": "Titeuf - Bienvenue en adolescence",
-        "event_ids": "3b113b35-2d55-51c4-a846-f640bae083f4",
-        "author_ids": [
-            "94dabec5-6d21-52f5-bcb2-0298eeca942e"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": 2015
-    },
-    {
-        "id": "9f0067bc-02b7-50da-a83e-61b896fc352d",
-        "title": "Hobo Mom",
-        "event_ids": "3b113b35-2d55-51c4-a846-f640bae083f4",
-        "author_ids": [
-            "40a78c44-4310-5562-8dc7-76d43d290bda"
-        ],
-        "publisher": "L'Employé du Moi",
-        "publishing_year": 2015
-    },
-    {
-        "id": "da2485f6-6f49-5a22-a601-34c06f8fe55f",
-        "title": "Pauline à Paris",
-        "event_ids": "3b113b35-2d55-51c4-a846-f640bae083f4",
-        "author_ids": [
-            "86b380e5-e629-5310-a14c-a81874f5b0be"
-        ],
-        "publisher": "FLBLB",
-        "publishing_year": 2015
-    },
-    {
-        "id": "fb96800d-99ad-51c1-a1e8-f27c7d8fbb10",
-        "title": "Cigish",
-        "event_ids": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
-        "author_ids": [
-            "b51e43e0-93f2-5e19-a4ea-6c9847f8a7e3"
-        ],
-        "publisher": "Ankama",
-        "publishing_year": 2015
-    },
-    {
-        "id": "94bd0510-12eb-51a0-a26e-0c444a702785",
-        "title": "Le grand méchant renard",
-        "event_ids": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
-        "author_ids": [
-            "bb4e4e79-2608-504d-8924-888397c60925"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": 2015
-    },
-    {
-        "id": "36e7eb28-ed60-5818-bc3a-eb39ae1e3105",
-        "title": "Tel qu'en lui même enfin",
-        "event_ids": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
-        "author_ids": [
-            "073d9082-a5d3-506a-985d-eb0aebe059a8"
-        ],
-        "publisher": "L'Association",
-        "publishing_year": 2015
-    },
-    {
-        "id": "331c85b8-47f5-56b5-bdb2-c4ad8b36a229",
-        "title": "Mitterand, un jeune homme de droite",
-        "event_ids": "00e27df2-3483-5397-bfdb-e40b84d0dd1c",
-        "author_ids": [
-            "ce0db7bb-6bd3-522e-bc15-0b4f81ad598e",
-            "ecb4c9b9-3668-504e-b85a-91058c2412a2"
-        ],
-        "publisher": "Rue de Sèvres",
-        "publishing_year": 2015
-    },
-    {
-        "id": "6dcd8372-864e-593c-aa7b-d1c4421ca80a",
-        "title": "Facteur pour femmes",
-        "event_ids": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
-        "author_ids": [
-            "e9d80524-250a-5eed-b35a-7c4e80bac050",
-            "9425decb-3a8b-5e37-aac5-5ccb7a8b06d7"
-        ],
-        "publisher": "Grand Angle",
-        "publishing_year": 2015
-    },
-    {
-        "id": "ee4b52be-c659-5eff-ae4e-44cebfeb024c",
-        "title": "Trashed",
-        "event_ids": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
-        "author_ids": [
-            "96f050f1-d364-5995-835b-e0735f743da1"
-        ],
-        "publisher": "çà et là",
-        "publishing_year": 2015
-    },
-    {
-        "id": "e9a8d3e6-7671-5522-9438-1ca74a7d4a54",
-        "title": "Ladyboy vs Yakuzas",
-        "event_ids": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
-        "author_ids": [
-            "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e"
-        ],
-        "publisher": "Akata",
-        "publishing_year": 2015
-    },
-    {
-        "id": "bab472e5-dba8-56e8-94b4-eaca12df0767",
-        "title": "Le temps est proche",
-        "event_ids": "590aeb5c-04d1-5591-8c71-8f194fe9dd1a",
-        "author_ids": [
-            "0de81355-7467-5c84-ac5a-fda83bddd329"
-        ],
-        "publisher": "The Hoochie Coochie",
-        "publishing_year": 2012
-    },
-    {
-        "id": "5879ed08-b528-54fa-b889-cb9b6654c5e6",
-        "title": "Comment faire fortune en juin 40",
-        "event_ids": "fc63aa8e-600f-5543-807f-73035f19248e",
-        "author_ids": [
-            "55310ba7-320a-5abb-8b39-eff41549b0f1",
-            "5c38e890-27df-567f-9c6f-bcec8ceea617",
-            "a0303dba-bfa5-5dbc-8c2a-7cc1352a5f7e"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2015
-    },
-    {
-        "id": "c8efe667-cfa0-5265-92b3-8f32fbeb53b1",
-        "title": "Gazoline l'intégrale",
-        "event_ids": "fc63aa8e-600f-5543-807f-73035f19248e",
-        "author_ids": [
-            "33d9e522-4553-5c30-84d9-90627de2766d"
-        ],
-        "publisher": "Les Requins Marteaux",
-        "publishing_year": 2015
-    },
-    {
-        "id": "0ee6ba43-46ad-5c80-8a2e-5114850d943b",
-        "title": "Vater und sohn",
-        "event_ids": "fc63aa8e-600f-5543-807f-73035f19248e",
-        "author_ids": [
-            "6784186c-7620-5323-ba49-f65e51e6ae6f"
-        ],
-        "publisher": "Warum / Vraoum",
-        "publishing_year": 2015
-    },
-    {
-        "id": "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe",
-        "title": "Green Lantern & Green Arrow",
-        "event_ids": "fc63aa8e-600f-5543-807f-73035f19248e",
-        "author_ids": [
-            "1447e129-555d-532d-8df9-d42e6407feef",
-            "21ea33cb-1507-5e60-80c3-10871c80788b",
-            "dd7e20bf-bcd1-5b90-a7d5-96c2ef461276"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2014
-    },
-    {
-        "id": "5cad8b88-954e-5800-bf00-9a0844b4317d",
-        "title": "Carnet de santé foireuse",
-        "event_ids": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
-        "author_ids": [
-            "93d9e02c-ca19-59ba-a0ff-fe436c3a55bf"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": 2016
-    },
-    {
-        "id": "a1271973-c370-5a5f-a7d4-8feb30577f49",
-        "title": "Dernier arpenteur des sables",
-        "event_ids": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
-        "author_ids": [
-            "fbc80bf7-51eb-58fc-b8c2-66228d9518a3"
-        ],
-        "publisher": "Cambourakis",
-        "publishing_year": 2015
-    },
-    {
-        "id": "169ce90d-4993-5277-b4b4-898b948ae30b",
-        "title": "Feu de paille",
-        "event_ids": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
-        "author_ids": [
-            "0ca16d5c-a8ba-5db2-9f06-f74b056d9c83"
-        ],
-        "publisher": "6 Pieds Sous Terre",
-        "publishing_year": 2015
-    },
-    {
-        "id": "c11af8d5-9a5d-5d5d-8a37-806ab326e55e",
-        "title": "Stigmates",
-        "event_ids": "577662aa-e0e0-5fc7-9538-eea8c644fac8",
-        "author_ids": [
-            "1a15581a-5279-5430-876c-2e8ffa8ff9a9"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2015
-    },
-    {
-        "id": "112b74f7-40f7-535a-aab9-b13d3c94c4d2",
-        "title": "Punk Rock Jesus",
-        "event_ids": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
-        "author_ids": [
-            "f2c424bc-1c49-51c1-b24c-e35a2aa03969"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2013
-    },
-    {
-        "id": "acef282e-003f-5e71-a1db-09b55471da17",
-        "title": "L'attente infinie",
-        "event_ids": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
-        "author_ids": [
-            "c1ffebeb-922e-5aec-a97e-43302c30360d"
-        ],
-        "publisher": "L'Agrume",
-        "publishing_year": 2015
-    },
-    {
-        "id": "429db244-0244-5954-aed2-67933069011e",
-        "title": "La paresse du panda",
-        "event_ids": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
-        "author_ids": [
-            "d0b44328-312e-5462-94fc-6071926328cf"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2016
-    },
-    {
-        "id": "a287fabc-b371-534f-b5ae-bce6b907b35f",
-        "title": "Blues",
-        "event_ids": "9892d986-cf7a-5e39-8f31-7e0e110e3565",
-        "author_ids": [
-            "64050749-07c1-53a7-82b9-41a75f355e82"
-        ],
-        "publisher": "Mosquito",
-        "publishing_year": 2007
-    },
-    {
-        "id": "ea17e67e-3aed-5734-bee3-23d291cb2e65",
-        "title": "Ici",
-        "event_ids": "634fc1df-6058-5247-a08c-fad69ce34c2e",
-        "author_ids": [
-            "d95d8155-cb3d-51b6-aa89-a6c1c7d4efda"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2015
-    },
-    {
-        "id": "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4",
-        "title": "Luthor",
-        "event_ids": "634fc1df-6058-5247-a08c-fad69ce34c2e",
-        "author_ids": [
-            "307d6d57-5e9c-5093-81f8-c14ebd1a70bf",
-            "87b5bd4e-962b-5128-b63a-fcb5a620a097"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2016
-    },
-    {
-        "id": "1fe8553a-dc4f-557c-b0c8-ed285d25d513",
-        "title": "Capitaine Mulet",
-        "event_ids": "634fc1df-6058-5247-a08c-fad69ce34c2e",
-        "author_ids": [
-            "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57"
-        ],
-        "publisher": "Editions 2024",
-        "publishing_year": 2016
-    },
-    {
-        "id": "d7db5c18-6776-5197-b68c-f61569bd178a",
-        "title": "Commando Culotte",
-        "event_ids": "634fc1df-6058-5247-a08c-fad69ce34c2e",
-        "author_ids": [
-            "07e138d4-c5e0-5e13-81c4-b924dca78d61"
-        ],
-        "publisher": "Ankama",
-        "publishing_year": 2016
-    },
-    {
-        "id": "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32",
-        "title": "Mickey's craziest adventures",
-        "event_ids": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
-        "author_ids": [
-            "29c51d18-72d7-5715-8d93-7f49418467af",
-            "63e6bbf9-501c-5cab-a447-df8eca94278c"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": 2016
-    },
-    {
-        "id": "f2860692-948f-5d47-b998-60f799a21268",
-        "title": "Presque",
-        "event_ids": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
-        "author_ids": [
-            "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2"
-        ],
-        "publisher": "Les Rêveurs",
-        "publishing_year": 2010
-    },
-    {
-        "id": "69f9074f-83c0-57ba-977b-1125d2fbae16",
-        "title": "Medley",
-        "event_ids": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
-        "author_ids": [
-            "5ad0a9e1-5ffa-5c14-a110-f2130ce3514f"
-        ],
-        "publisher": "Même Pas Mal",
-        "publishing_year": 2016
-    },
-    {
-        "id": "e71a06a2-fc10-56f0-b0a6-f5b1ec6ce8d4",
-        "title": "Journal",
-        "event_ids": "77c01a2a-d1e6-590e-b030-9b97131b7e52",
-        "author_ids": [
-            "e7bad250-6da0-56ae-ab7c-bb32c2243587"
-        ],
-        "publisher": "L'Agrume",
-        "publishing_year": 2014
-    },
-    {
-        "id": "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3",
-        "title": "L'odeur des garçons affamés",
-        "event_ids": "b0b01187-3e41-530a-b69d-1b778156244a",
-        "author_ids": [
-            "5dffb67a-5aac-5df7-8cff-c42c4085749e",
-            "2f4e23e5-9feb-53ab-beae-4555370c8f0d"
-        ],
-        "publisher": "Casterman BD",
-        "publishing_year": 2016
-    },
-    {
-        "id": "80fb2922-29f9-5231-ba34-224676df214b",
-        "title": "Le confesseur sauvage",
-        "event_ids": "b0b01187-3e41-530a-b69d-1b778156244a",
-        "author_ids": [
-            "7fe75a35-1d64-517a-885f-630c30ee6ba0"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": 2015
-    },
-    {
-        "id": "31218cb7-1c1c-5c1e-ba45-3383eb2db2a4",
-        "title": "Orange",
-        "event_ids": "b0b01187-3e41-530a-b69d-1b778156244a",
-        "author_ids": [
-            "c5e6aaf1-2b53-5f0e-bce2-0c4c94f86c6f"
-        ],
-        "publisher": "Akata",
-        "publishing_year": 2014
-    },
-    {
-        "id": "d6777df6-7ff7-5d60-883a-8b4a3ea24742",
-        "title": "Les spectateurs",
-        "event_ids": "b0b01187-3e41-530a-b69d-1b778156244a",
-        "author_ids": [
-            "09ba303e-ed68-5c29-bac3-42f3ca9dc165"
-        ],
-        "publisher": "Casterman BD",
-        "publishing_year": 2016
-    },
-    {
-        "id": "0f4c7769-b9a0-5d86-90c2-0dab9cdecac5",
-        "title": "L'homme qui tua Lucky Luke",
-        "event_ids": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
-        "author_ids": [
-            "453525aa-7f27-5d42-ba7b-d5459af791fc"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2016
-    },
-    {
-        "id": "50457d0a-d275-54ae-a701-73038d4557e5",
-        "title": "Hors-jeu",
-        "event_ids": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
-        "author_ids": [
-            "a1538e2c-43f9-5a42-8d71-008ad928bf75"
-        ],
-        "publisher": "L'Agrume",
-        "publishing_year": 2016
-    },
-    {
-        "id": "ff97eec9-4561-5965-b9fd-31a81ed88ca1",
-        "title": "Le concile des arbres",
-        "event_ids": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
-        "author_ids": [
-            "d9ccf51f-773d-5fc2-96b6-c595993dc4d5",
-            "9329ecf2-fb88-5cda-93d0-4d796212135a"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": 2016
-    },
-    {
-        "id": "f6807abd-c884-551c-ad68-32d7182e64bc",
-        "title": "White Trash",
-        "event_ids": "ebcd603e-64b3-5e3d-bb18-e26dcae09acf",
-        "author_ids": [
-            "c533d6df-4b35-5261-9157-fa3cef0e4088"
-        ],
-        "publisher": "Ankama",
-        "publishing_year": 2016
-    },
-    {
-        "id": "13cec0e3-d7e3-54da-be39-8ea04750452b",
-        "title": "Kobane Calling",
-        "event_ids": "acaef519-c1b3-5690-84b1-d8fb25759813",
-        "author_ids": [
-            "8d89626c-33ca-5927-9738-0bf520f4b52e"
-        ],
-        "publisher": "Cambourakis​",
-        "publishing_year": 2016
-    },
-    {
-        "id": "4855cab9-a793-5a3b-b9ed-a1ae11a4cb96",
-        "title": "L'origine du monde",
-        "event_ids": "acaef519-c1b3-5690-84b1-d8fb25759813",
-        "author_ids": [
-            "6036d73a-1f6b-581b-8e41-74a385c4be82"
-        ],
-        "publisher": "Rackham",
-        "publishing_year": 2016
-    },
-    {
-        "id": "b84e2de9-9773-5fb3-b098-95600aabefb4",
-        "title": "Les fils d'El Topo",
-        "event_ids": "acaef519-c1b3-5690-84b1-d8fb25759813",
-        "author_ids": [
-            "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b",
-            "a0b94843-ddbb-5e2e-94f4-31715a79ae96"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": 2016
-    },
-    {
-        "id": "6abe3396-863c-534c-ab1f-f19543d6c60d",
-        "title": "Gros Ours et Petit Lapin",
-        "event_ids": "acaef519-c1b3-5690-84b1-d8fb25759813",
-        "author_ids": [
-            "8d7dbf62-af3b-5183-9758-a74bff3e93b2"
-        ],
-        "publisher": "Misma",
-        "publishing_year": 2016
-    },
-    {
-        "id": "72f2081f-6273-5dc2-8c7b-28dc3370c098",
-        "title": "Ghost World",
-        "event_ids": "81b7b345-17ae-599b-8c17-b38aafc42040",
-        "author_ids": [
-            "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8"
-        ],
-        "publisher": "Cornélius",
-        "publishing_year": 2016
-    },
-    {
-        "id": "2e080007-73f3-551b-9c26-e8e9ebec19d2",
-        "title": "Gunnm",
-        "event_ids": "81b7b345-17ae-599b-8c17-b38aafc42040",
-        "author_ids": [
-            "65e00d00-102a-5d11-a8ee-1ae12e5f8022"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": 2016
-    },
-    {
-        "id": "b5c177d6-e429-538f-84b3-6f857b20a7a4",
-        "title": "Vive la marée !",
-        "event_ids": "81b7b345-17ae-599b-8c17-b38aafc42040",
-        "author_ids": [
-            "343a491e-3575-5f01-bd10-fce806418d2d",
-            "63d2e556-4c79-555b-afec-1eb4a3f509a5"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": 2015
-    },
-    {
-        "id": "9491f949-140c-5092-9add-d05dc3983fe1",
-        "title": "Monsieur Léotard",
-        "event_ids": "81b7b345-17ae-599b-8c17-b38aafc42040",
-        "author_ids": [
-            "eb457afe-c7d7-5465-91f5-1f76bbd153d4",
-            "aabdfb6d-def7-59e7-aef7-caf4f826425e"
-        ],
-        "publisher": "Çà et là",
-        "publishing_year": 2016
-    },
-    {
-        "id": "bde8dc28-1f8e-58e9-8de4-8efd46178c54",
-        "title": "L'essentiel de Gouines à suivre",
-        "event_ids": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
-        "author_ids": [
-            "c31ac25f-8577-51a4-8112-3280350d8f34"
-        ],
-        "publisher": "Même Pas Mal",
-        "publishing_year": 2016
-    },
-    {
-        "id": "9ac45906-4b6a-5ca4-805b-f64aec4b90bc",
-        "title": "Spirou, La lumière de Bornéo",
-        "event_ids": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
-        "author_ids": [
-            "f780ae12-bdb3-5934-a7eb-c1a220d6c1f7",
-            "095fe88f-e6bc-523c-a338-d927d8a46767"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": 2016
-    },
-    {
-        "id": "c4a296ae-92a4-59dc-9301-4a603a7cffd0",
-        "title": "Police Lunaire",
-        "event_ids": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
-        "author_ids": [
-            "82f0f18e-ef7e-5f41-8047-ad16d91e05e4"
-        ],
-        "publisher": "Editions 2024",
-        "publishing_year": 2016
-    },
-    {
-        "id": "562e5012-19b0-5794-aa0e-4636a143312f",
-        "title": "Aventures de Luther Arkwright",
-        "event_ids": "eb52c998-b16a-55d6-a25e-fc780089bc5b",
-        "author_ids": [
-            "2f89aaac-ebdd-5a34-a0a8-e93588b567e4"
-        ],
-        "publisher": "Kymera Comics",
-        "publishing_year": 2006
-    },
-    {
-        "id": "163d1778-437a-5b0b-a41c-477e1740f9d6",
-        "title": "Cot Cot",
-        "event_ids": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
-        "author_ids": [
-            "74fe19ba-aed1-535a-b8e0-d23ecae07b52"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": 2003
-    },
-    {
-        "id": "3ffeb194-5cc8-5d05-ade9-964f5999aa79",
-        "title": "Une féssée et au lit",
-        "event_ids": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
-        "author_ids": [
-            "aedca89a-5fbd-5370-bd4f-613e59392e1e"
-        ],
-        "publisher": "The Hoochie Coochie",
-        "publishing_year": 2016
-    },
-    {
-        "id": "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc",
-        "title": "Heartful Company",
-        "event_ids": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
-        "author_ids": [
-            "ecc84076-df42-5c48-b1a3-d3d8a57b3771",
-            "bd3ae08f-db85-5ec7-997d-14285b672739"
-        ],
-        "publisher": "IMHO",
-        "publishing_year": 2013
-    },
-    {
-        "id": "0d8ca287-8e3d-55a9-9f4f-bbe8a1a62c40",
-        "title": "Super Sourde",
-        "event_ids": "d7bb79a6-c63f-532e-9f9a-c52593db9321",
-        "author_ids": [
-            "160a3ea0-3de2-5647-bd35-de0856ad7ff1"
-        ],
-        "publisher": "Les Arènes",
-        "publishing_year": 2015
-    },
-    {
-        "id": "5a7dd53b-1495-5663-bea2-733fedd1d228",
-        "title": "Stupor Mundi",
-        "event_ids": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
-        "author_ids": [
-            "b84a8b0d-c5d4-50a0-98ca-7499c46b7968"
-        ],
-        "publisher": "Gallimard BD",
-        "publishing_year": 2016
-    },
-    {
-        "id": "4335f95a-162b-55fd-bc33-9ae6270eaa96",
-        "title": "Otto l'homme réécrit",
-        "event_ids": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
-        "author_ids": [
-            "a0e8081c-c789-5249-a9ad-938d911d3d15"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": 2016
-    },
-    {
-        "id": "92d4a711-7df9-52a6-aef4-35cf71bbc16a",
-        "title": "Tulipe",
-        "event_ids": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
-        "author_ids": [
-            "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57"
-        ],
-        "publisher": "Editions 2024",
-        "publishing_year": 2016
-    },
-    {
-        "id": "09bd361d-294b-548e-81d2-a24ce73e755a",
-        "title": "La pipe de Marcos",
-        "event_ids": "7e9194c4-701f-58d0-801d-6b0a204ec1d4",
-        "author_ids": [
-            "5a27bd93-6368-5a71-863e-b2984c27b7da"
-        ],
-        "publisher": "Rackham",
-        "publishing_year": 2005
-    },
-    {
-        "id": "1d56642e-0dc1-5f4a-aae2-0fa94df543fd",
-        "title": "Shangri-la",
-        "event_ids": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
-        "author_ids": [
-            "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b"
-        ],
-        "publisher": "Ankama",
-        "publishing_year": 2016
-    },
-    {
-        "id": "7c7c3feb-134e-5fcd-8be5-c580ee005cb1",
-        "title": "Scalp",
-        "event_ids": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
-        "author_ids": [
-            "8fe7fe5d-f5d1-57fa-9b23-8613e9714774"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": 2017
-    },
-    {
-        "id": "d6aa2f0e-42e0-5e88-9aca-0f988aaf0156",
-        "title": "Charlie Chan hock Chye",
-        "event_ids": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
-        "author_ids": [
-            "0afb0661-1df4-536c-9666-10c4b38bb243"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2017
-    },
-    {
-        "id": "8a70367d-933d-5179-ad05-41d287a8027e",
-        "title": "Pelote dans la fumée",
-        "event_ids": "a25ef389-a3d0-5e2e-a153-2e280ed21d81",
-        "author_ids": [
-            "1f5f75e0-7638-50f5-80af-9cd35b1db3a9"
-        ],
-        "publisher": "Actes Sud Bd",
-        "publishing_year": 2013
-    },
-    {
-        "id": "264198c3-9db1-53e1-9cf2-57062511f327",
-        "title": "Sunny",
-        "event_ids": "a162a1f8-1fec-55a0-838d-7c9173f88142",
-        "author_ids": [
-            "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3"
-        ],
-        "publisher": "Kana",
-        "publishing_year": 2014
-    },
-    {
-        "id": "fb7e1f82-d227-5650-85b7-c44a4f634109",
-        "title": "Louis Riel",
-        "event_ids": "a162a1f8-1fec-55a0-838d-7c9173f88142",
-        "author_ids": [
-            "cdc82420-f432-5f59-a469-f2e496e2ec4d"
-        ],
-        "publisher": "La Pastèque",
-        "publishing_year": 2004
-    },
-    {
-        "id": "9915da9c-e3bf-579d-9399-0cca6f6854ed",
-        "title": "Je, François Villon",
-        "event_ids": "a162a1f8-1fec-55a0-838d-7c9173f88142",
-        "author_ids": [
-            "37c48d00-bc91-517c-b977-e253bcc19204"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": 2017
-    },
-    {
-        "id": "871a5231-dd60-5c65-9b18-723b1565ffa1",
-        "title": "La structure est pourrie camarade",
-        "event_ids": "a162a1f8-1fec-55a0-838d-7c9173f88142",
-        "author_ids": [
-            "d7ebbe2d-e613-5ff8-939b-63886c183c10",
-            "6c202026-ad9b-5d9f-a7cb-35d1e0009667"
-        ],
-        "publisher": "Actes Sud Bd",
-        "publishing_year": 2017
-    },
-    {
-        "id": "975d271b-e1e0-54f8-9273-2debfe877e0f",
-        "title": "Une soeur",
-        "event_ids": "4773d958-16dc-5d09-ac56-048ca6df63b8",
-        "author_ids": [
-            "552512e4-a3e7-5246-89cf-9ddee4ca5e17"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2017
-    },
-    {
-        "id": "49643a22-7c3c-590e-909d-2b458a3c9812",
-        "title": "Solanin",
-        "event_ids": "4773d958-16dc-5d09-ac56-048ca6df63b8",
-        "author_ids": [
-            "b4e9729a-f1c7-5994-b791-a4c365333f5b"
-        ],
-        "publisher": "Kana",
-        "publishing_year": 2007
-    },
-    {
-        "id": "5a8ed5c1-88a2-5654-88d7-c1d974ade6b3",
-        "title": "Quoi de plus normal qu'infliger la vie?",
-        "event_ids": "4773d958-16dc-5d09-ac56-048ca6df63b8",
-        "author_ids": [
-            "38a340c0-3423-5b21-8f83-9db6313b7522"
-        ],
-        "publisher": "Arbitraire",
-        "publishing_year": 2016
-    },
-    {
-        "id": "1446edf4-27ba-5484-9124-b0655c28fa02",
-        "title": "Big Kids",
-        "event_ids": "4773d958-16dc-5d09-ac56-048ca6df63b8",
-        "author_ids": [
-            "befc47ec-c72f-58e3-8519-a28173853443"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": 2017
-    },
-    {
-        "id": "5864aefd-c512-5acd-bfd4-654a9577e01f",
-        "title": "C'est un oiseau",
-        "event_ids": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
-        "author_ids": [
-            "c49f0cdc-1a16-51f1-aec9-b96dbb3ecfab",
-            "f32dd3ed-2196-56e7-bb1a-41d07e59b2f7"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2016
-    },
-    {
-        "id": "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa",
-        "title": "Paysage après la bataille",
-        "event_ids": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
-        "author_ids": [
-            "bf478f85-abfd-5914-acc2-eb7ae099bad6",
-            "b0f40b74-5f7d-5e03-9420-f2c5732abccf"
-        ],
-        "publisher": "Actes Sud BD",
-        "publishing_year": 2016
-    },
-    {
-        "id": "a3a08375-70c5-5185-aa11-1970757201c6",
-        "title": "Carnation",
-        "event_ids": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
-        "author_ids": [
-            "c8a55c08-f0a1-57c9-a276-d164183edeb8"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2017
-    },
-    {
-        "id": "506574d1-5d79-5ea8-a30b-2de7549df7f9",
-        "title": "Le Cauchemar argenté",
-        "event_ids": "41d4751a-0f18-5d59-86d2-8e48b38d35fb",
-        "author_ids": [
-            "926f14bf-2ff3-58be-b4a8-bfc69cd4f9fb"
-        ],
-        "publisher": "Mosquito",
-        "publishing_year": 2017
-    },
-    {
-        "id": "ff441b8a-e7d8-56d6-889a-43edd430e38d",
-        "title": "Epiphania",
-        "event_ids": "962b55da-7635-5b79-975c-44b8cd63497b",
-        "author_ids": [
-            "d98bf4ce-fabc-518d-9a7b-415fda62817e"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2017
-    },
-    {
-        "id": "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c",
-        "title": "Never go home",
-        "event_ids": "962b55da-7635-5b79-975c-44b8cd63497b",
-        "author_ids": [
-            "b52d45f1-1dd3-55f6-bb85-67fcb65cea0b",
-            "e0985a1b-4ff4-5b75-8ca7-3067999c69d5",
-            "91ea0576-e99f-559b-8107-43c5a962ce61"
-        ],
-        "publisher": "Glénat Comics",
-        "publishing_year": 2017
-    },
-    {
-        "id": "83e86609-2b52-52ab-b6f2-454f3f4f1588",
-        "title": "Cendres",
-        "event_ids": "962b55da-7635-5b79-975c-44b8cd63497b",
-        "author_ids": [
-            "ef93712c-4767-58cf-bde5-b0d4e4447cc3"
-        ],
-        "publisher": "Rackham",
-        "publishing_year": 2015
-    },
-    {
-        "id": "87fa356f-0b28-50f7-ad0f-7608ec05705e",
-        "title": "Johnny Ryan touche le fond",
-        "event_ids": "962b55da-7635-5b79-975c-44b8cd63497b",
-        "author_ids": [
-            "b3477ea0-acf7-5378-921f-003ae0d32b4b"
-        ],
-        "publisher": "Misma",
-        "publishing_year": 2017
-    },
-    {
-        "id": "a968de90-88cc-5e8a-b553-d7298afa9d74",
-        "title": "La saga de Grimr",
-        "event_ids": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
-        "author_ids": [
-            "035c9f3a-3ce1-5d0c-8ea8-44c33fa53465"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": 2017
-    },
-    {
-        "id": "9c926764-7669-5585-8219-0f0fb31f3498",
-        "title": "Betty Boob",
-        "event_ids": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
-        "author_ids": [
-            "1cb65ab4-91ec-58a4-b86b-15848303925f",
-            "48f4c9b6-4f07-53ad-bd78-dfc79b024297"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2017
-    },
-    {
-        "id": "920c0bc3-909f-517c-8194-eec53442da3a",
-        "title": "FUN",
-        "event_ids": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
-        "author_ids": [
-            "e8be046b-4ab7-5bf1-b064-43221857647d",
-            "a12a8cd7-361a-5455-a8da-350b55b581b1"
-        ],
-        "publisher": "Ici Même",
-        "publishing_year": 2015
-    },
-    {
-        "id": "765d65d1-e762-5976-bda4-410a49745faf",
-        "title": "Anarcoma",
-        "event_ids": "e53c882f-3627-5b43-b1d8-ee7469a56d93",
-        "author_ids": [
-            "db9a12ff-381c-54a8-847d-511a1a18e953"
-        ],
-        "publisher": "Misma",
-        "publishing_year": 2017
-    },
-    {
-        "id": "b7cfe93d-0614-51ed-9121-129779a36201",
-        "title": "My Hero Academia",
-        "event_ids": "016d6e71-04fa-5718-bbc4-42c714e709a9",
-        "author_ids": [
-            "685f38e5-4320-5e62-9650-764382aed9a2"
-        ],
-        "publisher": "Ki-oon",
-        "publishing_year": 2014
-    },
-    {
-        "id": "3c1a9222-8bc6-5dc9-9f80-8d86851d8aec",
-        "title": "Dead Dead Demon's De dedede Destruction",
-        "event_ids": "016d6e71-04fa-5718-bbc4-42c714e709a9",
-        "author_ids": [
-            "b4e9729a-f1c7-5994-b791-a4c365333f5b"
-        ],
-        "publisher": "Kana",
-        "publishing_year": 2016
-    },
-    {
-        "id": "18b43f2b-e8c9-553e-92e1-c13027830753",
-        "title": "Une collision accidentelle sur le chemin de l’école peut elle donner lieu à un baiser ?",
-        "event_ids": "016d6e71-04fa-5718-bbc4-42c714e709a9",
-        "author_ids": [
-            "b4ba44f4-199f-5988-8479-e4422af71a49"
-        ],
-        "publisher": "IMHO",
-        "publishing_year": 2013
-    },
-    {
-        "id": "42bcdd54-8a27-5fbc-b679-565b1ae82f57",
-        "title": "Kitaro le repoussant",
-        "event_ids": "016d6e71-04fa-5718-bbc4-42c714e709a9",
-        "author_ids": [
-            "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1"
-        ],
-        "publisher": "Cornélius",
-        "publishing_year": 2011
-    },
-    {
-        "id": "0ef59048-c3fb-5ea8-b650-75dafe1998cf",
-        "title": "The Wicked + The Divine",
-        "event_ids": "99984239-be4b-5527-ac6f-2efffaa923c7",
-        "author_ids": [
-            "081b0e0b-4da2-5f56-bf65-0bd4159a6420",
-            "0708b86c-85b5-5300-9cd9-a2bda4f0a606"
-        ],
-        "publisher": "Glénat Comics",
-        "publishing_year": 2016
-    },
-    {
-        "id": "2e7c3a72-b7fc-5260-a119-e8a94af085e5",
-        "title": "Arsène Schrauwen",
-        "event_ids": "99984239-be4b-5527-ac6f-2efffaa923c7",
-        "author_ids": [
-            "a730029a-5fc8-5f2d-83ee-d08a20957c8c"
-        ],
-        "publisher": "L'Association",
-        "publishing_year": 2015
-    },
-    {
-        "id": "06ce7cf3-e238-5bb4-80c8-2000e8c536c7",
-        "title": "Comtesse",
-        "event_ids": "99984239-be4b-5527-ac6f-2efffaa923c7",
-        "author_ids": [
-            "df9128c9-cec9-53c8-8729-617042111988"
-        ],
-        "publisher": "Les Requins Marteaux",
-        "publishing_year": 2010
-    },
-    {
-        "id": "37e7a325-c27f-5f10-a2d6-21765d017dd8",
-        "title": "Soft City",
-        "event_ids": "99984239-be4b-5527-ac6f-2efffaa923c7",
-        "author_ids": [
-            "be1bbed6-3d2a-5949-9210-263612f09011"
-        ],
-        "publisher": "Editions Inculte",
-        "publishing_year": 2017
-    },
-    {
-        "id": "4bc94c79-035d-558e-85ae-c08e1baee587",
-        "title": "Alors que j'essayais d'être quelqu'un de bien",
-        "event_ids": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
-        "author_ids": [
-            "ce395aec-bccb-5983-acf4-6da1f7dc05d3"
-        ],
-        "publisher": "Çà et là",
-        "publishing_year": 2017
-    },
-    {
-        "id": "b8354485-7ce8-5d1c-a71b-bca27475f6c7",
-        "title": "Les derniers jours d'un immortel",
-        "event_ids": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
-        "author_ids": [
-            "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87",
-            "4d8e72d3-3b12-548b-b11e-25da6ce04060"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": 2013
-    },
-    {
-        "id": "5be2ee50-4405-56c2-b59f-fbdc8438e45e",
-        "title": "Emma G. Wilford",
-        "event_ids": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
-        "author_ids": [
-            "095fe88f-e6bc-523c-a338-d927d8a46767",
-            "2a1ed255-67b2-58cd-b606-8c8dd612fa86"
-        ],
-        "publisher": "Soleil",
-        "publishing_year": 2017
-    },
-    {
-        "id": "68213172-a9fb-5a77-9b90-2668f465ed84",
-        "title": "Black Dog",
-        "event_ids": "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319",
-        "author_ids": [
-            "a296e419-1a8d-59a9-a3cd-d3ee5ba81fc9"
-        ],
-        "publisher": "Glénat BD",
-        "publishing_year": 2017
-    },
-    {
-        "id": "d7561c34-87ed-5351-9dcd-cabcdda88eb9",
-        "title": "Les aventures de Freddy Lombard, La comète de Carthage",
-        "event_ids": "10c922a7-8e8b-50ca-ae70-0e9dad0db06b",
-        "author_ids": [
-            "ae96a2ee-5217-5ca6-b422-07d3393e3b41"
-        ],
-        "publisher": "Les Humanoïdes Associés",
-        "publishing_year": 2014
-    },
-    {
-        "id": "ef41686b-1031-581f-a454-351eef12c49b",
-        "title": "Ailefroide, altitude 3 954",
-        "event_ids": "10c922a7-8e8b-50ca-ae70-0e9dad0db06b",
-        "author_ids": [
-            "289863c6-a5cf-5a8e-ac03-c19aae5a032f"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2018
-    },
-    {
-        "id": "9b7133ae-5594-5171-a72d-28be9d48ac38",
-        "title": "Décris-Ravage",
-        "event_ids": "10c922a7-8e8b-50ca-ae70-0e9dad0db06b",
-        "author_ids": [
-            "28ec0041-d45e-5c0f-855e-36d755e3a8cc",
-            "8de0a770-0d52-5e17-97db-ef10383eb7e6"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": 2016
-    },
-    {
-        "id": "a2edcba9-4069-57fa-860a-9b0f656b7911",
-        "title": "Pilules Bleues",
-        "event_ids": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
-        "author_ids": [
-            "2f4e23e5-9feb-53ab-beae-4555370c8f0d"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": 2001
-    },
-    {
-        "id": "2ab19c62-8468-5b16-99a6-f5b97153b993",
-        "title": "Jupiter's Legacy T1 et 2",
-        "event_ids": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
-        "author_ids": [
-            "5867fc24-0362-5151-a5c0-a8846e846594",
-            "950aea29-52b1-5b38-916e-69bd7222eed0"
-        ],
-        "publisher": "Panini Comics France",
-        "publishing_year": 2016
-    },
-    {
-        "id": "e0f10239-868a-5cde-b6dd-9c94fed8d7b5",
-        "title": "Contes ordinaires d'une société résignée",
-        "event_ids": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
-        "author_ids": [
-            "226380ae-66d4-55d7-bf85-5d57c33b16c8"
-        ],
-        "publisher": "Fluide Glacial",
-        "publishing_year": 2018
-    },
-    {
-        "id": "4752dff7-0fcb-5360-a636-374577c0b313",
-        "title": "Chaque jour Dracula",
-        "event_ids": "41d6ae0e-8b21-541d-a141-e8cc0134bbab",
-        "author_ids": [
-            "dccf230a-7e53-53fc-8c68-d313d60245f3",
-            "035010a7-3a33-5cdf-b3bc-237e47b1ac05"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": 2018
-    },
-    {
-        "id": "0e432312-5b7e-50f8-afba-7869c1256706",
-        "title": "Y le dernier homme",
-        "event_ids": "2fc305c6-f0c7-5462-9a45-89241614c418",
-        "author_ids": [
-            "ed1a4f6d-3f61-5ebf-95d6-dffa1b57b17e",
-            "04714650-136f-580a-ba12-2816571f86cf"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2012
-    },
-    {
-        "id": "8f885326-1105-5c04-9cb9-1df0a0d79080",
-        "title": "Alcoolique",
-        "event_ids": "2fc305c6-f0c7-5462-9a45-89241614c418",
-        "author_ids": [
-            "eeab9dd3-5b67-53d1-8012-0b2cc71f0442",
-            "44528b19-7eac-5aab-8e73-bbc8f7c11c8b"
-        ],
-        "publisher": "Monsieur Toussaint Louverture",
-        "publishing_year": 2015
-    },
-    {
-        "id": "3d3f33fa-274c-5750-bbe8-b8a37f599031",
-        "title": "Bouche du diable",
-        "event_ids": "2fc305c6-f0c7-5462-9a45-89241614c418",
-        "author_ids": [
-            "1b65525f-ca97-5987-ac69-2799896f5fbf",
-            "012cf8c2-f922-5759-a7c4-244fe42ff33d"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 1990
-    },
-    {
-        "id": "967b3863-f429-58b5-804c-12a7b22632fd",
-        "title": "Mémoires d’un frêne",
-        "event_ids": "2fc305c6-f0c7-5462-9a45-89241614c418",
-        "author_ids": [
-            "e0661633-2b9b-5f5f-8b1c-9dc7473c5037"
-        ],
-        "publisher": "Rue de l’échiquier",
-        "publishing_year": 2018
-    },
-    {
-        "id": "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19",
-        "title": "Deadly class",
-        "event_ids": "07171107-88be-5a83-be43-0205a9c53237",
-        "author_ids": [
-            "8f8828b6-eed2-5ab6-8658-c165aa638119",
-            "66b3e971-8a48-589a-bb44-75fb4755cf25"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2015
-    },
-    {
-        "id": "7cb93591-7dde-59e6-9afd-dc565a390435",
-        "title": "Moi ce que j'aime c'est les monstres",
-        "event_ids": "07171107-88be-5a83-be43-0205a9c53237",
-        "author_ids": [
-            "a4c619ad-7880-5c8f-aeef-ac6c22630f6d"
-        ],
-        "publisher": "Monsieur Toussaint Louverture",
-        "publishing_year": 2018
-    },
-    {
-        "id": "d0acc909-4425-5267-a65a-41d9ca5be16b",
-        "title": "Mimikaki",
-        "event_ids": "07171107-88be-5a83-be43-0205a9c53237",
-        "author_ids": [
-            "f405fdc1-4877-50a2-b054-8198ebc80a55"
-        ],
-        "publisher": "Le Lézard Noir",
-        "publishing_year": 2018
-    },
-    {
-        "id": "c5f4a66e-a9f9-530f-8694-d73e0c2f8e4c",
-        "title": "Beverly",
-        "event_ids": "07171107-88be-5a83-be43-0205a9c53237",
-        "author_ids": [
-            "ef2a5874-3ec2-5b7d-b363-c8c94498ec1a"
-        ],
-        "publisher": "Presque Lune",
-        "publishing_year": 2017
-    },
-    {
-        "id": "395b6a6b-7acb-5a84-8ddf-e855409977b8",
-        "title": "Seconds",
-        "event_ids": "437bf521-fecc-5100-9170-e59fe3b5a117",
-        "author_ids": [
-            "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": 2014
-    },
-    {
-        "id": "0fe6b6ee-7baa-56dc-ab21-40f63a87421b",
-        "title": "L'ère des cristaux",
-        "event_ids": "437bf521-fecc-5100-9170-e59fe3b5a117",
-        "author_ids": [
-            "9e03747d-9a8a-5a37-bef0-6c60c93c5600"
-        ],
-        "publisher": "Glénat Manga",
-        "publishing_year": 2016
-    },
-    {
-        "id": "27aa754b-ec29-5d31-aac3-143f9055fdb5",
-        "title": "Boris l'enfant patate",
-        "event_ids": "437bf521-fecc-5100-9170-e59fe3b5a117",
-        "author_ids": [
-            "c53c562f-90cf-52c7-852e-ba4fa5778897"
-        ],
-        "publisher": "Misma",
-        "publishing_year": 2018
-    },
-    {
-        "id": "21bdadd2-bb70-57c4-9fac-bb1eef30acc0",
-        "title": "Le Grand mort",
-        "event_ids": "437bf521-fecc-5100-9170-e59fe3b5a117",
-        "author_ids": [
-            "a353a8e9-4956-50a4-b70d-e0b753fcf522",
-            "f7afb30f-e1e2-556c-9c9a-43825f33af8f",
-            "7118c1e0-6a54-5867-b9b0-151ba357e1c8"
-        ],
-        "publisher": "Vents d'Ouest",
-        "publishing_year": 2007
-    },
-    {
-        "id": "a487bacd-3e60-5db3-9c0f-e8167d21ca9d",
-        "title": "Les filles de Salem",
-        "event_ids": "19afc03b-0b2f-5102-946c-c27a7158332e",
-        "author_ids": [
-            "34342b16-3119-579b-9c61-ef99940a8224"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": 2018
-    },
-    {
-        "id": "7a876a7a-5b64-5cde-9870-ecb1aa6d034c",
-        "title": "Jojo bizarre adventure - Diamond is unbreakable",
-        "event_ids": "19afc03b-0b2f-5102-946c-c27a7158332e",
-        "author_ids": [
-            "03cdc5ac-b075-5ab7-9fc8-3d64cdf0096d"
-        ],
-        "publisher": "Delcourt/Tonkam",
-        "publishing_year": 2015
-    },
-    {
-        "id": "6a5e1b8a-0898-5cbd-b53c-ffcb5fb7bb59",
-        "title": "Dernier test avant l'apocalypse",
-        "event_ids": "19afc03b-0b2f-5102-946c-c27a7158332e",
-        "author_ids": [
-            "a3c116a8-7515-5b5a-808f-6912b470b716"
-        ],
-        "publisher": "Delcourt/Tonkam",
-        "publishing_year": 2013
-    },
-    {
-        "id": "8347cdbe-e853-583d-a6f8-3288b8bb55a5",
-        "title": "La mère et la mort",
-        "event_ids": "19afc03b-0b2f-5102-946c-c27a7158332e",
-        "author_ids": [
-            "84220ea6-51be-54b2-8524-36bc6a1ad7c5"
-        ],
-        "publisher": "Le Tripode",
-        "publishing_year": 2018
-    },
-    {
-        "id": "c77e8572-a4d7-5a3e-b772-31dd942e9d39",
-        "title": "Journal d’un ingénu et L’espoir malgré tout",
-        "event_ids": "75bd8d09-d669-50a0-a00c-48987b2b9472",
-        "author_ids": [
-            "2d4623d8-e667-5373-b0e8-0933cc33d64e"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": 2018
-    },
-    {
-        "id": "4bb23804-0bcf-59c4-b051-ebf483efde5f",
-        "title": "Gideon falls",
-        "event_ids": "75bd8d09-d669-50a0-a00c-48987b2b9472",
-        "author_ids": [
-            "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0",
-            "b4be3d64-8025-58ce-8c65-532412a7a00a"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2018
-    },
-    {
-        "id": "7e408fbd-928f-56ab-b646-d972f5e24698",
-        "title": "Horreur cosmique",
-        "event_ids": "75bd8d09-d669-50a0-a00c-48987b2b9472",
-        "author_ids": [
-            "cc2cbfb1-a137-5c56-8a23-2671597ab919",
-            "0e19ff22-af4d-56a0-abcc-86cb2a09490d"
-        ],
-        "publisher": "Rackham",
-        "publishing_year": 2015
-    },
-    {
-        "id": "21801dc4-dd74-5bc0-881d-89f0328bcfcf",
-        "title": "L’art de la vulve une obscénité ?",
-        "event_ids": "75bd8d09-d669-50a0-a00c-48987b2b9472",
-        "author_ids": [
-            "1c483a7c-e6bb-582a-8792-0cc4e649f4d0"
-        ],
-        "publisher": "Presque Lune",
-        "publishing_year": 2018
-    },
-    {
-        "id": "b4e6e54b-c87a-5158-b824-bba62706d262",
-        "title": "Eclat(s) d’âme",
-        "event_ids": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
-        "author_ids": [
-            "458151c8-dc97-5fef-8d61-bef98aaace70"
-        ],
-        "publisher": "Akata",
-        "publishing_year": 2018
-    },
-    {
-        "id": "344c953c-2f98-510e-9642-b193cc079eeb",
-        "title": "Sweet Thoot",
-        "event_ids": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
-        "author_ids": [
-            "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2015
-    },
-    {
-        "id": "b543747f-1269-5f2c-98d3-13188b27d9b0",
-        "title": "Héroïque fantaisie",
-        "event_ids": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
-        "author_ids": [
-            "28cc0b40-521b-52be-b4d4-a956755eb971"
-        ],
-        "publisher": "Les Requins Marteaux",
-        "publishing_year": 2018
-    },
-    {
-        "id": "795ed7d3-240b-5db3-8a23-41fe5531f853",
-        "title": "Belleville story",
-        "event_ids": "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2",
-        "author_ids": [
-            "27924509-cf04-5879-b755-b018b8bb79a4",
-            "fd980b15-243b-5a7e-98a4-46024c3809b9"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": 2013
-    },
-    {
-        "id": "0a1fa77f-b0ff-55a3-ba65-d274ab0605d3",
-        "title": "La terre des fils",
-        "event_ids": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
-        "author_ids": [
-            "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": 2017
-    },
-    {
-        "id": "91796292-f679-5dc3-8e16-f53e3cd37480",
-        "title": "Comme un frisson",
-        "event_ids": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
-        "author_ids": [
-            "0334ed05-27b2-5dea-b180-3ab2692d85e7"
-        ],
-        "publisher": "Vide Cocagne",
-        "publishing_year": 2018
-    },
-    {
-        "id": "5c0d585f-9e55-51fb-bb16-f98389cb7ce4",
-        "title": "Patience",
-        "event_ids": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
-        "author_ids": [
-            "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8"
-        ],
-        "publisher": "Cornélius",
-        "publishing_year": 2016
-    },
-    {
-        "id": "08e65064-e95c-5215-8c3d-adb674683828",
-        "title": "Les nuits d'aksehir",
-        "event_ids": "ceff02b3-7019-5ae7-8968-0907eff83fdb",
-        "author_ids": [
-            "37d869e4-02d9-5885-a0c5-62e7f626e80d"
-        ],
-        "publisher": "Akata",
-        "publishing_year": 2017
-    },
-    {
-        "id": "3d70b2d5-2977-5edc-972d-5f5e66124eef",
-        "title": "La balade nationale",
-        "event_ids": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
-        "author_ids": [
-            "11ccdb5b-b14e-5297-93a6-144b65c6a374",
-            "0fa6efdf-5b59-5497-a4a0-2412cc8f2249"
-        ],
-        "publisher": "La Découverte",
-        "publishing_year": 2017
-    },
-    {
-        "id": "bf4fe76d-85e6-5b2b-8093-bd397f29ccc2",
-        "title": "Beastars",
-        "event_ids": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
-        "author_ids": [
-            "5becded1-8df8-5719-8df7-76a7c8641ec1"
-        ],
-        "publisher": "Ki-oon",
-        "publishing_year": 2019
-    },
-    {
-        "id": "8ac3624a-93f8-5771-975b-942423b399b5",
-        "title": "Dans un rayon de soleil",
-        "event_ids": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
-        "author_ids": [
-            "5210ee98-eddf-5485-bec1-870d0de8270b"
-        ],
-        "publisher": "Gallimard BD",
-        "publishing_year": 2019
-    },
-    {
-        "id": "45654738-801a-54ec-a4da-363363691092",
-        "title": "Macadam Byzance",
-        "event_ids": "7373210e-8d7c-5ea1-a2de-8f97310f21f9",
-        "author_ids": [
-            "5e40aaad-a8ad-59d4-8f7c-0fc6c135a0cd",
-            "e60fbf0f-6d78-5335-af27-7dca3f46b9b0"
-        ],
-        "publisher": "Fluide Glacial",
-        "publishing_year": 2019
-    },
-    {
-        "id": "6a77cc15-294a-5114-8d5f-73d5d402ab51",
-        "title": "Le dernier Atlas",
-        "event_ids": "e3653545-0c2a-50bd-8d14-699d252b53a9",
-        "author_ids": [
-            "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87",
-            "4d8e72d3-3b12-548b-b11e-25da6ce04060"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": null
-    },
-    {
-        "id": "20804294-4e09-50cd-94bd-8372e5d99a58",
-        "title": "Extases",
-        "event_ids": "e3653545-0c2a-50bd-8d14-699d252b53a9",
-        "author_ids": [
-            "dfb60faa-598f-5699-8b2f-01a78e66cd35"
-        ],
-        "publisher": "Casterman BD",
-        "publishing_year": null
-    },
-    {
-        "id": "85b4afe0-39bc-53e9-b894-84624222cc7d",
-        "title": "Extremity",
-        "event_ids": "e3653545-0c2a-50bd-8d14-699d252b53a9",
-        "author_ids": [
-            "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5"
-        ],
-        "publisher": "Delcourt Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "9a9a15ba-5c4a-5d05-9b95-0f346d811cf6",
-        "title": "MW",
-        "event_ids": "e3653545-0c2a-50bd-8d14-699d252b53a9",
-        "author_ids": [
-            "91077797-d951-5025-a095-fef1a2b3bb5f"
-        ],
-        "publisher": "Delcourt/Tonkam",
-        "publishing_year": null
-    },
-    {
-        "id": "a9faa5b6-9672-510a-bd92-634e3aeb2240",
-        "title": "My home hero",
-        "event_ids": "611db4de-5ee6-5c83-83c5-af36e6222068",
-        "author_ids": [
-            "2e7138da-8cc1-50d9-846f-ea5c74a98cf7",
-            "4c6305bb-724f-5f86-ae00-73e45454b903"
-        ],
-        "publisher": "Kurokawa",
-        "publishing_year": null
-    },
-    {
-        "id": "4d775666-080c-5f46-ab43-983746584a96",
-        "title": "Planètes",
-        "event_ids": "611db4de-5ee6-5c83-83c5-af36e6222068",
-        "author_ids": [
-            "183f199f-a026-5761-9ec8-c69c66040044"
-        ],
-        "publisher": "Panini Collections",
-        "publishing_year": null
-    },
-    {
-        "id": "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71",
-        "title": "In these words",
-        "event_ids": "611db4de-5ee6-5c83-83c5-af36e6222068",
-        "author_ids": [
-            "05eb8f95-5ac9-5a9c-8111-7901bcf3d397",
-            "019a8caf-92e3-54b4-8add-539931bc8478"
-        ],
-        "publisher": "Manga Taifu",
-        "publishing_year": null
-    },
-    {
-        "id": "6719474d-ed51-5f92-8278-3646bb92c03b",
-        "title": "Bride stories",
-        "event_ids": "611db4de-5ee6-5c83-83c5-af36e6222068",
-        "author_ids": [],
-        "publisher": "Ki-oon",
-        "publishing_year": null
-    },
-    {
-        "id": "e4e1d8bd-5c94-57eb-9b76-45b0d2e3c1b7",
-        "title": "NESKA",
-        "event_ids": "35935fa2-a008-5d4a-837d-ff51e42f0123",
-        "author_ids": [
-            "6b955294-0c6d-5b47-8a7f-7a46611b7aa4"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "0a23fbe5-b7b7-547f-95ef-c8e4c169ba84",
-        "title": "TED DRÔLE DE COCO",
-        "event_ids": "35935fa2-a008-5d4a-837d-ff51e42f0123",
-        "author_ids": [
-            "d055575f-870c-5ed6-8371-8ede4af900c1"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": null
-    },
-    {
-        "id": "8b193f6b-8fc9-5dd4-8f86-3dffe109ace2",
-        "title": "BEZIMENA",
-        "event_ids": "35935fa2-a008-5d4a-837d-ff51e42f0123",
-        "author_ids": [
-            "77897035-979e-5c77-9015-a3d636adb490"
-        ],
-        "publisher": "Ici Même",
-        "publishing_year": null
-    },
-    {
-        "id": "0eb55165-0714-592e-b967-ca0d76ba06ff",
-        "title": "SHERIFF OF BABYLON",
-        "event_ids": "35935fa2-a008-5d4a-837d-ff51e42f0123",
-        "author_ids": [
-            "67021253-b3f9-5131-a5a1-6f1e6996c8bd",
-            "cd86941a-d2f6-535f-bb9b-ae9e1a277c61"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "455fed83-1d56-56f4-b2e3-46efbcc1f0e1",
-        "title": "Maléfiques",
-        "event_ids": "15afad0f-6a49-5a5d-9361-e696250a3993",
-        "author_ids": [
-            "e5020b23-1913-5091-8e95-fb8deb0a3b96"
-        ],
-        "publisher": "L'Association",
-        "publishing_year": null
-    },
-    {
-        "id": "ea9613e4-c0a1-5a88-b2a4-fc986c9f2240",
-        "title": "Gokinjo",
-        "event_ids": "15afad0f-6a49-5a5d-9361-e696250a3993",
-        "author_ids": [
-            "6dc1449e-5778-5046-ae1c-0025d5d15b13"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "935c5f25-3edb-5853-91ea-c0c75d211ba5",
-        "title": "Le trône d’argile",
-        "event_ids": "15afad0f-6a49-5a5d-9361-e696250a3993",
-        "author_ids": [
-            "63afd855-4f1d-51bb-a5c5-faf4676934bd",
-            "731fd7b0-dd35-5c0e-a77b-6d21464732f8",
-            "7dc8b037-9a91-58d1-8b32-74b2c39834f2",
-            "4f07590b-71c7-574a-a119-11a46258f06a"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "99f43ae7-65c3-5f0b-bd9a-336ad6735fea",
-        "title": "Jean Doux et le mystère de la disquette molle",
-        "event_ids": "15afad0f-6a49-5a5d-9361-e696250a3993",
-        "author_ids": [
-            "089c60ee-cedc-54f3-9c4d-9414af218b1b"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "3d6f3134-2abf-5826-9462-12df423eeb00",
-        "title": "Passions",
-        "event_ids": "943ef86c-2f3d-5418-811c-3984ec44218e",
-        "author_ids": [
-            "2149320d-2c93-5c48-92dd-fd4a4b4a2916"
-        ],
-        "publisher": "Fluide Glacial",
-        "publishing_year": null
-    },
-    {
-        "id": "90a07961-765f-588b-a9b1-147327ff19e6",
-        "title": "Saison des Roses",
-        "event_ids": "943ef86c-2f3d-5418-811c-3984ec44218e",
-        "author_ids": [
-            "92d63259-a236-5255-8a90-bf9776649674"
-        ],
-        "publisher": "FLBLB",
-        "publishing_year": null
-    },
-    {
-        "id": "b6e3995c-deef-5246-a9b0-df3a38e0f7e8",
-        "title": "Mister Miracle",
-        "event_ids": "943ef86c-2f3d-5418-811c-3984ec44218e",
-        "author_ids": [
-            "67021253-b3f9-5131-a5a1-6f1e6996c8bd",
-            "cd86941a-d2f6-535f-bb9b-ae9e1a277c61"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "fa63dd8d-c49f-5a56-9f07-8f6fbbb45dbc",
-        "title": "Opus",
-        "event_ids": "943ef86c-2f3d-5418-811c-3984ec44218e",
-        "author_ids": [
-            "2d4e035b-babd-5524-8a3e-9bcba6e75ec5"
-        ],
-        "publisher": "IMHO",
-        "publishing_year": null
-    },
-    {
-        "id": "91f06cb8-a704-5705-b48a-2015fa0dd6b8",
-        "title": "The Unwritten",
-        "event_ids": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
-        "author_ids": [
-            "ac8ec002-305d-51dd-96b9-2c2c6d35b9ab",
-            "4622e2be-836f-5c71-a681-8a7b8692853d"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "9c1164e3-301e-5075-af2f-013c819bb56a",
-        "title": "Magic order",
-        "event_ids": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
-        "author_ids": [
-            "5867fc24-0362-5151-a5c0-a8846e846594",
-            "a35e9edb-f6b1-5319-a1b2-1d16cc509e2a"
-        ],
-        "publisher": "Panini Comics France",
-        "publishing_year": null
-    },
-    {
-        "id": "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea",
-        "title": "Black panther ennemi d'état",
-        "event_ids": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
-        "author_ids": [
-            "40790dc7-7194-5449-98fe-ccc3f6fa7767",
-            "2e83f03b-61b3-5559-8c7b-9f91ce6434b7"
-        ],
-        "publisher": "Panini Comics France",
-        "publishing_year": null
-    },
-    {
-        "id": "809c07eb-4cdb-564d-801f-810e13afae93",
-        "title": "Luke Cage",
-        "event_ids": "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2",
-        "author_ids": [
-            "86408786-4e90-52b4-aa67-30066872af26",
-            "fe17f662-7b96-54eb-a378-d165448e83c6"
-        ],
-        "publisher": "Panini Comics France",
-        "publishing_year": null
-    },
-    {
-        "id": "04614ebb-df6b-5425-9f49-a953190b114f",
-        "title": "Préférence système",
-        "event_ids": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
-        "author_ids": [
-            "10666593-e9d3-5312-90c8-4ef8d1e3cebe"
-        ],
-        "publisher": "Denoël Graphic",
-        "publishing_year": null
-    },
-    {
-        "id": "fff5e173-faf5-5091-b143-91036a35047d",
-        "title": "In Waves",
-        "event_ids": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
-        "author_ids": [
-            "b9adbafa-9486-52d4-bfd9-7072efd368ae"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "88083fb1-f033-50a2-a26a-84921246605c",
-        "title": "Bergères guerrières",
-        "event_ids": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
-        "author_ids": [
-            "1a7ad751-eef5-54c6-af64-bf354fc1c6bb",
-            "8ebd502e-0353-5076-9daf-ef5e18c72f6c"
-        ],
-        "publisher": "Glenat",
-        "publishing_year": null
-    },
-    {
-        "id": "41a293e2-8d3d-5933-9188-f01edc26eb0c",
-        "title": "Bakemonogatari",
-        "event_ids": "123794f1-5856-5238-9fb5-380ed5d2e2f0",
-        "author_ids": [],
-        "publisher": "Pika",
-        "publishing_year": null
-    },
-    {
-        "id": "d535ad5b-baf2-54af-b3d5-17d8b52332ff",
-        "title": "Saison des roses",
-        "event_ids": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
-        "author_ids": [
-            "92d63259-a236-5255-8a90-bf9776649674"
-        ],
-        "publisher": "FLBLB",
-        "publishing_year": null
-    },
-    {
-        "id": "dcc25ccb-bc58-5f18-9a49-a54fc52fdcf3",
-        "title": "Nako",
-        "event_ids": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
-        "author_ids": [
-            "d16f0632-6f42-5729-a856-4a25f9e5396d"
-        ],
-        "publisher": "Michel Lafon",
-        "publishing_year": null
-    },
-    {
-        "id": "4e54d086-2092-5623-81ce-cdb52ee354a3",
-        "title": "Raowl",
-        "event_ids": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
-        "author_ids": [
-            "0d6d184b-a29e-53a7-8833-1d8d959e8b67"
-        ],
-        "publisher": "dupuis",
-        "publishing_year": null
-    },
-    {
-        "id": "33368bc9-256a-520a-88cc-b78bd19c6dce",
-        "title": "Peau de mille bêtes",
-        "event_ids": "f900f0b1-9572-5d14-82cc-81f65d0543b6",
-        "author_ids": [
-            "35a4d2db-5e22-555d-bdcc-c806c0ae5f35"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "1346fd40-465d-50a8-9dbf-1b3db2f2f962",
-        "title": "23 prostituées",
-        "event_ids": "282002d3-3314-58cb-a08c-56d1b660f8ed",
-        "author_ids": [
-            "cdc82420-f432-5f59-a469-f2e496e2ec4d"
-        ],
-        "publisher": "Cornelius",
-        "publishing_year": null
-    },
-    {
-        "id": "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a",
-        "title": "La virginité passée 30 an",
-        "event_ids": "282002d3-3314-58cb-a08c-56d1b660f8ed",
-        "author_ids": [
-            "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e",
-            "101177af-518d-573a-9f37-7d1907f8557a",
-            "f95bf41f-d4da-5636-8d31-4a16f45f86ae"
-        ],
-        "publisher": "Akata",
-        "publishing_year": null
-    },
-    {
-        "id": "5664c22b-88d2-5a47-bf61-fb3e4f657a0b",
-        "title": "Déesse",
-        "event_ids": "282002d3-3314-58cb-a08c-56d1b660f8ed",
-        "author_ids": [
-            "df9128c9-cec9-53c8-8729-617042111988"
-        ],
-        "publisher": "Les Requins Marteaux",
-        "publishing_year": null
-    },
-    {
-        "id": "56fc148f-32d4-5cb2-a0e4-8eee0f478cfb",
-        "title": "Otto ou l'île miroir",
-        "event_ids": "282002d3-3314-58cb-a08c-56d1b660f8ed",
-        "author_ids": [
-            "79173c52-b077-58b7-9de5-213f60a8f298"
-        ],
-        "publisher": "2024",
-        "publishing_year": null
-    },
-    {
-        "id": "5cf79362-fbc8-5768-a71e-da1f3da4979b",
-        "title": "LEVANTS",
-        "event_ids": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
-        "author_ids": [
-            "21e8c9b3-1fc6-5b3f-9c64-fbc955194792"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": null
-    },
-    {
-        "id": "99cf5bac-a6b4-5fa0-ace7-3b6acdda880b",
-        "title": "QUENOTTE et Le Monde fantastique",
-        "event_ids": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
-        "author_ids": [
-            "ec7b8039-9647-53bd-98df-c4980ff84587"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "6486c644-9f52-5b81-8121-a07c9ca820d3",
-        "title": "SNOTGIRL",
-        "event_ids": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
-        "author_ids": [
-            "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3",
-            "cd9ac32b-5e63-5ee4-a040-0a08d8da008c"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "a07deabb-ba5c-5b23-bd86-e977a8865e6c",
-        "title": "ULTRALAZER",
-        "event_ids": "1b7d31e9-f721-586b-a7b0-535c61a4ede7",
-        "author_ids": [
-            "5bd9bdce-2827-5048-84b1-476815daaeff",
-            "96ee5e02-42ba-5540-b8a7-b2b639a577bb",
-            "aaff7554-0102-5996-beae-0993b356a202"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "3852be01-9880-52eb-8493-9b3a5758e58f",
-        "title": "Senso",
-        "event_ids": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
-        "author_ids": [
-            "95d147eb-c140-5339-ad8e-0d09bd1bb49f"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "7769da5e-26ce-5da9-bec0-7a649cbadc21",
-        "title": "Kindom Come",
-        "event_ids": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
-        "author_ids": [
-            "643adc5f-050b-514f-855f-2ff87a990c08",
-            "cf7a99fa-a50c-569b-b9bd-f5e5c1769357"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "e897052f-d4f2-5e42-9731-c4f7b672d891",
-        "title": "Dr. Stone",
-        "event_ids": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
-        "author_ids": [
-            "c3a1940c-7540-5034-8b6c-ca60b59520b3",
-            "68134aa4-2f64-5303-a042-788e170ddea9"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "a5c2edd4-0e57-5aff-ad51-1da715ae3f5e",
-        "title": "Comment le roi a perdu la tête",
-        "event_ids": "8fbf38d9-87d9-54df-ad0f-ce0e935813e4",
-        "author_ids": [
-            "a367fe72-04a8-59a8-955b-882054715ed1"
-        ],
-        "publisher": "çà et là",
-        "publishing_year": null
-    },
-    {
-        "id": "126597e8-c9b9-59ea-bd95-81b0e7b61342",
-        "title": "Toujours tout foutre en l'air",
-        "event_ids": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
-        "author_ids": [
-            "7dcf6112-1145-5af4-82fb-e9b92015aa1d"
-        ],
-        "publisher": "Revival",
-        "publishing_year": null
-    },
-    {
-        "id": "f85336b5-f4df-5112-a405-cf0dbd14fd50",
-        "title": "Commissaire Kouamé",
-        "event_ids": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
-        "author_ids": [
-            "ecb145e1-13b8-59fa-8422-1fbb2a505946",
-            "aadfc208-0268-5ff7-b840-57b854a09cce"
-        ],
-        "publisher": "Gallimard BD",
-        "publishing_year": null
-    },
-    {
-        "id": "531a885c-829a-59e3-9ce8-4af27ee228e2",
-        "title": "Nimona",
-        "event_ids": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
-        "author_ids": [
-            "beb683f9-838a-5ab5-915e-50e5ee57e66f"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "ef0b7e38-3627-5f6e-b460-3e92a56d3a13",
-        "title": "Pretty Deadly",
-        "event_ids": "cc962b47-ac4d-5add-8aeb-39e10f0374e6",
-        "author_ids": [
-            "a6b81f1d-dc27-5aa3-877e-d3e6bd44907d",
-            "e00c6e9a-cecb-5393-9a29-204cb3947ce9"
-        ],
-        "publisher": "Glénat BD",
-        "publishing_year": null
-    },
-    {
-        "id": "f82923f6-8cff-5419-927a-c3db18e9992f",
-        "title": "Carbone & Silicium",
-        "event_ids": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
-        "author_ids": [
-            "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b"
-        ],
-        "publisher": "Ankama",
-        "publishing_year": null
-    },
-    {
-        "id": "12865e73-340e-5385-a1c0-8dcd99f6ad82",
-        "title": "Capacity",
-        "event_ids": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
-        "author_ids": [
-            "e02ab7f1-a215-5b6d-a012-ed8916473101"
-        ],
-        "publisher": "Ici Même",
-        "publishing_year": null
-    },
-    {
-        "id": "58bf1586-0770-5e05-9d5e-84b033947d1f",
-        "title": "Les Ombres",
-        "event_ids": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
-        "author_ids": [
-            "635f02aa-96a4-5530-bbea-013c415c8290",
-            "09a3b727-757e-5f3a-84f0-75b4364f9c63"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "9f71560e-9697-518d-a092-a2e73ca2c608",
-        "title": "Le cycle de Cyann",
-        "event_ids": "709fba55-6a76-5210-83d2-4b1f0c2dd39d",
-        "author_ids": [
-            "a98cd576-0496-5016-8738-c111b1250f68",
-            "85773f9c-27a8-5d21-9786-fad52ff3180e"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "e36d75cf-f479-5e9b-b009-eecbf2f6e86d",
-        "title": "Le Tigre des neiges",
-        "event_ids": "e0863d9e-e93d-525a-9dbb-89140edf2588",
-        "author_ids": [],
-        "publisher": null,
-        "publishing_year": null
-    },
-    {
-        "id": "d0b3e70f-1430-5736-8b87-84b725afaebe",
-        "title": "Runaways",
-        "event_ids": "e0863d9e-e93d-525a-9dbb-89140edf2588",
-        "author_ids": [],
-        "publisher": null,
-        "publishing_year": null
-    },
-    {
-        "id": "e2e2f078-9136-5fed-a6e2-ddc3cde39297",
-        "title": "Citéville",
-        "event_ids": "e0863d9e-e93d-525a-9dbb-89140edf2588",
-        "author_ids": [],
-        "publisher": null,
-        "publishing_year": null
-    },
-    {
-        "id": "16564728-90ed-5edc-8eae-08a5f7785cff",
-        "title": "Peau d'homme",
-        "event_ids": "e0863d9e-e93d-525a-9dbb-89140edf2588",
-        "author_ids": [],
-        "publisher": null,
-        "publishing_year": null
-    },
-    {
-        "id": "7655deef-be68-561d-a942-3a401c24343e",
-        "title": "Snapdragon",
-        "event_ids": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
-        "author_ids": [
-            "4a7a4f1c-41b7-5fc8-920d-ac55b12d15d1"
-        ],
-        "publisher": "Kinaye",
-        "publishing_year": null
-    },
-    {
-        "id": "2a776a76-0486-5fa8-a693-0507a23edda8",
-        "title": "Le divin scénario",
-        "event_ids": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
-        "author_ids": [
-            "f6acf67b-3605-510c-89f9-da99c5668419",
-            "588613c4-6e68-5359-ada6-29b7ff634885"
-        ],
-        "publisher": "Actes Sud",
-        "publishing_year": null
-    },
-    {
-        "id": "e0079da4-868b-589a-8dc6-7c04973b026b",
-        "title": "Kimi le vieux chien",
-        "event_ids": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
-        "author_ids": [
-            "8d7dbf62-af3b-5183-9758-a74bff3e93b2"
-        ],
-        "publisher": "Misma",
-        "publishing_year": null
-    },
-    {
-        "id": "2a5e1c5f-476c-5d4e-81f3-2b78cb856e41",
-        "title": "Mashle",
-        "event_ids": "f4307f94-c546-5685-b0d8-adc74d04b6cc",
-        "author_ids": [
-            "fd8a5c80-b148-5a48-a880-d38d2e74bf5a"
-        ],
-        "publisher": "Kazé",
-        "publishing_year": null
-    },
-    {
-        "id": "473edb56-8483-5f87-ae9a-226e5639da7c",
-        "title": "Tokyo Tarareba Girls",
-        "event_ids": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
-        "author_ids": [
-            "a257ccd6-592f-5169-9247-729f4a009e2d"
-        ],
-        "publisher": "lézard Noir",
-        "publishing_year": null
-    },
-    {
-        "id": "d8f9a56b-3061-5c16-9cce-1d231de67319",
-        "title": "Something is Killing the Children",
-        "event_ids": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
-        "author_ids": [
-            "11132b63-24cf-5e0c-87e3-f82a28ac89e8",
-            "11b97ae6-9bb9-56c9-914a-c8e0fe79156c"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "cd0cdc46-bfd4-5850-beaf-3019f10e3e7b",
-        "title": "Tomino la maudite",
-        "event_ids": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
-        "author_ids": [
-            "2bd1623e-7f3d-543a-b05c-628bb3e6d6b4"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "1a3f1d17-bebd-5ddb-abe3-9533675f24a8",
-        "title": "Le Jeu des hirondelles",
-        "event_ids": "5d4270fe-0c68-5bf2-92e5-75ad356de8a4",
-        "author_ids": [
-            "56030257-e26e-53d8-9d62-6471ba32ecce"
-        ],
-        "publisher": "Cambourakis",
-        "publishing_year": null
-    },
-    {
-        "id": "609fe001-1408-54fc-8686-1a7094aaa0da",
-        "title": "Les contes de la crypte",
-        "event_ids": "090131b6-3b33-5b91-ac22-f73f60f5d347",
-        "author_ids": [
-            "581a5d0a-41d0-54b0-8ccb-9f5dac37c4e3"
-        ],
-        "publisher": "Akileos",
-        "publishing_year": 2020
-    },
-    {
-        "id": "493aa385-71e1-5b94-937d-fc270fd2d7bc",
-        "title": "L'Autoroute du Soleil",
-        "event_ids": "090131b6-3b33-5b91-ac22-f73f60f5d347",
-        "author_ids": [
-            "23c4dbf2-da76-5959-b5c8-de2b87f8dc74"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2016
-    },
-    {
-        "id": "209120cd-8ef2-5051-9030-5750844215c5",
-        "title": "Flippette & Venere",
-        "event_ids": "090131b6-3b33-5b91-ac22-f73f60f5d347",
-        "author_ids": [
-            "8c05c235-5085-5da5-975c-95a3ec03a0ce"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": 2020
-    },
-    {
-        "id": "00b764c7-9e57-5a44-8922-76ffc6c0c006",
-        "title": "Soleil mécanique",
-        "event_ids": "090131b6-3b33-5b91-ac22-f73f60f5d347",
-        "author_ids": [
-            "f1c41fdd-a85b-58e1-b10d-1c31f9803326"
-        ],
-        "publisher": "Ca et la",
-        "publishing_year": 2021
-    },
-    {
-        "id": "385f1264-4b26-5572-b2a8-10343d26cc7c",
-        "title": "Megg Mogg And Owl - Maximal Spleen",
-        "event_ids": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
-        "author_ids": [
-            "06ae0839-7b89-5d3a-bf83-99dc6830803a"
-        ],
-        "publisher": "Misma",
-        "publishing_year": 2014
-    },
-    {
-        "id": "2f0d945f-bd63-5967-9a57-844e20b11675",
-        "title": "Le privilège des Dieux",
-        "event_ids": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
-        "author_ids": [
-            "eb5d6e96-6e8e-5188-8ea6-58cc19c59957"
-        ],
-        "publisher": "Les requins Marteaux",
-        "publishing_year": 2020
-    },
-    {
-        "id": "045e3ca9-5744-52bb-ba4c-d69f08e9c343",
-        "title": "Blanc Autour",
-        "event_ids": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
-        "author_ids": [
-            "7116930d-8c4e-548c-b9e6-248dafce1360",
-            "35a4d2db-5e22-555d-bdcc-c806c0ae5f35"
-        ],
-        "publisher": "DARGAUD",
-        "publishing_year": 2021
-    },
-    {
-        "id": "98a1d8c6-853d-5970-b117-ace76d927b91",
-        "title": "Salammbô",
-        "event_ids": "b2b823be-b192-5bd5-9047-db6dac16cd7a",
-        "author_ids": [
-            "141dc09a-4241-51b4-a81e-5402d1647f96"
-        ],
-        "publisher": "Glenat",
-        "publishing_year": 1991
-    },
-    {
-        "id": "0527534f-2c66-5d92-94d5-e579f45fd919",
-        "title": "Idéal Standard",
-        "event_ids": "e17498f8-e03e-5e24-8a88-9c976c869054",
-        "author_ids": [
-            "df9128c9-cec9-53c8-8729-617042111988"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": 2017
-    },
-    {
-        "id": "5bebe1b3-ed45-5b99-bc12-026abccc686e",
-        "title": "Les Sentiments du prince Charles",
-        "event_ids": "e17498f8-e03e-5e24-8a88-9c976c869054",
-        "author_ids": [
-            "6036d73a-1f6b-581b-8e41-74a385c4be82"
-        ],
-        "publisher": "Rackham",
-        "publishing_year": 2012
-    },
-    {
-        "id": "45a36e4f-7780-53c1-b774-353b3aa6e85e",
-        "title": "Kwoloon Généric Romance",
-        "event_ids": "e17498f8-e03e-5e24-8a88-9c976c869054",
-        "author_ids": [
-            "b6ec5ccc-d0ec-5f4f-971f-7e1f961f15f1"
-        ],
-        "publisher": "Kana",
-        "publishing_year": 2021
-    },
-    {
-        "id": "be84548c-9e26-56ea-a97d-bdf4b9653250",
-        "title": "Moins qu'hier (plus que demain)",
-        "event_ids": "e17498f8-e03e-5e24-8a88-9c976c869054",
-        "author_ids": [
-            "831f7cc9-9ad6-5358-8ca1-1d671a6cb6f1"
-        ],
-        "publisher": "Glenat",
-        "publishing_year": 2018
-    },
-    {
-        "id": "04c7c967-43b9-5255-a016-a6a6713ccaf0",
-        "title": "Anaïs Nin - Sur la mer des mensonges",
-        "event_ids": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
-        "author_ids": [
-            "a1b4ee86-d88a-5c9f-a04e-fb542537c0f0"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2020
-    },
-    {
-        "id": "808def66-0261-5fb0-adf1-2e8c3f8761d8",
-        "title": "Justice League - Crise d'identité",
-        "event_ids": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
-        "author_ids": [
-            "566e776d-c9d5-52e2-8388-6dad7d49b424",
-            "b922cef3-2fc8-568f-a16c-87f17c81465e"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": 2013
-    },
-    {
-        "id": "6cbc856d-bbf3-517d-8096-69dcf2e9b270",
-        "title": "Les 100 nuits de Héros",
-        "event_ids": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
-        "author_ids": [
-            "d8152d45-6327-555b-bab0-5773452caeed"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": 2017
-    },
-    {
-        "id": "122a0172-06d1-548d-a796-547d56b7fa4c",
-        "title": "Malavalle",
-        "event_ids": "aabf7c0f-3e3c-53d0-8439-2987209842ce",
-        "author_ids": [
-            "10666593-e9d3-5312-90c8-4ef8d1e3cebe",
-            "3f2d648d-6795-56c7-a81a-4a98b852b1a0"
-        ],
-        "publisher": "Realistes",
-        "publishing_year": 2021
-    },
-    {
-        "id": "e37157f2-efbb-508a-bc47-17a90bc02c84",
-        "title": "Lanfeust de Troy",
-        "event_ids": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
-        "author_ids": [
-            "9d6057a1-8a84-5712-9f8c-4f2e530b2f34",
-            "5b576627-0b89-5180-bd78-cb87eb672cd0"
-        ],
-        "publisher": "Soleil",
-        "publishing_year": null
-    },
-    {
-        "id": "ad666457-dc66-5f79-a8e2-24d71257ce29",
-        "title": "I am the Eggman",
-        "event_ids": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
-        "author_ids": [
-            "0f40eecd-24cf-5c5c-8330-f71cda6d02c3"
-        ],
-        "publisher": "L'Association",
-        "publishing_year": null
-    },
-    {
-        "id": "deb20c8e-015a-5c9c-9686-1111263e8a0a",
-        "title": "Violette Morris - à abattre par tous moyens",
-        "event_ids": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
-        "author_ids": [
-            "cd5b8826-38e8-5380-86f3-a2d6735d723a",
-            "1f55bd80-400f-5c7c-98ed-d29a9fff6cbe",
-            "030b9850-5805-5d5d-b8ef-9d9d2f42cdd6",
-            "b791b4d4-8740-554d-ad07-82218d8bb7ed"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": null
-    },
-    {
-        "id": "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b",
-        "title": "Lock and Key",
-        "event_ids": "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1",
-        "author_ids": [
-            "604f3749-8f3e-5862-a9e5-04fa037f26c0",
-            "38ca6247-1af6-574c-b8c6-2ce51282d966"
-        ],
-        "publisher": "Hicomics",
-        "publishing_year": null
-    },
-    {
-        "id": "2d214a1a-d718-56ca-b4b1-daecd27fbc70",
-        "title": "Un visage familier",
-        "event_ids": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
-        "author_ids": [
-            "befc47ec-c72f-58e3-8519-a28173853443"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": null
-    },
-    {
-        "id": "553ba159-d15e-5f69-a159-fc28c71edeca",
-        "title": "La Princesse du château sans fin",
-        "event_ids": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
-        "author_ids": [
-            "b4ba44f4-199f-5988-8479-e4422af71a49"
-        ],
-        "publisher": "Huber éditions",
-        "publishing_year": null
-    },
-    {
-        "id": "0e8111d0-2e90-54c7-88b1-43b0e0881cc9",
-        "title": "Ecoute, jolie Marcia",
-        "event_ids": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
-        "author_ids": [
-            "faf147b2-0071-53bc-bd91-a89be82a3bde"
-        ],
-        "publisher": "ça et là",
-        "publishing_year": null
-    },
-    {
-        "id": "ed1239f8-6705-59cc-89fa-0f58a386644e",
-        "title": "Panorama",
-        "event_ids": "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36",
-        "author_ids": [
-            "c5b9e189-2937-5717-9cfa-4bf3ca95975e"
-        ],
-        "publisher": "Delirium",
-        "publishing_year": null
-    },
-    {
-        "id": "259a0454-9500-5b1b-be3c-1039abe5838a",
-        "title": "Boys Run the Riot",
-        "event_ids": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
-        "author_ids": [
-            "eae3e547-17c4-5a9d-9f08-a099870e7427"
-        ],
-        "publisher": "Akata",
-        "publishing_year": null
-    },
-    {
-        "id": "5b09fc60-7852-5dd7-85fd-47d06d44ac08",
-        "title": "Journal 1&2",
-        "event_ids": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
-        "author_ids": [
-            "1e2535bc-1306-5edf-a096-6619d1fc69f0"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "5792de8a-229c-5f32-9cd0-3d9421f85b62",
-        "title": "La fille dans l'écran",
-        "event_ids": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
-        "author_ids": [
-            "517fda5b-0d2f-5cb9-a689-38ded1fc1732",
-            "f98adb03-4782-5e7d-858c-cea66c569d0a"
-        ],
-        "publisher": "Marabulles",
-        "publishing_year": null
-    },
-    {
-        "id": "d77af3ef-1018-580f-8b4b-bdac6993c4b9",
-        "title": "La Nuit Mange le jour",
-        "event_ids": "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1",
-        "author_ids": [
-            "4102d5a8-722f-5280-a290-ccc976747c79",
-            "a0ad17df-cc7c-5579-a3f6-7fea6f6b69f5"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d",
-        "title": "Emma CakeCup",
-        "event_ids": "208965ad-c1ba-5935-ad9c-599ec120152f",
-        "author_ids": [
-            "002b8b8f-eaec-50aa-b1a9-dd32ff43ef58",
-            "c6c2e2e5-de20-5485-a998-76541abafe3e"
-        ],
-        "publisher": "Jungle",
-        "publishing_year": null
-    },
-    {
-        "id": "93c55d49-da91-53a8-9384-a9e74f86fe92",
-        "title": "Papa Situations",
-        "event_ids": "208965ad-c1ba-5935-ad9c-599ec120152f",
-        "author_ids": [
-            "3ecb51cb-7330-5551-b059-2bc07bbe2220"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": null
-    },
-    {
-        "id": "81d0933e-90f7-5b74-b9fb-ba27cc47fa12",
-        "title": "Bleak",
-        "event_ids": "208965ad-c1ba-5935-ad9c-599ec120152f",
-        "author_ids": [
-            "9ebb375a-570f-5d10-af89-e2581554813f",
-            "67a61400-02a1-5e8a-815f-efe1aaff4044"
-        ],
-        "publisher": "LINK DIGITAL",
-        "publishing_year": 2022
-    },
-    {
-        "id": "bb95f1ee-35e4-5172-bcf9-11aa19d39885",
-        "title": "Roger et ses humains",
-        "event_ids": "208965ad-c1ba-5935-ad9c-599ec120152f",
-        "author_ids": [
-            "740a55f0-b066-529c-aad3-be7706f65d0c",
-            "728ca873-d312-575d-b216-7d2f31953628"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": null
-    },
-    {
-        "id": "219fdb59-446f-5ec8-ada8-aa3432778341",
-        "title": "Transperceneige",
-        "event_ids": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
-        "author_ids": [
-            "4262dd32-264e-5b27-89d4-b8f1d948b32c",
-            "acaa9413-e232-5de0-95fa-e139a9ece44f",
-            "5d4b528a-9838-5b47-9940-6c3506237d97"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "7e0fbd51-70be-5b79-b9fd-fdcbdbe6784d",
-        "title": "Des-agréments d'un voyage d'agrément",
-        "event_ids": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
-        "author_ids": [
-            "1a18f2fb-0d2c-54c5-a763-fdadef46f041"
-        ],
-        "publisher": "2024",
-        "publishing_year": null
-    },
-    {
-        "id": "67a5f9be-05e5-5595-a37f-a5ab7ac9952b",
-        "title": "Wonder Woman Dead Earth",
-        "event_ids": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
-        "author_ids": [
-            "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5"
-        ],
-        "publisher": "Urban",
-        "publishing_year": null
-    },
-    {
-        "id": "fbb83c90-bc31-53bb-82f1-62a4921b7b66",
-        "title": "Idées Noires",
-        "event_ids": "a03c92e9-d27b-5a1a-83b5-01c0a6448113",
-        "author_ids": [
-            "c86e250b-e9c3-59aa-869a-9ab8b53022f1"
-        ],
-        "publisher": "Fluide Glacial",
-        "publishing_year": null
-    },
-    {
-        "id": "2f23ec7b-6aa5-5cf5-b8ac-331ee184fe94",
-        "title": "Coney Island Baby",
-        "event_ids": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
-        "author_ids": [
-            "e5020b23-1913-5091-8e95-fb8deb0a3b96"
-        ],
-        "publisher": "l’Association",
-        "publishing_year": null
-    },
-    {
-        "id": "90278e20-06f0-50f8-a8f0-04b97acfe3ce",
-        "title": "la Fille de la plage",
-        "event_ids": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
-        "author_ids": [
-            "b4e9729a-f1c7-5994-b791-a4c365333f5b"
-        ],
-        "publisher": "éditions IMHO",
-        "publishing_year": null
-    },
-    {
-        "id": "aa142d80-6e53-53cf-ad01-13c8af2060cf",
-        "title": "Fraise et Chocolat",
-        "event_ids": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
-        "author_ids": [
-            "f42b2254-0bb6-589f-b754-788623bc0690"
-        ],
-        "publisher": "es Impressions Nouvelles",
-        "publishing_year": null
-    },
-    {
-        "id": "22bae3a8-139b-5a3f-932f-80fc901d43af",
-        "title": "L’Origine du Monstre",
-        "event_ids": "eeadbfa3-c51f-50a0-ab86-e2ac7810303e",
-        "author_ids": [
-            "d055575f-870c-5ed6-8371-8ede4af900c1"
-        ],
-        "publisher": "Requins Marteaux",
-        "publishing_year": null
-    },
-    {
-        "id": "621f773d-d0aa-5e22-bf81-c530967a1fbe",
-        "title": "Koma",
-        "event_ids": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
-        "author_ids": [
-            "70125cb3-0e45-5bc9-9aef-4cbb67edb051",
-            "d665cfb4-c5db-586a-ad00-d7483be1868f"
-        ],
-        "publisher": "les Humanoïdes Associés",
-        "publishing_year": null
-    },
-    {
-        "id": "8b049e1b-5908-5c4b-972e-d34e04c6ab0c",
-        "title": "Mind MGMT",
-        "event_ids": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
-        "author_ids": [
-            "088ef0e0-f6d5-5b0b-8bbe-34adf8a69a86"
-        ],
-        "publisher": "éditions Monsieur Toussaint Louverture",
-        "publishing_year": null
-    },
-    {
-        "id": "a88d2dfe-e823-5455-b5a7-a9eea7604db2",
-        "title": "Toonzie",
-        "event_ids": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
-        "author_ids": [
-            "55a709af-cd36-5f34-9454-177b62ab1b72"
-        ],
-        "publisher": "2024",
-        "publishing_year": null
-    },
-    {
-        "id": "20219cc1-6639-5762-9325-1f565d5143ce",
-        "title": "Fun Home",
-        "event_ids": "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4",
-        "author_ids": [
-            "c31ac25f-8577-51a4-8112-3280350d8f34"
-        ],
-        "publisher": "Denoël Graphic",
-        "publishing_year": null
-    },
-    {
-        "id": "7c33cd89-18a5-55ee-a927-d33a3b91a4d4",
-        "title": "Le Grand Vide",
-        "event_ids": "8057115a-7249-5288-a959-7f770b0707da",
-        "author_ids": [
-            "6c618371-acaa-57cf-916f-31d5288f8285"
-        ],
-        "publisher": "2024",
-        "publishing_year": null
-    },
-    {
-        "id": "8e76ff82-caba-5256-b56f-36fdcc09b8cc",
-        "title": "DanDaDan",
-        "event_ids": "8057115a-7249-5288-a959-7f770b0707da",
-        "author_ids": [
-            "0d7a1f2e-614f-5f9b-9eb0-e977c4413fbc"
-        ],
-        "publisher": "Crunchyroll",
-        "publishing_year": null
-    },
-    {
-        "id": "6f40ce09-c1fc-56c3-b191-aaef5f620982",
-        "title": "Comme un Chef",
-        "event_ids": "8057115a-7249-5288-a959-7f770b0707da",
-        "author_ids": [
-            "0cc64c64-f713-57ca-a315-70087758c502",
-            "f42b2254-0bb6-589f-b754-788623bc0690"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "6285af41-5732-5e84-907f-7c1c6393c5e5",
-        "title": "Le Chemisier",
-        "event_ids": "8057115a-7249-5288-a959-7f770b0707da",
-        "author_ids": [
-            "552512e4-a3e7-5246-89cf-9ddee4ca5e17"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "e316844c-27bd-5037-a0f8-1327a62e748f",
-        "title": "Bébé Fille",
-        "event_ids": "1320b429-70e2-593e-976d-0cc9646e88c8",
-        "author_ids": [
-            "9a3c0069-aa3f-5826-9ef1-9f344244d3dc"
-        ],
-        "publisher": "Même Pas Mal",
-        "publishing_year": null
-    },
-    {
-        "id": "92d5d028-df2f-5e50-b4b7-9887ae2f807b",
-        "title": "Toutes les morts de Laila Starr",
-        "event_ids": "1320b429-70e2-593e-976d-0cc9646e88c8",
-        "author_ids": [
-            "4eee69a6-88fd-5e48-b8f5-dd582920a450",
-            "94b0e949-b89d-5ea5-b0b9-7cbd0ac73da4"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "80e320c2-11e7-595b-89ba-24b81ea6d621",
-        "title": "Phénix, L’oiseau de feu",
-        "event_ids": "1320b429-70e2-593e-976d-0cc9646e88c8",
-        "author_ids": [
-            "91077797-d951-5025-a095-fef1a2b3bb5f"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "8faa03ae-f8f4-5b68-9059-c0c628f85707",
-        "title": "Le Dieu Vagabond",
-        "event_ids": "1320b429-70e2-593e-976d-0cc9646e88c8",
-        "author_ids": [
-            "588613c4-6e68-5359-ada6-29b7ff634885"
-        ],
-        "publisher": "Sarbacane",
-        "publishing_year": null
-    },
-    {
-        "id": "af8eb788-7a27-5205-84b1-ae1298595b7d",
-        "title": "Whiskey and New York",
-        "event_ids": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
-        "author_ids": [
-            "c1ffebeb-922e-5aec-a97e-43302c30360d"
-        ],
-        "publisher": "l’Agrume",
-        "publishing_year": null
-    },
-    {
-        "id": "f6c7005e-7b64-5eef-844a-2ac4acdc1b07",
-        "title": "Le Bestiaire du Crépuscule",
-        "event_ids": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
-        "author_ids": [
-            "48aace14-0b8f-5dc9-aee0-2b52c883a081"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": null
-    },
-    {
-        "id": "406eb059-e7e8-54f1-8f89-cddea6c629e0",
-        "title": "Les Sauvages",
-        "event_ids": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
-        "author_ids": [
-            "6ada2d73-1f4e-5954-8c72-bc0404fa4307"
-        ],
-        "publisher": "Actes Sud/ L’An 2",
-        "publishing_year": null
-    },
-    {
-        "id": "f865a993-10dd-5daf-9303-db5328540034",
-        "title": "La Marque Jaune",
-        "event_ids": "814b8d2c-b7ac-5509-9440-0e6532e9847a",
-        "author_ids": [
-            "f88b6be4-be83-553a-9a10-0c3ff88d9c71"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "ec050548-66da-5642-af27-79ee4e0f5571",
-        "title": "La dernière comédie de Paolo Pinnochio",
-        "event_ids": "ec126adf-2c87-51c4-b109-22b7689339ad",
-        "author_ids": [
-            "ec3adb15-c596-5229-b64a-d324f9941ab6"
-        ],
-        "publisher": "Tanibis",
-        "publishing_year": null
-    },
-    {
-        "id": "a363d9bd-8981-5155-9eb6-c9cef10c231a",
-        "title": "Madones et Putains",
-        "event_ids": "ec126adf-2c87-51c4-b109-22b7689339ad",
-        "author_ids": [
-            "e5020b23-1913-5091-8e95-fb8deb0a3b96"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": null
-    },
-    {
-        "id": "01c74bc6-960a-58b3-9069-ca12ec2fb9b4",
-        "title": "le Choeur des Femmes",
-        "event_ids": "ec126adf-2c87-51c4-b109-22b7689339ad",
-        "author_ids": [
-            "901b17fe-09a8-5b9f-9f5d-a73d92a26547"
-        ],
-        "publisher": "Lombard",
-        "publishing_year": null
-    },
-    {
-        "id": "e00d76ed-0c5c-5fcb-b972-355c57612e91",
-        "title": "La Mer à boire",
-        "event_ids": "ec126adf-2c87-51c4-b109-22b7689339ad",
-        "author_ids": [
-            "c75bf8ef-b761-59b7-aa36-7db51b472618"
-        ],
-        "publisher": "2024",
-        "publishing_year": null
-    },
-    {
-        "id": "b86b53b5-7121-5fae-8ed9-50fc48076812",
-        "title": "Bunker",
-        "event_ids": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
-        "author_ids": [
-            "2822bd0a-4242-59a8-a4dd-2a9d553c94f0"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": null
-    },
-    {
-        "id": "4926fa87-8fac-59ea-b462-beaa8865b399",
-        "title": "Tokyo Alien Bros",
-        "event_ids": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
-        "author_ids": [
-            "7036c4fd-e408-5618-af2e-9baaff128651"
-        ],
-        "publisher": "Lézard Noir",
-        "publishing_year": null
-    },
-    {
-        "id": "b2b56cf4-189b-5c0f-b0a9-b3f4944df2f8",
-        "title": "Corps Vivante",
-        "event_ids": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
-        "author_ids": [
-            "e7bad250-6da0-56ae-ab7c-bb32c2243587"
-        ],
-        "publisher": "Pow Pow",
-        "publishing_year": null
-    },
-    {
-        "id": "904c9d20-f81a-591d-b110-2e457f6d8f60",
-        "title": "Koko n'aime pas le capitalisme",
-        "event_ids": "eede8ed7-1012-5831-95cb-b0d7c540f82c",
-        "author_ids": [
-            "54bfd2ce-3cf6-5269-8baa-e3571399f282"
-        ],
-        "publisher": "bandes détournées",
-        "publishing_year": null
-    },
-    {
-        "id": "24c15eca-cdd6-52e2-ae02-ca99c6a37884",
-        "title": "Scott Pilgrim",
-        "event_ids": "2412bc73-7636-5bb4-84b3-059088f2b82f",
-        "author_ids": [
-            "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3"
-        ],
-        "publisher": "HiComics",
-        "publishing_year": null
-    },
-    {
-        "id": "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa",
-        "title": "Dark Knight, une histoire vraie",
-        "event_ids": "2412bc73-7636-5bb4-84b3-059088f2b82f",
-        "author_ids": [
-            "3614d1a7-ee71-5831-acc7-36feb510177c",
-            "8f0a123e-a29e-5620-989c-8b6e9bc9f3de"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "df990528-33c4-5c15-87e0-ad4119be24f3",
-        "title": "The Nice house on the lake",
-        "event_ids": "2412bc73-7636-5bb4-84b3-059088f2b82f",
-        "author_ids": [
-            "11132b63-24cf-5e0c-87e3-f82a28ac89e8"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "47a951d2-d847-566a-9180-6dad63037708",
-        "title": "Motor Girl",
-        "event_ids": "2412bc73-7636-5bb4-84b3-059088f2b82f",
-        "author_ids": [
-            "d7afa3d1-9cbc-5630-9a1e-36550ba2ae00"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "f2ece642-d63f-5322-8208-0d755268b0a7",
-        "title": "Les ignorants",
-        "event_ids": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
-        "author_ids": [
-            "81eb6653-4aac-5e37-b82d-5e6552f5669a"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": 2011
-    },
-    {
-        "id": "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5",
-        "title": "La caste des metas-Barons",
-        "event_ids": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
-        "author_ids": [
-            "10a532a2-fbf4-5e12-af99-152a45092deb",
-            "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b"
-        ],
-        "publisher": "Les humanoides associes",
-        "publishing_year": 2002
-    },
-    {
-        "id": "233df3dc-5aec-5505-b208-b7dad00c99b1",
-        "title": "Berserk",
-        "event_ids": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
-        "author_ids": [
-            "5687b7c6-fc2f-5234-8443-9dccba2dbe03"
-        ],
-        "publisher": "Glenat",
-        "publishing_year": 1997
-    },
-    {
-        "id": "903acafa-4e30-5dcb-85ec-e2d1ce52d741",
-        "title": "Pinocchio",
-        "event_ids": "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc",
-        "author_ids": [
-            "fd5a8b65-5f73-54a0-a57e-54dfea8abc8c"
-        ],
-        "publisher": "Les requins Marteaux",
-        "publishing_year": 2008
-    },
-    {
-        "id": "d7d58ce0-3034-5dc1-ad26-f2ba302c0559",
-        "title": "Time Paradox Ghostwriter",
-        "event_ids": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
-        "author_ids": [
-            "e5d3b413-fc6e-5914-a5e2-4cca6c66a3b4",
-            "a613ac87-f316-5eb1-a41b-c629d3975868"
-        ],
-        "publisher": "Crunchyroll/Kazé",
-        "publishing_year": null
-    },
-    {
-        "id": "73418c95-df6c-50b9-8713-0cd6437ca1e8",
-        "title": "Le Goût de la nectarine",
-        "event_ids": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
-        "author_ids": [
-            "1f638d4e-04ec-5db9-840e-ac7e034bf933"
-        ],
-        "publisher": "Sarbacane",
-        "publishing_year": null
-    },
-    {
-        "id": "32c39747-541d-55b3-b217-835c9e26ffdb",
-        "title": "Doc Frankenstein",
-        "event_ids": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
-        "author_ids": [
-            "f8f3e6c7-7f1c-5fa4-95b3-e5943256b388",
-            "cb340fda-dc8b-599c-9ba4-114eff1ad741"
-        ],
-        "publisher": "Huginn & Muninn",
-        "publishing_year": null
-    },
-    {
-        "id": "12d42d70-3a3c-5d61-bf59-ac8cc63ba0a5",
-        "title": "Malgré tout",
-        "event_ids": "90f854a6-e76e-5e9b-8868-3e30eaf40e0d",
-        "author_ids": [
-            "35cf1a17-190f-5618-a7fe-4554e75983f4"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "0600c708-f469-5a62-87d6-0081966be2b0",
-        "title": "Le fils de l'ours père",
-        "event_ids": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
-        "author_ids": [
-            "21e8c9b3-1fc6-5b3f-9c64-fbc955194792"
-        ],
-        "publisher": "Hoochie Coochie",
-        "publishing_year": null
-    },
-    {
-        "id": "28c74fd2-511a-5728-a28e-8876fa62ece8",
-        "title": "la fille maudite du capitaine pirate",
-        "event_ids": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
-        "author_ids": [
-            "bc5f45bb-b47a-5c9e-9452-990ca3ac5f9a"
-        ],
-        "publisher": "éditions de la Cerise",
-        "publishing_year": null
-    },
-    {
-        "id": "c7de24d2-2e14-55d4-9ba8-d7999551971b",
-        "title": "Ils Brûlent",
-        "event_ids": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
-        "author_ids": [
-            "0334ed05-27b2-5dea-b180-3ab2692d85e7"
-        ],
-        "publisher": "6 pieds sous terre",
-        "publishing_year": null
-    },
-    {
-        "id": "5ce81c2c-23ca-5bfe-899a-011a2c38e9e0",
-        "title": "Hoka Hey !",
-        "event_ids": "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e",
-        "author_ids": [
-            "591a05fd-7b21-55d5-bd3a-0214e741d120"
-        ],
-        "publisher": "Rue de Sèvres (Label 619)",
-        "publishing_year": null
-    },
-    {
-        "id": "46840f52-8e72-51fa-8308-bfe9e584b7c8",
-        "title": "Lupus",
-        "event_ids": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
-        "author_ids": [
-            "2f4e23e5-9feb-53ab-beae-4555370c8f0d"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": null
-    },
-    {
-        "id": "66419695-ae35-53a0-b7db-55e99b5d6b02",
-        "title": "la Baleine Bibliothèque",
-        "event_ids": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
-        "author_ids": [
-            "095fe88f-e6bc-523c-a338-d927d8a46767",
-            "b64f17a8-7cde-5016-a0ba-5e4599ad52f2"
-        ],
-        "publisher": "le Lombard",
-        "publishing_year": null
-    },
-    {
-        "id": "970a07a3-e2a0-5c36-bf0f-9a6f4ea83dad",
-        "title": "NononBa",
-        "event_ids": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
-        "author_ids": [
-            "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1"
-        ],
-        "publisher": "Cornelius",
-        "publishing_year": null
-    },
-    {
-        "id": "945ced24-f871-580c-a2cd-e55da6520b39",
-        "title": "la Revanche des Bibliothécaires",
-        "event_ids": "8b17df4f-c7a6-568b-bba7-e9f0474230ac",
-        "author_ids": [
-            "82f0f18e-ef7e-5f41-8047-ad16d91e05e4"
-        ],
-        "publisher": "2024",
-        "publishing_year": null
-    },
-    {
-        "id": "f276e705-9146-5580-823a-15d8c2591660",
-        "title": "Dope Rider",
-        "event_ids": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
-        "author_ids": [
-            "12d81cb8-0977-5c8d-95e1-546f5eddf90d"
-        ],
-        "publisher": "Tanibis",
-        "publishing_year": null
-    },
-    {
-        "id": "714b0f37-f73f-5508-825c-281074c8aebe",
-        "title": "Une nuit avec toi",
-        "event_ids": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
-        "author_ids": [
-            "3147fff6-a2e8-5fc8-8085-78440711c1b3"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "c63fb7f3-28e9-51b0-a879-a22cae604ae9",
-        "title": "Pluto",
-        "event_ids": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
-        "author_ids": [
-            "96909ed8-afbc-51b4-828e-cf484c613c2d"
-        ],
-        "publisher": "Kana",
-        "publishing_year": null
-    },
-    {
-        "id": "76da166c-6887-58fe-839c-5ceb1d79b8ee",
-        "title": "Boule de Feu",
-        "event_ids": "bf7694bb-b7a0-5258-9679-5e32f0e0399f",
-        "author_ids": [
-            "24f5b427-235c-5460-9de0-85f11a01139a"
-        ],
-        "publisher": "2024",
-        "publishing_year": null
-    },
-    {
-        "id": "4fe38dd6-5f77-5f47-8a7d-4a869f44334a",
-        "title": "Cauchemar",
-        "event_ids": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
-        "author_ids": [
-            "3b40ac72-a75f-5c79-bd75-a460f955ae58"
-        ],
-        "publisher": "l'Employé du moi",
-        "publishing_year": null
-    },
-    {
-        "id": "ca07d9e7-2615-5857-8ff2-c8a481345db9",
-        "title": "Mécanique Céleste",
-        "event_ids": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
-        "author_ids": [
-            "671a3790-6703-5f60-93f7-4c8096394838"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "f9700842-783a-547b-b038-f388c81263c4",
-        "title": "Shit is Real",
-        "event_ids": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
-        "author_ids": [
-            "86f3e63b-c414-594e-af58-abfb190ddea2"
-        ],
-        "publisher": "l'Employé du moi",
-        "publishing_year": null
-    },
-    {
-        "id": "e7880ee2-b182-5a13-8a84-f3877bd0a932",
-        "title": "Evol",
-        "event_ids": "1871fd36-4f87-59f2-9dfb-a14b9259289e",
-        "author_ids": [
-            "7a222e55-c2c0-5fff-acc7-4a9c36238f5f"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "c36e3da5-0be8-5732-a555-fb7a2b9adc95",
-        "title": "La Terre des fils",
-        "event_ids": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
-        "author_ids": [
-            "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": null
-    },
-    {
-        "id": "a0258b1a-9505-561d-a6a8-ca69479420d8",
-        "title": "Le Jeune Albert",
-        "event_ids": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
-        "author_ids": [
-            "ae96a2ee-5217-5ca6-b422-07d3393e3b41"
-        ],
-        "publisher": "Les Humanoïdes Associés",
-        "publishing_year": null
-    },
-    {
-        "id": "677a0a0d-9f0e-5524-892e-5feeda95fa37",
-        "title": "Revanche",
-        "event_ids": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
-        "author_ids": [
-            "2c1293b1-0b71-5d73-9217-34bf2c597b62"
-        ],
-        "publisher": "Hoochie Coochie",
-        "publishing_year": null
-    },
-    {
-        "id": "5ee6ce29-7b61-53b4-8994-a0a2e783cf92",
-        "title": "Bone",
-        "event_ids": "9d44e8ca-98e0-57f9-97c8-957ce1fe0405",
-        "author_ids": [
-            "41d4d07a-dd5b-575e-8575-182029f2ffbc"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "af4e1bb1-ecf0-5912-8197-9d9e0b210b72",
-        "title": "Bagarre Érotique",
-        "event_ids": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
-        "author_ids": [
-            "b28aa578-42b6-53f0-ba2e-0e91a837d1cc"
-        ],
-        "publisher": "Anne Carrière",
-        "publishing_year": null
-    },
-    {
-        "id": "fc30f32a-3e20-5385-b28a-7439ee532389",
-        "title": "Philémon - le Naufragé du \"A\"",
-        "event_ids": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
-        "author_ids": [
-            "2c5d1ecf-6832-57d5-b546-c500ad06204d"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "aa01d166-f99b-5537-9d2f-99f433ffdc97",
-        "title": "Des maux à dire",
-        "event_ids": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
-        "author_ids": [
-            "61d33246-60ce-54a8-9d34-3b08a03ebd0a"
-        ],
-        "publisher": "Sarbacane",
-        "publishing_year": null
-    },
-    {
-        "id": "fc62fcaa-84ef-5a91-a79d-34ee62b436ef",
-        "title": "Les Guerres de Lucas",
-        "event_ids": "09591678-ae62-5c46-99bc-8a8b4eaa0ffa",
-        "author_ids": [
-            "0609ba11-9dd6-51a2-a1fa-5945569f3a15",
-            "2b7ad5e3-6b65-5786-bd5f-d02f8bcdde29"
-        ],
-        "publisher": "Deman",
-        "publishing_year": null
-    },
-    {
-        "id": "8a50365e-9da9-59dd-bc97-969ed43c22c7",
-        "title": "Far Sector",
-        "event_ids": "b6b7fc5a-d592-5d96-854f-05558c763187",
-        "author_ids": [
-            "57a7df47-868e-598d-8320-562a491eec09",
-            "29e81ba3-c9a8-5437-a577-2324e84c2a22"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "515abf3f-be71-5dc5-a79a-662cd25fccf6",
-        "title": "Play With Fire",
-        "event_ids": "b6b7fc5a-d592-5d96-854f-05558c763187",
-        "author_ids": [
-            "c9b6be22-065c-5547-a9aa-9db3a027d1e6"
-        ],
-        "publisher": "Ici Même",
-        "publishing_year": null
-    },
-    {
-        "id": "0c7c6682-3287-56d0-a8d6-82aea0648529",
-        "title": "Nobles Paysans",
-        "event_ids": "b6b7fc5a-d592-5d96-854f-05558c763187",
-        "author_ids": [
-            "c8a7e06b-5246-59d8-988d-2f1dfc3dcbe7"
-        ],
-        "publisher": "Kurokawa",
-        "publishing_year": null
-    },
-    {
-        "id": "debf7682-e9ad-587d-a814-efdeaad2c9e7",
-        "title": "Forté",
-        "event_ids": "b6b7fc5a-d592-5d96-854f-05558c763187",
-        "author_ids": [
-            "0399b1c8-5e87-58d3-8ea8-63453280e3bb",
-            "83cd0cff-b455-5d5f-b0d2-1620f35ecd54"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "e2102e41-2abb-59a4-b7fe-8d4ecc23e1da",
-        "title": "Kageki Shojo saison 0",
-        "event_ids": "075999c0-bbf4-5524-9f02-8526d66cd913",
-        "author_ids": [
-            "5c77edf3-4fb1-52ab-ab5c-229c1eb836e8"
-        ],
-        "publisher": "Noeve Grafx",
-        "publishing_year": null
-    },
-    {
-        "id": "956b5864-d695-5e4f-b6f3-48078e019fe0",
-        "title": "Gotham Central",
-        "event_ids": "075999c0-bbf4-5524-9f02-8526d66cd913",
-        "author_ids": [
-            "eb085332-9b22-53f0-a527-1e929572ab5a",
-            "00db3447-5ed5-5ba8-a2af-2dd9199c5602"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "ab707df2-5f9e-5bce-ba06-da7fc0e88bfd",
-        "title": "Cardcaptor Sakura",
-        "event_ids": "075999c0-bbf4-5524-9f02-8526d66cd913",
-        "author_ids": [
-            "969606f1-a82b-5683-8a38-a91089eb9598"
-        ],
-        "publisher": "Pika",
-        "publishing_year": null
-    },
-    {
-        "id": "bde7b6df-1144-56af-8a15-03f3710adb93",
-        "title": "Ici même",
-        "event_ids": "075999c0-bbf4-5524-9f02-8526d66cd913",
-        "author_ids": [
-            "f00e5d5f-7bc4-58c0-98a0-7c48ff1b2ead",
-            "8519e2d5-a656-5ce0-9642-74f939ba1e60"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "52b5768f-92ea-5ea0-864c-f91c838da16c",
-        "title": "Cosmoknights",
-        "event_ids": "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85",
-        "author_ids": [
-            "e1d64487-9066-57a4-a82b-f95b1f11a41f"
-        ],
-        "publisher": "Bliss",
-        "publishing_year": null
-    },
-    {
-        "id": "13a95766-1ae7-52fc-8158-e51115b8fa4a",
-        "title": "René•e au bois dormant",
-        "event_ids": "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85",
-        "author_ids": [
-            "cc4653dc-b615-54e5-bac1-c35dc48d1341"
-        ],
-        "publisher": "sarbacane",
-        "publishing_year": null
-    },
-    {
-        "id": "39c9b8b4-fc17-5fb3-bda6-7f183cca54c7",
-        "title": "Clémence en colère",
-        "event_ids": "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85",
-        "author_ids": [
-            "07e138d4-c5e0-5e13-81c4-b924dca78d61"
-        ],
-        "publisher": "La Ville Brûle",
-        "publishing_year": null
-    },
-    {
-        "id": "a01a8124-f371-5a31-a90b-8bcf85d43a7c",
-        "title": "titre oublié BD avec grenouille",
-        "event_ids": "7a658366-6710-5724-859d-c94de9e9d9ab",
-        "author_ids": [],
-        "publisher": null,
-        "publishing_year": null
-    },
-    {
-        "id": "321c2793-05ba-57fa-abc0-2c59c7c6aaa3",
-        "title": "Blacksad pour de faux",
-        "event_ids": "7a658366-6710-5724-859d-c94de9e9d9ab",
-        "author_ids": [],
-        "publisher": null,
-        "publishing_year": null
-    },
-    {
-        "id": "5d75aa1d-71ee-5ee7-be23-59e9d10c519a",
-        "title": "Titre oublié manga avec enfant",
-        "event_ids": "7a658366-6710-5724-859d-c94de9e9d9ab",
-        "author_ids": [],
-        "publisher": null,
-        "publishing_year": null
-    },
-    {
-        "id": "6d437cee-8870-53d7-bffa-9aba1bb92823",
-        "title": "Un picsou qui ressemble à Bernard Arnault",
-        "event_ids": "7a658366-6710-5724-859d-c94de9e9d9ab",
-        "author_ids": [],
-        "publisher": null,
-        "publishing_year": null
-    },
-    {
-        "id": "1ed863f9-5aea-574a-8e7a-8a8f061235e5",
-        "title": "Oiseaux de papier",
-        "event_ids": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
-        "author_ids": [
-            "e91e7e71-ed2e-5acb-a42e-2ad624b8ab41"
-        ],
-        "publisher": "ça et là",
-        "publishing_year": null
-    },
-    {
-        "id": "48a7b58b-aa17-5b0d-98ec-fe8a997395c0",
-        "title": "Demande à Modigliani",
-        "event_ids": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
-        "author_ids": [
-            "2d932312-b0bc-5bac-9c2d-dfe07ecede95"
-        ],
-        "publisher": "Naban",
-        "publishing_year": null
-    },
-    {
-        "id": "b089120d-7f10-5457-96b1-b233822e6f5e",
-        "title": "Harleen",
-        "event_ids": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
-        "author_ids": [
-            "60d5489b-14e3-518b-9109-e042747d08ff"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "330732a9-e0e1-5cf1-a00d-ecd08a2bc222",
-        "title": "Ma famille imaginaire",
-        "event_ids": "3d3c0b42-70a2-5146-a04f-9b0782e75776",
-        "author_ids": [
-            "98f266c0-cb80-5d14-8e5c-697e49b48751"
-        ],
-        "publisher": "L'Agrume",
-        "publishing_year": null
-    },
-    {
-        "id": "d0773c0e-efce-5e3f-b88c-b401e6925875",
-        "title": "Barbara l'entre-deux monde",
-        "event_ids": "d22485f9-9242-5a72-bc1e-9c223c27134d",
-        "author_ids": [
-            "45d6dbf8-fbd9-578b-9e9f-8402dc2d31e7"
-        ],
-        "publisher": "Akata",
-        "publishing_year": null
-    },
-    {
-        "id": "4aa33079-62c2-5233-88ae-8e754c339e59",
-        "title": "Clementine",
-        "event_ids": "d22485f9-9242-5a72-bc1e-9c223c27134d",
-        "author_ids": [
-            "57c07569-26eb-52d4-ab34-f8c8caa94ccc"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "1de89bb4-2d86-543c-845e-fba8f42fc847",
-        "title": "Un Orage par jour",
-        "event_ids": "d22485f9-9242-5a72-bc1e-9c223c27134d",
-        "author_ids": [
-            "da949bb6-12f0-5d85-b093-d2ec26926f91"
-        ],
-        "publisher": "Keribus",
-        "publishing_year": null
-    },
-    {
-        "id": "e6eb00f3-e29c-59a5-bf7e-7ca9a65fcd33",
-        "title": "La Route",
-        "event_ids": "d22485f9-9242-5a72-bc1e-9c223c27134d",
-        "author_ids": [
-            "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "a9f1ba28-8e3f-5925-8f8c-bd63fb271d1b",
-        "title": "Dai Dark",
-        "event_ids": "826204d2-0a18-5f15-81c0-1f9730761358",
-        "author_ids": [
-            "2c0a8d04-1eac-5612-a1c7-676822d9ad90"
-        ],
-        "publisher": "Soleil",
-        "publishing_year": null
-    },
-    {
-        "id": "06d42289-e3ad-57c0-aade-03088507faa9",
-        "title": "Les Contes de la mansarde",
-        "event_ids": "826204d2-0a18-5f15-81c0-1f9730761358",
-        "author_ids": [
-            "206efe6f-29f9-5386-b123-f2bbd3f27f6d",
-            "d52a43df-2aa2-547e-b98d-830dec705d02"
-        ],
-        "publisher": "L'Employé du moi",
-        "publishing_year": null
-    },
-    {
-        "id": "34373ae6-8241-5dfd-ac94-c657bd97af69",
-        "title": "Slava T01",
-        "event_ids": "826204d2-0a18-5f15-81c0-1f9730761358",
-        "author_ids": [
-            "3c90a47b-00bd-5d72-b26e-14e9361de953"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "0829463a-3433-53e5-ac54-605311f73a69",
-        "title": "It's Lonely at the Center of the Earth",
-        "event_ids": "826204d2-0a18-5f15-81c0-1f9730761358",
-        "author_ids": [
-            "ec033c79-cf70-5028-8b1d-6b02cccf0b5c"
-        ],
-        "publisher": "Hi Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "f95d6e61-6426-5b0b-9311-b9e8ecb36b78",
-        "title": "Mekka Nikki",
-        "event_ids": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
-        "author_ids": [
-            "25a92ac6-0606-546b-91d9-21824fdc82a1",
-            "ee98cfb4-9b32-5356-b3be-337badf7aa02"
-        ],
-        "publisher": "Les Humanoïdes associés",
-        "publishing_year": null
-    },
-    {
-        "id": "fdf7972d-6b2b-5ace-9939-d1b83cedae14",
-        "title": "Le Cas David Zimmerman",
-        "event_ids": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
-        "author_ids": [
-            "3b934034-aca9-5ef9-a4d4-f0dbf63716dd",
-            "a531559e-8dbe-5b47-b3b7-b6e452214bd7"
-        ],
-        "publisher": "Sarbacane",
-        "publishing_year": null
-    },
-    {
-        "id": "0f55b110-f82c-5092-8299-3149fdc8c9c9",
-        "title": "Au-Dedans",
-        "event_ids": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
-        "author_ids": [
-            "bed4e616-fb1a-51d5-8789-d3a7c519765c"
-        ],
-        "publisher": "404",
-        "publishing_year": null
-    },
-    {
-        "id": "19a60d41-85b5-5230-8e6c-e5537981a6f4",
-        "title": "Malgré tout je suis ici",
-        "event_ids": "8f478152-30c0-53a8-ae55-0f5108d32a6d",
-        "author_ids": [],
-        "publisher": "l'Association",
-        "publishing_year": null
-    },
-    {
-        "id": "c2f61a7e-3816-5686-b9e5-d9556ee77049",
-        "title": "l'Amour Après",
-        "event_ids": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
-        "author_ids": [
-            "c6bfc388-ba3c-5aa7-b627-d7528e7b7f95",
-            "ff780b2f-973b-5b78-8aaf-b22f31bc1bb4"
-        ],
-        "publisher": "Virages Graphiques",
-        "publishing_year": null
-    },
-    {
-        "id": "e98c4039-8132-5dd6-9489-661fca8f7743",
-        "title": "Adieu Eri",
-        "event_ids": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
-        "author_ids": [
-            "e2139e97-c7d1-5124-b077-ea4291aa3032"
-        ],
-        "publisher": "Crunchyroll",
-        "publishing_year": null
-    },
-    {
-        "id": "e24b2289-3eba-5581-9e3b-7c3d08251f70",
-        "title": "Walicho",
-        "event_ids": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
-        "author_ids": [
-            "11f8a644-a339-59d8-af48-8b26d8709fbd"
-        ],
-        "publisher": "Ça et là",
-        "publishing_year": null
-    },
-    {
-        "id": "fb6cbc79-3c98-5889-838a-b334b7606395",
-        "title": "Chair à Canon",
-        "event_ids": "28a72776-8abd-56ff-a48b-fe50c1c9add1",
-        "author_ids": [
-            "ae7b2afb-f773-5588-a836-7f22fa49d247"
-        ],
-        "publisher": "Flblb",
-        "publishing_year": null
-    },
-    {
-        "id": "b0b3870c-0997-5868-bd23-6e08e3cc0aac",
-        "title": "Mobile Suit Gundam - The origin",
-        "event_ids": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
-        "author_ids": [
-            "06d2e44e-3bc3-5c38-80b2-d2bc46f5a2d5"
-        ],
-        "publisher": "Vega",
-        "publishing_year": null
-    },
-    {
-        "id": "1c9e35cc-80d4-5dce-8e80-2874fe876600",
-        "title": "Les Ames enflammées",
-        "event_ids": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
-        "author_ids": [
-            "bac10044-bf28-587c-bf43-2ca135089535"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "4066190a-e2a3-5eda-bb01-cd996e6b7eda",
-        "title": "Planetarium Ghost Travel",
-        "event_ids": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
-        "author_ids": [
-            "5ffbe2d2-ae0e-55cf-b3ab-8c691acbaddf"
-        ],
-        "publisher": "Renard Doré",
-        "publishing_year": null
-    },
-    {
-        "id": "dd62a84b-d5d0-581d-85ff-398583396ee1",
-        "title": "Gloutons et Dragons",
-        "event_ids": "3d9441c7-6496-5d72-9e60-65b6ea76742a",
-        "author_ids": [
-            "ac8b85c4-99d5-5de7-a631-34672a8a642e"
-        ],
-        "publisher": "Sakka",
-        "publishing_year": null
-    },
-    {
-        "id": "c7c00974-55df-5ddb-9094-599a49fedc04",
-        "title": "Manger",
-        "event_ids": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
-        "author_ids": [
-            "ce1989f6-f25c-5cf4-9899-cb4528ed5422"
-        ],
-        "publisher": "Cambourakis",
-        "publishing_year": null
-    },
-    {
-        "id": "9a3852a3-baa8-5f2a-aba2-fe494ac3d2d7",
-        "title": "Agughia",
-        "event_ids": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
-        "author_ids": [
-            "8fe7fe5d-f5d1-57fa-9b23-8613e9714774"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "d3ae501d-a740-50fa-9b36-23681a63e221",
-        "title": "Je voudrais me suicider mais j'ai pas le temps",
-        "event_ids": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
-        "author_ids": [
-            "31387e90-fc18-5d6c-8a6a-6bd2ceef6053",
-            "542d6a4e-eee5-5d28-b43b-1522bc6c23b7"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "9e1ead2f-e94b-51c4-a530-25ff413b4630",
-        "title": "L'enfantôme",
-        "event_ids": "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a",
-        "author_ids": [
-            "8c3c54b4-5338-5cf9-9db4-e376482d841b"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "1d9f61ac-e443-5d00-95d6-232abbc96584",
-        "title": "Journal d'une disparition",
-        "event_ids": "12815554-e509-5c87-be90-52d0ba1546af",
-        "author_ids": [
-            "0b088127-8e8e-5e67-aade-8ee924e23e14"
-        ],
-        "publisher": "Kana",
-        "publishing_year": null
-    },
-    {
-        "id": "8f3dfff9-18f4-517b-956a-375093f86315",
-        "title": "Ballades",
-        "event_ids": "12815554-e509-5c87-be90-52d0ba1546af",
-        "author_ids": [
-            "d34f9a45-6215-5a8a-b4d6-dfb9d6a92541"
-        ],
-        "publisher": "Atrabile",
-        "publishing_year": null
-    },
-    {
-        "id": "9fb8bc86-0c68-5c44-a864-1bd65f4c4114",
-        "title": "Julius Corentin Acquefacques, prisonnier des rêves - L'origines",
-        "event_ids": "12815554-e509-5c87-be90-52d0ba1546af",
-        "author_ids": [
-            "a0e8081c-c789-5249-a9ad-938d911d3d15"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "69fc7e78-c691-52d1-9568-ff25b698eaab",
-        "title": "Âme augmentée",
-        "event_ids": "12815554-e509-5c87-be90-52d0ba1546af",
-        "author_ids": [
-            "1895a4c2-2cf2-5967-b5b1-2b87bfb4c910"
-        ],
-        "publisher": "404 graphics",
-        "publishing_year": null
-    },
-    {
-        "id": "c503e169-f7e8-50eb-bba0-7d391d6a17ce",
-        "title": "Petite Forêt",
-        "event_ids": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
-        "author_ids": [
-            "a47f6301-1e18-51f0-8386-ac488ee37b7c"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "ebab55bf-6f8b-5ebe-8a63-63805845355c",
-        "title": "Stigma, odyssée sporale",
-        "event_ids": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
-        "author_ids": [
-            "e6332846-dc60-5a6c-83ab-f5180adb17d5"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "599583d1-2538-5fdb-ad77-90fc339b3178",
-        "title": "Sentimental Kiss",
-        "event_ids": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
-        "author_ids": [
-            "e582c7f5-c5b4-5f7e-ac05-d3296bfd9708"
-        ],
-        "publisher": "l'Employé du moi",
-        "publishing_year": null
-    },
-    {
-        "id": "510487fd-029b-5a3b-9700-0d11d9582757",
-        "title": "Le Roi Méduse",
-        "event_ids": "d97b7ed2-8888-563d-a3ab-85aa06e98884",
-        "author_ids": [
-            "5140c72e-436a-5c58-85af-fde4a31bd1da"
-        ],
-        "publisher": "Actes Sud BD",
-        "publishing_year": null
-    },
-    {
-        "id": "3dddd453-4856-5647-b862-58ee435de96b",
-        "title": "Le Nirvana est ici",
-        "event_ids": "2e34799f-dc59-5357-a523-c317961dfd16",
-        "author_ids": [
-            "5a24ef24-132a-56bc-aef0-b3b1529d528e"
-        ],
-        "publisher": "Seuil",
-        "publishing_year": null
-    },
-    {
-        "id": "78e93b93-fff0-5559-a078-8ca878174a6c",
-        "title": "Solitude d'un autre genre",
-        "event_ids": "2e34799f-dc59-5357-a523-c317961dfd16",
-        "author_ids": [
-            "091254d8-d0c9-5726-a5c2-f19e2f7c8d92"
-        ],
-        "publisher": "Pika",
-        "publishing_year": null
-    },
-    {
-        "id": "71b57a4d-63c6-5220-b416-c2eacf41695e",
-        "title": "Le Requiem du roi des roses",
-        "event_ids": "2e34799f-dc59-5357-a523-c317961dfd16",
-        "author_ids": [
-            "3732fd8e-96c9-58f7-8134-54e3af2e2b77"
-        ],
-        "publisher": "Kioon",
-        "publishing_year": null
-    },
-    {
-        "id": "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c",
-        "title": "La Montagne entre nous",
-        "event_ids": "2e34799f-dc59-5357-a523-c317961dfd16",
-        "author_ids": [
-            "e9c52477-ae82-5bb5-862b-fe4d54df2502",
-            "787e0d65-0fe6-5b9f-a9ec-1afe8993ea3d"
-        ],
-        "publisher": "Sarbacane",
-        "publishing_year": null
-    },
-    {
-        "id": "1c16dd39-9b71-570b-adf9-dd949b0876ed",
-        "title": "Batman et robin - Année 1",
-        "event_ids": "e86ed83c-1690-5160-a736-d4ab397e1adf",
-        "author_ids": [
-            "c87d7744-49cb-5480-8fd5-ac0903b18d99",
-            "643adc5f-050b-514f-855f-2ff87a990c08"
-        ],
-        "publisher": "Urban",
-        "publishing_year": null
-    },
-    {
-        "id": "7ecc3faa-7448-57ea-b3c3-3fe72ddd322b",
-        "title": "Tokyo ces jours-ci",
-        "event_ids": "e86ed83c-1690-5160-a736-d4ab397e1adf",
-        "author_ids": [
-            "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3"
-        ],
-        "publisher": "Kana",
-        "publishing_year": null
-    },
-    {
-        "id": "2577974a-9695-5f41-94a9-6ba5ebd90174",
-        "title": "Parker - La Proie",
-        "event_ids": "e86ed83c-1690-5160-a736-d4ab397e1adf",
-        "author_ids": [
-            "16787ee4-56ac-5736-b0b0-2d831ee42d6c",
-            "f149dc55-7d01-5e6c-89f4-ed837f8de8b5"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": null
-    },
-    {
-        "id": "89d152e7-f57c-5b0e-8d95-8f5fad2dc896",
-        "title": "Poulet aux prunes",
-        "event_ids": "e86ed83c-1690-5160-a736-d4ab397e1adf",
-        "author_ids": [
-            "9f6d02b9-d58d-521b-bac5-a096f26c125a"
-        ],
-        "publisher": "l'Association",
-        "publishing_year": null
-    },
-    {
-        "id": "55173791-1d25-5974-be37-4ae3bfac5225",
-        "title": "Poème du vent et des arbres",
-        "event_ids": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
-        "author_ids": [
-            "d6e87a93-7b87-56df-b0b5-784f597acfd5"
-        ],
-        "publisher": "Naban",
-        "publishing_year": null
-    },
-    {
-        "id": "d2606770-6e64-56ad-9f24-2c1734030214",
-        "title": "Alyte",
-        "event_ids": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
-        "author_ids": [
-            "fab79174-cd77-5bff-8ef0-204115fd6685"
-        ],
-        "publisher": "2042",
-        "publishing_year": null
-    },
-    {
-        "id": "ba70089b-dc50-5706-ae33-e7b7f3d3c4ed",
-        "title": "Come Over Come Over",
-        "event_ids": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
-        "author_ids": [
-            "044a392b-edae-5a8b-bf64-8bc911b445b8"
-        ],
-        "publisher": "Ça et Là",
-        "publishing_year": null
-    },
-    {
-        "id": "c422ca47-19e7-5530-96ae-3099c5ec9dc8",
-        "title": "Hollywood menteur",
-        "event_ids": "f60c9074-4b14-5a21-8163-ab8c49f0d987",
-        "author_ids": [
-            "466e5af5-67e4-5fcb-b087-0e8d4f1a7ed6"
-        ],
-        "publisher": "Futuropolis",
-        "publishing_year": null
-    },
-    {
-        "id": "7b60d495-19b6-5aec-83d2-df40acb1d3e8",
-        "title": "Les faux lieux",
-        "event_ids": "b148c708-8268-57c5-987d-7c673b310cee",
-        "author_ids": [
-            "cf14aca0-99b7-5e93-bac5-cc55c93da085"
-        ],
-        "publisher": "Akileos",
-        "publishing_year": null
-    },
-    {
-        "id": "7afa0be1-9f65-5af9-b8ca-8febc5ccfa4a",
-        "title": "Oh, Lenny",
-        "event_ids": "b148c708-8268-57c5-987d-7c673b310cee",
-        "author_ids": [
-            "413f2343-f0c5-5672-aa0a-050973a682f9"
-        ],
-        "publisher": "Tanibis",
-        "publishing_year": null
-    },
-    {
-        "id": "ec34073f-32f3-5b74-8e70-eb2e9937a36f",
-        "title": "Ranma 1/2",
-        "event_ids": "b148c708-8268-57c5-987d-7c673b310cee",
-        "author_ids": [
-            "aea68d40-ddb1-5354-b4e8-5fb4dbca4c9e"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "fd110a14-3cb4-5407-a837-b3bae1c9b278",
-        "title": "Les Yeux d'Alex",
-        "event_ids": "b148c708-8268-57c5-987d-7c673b310cee",
-        "author_ids": [
-            "cb6b2c97-9182-501d-90a0-2c812dd7d641"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "af92af68-880b-54ec-9b11-b63ac826149b",
-        "title": "Billy Bat",
-        "event_ids": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
-        "author_ids": [
-            "96909ed8-afbc-51b4-828e-cf484c613c2d"
-        ],
-        "publisher": "Pika",
-        "publishing_year": null
-    },
-    {
-        "id": "0227a664-60ac-5e77-bb89-031cf0893d1e",
-        "title": "Road to Nowhere",
-        "event_ids": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
-        "author_ids": [
-            "e7455245-dd03-5c13-a656-e0c6420e9265"
-        ],
-        "publisher": "Misma",
-        "publishing_year": null
-    },
-    {
-        "id": "bb2f4bd6-ea0d-5028-bd8d-d3eb6437888c",
-        "title": "Ushima, l'usurier de l'ombre",
-        "event_ids": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
-        "author_ids": [
-            "3ed49b39-8117-577d-ba13-6ac94a9e388b"
-        ],
-        "publisher": "Kana",
-        "publishing_year": null
-    },
-    {
-        "id": "543529b3-41ab-5afc-a381-7ed1bfab677b",
-        "title": "Soichi",
-        "event_ids": "94e69eb9-e081-52d8-a886-1e8990ac7c1b",
-        "author_ids": [
-            "bac0e452-b75b-5cc7-a4e4-ad8adf9ba347"
-        ],
-        "publisher": "Mangetsu",
-        "publishing_year": null
-    },
-    {
-        "id": "11d7eace-ebf2-59d3-a330-cd442d3557a3",
-        "title": "Quand souffle le vent",
-        "event_ids": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
-        "author_ids": [
-            "4abb5d53-7a59-5901-8c93-7de96ba7c098"
-        ],
-        "publisher": "Tanibis",
-        "publishing_year": null
-    },
-    {
-        "id": "1bc85f3d-8932-5b00-b6fd-333b32ee53b9",
-        "title": "Saint-Elme",
-        "event_ids": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
-        "author_ids": [
-            "3254de0b-373e-565d-9416-53a8316474c8",
-            "2f4e23e5-9feb-53ab-beae-4555370c8f0d"
-        ],
-        "publisher": "Delcourt",
-        "publishing_year": null
-    },
-    {
-        "id": "605a6f52-dfac-5d30-9135-70f21673a9c9",
-        "title": "Lettre à Blue bird",
-        "event_ids": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
-        "author_ids": [
-            "bb3b2c50-6f6f-552e-a8aa-c43c4c7b9427"
-        ],
-        "publisher": "Frémok",
-        "publishing_year": null
-    },
-    {
-        "id": "a8920edf-9eb7-5296-9429-4a13002c70c4",
-        "title": "Sacrifice",
-        "event_ids": "22747bbf-a596-5a9a-aaea-99acc760e0d9",
-        "author_ids": [
-            "f7168e39-bf20-5d5a-91f5-7b0b971b588c",
-            "8b277120-560b-5807-b3c5-c0a546bce427"
-        ],
-        "publisher": "Urban",
-        "publishing_year": null
-    },
-    {
-        "id": "980619c8-13ee-54cf-960c-0ad3a452965b",
-        "title": "Helen de Wyndhorn",
-        "event_ids": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
-        "author_ids": [
-            "67021253-b3f9-5131-a5a1-6f1e6996c8bd",
-            "04566a81-2c42-5f40-84bf-169e9ff41670"
-        ],
-        "publisher": "Glénat",
-        "publishing_year": null
-    },
-    {
-        "id": "80dbe48d-5ef6-50a1-8f93-23619b07cbde",
-        "title": "Abélard",
-        "event_ids": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
-        "author_ids": [
-            "7a56b388-39a7-5b66-af71-1a9304760e4a",
-            "a7e5dfca-337c-58a2-8dfb-d1469b851bd9"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "30dd4d30-1325-557c-b42b-6ad0894bf6b8",
-        "title": "Il y a longtemps que je t'aime",
-        "event_ids": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
-        "author_ids": [
-            "da90896c-8026-554d-a736-441570b78261"
-        ],
-        "publisher": "Casterman",
-        "publishing_year": null
-    },
-    {
-        "id": "50afc3e1-c60e-5915-b756-8b0760228a32",
-        "title": "Pilou l'apprenti gigolo",
-        "event_ids": "72255258-5a8d-5944-9c4c-0f6f07a6db10",
-        "author_ids": [
-            "04cef3b4-6b2a-5efc-85f2-2a0ff95481cd"
-        ],
-        "publisher": "IMHO",
-        "publishing_year": null
-    },
-    {
-        "id": "8a2399e8-979b-5ac8-9645-0c778e3f4edc",
-        "title": "Absolute Batman",
-        "event_ids": "59b9a96e-b2d0-5d31-9167-293aed303df5",
-        "author_ids": [
-            "d4584704-3ebe-5a6f-b8f9-bf17fa741a33",
-            "dfaa83f5-acf7-5b22-baf7-0bf497056f9e"
-        ],
-        "publisher": "Urban Comics",
-        "publishing_year": null
-    },
-    {
-        "id": "22420ca8-73c3-508a-a4ca-2f9378f14338",
-        "title": "Tête de chien",
-        "event_ids": "59b9a96e-b2d0-5d31-9167-293aed303df5",
-        "author_ids": [
-            "2ceec585-d739-59b6-948a-6b8117a74f5e",
-            "d1a00a6a-c6a2-526c-8bca-05745c2bdcc0"
-        ],
-        "publisher": "Dargaud",
-        "publishing_year": null
-    },
-    {
-        "id": "46c2d81c-4961-5353-9c99-230e81b565d0",
-        "title": "Soli Deo Gloria",
-        "event_ids": "59b9a96e-b2d0-5d31-9167-293aed303df5",
-        "author_ids": [
-            "69eb4ee1-b8a0-50b0-adec-5f64e115725a",
-            "1a9c1499-d284-5ffe-9045-4e3918619a42"
-        ],
-        "publisher": "Dupuis",
-        "publishing_year": null
-    }
+  { id: "d3eafa10-a745-5597-94cb-39521449a60e", name: "La Bande des idées #1", date: "2014-11-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1548027528761948/", cover_url: null },
+  { id: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9", name: "La Bande des idées #2", date: "2014-12-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10730999_892432464133133_8046229807596859137_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=2959cf0e7720dbab88e5173961891080&oe=5D2405FB", cover_url: null },
+  { id: "defb09ef-c4e5-542b-acdf-e0b5029140ba", name: "La Bande des idées #3", date: "2015-02-11T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/1979505_940848045958241_3510145053302013663_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=8269b537190194727d2638704f3d0445&oe=5D19A617", cover_url: null },
+  { id: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b", name: "La Bande des idées #4", date: "2015-03-10T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11034300_957113717665007_9217857601948649037_n.jpg?_nc_cat=103&_nc_ht=scontent.fcdg1-1.fna&oh=81f0d6de3f3cdbfddf2b249453cd5ce6&oe=5D1D555D", cover_url: null },
+  { id: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6", name: "La Bande des idées #5", date: "2015-04-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10474535_973957882647257_8113608325421000787_n.jpg?_nc_cat=110&_nc_ht=scontent.fcdg1-1.fna&oh=f15c6898e1958ad5ffa9c6a534a95f4c&oe=5D26E1F5", cover_url: null },
+  { id: "5530f067-a32c-51e1-9ad7-97cf775ed705", name: "La Bande des idées #6", date: "2015-05-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11110292_990154227694289_4228029765977675487_n.jpg?_nc_cat=109&_nc_ht=scontent.fcdg1-1.fna&oh=49cff7095ebfe210da24d43e044cf75b&oe=5D247C54", cover_url: null },
+  { id: "2456ad86-5acc-5301-9bd6-90548d61b552", name: "La Bande des idées #7", date: "2015-06-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11351345_1006130122763366_7087995029299373561_n.jpg?_nc_cat=108&_nc_ht=scontent.fcdg1-1.fna&oh=98ce37ea32d0cdbbaae6edf9b8232d3b&oe=5D233300", cover_url: null },
+  { id: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82", name: "La Bande des idées #8", date: "2015-07-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/10985918_1027020130674365_87534998117886051_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=ea8e749d604e38f1e9846738e72c660c&oe=5D210011", cover_url: null },
+  { id: "3b113b35-2d55-51c4-a846-f640bae083f4", name: "La Bande des idées #9", date: "2015-10-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t31.0-8/12045710_1075450439164667_5971117612948959248_o.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=2005aa0f4bd6e914288ea3cbbf06b561&oe=5D1A90BF", cover_url: null },
+  { id: "00e27df2-3483-5397-bfdb-e40b84d0dd1c", name: "La Bande des idées #10", date: "2015-11-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12143197_1088158194560558_7531947012850699320_n.jpg?_nc_cat=103&_nc_ht=scontent.fcdg1-1.fna&oh=8fcf6b47f7fc43af14416790905a7ae4&oe=5D13A4C5", cover_url: null },
+  { id: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a", name: "La Bande des idées #11", date: "2015-12-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12299298_1103504503025927_7896546280449256768_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=d0cf1655bccbc7a5ce24bb2427075636&oe=5CE1E329", cover_url: null },
+  { id: "fc63aa8e-600f-5543-807f-73035f19248e", name: "La Bande des idées #12", date: "2016-01-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12366279_1115525188490525_3444939567555188617_n.jpg?_nc_cat=105&_nc_ht=scontent.fcdg1-1.fna&oh=eed31df2dc72374d64e21c71c9d94404&oe=5CE15C43", cover_url: null },
+  { id: "577662aa-e0e0-5fc7-9538-eea8c644fac8", name: "La Bande des idées #13", date: "2016-02-01T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12552899_1136429603066750_5278756872253066615_n.jpg?_nc_cat=108&_nc_ht=scontent.fcdg1-1.fna&oh=87aede4a8f4785bbe0c060b70ada5e39&oe=5D190012", cover_url: null },
+  { id: "9892d986-cf7a-5e39-8f31-7e0e110e3565", name: "La Bande des idées #14", date: "2016-03-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12670605_1147488151960895_4559904947676418394_n.jpg?_nc_cat=106&_nc_ht=scontent.fcdg1-1.fna&oh=b0bbf60421aba76321873b82c2394a07&oe=5D1FC826", cover_url: null },
+  { id: "634fc1df-6058-5247-a08c-fad69ce34c2e", name: "La Bande des idées #15", date: "2016-04-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/12376363_1180131635363213_4825001361981708091_n.jpg?_nc_cat=111&_nc_ht=scontent.fcdg1-1.fna&oh=e3961e663509c86cc1a543edcaf18a58&oe=5D2174C7", cover_url: null },
+  { id: "77c01a2a-d1e6-590e-b030-9b97131b7e52", name: "La Bande des idées #16", date: "2016-05-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/11140352_1199781990064844_3792389615048652994_n.jpg?_nc_cat=101&_nc_ht=scontent.fcdg1-1.fna&oh=2b5ac277c88d4bf7ddea7177c940df5d&oe=5D23FD22", cover_url: null },
+  { id: "b0b01187-3e41-530a-b69d-1b778156244a", name: "La Bande des idées #17", date: "2016-05-30T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/13177596_1211136378929405_1892386029205842518_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=5a9a5d2b3599ffd40817ef828cf4a1a8&oe=5D0C02F6", cover_url: null },
+  { id: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf", name: "La Bande des idées #18", date: "2016-06-27T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/13407301_1238484292861280_6451655614105249900_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=df4846c734f72e874d04eaffc4768d04&oe=5D20A24E", cover_url: null },
+  { id: "acaef519-c1b3-5690-84b1-d8fb25759813", name: "La Bande des idées #19", date: "2016-10-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14445970_1315239218519120_3949106291008340937_n.jpg?_nc_cat=104&_nc_ht=scontent-cdt1-1.xx&oh=ddb2df967a65262bfa152111e5ffb94f&oe=5D122887", cover_url: null },
+  { id: "81b7b345-17ae-599b-8c17-b38aafc42040", name: "La Bande des idées #20", date: "2016-11-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14656390_1348809808495394_2113809148631383691_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=b0f5c231715e9622620d5a087deeb3c4&oe=5D1E3BF4", cover_url: null },
+  { id: "eb52c998-b16a-55d6-a25e-fc780089bc5b", name: "La Bande des idées #21", date: "2016-12-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/15317992_1378414108868297_8537428629914642930_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=4f2577a1db897ce8f2cc0303d196a81f&oe=5D0D270F", cover_url: null },
+  { id: "d7bb79a6-c63f-532e-9f9a-c52593db9321", name: "La Bande des idées #22", date: "2017-01-09T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/15871469_1424933184216389_7395848885661616025_n.jpg?_nc_cat=105&_nc_ht=scontent-cdt1-1.xx&oh=d8e710850d8dcac116318c43d7b702dd&oe=5D0CEDB8", cover_url: null },
+  { id: "7e9194c4-701f-58d0-801d-6b0a204ec1d4", name: "La Bande des idées #23", date: "2017-02-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/16174676_1446297115413329_25349491156172291_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=ba287790c316e3b7b3a70e3f2a8a0926&oe=5CDB318B", cover_url: null },
+  { id: "a25ef389-a3d0-5e2e-a153-2e280ed21d81", name: "La Bande des idées #24", date: "2017-03-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17021581_1477042082338832_3691963312336295706_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=33fdbd4d536bb781b9a327d4d23129fd&oe=5CDF58FD", cover_url: null },
+  { id: "a162a1f8-1fec-55a0-838d-7c9173f88142", name: "La Bande des idées #25", date: "2017-04-23T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/18010067_1534433169933056_8998104558482823340_n.png?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=3735eced4a065370c325fdc250192ac2&oe=5D222119", cover_url: null },
+  { id: "4773d958-16dc-5d09-ac56-048ca6df63b8", name: "La Bande des idées #26", date: "2017-05-20T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/18581711_1575887865787586_1170839975577071079_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=ac2e3d6a9270ef980f606b5828258a91&oe=5CDAEDE3", cover_url: null },
+  { id: "41d4751a-0f18-5d59-86d2-8e48b38d35fb", name: "La Bande des idées #27", date: "2017-07-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/37524150_2047152531994448_2390556574792810496_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=637b59310d095b7388aadaf5c4010b0b&oe=5D0F2BF5", cover_url: null },
+  { id: "962b55da-7635-5b79-975c-44b8cd63497b", name: "La Bande des idées #28", date: "2017-10-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/22046588_1707879375921767_1666208443553365186_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=146ceeafdefcc34b497a7b6229245fc1&oe=5D1BFBB4", cover_url: null },
+  { id: "e53c882f-3627-5b43-b1d8-ee7469a56d93", name: "La Bande des idées #29", date: "2017-11-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23031599_1743463929029978_3200352309829749099_n.png?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=dcc0d21138f350951af49c9985e3c396&oe=5CDB925F", cover_url: null },
+  { id: "016d6e71-04fa-5718-bbc4-42c714e709a9", name: "La Bande des idées #30", date: "2017-12-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/l/t1.0-9/23755668_1767369796639391_1277478686325266492_n.jpg?_nc_cat=100&_nc_ht=scontent-cdt1-1.xx&oh=d24a0a9fba0afa43ea3fde5e8e31eb64&oe=5D103A7E", cover_url: null },
+  { id: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2", name: "La Bande des idées #41", date: "2018-01-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/48393030_2271348946241471_7781236312232689664_n.jpg?_nc_cat=104&_nc_ht=scontent-cdt1-1.xx&oh=18704fae68530b7984f67b6a4a044c05&oe=5D0F4B4F", cover_url: null },
+  { id: "99984239-be4b-5527-ac6f-2efffaa923c7", name: "La Bande des idées #31", date: "2018-01-08T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/26168857_1810957948947242_2756578082164197469_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=209178d9bf3619558a680e48bf576525&oe=5D0DB4D1", cover_url: null },
+  { id: "ceff02b3-7019-5ae7-8968-0907eff83fdb", name: "La Bande des idées #42", date: "2018-02-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/50210461_2325301247512907_1931457551904276480_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=e28ec1fc8e95d9828339de2b7c570a31&oe=5D257638", cover_url: null },
+  { id: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319", name: "La Bande des idées #32", date: "2018-02-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/27067504_1841112142598489_7184528437488560486_n.jpg?_nc_cat=108&_nc_ht=scontent-cdt1-1.xx&oh=ff206716f00ef4ce4919a58ce1f06bc0&oe=5D260DF2", cover_url: null },
+  { id: "7373210e-8d7c-5ea1-a2de-8f97310f21f9", name: "La Bande des idées #43", date: "2018-03-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/53071290_2382826551760376_4380486648983453696_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=67247ee1f3b53b3757069833001c06d5&oe=5D1CE030", cover_url: null },
+  { id: "10c922a7-8e8b-50ca-ae70-0e9dad0db06b", name: "La Bande des idées #33", date: "2018-04-08T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/29573175_1909178212458548_6510851018372175617_n.jpg?_nc_cat=102&_nc_ht=scontent-cdt1-1.xx&oh=9fea07126eba712a6071ab80b0da0b26&oe=5D0FF1B1", cover_url: null },
+  { id: "41d6ae0e-8b21-541d-a141-e8cc0134bbab", name: "La Bande des idées #35", date: "2018-05-14T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/31945380_1947020325341003_8619787290471825408_n.jpg?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=c6f78b3917a6dbe2c7bbf840a08b3291&oe=5D1CB347", cover_url: null },
+  { id: "2fc305c6-f0c7-5462-9a45-89241614c418", name: "La Bande des idées #36", date: "2018-06-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/33765875_1968566439853058_6763955458291007488_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=f324ce96fc252504653a7e91e01b5416&oe=5D1BF9A6", cover_url: null },
+  { id: "07171107-88be-5a83-be43-0205a9c53237", name: "La Bande des idées #37", date: "2018-09-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/40054328_2110024205707280_5284287186995249152_n.jpg?_nc_cat=106&_nc_ht=scontent-cdt1-1.xx&oh=d835e0a4f5ae72f3625a9632b6f28ffc&oe=5CE1A0FC", cover_url: null },
+  { id: "437bf521-fecc-5100-9170-e59fe3b5a117", name: "La Bande des idées #38", date: "2018-10-01T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/42607884_2150476651662035_5013794029343604736_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=93564aeb260afe78d0e73f61770e62f6&oe=5D2378B2", cover_url: null },
+  { id: "19afc03b-0b2f-5102-946c-c27a7158332e", name: "La Bande des idées #39", date: "2018-11-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/44245490_2179972502045783_4181771306905108480_n.jpg?_nc_cat=107&_nc_ht=scontent-cdt1-1.xx&oh=2c6394761f1a6c1081c8700b6dee5c5f&oe=5D28EB26", cover_url: null },
+  { id: "75bd8d09-d669-50a0-a00c-48987b2b9472", name: "La Bande des idées #40", date: "2018-12-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/46494379_2228673830508983_6424827537838309376_n.jpg?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=9c9f9dea8af43fa38d8db1298c47de0a&oe=5D1EDA91", cover_url: null },
+  { id: "e3653545-0c2a-50bd-8d14-699d252b53a9", name: "La Bande des idées #44", date: "2019-04-01T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/285763049007863/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "611db4de-5ee6-5c83-83c5-af36e6222068", name: "La Bande des idées #45", date: "2019-05-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/325704408128713/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "35935fa2-a008-5d4a-837d-ff51e42f0123", name: "La Bande des idées #46", date: "2019-06-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1129332163916912/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "15afad0f-6a49-5a5d-9361-e696250a3993", name: "La Bande des idées #47", date: "2019-07-01T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/356507151919604/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "943ef86c-2f3d-5418-811c-3984ec44218e", name: "La Bande des idées #48", date: "2019-09-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/665582067287940/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2", name: "La Bande des idées #49", date: "2019-10-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/2474036006005538/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "123794f1-5856-5238-9fb5-380ed5d2e2f0", name: "La Bande des idées #50", date: "2019-11-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/2533623426867287/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "f900f0b1-9572-5d14-82cc-81f65d0543b6", name: "La Bande des idées #51", date: "2019-11-27T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/509526156269235/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "282002d3-3314-58cb-a08c-56d1b660f8ed", name: "La Bande des idées #52", date: "2019-12-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1143293975868038/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "1b7d31e9-f721-586b-a7b0-535c61a4ede7", name: "La Bande des idées #53", date: "2020-01-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/778287175971506/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4", name: "La Bande des idées #54", date: "2020-02-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1552168821619081/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "cc962b47-ac4d-5add-8aeb-39e10f0374e6", name: "La Bande des idées #55", date: "2020-03-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/2274982579461524/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "709fba55-6a76-5210-83d2-4b1f0c2dd39d", name: "La Bande des idées #56", date: "2020-09-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/337707800690646/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "e0863d9e-e93d-525a-9dbb-89140edf2588", name: "La Bande des idées #57", date: "2020-09-11T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1500880476772063/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "f4307f94-c546-5685-b0d8-adc74d04b6cc", name: "La Bande des idées #58", date: "2021-07-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/234358424838579/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4", name: "La Bande des idées #59", date: "2021-09-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/277491040426073/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D", cover_url: null },
+  { id: "090131b6-3b33-5b91-ac22-f73f60f5d347", name: "La Bande des idées #60", date: "2021-10-04T00:00:00.000Z", hour: null, place: null, fb_event: "facebook.com/events/831818477405291/", cover_url: null },
+  { id: "b2b823be-b192-5bd5-9047-db6dac16cd7a", name: "La Bande des idées #61", date: "2021-11-08T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/565369727882126", cover_url: null },
+  { id: "e17498f8-e03e-5e24-8a88-9c976c869054", name: "La Bande des idées #62", date: "2021-12-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/288789526481300/", cover_url: null },
+  { id: "aabf7c0f-3e3c-53d0-8439-2987209842ce", name: "La Bande des idées #63", date: "2022-03-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/3198494570473230/", cover_url: null },
+  { id: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1", name: "La Bande des idées #64", date: "2022-04-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/515214300290482/", cover_url: null },
+  { id: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36", name: "La Bande des idées #65", date: "2022-05-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/326501759551822/", cover_url: null },
+  { id: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1", name: "La Bande des idées #66", date: "2022-06-13T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/561044688714389/", cover_url: null },
+  { id: "208965ad-c1ba-5935-ad9c-599ec120152f", name: "La Bande des idées #67", date: "2022-07-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/525967912554941/", cover_url: null },
+  { id: "a03c92e9-d27b-5a1a-83b5-01c0a6448113", name: "La Bande des idées #68", date: "2022-09-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/446752527364617/", cover_url: null },
+  { id: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e", name: "La Bande des idées #69", date: "2022-10-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/616184793487017/", cover_url: null },
+  { id: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4", name: "La Bande des idées #70", date: "2022-11-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/793465931802389/", cover_url: null },
+  { id: "8057115a-7249-5288-a959-7f770b0707da", name: "La Bande des idées #71", date: "2022-12-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1126501241325870/", cover_url: null },
+  { id: "1320b429-70e2-593e-976d-0cc9646e88c8", name: "La Bande des idées #72", date: "2023-01-09T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/434532382115033/", cover_url: null },
+  { id: "814b8d2c-b7ac-5509-9440-0e6532e9847a", name: "La Bande des idées #73", date: "2023-02-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/898411191495073/", cover_url: null },
+  { id: "ec126adf-2c87-51c4-b109-22b7689339ad", name: "La Bande des idées #74", date: "2023-03-13T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1359635898192804/", cover_url: null },
+  { id: "eede8ed7-1012-5831-95cb-b0d7c540f82c", name: "La Bande des idées #75", date: "2023-04-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/213242371310791/", cover_url: null },
+  { id: "2412bc73-7636-5bb4-84b3-059088f2b82f", name: "La Bande des idées #76", date: "2023-05-15T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/942395466984150/", cover_url: null },
+  { id: "f229dbf3-e754-590d-a0b4-23b74e28cc7a", name: "La Bande des idées #77", date: "2023-06-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/622624873248708", cover_url: null },
+  { id: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc", name: "La Bande des idées #78", date: "2023-07-03T00:00:00.000Z", hour: null, place: null, fb_event: null, cover_url: null },
+  { id: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d", name: "La Bande des idées #79", date: "2023-09-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/2394873167358468", cover_url: null },
+  { id: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e", name: "La Bande des idées #80", date: "2023-10-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1019108149125333", cover_url: null },
+  { id: "8b17df4f-c7a6-568b-bba7-e9f0474230ac", name: "La Bande des idées #81", date: "2023-11-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1715263022310108", cover_url: null },
+  { id: "bf7694bb-b7a0-5258-9679-5e32f0e0399f", name: "La Bande des idées #82", date: "2023-12-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1563147154518585", cover_url: null },
+  { id: "1871fd36-4f87-59f2-9dfb-a14b9259289e", name: "La Bande des idées #83", date: "2024-01-08T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/871004508030312/", cover_url: null },
+  { id: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405", name: "La Bande des idées #84", date: "2024-02-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/394766139896709/", cover_url: null },
+  { id: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa", name: "La Bande des idées #85", date: "2024-03-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/309085812162790/", cover_url: null },
+  { id: "b6b7fc5a-d592-5d96-854f-05558c763187", name: "La Bande des idées #86", date: "2024-04-08T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/7457885997592030/", cover_url: null },
+  { id: "075999c0-bbf4-5524-9f02-8526d66cd913", name: "La Bande des idées #87", date: "2024-05-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/788288109916410/", cover_url: null },
+  { id: "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85", name: "La Bande des idées #88", date: "2024-06-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1440004920219390/", cover_url: null },
+  { id: "7a658366-6710-5724-859d-c94de9e9d9ab", name: "La Bande des idées #89", date: "2024-07-22T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1255888845377371/", cover_url: null },
+  { id: "3d3c0b42-70a2-5146-a04f-9b0782e75776", name: "La Bande des idées #90", date: "2024-09-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.instagram.com/p/C_AzrjcMqvb/", cover_url: null },
+  { id: "d22485f9-9242-5a72-bc1e-9c223c27134d", name: "La Bande des idées #91", date: "2024-10-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.instagram.com/p/C_8EccYsbUx/", cover_url: null },
+  { id: "826204d2-0a18-5f15-81c0-1f9730761358", name: "La Bande des idées #92", date: "2024-11-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.instagram.com/p/DBd6vEesFeI/", cover_url: null },
+  { id: "8f478152-30c0-53a8-ae55-0f5108d32a6d", name: "La Bande des idées #93", date: "2024-12-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/553573667638100/", cover_url: null },
+  { id: "28a72776-8abd-56ff-a48b-fe50c1c9add1", name: "La Bande des idées #94", date: "2025-01-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/479647325144303/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "3d9441c7-6496-5d72-9e60-65b6ea76742a", name: "La Bande des idées #95", date: "2025-02-10T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1358841528627237/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a", name: "La Bande des idées #96", date: "2025-03-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/2532313316972641/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "12815554-e509-5c87-be90-52d0ba1546af", name: "La Bande des idées #97", date: "2025-04-07T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/657561693409078/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "d97b7ed2-8888-563d-a3ab-85aa06e98884", name: "La Bande des idées #98", date: "2025-05-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1251013476581314/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "2e34799f-dc59-5357-a523-c317961dfd16", name: "La Bande des idées #99", date: "2025-06-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1709530526598425/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "6421a785-8d16-50f9-8661-42b747c21434", name: "La Bande des idées #100", date: "2025-07-04T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1257620832398570/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "e86ed83c-1690-5160-a736-d4ab397e1adf", name: "La Bande des idées #101", date: "2025-09-01T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1113986430616293/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "f60c9074-4b14-5a21-8163-ab8c49f0d987", name: "La Bande des idées #102", date: "2025-10-06T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/2504069616626345/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "b148c708-8268-57c5-987d-7c673b310cee", name: "La Bande des idées #103", date: "2025-11-03T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/2437286006666177/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "94e69eb9-e081-52d8-a886-1e8990ac7c1b", name: "La Bande des idées #104", date: "2025-12-01T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1729177091288597/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "22747bbf-a596-5a9a-aaea-99acc760e0d9", name: "La Bande des idées #105", date: "2026-01-05T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1582503946101897/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "72255258-5a8d-5944-9c4c-0f6f07a6db10", name: "La Bande des idées #106", date: "2026-02-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/740030845824250/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "59b9a96e-b2d0-5d31-9167-293aed303df5", name: "La Bande des idées #107", date: "2026-03-02T00:00:00.000Z", hour: null, place: null, fb_event: "https://www.facebook.com/events/1291476083029606/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", cover_url: null },
+  { id: "b581a26f-c45e-44de-9192-e4e45bfcd0c5", name: "La Bande des Idées #108", date: "2026-04-06T00:00:00.000Z", hour: null, place: null, fb_event: null, cover_url: null },
 ];
 
 const authors = [
-    {
-        "id": "fd51ff5e-d84e-5eae-8cd0-e095e96e3dba",
-        "name": "Jonathan Hickman",
-        "bd_ids": [
-            "7d723523-0d8a-5c4f-a040-8ff0cca2bc83"
-        ]
-    },
-    {
-        "id": "2503e0ea-8931-5458-afc8-90b272d6baa0",
-        "name": "Asa Grennvall",
-        "bd_ids": [
-            "403fb2b2-7948-5aa1-9cbe-2e9e468a9c05"
-        ]
-    },
-    {
-        "id": "bdb4565e-067f-56ca-8936-a076246543f4",
-        "name": "Dominique Goblet",
-        "bd_ids": [
-            "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98"
-        ]
-    },
-    {
-        "id": "2027444e-c012-54a3-aec8-f68484ffe1eb",
-        "name": "Kai Pfeiffer",
-        "bd_ids": [
-            "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98"
-        ]
-    },
-    {
-        "id": "a7e5dfca-337c-58a2-8dfb-d1469b851bd9",
-        "name": "Renaud Dillies",
-        "bd_ids": [
-            "79894bab-2308-5561-b5ba-b688a26f6672",
-            "80dbe48d-5ef6-50a1-8f93-23619b07cbde"
-        ]
-    },
-    {
-        "id": "43871c3f-7878-50fd-8691-838780202913",
-        "name": "Dylan Horrocks",
-        "bd_ids": [
-            "995dd270-3ead-51df-a96b-919cd922cbea"
-        ]
-    },
-    {
-        "id": "bd00fc5a-20dc-576b-bad2-a3336306d052",
-        "name": "Usamaru Furuya",
-        "bd_ids": [
-            "76b4d2f1-cdb5-5aae-9479-3daf719d8adb"
-        ]
-    },
-    {
-        "id": "402fbda6-fe33-5e95-a64c-4385f9029a38",
-        "name": "Jean-Michel Dupont",
-        "bd_ids": [
-            "06175f53-82fc-5df0-a3d6-33be607df9c8",
-            "75fc73a4-84d6-50f0-99d9-b7445c392bb8"
-        ]
-    },
-    {
-        "id": "499e8af8-50a7-57f3-8d89-f5d793796f9d",
-        "name": "Mezzo",
-        "bd_ids": [
-            "06175f53-82fc-5df0-a3d6-33be607df9c8",
-            "75fc73a4-84d6-50f0-99d9-b7445c392bb8"
-        ]
-    },
-    {
-        "id": "5140c72e-436a-5c58-85af-fde4a31bd1da",
-        "name": "Brecht Evens",
-        "bd_ids": [
-            "8f57610f-1014-5596-8015-17b94899cd58",
-            "510487fd-029b-5a3b-9700-0d11d9582757"
-        ]
-    },
-    {
-        "id": "298957cc-14c1-506e-b3d1-61603cbccd87",
-        "name": "Francis Masse",
-        "bd_ids": [
-            "dc370931-0191-5023-a121-09e365903d81"
-        ]
-    },
-    {
-        "id": "72a26f1a-77d7-531c-a4f4-2018eeb616ce",
-        "name": "Francois Lepage",
-        "bd_ids": [
-            "4c2f3bd9-177e-561b-a197-3579528230ae"
-        ]
-    },
-    {
-        "id": "b678c865-cc90-539b-8e87-b8b7bd979836",
-        "name": "Emmanuel Lepage",
-        "bd_ids": [
-            "4c2f3bd9-177e-561b-a197-3579528230ae"
-        ]
-    },
-    {
-        "id": "6b6badf0-ebf9-58a7-8c65-f1d065349439",
-        "name": "Kurt Busiek",
-        "bd_ids": [
-            "979cc21c-4c87-5805-b5f5-6f5f3f1606d2"
-        ]
-    },
-    {
-        "id": "fa90699d-7b23-523d-b295-cb62820b4f9b",
-        "name": "Stuart Immonen",
-        "bd_ids": [
-            "979cc21c-4c87-5805-b5f5-6f5f3f1606d2"
-        ]
-    },
-    {
-        "id": "0cf5be42-674c-5e17-9e49-7fb184b1431c",
-        "name": "Jérémy Le Corvaisier",
-        "bd_ids": [
-            "beee135e-1fed-5a0c-9083-dde2ebaec54d"
-        ]
-    },
-    {
-        "id": "d4584704-3ebe-5a6f-b8f9-bf17fa741a33",
-        "name": "Scott Snyder",
-        "bd_ids": [
-            "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d",
-            "8a2399e8-979b-5ac8-9645-0c778e3f4edc"
-        ]
-    },
-    {
-        "id": "f2c424bc-1c49-51c1-b24c-e35a2aa03969",
-        "name": "Sean Murphy",
-        "bd_ids": [
-            "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d",
-            "112b74f7-40f7-535a-aab9-b13d3c94c4d2"
-        ]
-    },
-    {
-        "id": "3bb69f39-439a-56b4-8c8b-84229ff231ba",
-        "name": "Jerome Charyn",
-        "bd_ids": [
-            "db8922f2-954d-5063-9ca0-699e952b7520"
-        ]
-    },
-    {
-        "id": "4d4f91cb-cbe7-5303-8271-d641cf6a6221",
-        "name": "Francois Boucq",
-        "bd_ids": [
-            "db8922f2-954d-5063-9ca0-699e952b7520"
-        ]
-    },
-    {
-        "id": "0eb89bcb-1cb8-54fb-84dd-ae9d7268c805",
-        "name": "Antoine Marchalot",
-        "bd_ids": [
-            "3da21605-8214-54c2-b22c-e217a9c9ce93"
-        ]
-    },
-    {
-        "id": "95fa1c0a-912a-55cc-8056-f531d33f882e",
-        "name": "Olivier Bocquet",
-        "bd_ids": [
-            "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9"
-        ]
-    },
-    {
-        "id": "48f4c9b6-4f07-53ad-bd78-dfc79b024297",
-        "name": "Julie Rocheleau",
-        "bd_ids": [
-            "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9",
-            "9c926764-7669-5585-8219-0f0fb31f3498"
-        ]
-    },
-    {
-        "id": "54ffe919-5f0b-553a-bd79-e6c9314fe6ba",
-        "name": "Delphine Panique",
-        "bd_ids": [
-            "43bbd0e5-e692-5e43-950a-eb10bd288972"
-        ]
-    },
-    {
-        "id": "f22a840a-ae7b-585b-b790-d0e5e0a22043",
-        "name": "Tetsuya Tsutsui",
-        "bd_ids": [
-            "f5bfa282-0bba-5c25-819a-7189c4fa979f"
-        ]
-    },
-    {
-        "id": "617cfc5a-f2fa-5b31-9e82-f0e71d742d38",
-        "name": "Gilbert Hernandez",
-        "bd_ids": [
-            "38c7eb79-a784-51a2-bf4e-94b788834ea9"
-        ]
-    },
-    {
-        "id": "82b73354-e24a-5897-a4d7-a14c69097c14",
-        "name": "Grant Morrison",
-        "bd_ids": [
-            "aaa5174a-d012-5a86-83ff-88ee561cee78"
-        ]
-    },
-    {
-        "id": "950aea29-52b1-5b38-916e-69bd7222eed0",
-        "name": "Frank Quitely",
-        "bd_ids": [
-            "aaa5174a-d012-5a86-83ff-88ee561cee78",
-            "2ab19c62-8468-5b16-99a6-f5b97153b993"
-        ]
-    },
-    {
-        "id": "e2973a8e-b6fe-5378-b489-513f29620f71",
-        "name": "Jean-Pierre Dionnet",
-        "bd_ids": [
-            "a8f38346-3d87-5afd-9d0c-423aea300f2a"
-        ]
-    },
-    {
-        "id": "06153a78-09a9-505d-94b2-6d01b716bd24",
-        "name": "Michel Pirus",
-        "bd_ids": [
-            "a8f38346-3d87-5afd-9d0c-423aea300f2a"
-        ]
-    },
-    {
-        "id": "f51793e5-443e-5f81-a04e-65fb91a807e1",
-        "name": "Marion Fayolle",
-        "bd_ids": [
-            "09bf28a9-0ce1-5a09-a99c-a21fcffed008"
-        ]
-    },
-    {
-        "id": "d8152d45-6327-555b-bab0-5773452caeed",
-        "name": "Isabel Greenberg",
-        "bd_ids": [
-            "d6cae607-a1ff-5926-a3f2-bb062c84ffb8",
-            "6cbc856d-bbf3-517d-8096-69dcf2e9b270"
-        ]
-    },
-    {
-        "id": "e09ec5a1-670e-5f3d-9f32-349c029bac21",
-        "name": "Nicolas de Crécy",
-        "bd_ids": [
-            "ae0bc9de-368c-501b-bad7-5bbbe89576fb"
-        ]
-    },
-    {
-        "id": "61b42f2a-c779-5680-b591-6e6128f1a1b7",
-        "name": "Simon Spurrier",
-        "bd_ids": [
-            "20d228c3-067c-5067-90c8-cb8cc271fe6f"
-        ]
-    },
-    {
-        "id": "42648312-3057-56f3-a03c-346bc337f3f8",
-        "name": "Jeff Stokely",
-        "bd_ids": [
-            "20d228c3-067c-5067-90c8-cb8cc271fe6f"
-        ]
-    },
-    {
-        "id": "8de0a770-0d52-5e17-97db-ef10383eb7e6",
-        "name": "Alex Baladi",
-        "bd_ids": [
-            "fa873fe7-0449-5f89-8fc9-cfe1654b8041",
-            "9b7133ae-5594-5171-a72d-28be9d48ac38"
-        ]
-    },
-    {
-        "id": "742c3aed-25a1-5152-a908-bd41647dc69a",
-        "name": "Vehlmann",
-        "bd_ids": [
-            "795622ed-bfb2-50c3-8569-fb6f10d3cddd"
-        ]
-    },
-    {
-        "id": "b818290e-2fbd-585a-828a-479920a33e88",
-        "name": "Kerascoët",
-        "bd_ids": [
-            "795622ed-bfb2-50c3-8569-fb6f10d3cddd"
-        ]
-    },
-    {
-        "id": "3c63d44c-9b4f-596e-9bd5-84c3786f15dd",
-        "name": "Scott McCloud",
-        "bd_ids": [
-            "e49de7c1-067d-5937-b900-075d3a2f7799"
-        ]
-    },
-    {
-        "id": "32df707a-3433-582f-b61e-ae27388d4713",
-        "name": "Debbie Drechsler",
-        "bd_ids": [
-            "cef800c9-32c9-52ab-bf7c-f734ba6c65db"
-        ]
-    },
-    {
-        "id": "b4e9729a-f1c7-5994-b791-a4c365333f5b",
-        "name": "Inio Asano",
-        "bd_ids": [
-            "7b7682a7-12fd-5c89-81c1-ce4b2ec3cedd",
-            "49643a22-7c3c-590e-909d-2b458a3c9812",
-            "3c1a9222-8bc6-5dc9-9f80-8d86851d8aec",
-            "90278e20-06f0-50f8-a8f0-04b97acfe3ce"
-        ]
-    },
-    {
-        "id": "000c49b2-0453-5107-a06f-58c9b1fea271",
-        "name": "Stéphane Levallois",
-        "bd_ids": [
-            "485c9772-b7f3-5b59-99a0-5bc51d90677a"
-        ]
-    },
-    {
-        "id": "b4ba44f4-199f-5988-8479-e4422af71a49",
-        "name": "Shintaro Kago",
-        "bd_ids": [
-            "70aad9fb-30b1-5177-8126-c531467c028e",
-            "18b43f2b-e8c9-553e-92e1-c13027830753",
-            "553ba159-d15e-5f69-a159-fc28c71edeca"
-        ]
-    },
-    {
-        "id": "94dabec5-6d21-52f5-bcb2-0298eeca942e",
-        "name": "Zep",
-        "bd_ids": [
-            "f9920e4a-7ba8-5f19-8842-ceaf65dd8b9d"
-        ]
-    },
-    {
-        "id": "40a78c44-4310-5562-8dc7-76d43d290bda",
-        "name": "Max de Radiguès",
-        "bd_ids": [
-            "9f0067bc-02b7-50da-a83e-61b896fc352d"
-        ]
-    },
-    {
-        "id": "86b380e5-e629-5310-a14c-a81874f5b0be",
-        "name": "Benoit Vidal",
-        "bd_ids": [
-            "da2485f6-6f49-5a22-a601-34c06f8fe55f"
-        ]
-    },
-    {
-        "id": "b51e43e0-93f2-5e19-a4ea-6c9847f8a7e3",
-        "name": "Florence Dupré la Tour",
-        "bd_ids": [
-            "fb96800d-99ad-51c1-a1e8-f27c7d8fbb10"
-        ]
-    },
-    {
-        "id": "bb4e4e79-2608-504d-8924-888397c60925",
-        "name": "Benjamin Renner",
-        "bd_ids": [
-            "94bd0510-12eb-51a0-a26e-0c444a702785"
-        ]
-    },
-    {
-        "id": "073d9082-a5d3-506a-985d-eb0aebe059a8",
-        "name": "Killoffer",
-        "bd_ids": [
-            "36e7eb28-ed60-5818-bc3a-eb39ae1e3105"
-        ]
-    },
-    {
-        "id": "ce0db7bb-6bd3-522e-bc15-0b4f81ad598e",
-        "name": "Philippe Richelle",
-        "bd_ids": [
-            "331c85b8-47f5-56b5-bdb2-c4ad8b36a229"
-        ]
-    },
-    {
-        "id": "ecb4c9b9-3668-504e-b85a-91058c2412a2",
-        "name": "Frédéric Rébéna",
-        "bd_ids": [
-            "331c85b8-47f5-56b5-bdb2-c4ad8b36a229"
-        ]
-    },
-    {
-        "id": "e9d80524-250a-5eed-b35a-7c4e80bac050",
-        "name": "Didier Quella-Guyot",
-        "bd_ids": [
-            "6dcd8372-864e-593c-aa7b-d1c4421ca80a"
-        ]
-    },
-    {
-        "id": "9425decb-3a8b-5e37-aac5-5ccb7a8b06d7",
-        "name": "Sébastien Morice",
-        "bd_ids": [
-            "6dcd8372-864e-593c-aa7b-d1c4421ca80a"
-        ]
-    },
-    {
-        "id": "96f050f1-d364-5995-835b-e0735f743da1",
-        "name": "Derf Backderf",
-        "bd_ids": [
-            "ee4b52be-c659-5eff-ae4e-44cebfeb024c"
-        ]
-    },
-    {
-        "id": "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e",
-        "name": "Toshifumi Sakurai",
-        "bd_ids": [
-            "e9a8d3e6-7671-5522-9438-1ca74a7d4a54",
-            "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"
-        ]
-    },
-    {
-        "id": "0de81355-7467-5c84-ac5a-fda83bddd329",
-        "name": "Christopher Hittinger",
-        "bd_ids": [
-            "bab472e5-dba8-56e8-94b4-eaca12df0767"
-        ]
-    },
-    {
-        "id": "55310ba7-320a-5abb-8b39-eff41549b0f1",
-        "name": "Fabien Nury",
-        "bd_ids": [
-            "5879ed08-b528-54fa-b889-cb9b6654c5e6"
-        ]
-    },
-    {
-        "id": "5c38e890-27df-567f-9c6f-bcec8ceea617",
-        "name": "Xavier Dorison",
-        "bd_ids": [
-            "5879ed08-b528-54fa-b889-cb9b6654c5e6"
-        ]
-    },
-    {
-        "id": "a0303dba-bfa5-5dbc-8c2a-7cc1352a5f7e",
-        "name": "Laurent Astier",
-        "bd_ids": [
-            "5879ed08-b528-54fa-b889-cb9b6654c5e6"
-        ]
-    },
-    {
-        "id": "33d9e522-4553-5c30-84d9-90627de2766d",
-        "name": "Jano",
-        "bd_ids": [
-            "c8efe667-cfa0-5265-92b3-8f32fbeb53b1"
-        ]
-    },
-    {
-        "id": "6784186c-7620-5323-ba49-f65e51e6ae6f",
-        "name": "Erich Ohser",
-        "bd_ids": [
-            "0ee6ba43-46ad-5c80-8a2e-5114850d943b"
-        ]
-    },
-    {
-        "id": "1447e129-555d-532d-8df9-d42e6407feef",
-        "name": "Dennis O'Neil",
-        "bd_ids": [
-            "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"
-        ]
-    },
-    {
-        "id": "21ea33cb-1507-5e60-80c3-10871c80788b",
-        "name": "Neal Adams",
-        "bd_ids": [
-            "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"
-        ]
-    },
-    {
-        "id": "dd7e20bf-bcd1-5b90-a7d5-96c2ef461276",
-        "name": "Dan Adkins",
-        "bd_ids": [
-            "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"
-        ]
-    },
-    {
-        "id": "93d9e02c-ca19-59ba-a0ff-fe436c3a55bf",
-        "name": "Pozla",
-        "bd_ids": [
-            "5cad8b88-954e-5800-bf00-9a0844b4317d"
-        ]
-    },
-    {
-        "id": "fbc80bf7-51eb-58fc-b8c2-66228d9518a3",
-        "name": "Jay Hosler",
-        "bd_ids": [
-            "a1271973-c370-5a5f-a7d4-8feb30577f49"
-        ]
-    },
-    {
-        "id": "0ca16d5c-a8ba-5db2-9f06-f74b056d9c83",
-        "name": "Adrien Demont",
-        "bd_ids": [
-            "169ce90d-4993-5277-b4b4-898b948ae30b"
-        ]
-    },
-    {
-        "id": "1a15581a-5279-5430-876c-2e8ffa8ff9a9",
-        "name": "Lorenzo Mattotti",
-        "bd_ids": [
-            "c11af8d5-9a5d-5d5d-8a37-806ab326e55e"
-        ]
-    },
-    {
-        "id": "c1ffebeb-922e-5aec-a97e-43302c30360d",
-        "name": "Julia Wertz",
-        "bd_ids": [
-            "acef282e-003f-5e71-a1db-09b55471da17",
-            "af8eb788-7a27-5205-84b1-ae1298595b7d"
-        ]
-    },
-    {
-        "id": "d0b44328-312e-5462-94fc-6071926328cf",
-        "name": "Fred Bernard",
-        "bd_ids": [
-            "429db244-0244-5954-aed2-67933069011e"
-        ]
-    },
-    {
-        "id": "64050749-07c1-53a7-82b9-41a75f355e82",
-        "name": "Sergio Toppi",
-        "bd_ids": [
-            "a287fabc-b371-534f-b5ae-bce6b907b35f"
-        ]
-    },
-    {
-        "id": "d95d8155-cb3d-51b6-aa89-a6c1c7d4efda",
-        "name": "Richard McGuire",
-        "bd_ids": [
-            "ea17e67e-3aed-5734-bee3-23d291cb2e65"
-        ]
-    },
-    {
-        "id": "307d6d57-5e9c-5093-81f8-c14ebd1a70bf",
-        "name": "Brian Azzarello",
-        "bd_ids": [
-            "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4"
-        ]
-    },
-    {
-        "id": "87b5bd4e-962b-5128-b63a-fcb5a620a097",
-        "name": "Lee Bermejo",
-        "bd_ids": [
-            "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4"
-        ]
-    },
-    {
-        "id": "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57",
-        "name": "Sophie Guerrive",
-        "bd_ids": [
-            "1fe8553a-dc4f-557c-b0c8-ed285d25d513",
-            "92d4a711-7df9-52a6-aef4-35cf71bbc16a"
-        ]
-    },
-    {
-        "id": "07e138d4-c5e0-5e13-81c4-b924dca78d61",
-        "name": "Mirion Malle",
-        "bd_ids": [
-            "d7db5c18-6776-5197-b68c-f61569bd178a",
-            "39c9b8b4-fc17-5fb3-bda6-7f183cca54c7"
-        ]
-    },
-    {
-        "id": "29c51d18-72d7-5715-8d93-7f49418467af",
-        "name": "Lewis Trondheim",
-        "bd_ids": [
-            "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32"
-        ]
-    },
-    {
-        "id": "63e6bbf9-501c-5cab-a447-df8eca94278c",
-        "name": "Nicolas Keramidas",
-        "bd_ids": [
-            "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32"
-        ]
-    },
-    {
-        "id": "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2",
-        "name": "Manu Larcenet",
-        "bd_ids": [
-            "f2860692-948f-5d47-b998-60f799a21268",
-            "e6eb00f3-e29c-59a5-bf7e-7ca9a65fcd33"
-        ]
-    },
-    {
-        "id": "5ad0a9e1-5ffa-5c14-a110-f2130ce3514f",
-        "name": "Emre Orhun",
-        "bd_ids": [
-            "69f9074f-83c0-57ba-977b-1125d2fbae16"
-        ]
-    },
-    {
-        "id": "e7bad250-6da0-56ae-ab7c-bb32c2243587",
-        "name": "Julie Delporte",
-        "bd_ids": [
-            "e71a06a2-fc10-56f0-b0a6-f5b1ec6ce8d4",
-            "b2b56cf4-189b-5c0f-b0a9-b3f4944df2f8"
-        ]
-    },
-    {
-        "id": "5dffb67a-5aac-5df7-8cff-c42c4085749e",
-        "name": "Loo Hui Phang",
-        "bd_ids": [
-            "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3"
-        ]
-    },
-    {
-        "id": "2f4e23e5-9feb-53ab-beae-4555370c8f0d",
-        "name": "Frederik Peeters",
-        "bd_ids": [
-            "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3",
-            "a2edcba9-4069-57fa-860a-9b0f656b7911",
-            "46840f52-8e72-51fa-8308-bfe9e584b7c8",
-            "1bc85f3d-8932-5b00-b6fd-333b32ee53b9"
-        ]
-    },
-    {
-        "id": "7fe75a35-1d64-517a-885f-630c30ee6ba0",
-        "name": "Philippe Foerster",
-        "bd_ids": [
-            "80fb2922-29f9-5231-ba34-224676df214b"
-        ]
-    },
-    {
-        "id": "c5e6aaf1-2b53-5f0e-bce2-0c4c94f86c6f",
-        "name": "Takano Ichigo",
-        "bd_ids": [
-            "31218cb7-1c1c-5c1e-ba45-3383eb2db2a4"
-        ]
-    },
-    {
-        "id": "09ba303e-ed68-5c29-bac3-42f3ca9dc165",
-        "name": "Victor Hussenot",
-        "bd_ids": [
-            "d6777df6-7ff7-5d60-883a-8b4a3ea24742"
-        ]
-    },
-    {
-        "id": "453525aa-7f27-5d42-ba7b-d5459af791fc",
-        "name": "Matthieu Bonhomme",
-        "bd_ids": [
-            "0f4c7769-b9a0-5d86-90c2-0dab9cdecac5"
-        ]
-    },
-    {
-        "id": "a1538e2c-43f9-5a42-8d71-008ad928bf75",
-        "name": "Matthieu Chiara",
-        "bd_ids": [
-            "50457d0a-d275-54ae-a701-73038d4557e5"
-        ]
-    },
-    {
-        "id": "d9ccf51f-773d-5fc2-96b6-c595993dc4d5",
-        "name": "Pierre Boisserie",
-        "bd_ids": [
-            "ff97eec9-4561-5965-b9fd-31a81ed88ca1"
-        ]
-    },
-    {
-        "id": "9329ecf2-fb88-5cda-93d0-4d796212135a",
-        "name": "Nicolas Bara",
-        "bd_ids": [
-            "ff97eec9-4561-5965-b9fd-31a81ed88ca1"
-        ]
-    },
-    {
-        "id": "c533d6df-4b35-5261-9157-fa3cef0e4088",
-        "name": "Martin Emond",
-        "bd_ids": [
-            "f6807abd-c884-551c-ad68-32d7182e64bc"
-        ]
-    },
-    {
-        "id": "8d89626c-33ca-5927-9738-0bf520f4b52e",
-        "name": "Zerocalcare",
-        "bd_ids": [
-            "13cec0e3-d7e3-54da-be39-8ea04750452b"
-        ]
-    },
-    {
-        "id": "6036d73a-1f6b-581b-8e41-74a385c4be82",
-        "name": "Liv Strömquist",
-        "bd_ids": [
-            "4855cab9-a793-5a3b-b9ed-a1ae11a4cb96",
-            "5bebe1b3-ed45-5b99-bc12-026abccc686e"
-        ]
-    },
-    {
-        "id": "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b",
-        "name": "Alejandro Jodorowsky",
-        "bd_ids": [
-            "b84e2de9-9773-5fb3-b098-95600aabefb4",
-            "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5"
-        ]
-    },
-    {
-        "id": "a0b94843-ddbb-5e2e-94f4-31715a79ae96",
-        "name": "Ladrönn",
-        "bd_ids": [
-            "b84e2de9-9773-5fb3-b098-95600aabefb4"
-        ]
-    },
-    {
-        "id": "8d7dbf62-af3b-5183-9758-a74bff3e93b2",
-        "name": "Nylso",
-        "bd_ids": [
-            "6abe3396-863c-534c-ab1f-f19543d6c60d",
-            "e0079da4-868b-589a-8dc6-7c04973b026b"
-        ]
-    },
-    {
-        "id": "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8",
-        "name": "Daniel Clowes",
-        "bd_ids": [
-            "72f2081f-6273-5dc2-8c7b-28dc3370c098",
-            "5c0d585f-9e55-51fb-bb16-f98389cb7ce4"
-        ]
-    },
-    {
-        "id": "65e00d00-102a-5d11-a8ee-1ae12e5f8022",
-        "name": "Yukito Kishiro",
-        "bd_ids": [
-            "2e080007-73f3-551b-9c26-e8e9ebec19d2"
-        ]
-    },
-    {
-        "id": "343a491e-3575-5f01-bd10-fce806418d2d",
-        "name": "Pascal Rabaté",
-        "bd_ids": [
-            "b5c177d6-e429-538f-84b3-6f857b20a7a4"
-        ]
-    },
-    {
-        "id": "63d2e556-4c79-555b-afec-1eb4a3f509a5",
-        "name": "David Prudhomme",
-        "bd_ids": [
-            "b5c177d6-e429-538f-84b3-6f857b20a7a4"
-        ]
-    },
-    {
-        "id": "eb457afe-c7d7-5465-91f5-1f76bbd153d4",
-        "name": "Eddie Campbell",
-        "bd_ids": [
-            "9491f949-140c-5092-9add-d05dc3983fe1"
-        ]
-    },
-    {
-        "id": "aabdfb6d-def7-59e7-aef7-caf4f826425e",
-        "name": "Dan Best",
-        "bd_ids": [
-            "9491f949-140c-5092-9add-d05dc3983fe1"
-        ]
-    },
-    {
-        "id": "c31ac25f-8577-51a4-8112-3280350d8f34",
-        "name": "Alison Bechdel",
-        "bd_ids": [
-            "bde8dc28-1f8e-58e9-8de4-8efd46178c54",
-            "20219cc1-6639-5762-9325-1f565d5143ce"
-        ]
-    },
-    {
-        "id": "f780ae12-bdb3-5934-a7eb-c1a220d6c1f7",
-        "name": "Frank Pé",
-        "bd_ids": [
-            "9ac45906-4b6a-5ca4-805b-f64aec4b90bc"
-        ]
-    },
-    {
-        "id": "095fe88f-e6bc-523c-a338-d927d8a46767",
-        "name": "Zidrou",
-        "bd_ids": [
-            "9ac45906-4b6a-5ca4-805b-f64aec4b90bc",
-            "5be2ee50-4405-56c2-b59f-fbdc8438e45e",
-            "66419695-ae35-53a0-b7db-55e99b5d6b02"
-        ]
-    },
-    {
-        "id": "82f0f18e-ef7e-5f41-8047-ad16d91e05e4",
-        "name": "Tom Gauld",
-        "bd_ids": [
-            "c4a296ae-92a4-59dc-9301-4a603a7cffd0",
-            "945ced24-f871-580c-a2cd-e55da6520b39"
-        ]
-    },
-    {
-        "id": "2f89aaac-ebdd-5a34-a0a8-e93588b567e4",
-        "name": "Bryan Talbot",
-        "bd_ids": [
-            "562e5012-19b0-5794-aa0e-4636a143312f"
-        ]
-    },
-    {
-        "id": "74fe19ba-aed1-535a-b8e0-d23ecae07b52",
-        "name": "Ibn Al Rabin",
-        "bd_ids": [
-            "163d1778-437a-5b0b-a41c-477e1740f9d6"
-        ]
-    },
-    {
-        "id": "aedca89a-5fbd-5370-bd4f-613e59392e1e",
-        "name": "Boris Délevègue",
-        "bd_ids": [
-            "3ffeb194-5cc8-5d05-ade9-964f5999aa79"
-        ]
-    },
-    {
-        "id": "ecc84076-df42-5c48-b1a3-d3d8a57b3771",
-        "name": "Pierre Taki",
-        "bd_ids": [
-            "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc"
-        ]
-    },
-    {
-        "id": "bd3ae08f-db85-5ec7-997d-14285b672739",
-        "name": "Man Gatarou",
-        "bd_ids": [
-            "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc"
-        ]
-    },
-    {
-        "id": "160a3ea0-3de2-5647-bd35-de0856ad7ff1",
-        "name": "Cece Bell",
-        "bd_ids": [
-            "0d8ca287-8e3d-55a9-9f4f-bbe8a1a62c40"
-        ]
-    },
-    {
-        "id": "b84a8b0d-c5d4-50a0-98ca-7499c46b7968",
-        "name": "Néjib",
-        "bd_ids": [
-            "5a7dd53b-1495-5663-bea2-733fedd1d228"
-        ]
-    },
-    {
-        "id": "a0e8081c-c789-5249-a9ad-938d911d3d15",
-        "name": "Marc-Antoine Mathieu",
-        "bd_ids": [
-            "4335f95a-162b-55fd-bc33-9ae6270eaa96",
-            "9fb8bc86-0c68-5c44-a864-1bd65f4c4114"
-        ]
-    },
-    {
-        "id": "5a27bd93-6368-5a71-863e-b2984c27b7da",
-        "name": "Javier de Isusi",
-        "bd_ids": [
-            "09bd361d-294b-548e-81d2-a24ce73e755a"
-        ]
-    },
-    {
-        "id": "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b",
-        "name": "Mathieu Bablet",
-        "bd_ids": [
-            "1d56642e-0dc1-5f4a-aae2-0fa94df543fd",
-            "f82923f6-8cff-5419-927a-c3db18e9992f"
-        ]
-    },
-    {
-        "id": "8fe7fe5d-f5d1-57fa-9b23-8613e9714774",
-        "name": "Hugues Micol",
-        "bd_ids": [
-            "7c7c3feb-134e-5fcd-8be5-c580ee005cb1",
-            "9a3852a3-baa8-5f2a-aba2-fe494ac3d2d7"
-        ]
-    },
-    {
-        "id": "0afb0661-1df4-536c-9666-10c4b38bb243",
-        "name": "Sonny Liew",
-        "bd_ids": [
-            "d6aa2f0e-42e0-5e88-9aca-0f988aaf0156"
-        ]
-    },
-    {
-        "id": "1f5f75e0-7638-50f5-80af-9cd35b1db3a9",
-        "name": "Miroslav Sekulic-Struja",
-        "bd_ids": [
-            "8a70367d-933d-5179-ad05-41d287a8027e"
-        ]
-    },
-    {
-        "id": "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3",
-        "name": "Taiyou Matsumoto",
-        "bd_ids": [
-            "264198c3-9db1-53e1-9cf2-57062511f327",
-            "7ecc3faa-7448-57ea-b3c3-3fe72ddd322b"
-        ]
-    },
-    {
-        "id": "cdc82420-f432-5f59-a469-f2e496e2ec4d",
-        "name": "Chester Brown",
-        "bd_ids": [
-            "fb7e1f82-d227-5650-85b7-c44a4f634109",
-            "1346fd40-465d-50a8-9dbf-1b3db2f2f962"
-        ]
-    },
-    {
-        "id": "37c48d00-bc91-517c-b977-e253bcc19204",
-        "name": "Luigi Critone",
-        "bd_ids": [
-            "9915da9c-e3bf-579d-9399-0cca6f6854ed"
-        ]
-    },
-    {
-        "id": "d7ebbe2d-e613-5ff8-939b-63886c183c10",
-        "name": "Yann Kebbi",
-        "bd_ids": [
-            "871a5231-dd60-5c65-9b18-723b1565ffa1"
-        ]
-    },
-    {
-        "id": "6c202026-ad9b-5d9f-a7cb-35d1e0009667",
-        "name": "Viken Berberian",
-        "bd_ids": [
-            "871a5231-dd60-5c65-9b18-723b1565ffa1"
-        ]
-    },
-    {
-        "id": "552512e4-a3e7-5246-89cf-9ddee4ca5e17",
-        "name": "Bastien Vivès",
-        "bd_ids": [
-            "975d271b-e1e0-54f8-9273-2debfe877e0f",
-            "6285af41-5732-5e84-907f-7c1c6393c5e5"
-        ]
-    },
-    {
-        "id": "38a340c0-3423-5b21-8f83-9db6313b7522",
-        "name": "Oriane Lassus",
-        "bd_ids": [
-            "5a8ed5c1-88a2-5654-88d7-c1d974ade6b3"
-        ]
-    },
-    {
-        "id": "befc47ec-c72f-58e3-8519-a28173853443",
-        "name": "Michael DeForge",
-        "bd_ids": [
-            "1446edf4-27ba-5484-9124-b0655c28fa02",
-            "2d214a1a-d718-56ca-b4b1-daecd27fbc70"
-        ]
-    },
-    {
-        "id": "c49f0cdc-1a16-51f1-aec9-b96dbb3ecfab",
-        "name": "Steven Seagle",
-        "bd_ids": [
-            "5864aefd-c512-5acd-bfd4-654a9577e01f"
-        ]
-    },
-    {
-        "id": "f32dd3ed-2196-56e7-bb1a-41d07e59b2f7",
-        "name": "Teddy Kristiansen",
-        "bd_ids": [
-            "5864aefd-c512-5acd-bfd4-654a9577e01f"
-        ]
-    },
-    {
-        "id": "bf478f85-abfd-5914-acc2-eb7ae099bad6",
-        "name": "Éric Lambé",
-        "bd_ids": [
-            "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa"
-        ]
-    },
-    {
-        "id": "b0f40b74-5f7d-5e03-9420-f2c5732abccf",
-        "name": "Philippe de Pierpont",
-        "bd_ids": [
-            "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa"
-        ]
-    },
-    {
-        "id": "c8a55c08-f0a1-57c9-a276-d164183edeb8",
-        "name": "Xavier Mussat",
-        "bd_ids": [
-            "a3a08375-70c5-5185-aa11-1970757201c6"
-        ]
-    },
-    {
-        "id": "926f14bf-2ff3-58be-b4a8-bfc69cd4f9fb",
-        "name": "Grégoire Bouchard",
-        "bd_ids": [
-            "506574d1-5d79-5ea8-a30b-2de7549df7f9"
-        ]
-    },
-    {
-        "id": "d98bf4ce-fabc-518d-9a7b-415fda62817e",
-        "name": "Ludovic Debeurme",
-        "bd_ids": [
-            "ff441b8a-e7d8-56d6-889a-43edd430e38d"
-        ]
-    },
-    {
-        "id": "b52d45f1-1dd3-55f6-bb85-67fcb65cea0b",
-        "name": "Matthew Rosenberg",
-        "bd_ids": [
-            "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"
-        ]
-    },
-    {
-        "id": "e0985a1b-4ff4-5b75-8ca7-3067999c69d5",
-        "name": "Patrick Kindlon",
-        "bd_ids": [
-            "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"
-        ]
-    },
-    {
-        "id": "91ea0576-e99f-559b-8107-43c5a962ce61",
-        "name": "Josh hood",
-        "bd_ids": [
-            "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"
-        ]
-    },
-    {
-        "id": "ef93712c-4767-58cf-bde5-b0d4e4447cc3",
-        "name": "Álvaro Ortiz",
-        "bd_ids": [
-            "83e86609-2b52-52ab-b6f2-454f3f4f1588"
-        ]
-    },
-    {
-        "id": "b3477ea0-acf7-5378-921f-003ae0d32b4b",
-        "name": "Johnny Ryan",
-        "bd_ids": [
-            "87fa356f-0b28-50f7-ad0f-7608ec05705e"
-        ]
-    },
-    {
-        "id": "035c9f3a-3ce1-5d0c-8ea8-44c33fa53465",
-        "name": "Moreau Jérémie",
-        "bd_ids": [
-            "a968de90-88cc-5e8a-b553-d7298afa9d74"
-        ]
-    },
-    {
-        "id": "1cb65ab4-91ec-58a4-b86b-15848303925f",
-        "name": "Vero Cazot",
-        "bd_ids": [
-            "9c926764-7669-5585-8219-0f0fb31f3498"
-        ]
-    },
-    {
-        "id": "e8be046b-4ab7-5bf1-b064-43221857647d",
-        "name": "Paolo Bacilieri",
-        "bd_ids": [
-            "920c0bc3-909f-517c-8194-eec53442da3a"
-        ]
-    },
-    {
-        "id": "a12a8cd7-361a-5455-a8da-350b55b581b1",
-        "name": "Ufficio stampa",
-        "bd_ids": [
-            "920c0bc3-909f-517c-8194-eec53442da3a"
-        ]
-    },
-    {
-        "id": "db9a12ff-381c-54a8-847d-511a1a18e953",
-        "name": "Nazario",
-        "bd_ids": [
-            "765d65d1-e762-5976-bda4-410a49745faf"
-        ]
-    },
-    {
-        "id": "685f38e5-4320-5e62-9650-764382aed9a2",
-        "name": "Kōhei Horikoshi",
-        "bd_ids": [
-            "b7cfe93d-0614-51ed-9121-129779a36201"
-        ]
-    },
-    {
-        "id": "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1",
-        "name": "Shigeru Mizuki",
-        "bd_ids": [
-            "42bcdd54-8a27-5fbc-b679-565b1ae82f57",
-            "970a07a3-e2a0-5c36-bf0f-9a6f4ea83dad"
-        ]
-    },
-    {
-        "id": "081b0e0b-4da2-5f56-bf65-0bd4159a6420",
-        "name": "Kieron Gillen",
-        "bd_ids": [
-            "0ef59048-c3fb-5ea8-b650-75dafe1998cf"
-        ]
-    },
-    {
-        "id": "0708b86c-85b5-5300-9cd9-a2bda4f0a606",
-        "name": "Jamie McKelvie",
-        "bd_ids": [
-            "0ef59048-c3fb-5ea8-b650-75dafe1998cf"
-        ]
-    },
-    {
-        "id": "a730029a-5fc8-5f2d-83ee-d08a20957c8c",
-        "name": "Olivier Schrauwen",
-        "bd_ids": [
-            "2e7c3a72-b7fc-5260-a119-e8a94af085e5"
-        ]
-    },
-    {
-        "id": "df9128c9-cec9-53c8-8729-617042111988",
-        "name": "Aude Picault",
-        "bd_ids": [
-            "06ce7cf3-e238-5bb4-80c8-2000e8c536c7",
-            "5664c22b-88d2-5a47-bf61-fb3e4f657a0b",
-            "0527534f-2c66-5d92-94d5-e579f45fd919"
-        ]
-    },
-    {
-        "id": "be1bbed6-3d2a-5949-9210-263612f09011",
-        "name": "Hariton Pushwagner",
-        "bd_ids": [
-            "37e7a325-c27f-5f10-a2d6-21765d017dd8"
-        ]
-    },
-    {
-        "id": "ce395aec-bccb-5983-acf4-6da1f7dc05d3",
-        "name": "Ulli Lust",
-        "bd_ids": [
-            "4bc94c79-035d-558e-85ae-c08e1baee587"
-        ]
-    },
-    {
-        "id": "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87",
-        "name": "Fabien Vehlmann",
-        "bd_ids": [
-            "b8354485-7ce8-5d1c-a71b-bca27475f6c7",
-            "6a77cc15-294a-5114-8d5f-73d5d402ab51"
-        ]
-    },
-    {
-        "id": "4d8e72d3-3b12-548b-b11e-25da6ce04060",
-        "name": "Gwen de Bonneval",
-        "bd_ids": [
-            "b8354485-7ce8-5d1c-a71b-bca27475f6c7",
-            "6a77cc15-294a-5114-8d5f-73d5d402ab51"
-        ]
-    },
-    {
-        "id": "2a1ed255-67b2-58cd-b606-8c8dd612fa86",
-        "name": "Edith",
-        "bd_ids": [
-            "5be2ee50-4405-56c2-b59f-fbdc8438e45e"
-        ]
-    },
-    {
-        "id": "a296e419-1a8d-59a9-a3cd-d3ee5ba81fc9",
-        "name": "Dave McKean",
-        "bd_ids": [
-            "68213172-a9fb-5a77-9b90-2668f465ed84"
-        ]
-    },
-    {
-        "id": "ae96a2ee-5217-5ca6-b422-07d3393e3b41",
-        "name": "Chaland",
-        "bd_ids": [
-            "d7561c34-87ed-5351-9dcd-cabcdda88eb9",
-            "a0258b1a-9505-561d-a6a8-ca69479420d8"
-        ]
-    },
-    {
-        "id": "289863c6-a5cf-5a8e-ac03-c19aae5a032f",
-        "name": "Jean-marc Rochette",
-        "bd_ids": [
-            "ef41686b-1031-581f-a454-351eef12c49b"
-        ]
-    },
-    {
-        "id": "28ec0041-d45e-5c0f-855e-36d755e3a8cc",
-        "name": "Adeline Rosenstein",
-        "bd_ids": [
-            "9b7133ae-5594-5171-a72d-28be9d48ac38"
-        ]
-    },
-    {
-        "id": "5867fc24-0362-5151-a5c0-a8846e846594",
-        "name": "Mark Millar",
-        "bd_ids": [
-            "2ab19c62-8468-5b16-99a6-f5b97153b993",
-            "9c1164e3-301e-5075-af2f-013c819bb56a"
-        ]
-    },
-    {
-        "id": "226380ae-66d4-55d7-bf85-5d57c33b16c8",
-        "name": "Ersin Karabulut",
-        "bd_ids": [
-            "e0f10239-868a-5cde-b6dd-9c94fed8d7b5"
-        ]
-    },
-    {
-        "id": "dccf230a-7e53-53fc-8c68-d313d60245f3",
-        "name": "Loïc Clément",
-        "bd_ids": [
-            "4752dff7-0fcb-5360-a636-374577c0b313"
-        ]
-    },
-    {
-        "id": "035010a7-3a33-5cdf-b3bc-237e47b1ac05",
-        "name": "Clément Lefèvre",
-        "bd_ids": [
-            "4752dff7-0fcb-5360-a636-374577c0b313"
-        ]
-    },
-    {
-        "id": "ed1a4f6d-3f61-5ebf-95d6-dffa1b57b17e",
-        "name": "Brian K Vaughan",
-        "bd_ids": [
-            "0e432312-5b7e-50f8-afba-7869c1256706"
-        ]
-    },
-    {
-        "id": "04714650-136f-580a-ba12-2816571f86cf",
-        "name": "Pia Guerra",
-        "bd_ids": [
-            "0e432312-5b7e-50f8-afba-7869c1256706"
-        ]
-    },
-    {
-        "id": "eeab9dd3-5b67-53d1-8012-0b2cc71f0442",
-        "name": "Jonathan Ames",
-        "bd_ids": [
-            "8f885326-1105-5c04-9cb9-1df0a0d79080"
-        ]
-    },
-    {
-        "id": "44528b19-7eac-5aab-8e73-bbc8f7c11c8b",
-        "name": "Dean Haspiel",
-        "bd_ids": [
-            "8f885326-1105-5c04-9cb9-1df0a0d79080"
-        ]
-    },
-    {
-        "id": "1b65525f-ca97-5987-ac69-2799896f5fbf",
-        "name": "Charyn",
-        "bd_ids": [
-            "3d3f33fa-274c-5750-bbe8-b8a37f599031"
-        ]
-    },
-    {
-        "id": "012cf8c2-f922-5759-a7c4-244fe42ff33d",
-        "name": "Boucq",
-        "bd_ids": [
-            "3d3f33fa-274c-5750-bbe8-b8a37f599031"
-        ]
-    },
-    {
-        "id": "e0661633-2b9b-5f5f-8b1c-9dc7473c5037",
-        "name": "Park Kun-Wong",
-        "bd_ids": [
-            "967b3863-f429-58b5-804c-12a7b22632fd"
-        ]
-    },
-    {
-        "id": "8f8828b6-eed2-5ab6-8658-c165aa638119",
-        "name": "Remender Rick",
-        "bd_ids": [
-            "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19"
-        ]
-    },
-    {
-        "id": "66b3e971-8a48-589a-bb44-75fb4755cf25",
-        "name": "Craig Wes",
-        "bd_ids": [
-            "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19"
-        ]
-    },
-    {
-        "id": "a4c619ad-7880-5c8f-aeef-ac6c22630f6d",
-        "name": "Emil Ferris",
-        "bd_ids": [
-            "7cb93591-7dde-59e6-9afd-dc565a390435"
-        ]
-    },
-    {
-        "id": "f405fdc1-4877-50a2-b054-8198ebc80a55",
-        "name": "Yarô Abe",
-        "bd_ids": [
-            "d0acc909-4425-5267-a65a-41d9ca5be16b"
-        ]
-    },
-    {
-        "id": "ef2a5874-3ec2-5b7d-b363-c8c94498ec1a",
-        "name": "Nick drnaso",
-        "bd_ids": [
-            "c5f4a66e-a9f9-530f-8694-d73e0c2f8e4c"
-        ]
-    },
-    {
-        "id": "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3",
-        "name": "Bryan Lee O'Malley",
-        "bd_ids": [
-            "395b6a6b-7acb-5a84-8ddf-e855409977b8",
-            "6486c644-9f52-5b81-8121-a07c9ca820d3",
-            "24c15eca-cdd6-52e2-ae02-ca99c6a37884"
-        ]
-    },
-    {
-        "id": "9e03747d-9a8a-5a37-bef0-6c60c93c5600",
-        "name": "Haruko Ichikawa",
-        "bd_ids": [
-            "0fe6b6ee-7baa-56dc-ab21-40f63a87421b"
-        ]
-    },
-    {
-        "id": "c53c562f-90cf-52c7-852e-ba4fa5778897",
-        "name": "Anne Simon",
-        "bd_ids": [
-            "27aa754b-ec29-5d31-aac3-143f9055fdb5"
-        ]
-    },
-    {
-        "id": "a353a8e9-4956-50a4-b70d-e0b753fcf522",
-        "name": "Régis Loisel",
-        "bd_ids": [
-            "21bdadd2-bb70-57c4-9fac-bb1eef30acc0"
-        ]
-    },
-    {
-        "id": "f7afb30f-e1e2-556c-9c9a-43825f33af8f",
-        "name": "Jean-Blaise Djian",
-        "bd_ids": [
-            "21bdadd2-bb70-57c4-9fac-bb1eef30acc0"
-        ]
-    },
-    {
-        "id": "7118c1e0-6a54-5867-b9b0-151ba357e1c8",
-        "name": "Vincent Mallié",
-        "bd_ids": [
-            "21bdadd2-bb70-57c4-9fac-bb1eef30acc0"
-        ]
-    },
-    {
-        "id": "34342b16-3119-579b-9c61-ef99940a8224",
-        "name": "Thomas Gilbert",
-        "bd_ids": [
-            "a487bacd-3e60-5db3-9c0f-e8167d21ca9d"
-        ]
-    },
-    {
-        "id": "03cdc5ac-b075-5ab7-9fc8-3d64cdf0096d",
-        "name": "Hirohiko ARAKI",
-        "bd_ids": [
-            "7a876a7a-5b64-5cde-9870-ecb1aa6d034c"
-        ]
-    },
-    {
-        "id": "a3c116a8-7515-5b5a-808f-6912b470b716",
-        "name": "Tom Kaczynski",
-        "bd_ids": [
-            "6a5e1b8a-0898-5cbd-b53c-ffcb5fb7bb59"
-        ]
-    },
-    {
-        "id": "84220ea6-51be-54b2-8524-36bc6a1ad7c5",
-        "name": "Nicolás Arispe",
-        "bd_ids": [
-            "8347cdbe-e853-583d-a6f8-3288b8bb55a5"
-        ]
-    },
-    {
-        "id": "2d4623d8-e667-5373-b0e8-0933cc33d64e",
-        "name": "Émile Bravo",
-        "bd_ids": [
-            "c77e8572-a4d7-5a3e-b772-31dd942e9d39"
-        ]
-    },
-    {
-        "id": "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0",
-        "name": "Jeff Lemire",
-        "bd_ids": [
-            "4bb23804-0bcf-59c4-b051-ebf483efde5f",
-            "344c953c-2f98-510e-9642-b193cc079eeb"
-        ]
-    },
-    {
-        "id": "b4be3d64-8025-58ce-8c65-532412a7a00a",
-        "name": "Andrea Sorrentino",
-        "bd_ids": [
-            "4bb23804-0bcf-59c4-b051-ebf483efde5f"
-        ]
-    },
-    {
-        "id": "cc2cbfb1-a137-5c56-8a23-2671597ab919",
-        "name": "Peppe Koivunen",
-        "bd_ids": [
-            "7e408fbd-928f-56ab-b646-d972f5e24698"
-        ]
-    },
-    {
-        "id": "0e19ff22-af4d-56a0-abcc-86cb2a09490d",
-        "name": "Aapo Rapi",
-        "bd_ids": [
-            "7e408fbd-928f-56ab-b646-d972f5e24698"
-        ]
-    },
-    {
-        "id": "1c483a7c-e6bb-582a-8792-0cc4e649f4d0",
-        "name": "Rokudenashiko",
-        "bd_ids": [
-            "21801dc4-dd74-5bc0-881d-89f0328bcfcf"
-        ]
-    },
-    {
-        "id": "458151c8-dc97-5fef-8d61-bef98aaace70",
-        "name": "Yuhki Kamatani",
-        "bd_ids": [
-            "b4e6e54b-c87a-5158-b824-bba62706d262"
-        ]
-    },
-    {
-        "id": "28cc0b40-521b-52be-b4d4-a956755eb971",
-        "name": "Olivier Texier",
-        "bd_ids": [
-            "b543747f-1269-5f2c-98d3-13188b27d9b0"
-        ]
-    },
-    {
-        "id": "27924509-cf04-5879-b755-b018b8bb79a4",
-        "name": "Arnaud Malherbe",
-        "bd_ids": [
-            "795ed7d3-240b-5db3-8a23-41fe5531f853"
-        ]
-    },
-    {
-        "id": "fd980b15-243b-5a7e-98a4-46024c3809b9",
-        "name": "Vincent Perriot",
-        "bd_ids": [
-            "795ed7d3-240b-5db3-8a23-41fe5531f853"
-        ]
-    },
-    {
-        "id": "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5",
-        "name": "Gipi",
-        "bd_ids": [
-            "0a1fa77f-b0ff-55a3-ba65-d274ab0605d3",
-            "c36e3da5-0be8-5732-a555-fb7a2b9adc95"
-        ]
-    },
-    {
-        "id": "0334ed05-27b2-5dea-b180-3ab2692d85e7",
-        "name": "Aniss El Hamouri",
-        "bd_ids": [
-            "91796292-f679-5dc3-8e16-f53e3cd37480",
-            "c7de24d2-2e14-55d4-9ba8-d7999551971b"
-        ]
-    },
-    {
-        "id": "37d869e4-02d9-5885-a0c5-62e7f626e80d",
-        "name": "Ichikawa Raku",
-        "bd_ids": [
-            "08e65064-e95c-5215-8c3d-adb674683828"
-        ]
-    },
-    {
-        "id": "11ccdb5b-b14e-5297-93a6-144b65c6a374",
-        "name": "Venayre",
-        "bd_ids": [
-            "3d70b2d5-2977-5edc-972d-5f5e66124eef"
-        ]
-    },
-    {
-        "id": "0fa6efdf-5b59-5497-a4a0-2412cc8f2249",
-        "name": "Davodeau",
-        "bd_ids": [
-            "3d70b2d5-2977-5edc-972d-5f5e66124eef"
-        ]
-    },
-    {
-        "id": "5becded1-8df8-5719-8df7-76a7c8641ec1",
-        "name": "Itagaki",
-        "bd_ids": [
-            "bf4fe76d-85e6-5b2b-8093-bd397f29ccc2"
-        ]
-    },
-    {
-        "id": "5210ee98-eddf-5485-bec1-870d0de8270b",
-        "name": "Walden",
-        "bd_ids": [
-            "8ac3624a-93f8-5771-975b-942423b399b5"
-        ]
-    },
-    {
-        "id": "5e40aaad-a8ad-59d4-8f7c-0fc6c135a0cd",
-        "name": "Pierrick Starsky",
-        "bd_ids": [
-            "45654738-801a-54ec-a4da-363363691092"
-        ]
-    },
-    {
-        "id": "e60fbf0f-6d78-5335-af27-7dca3f46b9b0",
-        "name": "Pierre Place",
-        "bd_ids": [
-            "45654738-801a-54ec-a4da-363363691092"
-        ]
-    },
-    {
-        "id": "dfb60faa-598f-5699-8b2f-01a78e66cd35",
-        "name": "Jean-Louis Tripp",
-        "bd_ids": [
-            "20804294-4e09-50cd-94bd-8372e5d99a58"
-        ]
-    },
-    {
-        "id": "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5",
-        "name": "Daniel Warren Johnson",
-        "bd_ids": [
-            "85b4afe0-39bc-53e9-b894-84624222cc7d",
-            "67a5f9be-05e5-5595-a37f-a5ab7ac9952b"
-        ]
-    },
-    {
-        "id": "91077797-d951-5025-a095-fef1a2b3bb5f",
-        "name": "Osamu Tezuka",
-        "bd_ids": [
-            "9a9a15ba-5c4a-5d05-9b95-0f346d811cf6",
-            "80e320c2-11e7-595b-89ba-24b81ea6d621"
-        ]
-    },
-    {
-        "id": "2e7138da-8cc1-50d9-846f-ea5c74a98cf7",
-        "name": "Naoki Yamakawa",
-        "bd_ids": [
-            "a9faa5b6-9672-510a-bd92-634e3aeb2240"
-        ]
-    },
-    {
-        "id": "4c6305bb-724f-5f86-ae00-73e45454b903",
-        "name": "Masashi Asaki",
-        "bd_ids": [
-            "a9faa5b6-9672-510a-bd92-634e3aeb2240"
-        ]
-    },
-    {
-        "id": "183f199f-a026-5761-9ec8-c69c66040044",
-        "name": "Makoto Yukimura",
-        "bd_ids": [
-            "4d775666-080c-5f46-ab43-983746584a96"
-        ]
-    },
-    {
-        "id": "05eb8f95-5ac9-5a9c-8111-7901bcf3d397",
-        "name": "TogaQ",
-        "bd_ids": [
-            "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71"
-        ]
-    },
-    {
-        "id": "019a8caf-92e3-54b4-8add-539931bc8478",
-        "name": "Narcissus - Neko Kichiku",
-        "bd_ids": [
-            "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71"
-        ]
-    },
-    {
-        "id": "6b955294-0c6d-5b47-8a7f-7a46611b7aa4",
-        "name": "Louise Joor",
-        "bd_ids": [
-            "e4e1d8bd-5c94-57eb-9b76-45b0d2e3c1b7"
-        ]
-    },
-    {
-        "id": "d055575f-870c-5ed6-8371-8ede4af900c1",
-        "name": "Emilie Gleason",
-        "bd_ids": [
-            "0a23fbe5-b7b7-547f-95ef-c8e4c169ba84",
-            "22bae3a8-139b-5a3f-932f-80fc901d43af"
-        ]
-    },
-    {
-        "id": "77897035-979e-5c77-9015-a3d636adb490",
-        "name": "Nina Bunjevac",
-        "bd_ids": [
-            "8b193f6b-8fc9-5dd4-8f86-3dffe109ace2"
-        ]
-    },
-    {
-        "id": "67021253-b3f9-5131-a5a1-6f1e6996c8bd",
-        "name": "Tom King",
-        "bd_ids": [
-            "0eb55165-0714-592e-b967-ca0d76ba06ff",
-            "b6e3995c-deef-5246-a9b0-df3a38e0f7e8",
-            "980619c8-13ee-54cf-960c-0ad3a452965b"
-        ]
-    },
-    {
-        "id": "cd86941a-d2f6-535f-bb9b-ae9e1a277c61",
-        "name": "Mitch Gerads",
-        "bd_ids": [
-            "0eb55165-0714-592e-b967-ca0d76ba06ff",
-            "b6e3995c-deef-5246-a9b0-df3a38e0f7e8"
-        ]
-    },
-    {
-        "id": "e5020b23-1913-5091-8e95-fb8deb0a3b96",
-        "name": "Nine Antico",
-        "bd_ids": [
-            "455fed83-1d56-56f4-b2e3-46efbcc1f0e1",
-            "2f23ec7b-6aa5-5cf5-b8ac-331ee184fe94",
-            "a363d9bd-8981-5155-9eb6-c9cef10c231a"
-        ]
-    },
-    {
-        "id": "6dc1449e-5778-5046-ae1c-0025d5d15b13",
-        "name": "Ai Yazawa",
-        "bd_ids": [
-            "ea9613e4-c0a1-5a88-b2a4-fc986c9f2240"
-        ]
-    },
-    {
-        "id": "63afd855-4f1d-51bb-a5c5-faf4676934bd",
-        "name": "Nicolas Jarry",
-        "bd_ids": [
-            "935c5f25-3edb-5853-91ea-c0c75d211ba5"
-        ]
-    },
-    {
-        "id": "731fd7b0-dd35-5c0e-a77b-6d21464732f8",
-        "name": "France Richemond",
-        "bd_ids": [
-            "935c5f25-3edb-5853-91ea-c0c75d211ba5"
-        ]
-    },
-    {
-        "id": "7dc8b037-9a91-58d1-8b32-74b2c39834f2",
-        "name": "Theo Caneschi",
-        "bd_ids": [
-            "935c5f25-3edb-5853-91ea-c0c75d211ba5"
-        ]
-    },
-    {
-        "id": "4f07590b-71c7-574a-a119-11a46258f06a",
-        "name": "Lorenzo Pieri",
-        "bd_ids": [
-            "935c5f25-3edb-5853-91ea-c0c75d211ba5"
-        ]
-    },
-    {
-        "id": "089c60ee-cedc-54f3-9c4d-9414af218b1b",
-        "name": "Philippe Valette",
-        "bd_ids": [
-            "99f43ae7-65c3-5f0b-bd9a-336ad6735fea"
-        ]
-    },
-    {
-        "id": "2149320d-2c93-5c48-92dd-fd4a4b4a2916",
-        "name": "Goossens",
-        "bd_ids": [
-            "3d6f3134-2abf-5826-9462-12df423eeb00"
-        ]
-    },
-    {
-        "id": "92d63259-a236-5255-8a90-bf9776649674",
-        "name": "Chloé Wary",
-        "bd_ids": [
-            "90a07961-765f-588b-a9b1-147327ff19e6",
-            "d535ad5b-baf2-54af-b3d5-17d8b52332ff"
-        ]
-    },
-    {
-        "id": "2d4e035b-babd-5524-8a3e-9bcba6e75ec5",
-        "name": "Satoshi Kon",
-        "bd_ids": [
-            "fa63dd8d-c49f-5a56-9f07-8f6fbbb45dbc"
-        ]
-    },
-    {
-        "id": "ac8ec002-305d-51dd-96b9-2c2c6d35b9ab",
-        "name": "Mike Carey",
-        "bd_ids": [
-            "91f06cb8-a704-5705-b48a-2015fa0dd6b8"
-        ]
-    },
-    {
-        "id": "4622e2be-836f-5c71-a681-8a7b8692853d",
-        "name": "Peter Gross",
-        "bd_ids": [
-            "91f06cb8-a704-5705-b48a-2015fa0dd6b8"
-        ]
-    },
-    {
-        "id": "a35e9edb-f6b1-5319-a1b2-1d16cc509e2a",
-        "name": "Olivier Coipel",
-        "bd_ids": [
-            "9c1164e3-301e-5075-af2f-013c819bb56a"
-        ]
-    },
-    {
-        "id": "40790dc7-7194-5449-98fe-ccc3f6fa7767",
-        "name": "Joe Quesada",
-        "bd_ids": [
-            "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea"
-        ]
-    },
-    {
-        "id": "2e83f03b-61b3-5559-8c7b-9f91ce6434b7",
-        "name": "Christopher Priest",
-        "bd_ids": [
-            "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea"
-        ]
-    },
-    {
-        "id": "86408786-4e90-52b4-aa67-30066872af26",
-        "name": "Azarello",
-        "bd_ids": [
-            "809c07eb-4cdb-564d-801f-810e13afae93"
-        ]
-    },
-    {
-        "id": "fe17f662-7b96-54eb-a378-d165448e83c6",
-        "name": "Corben",
-        "bd_ids": [
-            "809c07eb-4cdb-564d-801f-810e13afae93"
-        ]
-    },
-    {
-        "id": "10666593-e9d3-5312-90c8-4ef8d1e3cebe",
-        "name": "Ugo Bienvenu",
-        "bd_ids": [
-            "04614ebb-df6b-5425-9f49-a953190b114f",
-            "122a0172-06d1-548d-a796-547d56b7fa4c"
-        ]
-    },
-    {
-        "id": "b9adbafa-9486-52d4-bfd9-7072efd368ae",
-        "name": "AJ Dungo",
-        "bd_ids": [
-            "fff5e173-faf5-5091-b143-91036a35047d"
-        ]
-    },
-    {
-        "id": "1a7ad751-eef5-54c6-af64-bf354fc1c6bb",
-        "name": "Amélie Fléchais",
-        "bd_ids": [
-            "88083fb1-f033-50a2-a26a-84921246605c"
-        ]
-    },
-    {
-        "id": "8ebd502e-0353-5076-9daf-ef5e18c72f6c",
-        "name": "Jonathan Garnier",
-        "bd_ids": [
-            "88083fb1-f033-50a2-a26a-84921246605c"
-        ]
-    },
-    {
-        "id": "d16f0632-6f42-5729-a856-4a25f9e5396d",
-        "name": "Max",
-        "bd_ids": [
-            "dcc25ccb-bc58-5f18-9a49-a54fc52fdcf3"
-        ]
-    },
-    {
-        "id": "0d6d184b-a29e-53a7-8833-1d8d959e8b67",
-        "name": "Tebo",
-        "bd_ids": [
-            "4e54d086-2092-5623-81ce-cdb52ee354a3"
-        ]
-    },
-    {
-        "id": "35a4d2db-5e22-555d-bdcc-c806c0ae5f35",
-        "name": "Stéphane Fert",
-        "bd_ids": [
-            "33368bc9-256a-520a-88cc-b78bd19c6dce",
-            "045e3ca9-5744-52bb-ba4c-d69f08e9c343"
-        ]
-    },
-    {
-        "id": "101177af-518d-573a-9f37-7d1907f8557a",
-        "name": "Bargain Sakurai",
-        "bd_ids": [
-            "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"
-        ]
-    },
-    {
-        "id": "f95bf41f-d4da-5636-8d31-4a16f45f86ae",
-        "name": "Atsuhiko Nakamura",
-        "bd_ids": [
-            "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"
-        ]
-    },
-    {
-        "id": "79173c52-b077-58b7-9de5-213f60a8f298",
-        "name": "Anne-Margot Ramstein",
-        "bd_ids": [
-            "56fc148f-32d4-5cb2-a0e4-8eee0f478cfb"
-        ]
-    },
-    {
-        "id": "21e8c9b3-1fc6-5b3f-9c64-fbc955194792",
-        "name": "Nicolas Presl",
-        "bd_ids": [
-            "5cf79362-fbc8-5768-a71e-da1f3da4979b",
-            "0600c708-f469-5a62-87d6-0081966be2b0"
-        ]
-    },
-    {
-        "id": "ec7b8039-9647-53bd-98df-c4980ff84587",
-        "name": "Ryô Hirano",
-        "bd_ids": [
-            "99cf5bac-a6b4-5fa0-ace7-3b6acdda880b"
-        ]
-    },
-    {
-        "id": "cd9ac32b-5e63-5ee4-a040-0a08d8da008c",
-        "name": "Leslie Hung",
-        "bd_ids": [
-            "6486c644-9f52-5b81-8121-a07c9ca820d3"
-        ]
-    },
-    {
-        "id": "5bd9bdce-2827-5048-84b1-476815daaeff",
-        "name": "Pauline Giraud",
-        "bd_ids": [
-            "a07deabb-ba5c-5b23-bd86-e977a8865e6c"
-        ]
-    },
-    {
-        "id": "96ee5e02-42ba-5540-b8a7-b2b639a577bb",
-        "name": "Maxence Henry",
-        "bd_ids": [
-            "a07deabb-ba5c-5b23-bd86-e977a8865e6c"
-        ]
-    },
-    {
-        "id": "aaff7554-0102-5996-beae-0993b356a202",
-        "name": "Yvan Duque",
-        "bd_ids": [
-            "a07deabb-ba5c-5b23-bd86-e977a8865e6c"
-        ]
-    },
-    {
-        "id": "95d147eb-c140-5339-ad8e-0d09bd1bb49f",
-        "name": "Alfred",
-        "bd_ids": [
-            "3852be01-9880-52eb-8493-9b3a5758e58f"
-        ]
-    },
-    {
-        "id": "643adc5f-050b-514f-855f-2ff87a990c08",
-        "name": "Mark Waid",
-        "bd_ids": [
-            "7769da5e-26ce-5da9-bec0-7a649cbadc21",
-            "1c16dd39-9b71-570b-adf9-dd949b0876ed"
-        ]
-    },
-    {
-        "id": "cf7a99fa-a50c-569b-b9bd-f5e5c1769357",
-        "name": "Alex Ross",
-        "bd_ids": [
-            "7769da5e-26ce-5da9-bec0-7a649cbadc21"
-        ]
-    },
-    {
-        "id": "c3a1940c-7540-5034-8b6c-ca60b59520b3",
-        "name": "Riichiro Inagaki",
-        "bd_ids": [
-            "e897052f-d4f2-5e42-9731-c4f7b672d891"
-        ]
-    },
-    {
-        "id": "68134aa4-2f64-5303-a042-788e170ddea9",
-        "name": "Boichi",
-        "bd_ids": [
-            "e897052f-d4f2-5e42-9731-c4f7b672d891"
-        ]
-    },
-    {
-        "id": "a367fe72-04a8-59a8-955b-882054715ed1",
-        "name": "Ville Ranta",
-        "bd_ids": [
-            "a5c2edd4-0e57-5aff-ad51-1da715ae3f5e"
-        ]
-    },
-    {
-        "id": "7dcf6112-1145-5af4-82fb-e9b92015aa1d",
-        "name": "Moa Romanova",
-        "bd_ids": [
-            "126597e8-c9b9-59ea-bd95-81b0e7b61342"
-        ]
-    },
-    {
-        "id": "ecb145e1-13b8-59fa-8422-1fbb2a505946",
-        "name": "Marguerite Abouet",
-        "bd_ids": [
-            "f85336b5-f4df-5112-a405-cf0dbd14fd50"
-        ]
-    },
-    {
-        "id": "aadfc208-0268-5ff7-b840-57b854a09cce",
-        "name": "Donatien Mary",
-        "bd_ids": [
-            "f85336b5-f4df-5112-a405-cf0dbd14fd50"
-        ]
-    },
-    {
-        "id": "beb683f9-838a-5ab5-915e-50e5ee57e66f",
-        "name": "Noëlle Steveson",
-        "bd_ids": [
-            "531a885c-829a-59e3-9ce8-4af27ee228e2"
-        ]
-    },
-    {
-        "id": "a6b81f1d-dc27-5aa3-877e-d3e6bd44907d",
-        "name": "Kelly Sue DeConnick",
-        "bd_ids": [
-            "ef0b7e38-3627-5f6e-b460-3e92a56d3a13"
-        ]
-    },
-    {
-        "id": "e00c6e9a-cecb-5393-9a29-204cb3947ce9",
-        "name": "Emma Ríos",
-        "bd_ids": [
-            "ef0b7e38-3627-5f6e-b460-3e92a56d3a13"
-        ]
-    },
-    {
-        "id": "e02ab7f1-a215-5b6d-a012-ed8916473101",
-        "name": "Theo Ellsworth",
-        "bd_ids": [
-            "12865e73-340e-5385-a1c0-8dcd99f6ad82"
-        ]
-    },
-    {
-        "id": "635f02aa-96a4-5530-bbea-013c415c8290",
-        "name": "Vincent Zabus",
-        "bd_ids": [
-            "58bf1586-0770-5e05-9d5e-84b033947d1f"
-        ]
-    },
-    {
-        "id": "09a3b727-757e-5f3a-84f0-75b4364f9c63",
-        "name": "Hippolyte",
-        "bd_ids": [
-            "58bf1586-0770-5e05-9d5e-84b033947d1f"
-        ]
-    },
-    {
-        "id": "a98cd576-0496-5016-8738-c111b1250f68",
-        "name": "Claude Lacroix",
-        "bd_ids": [
-            "9f71560e-9697-518d-a092-a2e73ca2c608"
-        ]
-    },
-    {
-        "id": "85773f9c-27a8-5d21-9786-fad52ff3180e",
-        "name": "François Bourgeon",
-        "bd_ids": [
-            "9f71560e-9697-518d-a092-a2e73ca2c608"
-        ]
-    },
-    {
-        "id": "4a7a4f1c-41b7-5fc8-920d-ac55b12d15d1",
-        "name": "Kat Leyh",
-        "bd_ids": [
-            "7655deef-be68-561d-a942-3a401c24343e"
-        ]
-    },
-    {
-        "id": "f6acf67b-3605-510c-89f9-da99c5668419",
-        "name": "Jacky Benetaud",
-        "bd_ids": [
-            "2a776a76-0486-5fa8-a693-0507a23edda8"
-        ]
-    },
-    {
-        "id": "588613c4-6e68-5359-ada6-29b7ff634885",
-        "name": "Fabrizio Dori",
-        "bd_ids": [
-            "2a776a76-0486-5fa8-a693-0507a23edda8",
-            "8faa03ae-f8f4-5b68-9059-c0c628f85707"
-        ]
-    },
-    {
-        "id": "fd8a5c80-b148-5a48-a880-d38d2e74bf5a",
-        "name": "Komoto Hajime",
-        "bd_ids": [
-            "2a5e1c5f-476c-5d4e-81f3-2b78cb856e41"
-        ]
-    },
-    {
-        "id": "a257ccd6-592f-5169-9247-729f4a009e2d",
-        "name": "Akiko Higashimura",
-        "bd_ids": [
-            "473edb56-8483-5f87-ae9a-226e5639da7c"
-        ]
-    },
-    {
-        "id": "11132b63-24cf-5e0c-87e3-f82a28ac89e8",
-        "name": "James Tynion IV",
-        "bd_ids": [
-            "d8f9a56b-3061-5c16-9cce-1d231de67319",
-            "df990528-33c4-5c15-87e0-ad4119be24f3"
-        ]
-    },
-    {
-        "id": "11b97ae6-9bb9-56c9-914a-c8e0fe79156c",
-        "name": "Werther Dell'Edera",
-        "bd_ids": [
-            "d8f9a56b-3061-5c16-9cce-1d231de67319"
-        ]
-    },
-    {
-        "id": "2bd1623e-7f3d-543a-b05c-628bb3e6d6b4",
-        "name": "Suehiro Maruo",
-        "bd_ids": [
-            "cd0cdc46-bfd4-5850-beaf-3019f10e3e7b"
-        ]
-    },
-    {
-        "id": "56030257-e26e-53d8-9d62-6471ba32ecce",
-        "name": "Zeina Abiracheb",
-        "bd_ids": [
-            "1a3f1d17-bebd-5ddb-abe3-9533675f24a8"
-        ]
-    },
-    {
-        "id": "581a5d0a-41d0-54b0-8ccb-9f5dac37c4e3",
-        "name": "collectif",
-        "bd_ids": [
-            "609fe001-1408-54fc-8686-1a7094aaa0da"
-        ]
-    },
-    {
-        "id": "23c4dbf2-da76-5959-b5c8-de2b87f8dc74",
-        "name": "Baru",
-        "bd_ids": [
-            "493aa385-71e1-5b94-937d-fc270fd2d7bc"
-        ]
-    },
-    {
-        "id": "8c05c235-5085-5da5-975c-95a3ec03a0ce",
-        "name": "Lucrèce Andreae",
-        "bd_ids": [
-            "209120cd-8ef2-5051-9030-5750844215c5"
-        ]
-    },
-    {
-        "id": "f1c41fdd-a85b-58e1-b10d-1c31f9803326",
-        "name": "Lukasz Wojciechowski",
-        "bd_ids": [
-            "00b764c7-9e57-5a44-8922-76ffc6c0c006"
-        ]
-    },
-    {
-        "id": "06ae0839-7b89-5d3a-bf83-99dc6830803a",
-        "name": "Simon Hanselmann",
-        "bd_ids": [
-            "385f1264-4b26-5572-b2a8-10343d26cc7c"
-        ]
-    },
-    {
-        "id": "eb5d6e96-6e8e-5188-8ea6-58cc19c59957",
-        "name": "Geoffroy Monde",
-        "bd_ids": [
-            "2f0d945f-bd63-5967-9a57-844e20b11675"
-        ]
-    },
-    {
-        "id": "7116930d-8c4e-548c-b9e6-248dafce1360",
-        "name": "Wilfrid Lupano",
-        "bd_ids": [
-            "045e3ca9-5744-52bb-ba4c-d69f08e9c343"
-        ]
-    },
-    {
-        "id": "141dc09a-4241-51b4-a81e-5402d1647f96",
-        "name": "Philippe Druillet",
-        "bd_ids": [
-            "98a1d8c6-853d-5970-b117-ace76d927b91"
-        ]
-    },
-    {
-        "id": "b6ec5ccc-d0ec-5f4f-971f-7e1f961f15f1",
-        "name": "Jun Mayuzuli",
-        "bd_ids": [
-            "45a36e4f-7780-53c1-b774-353b3aa6e85e"
-        ]
-    },
-    {
-        "id": "831f7cc9-9ad6-5358-8ca1-1d671a6cb6f1",
-        "name": "Fabcaro",
-        "bd_ids": [
-            "be84548c-9e26-56ea-a97d-bdf4b9653250"
-        ]
-    },
-    {
-        "id": "a1b4ee86-d88a-5c9f-a04e-fb542537c0f0",
-        "name": "Léonie Bischoff",
-        "bd_ids": [
-            "04c7c967-43b9-5255-a016-a6a6713ccaf0"
-        ]
-    },
-    {
-        "id": "566e776d-c9d5-52e2-8388-6dad7d49b424",
-        "name": "Brad Metzler",
-        "bd_ids": [
-            "808def66-0261-5fb0-adf1-2e8c3f8761d8"
-        ]
-    },
-    {
-        "id": "b922cef3-2fc8-568f-a16c-87f17c81465e",
-        "name": "Rags Morales",
-        "bd_ids": [
-            "808def66-0261-5fb0-adf1-2e8c3f8761d8"
-        ]
-    },
-    {
-        "id": "3f2d648d-6795-56c7-a81a-4a98b852b1a0",
-        "name": "Josselin Facon",
-        "bd_ids": [
-            "122a0172-06d1-548d-a796-547d56b7fa4c"
-        ]
-    },
-    {
-        "id": "9d6057a1-8a84-5712-9f8c-4f2e530b2f34",
-        "name": "Arleston",
-        "bd_ids": [
-            "e37157f2-efbb-508a-bc47-17a90bc02c84"
-        ]
-    },
-    {
-        "id": "5b576627-0b89-5180-bd78-cb87eb672cd0",
-        "name": "Tarquin",
-        "bd_ids": [
-            "e37157f2-efbb-508a-bc47-17a90bc02c84"
-        ]
-    },
-    {
-        "id": "0f40eecd-24cf-5c5c-8330-f71cda6d02c3",
-        "name": "José Parrondo",
-        "bd_ids": [
-            "ad666457-dc66-5f79-a8e2-24d71257ce29"
-        ]
-    },
-    {
-        "id": "cd5b8826-38e8-5380-86f3-a2d6735d723a",
-        "name": "Rey",
-        "bd_ids": [
-            "deb20c8e-015a-5c9c-9686-1111263e8a0a"
-        ]
-    },
-    {
-        "id": "1f55bd80-400f-5c7c-98ed-d29a9fff6cbe",
-        "name": "Galic",
-        "bd_ids": [
-            "deb20c8e-015a-5c9c-9686-1111263e8a0a"
-        ]
-    },
-    {
-        "id": "030b9850-5805-5d5d-b8ef-9d9d2f42cdd6",
-        "name": "Kris",
-        "bd_ids": [
-            "deb20c8e-015a-5c9c-9686-1111263e8a0a"
-        ]
-    },
-    {
-        "id": "b791b4d4-8740-554d-ad07-82218d8bb7ed",
-        "name": "Bonnet",
-        "bd_ids": [
-            "deb20c8e-015a-5c9c-9686-1111263e8a0a"
-        ]
-    },
-    {
-        "id": "604f3749-8f3e-5862-a9e5-04fa037f26c0",
-        "name": "Hill",
-        "bd_ids": [
-            "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b"
-        ]
-    },
-    {
-        "id": "38ca6247-1af6-574c-b8c6-2ce51282d966",
-        "name": "Rodriguez",
-        "bd_ids": [
-            "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b"
-        ]
-    },
-    {
-        "id": "faf147b2-0071-53bc-bd91-a89be82a3bde",
-        "name": "Marcello Quintanilha",
-        "bd_ids": [
-            "0e8111d0-2e90-54c7-88b1-43b0e0881cc9"
-        ]
-    },
-    {
-        "id": "c5b9e189-2937-5717-9cfa-4bf3ca95975e",
-        "name": "Michel Fiffe",
-        "bd_ids": [
-            "ed1239f8-6705-59cc-89fa-0f58a386644e"
-        ]
-    },
-    {
-        "id": "eae3e547-17c4-5a9d-9f08-a099870e7427",
-        "name": "Keito Gaku",
-        "bd_ids": [
-            "259a0454-9500-5b1b-be3c-1039abe5838a"
-        ]
-    },
-    {
-        "id": "1e2535bc-1306-5edf-a096-6619d1fc69f0",
-        "name": "Fabrice Neaud",
-        "bd_ids": [
-            "5b09fc60-7852-5dd7-85fd-47d06d44ac08"
-        ]
-    },
-    {
-        "id": "517fda5b-0d2f-5cb9-a689-38ded1fc1732",
-        "name": "Manon Desveaux",
-        "bd_ids": [
-            "5792de8a-229c-5f32-9cd0-3d9421f85b62"
-        ]
-    },
-    {
-        "id": "f98adb03-4782-5e7d-858c-cea66c569d0a",
-        "name": "Lou Lubie",
-        "bd_ids": [
-            "5792de8a-229c-5f32-9cd0-3d9421f85b62"
-        ]
-    },
-    {
-        "id": "4102d5a8-722f-5280-a290-ccc976747c79",
-        "name": "Burckel",
-        "bd_ids": [
-            "d77af3ef-1018-580f-8b4b-bdac6993c4b9"
-        ]
-    },
-    {
-        "id": "a0ad17df-cc7c-5579-a3f6-7fea6f6b69f5",
-        "name": "Hubert",
-        "bd_ids": [
-            "d77af3ef-1018-580f-8b4b-bdac6993c4b9"
-        ]
-    },
-    {
-        "id": "002b8b8f-eaec-50aa-b1a9-dd32ff43ef58",
-        "name": "Emma CakeCup",
-        "bd_ids": [
-            "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d"
-        ]
-    },
-    {
-        "id": "c6c2e2e5-de20-5485-a998-76541abafe3e",
-        "name": "Pauline Roland",
-        "bd_ids": [
-            "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d"
-        ]
-    },
-    {
-        "id": "3ecb51cb-7330-5551-b059-2bc07bbe2220",
-        "name": "Karim Mahfouf",
-        "bd_ids": [
-            "93c55d49-da91-53a8-9384-a9e74f86fe92"
-        ]
-    },
-    {
-        "id": "9ebb375a-570f-5d10-af89-e2581554813f",
-        "name": "Squeezie 7 Guillaume Natas",
-        "bd_ids": [
-            "81d0933e-90f7-5b74-b9fb-ba27cc47fa12"
-        ]
-    },
-    {
-        "id": "67a61400-02a1-5e8a-815f-efe1aaff4044",
-        "name": "Karensac",
-        "bd_ids": [
-            "81d0933e-90f7-5b74-b9fb-ba27cc47fa12"
-        ]
-    },
-    {
-        "id": "740a55f0-b066-529c-aad3-be7706f65d0c",
-        "name": "Cyprien",
-        "bd_ids": [
-            "bb95f1ee-35e4-5172-bcf9-11aa19d39885"
-        ]
-    },
-    {
-        "id": "728ca873-d312-575d-b216-7d2f31953628",
-        "name": "Paka",
-        "bd_ids": [
-            "bb95f1ee-35e4-5172-bcf9-11aa19d39885"
-        ]
-    },
-    {
-        "id": "4262dd32-264e-5b27-89d4-b8f1d948b32c",
-        "name": "Lob",
-        "bd_ids": [
-            "219fdb59-446f-5ec8-ada8-aa3432778341"
-        ]
-    },
-    {
-        "id": "acaa9413-e232-5de0-95fa-e139a9ece44f",
-        "name": "Rochette",
-        "bd_ids": [
-            "219fdb59-446f-5ec8-ada8-aa3432778341"
-        ]
-    },
-    {
-        "id": "5d4b528a-9838-5b47-9940-6c3506237d97",
-        "name": "Legrand",
-        "bd_ids": [
-            "219fdb59-446f-5ec8-ada8-aa3432778341"
-        ]
-    },
-    {
-        "id": "1a18f2fb-0d2c-54c5-a763-fdadef46f041",
-        "name": "Gustave Doré",
-        "bd_ids": [
-            "7e0fbd51-70be-5b79-b9fd-fdcbdbe6784d"
-        ]
-    },
-    {
-        "id": "c86e250b-e9c3-59aa-869a-9ab8b53022f1",
-        "name": "Franquin",
-        "bd_ids": [
-            "fbb83c90-bc31-53bb-82f1-62a4921b7b66"
-        ]
-    },
-    {
-        "id": "f42b2254-0bb6-589f-b754-788623bc0690",
-        "name": "Aurélia Aurita",
-        "bd_ids": [
-            "aa142d80-6e53-53cf-ad01-13c8af2060cf",
-            "6f40ce09-c1fc-56c3-b191-aaef5f620982"
-        ]
-    },
-    {
-        "id": "70125cb3-0e45-5bc9-9aef-4cbb67edb051",
-        "name": "Peeters",
-        "bd_ids": [
-            "621f773d-d0aa-5e22-bf81-c530967a1fbe"
-        ]
-    },
-    {
-        "id": "d665cfb4-c5db-586a-ad00-d7483be1868f",
-        "name": "Wazem",
-        "bd_ids": [
-            "621f773d-d0aa-5e22-bf81-c530967a1fbe"
-        ]
-    },
-    {
-        "id": "088ef0e0-f6d5-5b0b-8bbe-34adf8a69a86",
-        "name": "Matt Kindt",
-        "bd_ids": [
-            "8b049e1b-5908-5c4b-972e-d34e04c6ab0c"
-        ]
-    },
-    {
-        "id": "55a709af-cd36-5f34-9454-177b62ab1b72",
-        "name": "Xavier Bouyssou",
-        "bd_ids": [
-            "a88d2dfe-e823-5455-b5a7-a9eea7604db2"
-        ]
-    },
-    {
-        "id": "6c618371-acaa-57cf-916f-31d5288f8285",
-        "name": "Léa Murawiec",
-        "bd_ids": [
-            "7c33cd89-18a5-55ee-a927-d33a3b91a4d4"
-        ]
-    },
-    {
-        "id": "0d7a1f2e-614f-5f9b-9eb0-e977c4413fbc",
-        "name": "Yukinobu Tatsu",
-        "bd_ids": [
-            "8e76ff82-caba-5256-b56f-36fdcc09b8cc"
-        ]
-    },
-    {
-        "id": "0cc64c64-f713-57ca-a315-70087758c502",
-        "name": "Benoit Peeters",
-        "bd_ids": [
-            "6f40ce09-c1fc-56c3-b191-aaef5f620982"
-        ]
-    },
-    {
-        "id": "9a3c0069-aa3f-5826-9ef1-9f344244d3dc",
-        "name": "Elisa Marraudino",
-        "bd_ids": [
-            "e316844c-27bd-5037-a0f8-1327a62e748f"
-        ]
-    },
-    {
-        "id": "4eee69a6-88fd-5e48-b8f5-dd582920a450",
-        "name": "Ram V",
-        "bd_ids": [
-            "92d5d028-df2f-5e50-b4b7-9887ae2f807b"
-        ]
-    },
-    {
-        "id": "94b0e949-b89d-5ea5-b0b9-7cbd0ac73da4",
-        "name": "Filipe Andrade",
-        "bd_ids": [
-            "92d5d028-df2f-5e50-b4b7-9887ae2f807b"
-        ]
-    },
-    {
-        "id": "48aace14-0b8f-5dc9-aee0-2b52c883a081",
-        "name": "Daria Schmidtt",
-        "bd_ids": [
-            "f6c7005e-7b64-5eef-844a-2ac4acdc1b07"
-        ]
-    },
-    {
-        "id": "6ada2d73-1f4e-5954-8c72-bc0404fa4307",
-        "name": "Lucie Lomova",
-        "bd_ids": [
-            "406eb059-e7e8-54f1-8f89-cddea6c629e0"
-        ]
-    },
-    {
-        "id": "f88b6be4-be83-553a-9a10-0c3ff88d9c71",
-        "name": "Edgar P. Jacobs",
-        "bd_ids": [
-            "f865a993-10dd-5daf-9303-db5328540034"
-        ]
-    },
-    {
-        "id": "ec3adb15-c596-5229-b64a-d324f9941ab6",
-        "name": "Lucas Varela",
-        "bd_ids": [
-            "ec050548-66da-5642-af27-79ee4e0f5571"
-        ]
-    },
-    {
-        "id": "901b17fe-09a8-5b9f-9f5d-a73d92a26547",
-        "name": "Aude Mermilliod",
-        "bd_ids": [
-            "01c74bc6-960a-58b3-9069-ca12ec2fb9b4"
-        ]
-    },
-    {
-        "id": "c75bf8ef-b761-59b7-aa36-7db51b472618",
-        "name": "Blutch",
-        "bd_ids": [
-            "e00d76ed-0c5c-5fcb-b972-355c57612e91"
-        ]
-    },
-    {
-        "id": "2822bd0a-4242-59a8-a4dd-2a9d553c94f0",
-        "name": "Poulie",
-        "bd_ids": [
-            "b86b53b5-7121-5fae-8ed9-50fc48076812"
-        ]
-    },
-    {
-        "id": "7036c4fd-e408-5618-af2e-9baaff128651",
-        "name": "Keigo Shinzo",
-        "bd_ids": [
-            "4926fa87-8fac-59ea-b462-beaa8865b399"
-        ]
-    },
-    {
-        "id": "54bfd2ce-3cf6-5269-8baa-e3571399f282",
-        "name": "tienstiens",
-        "bd_ids": [
-            "904c9d20-f81a-591d-b110-2e457f6d8f60"
-        ]
-    },
-    {
-        "id": "3614d1a7-ee71-5831-acc7-36feb510177c",
-        "name": "Paul Dini",
-        "bd_ids": [
-            "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa"
-        ]
-    },
-    {
-        "id": "8f0a123e-a29e-5620-989c-8b6e9bc9f3de",
-        "name": "Eduardo Risso",
-        "bd_ids": [
-            "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa"
-        ]
-    },
-    {
-        "id": "d7afa3d1-9cbc-5630-9a1e-36550ba2ae00",
-        "name": "Terry Moore",
-        "bd_ids": [
-            "47a951d2-d847-566a-9180-6dad63037708"
-        ]
-    },
-    {
-        "id": "81eb6653-4aac-5e37-b82d-5e6552f5669a",
-        "name": "Etienne Davodeau",
-        "bd_ids": [
-            "f2ece642-d63f-5322-8208-0d755268b0a7"
-        ]
-    },
-    {
-        "id": "10a532a2-fbf4-5e12-af99-152a45092deb",
-        "name": "Juan Giménez",
-        "bd_ids": [
-            "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5"
-        ]
-    },
-    {
-        "id": "5687b7c6-fc2f-5234-8443-9dccba2dbe03",
-        "name": "Kentarō Miura",
-        "bd_ids": [
-            "233df3dc-5aec-5505-b208-b7dad00c99b1"
-        ]
-    },
-    {
-        "id": "fd5a8b65-5f73-54a0-a57e-54dfea8abc8c",
-        "name": "Winshluss",
-        "bd_ids": [
-            "903acafa-4e30-5dcb-85ec-e2d1ce52d741"
-        ]
-    },
-    {
-        "id": "e5d3b413-fc6e-5914-a5e2-4cca6c66a3b4",
-        "name": "Kenji",
-        "bd_ids": [
-            "d7d58ce0-3034-5dc1-ad26-f2ba302c0559"
-        ]
-    },
-    {
-        "id": "a613ac87-f316-5eb1-a41b-c629d3975868",
-        "name": "Tsunehiro",
-        "bd_ids": [
-            "d7d58ce0-3034-5dc1-ad26-f2ba302c0559"
-        ]
-    },
-    {
-        "id": "1f638d4e-04ec-5db9-840e-ac7e034bf933",
-        "name": "Lee Lai",
-        "bd_ids": [
-            "73418c95-df6c-50b9-8713-0cd6437ca1e8"
-        ]
-    },
-    {
-        "id": "f8f3e6c7-7f1c-5fa4-95b3-e5943256b388",
-        "name": "les soeurs Wachowski",
-        "bd_ids": [
-            "32c39747-541d-55b3-b217-835c9e26ffdb"
-        ]
-    },
-    {
-        "id": "cb340fda-dc8b-599c-9ba4-114eff1ad741",
-        "name": "Skroce",
-        "bd_ids": [
-            "32c39747-541d-55b3-b217-835c9e26ffdb"
-        ]
-    },
-    {
-        "id": "35cf1a17-190f-5618-a7fe-4554e75983f4",
-        "name": "Jordi Lafebre",
-        "bd_ids": [
-            "12d42d70-3a3c-5d61-bf59-ac8cc63ba0a5"
-        ]
-    },
-    {
-        "id": "bc5f45bb-b47a-5c9e-9452-990ca3ac5f9a",
-        "name": "Jérémy Bastian",
-        "bd_ids": [
-            "28c74fd2-511a-5728-a28e-8876fa62ece8"
-        ]
-    },
-    {
-        "id": "591a05fd-7b21-55d5-bd3a-0214e741d120",
-        "name": "Neyef",
-        "bd_ids": [
-            "5ce81c2c-23ca-5bfe-899a-011a2c38e9e0"
-        ]
-    },
-    {
-        "id": "b64f17a8-7cde-5016-a0ba-5e4599ad52f2",
-        "name": "Judith Vanistendael",
-        "bd_ids": [
-            "66419695-ae35-53a0-b7db-55e99b5d6b02"
-        ]
-    },
-    {
-        "id": "12d81cb8-0977-5c8d-95e1-546f5eddf90d",
-        "name": "Paul Kirchner",
-        "bd_ids": [
-            "f276e705-9146-5580-823a-15d8c2591660"
-        ]
-    },
-    {
-        "id": "3147fff6-a2e8-5fc8-8085-78440711c1b3",
-        "name": "Maran Hrachyan",
-        "bd_ids": [
-            "714b0f37-f73f-5508-825c-281074c8aebe"
-        ]
-    },
-    {
-        "id": "96909ed8-afbc-51b4-828e-cf484c613c2d",
-        "name": "Naoki Urasawa",
-        "bd_ids": [
-            "c63fb7f3-28e9-51b0-a879-a22cae604ae9",
-            "af92af68-880b-54ec-9b11-b63ac826149b"
-        ]
-    },
-    {
-        "id": "24f5b427-235c-5460-9de0-85f11a01139a",
-        "name": "Anouk Ricard",
-        "bd_ids": [
-            "76da166c-6887-58fe-839c-5ceb1d79b8ee"
-        ]
-    },
-    {
-        "id": "3b40ac72-a75f-5c79-bd75-a460f955ae58",
-        "name": "Pierre Ferrero",
-        "bd_ids": [
-            "4fe38dd6-5f77-5f47-8a7d-4a869f44334a"
-        ]
-    },
-    {
-        "id": "671a3790-6703-5f60-93f7-4c8096394838",
-        "name": "Merwan",
-        "bd_ids": [
-            "ca07d9e7-2615-5857-8ff2-c8a481345db9"
-        ]
-    },
-    {
-        "id": "86f3e63b-c414-594e-af58-abfb190ddea2",
-        "name": "Aisha Franz",
-        "bd_ids": [
-            "f9700842-783a-547b-b038-f388c81263c4"
-        ]
-    },
-    {
-        "id": "7a222e55-c2c0-5fff-acc7-4a9c36238f5f",
-        "name": "Atsushi Kaneko",
-        "bd_ids": [
-            "e7880ee2-b182-5a13-8a84-f3877bd0a932"
-        ]
-    },
-    {
-        "id": "2c1293b1-0b71-5d73-9217-34bf2c597b62",
-        "name": "Baladi",
-        "bd_ids": [
-            "677a0a0d-9f0e-5524-892e-5feeda95fa37"
-        ]
-    },
-    {
-        "id": "41d4d07a-dd5b-575e-8575-182029f2ffbc",
-        "name": "Smith",
-        "bd_ids": [
-            "5ee6ce29-7b61-53b4-8994-a0a2e783cf92"
-        ]
-    },
-    {
-        "id": "b28aa578-42b6-53f0-ba2e-0e91a837d1cc",
-        "name": "Klou",
-        "bd_ids": [
-            "af4e1bb1-ecf0-5912-8197-9d9e0b210b72"
-        ]
-    },
-    {
-        "id": "2c5d1ecf-6832-57d5-b546-c500ad06204d",
-        "name": "Fred",
-        "bd_ids": [
-            "fc30f32a-3e20-5385-b28a-7439ee532389"
-        ]
-    },
-    {
-        "id": "61d33246-60ce-54a8-9d34-3b08a03ebd0a",
-        "name": "Bea Lema",
-        "bd_ids": [
-            "aa01d166-f99b-5537-9d2f-99f433ffdc97"
-        ]
-    },
-    {
-        "id": "0609ba11-9dd6-51a2-a1fa-5945569f3a15",
-        "name": "Renaud Roche",
-        "bd_ids": [
-            "fc62fcaa-84ef-5a91-a79d-34ee62b436ef"
-        ]
-    },
-    {
-        "id": "2b7ad5e3-6b65-5786-bd5f-d02f8bcdde29",
-        "name": "Laurent Hopman",
-        "bd_ids": [
-            "fc62fcaa-84ef-5a91-a79d-34ee62b436ef"
-        ]
-    },
-    {
-        "id": "57a7df47-868e-598d-8320-562a491eec09",
-        "name": "Jemisin",
-        "bd_ids": [
-            "8a50365e-9da9-59dd-bc97-969ed43c22c7"
-        ]
-    },
-    {
-        "id": "29e81ba3-c9a8-5437-a577-2324e84c2a22",
-        "name": "Campbell",
-        "bd_ids": [
-            "8a50365e-9da9-59dd-bc97-969ed43c22c7"
-        ]
-    },
-    {
-        "id": "c9b6be22-065c-5547-a9aa-9db3a027d1e6",
-        "name": "Balboa",
-        "bd_ids": [
-            "515abf3f-be71-5dc5-a79a-662cd25fccf6"
-        ]
-    },
-    {
-        "id": "c8a7e06b-5246-59d8-988d-2f1dfc3dcbe7",
-        "name": "Arakawa",
-        "bd_ids": [
-            "0c7c6682-3287-56d0-a8d6-82aea0648529"
-        ]
-    },
-    {
-        "id": "0399b1c8-5e87-58d3-8ea8-63453280e3bb",
-        "name": "Heugel",
-        "bd_ids": [
-            "debf7682-e9ad-587d-a814-efdeaad2c9e7"
-        ]
-    },
-    {
-        "id": "83cd0cff-b455-5d5f-b0d2-1620f35ecd54",
-        "name": "Consigny",
-        "bd_ids": [
-            "debf7682-e9ad-587d-a814-efdeaad2c9e7"
-        ]
-    },
-    {
-        "id": "5c77edf3-4fb1-52ab-ab5c-229c1eb836e8",
-        "name": "Saiki Kumiko",
-        "bd_ids": [
-            "e2102e41-2abb-59a4-b7fe-8d4ecc23e1da"
-        ]
-    },
-    {
-        "id": "eb085332-9b22-53f0-a527-1e929572ab5a",
-        "name": "Brubaker",
-        "bd_ids": [
-            "956b5864-d695-5e4f-b6f3-48078e019fe0"
-        ]
-    },
-    {
-        "id": "00db3447-5ed5-5ba8-a2af-2dd9199c5602",
-        "name": "Ruka",
-        "bd_ids": [
-            "956b5864-d695-5e4f-b6f3-48078e019fe0"
-        ]
-    },
-    {
-        "id": "969606f1-a82b-5683-8a38-a91089eb9598",
-        "name": "Clamp",
-        "bd_ids": [
-            "ab707df2-5f9e-5bce-ba06-da7fc0e88bfd"
-        ]
-    },
-    {
-        "id": "f00e5d5f-7bc4-58c0-98a0-7c48ff1b2ead",
-        "name": "Forest",
-        "bd_ids": [
-            "bde7b6df-1144-56af-8a15-03f3710adb93"
-        ]
-    },
-    {
-        "id": "8519e2d5-a656-5ce0-9642-74f939ba1e60",
-        "name": "Tardi",
-        "bd_ids": [
-            "bde7b6df-1144-56af-8a15-03f3710adb93"
-        ]
-    },
-    {
-        "id": "e1d64487-9066-57a4-a82b-f95b1f11a41f",
-        "name": "Hannah Templer",
-        "bd_ids": [
-            "52b5768f-92ea-5ea0-864c-f91c838da16c"
-        ]
-    },
-    {
-        "id": "cc4653dc-b615-54e5-bac1-c35dc48d1341",
-        "name": "Elene Usdin",
-        "bd_ids": [
-            "13a95766-1ae7-52fc-8158-e51115b8fa4a"
-        ]
-    },
-    {
-        "id": "5a3e0ea6-adbe-572e-9cdf-9074ad4b7dcf",
-        "name": "ND Stevenson",
-        "bd_ids": []
-    },
-    {
-        "id": "e91e7e71-ed2e-5acb-a42e-2ad624b8ab41",
-        "name": "Mana Neyestani",
-        "bd_ids": [
-            "1ed863f9-5aea-574a-8e7a-8a8f061235e5"
-        ]
-    },
-    {
-        "id": "2d932312-b0bc-5bac-9c2d-dfe07ecede95",
-        "name": "Ikue Aizawa",
-        "bd_ids": [
-            "48a7b58b-aa17-5b0d-98ec-fe8a997395c0"
-        ]
-    },
-    {
-        "id": "60d5489b-14e3-518b-9109-e042747d08ff",
-        "name": "Stepan Sejic",
-        "bd_ids": [
-            "b089120d-7f10-5457-96b1-b233822e6f5e"
-        ]
-    },
-    {
-        "id": "98f266c0-cb80-5d14-8e5c-697e49b48751",
-        "name": "Edith Chambon",
-        "bd_ids": [
-            "330732a9-e0e1-5cf1-a00d-ecd08a2bc222"
-        ]
-    },
-    {
-        "id": "45d6dbf8-fbd9-578b-9e9f-8402dc2d31e7",
-        "name": "Moto Hagio",
-        "bd_ids": [
-            "d0773c0e-efce-5e3f-b88c-b401e6925875"
-        ]
-    },
-    {
-        "id": "57c07569-26eb-52d4-ab34-f8c8caa94ccc",
-        "name": "Tillie Walden",
-        "bd_ids": [
-            "4aa33079-62c2-5233-88ae-8e754c339e59"
-        ]
-    },
-    {
-        "id": "da949bb6-12f0-5d85-b093-d2ec26926f91",
-        "name": "André Déraine",
-        "bd_ids": [
-            "1de89bb4-2d86-543c-845e-fba8f42fc847"
-        ]
-    },
-    {
-        "id": "2c0a8d04-1eac-5612-a1c7-676822d9ad90",
-        "name": "Q Hayashida",
-        "bd_ids": [
-            "a9f1ba28-8e3f-5925-8f8c-bd63fb271d1b"
-        ]
-    },
-    {
-        "id": "206efe6f-29f9-5386-b123-f2bbd3f27f6d",
-        "name": "Iris Pouy",
-        "bd_ids": [
-            "06d42289-e3ad-57c0-aade-03088507faa9"
-        ]
-    },
-    {
-        "id": "d52a43df-2aa2-547e-b98d-830dec705d02",
-        "name": "Elizabeth Holleville",
-        "bd_ids": [
-            "06d42289-e3ad-57c0-aade-03088507faa9"
-        ]
-    },
-    {
-        "id": "3c90a47b-00bd-5d72-b26e-14e9361de953",
-        "name": "Pierre-Henry Gomont",
-        "bd_ids": [
-            "34373ae6-8241-5dfd-ac94-c657bd97af69"
-        ]
-    },
-    {
-        "id": "ec033c79-cf70-5028-8b1d-6b02cccf0b5c",
-        "name": "Zoe Thorogood",
-        "bd_ids": [
-            "0829463a-3433-53e5-ac54-605311f73a69"
-        ]
-    },
-    {
-        "id": "25a92ac6-0606-546b-91d9-21824fdc82a1",
-        "name": "Felix Laurent",
-        "bd_ids": [
-            "f95d6e61-6426-5b0b-9311-b9e8ecb36b78"
-        ]
-    },
-    {
-        "id": "ee98cfb4-9b32-5356-b3be-337badf7aa02",
-        "name": "Exaheva",
-        "bd_ids": [
-            "f95d6e61-6426-5b0b-9311-b9e8ecb36b78"
-        ]
-    },
-    {
-        "id": "3b934034-aca9-5ef9-a4d4-f0dbf63716dd",
-        "name": "Luca Harari",
-        "bd_ids": [
-            "fdf7972d-6b2b-5ace-9939-d1b83cedae14"
-        ]
-    },
-    {
-        "id": "a531559e-8dbe-5b47-b3b7-b6e452214bd7",
-        "name": "Arthur Harari",
-        "bd_ids": [
-            "fdf7972d-6b2b-5ace-9939-d1b83cedae14"
-        ]
-    },
-    {
-        "id": "bed4e616-fb1a-51d5-8789-d3a7c519765c",
-        "name": "Will McPhail",
-        "bd_ids": [
-            "0f55b110-f82c-5092-8299-3149fdc8c9c9"
-        ]
-    },
-    {
-        "id": "c6bfc388-ba3c-5aa7-b627-d7528e7b7f95",
-        "name": "Baptiste Sornin",
-        "bd_ids": [
-            "c2f61a7e-3816-5686-b9e5-d9556ee77049"
-        ]
-    },
-    {
-        "id": "ff780b2f-973b-5b78-8aaf-b22f31bc1bb4",
-        "name": "Marie Baudet",
-        "bd_ids": [
-            "c2f61a7e-3816-5686-b9e5-d9556ee77049"
-        ]
-    },
-    {
-        "id": "e2139e97-c7d1-5124-b077-ea4291aa3032",
-        "name": "Tatsuki Fujimoto",
-        "bd_ids": [
-            "e98c4039-8132-5dd6-9489-661fca8f7743"
-        ]
-    },
-    {
-        "id": "11f8a644-a339-59d8-af48-8b26d8709fbd",
-        "name": "Sole Otero",
-        "bd_ids": [
-            "e24b2289-3eba-5581-9e3b-7c3d08251f70"
-        ]
-    },
-    {
-        "id": "ae7b2afb-f773-5588-a836-7f22fa49d247",
-        "name": "Ahora Travé",
-        "bd_ids": [
-            "fb6cbc79-3c98-5889-838a-b334b7606395"
-        ]
-    },
-    {
-        "id": "06d2e44e-3bc3-5c38-80b2-d2bc46f5a2d5",
-        "name": "Yoshijazu Yasuhiko",
-        "bd_ids": [
-            "b0b3870c-0997-5868-bd23-6e08e3cc0aac"
-        ]
-    },
-    {
-        "id": "bac10044-bf28-587c-bf43-2ca135089535",
-        "name": "Tsuru Ringo Star",
-        "bd_ids": [
-            "1c9e35cc-80d4-5dce-8e80-2874fe876600"
-        ]
-    },
-    {
-        "id": "5ffbe2d2-ae0e-55cf-b3ab-8c691acbaddf",
-        "name": "Sakana Sakatsuki",
-        "bd_ids": [
-            "4066190a-e2a3-5eda-bb01-cd996e6b7eda"
-        ]
-    },
-    {
-        "id": "ac8b85c4-99d5-5de7-a631-34672a8a642e",
-        "name": "Ryôko Kui",
-        "bd_ids": [
-            "dd62a84b-d5d0-581d-85ff-398583396ee1"
-        ]
-    },
-    {
-        "id": "ce1989f6-f25c-5cf4-9899-cb4528ed5422",
-        "name": "Eleonor Marchal",
-        "bd_ids": [
-            "c7c00974-55df-5ddb-9094-599a49fedc04"
-        ]
-    },
-    {
-        "id": "31387e90-fc18-5d6c-8a6a-6bd2ceef6053",
-        "name": "Florence Cestac",
-        "bd_ids": [
-            "d3ae501d-a740-50fa-9b36-23681a63e221"
-        ]
-    },
-    {
-        "id": "542d6a4e-eee5-5d28-b43b-1522bc6c23b7",
-        "name": "Jean Teulé",
-        "bd_ids": [
-            "d3ae501d-a740-50fa-9b36-23681a63e221"
-        ]
-    },
-    {
-        "id": "8c3c54b4-5338-5cf9-9db4-e376482d841b",
-        "name": "Jim Bishop",
-        "bd_ids": [
-            "9e1ead2f-e94b-51c4-a530-25ff413b4630"
-        ]
-    },
-    {
-        "id": "0b088127-8e8e-5e67-aade-8ee924e23e14",
-        "name": "Hideo Azuma",
-        "bd_ids": [
-            "1d9f61ac-e443-5d00-95d6-232abbc96584"
-        ]
-    },
-    {
-        "id": "d34f9a45-6215-5a8a-b4d6-dfb9d6a92541",
-        "name": "Camille Potte",
-        "bd_ids": [
-            "8f3dfff9-18f4-517b-956a-375093f86315"
-        ]
-    },
-    {
-        "id": "1895a4c2-2cf2-5967-b5b1-2b87bfb4c910",
-        "name": "Ezra Cleytan Daniels",
-        "bd_ids": [
-            "69fc7e78-c691-52d1-9568-ff25b698eaab"
-        ]
-    },
-    {
-        "id": "a47f6301-1e18-51f0-8386-ac488ee37b7c",
-        "name": "Daisuke Igarachi",
-        "bd_ids": [
-            "c503e169-f7e8-50eb-bba0-7d391d6a17ce"
-        ]
-    },
-    {
-        "id": "e6332846-dc60-5a6c-83ab-f5180adb17d5",
-        "name": "Quentin Rigaud",
-        "bd_ids": [
-            "ebab55bf-6f8b-5ebe-8a63-63805845355c"
-        ]
-    },
-    {
-        "id": "e582c7f5-c5b4-5f7e-ac05-d3296bfd9708",
-        "name": "Camille Van Hoof",
-        "bd_ids": [
-            "599583d1-2538-5fdb-ad77-90fc339b3178"
-        ]
-    },
-    {
-        "id": "5a24ef24-132a-56bc-aef0-b3b1529d528e",
-        "name": "Mikael Ross",
-        "bd_ids": [
-            "3dddd453-4856-5647-b862-58ee435de96b"
-        ]
-    },
-    {
-        "id": "091254d8-d0c9-5726-a5c2-f19e2f7c8d92",
-        "name": "Kabi Nagata",
-        "bd_ids": [
-            "78e93b93-fff0-5559-a078-8ca878174a6c"
-        ]
-    },
-    {
-        "id": "3732fd8e-96c9-58f7-8134-54e3af2e2b77",
-        "name": "Aya Kanno",
-        "bd_ids": [
-            "71b57a4d-63c6-5220-b416-c2eacf41695e"
-        ]
-    },
-    {
-        "id": "e9c52477-ae82-5bb5-862b-fe4d54df2502",
-        "name": "Marcel Shorjian",
-        "bd_ids": [
-            "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c"
-        ]
-    },
-    {
-        "id": "787e0d65-0fe6-5b9f-a9ec-1afe8993ea3d",
-        "name": "Jeanne Sterkers",
-        "bd_ids": [
-            "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c"
-        ]
-    },
-    {
-        "id": "c87d7744-49cb-5480-8fd5-ac0903b18d99",
-        "name": "Chris Samnee",
-        "bd_ids": [
-            "1c16dd39-9b71-570b-adf9-dd949b0876ed"
-        ]
-    },
-    {
-        "id": "16787ee4-56ac-5736-b0b0-2d831ee42d6c",
-        "name": "Richard Stark",
-        "bd_ids": [
-            "2577974a-9695-5f41-94a9-6ba5ebd90174"
-        ]
-    },
-    {
-        "id": "f149dc55-7d01-5e6c-89f4-ed837f8de8b5",
-        "name": "Kieran Headline",
-        "bd_ids": [
-            "2577974a-9695-5f41-94a9-6ba5ebd90174"
-        ]
-    },
-    {
-        "id": "9f6d02b9-d58d-521b-bac5-a096f26c125a",
-        "name": "Marjane Satrapi",
-        "bd_ids": [
-            "89d152e7-f57c-5b0e-8d95-8f5fad2dc896"
-        ]
-    },
-    {
-        "id": "d6e87a93-7b87-56df-b0b5-784f597acfd5",
-        "name": "Keiko Takemiya",
-        "bd_ids": [
-            "55173791-1d25-5974-be37-4ae3bfac5225"
-        ]
-    },
-    {
-        "id": "fab79174-cd77-5bff-8ef0-204115fd6685",
-        "name": "Jérémie Moreau",
-        "bd_ids": [
-            "d2606770-6e64-56ad-9f24-2c1734030214"
-        ]
-    },
-    {
-        "id": "044a392b-edae-5a8b-bf64-8bc911b445b8",
-        "name": "Lynda Barry",
-        "bd_ids": [
-            "ba70089b-dc50-5706-ae33-e7b7f3d3c4ed"
-        ]
-    },
-    {
-        "id": "466e5af5-67e4-5fcb-b087-0e8d4f1a7ed6",
-        "name": "Luz",
-        "bd_ids": [
-            "c422ca47-19e7-5530-96ae-3099c5ec9dc8"
-        ]
-    },
-    {
-        "id": "cf14aca0-99b7-5e93-bac5-cc55c93da085",
-        "name": "Lorelei L'Affeter",
-        "bd_ids": [
-            "7b60d495-19b6-5aec-83d2-df40acb1d3e8"
-        ]
-    },
-    {
-        "id": "413f2343-f0c5-5672-aa0a-050973a682f9",
-        "name": "Aurélien Maury",
-        "bd_ids": [
-            "7afa0be1-9f65-5af9-b8ca-8febc5ccfa4a"
-        ]
-    },
-    {
-        "id": "aea68d40-ddb1-5354-b4e8-5fb4dbca4c9e",
-        "name": "Rumiko Takahashi",
-        "bd_ids": [
-            "ec34073f-32f3-5b74-8e70-eb2e9937a36f"
-        ]
-    },
-    {
-        "id": "cb6b2c97-9182-501d-90a0-2c812dd7d641",
-        "name": "Claire Fauvel",
-        "bd_ids": [
-            "fd110a14-3cb4-5407-a837-b3bae1c9b278"
-        ]
-    },
-    {
-        "id": "e7455245-dd03-5c13-a656-e0c6420e9265",
-        "name": "Pao Yen Ding",
-        "bd_ids": [
-            "0227a664-60ac-5e77-bb89-031cf0893d1e"
-        ]
-    },
-    {
-        "id": "3ed49b39-8117-577d-ba13-6ac94a9e388b",
-        "name": "Shohei Manabe",
-        "bd_ids": [
-            "bb2f4bd6-ea0d-5028-bd8d-d3eb6437888c"
-        ]
-    },
-    {
-        "id": "bac0e452-b75b-5cc7-a4e4-ad8adf9ba347",
-        "name": "Junji Ito",
-        "bd_ids": [
-            "543529b3-41ab-5afc-a381-7ed1bfab677b"
-        ]
-    },
-    {
-        "id": "4abb5d53-7a59-5901-8c93-7de96ba7c098",
-        "name": "Raymond Briggs",
-        "bd_ids": [
-            "11d7eace-ebf2-59d3-a330-cd442d3557a3"
-        ]
-    },
-    {
-        "id": "3254de0b-373e-565d-9416-53a8316474c8",
-        "name": "Serge Lehmann",
-        "bd_ids": [
-            "1bc85f3d-8932-5b00-b6fd-333b32ee53b9"
-        ]
-    },
-    {
-        "id": "bb3b2c50-6f6f-552e-a8aa-c43c4c7b9427",
-        "name": "Pig Paddle Mannimarco",
-        "bd_ids": [
-            "605a6f52-dfac-5d30-9135-70f21673a9c9"
-        ]
-    },
-    {
-        "id": "f7168e39-bf20-5d5a-91f5-7b0b971b588c",
-        "name": "Rick Remender",
-        "bd_ids": [
-            "a8920edf-9eb7-5296-9429-4a13002c70c4"
-        ]
-    },
-    {
-        "id": "8b277120-560b-5807-b3c5-c0a546bce427",
-        "name": "Max Fiumara",
-        "bd_ids": [
-            "a8920edf-9eb7-5296-9429-4a13002c70c4"
-        ]
-    },
-    {
-        "id": "04566a81-2c42-5f40-84bf-169e9ff41670",
-        "name": "Bilquis Evely",
-        "bd_ids": [
-            "980619c8-13ee-54cf-960c-0ad3a452965b"
-        ]
-    },
-    {
-        "id": "7a56b388-39a7-5b66-af71-1a9304760e4a",
-        "name": "Régis Hautières",
-        "bd_ids": [
-            "80dbe48d-5ef6-50a1-8f93-23619b07cbde"
-        ]
-    },
-    {
-        "id": "da90896c-8026-554d-a736-441570b78261",
-        "name": "Marie Spénale",
-        "bd_ids": [
-            "30dd4d30-1325-557c-b42b-6ad0894bf6b8"
-        ]
-    },
-    {
-        "id": "04cef3b4-6b2a-5efc-85f2-2a0ff95481cd",
-        "name": "Junko Mizuno",
-        "bd_ids": [
-            "50afc3e1-c60e-5915-b756-8b0760228a32"
-        ]
-    },
-    {
-        "id": "dfaa83f5-acf7-5b22-baf7-0bf497056f9e",
-        "name": "Nick Dragotta",
-        "bd_ids": [
-            "8a2399e8-979b-5ac8-9645-0c778e3f4edc"
-        ]
-    },
-    {
-        "id": "2ceec585-d739-59b6-948a-6b8117a74f5e",
-        "name": "Vincent Brugeas",
-        "bd_ids": [
-            "22420ca8-73c3-508a-a4ca-2f9378f14338"
-        ]
-    },
-    {
-        "id": "d1a00a6a-c6a2-526c-8bca-05745c2bdcc0",
-        "name": "Ronan Toulhoat",
-        "bd_ids": [
-            "22420ca8-73c3-508a-a4ca-2f9378f14338"
-        ]
-    },
-    {
-        "id": "69eb4ee1-b8a0-50b0-adec-5f64e115725a",
-        "name": "Jean-Christophe Deveney",
-        "bd_ids": [
-            "46c2d81c-4961-5353-9c99-230e81b565d0"
-        ]
-    },
-    {
-        "id": "1a9c1499-d284-5ffe-9045-4e3918619a42",
-        "name": "Edouard Cour",
-        "bd_ids": [
-            "46c2d81c-4961-5353-9c99-230e81b565d0"
-        ]
-    }
+  { id: "b9adbafa-9486-52d4-bfd9-7072efd368ae", name: "AJ Dungo", bio: "AJ Dungo est un surfeur, illustrateur et auteur de bande dessinée américain né à Fort Myers (Floride). Il accède à la notoriété avec le roman graphique In Waves.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/AJ_Dungo.jpg/330px-AJ_Dungo.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/AJ_Dungo", bd_ids: ["fff5e173-faf5-5091-b143-91036a35047d"] },
+  { id: "0e19ff22-af4d-56a0-abcc-86cb2a09490d", name: "Aapo Rapi", bio: "Aapo Rapi est un auteur de bande dessinée finlandais.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Aapo_Rapi", bd_ids: ["7e408fbd-928f-56ab-b646-d972f5e24698"] },
+  { id: "28ec0041-d45e-5c0f-855e-36d755e3a8cc", name: "Adeline Rosenstein", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["9b7133ae-5594-5171-a72d-28be9d48ac38"] },
+  { id: "0ca16d5c-a8ba-5db2-9f06-f74b056d9c83", name: "Adrien Demont", bio: "Adrien Louis Demont, né le 25 octobre 1851 à Douai, et mort le 25 octobre 1928 à Wissant, est un peintre français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Dawant-Demont.jpg/330px-Dawant-Demont.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Adrien_Demont", bd_ids: ["169ce90d-4993-5277-b4b4-898b948ae30b"] },
+  { id: "ae7b2afb-f773-5588-a836-7f22fa49d247", name: "Ahora Travé", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["fb6cbc79-3c98-5889-838a-b334b7606395"] },
+  { id: "6dc1449e-5778-5046-ae1c-0025d5d15b13", name: "Ai Yazawa", bio: "Ai Yazawa (矢沢 あい, Yazawa Ai), née le 7 mars 1967 à Osaka, dans la préfecture de Hyōgo, est une mangaka japonaise.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Ai_Yazawa.png/330px-Ai_Yazawa.png", wikipedia_url: "https://fr.wikipedia.org/wiki/Ai_Yazawa", bd_ids: ["ea9613e4-c0a1-5a88-b2a4-fc986c9f2240"] },
+  { id: "86f3e63b-c414-594e-af58-abfb190ddea2", name: "Aisha Franz", bio: "Aisha Franz est une illustratrice et auteure de bande dessinée allemande née en 1984 à Fürth.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/AishaFranz.jpg/330px-AishaFranz.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Aisha_Franz", bd_ids: ["f9700842-783a-547b-b038-f388c81263c4"] },
+  { id: "a257ccd6-592f-5169-9247-729f4a009e2d", name: "Akiko Higashimura", bio: "Akiko Higashimura (東村 アキコ, Higashimura Akiko) est une mangaka japonaise née le 15 octobre 1975 dans la préfecture de Miyazaki.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Akiko_Higashimura", bd_ids: ["473edb56-8483-5f87-ae9a-226e5639da7c"] },
+  { id: "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b", name: "Alejandro Jodorowsky", bio: "Alejandro Jodorowsky Prullansky [aleˈxandɾo xoðoˈɾofski], parfois surnommé « Jodo », né le 17 février 1929 à Iquique, est un artiste franco-chilien. Surtout connu comme scénariste de bande dessinée et réalisateur, il est également acteur, mime, romancier, essayiste et poète.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Utopiales_2011_Alejandro_Jodorowsky_16_%28cropped%29.jpg/330px-Utopiales_2011_Alejandro_Jodorowsky_16_%28cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Alejandro_Jodorowsky", bd_ids: ["b84e2de9-9773-5fb3-b098-95600aabefb4", "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5"] },
+  { id: "8de0a770-0d52-5e17-97db-ef10383eb7e6", name: "Alex Baladi", bio: "Alex Baladi, né le 11 juillet 1969 à Vevey, est un auteur suisse de bande dessinée.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Alex_Baladi", bd_ids: ["fa873fe7-0449-5f89-8fc9-cfe1654b8041", "9b7133ae-5594-5171-a72d-28be9d48ac38"] },
+  { id: "cf7a99fa-a50c-569b-b9bd-f5e5c1769357", name: "Alex Ross", bio: "Nelson Alexander Ross is an American comic book writer and artist known primarily for his painted interiors, covers, and design work. He first became known with the 1994 miniseries Marvels, on which he collaborated with writer Kurt Busiek for Marvel Comics. He has since done a variety of projects for both Marvel and DC Comics, such as the 1996 miniseries Kingdom Come, which he also cowrote. Since then he has done covers and character designs for Busiek's series Astro City, and various projects for Dynamite Entertainment. His feature film work includes concept and narrative art for Spider-Man (2002) and Spider-Man 2 (2004), and DVD packaging art for the M. Night Shyamalan film Unbreakable (2000). He has done covers for TV Guide, promotional artwork for the Academy Awards, posters and packaging design for video games, and his renditions of superheroes have been merchandised as action figures.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Alexross_comicstore_2003.jpg/330px-Alexross_comicstore_2003.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Alex_Ross", bd_ids: ["7769da5e-26ce-5da9-bec0-7a649cbadc21"] },
+  { id: "95d147eb-c140-5339-ad8e-0d09bd1bb49f", name: "Alfred", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["3852be01-9880-52eb-8493-9b3a5758e58f"] },
+  { id: "c31ac25f-8577-51a4-8112-3280350d8f34", name: "Alison Bechdel", bio: "Alison Bechdel est une autrice de bande dessinée américaine, née le 10 septembre 1960 à Lock Haven, en Pennsylvanie. Son travail a été récompensé par plusieurs prix. Elle est une autrice importante de la bande dessinée lesbienne et LGBT.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/2025-07-04_CMB_Vernissage_Bechdel_021.jpg/330px-2025-07-04_CMB_Vernissage_Bechdel_021.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Alison_Bechdel", bd_ids: ["bde8dc28-1f8e-58e9-8de4-8efd46178c54", "20219cc1-6639-5762-9325-1f565d5143ce"] },
+  { id: "1a7ad751-eef5-54c6-af64-bf354fc1c6bb", name: "Amélie Fléchais", bio: "Amélie Fléchais, née le 23 décembre 1989 au Mans, est une autrice de bande dessinée française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Am%C3%A9lie_Fl%C3%A9chais.jpg/330px-Am%C3%A9lie_Fl%C3%A9chais.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Am%C3%A9lie_Fl%C3%A9chais", bd_ids: ["88083fb1-f033-50a2-a26a-84921246605c"] },
+  { id: "b4be3d64-8025-58ce-8c65-532412a7a00a", name: "Andrea Sorrentino", bio: "Andre Sorrentino est un dessinateur de bande dessinée italien actif dans l'industrie du comic book américain depuis 2010.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Andrea_Sorrentino", bd_ids: ["4bb23804-0bcf-59c4-b051-ebf483efde5f"] },
+  { id: "da949bb6-12f0-5d85-b093-d2ec26926f91", name: "André Déraine", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["1de89bb4-2d86-543c-845e-fba8f42fc847"] },
+  { id: "0334ed05-27b2-5dea-b180-3ab2692d85e7", name: "Aniss El Hamouri", bio: "Aniss El Hamouri, né le 9 juin 1989 à Témara (Maroc), est un illustrateur, auteur de bande dessinée et de romans graphiques belgo-marocain. Il a utilisé le pseudonyme de K-rooten.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Aniss_El_Hamouri", bd_ids: ["91796292-f679-5dc3-8e16-f53e3cd37480", "c7de24d2-2e14-55d4-9ba8-d7999551971b"] },
+  { id: "c53c562f-90cf-52c7-852e-ba4fa5778897", name: "Anne Simon", bio: "\nAnne Simon is an American biology professor, scientist, and a science advisor on the American television series The X-Files, for both the original nine season run and the 2016 revival. The first episode of the original series that she provided science consultation on was the first-season finale \"The Erlenmeyer Flask\", which was telecast on May 13, 1994. She became involved with the series through her connection as a family friend of series creator Chris Carter. She wrote a 2001 book about the biological science of the show, The Real Science Behind the X-Files: Microbes, Meteorites and Mutants (ISBN 0-684-85618-2).", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Anne_Simon", bd_ids: ["27aa754b-ec29-5d31-aac3-143f9055fdb5"] },
+  { id: "79173c52-b077-58b7-9de5-213f60a8f298", name: "Anne-Margot Ramstein", bio: "Anne-Margot Ramstein est une illustratrice, auteure française de bande dessinée et d'albums jeunesse née en 1984.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Anne-Margot_Ramstein", bd_ids: ["56fc148f-32d4-5cb2-a0e4-8eee0f478cfb"] },
+  { id: "24f5b427-235c-5460-9de0-85f11a01139a", name: "Anouk Ricard", bio: "Anouk Ricard, née le 28 décembre 1970 à Istres (Bouches-du-Rhône), est une illustratrice et auteure de bande dessinée française. Elle travaille pour la presse et l'édition jeunesse, pour des expositions de peintures/dessins ainsi que des revues de microédition. Son œuvre a été récompensée par plusieurs prix, dont le Grand prix de la ville d'Angoulême en 2025.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Anouk_Ricard.jpg/330px-Anouk_Ricard.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Anouk_Ricard", bd_ids: ["76da166c-6887-58fe-839c-5ceb1d79b8ee"] },
+  { id: "0eb89bcb-1cb8-54fb-84dd-ae9d7268c805", name: "Antoine Marchalot", bio: "Antoine Marchalot, né le 17 avril 1986, est un illustrateur et auteur de bande dessinée français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/FIBD2020AntoineMarchalot.jpg/330px-FIBD2020AntoineMarchalot.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Antoine_Marchalot", bd_ids: ["3da21605-8214-54c2-b22c-e217a9c9ce93"] },
+  { id: "c8a7e06b-5246-59d8-988d-2f1dfc3dcbe7", name: "Arakawa", bio: "Le fleuve Ara (荒川, Ara-kawa) est l'un des principaux cours d'eau s'écoulant à travers Tokyo, la capitale du Japon, et un fleuve de la région de Kantō.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/AraKawa2004-12.jpg/330px-AraKawa2004-12.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Ara-kawa", bd_ids: ["0c7c6682-3287-56d0-a8d6-82aea0648529"] },
+  { id: "9d6057a1-8a84-5712-9f8c-4f2e530b2f34", name: "Arleston", bio: "Christophe Pelinq, dit Christophe Arleston, Scotch Arleston ou simplement Arleston, est un scénariste de bande dessinée, né le 14 août 1963 à Aix-en-Provence (Bouches-du-Rhône). Il est notamment célèbre pour avoir créé la série Lanfeust de Troy et les différentes œuvres dérivées appartenant au même univers, ainsi que la série Le Grimoire d'Elfie.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Christophe_Arleston_cropped.jpg/330px-Christophe_Arleston_cropped.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Christophe_Arleston", bd_ids: ["e37157f2-efbb-508a-bc47-17a90bc02c84"] },
+  { id: "27924509-cf04-5879-b755-b018b8bb79a4", name: "Arnaud Malherbe", bio: "Arnaud Malherbe is a South African sprinter who specialized in the 400 metres.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Arnaud_Malherbe", bd_ids: ["795ed7d3-240b-5db3-8a23-41fe5531f853"] },
+  { id: "a531559e-8dbe-5b47-b3b7-b6e452214bd7", name: "Arthur Harari", bio: "Arthur Harari, né en 1981 à Paris, est un réalisateur, scénariste et acteur français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Arthur_Harari_2017-cr.jpg/330px-Arthur_Harari_2017-cr.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Arthur_Harari", bd_ids: ["fdf7972d-6b2b-5ace-9939-d1b83cedae14"] },
+  { id: "2503e0ea-8931-5458-afc8-90b272d6baa0", name: "Asa Grennvall", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["403fb2b2-7948-5aa1-9cbe-2e9e468a9c05"] },
+  { id: "f95bf41f-d4da-5636-8d31-4a16f45f86ae", name: "Atsuhiko Nakamura", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"] },
+  { id: "7a222e55-c2c0-5fff-acc7-4a9c36238f5f", name: "Atsushi Kaneko", bio: "Atsushi Kaneko (カネコ・アツシ, Kaneko Atsushi), né le 26 décembre 1966 à Sakata, dans la préfecture de Yamagata, est un mangaka et réalisateur japonais.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Atsushi_Kaneko", bd_ids: ["e7880ee2-b182-5a13-8a84-f3877bd0a932"] },
+  { id: "901b17fe-09a8-5b9f-9f5d-a73d92a26547", name: "Aude Mermilliod", bio: "Aude Mermilliod est une auteure de bande dessinée et blogueuse française née en 1986 à Lyon.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Aude_MermillioD_livre_sur_la_place_30024.jpg/330px-Aude_MermillioD_livre_sur_la_place_30024.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Aude_Mermilliod", bd_ids: ["01c74bc6-960a-58b3-9069-ca12ec2fb9b4"] },
+  { id: "df9128c9-cec9-53c8-8729-617042111988", name: "Aude Picault", bio: "Aude Picault, née le 21 juin 1979, est une dessinatrice et une scénariste de bande dessinée française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Portrait_Aude_Picault_2019.jpg/330px-Portrait_Aude_Picault_2019.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Aude_Picault", bd_ids: ["06ce7cf3-e238-5bb4-80c8-2000e8c536c7", "5664c22b-88d2-5a47-bf61-fb3e4f657a0b", "0527534f-2c66-5d92-94d5-e579f45fd919"] },
+  { id: "f42b2254-0bb6-589f-b754-788623bc0690", name: "Aurélia Aurita", bio: "Hakchenda Khun, dite Aurélia Aurita, est une autrice de bande dessinée française d'origine chinoise et khmère, née le 10 avril 1980 à Châtenay-Malabry dans les Hauts-de-Seine.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Aurelia_Aurita_20071019_Fnac_1.jpg/330px-Aurelia_Aurita_20071019_Fnac_1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Aur%C3%A9lia_Aurita", bd_ids: ["aa142d80-6e53-53cf-ad01-13c8af2060cf", "6f40ce09-c1fc-56c3-b191-aaef5f620982"] },
+  { id: "413f2343-f0c5-5672-aa0a-050973a682f9", name: "Aurélien Maury", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["7afa0be1-9f65-5af9-b8ca-8febc5ccfa4a"] },
+  { id: "3732fd8e-96c9-58f7-8134-54e3af2e2b77", name: "Aya Kanno", bio: "Aya Kanno (菅野文, Kanno Aya), née le 30 janvier 1980 à Tōkyō, est une mangaka japonaise, auteur de shōjo manga. Elle est principalement connue pour être l'auteur de Otomen.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Aya_Kanno", bd_ids: ["71b57a4d-63c6-5220-b416-c2eacf41695e"] },
+  { id: "86408786-4e90-52b4-aa67-30066872af26", name: "Azarello", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["809c07eb-4cdb-564d-801f-810e13afae93"] },
+  { id: "2c1293b1-0b71-5d73-9217-34bf2c597b62", name: "Baladi", bio: "Baladi can refer to an Egyptian musical style, the folk style of Egyptian belly dance, or the Masmoudi Sogheir rhythm, which is frequently used in baladi music. It is also sometimes spelled in English as 'beledi' or 'baladee'.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Baladi", bd_ids: ["677a0a0d-9f0e-5524-892e-5feeda95fa37"] },
+  { id: "c9b6be22-065c-5547-a9aa-9db3a027d1e6", name: "Balboa", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["515abf3f-be71-5dc5-a79a-662cd25fccf6"] },
+  { id: "c6bfc388-ba3c-5aa7-b627-d7528e7b7f95", name: "Baptiste Sornin", bio: "Baptiste Sornin est un acteur et réalisateur français né en 1982, résidant et actif en Belgique depuis 2001.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Baptiste_Sornin", bd_ids: ["c2f61a7e-3816-5686-b9e5-d9556ee77049"] },
+  { id: "101177af-518d-573a-9f37-7d1907f8557a", name: "Bargain Sakurai", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"] },
+  { id: "23c4dbf2-da76-5959-b5c8-de2b87f8dc74", name: "Baru", bio: "Hervé Barulea, dit Baru, né le 29 juillet 1947 à Villerupt (Meurthe-et-Moselle), est un auteur français de bande dessinée, d'origine italienne.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Baru_-_Antibes.JPG/330px-Baru_-_Antibes.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Baru", bd_ids: ["493aa385-71e1-5b94-937d-fc270fd2d7bc"] },
+  { id: "552512e4-a3e7-5246-89cf-9ddee4ca5e17", name: "Bastien Vivès", bio: "Bastien Vivès est un auteur de bande dessinée français né à Paris le 11 février 1984.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bastien_Vives_BD_Angouleme_2013_1.jpg/330px-Bastien_Vives_BD_Angouleme_2013_1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Bastien_Viv%C3%A8s", bd_ids: ["975d271b-e1e0-54f8-9273-2debfe877e0f", "6285af41-5732-5e84-907f-7c1c6393c5e5"] },
+  { id: "61d33246-60ce-54a8-9d34-3b08a03ebd0a", name: "Bea Lema", bio: "Beatriz Lema Rivera, known as Bea Lema, is a Spanish cartoonist and illustrator, winner of the 2024 Spanish National Comic Award. Her works have been published in both Spanish and French.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Bea_Lema", bd_ids: ["aa01d166-f99b-5537-9d2f-99f433ffdc97"] },
+  { id: "bb4e4e79-2608-504d-8924-888397c60925", name: "Benjamin Renner", bio: "Benjamin Renner, né le 14 novembre 1983, est un animateur et réalisateur français de films d'animation. Il a également utilisé le pseudonyme Reineke.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Benjamin_Renner.jpg/330px-Benjamin_Renner.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Benjamin_Renner", bd_ids: ["94bd0510-12eb-51a0-a26e-0c444a702785"] },
+  { id: "0cc64c64-f713-57ca-a315-70087758c502", name: "Benoit Peeters", bio: "Benoît Peeters, né le 28 août 1956 à Paris, est un écrivain, essayiste, professeur, scénariste et critique français. C'est également un spécialiste de l'univers de Tintin.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Beno%C3%AEt_Peeters.jpg/330px-Beno%C3%AEt_Peeters.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Beno%C3%AEt_Peeters", bd_ids: ["6f40ce09-c1fc-56c3-b191-aaef5f620982"] },
+  { id: "86b380e5-e629-5310-a14c-a81874f5b0be", name: "Benoit Vidal", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["da2485f6-6f49-5a22-a601-34c06f8fe55f"] },
+  { id: "04566a81-2c42-5f40-84bf-169e9ff41670", name: "Bilquis Evely", bio: "Bilquis Evely is a Brazilian comic book artist.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Bilquis_Evely", bd_ids: ["980619c8-13ee-54cf-960c-0ad3a452965b"] },
+  { id: "c75bf8ef-b761-59b7-aa36-7db51b472618", name: "Blutch", bio: "Blutch, de son vrai nom Christian Hincker est un auteur français de bandes dessinées. Il est considéré comme l'un des principaux auteurs de la bande dessinée française depuis le début des années 1990.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Blutch-IMG_0239.JPG/330px-Blutch-IMG_0239.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Blutch", bd_ids: ["e00d76ed-0c5c-5fcb-b972-355c57612e91"] },
+  { id: "68134aa4-2f64-5303-a042-788e170ddea9", name: "Boichi", bio: "Boichi (ぼういち, Bōichi) nom d'artiste de Mujik Park, né le 29 janvier 1973 à Séoul, est un mangaka sud-coréen, vivant au Japon. Il est principalement connu pour être l'auteur et dessinateur du manga Sun-Ken Rock et le dessinateur du manga Dr Stone.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Boichi_-_Lucca_Comics_%26_Games_2014.JPG/330px-Boichi_-_Lucca_Comics_%26_Games_2014.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Boichi", bd_ids: ["e897052f-d4f2-5e42-9731-c4f7b672d891"] },
+  { id: "b791b4d4-8740-554d-ad07-82218d8bb7ed", name: "Bonnet", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["deb20c8e-015a-5c9c-9686-1111263e8a0a"] },
+  { id: "aedca89a-5fbd-5370-bd4f-613e59392e1e", name: "Boris Délevègue", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["3ffeb194-5cc8-5d05-ade9-964f5999aa79"] },
+  { id: "012cf8c2-f922-5759-a7c4-244fe42ff33d", name: "Boucq", bio: "Boucq est une commune française située dans le département de Meurthe-et-Moselle en région Grand Est.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/F-Lorraine-Boucq-Foret-de-la-Reine.jpg/330px-F-Lorraine-Boucq-Foret-de-la-Reine.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Boucq", bd_ids: ["3d3f33fa-274c-5750-bbe8-b8a37f599031"] },
+  { id: "566e776d-c9d5-52e2-8388-6dad7d49b424", name: "Brad Metzler", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["808def66-0261-5fb0-adf1-2e8c3f8761d8"] },
+  { id: "5140c72e-436a-5c58-85af-fde4a31bd1da", name: "Brecht Evens", bio: "Brecht Evens, né à Hasselt en 1986, est un auteur de bande dessinée belge néerlandophone. Depuis 2013, il vit et travaille à Paris.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/FIBD_2015_Brecht_Evens.jpg/330px-FIBD_2015_Brecht_Evens.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Brecht_Evens", bd_ids: ["8f57610f-1014-5596-8015-17b94899cd58", "510487fd-029b-5a3b-9700-0d11d9582757"] },
+  { id: "307d6d57-5e9c-5093-81f8-c14ebd1a70bf", name: "Brian Azzarello", bio: "Brian Azzarello, né le 11 août 1962 à Cleveland (Ohio), est un scénariste américain de bande dessinée spécialisé dans les comic books. Il est surtout connu pour la série 100 Bullets, publiée sous le label Vertigo de DC Comics, ainsi que pour ses collaborations avec les dessinateurs Eduardo Risso et Lee Bermejo.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/10.15.11BrianAzzarelloByLuigiNovi1.jpg/330px-10.15.11BrianAzzarelloByLuigiNovi1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Brian_Azzarello", bd_ids: ["5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4"] },
+  { id: "ed1a4f6d-3f61-5ebf-95d6-dffa1b57b17e", name: "Brian K Vaughan", bio: "Brian K. Vaughan is an American comic book and television writer, best known for the comic book series Y: The Last Man, Ex Machina, Runaways, Pride of Baghdad, Saga, and Paper Girls.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/8.1.19BrianKVaughanByLuigiNovi1.jpg/330px-8.1.19BrianKVaughanByLuigiNovi1.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Brian_K._Vaughan", bd_ids: ["0e432312-5b7e-50f8-afba-7869c1256706"] },
+  { id: "eb085332-9b22-53f0-a527-1e929572ab5a", name: "Brubaker", bio: "Brubaker est un film américain réalisé par Stuart Rosenberg et sorti en 1980.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Brubaker", bd_ids: ["956b5864-d695-5e4f-b6f3-48078e019fe0"] },
+  { id: "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3", name: "Bryan Lee O'Malley", bio: "Bryan Lee O'Malley est un auteur de comics canadien né le 21 février 1979.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bryan_Lee_O%27Malley_by_Gage_Skidmore.jpg/330px-Bryan_Lee_O%27Malley_by_Gage_Skidmore.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Bryan_Lee_O'Malley", bd_ids: ["395b6a6b-7acb-5a84-8ddf-e855409977b8", "6486c644-9f52-5b81-8121-a07c9ca820d3", "24c15eca-cdd6-52e2-ae02-ca99c6a37884"] },
+  { id: "2f89aaac-ebdd-5a34-a0a8-e93588b567e4", name: "Bryan Talbot", bio: "Bryan Talbot, né le 24 février 1952 à Wigan (Lancashire), est un écrivain et dessinateur de comics britannique.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Bryan_Talbot.jpg/330px-Bryan_Talbot.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Bryan_Talbot", bd_ids: ["562e5012-19b0-5794-aa0e-4636a143312f"] },
+  { id: "4102d5a8-722f-5280-a290-ccc976747c79", name: "Burckel", bio: "Joseph Bürckel was a German Nazi politician and a member of the German parliament. He was an early member of the Nazi Party and was influential in the rise of the National Socialist movement. He played a central role in the German acquisition of the Saarland and Austria. He held the posts of  Gauleiter and Reichsstatthalter in both Gau Westmark and Reichsgau Vienna. He also held the rank of Obergruppenführer in both the SA and the SS.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Josef_B%C3%BCrckel_%28cropped%29.jpg/330px-Josef_B%C3%BCrckel_%28cropped%29.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Josef_B%C3%BCrckel", bd_ids: ["d77af3ef-1018-580f-8b4b-bdac6993c4b9"] },
+  { id: "d34f9a45-6215-5a8a-b4d6-dfb9d6a92541", name: "Camille Potte", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["8f3dfff9-18f4-517b-956a-375093f86315"] },
+  { id: "e582c7f5-c5b4-5f7e-ac05-d3296bfd9708", name: "Camille Van Hoof", bio: "Camille Van Hoof, née en 1992, est une graphiste, illustratrice et autrice de bande dessinée alternative belge francophone.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/20250313_112735_Camille_Van_Hoof.jpg/330px-20250313_112735_Camille_Van_Hoof.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Camille_Van_Hoof", bd_ids: ["599583d1-2538-5fdb-ad77-90fc339b3178"] },
+  { id: "29e81ba3-c9a8-5437-a577-2324e84c2a22", name: "Campbell", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["8a50365e-9da9-59dd-bc97-969ed43c22c7"] },
+  { id: "160a3ea0-3de2-5647-bd35-de0856ad7ff1", name: "Cece Bell", bio: "Cece Bell est une auteure de bande dessinée et de livres pour enfants américaine. Diplômée du Collège de William et Mary et de l'université d'État de Kent, elle exerce depuis les années 1990. Sourde à la suite d'une maladie contractée à l'âge de 4 ans, elle s'inspire de son expérience dans la bande dessinée autobiographique Super Sourde publiée fin 2014 et très bien reçue par la critique.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Cece_Bell_%282024%29.jpg/330px-Cece_Bell_%282024%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Cece_Bell", bd_ids: ["0d8ca287-8e3d-55a9-9f4f-bbe8a1a62c40"] },
+  { id: "ae96a2ee-5217-5ca6-b422-07d3393e3b41", name: "Chaland", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["d7561c34-87ed-5351-9dcd-cabcdda88eb9", "a0258b1a-9505-561d-a6a8-ca69479420d8"] },
+  { id: "1b65525f-ca97-5987-ac69-2799896f5fbf", name: "Charyn", bio: "The Charyn or Sharyn is a river in the Almaty Province of Kazakhstan. It flows through the Charyn National Park and into the Ili River, which is considered to be the largest artery of Lake Balkhash. The Charyn is 427 kilometres (265 mi) long, and has a drainage basin of 7,720 square kilometres (2,980 sq mi). It runs through the territory of Kegen and Uighur regions, forming the 154-km long Charyn Canyon.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sharyn_River.jpg/330px-Sharyn_River.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Charyn", bd_ids: ["3d3f33fa-274c-5750-bbe8-b8a37f599031"] },
+  { id: "cdc82420-f432-5f59-a469-f2e496e2ec4d", name: "Chester Brown", bio: "Chester Brown est un auteur de bande dessinée né le 16 mai 1960 à Montréal au Canada, d'expression anglaise.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Chester_Brown.jpg/330px-Chester_Brown.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Chester_Brown", bd_ids: ["fb7e1f82-d227-5650-85b7-c44a4f634109", "1346fd40-465d-50a8-9dbf-1b3db2f2f962"] },
+  { id: "92d63259-a236-5255-8a90-bf9776649674", name: "Chloé Wary", bio: "Chloé Wary est une auteure de bande dessinée française, née en 1995 en banlieue parisienne.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Chlo%C3%A9_Wary_women_pop_festival_1308454_%28Reims%2C_2022%3B_cropped_2023%29.jpg/330px-Chlo%C3%A9_Wary_women_pop_festival_1308454_%28Reims%2C_2022%3B_cropped_2023%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Chlo%C3%A9_Wary", bd_ids: ["90a07961-765f-588b-a9b1-147327ff19e6", "d535ad5b-baf2-54af-b3d5-17d8b52332ff"] },
+  { id: "c87d7744-49cb-5480-8fd5-ac0903b18d99", name: "Chris Samnee", bio: "Chris Samnee est un dessinateur américain de comics. Il a reçu le Harvey Award 2011 pour Most Promising Newcomer pour son travail sur le roman graphique Capote in Kansas chez Oni Press et le Eisner Award 2013 du meilleur dessinateur/encreur pour son travail sur The Rocketeer: Cargo of Doom et son Daredevil. Il a également été nommé en 2006 pour le Russ Manning Award.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Chris_Samnee_%288688077589%29.jpg/330px-Chris_Samnee_%288688077589%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Chris_Samnee", bd_ids: ["1c16dd39-9b71-570b-adf9-dd949b0876ed"] },
+  { id: "0de81355-7467-5c84-ac5a-fda83bddd329", name: "Christopher Hittinger", bio: "Christopher Hittinger est un dessinateur et scénariste de bande dessinée français et américain, né à Paris le 30 janvier 1980.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Christopher_Hittinger", bd_ids: ["bab472e5-dba8-56e8-94b4-eaca12df0767"] },
+  { id: "2e83f03b-61b3-5559-8c7b-9f91ce6434b7", name: "Christopher Priest", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea"] },
+  { id: "cb6b2c97-9182-501d-90a0-2c812dd7d641", name: "Claire Fauvel", bio: "Claire Fauvel, née le 17 novembre 1988, est une illustratrice et dessinatrice de bande dessinée française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Claire_Fauvel.jpg/330px-Claire_Fauvel.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Claire_Fauvel", bd_ids: ["fd110a14-3cb4-5407-a837-b3bae1c9b278"] },
+  { id: "969606f1-a82b-5683-8a38-a91089eb9598", name: "Clamp", bio: "CLAMP (クランプ, Kuranpu) est un collectif d'autrices, mangaka. Leurs mangas sont en général des shōjo manga, mais elles se sont essayées, depuis 2001 au seinen et au shōnen publiés entre autres dans Young Magazine au Japon.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Clamp_at_Anime_Expo_2006.jpg/330px-Clamp_at_Anime_Expo_2006.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/CLAMP", bd_ids: ["ab707df2-5f9e-5bce-ba06-da7fc0e88bfd"] },
+  { id: "a98cd576-0496-5016-8738-c111b1250f68", name: "Claude Lacroix", bio: "Claude Lacroix, né le 6 janvier 1944 à Amiens (Somme) et mort le 2 mars 2021 à Saint-Mandé (Val-de-Marne), est un scénariste et dessinateur français. Connu pour sa série de science-fiction Le Cycle de Cyann, en collaboration avec François Bourgeon.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Claude_Lacroix", bd_ids: ["9f71560e-9697-518d-a092-a2e73ca2c608"] },
+  { id: "035010a7-3a33-5cdf-b3bc-237e47b1ac05", name: "Clément Lefèvre", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["4752dff7-0fcb-5360-a636-374577c0b313"] },
+  { id: "83cd0cff-b455-5d5f-b0d2-1620f35ecd54", name: "Consigny", bio: "Consigny est une commune française située dans le département de la Haute-Marne, en région Grand Est.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/EGLISE_SAINT_PIERRE.jpg/330px-EGLISE_SAINT_PIERRE.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Consigny", bd_ids: ["debf7682-e9ad-587d-a814-efdeaad2c9e7"] },
+  { id: "fe17f662-7b96-54eb-a378-d165448e83c6", name: "Corben", bio: "Richard Corben est un auteur américain de bande dessinée, surtout connu pour ses œuvres de fantasy et d'horreur.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Richard_Corben", bd_ids: ["809c07eb-4cdb-564d-801f-810e13afae93"] },
+  { id: "66b3e971-8a48-589a-bb44-75fb4755cf25", name: "Craig Wes", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19"] },
+  { id: "740a55f0-b066-529c-aad3-be7706f65d0c", name: "Cyprien", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["bb95f1ee-35e4-5172-bcf9-11aa19d39885"] },
+  { id: "a47f6301-1e18-51f0-8386-ac488ee37b7c", name: "Daisuke Igarachi", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["c503e169-f7e8-50eb-bba0-7d391d6a17ce"] },
+  { id: "dd7e20bf-bcd1-5b90-a7d5-96c2ef461276", name: "Dan Adkins", bio: "Dan Adkins est un dessinateur américain de bandes dessinées né le 15 mars 1937 à Midkiff en Virginie-Occidentale et mort le 8 mai 2013 à Reading en Pennsylvanie.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Dan_Adkins", bd_ids: ["bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"] },
+  { id: "aabdfb6d-def7-59e7-aef7-caf4f826425e", name: "Dan Best", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["9491f949-140c-5092-9add-d05dc3983fe1"] },
+  { id: "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8", name: "Daniel Clowes", bio: "Daniel Clowes, parfois appelé Dan Clowes, né le 14 avril 1961 à Chicago, est un auteur américain de bandes dessinées, illustrateur et scénariste.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/FIBD2017DanielClowes2.jpg/330px-FIBD2017DanielClowes2.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Daniel_Clowes", bd_ids: ["72f2081f-6273-5dc2-8c7b-28dc3370c098", "5c0d585f-9e55-51fb-bb16-f98389cb7ce4"] },
+  { id: "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5", name: "Daniel Warren Johnson", bio: "Daniel Warren Johnson is an American comic book artist and writer based in Chicago. He has worked on comics with Image, Marvel, and DC. He also collaborated with colorist Mike Spicer beginning with Extremity. The duo also worked together on the Wonder Woman: Dead Earth and Beta Ray Bill: Argent Star mini-series. He followed that with a solo project, Do A Powerbomb in 2022. His works have been published in five languages.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Daniel_Warren_Johnson_by_Gage_Skidmore.jpg/330px-Daniel_Warren_Johnson_by_Gage_Skidmore.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Daniel_Warren_Johnson", bd_ids: ["85b4afe0-39bc-53e9-b894-84624222cc7d", "67a5f9be-05e5-5595-a37f-a5ab7ac9952b"] },
+  { id: "48aace14-0b8f-5dc9-aee0-2b52c883a081", name: "Daria Schmidtt", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["f6c7005e-7b64-5eef-844a-2ac4acdc1b07"] },
+  { id: "a296e419-1a8d-59a9-a3cd-d3ee5ba81fc9", name: "Dave McKean", bio: "David McKean est un artiste britannique, né le 29 décembre 1963 à Maidenhead, en Angleterre. Il est à la fois illustrateur, photographe, graphiste, dessinateur de comics, réalisateur et musicien. Son travail pictural est un mélange de dessin, de peinture, de photographie, de collage, d'infographie et de sculpture.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dave_McKean_-_Lucca_Comics_%26_Games_2018_01.jpg/330px-Dave_McKean_-_Lucca_Comics_%26_Games_2018_01.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Dave_McKean", bd_ids: ["68213172-a9fb-5a77-9b90-2668f465ed84"] },
+  { id: "63d2e556-4c79-555b-afec-1eb4a3f509a5", name: "David Prudhomme", bio: "David Prudhomme, né le 4 octobre 1969 à Tours (Indre-et-Loire), est un auteur de bande dessinée français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Quai_des_Bulles_2010_-_David_Prudhomme.jpg/330px-Quai_des_Bulles_2010_-_David_Prudhomme.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/David_Prudhomme", bd_ids: ["b5c177d6-e429-538f-84b3-6f857b20a7a4"] },
+  { id: "0fa6efdf-5b59-5497-a4a0-2412cc8f2249", name: "Davodeau", bio: "Étienne Davodeau, né le 19 octobre 1965 à Botz-en-Mauges (Maine-et-Loire), est un dessinateur et scénariste français de bandes dessinées. Avec près de 45 albums publiés en 30 ans, l’auteur-dessinateur s’est imposé comme une grande figure de la bande dessinée documentaire.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Etienne_Davodeau_2011-12-09.jpg/330px-Etienne_Davodeau_2011-12-09.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/%C3%89tienne_Davodeau", bd_ids: ["3d70b2d5-2977-5edc-972d-5f5e66124eef"] },
+  { id: "44528b19-7eac-5aab-8e73-bbc8f7c11c8b", name: "Dean Haspiel", bio: "Dean Edmund Haspiel est un dessinateur et scénariste américain de bande dessinée. Il est connu pour ses diverses collaborations avec l’écrivain Harvey Pekar sur sa série American Splendor ainsi que sur son roman graphique Le Dégonflé (The Quitter). Il a été nommé à de nombreuses reprises aux Eisner Awards, et a remporté un Emmy Award en 2010 pour son travail de design sur le générique de la série télévisée Bored to death.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/9.15.10DeanHaspiel1ByLuigiNovi.jpg/330px-9.15.10DeanHaspiel1ByLuigiNovi.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Dean_Haspiel", bd_ids: ["8f885326-1105-5c04-9cb9-1df0a0d79080"] },
+  { id: "32df707a-3433-582f-b61e-ae27388d4713", name: "Debbie Drechsler", bio: "Debbie Drechsler, née en 1953, est une autrice de bandes dessinées et illustratrice américaine.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Debbie_Drechsler", bd_ids: ["cef800c9-32c9-52ab-bf7c-f734ba6c65db"] },
+  { id: "54ffe919-5f0b-553a-bd79-e6c9314fe6ba", name: "Delphine Panique", bio: "Delphine Panique est une autrice de bande dessinée française née à Valence (Drôme). Elle vit et travaille à Toulouse.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Delphine_Panique", bd_ids: ["43bbd0e5-e692-5e43-950a-eb10bd288972"] },
+  { id: "1447e129-555d-532d-8df9-d42e6407feef", name: "Dennis O'Neil", bio: "Dennis Joseph O'Neil est un scénariste de comics américain né le 3 mai 1939 à Saint-Louis (Missouri) et mort le 11 juin 2020 à Nyack dans l'État de New York.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Dennis_O%27Neil_%287885471094%29.jpg/330px-Dennis_O%27Neil_%287885471094%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Dennis_O'Neil", bd_ids: ["bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"] },
+  { id: "96f050f1-d364-5995-835b-e0735f743da1", name: "Derf Backderf", bio: "John Backderf alias Derf Backderf, né en octobre 1959 à Richfield (Ohio), est un dessinateur de presse et auteur de bandes dessinées américain.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/FIBD2023DerfBackderf.jpg/330px-FIBD2023DerfBackderf.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Derf_Backderf", bd_ids: ["ee4b52be-c659-5eff-ae4e-44cebfeb024c"] },
+  { id: "e9d80524-250a-5eed-b35a-7c4e80bac050", name: "Didier Quella-Guyot", bio: "Didier Quella-Guyot, né le 7 juillet 1955 à Rochefort-sur-Mer (Charente-Maritime), est un scénariste de bande dessinée, critique et enseignant.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Didier_Quella-Guyot", bd_ids: ["6dcd8372-864e-593c-aa7b-d1c4421ca80a"] },
+  { id: "bdb4565e-067f-56ca-8936-a076246543f4", name: "Dominique Goblet", bio: "Dominique Goblet, née le 8 juillet 1967 à Ixelles, est une illustratrice, autrice de bande dessinée et de romans graphiques, et plasticienne belge.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/FIBD2019Jury_03.jpg/330px-FIBD2019Jury_03.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Dominique_Goblet", bd_ids: ["d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98"] },
+  { id: "aadfc208-0268-5ff7-b840-57b854a09cce", name: "Donatien Mary", bio: "Donatien Mary, né le 16 mai 1983, est un illustrateur et auteur de bande dessinée français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Donatien_Mary_-_Librairie_Mollat.jpg/330px-Donatien_Mary_-_Librairie_Mollat.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Donatien_Mary", bd_ids: ["f85336b5-f4df-5112-a405-cf0dbd14fd50"] },
+  { id: "43871c3f-7878-50fd-8691-838780202913", name: "Dylan Horrocks", bio: "Dylan Horrocks, né à Auckland en 1966, est un auteur de bandes dessinées néo-zélandais.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Dylan_Horrocks_NLNZ.jpg/330px-Dylan_Horrocks_NLNZ.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Dylan_Horrocks", bd_ids: ["995dd270-3ead-51df-a96b-919cd922cbea"] },
+  { id: "eb457afe-c7d7-5465-91f5-1f76bbd153d4", name: "Eddie Campbell", bio: "Eddie Campbell est un auteur de bande dessinée résidant en Australie. Propulsé sur le devant de la scène par From Hell, réalisé avec Alan Moore de 1989 à 1996, Campbell est aussi le créateur en 1982 d’Alec.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/EddieCampbell.png/330px-EddieCampbell.png", wikipedia_url: "https://fr.wikipedia.org/wiki/Eddie_Campbell", bd_ids: ["9491f949-140c-5092-9add-d05dc3983fe1"] },
+  { id: "f88b6be4-be83-553a-9a10-0c3ff88d9c71", name: "Edgar P. Jacobs", bio: "Edgard Félix Pierre Jacobs, dit Edgar P. Jacobs, né le 30 mars 1904 à Bruxelles, mort le 20 février 1987 à Lasne, est un auteur de bande dessinée belge, principalement connu pour la série Blake et Mortimer, l'une des bandes dessinées européennes les plus populaires du XXe siècle.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Blake_en_Mortimer.JPG/330px-Blake_en_Mortimer.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Edgar_P._Jacobs", bd_ids: ["f865a993-10dd-5daf-9303-db5328540034"] },
+  { id: "2a1ed255-67b2-58cd-b606-8c8dd612fa86", name: "Edith", bio: "Edith is a feminine given name derived from the Old English word ēad, meaning wealth or prosperity, in combination with the Old English gȳð, meaning strife, and is in common usage in this form in English, German, many Scandinavian languages and Dutch. Its French form is Édith. Contractions and variations of this name include Ditte, Dita, and Edie.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Edith", bd_ids: ["5be2ee50-4405-56c2-b59f-fbdc8438e45e"] },
+  { id: "98f266c0-cb80-5d14-8e5c-697e49b48751", name: "Edith Chambon", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["330732a9-e0e1-5cf1-a00d-ecd08a2bc222"] },
+  { id: "1a9c1499-d284-5ffe-9045-4e3918619a42", name: "Edouard Cour", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["46c2d81c-4961-5353-9c99-230e81b565d0"] },
+  { id: "8f0a123e-a29e-5620-989c-8b6e9bc9f3de", name: "Eduardo Risso", bio: "Eduardo Risso né le 23 novembre 1959, est un dessinateur de bande dessinée argentin.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Stuttgart_-Comic_Con_Germany_2019-_d90_by-RaBoe_062.jpg/330px-Stuttgart_-Comic_Con_Germany_2019-_d90_by-RaBoe_062.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Eduardo_Risso", bd_ids: ["e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa"] },
+  { id: "cc4653dc-b615-54e5-bac1-c35dc48d1341", name: "Elene Usdin", bio: "Elene Usdin est une photographe, illustratrice et autrice de bande dessinée française née le 8 avril 1971 à Paris.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Elene-usdin.jpg/330px-Elene-usdin.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Elene_Usdin", bd_ids: ["13a95766-1ae7-52fc-8158-e51115b8fa4a"] },
+  { id: "ce1989f6-f25c-5cf4-9899-cb4528ed5422", name: "Eleonor Marchal", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["c7c00974-55df-5ddb-9094-599a49fedc04"] },
+  { id: "9a3c0069-aa3f-5826-9ef1-9f344244d3dc", name: "Elisa Marraudino", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["e316844c-27bd-5037-a0f8-1327a62e748f"] },
+  { id: "d52a43df-2aa2-547e-b98d-830dec705d02", name: "Elizabeth Holleville", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["06d42289-e3ad-57c0-aade-03088507faa9"] },
+  { id: "a4c619ad-7880-5c8f-aeef-ac6c22630f6d", name: "Emil Ferris", bio: "Emil Ferris, née en 1962 à Chicago, est une dessinatrice américaine qui a surtout travaillé dans l'illustration.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Emil_Ferris_at_Miami_Book_Fair_2016.jpg/330px-Emil_Ferris_at_Miami_Book_Fair_2016.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Emil_Ferris", bd_ids: ["7cb93591-7dde-59e6-9afd-dc565a390435"] },
+  { id: "d055575f-870c-5ed6-8371-8ede4af900c1", name: "Emilie Gleason", bio: "Émilie Gleason est une autrice de bande dessinée de nationalité belge et mexicaine, née en 1992 au Mexique. Elle est surtout connue par l'ouvrage Ted, drôle de coco, qui s'inspire de son frère porteur du syndrome d'Asperger.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Emilie_Gleason-IMG_0434.JPG/330px-Emilie_Gleason-IMG_0434.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/%C3%89milie_Gleason", bd_ids: ["0a23fbe5-b7b7-547f-95ef-c8e4c169ba84", "22bae3a8-139b-5a3f-932f-80fc901d43af"] },
+  { id: "002b8b8f-eaec-50aa-b1a9-dd32ff43ef58", name: "Emma CakeCup", bio: "Emma Paris, de son vrai nom Emma Charatz, est une influenceuse et vidéaste web française.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Emma_Paris", bd_ids: ["081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d"] },
+  { id: "e00c6e9a-cecb-5393-9a29-204cb3947ce9", name: "Emma Ríos", bio: "Emma Ríos, née le 1er avril 1976, est une dessinatrice de comics espagnole.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Emma_R%C3%ADos_-_Lucca_Comics_and_Games_2015.JPG/330px-Emma_R%C3%ADos_-_Lucca_Comics_and_Games_2015.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Emma_R%C3%ADos", bd_ids: ["ef0b7e38-3627-5f6e-b460-3e92a56d3a13"] },
+  { id: "b678c865-cc90-539b-8e87-b8b7bd979836", name: "Emmanuel Lepage", bio: "Emmanuel Lepage, né le 29 septembre 1966 à Saint-Brieuc (Côtes-d'Armor), est un dessinateur, scénariste et coloriste de bande dessinée français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/FIBD2023EmmanuelLepage.jpg/330px-FIBD2023EmmanuelLepage.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Emmanuel_Lepage", bd_ids: ["4c2f3bd9-177e-561b-a197-3579528230ae"] },
+  { id: "5ad0a9e1-5ffa-5c14-a110-f2130ce3514f", name: "Emre Orhun", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["69f9074f-83c0-57ba-977b-1125d2fbae16"] },
+  { id: "6784186c-7620-5323-ba49-f65e51e6ae6f", name: "Erich Ohser", bio: "Erich Ohser dit e.o.plauen, né le 18 mars 1903 et mort dans la nuit du 5 au 6 avril 1944 à Berlin, est un dessinateur allemand, auteur notamment de la bande dessinée Vater und Sohn.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Bundesarchiv_Bild_146-2003-0037%2C_E._O._Plauen.jpg/330px-Bundesarchiv_Bild_146-2003-0037%2C_E._O._Plauen.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/E.o.plauen", bd_ids: ["0ee6ba43-46ad-5c80-8a2e-5114850d943b"] },
+  { id: "226380ae-66d4-55d7-bf85-5d57c33b16c8", name: "Ersin Karabulut", bio: "Ersin Karabulut, né le 3 juin 1981 à Eminönü, Istanbul, est un auteur turc de bande dessinée.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Ersin_Karabulut", bd_ids: ["e0f10239-868a-5cde-b6dd-9c94fed8d7b5"] },
+  { id: "81eb6653-4aac-5e37-b82d-5e6552f5669a", name: "Etienne Davodeau", bio: "Étienne Davodeau, né le 19 octobre 1965 à Botz-en-Mauges (Maine-et-Loire), est un dessinateur et scénariste français de bandes dessinées. Avec près de 45 albums publiés en 30 ans, l’auteur-dessinateur s’est imposé comme une grande figure de la bande dessinée documentaire.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Etienne_Davodeau_2011-12-09.jpg/330px-Etienne_Davodeau_2011-12-09.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/%C3%89tienne_Davodeau", bd_ids: ["f2ece642-d63f-5322-8208-0d755268b0a7"] },
+  { id: "ee98cfb4-9b32-5356-b3be-337badf7aa02", name: "Exaheva", bio: "Exaheva, née le 29 juillet 1990, est une artiste pluridisciplinaire, autrice de bande dessinée alternative et musicienne belge.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Exaheva", bd_ids: ["f95d6e61-6426-5b0b-9311-b9e8ecb36b78"] },
+  { id: "1895a4c2-2cf2-5967-b5b1-2b87bfb4c910", name: "Ezra Cleytan Daniels", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["69fc7e78-c691-52d1-9568-ff25b698eaab"] },
+  { id: "831f7cc9-9ad6-5358-8ca1-1d671a6cb6f1", name: "Fabcaro", bio: "Fabrice Caro, dit Fabcaro, est un auteur de bande dessinée et romancier français, né le 10 août 1973 à Montpellier.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fabcaro_au_Festival_Le_Livre_%C3%A0_Metz.jpg/330px-Fabcaro_au_Festival_Le_Livre_%C3%A0_Metz.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fabcaro", bd_ids: ["be84548c-9e26-56ea-a97d-bdf4b9653250"] },
+  { id: "55310ba7-320a-5abb-8b39-eff41549b0f1", name: "Fabien Nury", bio: "Fabien Nury est un scénariste de bande dessinée français, né le 31 mai 1976.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Fabien_Nury_-_Prix_Fnac_BD_2014_%2812082349885%29_%28cropped%29.jpg/330px-Fabien_Nury_-_Prix_Fnac_BD_2014_%2812082349885%29_%28cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fabien_Nury", bd_ids: ["5879ed08-b528-54fa-b889-cb9b6654c5e6"] },
+  { id: "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87", name: "Fabien Vehlmann", bio: "Fabien Vehlmann est un scénariste de bande dessinée français né à Mont-de-Marsan le 30 janvier 1972. Son œuvre la plus connue, en collaboration avec Bruno Gazzotti, est la série fantastique jeunesse Seuls.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/FIBD_2015_Marche_des_auteurs_10.jpg/330px-FIBD_2015_Marche_des_auteurs_10.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fabien_Vehlmann", bd_ids: ["b8354485-7ce8-5d1c-a71b-bca27475f6c7", "6a77cc15-294a-5114-8d5f-73d5d402ab51"] },
+  { id: "1e2535bc-1306-5edf-a096-6619d1fc69f0", name: "Fabrice Neaud", bio: "Fabrice Neaud, né le 17 décembre 1968 à La Rochelle, est un artiste français. Il est notamment connu comme auteur de bande dessinée, en particulier pour son Journal publié entre 1996 et 2002.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/FabriceNeaudAngouleme0707.jpg/330px-FabriceNeaudAngouleme0707.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fabrice_Neaud", bd_ids: ["5b09fc60-7852-5dd7-85fd-47d06d44ac08"] },
+  { id: "588613c4-6e68-5359-ada6-29b7ff634885", name: "Fabrizio Dori", bio: "Fabrizio Dori is an Italian comics artist. He started as a painter but switched to comics to focus on storytelling. His works include the comic books Gauguin: The Other World (2016), which is about the artist Paul Gauguin, and Il dio vagabondo (2018) and Il figlio di Pan (2023), which are about a satyr in the modern world. Several of his works concern issues of modernity and meaning.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Fabrizio_dori_1164813.jpg/330px-Fabrizio_dori_1164813.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Fabrizio_Dori", bd_ids: ["2a776a76-0486-5fa8-a693-0507a23edda8", "8faa03ae-f8f4-5b68-9059-c0c628f85707"] },
+  { id: "25a92ac6-0606-546b-91d9-21824fdc82a1", name: "Felix Laurent", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["f95d6e61-6426-5b0b-9311-b9e8ecb36b78"] },
+  { id: "94b0e949-b89d-5ea5-b0b9-7cbd0ac73da4", name: "Filipe Andrade", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["92d5d028-df2f-5e50-b4b7-9887ae2f807b"] },
+  { id: "31387e90-fc18-5d6c-8a6a-6bd2ceef6053", name: "Florence Cestac", bio: "Florence Cestac est une autrice de bande dessinée, illustratrice et éditrice française née le 18 juillet 1949 à Pont-Audemer (Eure).", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Florence_Cestac_20080318_Salon_du_livre_1.jpg/330px-Florence_Cestac_20080318_Salon_du_livre_1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Florence_Cestac", bd_ids: ["d3ae501d-a740-50fa-9b36-23681a63e221"] },
+  { id: "b51e43e0-93f2-5e19-a4ea-6c9847f8a7e3", name: "Florence Dupré la Tour", bio: "Florence Dupré la Tour, née le 15 février 1978 à Buenos Aires, est une dessinatrice et autrice de bande dessinée française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Florence_Dupre_la_Tour_20100411_BD-Aix_1.jpg/330px-Florence_Dupre_la_Tour_20100411_BD-Aix_1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Florence_Dupr%C3%A9_la_Tour", bd_ids: ["fb96800d-99ad-51c1-a1e8-f27c7d8fbb10"] },
+  { id: "f00e5d5f-7bc4-58c0-98a0-7c48ff1b2ead", name: "Forest", bio: "A forest is an ecosystem characterized by a dense community of trees. Hundreds of definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing, and ecological function. The United Nations' Food and Agriculture Organization (FAO) defines a forest as, \"Land spanning more than 0.5 hectares with trees higher than 5 meters and a canopy cover of more than 10 percent, or trees able to reach these thresholds in situ. It does not include land that is predominantly under agricultural or urban use.\" Using this definition, Global Forest Resources Assessment 2020 found that forests covered 4.06 billion hectares, or approximately 31 percent of the world's land area in 2020.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Aerial_view_of_the_Amazon_Rainforest.jpg/330px-Aerial_view_of_the_Amazon_Rainforest.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Forest", bd_ids: ["bde7b6df-1144-56af-8a15-03f3710adb93"] },
+  { id: "731fd7b0-dd35-5c0e-a77b-6d21464732f8", name: "France Richemond", bio: "France Richemond est une scénariste française de bande dessinée, spécialisée dans la bande dessinée historique médiévale. Elle est surtout connue pour la série Le Trône d'argile.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/France_Richemond", bd_ids: ["935c5f25-3edb-5853-91ea-c0c75d211ba5"] },
+  { id: "298957cc-14c1-506e-b3d1-61603cbccd87", name: "Francis Masse", bio: "Francis Masse, dit Masse, est un artiste français né le 21 août 1948, à Gap (Hautes-Alpes). Au début des années 1970, il se fait tout d'abord connaître grâce à ses sculptures, puis se tourne vers l’animation et la bande dessinée.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Masse2015.jpg/330px-Masse2015.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Francis_Masse", bd_ids: ["dc370931-0191-5023-a121-09e365903d81"] },
+  { id: "4d4f91cb-cbe7-5303-8271-d641cf6a6221", name: "Francois Boucq", bio: "Boucq, nom d’artiste de François Boucq, est un auteur de bande dessinée français né à Lille (Nord) le 28 novembre 1955. Il reçoit en 1998 le grand prix de la ville d'Angoulême, qui récompense l'ensemble de sa carrière.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/FIBD_2015_Francois_Boucq.jpg/330px-FIBD_2015_Francois_Boucq.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Boucq", bd_ids: ["db8922f2-954d-5063-9ca0-699e952b7520"] },
+  { id: "72a26f1a-77d7-531c-a4f4-2018eeb616ce", name: "Francois Lepage", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["4c2f3bd9-177e-561b-a197-3579528230ae"] },
+  { id: "f780ae12-bdb3-5934-a7eb-c1a220d6c1f7", name: "Frank Pé", bio: "Frank Pé dit Frank, né le 15 juillet 1956 à Ixelles (Bruxelles) et mort le 29 novembre 2025, est un auteur de bande dessinée belge, connu pour ses séries Broussaille et Zoo ainsi que comme artiste animalier.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FrankP%C3%A92016.jpg/330px-FrankP%C3%A92016.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Frank_P%C3%A9", bd_ids: ["9ac45906-4b6a-5ca4-805b-f64aec4b90bc"] },
+  { id: "950aea29-52b1-5b38-916e-69bd7222eed0", name: "Frank Quitely", bio: "Vincent Deighan, dit Frank Quitely, né le 18 janvier 1968, est un dessinateur écossais de comics, né à Glasgow. Son pseudonyme est une anagramme de l'expression quite frankly.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/FrankQuitely.png/330px-FrankQuitely.png", wikipedia_url: "https://fr.wikipedia.org/wiki/Frank_Quitely", bd_ids: ["aaa5174a-d012-5a86-83ff-88ee561cee78", "2ab19c62-8468-5b16-99a6-f5b97153b993"] },
+  { id: "c86e250b-e9c3-59aa-869a-9ab8b53022f1", name: "Franquin", bio: "André Franquin, né le 3 janvier 1924 à Etterbeek et mort le 5 janvier 1997 à Saint-Laurent-du-Var, est un auteur belge francophone de bande dessinée, principalement connu pour les séries Spirou et Fantasio, Gaston, Modeste et Pompon et les Idées noires ; il est aussi le créateur du Marsupilami, animal imaginaire.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Andr%C3%A9_Franquin%2C_tekenaar_strip_Guust_Flater%2C_1979_-_19.jpg/330px-Andr%C3%A9_Franquin%2C_tekenaar_strip_Guust_Flater%2C_1979_-_19.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Andr%C3%A9_Franquin", bd_ids: ["fbb83c90-bc31-53bb-82f1-62a4921b7b66"] },
+  { id: "85773f9c-27a8-5d21-9786-fad52ff3180e", name: "François Bourgeon", bio: "François Bourgeon, né le 5 juillet 1945 à Paris, est un scénariste et dessinateur de bande dessinée français. Il est l'auteur d'œuvres renommées comme Les Passagers du vent, Les Compagnons du crépuscule et Le Cycle de Cyann qui lui ont valu plusieurs prix et distinctions.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Fran%C3%A7oisBourgeon_october_2014.jpg/330px-Fran%C3%A7oisBourgeon_october_2014.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Bourgeon", bd_ids: ["9f71560e-9697-518d-a092-a2e73ca2c608"] },
+  { id: "2c5d1ecf-6832-57d5-b546-c500ad06204d", name: "Fred", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["fc30f32a-3e20-5385-b28a-7439ee532389"] },
+  { id: "d0b44328-312e-5462-94fc-6071926328cf", name: "Fred Bernard", bio: "Fred Bernard, né le 1er septembre 1969 à Beaune (Côte-d'Or), est un auteur de bande dessinée, auteur et illustrateur français de livres jeunesse.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Moussaillon2.jpg/330px-Moussaillon2.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fred_Bernard", bd_ids: ["429db244-0244-5954-aed2-67933069011e"] },
+  { id: "2f4e23e5-9feb-53ab-beae-4555370c8f0d", name: "Frederik Peeters", bio: "Frederik Peeters est un auteur de bande dessinée suisse, né le 14 août 1974 à Genève.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/FIBD2016FrederikPeeters_%28cropped%29.jpg/330px-FIBD2016FrederikPeeters_%28cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Frederik_Peeters", bd_ids: ["3bb145fc-9ba1-546b-84c5-b9bd43d58ef3", "a2edcba9-4069-57fa-860a-9b0f656b7911", "46840f52-8e72-51fa-8308-bfe9e584b7c8", "1bc85f3d-8932-5b00-b6fd-333b32ee53b9"] },
+  { id: "ecb4c9b9-3668-504e-b85a-91058c2412a2", name: "Frédéric Rébéna", bio: "Frédéric Rébéna est un illustrateur et dessinateur de bande dessinée français, né le 19 février 1965 à Clermont (Oise).", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FredericRebenaLM2015.jpg/330px-FredericRebenaLM2015.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_R%C3%A9b%C3%A9na", bd_ids: ["331c85b8-47f5-56b5-bdb2-c4ad8b36a229"] },
+  { id: "1f55bd80-400f-5c7c-98ed-d29a9fff6cbe", name: "Galic", bio: "Galić is a South Slavic surname. It may refer to:Anita Galić, freestyle swimmer from Croatia\nCvitan Galić (1909–1944), Croatian World War II fighter ace\nMilan Galić (1938–2014), former Serbian footballer\nStanislav Galić, Serb military officer\nValerija Galić, vice-president of the Constitutional Court of Bosnia and Herzegovina\nMelina Galić, Bosniak fashion designer based in Belgrade.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Gali%C4%87", bd_ids: ["deb20c8e-015a-5c9c-9686-1111263e8a0a"] },
+  { id: "eb5d6e96-6e8e-5188-8ea6-58cc19c59957", name: "Geoffroy Monde", bio: "Geoffroy Monde, né Geoffroy Reymondon, le 30 août 1986 à Lyon, est un dessinateur de bande dessinée, peintre et peintre numérique français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/GeoffroyMonde2016.jpg/330px-GeoffroyMonde2016.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Geoffroy_Monde", bd_ids: ["2f0d945f-bd63-5967-9a57-844e20b11675"] },
+  { id: "617cfc5a-f2fa-5b31-9e82-f0e71d742d38", name: "Gilbert Hernandez", bio: "Gilbert Hernandez né à Oxnard, Californie, le 1er février 1957 est auteur de bande dessinée. Avec son frère Jaime et, au début, son frère Mario, il crée le comix Love and Rockets où, avec un dessin proche des Archie Comics, il traite - de manière drôle, fantaisiste ou sérieuse, selon l'humeur - de la vie quotidienne des habitants de la ville imaginaire de Palomar. Il est aussi l'auteur de Mechanics.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Los_Bros_Hernandez_2007.jpg/330px-Los_Bros_Hernandez_2007.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Gilbert_Hernandez", bd_ids: ["38c7eb79-a784-51a2-bf4e-94b788834ea9"] },
+  { id: "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5", name: "Gipi", bio: "Gian Alfonso Pacinotti, plus connu sous le nom de Gipi, né le 12 décembre 1963 à Pise, en Toscane, est un auteur de bande dessinée italien.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Gipi_-_Internazionale_a_Ferrara_2007.jpg/330px-Gipi_-_Internazionale_a_Ferrara_2007.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Gian_Alfonso_Pacinotti", bd_ids: ["0a1fa77f-b0ff-55a3-ba65-d274ab0605d3", "c36e3da5-0be8-5732-a555-fb7a2b9adc95"] },
+  { id: "2149320d-2c93-5c48-92dd-fd4a4b4a2916", name: "Goossens", bio: "Goossens is a Dutch-language patronymic surname meaning \"son of Goos/Goossen\" (Goswin). It is the 8th most common name in Belgium. Notable people with the surname include:Adolphe Goossens (1896–1916), Horn player who died in action at the Somme, aged 20.\nBen Goossens, Belgian ad agency art director and photomontage artist\nCarry Goossens, Belgian actor and comedian\nColette Goossens, Belgian swimmer\nDaniel Goossens,, French cartoonist\nDennis Goossens, Belgian gymnast\nEster Goossens, Dutch middle-distance runner\nEugène Goossens, père (1845–1906), Belgian conductor\nEugène Goossens, fils (1867–1958), French conductor and violinist, son of Eugène Goossens, père\nEugene Aynsley Goossens (1893–1962), English conductor and composer, son of Eugène Goossens, fils\nJan Goossens, Belgian dialectologist and philologist\nJan Goossens, Dutch-born American indoor soccer player\nJean-Maurice Goossens (1892–1965), Belgian ice hockey player\nJohn Goossens, Dutch footballer\nJohn J. Goossens (1944–2002), Belgian businessman\nKris Goossens, Belgian tennis player\nLou Goossens, Belgian actor\nLéon Goossens (1897–1988), British oboist, son of Eugène Goossens, fils\nMarc Goossens (cyclist), Belgian racing cyclist\nMarc Goossens, Belgian racecar driver\nMarie Goossens (1894–1991), English harpist, older sister of Sidonie Goossens\nMichaël Goossens, Belgian footballer\nPierre-Lambert Goossens (1827–1906), Belgian Cardinal of the Roman Catholic Church\nRay Goossens (1924–1998), Flemish artist, animator and director\nReinhilde Goossens, Belgian singer known by the name \"Lisa del Bo\"\nRobert Goossens (1927–2016), French jewelry maker\nRoland Goossens, Belgian comics artist known as \"Gos\"\nSidonie Goossens (1899–2004), British harpist, daughter of Eugène Goossens, fils\nSimon Goossens (1893–1964), Belgian sculptor\nVictor Goossens, founder and co-owner of the multiregional professional esports organization Team Liquid", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Goossens", bd_ids: ["3d6f3134-2abf-5826-9462-12df423eeb00"] },
+  { id: "82b73354-e24a-5897-a4d7-a14c69097c14", name: "Grant Morrison", bio: "Grant Morrison, membre de l'Empire britannique (MBE), est un scénariste de comics écossais.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Grant_morrison.jpg/330px-Grant_morrison.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Grant_Morrison", bd_ids: ["aaa5174a-d012-5a86-83ff-88ee561cee78"] },
+  { id: "926f14bf-2ff3-58be-b4a8-bfc69cd4f9fb", name: "Grégoire Bouchard", bio: "Grégoire Bouchard est un scénariste et dessinateur québécois de bande dessinée, et illustrateur né le 8 juin 1965 à Montréal au Québec (Canada).", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Gr%C3%A9goire_Bouchard_au_librairie_Z_%28cropped%29.jpg/330px-Gr%C3%A9goire_Bouchard_au_librairie_Z_%28cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Gr%C3%A9goire_Bouchard", bd_ids: ["506574d1-5d79-5ea8-a30b-2de7549df7f9"] },
+  { id: "1a18f2fb-0d2c-54c5-a763-fdadef46f041", name: "Gustave Doré", bio: "Gustave Doré, né le 6 janvier 1832 à Strasbourg et mort le 23 janvier 1883 à Paris, dans son hôtel de la rue Saint-Dominique, est un illustrateur, caricaturiste, peintre, lithographe et sculpteur français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Photograph_of_Gustave_Dor%C3%A9_by_Nadar%2C_between_1856_and_1858.jpg/330px-Photograph_of_Gustave_Dor%C3%A9_by_Nadar%2C_between_1856_and_1858.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Gustave_Dor%C3%A9", bd_ids: ["7e0fbd51-70be-5b79-b9fd-fdcbdbe6784d"] },
+  { id: "4d8e72d3-3b12-548b-b11e-25da6ce04060", name: "Gwen de Bonneval", bio: "Gwen de Bonneval, né le 9 janvier 1973 à Nantes (Loire-Atlantique), est un scénariste et dessinateur de bande dessinée français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/FIBD2020Fauves_10.jpg/330px-FIBD2020Fauves_10.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Gwen_de_Bonneval", bd_ids: ["b8354485-7ce8-5d1c-a71b-bca27475f6c7", "6a77cc15-294a-5114-8d5f-73d5d402ab51"] },
+  { id: "e1d64487-9066-57a4-a82b-f95b1f11a41f", name: "Hannah Templer", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["52b5768f-92ea-5ea0-864c-f91c838da16c"] },
+  { id: "be1bbed6-3d2a-5949-9210-263612f09011", name: "Hariton Pushwagner", bio: "Terje Brofos, dit Hariton Pushwagner et le plus souvent Pushwagner, est un peintre pop norvégien connu dans son pays pour ses provocations et son style de vie.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pushwagner_-_B%C3%A6rum_Kunstforening.jpg/330px-Pushwagner_-_B%C3%A6rum_Kunstforening.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Hariton_Pushwagner", bd_ids: ["37e7a325-c27f-5f10-a2d6-21765d017dd8"] },
+  { id: "9e03747d-9a8a-5a37-bef0-6c60c93c5600", name: "Haruko Ichikawa", bio: "Haruko Ichikawa (1896–1943) was a Japanese writer.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Haruko_Ichikawa", bd_ids: ["0fe6b6ee-7baa-56dc-ab21-40f63a87421b"] },
+  { id: "0399b1c8-5e87-58d3-8ea8-63453280e3bb", name: "Heugel", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["debf7682-e9ad-587d-a814-efdeaad2c9e7"] },
+  { id: "0b088127-8e8e-5e67-aade-8ee924e23e14", name: "Hideo Azuma", bio: "Hideo Azuma (吾妻 ひでお, Azuma Hideo), né le 6 février 1950 et mort le 13 octobre 2019, est un mangaka japonais, peu connu sur la scène internationale mais très réputé dans son pays.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Hideo_Azuma", bd_ids: ["1d9f61ac-e443-5d00-95d6-232abbc96584"] },
+  { id: "604f3749-8f3e-5862-a9e5-04fa037f26c0", name: "Hill", bio: "A hill is a landform that extends above the surrounding terrain. It often has a distinct summit, and is usually applied to peaks which are above elevation compared to the relative landmass, though not as prominent as mountains. Hills fall under the category of slope landforms.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Uliveti_monte_cinto.JPG/330px-Uliveti_monte_cinto.JPG", wikipedia_url: "https://en.wikipedia.org/wiki/Hill", bd_ids: ["95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b"] },
+  { id: "09a3b727-757e-5f3a-84f0-75b4364f9c63", name: "Hippolyte", bio: "In Greek mythology, Hippolyta, or Hippolyte, was a daughter of Ares and Otrera, queen of the Amazons, and a sister of Antiope and Melanippe. She wore her father Ares' zoster, the Greek word found in the Iliad and elsewhere meaning \"war belt\". Some English translations prefer \"girdle\". Hippolyta figures prominently in the myths of both Heracles and Theseus. The myths about her are so varied it is thought that they may be about different women. The name Hippolyta translates as \"she who unleashes the horses\", deriving from two Greek roots meaning \"horse\" and \"let loose\".", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Hippolyte_Amazon_queen.jpg/330px-Hippolyte_Amazon_queen.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Hippolyta", bd_ids: ["58bf1586-0770-5e05-9d5e-84b033947d1f"] },
+  { id: "03cdc5ac-b075-5ab7-9fc8-3d64cdf0096d", name: "Hirohiko ARAKI", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["7a876a7a-5b64-5cde-9870-ecb1aa6d034c"] },
+  { id: "a0ad17df-cc7c-5579-a3f6-7fea6f6b69f5", name: "Hubert", bio: "Hubert is a Germanic masculine given name, from hug \"mind\" and beraht \"bright\". It also occurs as a surname.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/St.Hubert_Ottawa_St.Patrick_RC_Basilica.jpg/330px-St.Hubert_Ottawa_St.Patrick_RC_Basilica.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Hubert", bd_ids: ["d77af3ef-1018-580f-8b4b-bdac6993c4b9"] },
+  { id: "8fe7fe5d-f5d1-57fa-9b23-8613e9714774", name: "Hugues Micol", bio: "Hugues Micol, né le 18 mars 1969 à Paris, est un auteur et un scénariste de bande dessinée.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Hugues_Micol_20100328_Salon_du_livre_de_Paris_1.jpg/330px-Hugues_Micol_20100328_Salon_du_livre_de_Paris_1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Hugues_Micol", bd_ids: ["7c7c3feb-134e-5fcd-8be5-c580ee005cb1", "9a3852a3-baa8-5f2a-aba2-fe494ac3d2d7"] },
+  { id: "74fe19ba-aed1-535a-b8e0-d23ecae07b52", name: "Ibn Al Rabin", bio: "Mathieu Baillif alias Ibn Al Rabin, est un auteur de bande dessinée suisse né en 1975 à Genève. C'est l'un des représentants de la bande dessinée minimaliste francophone des années 2000.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Mathieu_Baillif", bd_ids: ["163d1778-437a-5b0b-a41c-477e1740f9d6"] },
+  { id: "37d869e4-02d9-5885-a0c5-62e7f626e80d", name: "Ichikawa Raku", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["08e65064-e95c-5215-8c3d-adb674683828"] },
+  { id: "2d932312-b0bc-5bac-9c2d-dfe07ecede95", name: "Ikue Aizawa", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["48a7b58b-aa17-5b0d-98ec-fe8a997395c0"] },
+  { id: "b4e9729a-f1c7-5994-b791-a4c365333f5b", name: "Inio Asano", bio: "Inio Asano (浅野 いにお, Asano Inio) est un mangaka japonais, né le 22 septembre 1980 à Ishioka dans la préfecture d'Ibaraki.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Inio_Asano_at_TCAF_2018.jpg/330px-Inio_Asano_at_TCAF_2018.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Inio_Asano", bd_ids: ["7b7682a7-12fd-5c89-81c1-ce4b2ec3cedd", "49643a22-7c3c-590e-909d-2b458a3c9812", "3c1a9222-8bc6-5dc9-9f80-8d86851d8aec", "90278e20-06f0-50f8-a8f0-04b97acfe3ce"] },
+  { id: "206efe6f-29f9-5386-b123-f2bbd3f27f6d", name: "Iris Pouy", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["06d42289-e3ad-57c0-aade-03088507faa9"] },
+  { id: "d8152d45-6327-555b-bab0-5773452caeed", name: "Isabel Greenberg", bio: "Isabel Poppy Greenberg est une autrice et dessinatrice de bande dessinée et illustratrice britannique.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Isabel_Greenberg", bd_ids: ["d6cae607-a1ff-5926-a3f2-bb062c84ffb8", "6cbc856d-bbf3-517d-8096-69dcf2e9b270"] },
+  { id: "5becded1-8df8-5719-8df7-76a7c8641ec1", name: "Itagaki", bio: "Itagaki  is a Japanese surname.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Itagaki", bd_ids: ["bf4fe76d-85e6-5b2b-8093-bd397f29ccc2"] },
+  { id: "f6acf67b-3605-510c-89f9-da99c5668419", name: "Jacky Benetaud", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["2a776a76-0486-5fa8-a693-0507a23edda8"] },
+  { id: "11132b63-24cf-5e0c-87e3-f82a28ac89e8", name: "James Tynion IV", bio: "James Tynion IV est un scénariste de bande dessinée américain.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/James_tynion_IV_1563026_Urban_Comics_m%C3%A9diath%C3%A8que_falala.jpg/330px-James_tynion_IV_1563026_Urban_Comics_m%C3%A9diath%C3%A8que_falala.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/James_Tynion_IV", bd_ids: ["d8f9a56b-3061-5c16-9cce-1d231de67319", "df990528-33c4-5c15-87e0-ad4119be24f3"] },
+  { id: "0708b86c-85b5-5300-9cd9-a2bda4f0a606", name: "Jamie McKelvie", bio: "Jamie McKelvie is a British cartoonist and illustrator, known for his both work on books such as Phonogram, Young Avengers and The Wicked + The Divine, and his approach to comic character design.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/10.10.10JamieMcKelvieByLuigiNovi.jpg/330px-10.10.10JamieMcKelvieByLuigiNovi.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Jamie_McKelvie", bd_ids: ["0ef59048-c3fb-5ea8-b650-75dafe1998cf"] },
+  { id: "33d9e522-4553-5c30-84d9-90627de2766d", name: "Jano", bio: "Jano is a town and municipality in the north west of the Honduran department of Olancho, west of Guata, south of Esquipulas del Norte and north of Manto, Honduras.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Jano", bd_ids: ["c8efe667-cfa0-5265-92b3-8f32fbeb53b1"] },
+  { id: "5a27bd93-6368-5a71-863e-b2984c27b7da", name: "Javier de Isusi", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["09bd361d-294b-548e-81d2-a24ce73e755a"] },
+  { id: "fbc80bf7-51eb-58fc-b8c2-66228d9518a3", name: "Jay Hosler", bio: "Jay Hosler is the author and illustrator of science-oriented comics. He is best known for his graphic novels Clan Apis, The Sandwalk Adventures, and Optical Allusions. Clan Apis, a Xeric Foundation Award winner, follows the life of a honey bee named Nyuki; the story conveys factual information about honey bees in a humorous fashion as Nyuki learns about each new stage of her life. The Sandwalk Adventures, an Eisner Award nominee, follows a conversation about evolution between Charles Darwin and a follicle mite living in his left eyebrow. Optical Allusions, funded in part by a National Science Foundation grant, explains the evolution of the eye and vision by following the story of Wrinkles the Wonderbrain. Hosler is also an entomologist and David K Goodman '74 Professor of Biology at Juniata College.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jay-hosler-012a.jpg/120px-Jay-hosler-012a.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Jay_Hosler", bd_ids: ["a1271973-c370-5a5f-a7d4-8feb30577f49"] },
+  { id: "542d6a4e-eee5-5d28-b43b-1522bc6c23b7", name: "Jean Teulé", bio: "Jean Teulé, né le 26 février 1953 à Saint-Lô (Manche) et mort le 18 octobre 2022 à Paris, est un romancier et auteur de bande dessinée français, qui a également travaillé dans le milieu du cinéma et de la télévision.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Jean_Teul%C3%A9_-_Salon_du_livre_de_Paris_2010_2.jpg/330px-Jean_Teul%C3%A9_-_Salon_du_livre_de_Paris_2010_2.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jean_Teul%C3%A9", bd_ids: ["d3ae501d-a740-50fa-9b36-23681a63e221"] },
+  { id: "f7afb30f-e1e2-556c-9c9a-43825f33af8f", name: "Jean-Blaise Djian", bio: "Djian ou JB Djian, nom de plume de Jean-Blaise Mitildjian, est un scénariste français de bande dessinée, né à Courbevoie (Seine) le 10 août 1953.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Djian_festival_bd_herouville_2009.jpg/330px-Djian_festival_bd_herouville_2009.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Djian_(auteur_de_bande_dessin%C3%A9e)", bd_ids: ["21bdadd2-bb70-57c4-9fac-bb1eef30acc0"] },
+  { id: "69eb4ee1-b8a0-50b0-adec-5f64e115725a", name: "Jean-Christophe Deveney", bio: "Jean-Christophe Deveney, né en 1977 à Hyères (Var), est un scénariste de bande dessinée français. Il est également créateur d’exposition et enseignant en scénario.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Jean-Christophe_Deveney", bd_ids: ["46c2d81c-4961-5353-9c99-230e81b565d0"] },
+  { id: "dfb60faa-598f-5699-8b2f-01a78e66cd35", name: "Jean-Louis Tripp", bio: "Jean-Louis Tripp, né le 4 février 1958 à Montauban, est un dessinateur et scénariste de bande dessinée, sculpteur et peintre français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/JeanLouisTripp2014.jpg/330px-JeanLouisTripp2014.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jean-Louis_Tripp", bd_ids: ["20804294-4e09-50cd-94bd-8372e5d99a58"] },
+  { id: "402fbda6-fe33-5e95-a64c-4385f9029a38", name: "Jean-Michel Dupont", bio: "Jean-Michel Dupont, né le 21 janvier 1956 à Valenciennes, est un scénariste de bande dessinée. Il est notamment l'auteur, avec le dessinateur Mezzo, des romans graphiques Love in Vain et Kiss the Sky.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Saddri_-_JMD_Wikimedia_Commons.jpg/330px-Saddri_-_JMD_Wikimedia_Commons.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jean-Michel_Dupont", bd_ids: ["06175f53-82fc-5df0-a3d6-33be607df9c8", "75fc73a4-84d6-50f0-99d9-b7445c392bb8"] },
+  { id: "e2973a8e-b6fe-5378-b489-513f29620f71", name: "Jean-Pierre Dionnet", bio: "Jean-Pierre Dionnet, né le 25 novembre 1947 à Paris, est un producteur, scénariste, journaliste, éditeur de bande dessinée et animateur de télévision français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Jean_Pierre_Dionnet.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jean-Pierre_Dionnet", bd_ids: ["a8f38346-3d87-5afd-9d0c-423aea300f2a"] },
+  { id: "289863c6-a5cf-5a8e-ac03-c19aae5a032f", name: "Jean-marc Rochette", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["ef41686b-1031-581f-a454-351eef12c49b"] },
+  { id: "787e0d65-0fe6-5b9f-a9ec-1afe8993ea3d", name: "Jeanne Sterkers", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c"] },
+  { id: "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0", name: "Jeff Lemire", bio: "Jeff Lemire est un auteur de bande dessinée canadien. Il publie à la fois pour la scène alternative et pour le grand groupe DC Comics, où il est principalement scénariste.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/10.12.12JeffLemireByLuigiNovi1.jpg/330px-10.12.12JeffLemireByLuigiNovi1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jeff_Lemire", bd_ids: ["4bb23804-0bcf-59c4-b051-ebf483efde5f", "344c953c-2f98-510e-9642-b193cc079eeb"] },
+  { id: "41d4d07a-dd5b-575e-8575-182029f2ffbc", name: "Jeff Smith", bio: "Jeff Smith (né le 27 février 1960 à McKees Rocks) est un auteur de bande dessinée américain. Il est surtout connu pour Bone, série de fantasy qu'il a auto-publié de 1991 à 2004.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/e/ea/Jeff_Smith.jpg?uselang=fr", wikipedia_url: "https://fr.wikipedia.org/wiki/Jeff_Smith", bd_ids: ["5ee6ce29-7b61-53b4-8994-a0a2e783cf92"] },
+  { id: "42648312-3057-56f3-a03c-346bc337f3f8", name: "Jeff Stokely", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["20d228c3-067c-5067-90c8-cb8cc271fe6f"] },
+  { id: "57a7df47-868e-598d-8320-562a491eec09", name: "Jemisin", bio: "Nora Keita Jemisin is an American science fiction and fantasy writer. Her fiction includes a wide range of themes, notably cultural conflict and oppression. Her debut novel, The Hundred Thousand Kingdoms (2010), and the subsequent books in her Inheritance Trilogy received critical acclaim.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/N._K._Jemisin_%28cropped%29.jpg/330px-N._K._Jemisin_%28cropped%29.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/N._K._Jemisin", bd_ids: ["8a50365e-9da9-59dd-bc97-969ed43c22c7"] },
+  { id: "3bb69f39-439a-56b4-8c8b-84229ff231ba", name: "Jerome Charyn", bio: "Jerome Charyn, né le 13 mai 1937 dans le Bronx à New York (États-Unis), est un romancier américain, et scénariste de bande dessinée.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Jerome_Charyn_-_2015_National_Book_Festival_%282%29.jpg/330px-Jerome_Charyn_-_2015_National_Book_Festival_%282%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jerome_Charyn", bd_ids: ["db8922f2-954d-5063-9ca0-699e952b7520"] },
+  { id: "8c3c54b4-5338-5cf9-9db4-e376482d841b", name: "Jim Bishop", bio: "Julien Bicheux, connu sous son nom de plume Jim Bishop, est un auteur de bande dessinée français né le 8 mai 1985 à Épinay-sur-Seine en Seine-Saint-Denis, et résidant à Angoulême.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Jim_Bishop", bd_ids: ["9e1ead2f-e94b-51c4-a530-25ff413b4630"] },
+  { id: "40790dc7-7194-5449-98fe-ccc3f6fa7767", name: "Joe Quesada", bio: "Joseph « Joe » Quesada est un dessinateur, éditeur et scénariste de comics américain né le 1er décembre 1962. Il est rédacteur en chef des éditions Marvel Comics de 2000 à 2010, Axel Alonso le remplace à partir de janvier 2011.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/12.21.10JoeQuesadaByLuigiNovi.jpg/330px-12.21.10JoeQuesadaByLuigiNovi.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Joe_Quesada", bd_ids: ["da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea"] },
+  { id: "b3477ea0-acf7-5378-921f-003ae0d32b4b", name: "Johnny Ryan", bio: "John F. Ryan IV is an American alternative comics creator, writer, and animator. He created Angry Youth Comix, a comic book published by Fantagraphics, and \"Blecky Yuckerella\", a comic strip which originated in the alternative newspaper the Portland Mercury and now appears on Ryan's website. He also created Pig Goat Banana Cricket, a TV show made jointly with Dave Cooper that Nickelodeon picked up. He was the story editor for Looney Tunes Cartoons. In a throwback to the days of underground comix, Ryan's oeuvre is generally an attempt to be as shocking and irreverent as possible.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Johnny_Ryan_2018_%28cropped%29.jpg/330px-Johnny_Ryan_2018_%28cropped%29.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Johnny_Ryan", bd_ids: ["87fa356f-0b28-50f7-ad0f-7608ec05705e"] },
+  { id: "eeab9dd3-5b67-53d1-8012-0b2cc71f0442", name: "Jonathan Ames", bio: "Jonathan Ames, né le 23 mars 1964 à New York, est un écrivain américain, auteur de plusieurs romans et mémoires humoristiques. Il acquiert une certaine notoriété avec ses histoires qu’il écrit deux fois par mois pour le New York Press, sous le titre “City Slicker”. Dans ces colonnes, il raconte ses mésaventures sexuelles avec un grand sens de l’auto-dérision. Il s’intéresse depuis longtemps au monde de la boxe et est même occasionnellement monté sur le ring sous le surnom de « Hareng prodige ». En 2009, il crée la série télévisée Bored to Death pour HBO, et en 2015, il lance la série Blunt Talk, produite par Seth MacFarlane et avec Patrick Stewart pour la chaine Starz.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jonathan_Ames_%2833906702118%29_%28cropped%29.jpg/330px-Jonathan_Ames_%2833906702118%29_%28cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jonathan_Ames", bd_ids: ["8f885326-1105-5c04-9cb9-1df0a0d79080"] },
+  { id: "8ebd502e-0353-5076-9daf-ef5e18c72f6c", name: "Jonathan Garnier", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["88083fb1-f033-50a2-a26a-84921246605c"] },
+  { id: "fd51ff5e-d84e-5eae-8cd0-e095e96e3dba", name: "Jonathan Hickman", bio: "Jonathan Hickman, né le 3 septembre 1972 en Caroline du Sud, est un scénariste et dessinateur de comics américain.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Hickman2012.jpg/250px-Hickman2012.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jonathan_Hickman", bd_ids: ["7d723523-0d8a-5c4f-a040-8ff0cca2bc83"] },
+  { id: "35cf1a17-190f-5618-a7fe-4554e75983f4", name: "Jordi Lafebre", bio: "Jordi Lafebre est un illustrateur, scénariste et dessinateur de bande dessinée catalan, né en 1979 à Barcelone (Espagne).", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Jordi_Lafebre_october_2014.jpg/330px-Jordi_Lafebre_october_2014.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jordi_Lafebre", bd_ids: ["12d42d70-3a3c-5d61-bf59-ac8cc63ba0a5"] },
+  { id: "91ea0576-e99f-559b-8107-43c5a962ce61", name: "Josh hood", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"] },
+  { id: "3f2d648d-6795-56c7-a81a-4a98b852b1a0", name: "Josselin Facon", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["122a0172-06d1-548d-a796-547d56b7fa4c"] },
+  { id: "0f40eecd-24cf-5c5c-8330-f71cda6d02c3", name: "José Parrondo", bio: "José Parrondo, né le 25 juin 1965 à Liège, est un auteur de bande dessinée, illustrateur, peintre et musicien belge.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/FIBD_2015_Jose_Parrondo.jpg/330px-FIBD_2015_Jose_Parrondo.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Jos%C3%A9_Parrondo", bd_ids: ["ad666457-dc66-5f79-a8e2-24d71257ce29"] },
+  { id: "10a532a2-fbf4-5e12-af99-152a45092deb", name: "Juan Giménez", bio: "Juan Antonio Giménez López est un auteur de bande dessinée argentin né le 16 novembre 1943 à Mendoza et mort le 2 avril 2020, des suites de la Covid-19, dans la même ville.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Juan_Gimenez_Getxon.jpg/330px-Juan_Gimenez_Getxon.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Juan_Gim%C3%A9nez", bd_ids: ["b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5"] },
+  { id: "b64f17a8-7cde-5016-a0ba-5e4599ad52f2", name: "Judith Vanistendael", bio: "Judith Vanistendael est une auteure de bande dessinée belge néerlandophone, née le 21 août 1974 à Louvain.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/JudithVanistendael-FilipNaudts-3837PHN_2016_%28cropped_2023%29.jpg/330px-JudithVanistendael-FilipNaudts-3837PHN_2016_%28cropped_2023%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Judith_Vanistendael", bd_ids: ["66419695-ae35-53a0-b7db-55e99b5d6b02"] },
+  { id: "c1ffebeb-922e-5aec-a97e-43302c30360d", name: "Julia Wertz", bio: "Julia Wertz, née le 29 décembre 1982 à San Francisco, est une dessinatrice de bande dessinée américaine.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/JulaWertz2006.jpg/330px-JulaWertz2006.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Julia_Wertz", bd_ids: ["acef282e-003f-5e71-a1db-09b55471da17", "af8eb788-7a27-5205-84b1-ae1298595b7d"] },
+  { id: "e7bad250-6da0-56ae-ab7c-bb32c2243587", name: "Julie Delporte", bio: "Juli Delporte, née Julie Delporte à Saint-Malo en 1983, est une autrice de bande dessinée et illustratrice non binaire d'origine française, pour les adultes et les enfants. Depuis 2005, elle vit à Montréal, au Canada. Elle est reconnue pour son engagement envers les femmes et la communauté LGBTQ+.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Julie_Delporte_-_Salon_du_livre_de_Qu%C3%A9bec.jpg/330px-Julie_Delporte_-_Salon_du_livre_de_Qu%C3%A9bec.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Julie_Delporte", bd_ids: ["e71a06a2-fc10-56f0-b0a6-f5b1ec6ce8d4", "b2b56cf4-189b-5c0f-b0a9-b3f4944df2f8"] },
+  { id: "48f4c9b6-4f07-53ad-bd78-dfc79b024297", name: "Julie Rocheleau", bio: "Julie Rocheleau est une conceptrice de dessins animés, dessinatrice de bandes dessinées et illustratrice canadienne.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Julie_Rocheleau_-_Soir%C3%A9e_des_B%C3%A9d%C3%A9is_Causa_2018.jpg/330px-Julie_Rocheleau_-_Soir%C3%A9e_des_B%C3%A9d%C3%A9is_Causa_2018.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Julie_Rocheleau", bd_ids: ["8912ab3c-bf35-5595-bdb9-3c6357a2e7b9", "9c926764-7669-5585-8219-0f0fb31f3498"] },
+  { id: "b6ec5ccc-d0ec-5f4f-971f-7e1f961f15f1", name: "Jun Mayuzuli", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["45a36e4f-7780-53c1-b774-353b3aa6e85e"] },
+  { id: "bac0e452-b75b-5cc7-a4e4-ad8adf9ba347", name: "Junji Ito", bio: "Junji Itō (伊藤・潤二, Itō Junji) est un mangaka japonais né le 31 juillet 1963 dans la préfecture de Gifu, au Japon. Il est considéré comme l'un des maîtres du manga d'horreur.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Junji_Ito_-_Lucca_Comics_%26_Games_2018_02.jpg/330px-Junji_Ito_-_Lucca_Comics_%26_Games_2018_02.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Junji_It%C5%8D", bd_ids: ["543529b3-41ab-5afc-a381-7ed1bfab677b"] },
+  { id: "04cef3b4-6b2a-5efc-85f2-2a0ff95481cd", name: "Junko Mizuno", bio: "Junko Mizuno (水野 純子, Mizuno Junko), née le 27 mai 1973 est une artiste japonaise.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Junko_Mizuno_Paris_2014.jpg/330px-Junko_Mizuno_Paris_2014.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Junko_Mizuno", bd_ids: ["50afc3e1-c60e-5915-b756-8b0760228a32"] },
+  { id: "fab79174-cd77-5bff-8ef0-204115fd6685", name: "Jérémie Moreau", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["d2606770-6e64-56ad-9f24-2c1734030214"] },
+  { id: "bc5f45bb-b47a-5c9e-9452-990ca3ac5f9a", name: "Jérémy Bastian", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["28c74fd2-511a-5728-a28e-8876fa62ece8"] },
+  { id: "0cf5be42-674c-5e17-9e49-7fb184b1431c", name: "Jérémy Le Corvaisier", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["beee135e-1fed-5a0c-9083-dde2ebaec54d"] },
+  { id: "091254d8-d0c9-5726-a5c2-f19e2f7c8d92", name: "Kabi Nagata", bio: "Nagata Kabi  is a Japanese manga artist, best known for My Lesbian Experience with Loneliness.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Nagata_Kabi", bd_ids: ["78e93b93-fff0-5559-a078-8ca878174a6c"] },
+  { id: "2027444e-c012-54a3-aec8-f68484ffe1eb", name: "Kai Pfeiffer", bio: "Kai Pfeiffer is a German visual artist, graphic novelist and author of graphic journalism.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Kai_Pfeiffer", bd_ids: ["d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98"] },
+  { id: "67a61400-02a1-5e8a-815f-efe1aaff4044", name: "Karensac", bio: "Karensac, de son vrai nom Camille Gautier née le 4 juin 1990 à Grenoble (Isère), est une autrice et illustratrice de bande dessinée. Également connue sous le nom de plume Mlle Karensac.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Karensac_portrait.jpg/330px-Karensac_portrait.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Karensac", bd_ids: ["81d0933e-90f7-5b74-b9fb-ba27cc47fa12"] },
+  { id: "3ecb51cb-7330-5551-b059-2bc07bbe2220", name: "Karim Mahfouf", bio: "Karim Mahfouf, également connu sous le pseudonyme de Gyps est un illustrateur et auteur de bande dessinée algérien, né en 1967 à Alger. Il est également comédien et marionnettiste.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Karim_Mahfouf", bd_ids: ["93c55d49-da91-53a8-9384-a9e74f86fe92"] },
+  { id: "4a7a4f1c-41b7-5fc8-920d-ac55b12d15d1", name: "Kat Leyh", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["7655deef-be68-561d-a942-3a401c24343e"] },
+  { id: "7036c4fd-e408-5618-af2e-9baaff128651", name: "Keigo Shinzo", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["4926fa87-8fac-59ea-b462-beaa8865b399"] },
+  { id: "d6e87a93-7b87-56df-b0b5-784f597acfd5", name: "Keiko Takemiya", bio: "Keiko Takemiya (竹宮 惠子, Takemiya Keiko) est une autrice de bande dessinée japonaise née le 13 février 1950 à Tokushima dans la préfecture de Tokushima, au Japon.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Keiko_Takemiya", bd_ids: ["55173791-1d25-5974-be37-4ae3bfac5225"] },
+  { id: "eae3e547-17c4-5a9d-9f08-a099870e7427", name: "Keito Gaku", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["259a0454-9500-5b1b-be3c-1039abe5838a"] },
+  { id: "a6b81f1d-dc27-5aa3-877e-d3e6bd44907d", name: "Kelly Sue DeConnick", bio: "Kelly Sue DeConnick est une scénariste de comics américaine, née le 15 juillet 1970 dans l'Ohio.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Kelly_Sue_DeConnick_at_CCBP_2025.jpg/330px-Kelly_Sue_DeConnick_at_CCBP_2025.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Kelly_Sue_DeConnick", bd_ids: ["ef0b7e38-3627-5f6e-b460-3e92a56d3a13"] },
+  { id: "e5d3b413-fc6e-5914-a5e2-4cca6c66a3b4", name: "Kenji", bio: "Kenji (けんじ, ケンジ) est un prénom japonais très courant pour les garçons.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Kenji", bd_ids: ["d7d58ce0-3034-5dc1-ad26-f2ba302c0559"] },
+  { id: "5687b7c6-fc2f-5234-8443-9dccba2dbe03", name: "Kentarō Miura", bio: "Kentarō Miura (三浦 建太郎, Miura Kentarō), né le 11 juillet 1966 à Chiba (Japon) et mort le 6 mai 2021, est un dessinateur et scénariste japonais de mangas. Il est notamment connu pour être l'auteur de la série médiévale-fantastique Berserk, qu'il dessine durant 32 ans et qui connaît un succès mondial.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Kentar%C5%8D_Miura", bd_ids: ["233df3dc-5aec-5505-b208-b7dad00c99b1"] },
+  { id: "b818290e-2fbd-585a-828a-479920a33e88", name: "Kerascoët", bio: "Kerascoët est le nom d'artiste, créé en 2000, d'un couple de dessinateurs d'illustration, auteurs de bande dessinée et animateurs français, composé de Marie Pommepuy, née en 1978 à Brest et Sébastien Cosset, né en 1975 à Paris.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Kerasco%C3%ABt", bd_ids: ["795622ed-bfb2-50c3-8569-fb6f10d3cddd"] },
+  { id: "f149dc55-7d01-5e6c-89f4-ed837f8de8b5", name: "Kieran Headline", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["2577974a-9695-5f41-94a9-6ba5ebd90174"] },
+  { id: "081b0e0b-4da2-5f56-bf65-0bd4159a6420", name: "Kieron Gillen", bio: "Kieron Gillen est un scénariste de comics et journaliste de jeu vidéo britannique. Il est le créateur des comics Phonogram et The Wicked + The Divine. Il a également cofondé le site web vidéoludique Rock, Paper, Shotgun. En 2000, il devient le premier journaliste de jeu vidéo à recevoir un prix Periodical Publishers Association, celui du Meilleur nouveau journaliste spécialisé de consommation.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/10.16.11KieronGillenByLuigiNovi1.jpg/330px-10.16.11KieronGillenByLuigiNovi1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Kieron_Gillen", bd_ids: ["0ef59048-c3fb-5ea8-b650-75dafe1998cf"] },
+  { id: "073d9082-a5d3-506a-985d-eb0aebe059a8", name: "Killoffer", bio: "Patrice Killoffer dit Killoffer, né le 16 juin 1966 à Metz, est dessinateur et scénariste français de bande dessinée et illustrateur.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Patrice_Killoffer-IMG_0225.JPG/330px-Patrice_Killoffer-IMG_0225.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Patrice_Killoffer", bd_ids: ["36e7eb28-ed60-5818-bc3a-eb39ae1e3105"] },
+  { id: "b28aa578-42b6-53f0-ba2e-0e91a837d1cc", name: "Klou", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["af4e1bb1-ecf0-5912-8197-9d9e0b210b72"] },
+  { id: "fd8a5c80-b148-5a48-a880-d38d2e74bf5a", name: "Komoto Hajime", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["2a5e1c5f-476c-5d4e-81f3-2b78cb856e41"] },
+  { id: "030b9850-5805-5d5d-b8ef-9d9d2f42cdd6", name: "Kris", bio: "The kris or keris is a Javanese asymmetrical dagger with a distinctive blade-patterning achieved through alternating laminations of iron and nickelous iron (pamor). The kris is famous for its distinctive wavy blade, although many have straight blades as well, and is one of the weapons commonly used in the pencak silat martial art native to Indonesia. Kris have been produced in many regions of Indonesia for centuries, but nowhere—although the island of Bali comes close—is the kris so embedded in a mutually-connected whole of ritual prescriptions and acts, ceremonies, storied backgrounds, and epic poetry as in Central Java. Within Indonesia the kris is commonly associated with Javanese culture, although other ethnicities in the surrounding regions are familiar with the weapon as part of their cultures, such as the Balinese, Sundanese, Malay, Madurese, Banjar, Buginese, and Makassar people. The kris itself is considered as a cultural symbol of Indonesia and also neighbouring countries like Brunei, Malaysia, Philippines, Singapore, and Thailand.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/COLLECTIE_TROPENMUSEUM_Kris_met_schede_TMnr_A-1448.jpg/330px-COLLECTIE_TROPENMUSEUM_Kris_met_schede_TMnr_A-1448.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Kris", bd_ids: ["deb20c8e-015a-5c9c-9686-1111263e8a0a"] },
+  { id: "6b6badf0-ebf9-58a7-8c65-f1d065349439", name: "Kurt Busiek", bio: "Kurt Busiek est un scénariste de comic-books américain, né en 1960.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kurt_Busiek_Stumptown.jpg/330px-Kurt_Busiek_Stumptown.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Kurt_Busiek", bd_ids: ["979cc21c-4c87-5805-b5f5-6f5f3f1606d2"] },
+  { id: "685f38e5-4320-5e62-9650-764382aed9a2", name: "Kōhei Horikoshi", bio: "Kōhei Horikoshi (堀越 耕平, Horikoshi Kōhei) est un mangaka japonais, né le 20 novembre 1986 dans la préfecture d'Aichi. Il est diplômé de l'université d'art de Nagoya. À 20 ans, il remporte le prestigieux Prix Tezuka dans la catégorie nouvel espoir. Il est connu pour avoir créé des séries shōnen, toutes publiées dans le Weekly Shōnen Jump, telles que Crazy Zoo, Sensei no Bulge et plus récemment My Hero Academia, qui connaît le succès dès le premier volume en remportant une série de prix au Japon. Horikoshi a été l'assistant de Yasuki Tanaka, le créateur de Kagijin[réf. nécessaire].", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/K%C5%8Dhei_Horikoshi", bd_ids: ["b7cfe93d-0614-51ed-9121-129779a36201"] },
+  { id: "a0b94843-ddbb-5e2e-94f4-31715a79ae96", name: "Ladrönn", bio: "José Omar Ladrönn est un dessinateur mexicain de bande dessinée et de comics, né en 1967 à Minatitlán dans l’État de Veracruz (Mexique). En Europe, il est souvent crédité du seul patronyme de Ladrönn.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Jos%C3%A9_Ladr%C3%B6nn", bd_ids: ["b84e2de9-9773-5fb3-b098-95600aabefb4"] },
+  { id: "a0303dba-bfa5-5dbc-8c2a-7cc1352a5f7e", name: "Laurent Astier", bio: "Laurent Astier, né le 9 novembre 1975 à Firminy (Loire), est un auteur de bande dessinée français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/LaurentAstierLM2015.jpg/330px-LaurentAstierLM2015.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Laurent_Astier", bd_ids: ["5879ed08-b528-54fa-b889-cb9b6654c5e6"] },
+  { id: "2b7ad5e3-6b65-5786-bd5f-d02f8bcdde29", name: "Laurent Hopman", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["fc62fcaa-84ef-5a91-a79d-34ee62b436ef"] },
+  { id: "87b5bd4e-962b-5128-b63a-fcb5a620a097", name: "Lee Bermejo", bio: "Lee Bermejo est un dessinateur de comics américain autodidacte produisant aussi bien des couvertures que les albums eux-mêmes. Il débute en 1997 comme dessinateur chez Wildstorm, puis travaille pour Marvel et DC Comics, Men's Health, Max Mara, Top Cow, Wizard Entertainment, et sur un film nommé Ultraviolet. Il est également connu pour ses collaborations avec Brian Azzarello.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Lee_Bermejo_DSCF0092.jpg/330px-Lee_Bermejo_DSCF0092.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Lee_Bermejo", bd_ids: ["5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4"] },
+  { id: "1f638d4e-04ec-5db9-840e-ac7e034bf933", name: "Lee Lai", bio: "Lee Lai est une autrice de bande dessinée australienne qui vit au Canada.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Lee_Lai", bd_ids: ["73418c95-df6c-50b9-8713-0cd6437ca1e8"] },
+  { id: "5d4b528a-9838-5b47-9940-6c3506237d97", name: "Legrand", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["219fdb59-446f-5ec8-ada8-aa3432778341"] },
+  { id: "cd9ac32b-5e63-5ee4-a040-0a08d8da008c", name: "Leslie Hung", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["6486c644-9f52-5b81-8121-a07c9ca820d3"] },
+  { id: "29c51d18-72d7-5715-8d93-7f49418467af", name: "Lewis Trondheim", bio: "Laurent Chabosy, dit Lewis Trondheim, né le 11 décembre 1964 à Fontainebleau, est un dessinateur, scénariste et éditeur français de bande dessinée.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/FIBD2015LewisTrondheim.jpg/330px-FIBD2015LewisTrondheim.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Lewis_Trondheim", bd_ids: ["8cf6bed4-1fb3-55c1-a44b-1d26a4467c32"] },
+  { id: "6036d73a-1f6b-581b-8e41-74a385c4be82", name: "Liv Strömquist", bio: "Liv Strömquist, née à Lund le 3 février 1978, est une auteure suédoise de bande dessinée.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Liv_Str%C3%B6mquist%2C_Bokm%C3%A4ssan_2013_4.jpg/330px-Liv_Str%C3%B6mquist%2C_Bokm%C3%A4ssan_2013_4.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Liv_Str%C3%B6mquist", bd_ids: ["4855cab9-a793-5a3b-b9ed-a1ae11a4cb96", "5bebe1b3-ed45-5b99-bc12-026abccc686e"] },
+  { id: "4262dd32-264e-5b27-89d4-b8f1d948b32c", name: "Lob", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["219fdb59-446f-5ec8-ada8-aa3432778341"] },
+  { id: "5dffb67a-5aac-5df7-8cff-c42c4085749e", name: "Loo Hui Phang", bio: "Loo Hui Phang, née le 12 novembre 1974 au Laos, est une écrivaine, scénariste et réalisatrice française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Loo_Hui_Phang_44e_fest_BD_03240.png/330px-Loo_Hui_Phang_44e_fest_BD_03240.png", wikipedia_url: "https://fr.wikipedia.org/wiki/Loo_Hui_Phang", bd_ids: ["3bb145fc-9ba1-546b-84c5-b9bd43d58ef3"] },
+  { id: "cf14aca0-99b7-5e93-bac5-cc55c93da085", name: "Lorelei L'Affeter", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["7b60d495-19b6-5aec-83d2-df40acb1d3e8"] },
+  { id: "1a15581a-5279-5430-876c-2e8ffa8ff9a9", name: "Lorenzo Mattotti", bio: "Lorenzo Mattotti est un illustrateur, peintre et auteur de bande dessinée italien né le 24 janvier 1954 à Brescia.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/FIBD2015LorenzoMattotti.jpg/330px-FIBD2015LorenzoMattotti.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Lorenzo_Mattotti", bd_ids: ["c11af8d5-9a5d-5d5d-8a37-806ab326e55e"] },
+  { id: "4f07590b-71c7-574a-a119-11a46258f06a", name: "Lorenzo Pieri", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["935c5f25-3edb-5853-91ea-c0c75d211ba5"] },
+  { id: "f98adb03-4782-5e7d-858c-cea66c569d0a", name: "Lou Lubie", bio: "Lou Lubie est une illustratrice, bédéiste, et développeuse française née en 1990. Elle a fondé le Forum Dessiné, un site web communautaire où les échanges se font sous forme de dessins.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Aude_Masson_44e_fest_BD_03347.jpg/330px-Aude_Masson_44e_fest_BD_03347.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Lou_Lubie", bd_ids: ["5792de8a-229c-5f32-9cd0-3d9421f85b62"] },
+  { id: "6b955294-0c6d-5b47-8a7f-7a46611b7aa4", name: "Louise Joor", bio: "Louise Joor, née le 18 août 1988 à Bruxelles, est une autrice de bande dessinée belge. Elle accède à la notoriété avec Kanopé, publié en 2014.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Louise_Joor_-_Utopiales_2014_-_P960436.jpg/330px-Louise_Joor_-_Utopiales_2014_-_P960436.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Louise_Joor", bd_ids: ["e4e1d8bd-5c94-57eb-9b76-45b0d2e3c1b7"] },
+  { id: "dccf230a-7e53-53fc-8c68-d313d60245f3", name: "Loïc Clément", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["4752dff7-0fcb-5360-a636-374577c0b313"] },
+  { id: "3b934034-aca9-5ef9-a4d4-f0dbf63716dd", name: "Luca Harari", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["fdf7972d-6b2b-5ace-9939-d1b83cedae14"] },
+  { id: "ec3adb15-c596-5229-b64a-d324f9941ab6", name: "Lucas Varela", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["ec050548-66da-5642-af27-79ee4e0f5571"] },
+  { id: "6ada2d73-1f4e-5954-8c72-bc0404fa4307", name: "Lucie Lomova", bio: "Lucie Lomová is a Czech comics author.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Lucie_Lomova.jpg/330px-Lucie_Lomova.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Lucie_Lomov%C3%A1", bd_ids: ["406eb059-e7e8-54f1-8f89-cddea6c629e0"] },
+  { id: "8c05c235-5085-5da5-975c-95a3ec03a0ce", name: "Lucrèce Andreae", bio: "Lucrèce Andreae est une réalisatrice, scénariste, animatrice et autrice française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Portrait_of_Lucr%C3%A8ce_Andreae.jpg/330px-Portrait_of_Lucr%C3%A8ce_Andreae.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Lucr%C3%A8ce_Andreae", bd_ids: ["209120cd-8ef2-5051-9030-5750844215c5"] },
+  { id: "d98bf4ce-fabc-518d-9a7b-415fda62817e", name: "Ludovic Debeurme", bio: "Ludovic Debeurme, né le 31 octobre 1971 aux Lilas, est un auteur de bande dessinée et illustrateur français. Il publie en 2002 Céfalus.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ludovic_Debeurme_20100411_BD-Aix_3.jpg/330px-Ludovic_Debeurme_20100411_BD-Aix_3.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Ludovic_Debeurme", bd_ids: ["ff441b8a-e7d8-56d6-889a-43edd430e38d"] },
+  { id: "37c48d00-bc91-517c-b977-e253bcc19204", name: "Luigi Critone", bio: "Luigi Critone est un auteur de bande dessinée et illustrateur italien né le 10 septembre 1971 à Sant'Arcangelo (Basilicate).", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Luigi_Critone_2025.jpg/330px-Luigi_Critone_2025.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Luigi_Critone", bd_ids: ["9915da9c-e3bf-579d-9399-0cca6f6854ed"] },
+  { id: "f1c41fdd-a85b-58e1-b10d-1c31f9803326", name: "Lukasz Wojciechowski", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["00b764c7-9e57-5a44-8922-76ffc6c0c006"] },
+  { id: "466e5af5-67e4-5fcb-b087-0e8d4f1a7ed6", name: "Luz", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["c422ca47-19e7-5530-96ae-3099c5ec9dc8"] },
+  { id: "044a392b-edae-5a8b-bf64-8bc911b445b8", name: "Lynda Barry", bio: "Lynda Barry est une auteure de bande dessinée underground américaine.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Lynda_Barry_at_APExpo_7714.jpg/330px-Lynda_Barry_at_APExpo_7714.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Lynda_Barry", bd_ids: ["ba70089b-dc50-5706-ae33-e7b7f3d3c4ed"] },
+  { id: "6c618371-acaa-57cf-916f-31d5288f8285", name: "Léa Murawiec", bio: "Léa Murawiec est une autrice et éditrice de bande dessinée française née en 1994.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Murawiec.jpg/330px-Murawiec.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/L%C3%A9a_Murawiec", bd_ids: ["7c33cd89-18a5-55ee-a927-d33a3b91a4d4"] },
+  { id: "a1b4ee86-d88a-5c9f-a04e-fb542537c0f0", name: "Léonie Bischoff", bio: "Léonie Bischoff, née le 3 mai 1981 à Genève, de nationalité suisse et naturalisée belge en 2024, est une auteure et dessinatrice de bande dessinée francophone.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/L%C3%A9onie_bischoff.jpg/330px-L%C3%A9onie_bischoff.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/L%C3%A9onie_Bischoff", bd_ids: ["04c7c967-43b9-5255-a016-a6a6713ccaf0"] },
+  { id: "183f199f-a026-5761-9ec8-c69c66040044", name: "Makoto Yukimura", bio: "Makoto Yukimura (幸村誠, Yukimura Makoto), né le 8 mai 1976 à Yokohama, préfecture de Kanagawa) est un auteur de bandes dessinées japonais. Il est diplômé de l'université des beaux-arts Tama.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/b/b2/TT061130A_Makoto_Yukimura.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Makoto_Yukimura", bd_ids: ["4d775666-080c-5f46-ab43-983746584a96"] },
+  { id: "bd3ae08f-db85-5ec7-997d-14285b672739", name: "Man Gatarou", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["3dc033eb-0039-59b2-a5c3-2dd8754bcfcc"] },
+  { id: "e91e7e71-ed2e-5acb-a42e-2ad624b8ab41", name: "Mana Neyestani", bio: "Mana Neyestani, né en 1973, à Téhéran, est un dessinateur et illustrateur iranien.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Mana_Neyestani.jpg/330px-Mana_Neyestani.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Mana_Neyestani", bd_ids: ["1ed863f9-5aea-574a-8e7a-8a8f061235e5"] },
+  { id: "517fda5b-0d2f-5cb9-a689-38ded1fc1732", name: "Manon Desveaux", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["5792de8a-229c-5f32-9cd0-3d9421f85b62"] },
+  { id: "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2", name: "Manu Larcenet", bio: "Emmanuel Larcenet, dit Manu Larcenet ou simplement Larcenet, est un auteur de bande dessinée français, né le 6 mai 1969 à Issy-les-Moulineaux. Il est le frère ainé de Patrice Larcenet qui travaille régulièrement avec lui en tant que coloriste ou scénariste.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Mlarcenetnancy.JPG/330px-Mlarcenetnancy.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Manu_Larcenet", bd_ids: ["f2860692-948f-5d47-b998-60f799a21268", "e6eb00f3-e29c-59a5-bf7e-7ca9a65fcd33"] },
+  { id: "3147fff6-a2e8-5fc8-8085-78440711c1b3", name: "Maran Hrachyan", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["714b0f37-f73f-5508-825c-281074c8aebe"] },
+  { id: "a0e8081c-c789-5249-a9ad-938d911d3d15", name: "Marc-Antoine Mathieu", bio: "Marc-Antoine Mathieu est un dessinateur et scénariste de bande dessinée, né en 1959 à Antony (Seine). Il est notamment l'auteur de la série Julius Corentin Acquefacques, prisonnier des rêves. Il est également scénographe, à travers l'atelier Lucie Lom qu'il a cofondé avec Philippe Leduc.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Marc-Antoine_Mathieu_-_Salon_du_livre_de_Paris_2010.JPG/330px-Marc-Antoine_Mathieu_-_Salon_du_livre_de_Paris_2010.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Marc-Antoine_Mathieu", bd_ids: ["4335f95a-162b-55fd-bc33-9ae6270eaa96", "9fb8bc86-0c68-5c44-a864-1bd65f4c4114"] },
+  { id: "e9c52477-ae82-5bb5-862b-fe4d54df2502", name: "Marcel Shorjian", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c"] },
+  { id: "faf147b2-0071-53bc-bd91-a89be82a3bde", name: "Marcello Quintanilha", bio: "Marcello Eduardo Mouco Quintanilha Quintanilha est un auteur de bande dessinée brésilien né le 10 novembre 1971 à Niterói au Brésil.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/FIBD2022MarcelloQuintanilha_01.jpg/330px-FIBD2022MarcelloQuintanilha_01.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Marcello_Quintanilha", bd_ids: ["0e8111d0-2e90-54c7-88b1-43b0e0881cc9"] },
+  { id: "ecb145e1-13b8-59fa-8422-1fbb2a505946", name: "Marguerite Abouet", bio: "Marguerite Abouet, nom de plume de Patricia N’gbandjui, est une écrivaine, scénariste et réalisatrice franco-ivoirienne née à Abidjan en 1971. Elle est connue principalement pour la bande dessinée Aya de Yopougon qu'elle a écrite, dessinée par Clément Oubrerie.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Peter_Pan-priset_p%C3%A5_Seriescenen_2018_%28pict2191%29_%28cropped%29.jpg/330px-Peter_Pan-priset_p%C3%A5_Seriescenen_2018_%28pict2191%29_%28cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Marguerite_Abouet", bd_ids: ["f85336b5-f4df-5112-a405-cf0dbd14fd50"] },
+  { id: "ff780b2f-973b-5b78-8aaf-b22f31bc1bb4", name: "Marie Baudet", bio: "Marie Ludivine Antoinette Dupuit connue sous le nom de Marie Baudet, née le 1er octobre 1864 à Tagnon et morte pour la France à Reims le 6 avril 1917, est une peintre française.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Marie_Baudet", bd_ids: ["c2f61a7e-3816-5686-b9e5-d9556ee77049"] },
+  { id: "da90896c-8026-554d-a736-441570b78261", name: "Marie Spénale", bio: "Marie Spénale née le 30 novembre 1991, est une autrice de bande dessinée et illustratrice.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Marie_Spenale_LSlaP_68762.jpg/330px-Marie_Spenale_LSlaP_68762.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Marie_Sp%C3%A9nale", bd_ids: ["30dd4d30-1325-557c-b42b-6ad0894bf6b8"] },
+  { id: "f51793e5-443e-5f81-a04e-65fb91a807e1", name: "Marion Fayolle", bio: "Marion Fayolle, née le 4 mai 1988 à Saint-Sauveur-de-Montagut (Ardèche), est une dessinatrice de presse, illustratrice, autrice de bande dessinée et romancière française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/FIBD2020MarionFayolle_%28cropped%29.jpg/330px-FIBD2020MarionFayolle_%28cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Marion_Fayolle", bd_ids: ["09bf28a9-0ce1-5a09-a99c-a21fcffed008"] },
+  { id: "9f6d02b9-d58d-521b-bac5-a096f26c125a", name: "Marjane Satrapi", bio: "Marjane Satrapi, née le 22 novembre 1969 à Racht (Iran), est une artiste franco-iranienne d'expression francophone surtout connue comme auteure de bande dessinée et réalisatrice.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Marjane_Satrapi_Cannes_2008%28Cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Marjane_Satrapi", bd_ids: ["89d152e7-f57c-5b0e-8d95-8f5fad2dc896"] },
+  { id: "5867fc24-0362-5151-a5c0-a8846e846594", name: "Mark Millar", bio: "Mark Millar est un scénariste de bande dessinée britannique, né le 24 décembre 1969 à Coatbridge en North Lanarkshire. Résidant à Glasgow (Écosse), il est l'auteur de nombreuses séries pour divers éditeurs américains de comics.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/10.2.10MarkMillarByLuigiNovi.jpg/330px-10.2.10MarkMillarByLuigiNovi.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Mark_Millar", bd_ids: ["2ab19c62-8468-5b16-99a6-f5b97153b993", "9c1164e3-301e-5075-af2f-013c819bb56a"] },
+  { id: "643adc5f-050b-514f-855f-2ff87a990c08", name: "Mark Waid", bio: "Mark Waid est un scénariste américain de comics.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Mark_Waid_at_Big_Lick_ComicCon_2026_01.jpg/330px-Mark_Waid_at_Big_Lick_ComicCon_2026_01.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Mark_Waid", bd_ids: ["7769da5e-26ce-5da9-bec0-7a649cbadc21", "1c16dd39-9b71-570b-adf9-dd949b0876ed"] },
+  { id: "c533d6df-4b35-5261-9157-fa3cef0e4088", name: "Martin Emond", bio: "Martin Emond, also known under the pseudonyms \"Martin Fuckin Emond\", \"Martyfuck\", \"Martywood\", \"Mickey Martin\" and \"MFE\", was a New Zealand cartoon illustrator and painter.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Martin_Emond", bd_ids: ["f6807abd-c884-551c-ad68-32d7182e64bc"] },
+  { id: "4c6305bb-724f-5f86-ae00-73e45454b903", name: "Masashi Asaki", bio: "Masashi Asaki (朝基 まさし, Asaki Masashi) est un auteur de manga.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Masashi_Asaki", bd_ids: ["a9faa5b6-9672-510a-bd92-634e3aeb2240"] },
+  { id: "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b", name: "Mathieu Bablet", bio: "Mathieu Bablet est un auteur de bande dessinée français et directeur artistique de jeu vidéo, né à Grenoble. Ses travaux portent principalement sur la science-fiction.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mathieu_Bablet_2023.jpg/330px-Mathieu_Bablet_2023.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Mathieu_Bablet", bd_ids: ["1d56642e-0dc1-5f4a-aae2-0fa94df543fd", "f82923f6-8cff-5419-927a-c3db18e9992f"] },
+  { id: "088ef0e0-f6d5-5b0b-8bbe-34adf8a69a86", name: "Matt Kindt", bio: "Matt Kindt, né en 1973 à Cheektowaga, est un artiste peintre, graphiste et auteur de bandes dessinées américain.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/5.21.11MattKindtByLuigiNovi1.jpg/330px-5.21.11MattKindtByLuigiNovi1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Matt_Kindt", bd_ids: ["8b049e1b-5908-5c4b-972e-d34e04c6ab0c"] },
+  { id: "b52d45f1-1dd3-55f6-bb85-67fcb65cea0b", name: "Matthew Rosenberg", bio: "Matthew Rosenberg is a Pulitzer-Prize winning American journalist. He worked at The New York Times from 2011 to April, 2024. He spent 15 years as a foreign correspondent in Asia, Africa and the Middle East, and was expelled from Afghanistan in August 2014 on the orders of President Hamid Karzai, the first expulsion of a Western journalist from Afghanistan since the Taliban ruled the country.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Pulitzer2018-matthew-rosenberg-20180530-wp.jpg/330px-Pulitzer2018-matthew-rosenberg-20180530-wp.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Matthew_Rosenberg", bd_ids: ["77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"] },
+  { id: "453525aa-7f27-5d42-ba7b-d5459af791fc", name: "Matthieu Bonhomme", bio: "Matthieu Bonhomme, né le 17 juin 1973 à Paris, est un auteur de bande dessinée français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/MatthieuBonhomme2016.jpg/330px-MatthieuBonhomme2016.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Matthieu_Bonhomme", bd_ids: ["0f4c7769-b9a0-5d86-90c2-0dab9cdecac5"] },
+  { id: "a1538e2c-43f9-5a42-8d71-008ad928bf75", name: "Matthieu Chiara", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["50457d0a-d275-54ae-a701-73038d4557e5"] },
+  { id: "d16f0632-6f42-5729-a856-4a25f9e5396d", name: "Max", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["dcc25ccb-bc58-5f18-9a49-a54fc52fdcf3"] },
+  { id: "8b277120-560b-5807-b3c5-c0a546bce427", name: "Max Fiumara", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["a8920edf-9eb7-5296-9429-4a13002c70c4"] },
+  { id: "40a78c44-4310-5562-8dc7-76d43d290bda", name: "Max de Radiguès", bio: "Max de Radiguès, né le 4 juillet 1982 à Rixensart, est un auteur de bande dessinée belge.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Quai_des_Bulles_2012_-_26_Max_de_Radigu%C3%A8s.jpg/330px-Quai_des_Bulles_2012_-_26_Max_de_Radigu%C3%A8s.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Max_de_Radigu%C3%A8s", bd_ids: ["9f0067bc-02b7-50da-a83e-61b896fc352d"] },
+  { id: "96ee5e02-42ba-5540-b8a7-b2b639a577bb", name: "Maxence Henry", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["a07deabb-ba5c-5b23-bd86-e977a8865e6c"] },
+  { id: "671a3790-6703-5f60-93f7-4c8096394838", name: "Merwan", bio: "Merwan Chabane, né le 16 mars 1978, est un réalisateur de films d'animations, dessinateur et scénariste de bande dessinée français. Il publie la plupart de ses ouvrages sous le pseudonyme Merwan.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Merwan_%28Chabane%29.jpg/330px-Merwan_%28Chabane%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Merwan_Chabane", bd_ids: ["ca07d9e7-2615-5857-8ff2-c8a481345db9"] },
+  { id: "499e8af8-50a7-57f3-8d89-f5d793796f9d", name: "Mezzo", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["06175f53-82fc-5df0-a3d6-33be607df9c8", "75fc73a4-84d6-50f0-99d9-b7445c392bb8"] },
+  { id: "befc47ec-c72f-58e3-8519-a28173853443", name: "Michael DeForge", bio: "Michael DeForge est un auteur de bande dessinée canadien.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Michael_DeForge%2C_Small_Press_Expo%2C_September_2017.png/330px-Michael_DeForge%2C_Small_Press_Expo%2C_September_2017.png", wikipedia_url: "https://fr.wikipedia.org/wiki/Michael_DeForge", bd_ids: ["1446edf4-27ba-5484-9124-b0655c28fa02", "2d214a1a-d718-56ca-b4b1-daecd27fbc70"] },
+  { id: "c5b9e189-2937-5717-9cfa-4bf3ca95975e", name: "Michel Fiffe", bio: "Michel Fiffe (;) is a Cuban–American comic book artist and writer. He is best known for his self-published series COPRA and the Ultimate Marvel series All-New Ultimates.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Michel_Fiffe", bd_ids: ["ed1239f8-6705-59cc-89fa-0f58a386644e"] },
+  { id: "06153a78-09a9-505d-94b2-6d01b716bd24", name: "Michel Pirus", bio: "Michel Pirus, dit Pirus, né le 21 février 1962 à Thionville (Moselle), est un auteur de bande dessinée et illustrateur français.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Michel_Pirus", bd_ids: ["a8f38346-3d87-5afd-9d0c-423aea300f2a"] },
+  { id: "5a24ef24-132a-56bc-aef0-b3b1529d528e", name: "Mikael Ross", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["3dddd453-4856-5647-b862-58ee435de96b"] },
+  { id: "ac8ec002-305d-51dd-96b9-2c2c6d35b9ab", name: "Mike Carey", bio: "Mike Carey, connu également sous le nom de M. R. Carey, né en 1959 à Liverpool, est un écrivain britannique de comics et de romans. Il s'est fait connaitre avec la série Lucifer pour l'éditeur Vertigo.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/10.10.10MikeCareyByLuigiNovi1.jpg/330px-10.10.10MikeCareyByLuigiNovi1.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Mike_Carey", bd_ids: ["91f06cb8-a704-5705-b48a-2015fa0dd6b8"] },
+  { id: "07e138d4-c5e0-5e13-81c4-b924dca78d61", name: "Mirion Malle", bio: "Mirion Malle, née le 7 juillet 1992 en Charente-Maritime, est une auteure et dessinatrice de bande dessinée française vivant à Montréal. Elle se fait connaître grâce à son blog BD féministe Commando Culotte.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Mirion_Malle_-_2018.jpg/330px-Mirion_Malle_-_2018.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Mirion_Malle", bd_ids: ["d7db5c18-6776-5197-b68c-f61569bd178a", "39c9b8b4-fc17-5fb3-bda6-7f183cca54c7"] },
+  { id: "1f5f75e0-7638-50f5-80af-9cd35b1db3a9", name: "Miroslav Sekulic-Struja", bio: "Miroslav Sekulić-Struja est un peintre et auteur de romans graphiques croate, né en 1976 à Rijeka, Croatie.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Miroslav_Sekulic-Struja.jpg/330px-Miroslav_Sekulic-Struja.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Miroslav_Sekulic-Struja", bd_ids: ["8a70367d-933d-5179-ad05-41d287a8027e"] },
+  { id: "cd86941a-d2f6-535f-bb9b-ae9e1a277c61", name: "Mitch Gerads", bio: "Mitch Gerads est un dessinateur de bande dessinée américain qui travaille pour DC Comics, l'une des deux principales maison d'édition de comic books.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Mitch_Gerads", bd_ids: ["0eb55165-0714-592e-b967-ca0d76ba06ff", "b6e3995c-deef-5246-a9b0-df3a38e0f7e8"] },
+  { id: "7dcf6112-1145-5af4-82fb-e9b92015aa1d", name: "Moa Romanova", bio: "Moa Romanova Strinnholm, formerly Moa Johanna Strinnholm, born April 9, 1992, in Bollstabruk, Kramfors Municipality, Sweden, is a Swedish cartoonist, artist and illustrator. She made her debut with the autobiographical graphic novel Goblin Girl, which has been published in several languages. In 2020, she received the Svenska Tecknares Kolla! award in the Narrative category for her debut novel and in 2021 she was awarded the Eisner Award for the American edition of the book.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Moa_Romanova", bd_ids: ["126597e8-c9b9-59ea-bd95-81b0e7b61342"] },
+  { id: "035c9f3a-3ce1-5d0c-8ea8-44c33fa53465", name: "Moreau Jérémie", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["a968de90-88cc-5e8a-b553-d7298afa9d74"] },
+  { id: "45d6dbf8-fbd9-578b-9e9f-8402dc2d31e7", name: "Moto Hagio", bio: "Moto Hagio (萩尾望都, Hagio Moto) est une mangaka japonaise née le 12 mai 1949 à Ōmuta. Elle a principalement dessiné pour le compte de la maison d'édition Shōgakukan dans le domaine du shōjo manga, le manga féminin.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Moto_Hagio_cropped_2_Moto_Hagio_201911.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Moto_Hagio", bd_ids: ["d0773c0e-efce-5e3f-b88c-b401e6925875"] },
+  { id: "5a3e0ea6-adbe-572e-9cdf-9074ad4b7dcf", name: "ND Stevenson", bio: "Nate Diana « N. D. » Stevenson, né le 31 décembre 1991 à Columbia, en Caroline du Sud, est un auteur de bande dessinée, scénariste et producteur américain. Il est le créateur, showrunner et producteur exécutif de la série d'animation She-Ra et les Princesses au pouvoir qui est diffusée de 2018 à 2020. Il est également connu pour le webcomic de fantasy Nimona et son travail sur la série de bandes dessinées Lumberjanes.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/ND_Stevenson.jpg/330px-ND_Stevenson.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/N.D._Stevenson", bd_ids: [] },
+  { id: "96909ed8-afbc-51b4-828e-cf484c613c2d", name: "Naoki Urasawa", bio: "Naoki Urasawa (浦沢 直樹, Urasawa Naoki), né le 2 janvier 1960 à Fuchū, préfecture de Tōkyō, Japon, est un dessinateur et scénariste de manga japonais. Ses plus grands succès sont Yawara!, Monster et 20th Century Boys. Il a notamment reçu pour son œuvre trois Prix Shōgakukan, trois Prix d'Excellence du Festival des arts médias de l'Agence pour les affaires culturelles, deux Grands Prix du Prix culturel Osamu Tezuka, un Prix du manga Kōdansha et un Prix de la série du Festival d'Angoulême. Il est également guitariste et chanteur de rock de style « années 1960 ».", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Naoki_Urasawa_-_Japan_Expo_13-_2012-0706-_P1410040.jpg/330px-Naoki_Urasawa_-_Japan_Expo_13-_2012-0706-_P1410040.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Naoki_Urasawa", bd_ids: ["c63fb7f3-28e9-51b0-a879-a22cae604ae9", "af92af68-880b-54ec-9b11-b63ac826149b"] },
+  { id: "2e7138da-8cc1-50d9-846f-ea5c74a98cf7", name: "Naoki Yamakawa", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["a9faa5b6-9672-510a-bd92-634e3aeb2240"] },
+  { id: "019a8caf-92e3-54b4-8add-539931bc8478", name: "Narcissus - Neko Kichiku", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["99f378b2-5ec4-5e8c-9e8d-eec995fc7e71"] },
+  { id: "db9a12ff-381c-54a8-847d-511a1a18e953", name: "Nazario", bio: "Nazario Luque Vera, qui signe Nazario, est un auteur de bande dessinée et peintre espagnol.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Nazarioluquevera.jpg/330px-Nazarioluquevera.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Nazario", bd_ids: ["765d65d1-e762-5976-bda4-410a49745faf"] },
+  { id: "21ea33cb-1507-5e60-80c3-10871c80788b", name: "Neal Adams", bio: "Neal Edward Adams est un auteur de bande dessinée américain spécialisé dans les comic books.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Neal_Adams_by_Gage_Skidmore.jpg/330px-Neal_Adams_by_Gage_Skidmore.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Neal_Adams", bd_ids: ["bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe"] },
+  { id: "591a05fd-7b21-55d5-bd3a-0214e741d120", name: "Neyef", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["5ce81c2c-23ca-5bfe-899a-011a2c38e9e0"] },
+  { id: "dfaa83f5-acf7-5b22-baf7-0bf497056f9e", name: "Nick Dragotta", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["8a2399e8-979b-5ac8-9645-0c778e3f4edc"] },
+  { id: "ef2a5874-3ec2-5b7d-b363-c8c94498ec1a", name: "Nick drnaso", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["c5f4a66e-a9f9-530f-8694-d73e0c2f8e4c"] },
+  { id: "9329ecf2-fb88-5cda-93d0-4d796212135a", name: "Nicolas Bara", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["ff97eec9-4561-5965-b9fd-31a81ed88ca1"] },
+  { id: "63afd855-4f1d-51bb-a5c5-faf4676934bd", name: "Nicolas Jarry", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["935c5f25-3edb-5853-91ea-c0c75d211ba5"] },
+  { id: "63e6bbf9-501c-5cab-a447-df8eca94278c", name: "Nicolas Keramidas", bio: "Nicolas Kéramidas est un auteur de bande dessinée français, né à Paris le 29 novembre 1972. Il est notamment connu pour être le co-auteur des albums Mickey’s craziest adventures et Donald’s happiest adventures, parus aux Éditions Glénat en 2016 et 2018.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Nicolas_Keramidas_en_avril_2024.jpg/330px-Nicolas_Keramidas_en_avril_2024.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Nicolas_Keramidas", bd_ids: ["8cf6bed4-1fb3-55c1-a44b-1d26a4467c32"] },
+  { id: "21e8c9b3-1fc6-5b3f-9c64-fbc955194792", name: "Nicolas Presl", bio: "Nicolas Presl, né le 23 mars 1976 en Vendée, est un auteur de bande dessinée français.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Nicolas_Presl", bd_ids: ["5cf79362-fbc8-5768-a71e-da1f3da4979b", "0600c708-f469-5a62-87d6-0081966be2b0"] },
+  { id: "e09ec5a1-670e-5f3d-9f32-349c029bac21", name: "Nicolas de Crécy", bio: "Nicolas de Crécy, né le 29 septembre 1966 à Lyon (Rhône), est un auteur de bande dessinée et artiste français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Nicolas_de_Cr%C3%A9cy%2C_juillet_2015.jpg/330px-Nicolas_de_Cr%C3%A9cy%2C_juillet_2015.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Nicolas_de_Cr%C3%A9cy", bd_ids: ["ae0bc9de-368c-501b-bad7-5bbbe89576fb"] },
+  { id: "84220ea6-51be-54b2-8524-36bc6a1ad7c5", name: "Nicolás Arispe", bio: "Nicolás Arispe est un illustrateur, écrivain et professeur universitaire argentin.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Nicol%C3%A1s_Arispe", bd_ids: ["8347cdbe-e853-583d-a6f8-3288b8bb55a5"] },
+  { id: "77897035-979e-5c77-9015-a3d636adb490", name: "Nina Bunjevac", bio: "Nina Bunjevac est une auteure de bande dessinée et artiste canadienne. Née en Ontario mais élevée en Yougoslavie, elle retourne au Canada en 1989 suivre des études d'art. Après avoir expérimenté diverses formes artistiques, elle se tourne en 2004 vers la bande dessinée.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Nina_Bunjevac", bd_ids: ["8b193f6b-8fc9-5dd4-8f86-3dffe109ace2"] },
+  { id: "e5020b23-1913-5091-8e95-fb8deb0a3b96", name: "Nine Antico", bio: "Virginie Antico, dite Nine Antico, est une illustratrice, auteure de bande dessinée, scénariste et réalisatrice de cinéma française, née le 23 septembre 1981 en Seine-Saint-Denis.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Nine_Antico.jpg/330px-Nine_Antico.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Nine_Antico", bd_ids: ["455fed83-1d56-56f4-b2e3-46efbcc1f0e1", "2f23ec7b-6aa5-5cf5-b8ac-331ee184fe94", "a363d9bd-8981-5155-9eb6-c9cef10c231a"] },
+  { id: "beb683f9-838a-5ab5-915e-50e5ee57e66f", name: "Noëlle Steveson", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["531a885c-829a-59e3-9ce8-4af27ee228e2"] },
+  { id: "8d7dbf62-af3b-5183-9758-a74bff3e93b2", name: "Nylso", bio: "Nylso, né Jean-Michel Masson, le 20 novembre 1964 à Rennes (Ille-et-Vilaine), est un auteur de bande dessinée alternatif français. Il anime depuis le milieu des années 1990 le fanzine Le Simo. Connu pour sa série Jérôme d'Alphagraph.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Portrait_de_Nylso_en_Octobre_2025.jpg/330px-Portrait_de_Nylso_en_Octobre_2025.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Nylso", bd_ids: ["6abe3396-863c-534c-ab1f-f19543d6c60d", "e0079da4-868b-589a-8dc6-7c04973b026b"] },
+  { id: "b84a8b0d-c5d4-50a0-98ca-7499c46b7968", name: "Néjib", bio: "Néjib Belhadj Kacem dit Néjib, né en 1976 en Tunisie, est un auteur de bande dessinée franco-tunisien.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/FIBD2017N%C3%A9jib.jpg/330px-FIBD2017N%C3%A9jib.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/N%C3%A9jib", bd_ids: ["5a7dd53b-1495-5663-bea2-733fedd1d228"] },
+  { id: "95fa1c0a-912a-55cc-8056-f531d33f882e", name: "Olivier Bocquet", bio: "Olivier Bocquet est un romancier et scénariste français de bande dessinée et de télévision.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Olivier_Bocquet_by_Brice_Cossu.jpg/330px-Olivier_Bocquet_by_Brice_Cossu.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Olivier_Bocquet", bd_ids: ["8912ab3c-bf35-5595-bdb9-3c6357a2e7b9"] },
+  { id: "a35e9edb-f6b1-5319-a1b2-1d16cc509e2a", name: "Olivier Coipel", bio: "Olivier Coipel, né en 1973 dans le Paris 12e, est un auteur de bande dessinée français, travaillant notamment pour les Studios DC Comics et Marvel Comics.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/10.10.10OlivierCoipelByLuigiNovi.jpg/330px-10.10.10OlivierCoipelByLuigiNovi.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Olivier_Coipel", bd_ids: ["9c1164e3-301e-5075-af2f-013c819bb56a"] },
+  { id: "a730029a-5fc8-5f2d-83ee-d08a20957c8c", name: "Olivier Schrauwen", bio: "Olivier Schrauwen, né le 7 novembre 1977 à Bruges, est un musicien et auteur de bande dessinée belge néerlandophone, vivant à Berlin.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/FIBD2016OlivierSchrauwen.jpg/330px-FIBD2016OlivierSchrauwen.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Olivier_Schrauwen", bd_ids: ["2e7c3a72-b7fc-5260-a119-e8a94af085e5"] },
+  { id: "28cc0b40-521b-52be-b4d4-a956755eb971", name: "Olivier Texier", bio: "Olivier Texier, né le 29 juillet 1972 à Nantes, est un auteur de bande dessinée français.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Olivier_Texier", bd_ids: ["b543747f-1269-5f2c-98d3-13188b27d9b0"] },
+  { id: "38a340c0-3423-5b21-8f83-9db6313b7522", name: "Oriane Lassus", bio: "Oriane Lassus est une autrice, illustratrice et dessinatrice de bande dessinée française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/FIBD2018OrianeLassus.jpg/330px-FIBD2018OrianeLassus.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Oriane_Lassus", bd_ids: ["5a8ed5c1-88a2-5654-88d7-c1d974ade6b3"] },
+  { id: "91077797-d951-5025-a095-fef1a2b3bb5f", name: "Osamu Tezuka", bio: "Osamu Tezuka (手塚 治虫, Tezuka Osamu), né le 3 novembre 1928 à Toyonaka, dans la préfecture d'Osaka, et mort le 9 février 1989 à Tokyo, est un mangaka, animateur, character designer, producteur, scénariste d'anime.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Osamu_Tezuka_1951_Scan10008-2.JPG/330px-Osamu_Tezuka_1951_Scan10008-2.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Osamu_Tezuka", bd_ids: ["9a9a15ba-5c4a-5d05-9b95-0f346d811cf6", "80e320c2-11e7-595b-89ba-24b81ea6d621"] },
+  { id: "728ca873-d312-575d-b216-7d2f31953628", name: "Paka", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["bb95f1ee-35e4-5172-bcf9-11aa19d39885"] },
+  { id: "e7455245-dd03-5c13-a656-e0c6420e9265", name: "Pao Yen Ding", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["0227a664-60ac-5e77-bb89-031cf0893d1e"] },
+  { id: "e8be046b-4ab7-5bf1-b064-43221857647d", name: "Paolo Bacilieri", bio: "Paolo Bacilieri est un auteur de bande dessinée italien né le 23 février 1965 à Vérone dans la région de la Vénétie.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Paolo_Bacilieri_-_Lucca_Comics_%26_Games_2016.jpg/330px-Paolo_Bacilieri_-_Lucca_Comics_%26_Games_2016.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Paolo_Bacilieri", bd_ids: ["920c0bc3-909f-517c-8194-eec53442da3a"] },
+  { id: "e0661633-2b9b-5f5f-8b1c-9dc7473c5037", name: "Park Kun-Wong", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["967b3863-f429-58b5-804c-12a7b22632fd"] },
+  { id: "343a491e-3575-5f01-bd10-fce806418d2d", name: "Pascal Rabaté", bio: "Pascal Rabaté, né le 13 août 1961 à Tours (Indre-et-Loire), est un auteur de bande dessinée et réalisateur français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Pascal_Rabat%C3%A9.jpg/330px-Pascal_Rabat%C3%A9.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Pascal_Rabat%C3%A9", bd_ids: ["b5c177d6-e429-538f-84b3-6f857b20a7a4"] },
+  { id: "e0985a1b-4ff4-5b75-8ca7-3067999c69d5", name: "Patrick Kindlon", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["77b2a2e9-cb9b-5999-9b0a-81ffd06b392c"] },
+  { id: "3614d1a7-ee71-5831-acc7-36feb510177c", name: "Paul Dini", bio: "Paul McClaran Dini is an American writer, animator, and comic book artist. He has served as a producer and writer for several Warner Bros. Animation/DC Comics animated series, most notably Batman: The Animated Series (1992–1995), and the subsequent DC Animated Universe. Dini and Bruce Timm co-created the characters Harley Quinn and Terry McGinnis.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/FIBD2019RencontreBatman_02_%28cropped%29.jpg/330px-FIBD2019RencontreBatman_02_%28cropped%29.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Paul_Dini", bd_ids: ["e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa"] },
+  { id: "12d81cb8-0977-5c8d-95e1-546f5eddf90d", name: "Paul Kirchner", bio: "Paul Kirchner est un auteur de bande dessinée, illustrateur et directeur éditorial américain.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/FIBD2023PaulKirchner.jpg/330px-FIBD2023PaulKirchner.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Paul_Kirchner", bd_ids: ["f276e705-9146-5580-823a-15d8c2591660"] },
+  { id: "5bd9bdce-2827-5048-84b1-476815daaeff", name: "Pauline Giraud", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["a07deabb-ba5c-5b23-bd86-e977a8865e6c"] },
+  { id: "c6c2e2e5-de20-5485-a998-76541abafe3e", name: "Pauline Roland", bio: "Marie Désirée Pauline Roland, née à Falaise le 17 prairial an XIII et morte à Lyon le 15 décembre 1852, est une féministe socialiste française.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Pauline_Roland", bd_ids: ["081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d"] },
+  { id: "70125cb3-0e45-5bc9-9aef-4cbb67edb051", name: "Peeters", bio: "Peeters is a Dutch-language patronymic surname, equivalent to Peters. It is the most common surname in Belgium, and is particularly common in the province of Antwerp, but also in Flemish Brabant and Belgian Limburg. Notable people with the surname include:", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Peeters", bd_ids: ["621f773d-d0aa-5e22-bf81-c530967a1fbe"] },
+  { id: "cc2cbfb1-a137-5c56-8a23-2671597ab919", name: "Peppe Koivunen", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["7e408fbd-928f-56ab-b646-d972f5e24698"] },
+  { id: "4622e2be-836f-5c71-a681-8a7b8692853d", name: "Peter Gross", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["91f06cb8-a704-5705-b48a-2015fa0dd6b8"] },
+  { id: "141dc09a-4241-51b4-a81e-5402d1647f96", name: "Philippe Druillet", bio: "\n\nPhilippe Druillet, né le 28 juin 1944 à Toulouse, est un dessinateur et scénariste de bande dessinée français. Il est également affichiste, sculpteur et décorateur.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/PhilippeDruillet-StudioHarcourt-1980.png/330px-PhilippeDruillet-StudioHarcourt-1980.png", wikipedia_url: "https://fr.wikipedia.org/wiki/Philippe_Druillet", bd_ids: ["98a1d8c6-853d-5970-b117-ace76d927b91"] },
+  { id: "7fe75a35-1d64-517a-885f-630c30ee6ba0", name: "Philippe Foerster", bio: "Philippe Foerster, né le 13 août 1954 à Liège, est un auteur de bande dessinée et enseignant belge francophone.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Portrait_de_Philippe_Foerster_par_Muriel_Blondeau.jpg/330px-Portrait_de_Philippe_Foerster_par_Muriel_Blondeau.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Philippe_Foerster", bd_ids: ["80fb2922-29f9-5231-ba34-224676df214b"] },
+  { id: "ce0db7bb-6bd3-522e-bc15-0b4f81ad598e", name: "Philippe Richelle", bio: "Philippe Richelle, né le 1er juillet 1964 à Liège, est un auteur de bande dessinée belge. Connu pour ses séries Les Coulisses du pouvoir, Amours fragiles, Secrets bancaires, Les Mystères de la République, Mitterrand, un jeune homme de droite.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Portrait_Philippe_Richelle_2023.jpg/330px-Portrait_Philippe_Richelle_2023.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Philippe_Richelle", bd_ids: ["331c85b8-47f5-56b5-bdb2-c4ad8b36a229"] },
+  { id: "089c60ee-cedc-54f3-9c4d-9414af218b1b", name: "Philippe Valette", bio: "Philippe Valette, né le 13 janvier 1984 à Béziers, est un auteur de bande dessinée français. Il est lauréat du Prix Landerneau BD 2017 et du Fauve Polar SNCF 2018 pour l'album Jean Doux et le mystère de la disquette molle.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Philippe_Valette", bd_ids: ["99f43ae7-65c3-5f0b-bd9a-336ad6735fea"] },
+  { id: "b0f40b74-5f7d-5e03-9420-f2c5732abccf", name: "Philippe de Pierpont", bio: "Philippe de Pierpont, né en 1955 à Bruxelles, est un scénariste de bande dessinée, dramaturge, documentariste et réalisateur belge.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/FIBD2017FauvePierpont.jpg/330px-FIBD2017FauvePierpont.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Philippe_de_Pierpont", bd_ids: ["2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa"] },
+  { id: "04714650-136f-580a-ba12-2816571f86cf", name: "Pia Guerra", bio: "Pia Guerra, née en 1971 dans le New Jersey, est une auteure de bande dessinée canadienne surtout connue comme dessinatrice et co-créatrice de la série Y, le dernier homme (2002-2008), qui lui a valu deux prix Eisner. Elle est mariée à l'auteur Ian Boothby.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Paris_-_Salon_du_livre_2013_-_Pia_Guerra_-_001.jpg/330px-Paris_-_Salon_du_livre_2013_-_Pia_Guerra_-_001.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Pia_Guerra", bd_ids: ["0e432312-5b7e-50f8-afba-7869c1256706"] },
+  { id: "d9ccf51f-773d-5fc2-96b6-c595993dc4d5", name: "Pierre Boisserie", bio: "Pierre Boisserie, né le 21 mai 1964 à Paris, est un scénariste de bande dessinée, originaire du sud-ouest de la France et qui vit dans la vallée de Chevreuse. Ancien kinésithérapeute, il devient scénariste à temps plein l'année de ses quarante ans.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Pierre_Boisserie", bd_ids: ["ff97eec9-4561-5965-b9fd-31a81ed88ca1"] },
+  { id: "3b40ac72-a75f-5c79-bd75-a460f955ae58", name: "Pierre Ferrero", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["4fe38dd6-5f77-5f47-8a7d-4a869f44334a"] },
+  { id: "e60fbf0f-6d78-5335-af27-7dca3f46b9b0", name: "Pierre Place", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["45654738-801a-54ec-a4da-363363691092"] },
+  { id: "ecc84076-df42-5c48-b1a3-d3d8a57b3771", name: "Pierre Taki", bio: "Masanori Taki , better known by his stage name Pierre Taki , is the front man for Japanese synthpop group Denki Groove, which consists of himself and Takkyu Ishino. As of 2001 he was involved in an exhibit called Prince Tongha with Hideyuki Tanaka in New York City. He also frequently appears as an actor in film and on television.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Pierre_Taki_-_Denki_Groove_-_countdownjapan-dec29-2011b.jpg/330px-Pierre_Taki_-_Denki_Groove_-_countdownjapan-dec29-2011b.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Pierre_Taki", bd_ids: ["3dc033eb-0039-59b2-a5c3-2dd8754bcfcc"] },
+  { id: "3c90a47b-00bd-5d72-b26e-14e9361de953", name: "Pierre-Henry Gomont", bio: "Pierre-Henry Gomont, né en 1978, est un auteur de bande dessinée français, plusieurs fois primé.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Pierre-Henry_Gomont.jpg/330px-Pierre-Henry_Gomont.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Pierre-Henry_Gomont", bd_ids: ["34373ae6-8241-5dfd-ac94-c657bd97af69"] },
+  { id: "5e40aaad-a8ad-59d4-8f7c-0fc6c135a0cd", name: "Pierrick Starsky", bio: "Pierrick Starsky, né le 19 décembre 1981 à Barcelonnette, est scénariste, écrivain, éditeur, musicien et journaliste français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Pierrick_Starsky_2020.jpg/330px-Pierrick_Starsky_2020.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Pierrick_Starsky", bd_ids: ["45654738-801a-54ec-a4da-363363691092"] },
+  { id: "bb3b2c50-6f6f-552e-a8aa-c43c4c7b9427", name: "Pig Paddle Mannimarco", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["605a6f52-dfac-5d30-9135-70f21673a9c9"] },
+  { id: "2822bd0a-4242-59a8-a4dd-2a9d553c94f0", name: "Poulie", bio: "Une poulie est une machine simple, c'est-à-dire un dispositif de mécanique élémentaire. Elle est constituée d'une pièce en forme de roue servant à infléchir un mouvement de translation. La poulie est utilisée avec une courroie, une corde, une chaîne ou un câble ; la forme de la jante est dictée par les cas d'utilisation.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F_%D0%BA_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B5_%C2%AB%D0%91%D0%BB%D0%BE%D0%BA%C2%BB._%D0%92%D0%BE%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%8D%D0%BD%D1%86%D0%B8%D0%BA%D0%BB%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_%D0%A1%D1%8B%D1%82%D0%B8%D0%BD%D0%B0_%28%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_1911-1915%29.jpg/330px-%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F_%D0%BA_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B5_%C2%AB%D0%91%D0%BB%D0%BE%D0%BA%C2%BB._%D0%92%D0%BE%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%8D%D0%BD%D1%86%D0%B8%D0%BA%D0%BB%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_%D0%A1%D1%8B%D1%82%D0%B8%D0%BD%D0%B0_%28%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_1911-1915%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Poulie", bd_ids: ["b86b53b5-7121-5fae-8ed9-50fc48076812"] },
+  { id: "93d9e02c-ca19-59ba-a0ff-fe436c3a55bf", name: "Pozla", bio: "Pozla, né Rémi Zaarour à Amiens en 1982, est un artiste franco-libanais, réalisateur de dessins animés, auteur et dessinateur de bandes dessinées et designer. Il est à la fois scénariste, illustrateur et coloriste.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Pozla.jpg/330px-Pozla.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Pozla", bd_ids: ["5cad8b88-954e-5800-bf00-9a0844b4317d"] },
+  { id: "2c0a8d04-1eac-5612-a1c7-676822d9ad90", name: "Q Hayashida", bio: "Q Hayashida (林田 球, Hayashida Kyū) est une mangaka née en 1977 à Tokyo. Elle est principalement connue pour son manga underground Dorohedoro, publié par Monthly Ikki de 2000 à 2014, puis par le Hibana de 2015 à 2017 et enfin par le Monthly Shōnen Sunday de novembre 2017 au 12 septembre 2018.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Q_Hayashida", bd_ids: ["a9f1ba28-8e3f-5925-8f8c-bd63fb271d1b"] },
+  { id: "e6332846-dc60-5a6c-83ab-f5180adb17d5", name: "Quentin Rigaud", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["ebab55bf-6f8b-5ebe-8a63-63805845355c"] },
+  { id: "b922cef3-2fc8-568f-a16c-87f17c81465e", name: "Rags Morales", bio: "Ralph \"Rags\" Morales is an American comic book artist known for his work on various books for DC Comics, including Identity Crisis, Countdown to Infinite Crisis, Batman Confidential, and The New 52 reboot of then Superman-centric Action Comics.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Rags_Morales_by_Gage_Skidmore.jpg/330px-Rags_Morales_by_Gage_Skidmore.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Rags_Morales", bd_ids: ["808def66-0261-5fb0-adf1-2e8c3f8761d8"] },
+  { id: "4eee69a6-88fd-5e48-b8f5-dd582920a450", name: "Ram V", bio: "Ramnarayan Venkatesan, known professionally as Ram V, is an Indian comics writer and artist who has worked for independent comics, DC Comics, and Marvel Comics. He won an Eisner Award for Best Graphic Album—Reprint for The One Hand and The Six Fingers in 2025 and has been nominated for Harvey and Ringo Awards.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Ram_V", bd_ids: ["92d5d028-df2f-5e50-b4b7-9887ae2f807b"] },
+  { id: "4abb5d53-7a59-5901-8c93-7de96ba7c098", name: "Raymond Briggs", bio: "Raymond Briggs, né le 18 janvier 1934 à Wimbledon et mort le 9 août 2022 à Brighton, est un illustrateur, dessinateur et écrivain britannique.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Strips%2C_schrijvers%2C_kernwapens%2C_Briggs%2C_Raymond%2C_Bestanddeelnr_932-5852_%28cropped%29.jpg/330px-Strips%2C_schrijvers%2C_kernwapens%2C_Briggs%2C_Raymond%2C_Bestanddeelnr_932-5852_%28cropped%29.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Raymond_Briggs", bd_ids: ["11d7eace-ebf2-59d3-a330-cd442d3557a3"] },
+  { id: "8f8828b6-eed2-5ab6-8658-c165aa638119", name: "Remender Rick", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19"] },
+  { id: "a7e5dfca-337c-58a2-8dfb-d1469b851bd9", name: "Renaud Dillies", bio: "Renaud Dillies, né le 13 octobre 1972 à Lille, est un auteur de bande dessinée jeunesse français.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Renaud_Dillies", bd_ids: ["79894bab-2308-5561-b5ba-b688a26f6672", "80dbe48d-5ef6-50a1-8f93-23619b07cbde"] },
+  { id: "0609ba11-9dd6-51a2-a1fa-5945569f3a15", name: "Renaud Roche", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["fc62fcaa-84ef-5a91-a79d-34ee62b436ef"] },
+  { id: "cd5b8826-38e8-5380-86f3-a2d6735d723a", name: "Rey", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["deb20c8e-015a-5c9c-9686-1111263e8a0a"] },
+  { id: "d95d8155-cb3d-51b6-aa89-a6c1c7d4efda", name: "Richard McGuire", bio: "Richard Joseph « Dick » McGuire est un ancien joueur et entraîneur américain professionnel de basket-ball.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Dick_McGuire", bd_ids: ["ea17e67e-3aed-5734-bee3-23d291cb2e65"] },
+  { id: "16787ee4-56ac-5736-b0b0-2d831ee42d6c", name: "Richard Stark", bio: "Donald Edwin Westlake, né le 12 juillet 1933 dans le district de Brooklyn, à New York et mort le 31 décembre 2008 à San Pancho au Mexique, est un écrivain et scénariste américain, également connu sous de nombreux pseudonymes. Auteur prolifique et polyvalent, il est notamment célèbre pour ses romans policiers humoristiques mettant en scène les aventures de John Dortmunder, Parker et Alan Grofield.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Donald_Westlake.jpg/330px-Donald_Westlake.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Donald_E._Westlake", bd_ids: ["2577974a-9695-5f41-94a9-6ba5ebd90174"] },
+  { id: "f7168e39-bf20-5d5a-91f5-7b0b971b588c", name: "Rick Remender", bio: "Rick Remender, né en février 1973, est un scénariste et un dessinateur de comics américain.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Rick_Remender_-_01.jpg/330px-Rick_Remender_-_01.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Rick_Remender", bd_ids: ["a8920edf-9eb7-5296-9429-4a13002c70c4"] },
+  { id: "c3a1940c-7540-5034-8b6c-ca60b59520b3", name: "Riichiro Inagaki", bio: "Riichirō Inagaki (稲垣 理一郎, Inagaki Riichirō), né le 20 juin 1976 à Tokyo, Japon, est un mangaka. Il est principalement connu pour avoir scénarisé le manga Eyeshield 21 en collaboration avec le dessinateur Yusuke Murata, ainsi que Dr. Stone en collaboration avec le dessinateur Boichi et plus récemment Trillion Game en collaboration avec le dessinateur Ryōichi Ikegami.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Riichir%C5%8D_Inagaki", bd_ids: ["e897052f-d4f2-5e42-9731-c4f7b672d891"] },
+  { id: "acaa9413-e232-5de0-95fa-e139a9ece44f", name: "Rochette", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["219fdb59-446f-5ec8-ada8-aa3432778341"] },
+  { id: "38ca6247-1af6-574c-b8c6-2ce51282d966", name: "Rodriguez", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b"] },
+  { id: "1c483a7c-e6bb-582a-8792-0cc4e649f4d0", name: "Rokudenashiko", bio: "Megumi Igarashi (五十嵐 恵, Igarashi Megumi) est une artiste plasticienne japonaise, née le 14 mars 1972. Elle se fait appeler Rokudenashiko (ろくでなし子, ce qui signifie « bonne à rien » ou « mauvaise fille »). Sa spécialité est l'« art vaginal » : « son travail, insolite et non dénué d'humour, vise à casser le tabou de la représentation du sexe féminin ». Elle est la première femme au Japon à avoir été condamnée pour « obscénité ».", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Loz_roku1.png/330px-Loz_roku1.png", wikipedia_url: "https://fr.wikipedia.org/wiki/Megumi_Igarashi", bd_ids: ["21801dc4-dd74-5bc0-881d-89f0328bcfcf"] },
+  { id: "d1a00a6a-c6a2-526c-8bca-05745c2bdcc0", name: "Ronan Toulhoat", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["22420ca8-73c3-508a-a4ca-2f9378f14338"] },
+  { id: "00db3447-5ed5-5ba8-a2af-2dd9199c5602", name: "Ruka", bio: "Rukatunturi ou Ruka est une colline d'environ 500 mètres de hauteur et un quartier de Kuusamo en Finlande. Elle est située au nord-est du pays dans la région d'Ostrobotnie du Nord.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Ruka.JPG/330px-Ruka.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Ruka", bd_ids: ["956b5864-d695-5e4f-b6f3-48078e019fe0"] },
+  { id: "aea68d40-ddb1-5354-b4e8-5fb4dbca4c9e", name: "Rumiko Takahashi", bio: "Rumiko Takahashi (高橋 留美子), née le 10 octobre 1957 à Niigata au Japon, est une dessinatrice de manga.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Retrato_de_Rumiko_Takahashi%2C_criado_por_Cinthia_Saty_Fujii.jpg/330px-Retrato_de_Rumiko_Takahashi%2C_criado_por_Cinthia_Saty_Fujii.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Rumiko_Takahashi", bd_ids: ["ec34073f-32f3-5b74-8e70-eb2e9937a36f"] },
+  { id: "ec7b8039-9647-53bd-98df-c4980ff84587", name: "Ryô Hirano", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["99cf5bac-a6b4-5fa0-ace7-3b6acdda880b"] },
+  { id: "ac8b85c4-99d5-5de7-a631-34672a8a642e", name: "Ryôko Kui", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["dd62a84b-d5d0-581d-85ff-398583396ee1"] },
+  { id: "7a56b388-39a7-5b66-af71-1a9304760e4a", name: "Régis Hautières", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["80dbe48d-5ef6-50a1-8f93-23619b07cbde"] },
+  { id: "a353a8e9-4956-50a4-b70d-e0b753fcf522", name: "Régis Loisel", bio: "Régis Loisel, né le 4 décembre 1951 à Saint-Maixent-l'École (Deux-Sèvres), est un dessinateur et scénariste de bande dessinée français et canadien.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/FIBD2019RegisLoisel.jpg/330px-FIBD2019RegisLoisel.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/R%C3%A9gis_Loisel", bd_ids: ["21bdadd2-bb70-57c4-9fac-bb1eef30acc0"] },
+  { id: "5c77edf3-4fb1-52ab-ab5c-229c1eb836e8", name: "Saiki Kumiko", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["e2102e41-2abb-59a4-b7fe-8d4ecc23e1da"] },
+  { id: "5ffbe2d2-ae0e-55cf-b3ab-8c691acbaddf", name: "Sakana Sakatsuki", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["4066190a-e2a3-5eda-bb01-cd996e6b7eda"] },
+  { id: "2d4e035b-babd-5524-8a3e-9bcba6e75ec5", name: "Satoshi Kon", bio: "Satoshi Kon (今 敏, Kon Satoshi) était un mangaka, réalisateur et scénariste de films d'animation japonais, né le 12 octobre 1963 à Hokkaidō et mort d'un cancer le 24 août 2010 à Tōkyō.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Satoshi_Kon", bd_ids: ["fa63dd8d-c49f-5a56-9f07-8f6fbbb45dbc"] },
+  { id: "3c63d44c-9b4f-596e-9bd5-84c3786f15dd", name: "Scott McCloud", bio: "Scott McCloud, né le 10 juin 1960 à Boston, est auteur de bande dessinée et essayiste américain. Créateur de la série Zot! (1984-1991), il est par ailleurs l'inventeur du concept des 24 heures de la bande dessinée. Il est surtout connu pour son ouvrage critique L'Art invisible (1993) et ses suites Réinventer la bande dessinée (2000) et Faire de la bande dessinée (2006).", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Scott_McCloud.Making_Comics_Tour.RISD.gk.JPG/330px-Scott_McCloud.Making_Comics_Tour.RISD.gk.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Scott_McCloud", bd_ids: ["e49de7c1-067d-5937-b900-075d3a2f7799"] },
+  { id: "d4584704-3ebe-5a6f-b8f9-bf17fa741a33", name: "Scott Snyder", bio: "Scott Snyder est un scénariste américain de comics, notamment connu pour son travail sur American Vampire, Detective Comics, Batman, Swamp Thing ou The Wake.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/5.19.11ScottSnyderByLuigiNovi.jpg/330px-5.19.11ScottSnyderByLuigiNovi.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Scott_Snyder", bd_ids: ["913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d", "8a2399e8-979b-5ac8-9645-0c778e3f4edc"] },
+  { id: "f2c424bc-1c49-51c1-b24c-e35a2aa03969", name: "Sean Murphy", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d", "112b74f7-40f7-535a-aab9-b13d3c94c4d2"] },
+  { id: "3254de0b-373e-565d-9416-53a8316474c8", name: "Serge Lehmann", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["1bc85f3d-8932-5b00-b6fd-333b32ee53b9"] },
+  { id: "64050749-07c1-53a7-82b9-41a75f355e82", name: "Sergio Toppi", bio: "Sergio Toppi, né le 11 octobre 1932 à Milan en Lombardie, mort le 21 août 2012, est un scénariste et dessinateur de bande dessinée.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Sergio_Toppi", bd_ids: ["a287fabc-b371-534f-b5ae-bce6b907b35f"] },
+  { id: "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1", name: "Shigeru Mizuki", bio: "Shigeru Mura (武良 茂, Mura Shigeru), connu sous le nom de plume Shigeru Mizuki (水木 しげる, Mizuki Shigeru), est un mangaka japonais. Il est un des grands fondateurs du manga d'horreur, se spécialisant dans les histoires de monstres et de fantômes japonais, avec des créatures telles que yōkai, tengu et kappa. Il est également connu pour ses récits portant sur la Seconde Guerre mondiale.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Shigeru_Mura_cropped_1_Shigeru_Mura_201011.jpg/120px-Shigeru_Mura_cropped_1_Shigeru_Mura_201011.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Shigeru_Mizuki", bd_ids: ["42bcdd54-8a27-5fbc-b679-565b1ae82f57", "970a07a3-e2a0-5c36-bf0f-9a6f4ea83dad"] },
+  { id: "b4ba44f4-199f-5988-8479-e4422af71a49", name: "Shintaro Kago", bio: "Shintaro Kago (駕籠 真太郎, Kago Shintarō), né à Tokyo au Japon en 1969, est un artiste japonais de manga guro. Il a fait ses débuts en 1988 dans la revue Comic Box.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Shintaro_Kago_-_Lucca_Comics_%26_Games_2015.JPG/330px-Shintaro_Kago_-_Lucca_Comics_%26_Games_2015.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Shintar%C5%8D_Kago", bd_ids: ["70aad9fb-30b1-5177-8126-c531467c028e", "18b43f2b-e8c9-553e-92e1-c13027830753", "553ba159-d15e-5f69-a159-fc28c71edeca"] },
+  { id: "3ed49b39-8117-577d-ba13-6ac94a9e388b", name: "Shohei Manabe", bio: "Shōhei Manabe (真鍋 昌平, Manabe Shōhei) est un mangaka japonais né à Chigasaki, dans la préfecture de Kanagawa. Il est notamment connu pour sa série Ushijima, l'usurier de l'ombre (2004-2019) décorée du Prix Shōgakukan 2010.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Sh%C5%8Dhei_Manabe", bd_ids: ["bb2f4bd6-ea0d-5028-bd8d-d3eb6437888c"] },
+  { id: "06ae0839-7b89-5d3a-bf83-99dc6830803a", name: "Simon Hanselmann", bio: "Simon Hanselmann est un auteur de bande dessinée australien vivant à Seattle.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Simon_Hanselman_a_Val%C3%A8ncia_06.jpg/330px-Simon_Hanselman_a_Val%C3%A8ncia_06.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Simon_Hanselmann", bd_ids: ["385f1264-4b26-5572-b2a8-10343d26cc7c"] },
+  { id: "61b42f2a-c779-5680-b591-6e6128f1a1b7", name: "Simon Spurrier", bio: "Simon \"Si\" Spurrier is a British comics writer and novelist, who has previously worked as a cook, a bookseller, and an art director for the BBC.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/10.12.12SimonSpurrierByLuigiNovi.jpg/330px-10.12.12SimonSpurrierByLuigiNovi.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Simon_Spurrier", bd_ids: ["20d228c3-067c-5067-90c8-cb8cc271fe6f"] },
+  { id: "cb340fda-dc8b-599c-9ba4-114eff1ad741", name: "Skroce", bio: "Skroce is a surname. Notable people with the surname include:Branko Skroče, Croatian basketball player\nSteve Skroce, Canadian comic book and film storyboard artist of Croatian descent\n", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Skroce", bd_ids: ["32c39747-541d-55b3-b217-835c9e26ffdb"] },
+  { id: "11f8a644-a339-59d8-af48-8b26d8709fbd", name: "Sole Otero", bio: "Sole Otero est une autrice de bande dessinée, illustratrice jeunesse et designer textile argentine née en 1985 à Buenos Aires.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Sole_Otero", bd_ids: ["e24b2289-3eba-5581-9e3b-7c3d08251f70"] },
+  { id: "0afb0661-1df4-536c-9666-10c4b38bb243", name: "Sonny Liew", bio: "Sonny Liew est un auteur de bande dessinée malaisien basé à Singapour qui publie en anglais.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Sonny_Liew_at_STGCC_2010.jpg/330px-Sonny_Liew_at_STGCC_2010.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Sonny_Liew", bd_ids: ["d6aa2f0e-42e0-5e88-9aca-0f988aaf0156"] },
+  { id: "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57", name: "Sophie Guerrive", bio: "Sophie Guerrive, née en août 1983, est une autrice de bandes dessinées française.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Sophie_Guerrive_en_r%C3%A9sidence_%C3%A0_la_Cit%C3%A9_Internationale_de_la_bande_dessin%C3%A9e_et_de_l%27image.png/330px-Sophie_Guerrive_en_r%C3%A9sidence_%C3%A0_la_Cit%C3%A9_Internationale_de_la_bande_dessin%C3%A9e_et_de_l%27image.png", wikipedia_url: "https://fr.wikipedia.org/wiki/Sophie_Guerrive", bd_ids: ["1fe8553a-dc4f-557c-b0c8-ed285d25d513", "92d4a711-7df9-52a6-aef4-35cf71bbc16a"] },
+  { id: "9ebb375a-570f-5d10-af89-e2581554813f", name: "Squeezie 7 Guillaume Natas", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["81d0933e-90f7-5b74-b9fb-ba27cc47fa12"] },
+  { id: "60d5489b-14e3-518b-9109-e042747d08ff", name: "Stepan Sejic", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["b089120d-7f10-5457-96b1-b233822e6f5e"] },
+  { id: "c49f0cdc-1a16-51f1-aec9-b96dbb3ecfab", name: "Steven Seagle", bio: "Steven T. Seagle is an American writer who works in the comic book, television, film, live theater, video game and animation industries.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Steven_T._Seagle_by_Gage_Skidmore.jpg/330px-Steven_T._Seagle_by_Gage_Skidmore.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Steven_T._Seagle", bd_ids: ["5864aefd-c512-5acd-bfd4-654a9577e01f"] },
+  { id: "fa90699d-7b23-523d-b295-cb62820b4f9b", name: "Stuart Immonen", bio: "Stuart Immonen est un dessinateur canadien de comics.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Stuart_Immonen2.jpg/330px-Stuart_Immonen2.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Stuart_Immonen", bd_ids: ["979cc21c-4c87-5805-b5f5-6f5f3f1606d2"] },
+  { id: "35a4d2db-5e22-555d-bdcc-c806c0ae5f35", name: "Stéphane Fert", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["33368bc9-256a-520a-88cc-b78bd19c6dce", "045e3ca9-5744-52bb-ba4c-d69f08e9c343"] },
+  { id: "000c49b2-0453-5107-a06f-58c9b1fea271", name: "Stéphane Levallois", bio: "Stéphane Levallois est un dessinateur français de bandes dessinées né le 25 août 1970 à Paris. Il travaille dans la bande dessinée, le septième art et aussi dans la publicité.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/St%C3%A9phane_Levallois_LSlaP_100881.jpg/330px-St%C3%A9phane_Levallois_LSlaP_100881.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/St%C3%A9phane_Levallois", bd_ids: ["485c9772-b7f3-5b59-99a0-5bc51d90677a"] },
+  { id: "2bd1623e-7f3d-543a-b05c-628bb3e6d6b4", name: "Suehiro Maruo", bio: "Suehiro Maruo (丸尾 末広, Maruo Suehiro) est un auteur de bande dessinée japonaise né le 28 janvier 1956 à Isahaya dans la préfecture de Nagasaki, au Japon.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Suehiro_Maruo", bd_ids: ["cd0cdc46-bfd4-5850-beaf-3019f10e3e7b"] },
+  { id: "9425decb-3a8b-5e37-aac5-5ccb7a8b06d7", name: "Sébastien Morice", bio: "Sébastien Morice est un dessinateur de bande dessinée né en 1974 à Vannes.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Seb_05.jpg/250px-Seb_05.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/S%C3%A9bastien_Morice", bd_ids: ["6dcd8372-864e-593c-aa7b-d1c4421ca80a"] },
+  { id: "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3", name: "Taiyou Matsumoto", bio: "Taiyō Matsumoto (松本 大洋, Matsumoto Taiyō) est un auteur de manga né le 25 octobre 1967 à Tokyo, au Japon.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Taiy%C5%8D_Matsumoto_-_Lucca_2017_02.jpg/330px-Taiy%C5%8D_Matsumoto_-_Lucca_2017_02.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Taiy%C5%8D_Matsumoto", bd_ids: ["264198c3-9db1-53e1-9cf2-57062511f327", "7ecc3faa-7448-57ea-b3c3-3fe72ddd322b"] },
+  { id: "c5e6aaf1-2b53-5f0e-bce2-0c4c94f86c6f", name: "Takano Ichigo", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["31218cb7-1c1c-5c1e-ba45-3383eb2db2a4"] },
+  { id: "8519e2d5-a656-5ce0-9642-74f939ba1e60", name: "Tardi", bio: "Jacques Tardi is a French comic artist. He is often credited solely as Tardi.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Tardi-IMG_0181.JPG/330px-Tardi-IMG_0181.JPG", wikipedia_url: "https://en.wikipedia.org/wiki/Jacques_Tardi", bd_ids: ["bde7b6df-1144-56af-8a15-03f3710adb93"] },
+  { id: "5b576627-0b89-5180-bd78-cb87eb672cd0", name: "Tarquin", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["e37157f2-efbb-508a-bc47-17a90bc02c84"] },
+  { id: "e2139e97-c7d1-5124-b077-ea4291aa3032", name: "Tatsuki Fujimoto", bio: "Tatsuki Fujimoto (藤本 タツキ, Fujimoto Tatsuki) est un mangaka japonais né à Akita en 1993. Il est notamment connu pour Fire Punch et Chainsaw Man.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Tatsuki_Fujimoto", bd_ids: ["e98c4039-8132-5dd6-9489-661fca8f7743"] },
+  { id: "0d6d184b-a29e-53a7-8833-1d8d959e8b67", name: "Tebo", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["4e54d086-2092-5623-81ce-cdb52ee354a3"] },
+  { id: "f32dd3ed-2196-56e7-bb1a-41d07e59b2f7", name: "Teddy Kristiansen", bio: "Teddy Kristiansen, né le 1er juillet 1964 au Danemark, est un dessinateur de bande dessinée et de comics danois.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Teddy_Kristiansen_by_Christian_Ursilva.jpg/330px-Teddy_Kristiansen_by_Christian_Ursilva.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Teddy_Kristiansen", bd_ids: ["5864aefd-c512-5acd-bfd4-654a9577e01f"] },
+  { id: "d7afa3d1-9cbc-5630-9a1e-36550ba2ae00", name: "Terry Moore", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["47a951d2-d847-566a-9180-6dad63037708"] },
+  { id: "f22a840a-ae7b-585b-b790-d0e5e0a22043", name: "Tetsuya Tsutsui", bio: "Tetsuya Tsutsui (筒井・哲也, Tsutsui Tetsuya) est un mangaka japonais.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Tetsuya_Tsutsui", bd_ids: ["f5bfa282-0bba-5c25-819a-7189c4fa979f"] },
+  { id: "7dc8b037-9a91-58d1-8b32-74b2c39834f2", name: "Theo Caneschi", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["935c5f25-3edb-5853-91ea-c0c75d211ba5"] },
+  { id: "e02ab7f1-a215-5b6d-a012-ed8916473101", name: "Theo Ellsworth", bio: "Theo Ellsworth is a self-taught artist and comics creator best known for his graphic novels Capacity and Sleeper Car. In 2010, he was a recipient of the Best Art Vinyl award for the Flying Lotus EP Pattern+Grid World. He lives with his wife and son in Missoula, Montana.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Theo_Ellsworth", bd_ids: ["12865e73-340e-5385-a1c0-8dcd99f6ad82"] },
+  { id: "34342b16-3119-579b-9c61-ef99940a8224", name: "Thomas Gilbert", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["a487bacd-3e60-5db3-9c0f-e8167d21ca9d"] },
+  { id: "57c07569-26eb-52d4-ab34-f8c8caa94ccc", name: "Tillie Walden", bio: "Tillie Walden est une autrice de bande dessinée américaine.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tillie_Walden._Sal%C3%B3_del_C%C3%B2mic_de_Barcelona_2018.jpg/330px-Tillie_Walden._Sal%C3%B3_del_C%C3%B2mic_de_Barcelona_2018.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Tillie_Walden", bd_ids: ["4aa33079-62c2-5233-88ae-8e754c339e59"] },
+  { id: "05eb8f95-5ac9-5a9c-8111-7901bcf3d397", name: "TogaQ", bio: "Jo Chen is an American comic book artist and writer best known for her highly detailed painted comic book covers. In the Japanese comic industry she is also known by the pen name TogaQ and is known as Jun Togai.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Jo_Chen_by_Gage_Skidmore.jpg/330px-Jo_Chen_by_Gage_Skidmore.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Jo_Chen", bd_ids: ["99f378b2-5ec4-5e8c-9e8d-eec995fc7e71"] },
+  { id: "82f0f18e-ef7e-5f41-8047-ad16d91e05e4", name: "Tom Gauld", bio: "Tom Gauld est un dessinateur et illustrateur britannique né en 1976. Il a étudié l'illustration à l'université d'Édimbourg et au Royal College of Art.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/FIBD2022TomGauld.jpg/330px-FIBD2022TomGauld.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Tom_Gauld", bd_ids: ["c4a296ae-92a4-59dc-9301-4a603a7cffd0", "945ced24-f871-580c-a2cd-e55da6520b39"] },
+  { id: "a3c116a8-7515-5b5a-808f-6912b470b716", name: "Tom Kaczynski", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["6a5e1b8a-0898-5cbd-b53c-ffcb5fb7bb59"] },
+  { id: "67021253-b3f9-5131-a5a1-6f1e6996c8bd", name: "Tom King", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["0eb55165-0714-592e-b967-ca0d76ba06ff", "b6e3995c-deef-5246-a9b0-df3a38e0f7e8", "980619c8-13ee-54cf-960c-0ad3a452965b"] },
+  { id: "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e", name: "Toshifumi Sakurai", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["e9a8d3e6-7671-5522-9438-1ca74a7d4a54", "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a"] },
+  { id: "a613ac87-f316-5eb1-a41b-c629d3975868", name: "Tsunehiro", bio: "Konoe Tsunehiro , son of regent Uchisaki, was a kugyō or Japanese court noble of the Edo period (1603–1868). He did not hold regent positions kampaku and sessho. Konoe Motosaki was his son. He also adopted a daughter of Satsuma Shigehide, the eighth head of Satsuma Domain, who later became a consort of shōgun Tokugawa Ienari.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Konoe_Tsunehiro", bd_ids: ["d7d58ce0-3034-5dc1-ad26-f2ba302c0559"] },
+  { id: "bac10044-bf28-587c-bf43-2ca135089535", name: "Tsuru Ringo Star", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["1c9e35cc-80d4-5dce-8e80-2874fe876600"] },
+  { id: "a12a8cd7-361a-5455-a8da-350b55b581b1", name: "Ufficio stampa", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["920c0bc3-909f-517c-8194-eec53442da3a"] },
+  { id: "10666593-e9d3-5312-90c8-4ef8d1e3cebe", name: "Ugo Bienvenu", bio: "Ugo Bienvenu, né le 10 mai 1987, est un réalisateur et un dessinateur français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Ugo_Bienvenu.jpg/330px-Ugo_Bienvenu.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Ugo_Bienvenu", bd_ids: ["04614ebb-df6b-5425-9f49-a953190b114f", "122a0172-06d1-548d-a796-547d56b7fa4c"] },
+  { id: "ce395aec-bccb-5983-acf4-6da1f7dc05d3", name: "Ulli Lust", bio: "Ulli Lust, de son vrai nom Ulli Schneider, née à Vienne en Autriche en 1967, est une autrice de bande dessinée, une illustratrice, et une éditrice autrichienne. Elle est notamment connue pour son activité d'éditrice de bande dessinée en ligne, pour ses propres bandes dessinées érotico-mythologiques, ses bandes dessinées-reportages, et son album autobiographique Trop n'est pas assez.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ulli_Lust_Kulturnatten_100424-2.jpg/330px-Ulli_Lust_Kulturnatten_100424-2.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Ulli_Lust", bd_ids: ["4bc94c79-035d-558e-85ae-c08e1baee587"] },
+  { id: "bd00fc5a-20dc-576b-bad2-a3336306d052", name: "Usamaru Furuya", bio: "Usamaru Furuya (古屋 兎丸, Furuya Usamaru) est un auteur de bande dessinée japonaise né le 25 janvier 1968 à Tokyo, au Japon.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Usamaru_Furuya_-_Lucca_Comics_%26_Games_2015.JPG/330px-Usamaru_Furuya_-_Lucca_Comics_%26_Games_2015.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Usamaru_Furuya", bd_ids: ["76b4d2f1-cdb5-5aae-9479-3daf719d8adb"] },
+  { id: "742c3aed-25a1-5152-a908-bd41647dc69a", name: "Vehlmann", bio: "Fabien Vehlmann est un scénariste de bande dessinée français né à Mont-de-Marsan le 30 janvier 1972. Son œuvre la plus connue, en collaboration avec Bruno Gazzotti, est la série fantastique jeunesse Seuls.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/FIBD_2015_Marche_des_auteurs_10.jpg/330px-FIBD_2015_Marche_des_auteurs_10.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Fabien_Vehlmann", bd_ids: ["795622ed-bfb2-50c3-8569-fb6f10d3cddd"] },
+  { id: "11ccdb5b-b14e-5297-93a6-144b65c6a374", name: "Venayre", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["3d70b2d5-2977-5edc-972d-5f5e66124eef"] },
+  { id: "1cb65ab4-91ec-58a4-b86b-15848303925f", name: "Vero Cazot", bio: "Véronique Cazot, dite Véro Cazot, est une scénariste de bande dessinée française née en 1973.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Veronique_Cazot_IMG_2739.jpg/330px-Veronique_Cazot_IMG_2739.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/V%C3%A9ro_Cazot", bd_ids: ["9c926764-7669-5585-8219-0f0fb31f3498"] },
+  { id: "09ba303e-ed68-5c29-bac3-42f3ca9dc165", name: "Victor Hussenot", bio: "Victor Hussenot, né le 22 mai 1985 à Paris, est un graphiste, artiste plasticien et auteur de bande dessinée français.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Victor_Hussenot", bd_ids: ["d6777df6-7ff7-5d60-883a-8b4a3ea24742"] },
+  { id: "6c202026-ad9b-5d9f-a7cb-35d1e0009667", name: "Viken Berberian", bio: "Viken Berberian, né en 1967 à Beyrouth, est un écrivain américain d’origine arménienne.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Viken_BERBERIAN_-_Com%C3%A9die_Du_livre_2009_-_P1070987.jpg/330px-Viken_BERBERIAN_-_Com%C3%A9die_Du_livre_2009_-_P1070987.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Viken_Berberian", bd_ids: ["871a5231-dd60-5c65-9b18-723b1565ffa1"] },
+  { id: "a367fe72-04a8-59a8-955b-882054715ed1", name: "Ville Ranta", bio: "Ville Matias Ranta est un auteur de bande dessinée finlandais.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ville_Ranta_C_IMG_9461.JPG/330px-Ville_Ranta_C_IMG_9461.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Ville_Ranta", bd_ids: ["a5c2edd4-0e57-5aff-ad51-1da715ae3f5e"] },
+  { id: "2ceec585-d739-59b6-948a-6b8117a74f5e", name: "Vincent Brugeas", bio: "Vincent Brugeas est un scénariste de bande dessinée français né le 5 juin 1985 à Eaubonne.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Vincent_Brugeas", bd_ids: ["22420ca8-73c3-508a-a4ca-2f9378f14338"] },
+  { id: "7118c1e0-6a54-5867-b9b0-151ba357e1c8", name: "Vincent Mallié", bio: "Vincent Mallié, né le 24 avril 1973 à Paris, est un illustrateur et auteur de bande dessinée français. Connu pour sa collaboration avec Régis Loisel et Djian sur la série Le Grand Mort.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Vincent_Malli%C3%A9_portrait_mai_2002.jpg/330px-Vincent_Malli%C3%A9_portrait_mai_2002.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Vincent_Malli%C3%A9", bd_ids: ["21bdadd2-bb70-57c4-9fac-bb1eef30acc0"] },
+  { id: "fd980b15-243b-5a7e-98a4-46024c3809b9", name: "Vincent Perriot", bio: "Vincent Perriot, né le 15 avril 1984 à Olivet (Loiret), est un auteur français de bandes dessinées.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/FIBD2016VincentPerriot.jpg/330px-FIBD2016VincentPerriot.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Vincent_Perriot", bd_ids: ["795ed7d3-240b-5db3-8a23-41fe5531f853"] },
+  { id: "635f02aa-96a4-5530-bbea-013c415c8290", name: "Vincent Zabus", bio: "Vincent Zabus, né le 8 mai 1971 à Namur, est un scénariste de bande dessinée et dramaturge belge francophone.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/FIBD_vincent_zabus_1500940.jpg/330px-FIBD_vincent_zabus_1500940.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Vincent_Zabus", bd_ids: ["58bf1586-0770-5e05-9d5e-84b033947d1f"] },
+  { id: "5210ee98-eddf-5485-bec1-870d0de8270b", name: "Walden", bio: "Walden is an 1854 book by American transcendentalist writer Henry David Thoreau. The text is a reflection upon the author's simple living in natural surroundings. The work is part personal declaration of independence, social experiment, voyage of spiritual discovery, satire, and—to some degree—a manual for self-reliance.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Walden_Thoreau.jpg/330px-Walden_Thoreau.jpg", wikipedia_url: "https://en.wikipedia.org/wiki/Walden", bd_ids: ["8ac3624a-93f8-5771-975b-942423b399b5"] },
+  { id: "d665cfb4-c5db-586a-ad00-d7483be1868f", name: "Wazem", bio: "Pierre Wazem, né le 16 juillet 1970 à Genève, en Suisse, est un auteur de bande dessinée suisse. Il a suivi les cours de l'école des Arts décoratifs de Genève de 1988 à 1992.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Pierre_Wazem", bd_ids: ["621f773d-d0aa-5e22-bf81-c530967a1fbe"] },
+  { id: "11b97ae6-9bb9-56c9-914a-c8e0fe79156c", name: "Werther Dell'Edera", bio: "Werther Dell’Edera est un dessinateur de bande dessinée italien qui travaille pour le marché italien et le marché nord-américain.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Werther_Dell'Edera", bd_ids: ["d8f9a56b-3061-5c16-9cce-1d231de67319"] },
+  { id: "7116930d-8c4e-548c-b9e6-248dafce1360", name: "Wilfrid Lupano", bio: "Wilfrid Lupano est un scénariste de bande dessinée français, né le 26 septembre 1971 à Nantes.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Gr%C3%A9gory_Panaccione_et_Wilfrid_Lupano.jpg/330px-Gr%C3%A9gory_Panaccione_et_Wilfrid_Lupano.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Wilfrid_Lupano", bd_ids: ["045e3ca9-5744-52bb-ba4c-d69f08e9c343"] },
+  { id: "bed4e616-fb1a-51d5-8789-d3a7c519765c", name: "Will McPhail", bio: "Will McPhail is a cartoonist and illustrator based in Scotland. He has illustrated for the magazines The New Yorker and Private Eye, as well as The New Statesman.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Will_McPhail", bd_ids: ["0f55b110-f82c-5092-8299-3149fdc8c9c9"] },
+  { id: "fd5a8b65-5f73-54a0-a57e-54dfea8abc8c", name: "Winshluss", bio: "Winshluss de son vrai nom Vincent Paronnaud, né en 1970 à La Rochelle, est un auteur de bande dessinée et cinéaste français.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Winshluss_-_Lucca_Comics_%26_Games_2015.JPG/330px-Winshluss_-_Lucca_Comics_%26_Games_2015.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Winshluss", bd_ids: ["903acafa-4e30-5dcb-85ec-e2d1ce52d741"] },
+  { id: "55a709af-cd36-5f34-9454-177b62ab1b72", name: "Xavier Bouyssou", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["a88d2dfe-e823-5455-b5a7-a9eea7604db2"] },
+  { id: "5c38e890-27df-567f-9c6f-bcec8ceea617", name: "Xavier Dorison", bio: "Xavier Dorison est un scénariste de bande dessinée français, né le 8 octobre 1972 à Paris.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Xavier_Dorison-Strasbulles_2009.jpg/330px-Xavier_Dorison-Strasbulles_2009.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Xavier_Dorison", bd_ids: ["5879ed08-b528-54fa-b889-cb9b6654c5e6"] },
+  { id: "c8a55c08-f0a1-57c9-a276-d164183edeb8", name: "Xavier Mussat", bio: "Xavier Mussat est un graphiste, dessinateur, illustrateur, auteur et musicien français, né le 3 mai 1969 à Nîmes.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Xavier_mussat.jpg/330px-Xavier_mussat.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Xavier_Mussat", bd_ids: ["a3a08375-70c5-5185-aa11-1970757201c6"] },
+  { id: "d7ebbe2d-e613-5ff8-939b-63886c183c10", name: "Yann Kebbi", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["871a5231-dd60-5c65-9b18-723b1565ffa1"] },
+  { id: "f405fdc1-4877-50a2-b054-8198ebc80a55", name: "Yarô Abe", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["d0acc909-4425-5267-a65a-41d9ca5be16b"] },
+  { id: "06d2e44e-3bc3-5c38-80b2-d2bc46f5a2d5", name: "Yoshijazu Yasuhiko", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["b0b3870c-0997-5868-bd23-6e08e3cc0aac"] },
+  { id: "458151c8-dc97-5fef-8d61-bef98aaace70", name: "Yuhki Kamatani", bio: "Yuhki Kamatani  is a Japanese manga artist and illustrator, best known for their series Nabari no Ou , published by Square Enix.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Yuhki_Kamatani", bd_ids: ["b4e6e54b-c87a-5158-b824-bba62706d262"] },
+  { id: "0d7a1f2e-614f-5f9b-9eb0-e977c4413fbc", name: "Yukinobu Tatsu", bio: "Yukinobu Tatsu (龍幸伸) is a Japanese manga artist. He is known for his manga series Dandadan and also for his stint as an assistant to Tatsuki Fujimoto and Yuji Kaku during the serializations of Fire Punch, Chainsaw Man, and Hell's Paradise: Jigokuraku.", bio_source: null, photo_url: null, wikipedia_url: "https://en.wikipedia.org/wiki/Yukinobu_Tatsu", bd_ids: ["8e76ff82-caba-5256-b56f-36fdcc09b8cc"] },
+  { id: "65e00d00-102a-5d11-a8ee-1ae12e5f8022", name: "Yukito Kishiro", bio: "Yukito Kishiro (木城 ゆきと, Kishiro Yukito) est un mangaka japonais né le 20 mars 1967 à Chiba dans la préfecture de Chiba, au Japon. Il est principalement connu comme l'auteur de la série Gunnm.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/FIBD2020BilalKishiro_05.jpg/330px-FIBD2020BilalKishiro_05.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Yukito_Kishiro", bd_ids: ["2e080007-73f3-551b-9c26-e8e9ebec19d2"] },
+  { id: "aaff7554-0102-5996-beae-0993b356a202", name: "Yvan Duque", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["a07deabb-ba5c-5b23-bd86-e977a8865e6c"] },
+  { id: "56030257-e26e-53d8-9d62-6471ba32ecce", name: "Zeina Abiracheb", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["1a3f1d17-bebd-5ddb-abe3-9533675f24a8"] },
+  { id: "94dabec5-6d21-52f5-bcb2-0298eeca942e", name: "Zep", bio: "Philippe Chappuis dit Zep, né le 15 décembre 1967 à Onex, est un auteur de bande dessinée et musicien suisse. Il est notamment connu pour sa série Titeuf.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/SM8_1852m.jpg/330px-SM8_1852m.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Zep", bd_ids: ["f9920e4a-7ba8-5f19-8842-ceaf65dd8b9d"] },
+  { id: "8d89626c-33ca-5927-9738-0bf520f4b52e", name: "Zerocalcare", bio: "Zerocalcare, de son vrai nom Michele Rech, est un auteur de bande dessinée italien, né le 12 décembre 1983 à Arezzo, en Italie. Il est considéré comme un des plus célèbres auteurs italiens de bandes dessinées.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Zerocalcare_-_Lucca_Comics_and_Games_2012.JPG/330px-Zerocalcare_-_Lucca_Comics_and_Games_2012.JPG", wikipedia_url: "https://fr.wikipedia.org/wiki/Zerocalcare", bd_ids: ["13cec0e3-d7e3-54da-be39-8ea04750452b"] },
+  { id: "095fe88f-e6bc-523c-a338-d927d8a46767", name: "Zidrou", bio: "Benoît Drousie, dit Zidrou, né le 12 avril 1962 à Anderlecht, est un scénariste de bande dessinée belge.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Zidrou_par_Claude_Truong-Ngoc_juin_2015.jpg/330px-Zidrou_par_Claude_Truong-Ngoc_juin_2015.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/Zidrou", bd_ids: ["9ac45906-4b6a-5ca4-805b-f64aec4b90bc", "5be2ee50-4405-56c2-b59f-fbdc8438e45e", "66419695-ae35-53a0-b7db-55e99b5d6b02"] },
+  { id: "ec033c79-cf70-5028-8b1d-6b02cccf0b5c", name: "Zoe Thorogood", bio: "Zoe Thorogood, née le 7 juin 1998, est une autrice de bande dessinée britannique.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Zoe_Thorogood", bd_ids: ["0829463a-3433-53e5-ac54-605311f73a69"] },
+  { id: "581a5d0a-41d0-54b0-8ccb-9f5dac37c4e3", name: "collectif", bio: "Un collectif est la réunion de plusieurs personnes, pendant une durée déterminée ou indéfinie, de façon informelle ou contractuelle, constituée dans le but de poursuivre un ou plusieurs objectifs communs, sous le pilotage de ses membres. Ce sont plusieurs individus considérés comme formant une entité à vocation communautaire appelée groupe. Il a une raison d'être appelée action collective ou action coopérative.", bio_source: null, photo_url: null, wikipedia_url: "https://fr.wikipedia.org/wiki/Collectif", bd_ids: ["609fe001-1408-54fc-8686-1a7094aaa0da"] },
+  { id: "f8f3e6c7-7f1c-5fa4-95b3-e5943256b388", name: "les soeurs Wachowski", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["32c39747-541d-55b3-b217-835c9e26ffdb"] },
+  { id: "54bfd2ce-3cf6-5269-8baa-e3571399f282", name: "tienstiens", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["904c9d20-f81a-591d-b110-2e457f6d8f60"] },
+  { id: "ef93712c-4767-58cf-bde5-b0d4e4447cc3", name: "Álvaro Ortiz", bio: null, bio_source: null, photo_url: null, wikipedia_url: null, bd_ids: ["83e86609-2b52-52ab-b6f2-454f3f4f1588"] },
+  { id: "2d4623d8-e667-5373-b0e8-0933cc33d64e", name: "Émile Bravo", bio: "Émile Bravo est un auteur de bande dessinée et illustrateur français, né le 18 septembre 1964 à Paris.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Emile_Bravo-Strasbulles_2009.jpg/330px-Emile_Bravo-Strasbulles_2009.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/%C3%89mile_Bravo", bd_ids: ["c77e8572-a4d7-5a3e-b772-31dd942e9d39"] },
+  { id: "bf478f85-abfd-5914-acc2-eb7ae099bad6", name: "Éric Lambé", bio: "Éric Lambé, né le 2 juillet 1966 à Arlon, est un illustrateur, auteur de bande dessinée belge.", bio_source: null, photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/FIBD2017FauveLamb%C3%A9.jpg/330px-FIBD2017FauveLamb%C3%A9.jpg", wikipedia_url: "https://fr.wikipedia.org/wiki/%C3%89ric_Lamb%C3%A9", bd_ids: ["2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa"] },
 ];
 
-module.exports = {
-    events,
-    bds,
-    authors,
-};
+const bds = [
+  { id: "1346fd40-465d-50a8-9dbf-1b3db2f2f962", title: "23 prostituées", event_ids: "282002d3-3314-58cb-a08c-56d1b660f8ed", author_ids: ["cdc82420-f432-5f59-a469-f2e496e2ec4d"], publisher: "Cornelius", publishing_year: null, ean: "9782360810420", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10866682-L.jpg", publisher_url: "https://openlibrary.org/publishers/Cornelius", leslibraires_url: "https://www.leslibraires.fr/livre/9782360810420", enrichment_source: null },
+  { id: "8a2399e8-979b-5ac8-9645-0c778e3f4edc", title: "Absolute Batman", event_ids: "59b9a96e-b2d0-5d31-9167-293aed303df5", author_ids: ["d4584704-3ebe-5a6f-b8f9-bf17fa741a33", "dfaa83f5-acf7-5b22-baf7-0bf497056f9e"], publisher: "Urban Comics", publishing_year: null, ean: "9781779528308", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781779528308", enrichment_source: null },
+  { id: "80dbe48d-5ef6-50a1-8f93-23619b07cbde", title: "Abélard", event_ids: "72255258-5a8d-5944-9c4c-0f6f07a6db10", author_ids: ["7a56b388-39a7-5b66-af71-1a9304760e4a", "a7e5dfca-337c-58a2-8dfb-d1469b851bd9"], publisher: "Dargaud", publishing_year: null, ean: "9781561637102", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8549563-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9781561637102", enrichment_source: null },
+  { id: "e98c4039-8132-5dd6-9489-661fca8f7743", title: "Adieu Eri", event_ids: "28a72776-8abd-56ff-a48b-fe50c1c9add1", author_ids: ["e2139e97-c7d1-5124-b077-ea4291aa3032"], publisher: "Crunchyroll", publishing_year: null, ean: "9782820345943", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13302183-L.jpg", publisher_url: "https://openlibrary.org/publishers/Crunchyroll", leslibraires_url: "https://www.leslibraires.fr/livre/9782820345943", enrichment_source: null },
+  { id: "9a3852a3-baa8-5f2a-aba2-fe494ac3d2d7", title: "Agughia", event_ids: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a", author_ids: ["8fe7fe5d-f5d1-57fa-9b23-8613e9714774"], publisher: "Dargaud", publishing_year: null, ean: "9782205088953", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12560543-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782205088953", enrichment_source: null },
+  { id: "ef41686b-1031-581f-a454-351eef12c49b", title: "Ailefroide, altitude 3 954", event_ids: "10c922a7-8e8b-50ca-ae70-0e9dad0db06b", author_ids: ["289863c6-a5cf-5a8e-ac03-c19aae5a032f"], publisher: "Casterman", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Ailefroide%2C%20altitude%203%20954", enrichment_source: null },
+  { id: "403fb2b2-7948-5aa1-9cbe-2e9e468a9c05", title: "Album de famille", event_ids: "d3eafa10-a745-5597-94cb-39521449a60e", author_ids: ["2503e0ea-8931-5458-afc8-90b272d6baa0"], publisher: "L'agrume", publishing_year: 2014, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/L'agrume", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Album%20de%20famille", enrichment_source: null },
+  { id: "8f885326-1105-5c04-9cb9-1df0a0d79080", title: "Alcoolique", event_ids: "2fc305c6-f0c7-5462-9a45-89241614c418", author_ids: ["eeab9dd3-5b67-53d1-8012-0b2cc71f0442", "44528b19-7eac-5aab-8e73-bbc8f7c11c8b"], publisher: "Monsieur Toussaint Louverture", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Monsieur%20Toussaint%20Louverture", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Alcoolique", enrichment_source: null },
+  { id: "aaa5174a-d012-5a86-83ff-88ee561cee78", title: "All-Star Superman", event_ids: "5530f067-a32c-51e1-9ad7-97cf775ed705", author_ids: ["82b73354-e24a-5897-a4d7-a14c69097c14", "950aea29-52b1-5b38-916e-69bd7222eed0"], publisher: "Urban Comics", publishing_year: 2013, ean: "9789878190150", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11956378-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9789878190150", enrichment_source: null },
+  { id: "4bc94c79-035d-558e-85ae-c08e1baee587", title: "Alors que j'essayais d'être quelqu'un de bien", event_ids: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319", author_ids: ["ce395aec-bccb-5983-acf4-6da1f7dc05d3"], publisher: "Çà et là", publishing_year: 2017, ean: "9782369902461", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12553957-L.jpg", publisher_url: "https://openlibrary.org/publishers/%C3%87%C3%A0%20et%20l%C3%A0", leslibraires_url: "https://www.leslibraires.fr/livre/9782369902461", enrichment_source: null },
+  { id: "d2606770-6e64-56ad-9f24-2c1734030214", title: "Alyte", event_ids: "f60c9074-4b14-5a21-8163-ab8c49f0d987", author_ids: ["fab79174-cd77-5bff-8ef0-204115fd6685"], publisher: "2042", publishing_year: null, ean: "9782383871026", summary: "Il est temps de retrouver Lymphore, mes enfants.", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14856476-L.jpg", publisher_url: "https://openlibrary.org/publishers/2042", leslibraires_url: "https://www.leslibraires.fr/livre/9782383871026", enrichment_source: null },
+  { id: "765d65d1-e762-5976-bda4-410a49745faf", title: "Anarcoma", event_ids: "e53c882f-3627-5b43-b1d8-ee7469a56d93", author_ids: ["db9a12ff-381c-54a8-847d-511a1a18e953"], publisher: "Misma", publishing_year: 2017, ean: "9788478334308", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Misma", leslibraires_url: "https://www.leslibraires.fr/livre/9788478334308", enrichment_source: null },
+  { id: "04c7c967-43b9-5255-a016-a6a6713ccaf0", title: "Anaïs Nin - Sur la mer des mensonges", event_ids: "aabf7c0f-3e3c-53d0-8439-2987209842ce", author_ids: ["a1b4ee86-d88a-5c9f-a04e-fb542537c0f0"], publisher: "Casterman", publishing_year: 2020, ean: "9781683967590", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10866556-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9781683967590", enrichment_source: null },
+  { id: "2e7c3a72-b7fc-5260-a119-e8a94af085e5", title: "Arsène Schrauwen", event_ids: "99984239-be4b-5527-ac6f-2efffaa923c7", author_ids: ["a730029a-5fc8-5f2d-83ee-d08a20957c8c"], publisher: "L'Association", publishing_year: 2015, ean: "9781606997307", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8270115-L.jpg", publisher_url: "https://openlibrary.org/publishers/L'Association", leslibraires_url: "https://www.leslibraires.fr/livre/9781606997307", enrichment_source: null },
+  { id: "0f55b110-f82c-5092-8299-3149fdc8c9c9", title: "Au-Dedans", event_ids: "8f478152-30c0-53a8-ae55-0f5108d32a6d", author_ids: ["bed4e616-fb1a-51d5-8789-d3a7c519765c"], publisher: "404", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/404", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Au-Dedans", enrichment_source: null },
+  { id: "562e5012-19b0-5794-aa0e-4636a143312f", title: "Aventures de Luther Arkwright", event_ids: "eb52c998-b16a-55d6-a25e-fc780089bc5b", author_ids: ["2f89aaac-ebdd-5a34-a0a8-e93588b567e4"], publisher: "Kymera Comics", publishing_year: 2006, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kymera%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Aventures%20de%20Luther%20Arkwright", enrichment_source: null },
+  { id: "8b193f6b-8fc9-5dd4-8f86-3dffe109ace2", title: "BEZIMENA", event_ids: "35935fa2-a008-5d4a-837d-ff51e42f0123", author_ids: ["77897035-979e-5c77-9015-a3d636adb490"], publisher: "Ici Même", publishing_year: null, ean: "9788417511906", summary: null, publication_date: "2019-05-27T00:00:00.000Z", page_count: 200, price: null, cover_url: "https://covers.openlibrary.org/b/id/10302516-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ici%20M%C3%AAme", leslibraires_url: "https://www.leslibraires.fr/livre/9788417511906", enrichment_source: null },
+  { id: "af4e1bb1-ecf0-5912-8197-9d9e0b210b72", title: "Bagarre Érotique", event_ids: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa", author_ids: ["b28aa578-42b6-53f0-ba2e-0e91a837d1cc"], publisher: "Anne Carrière", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Anne%20Carri%C3%A8re", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Bagarre%20%C3%89rotique", enrichment_source: null },
+  { id: "41a293e2-8d3d-5933-9188-f01edc26eb0c", title: "Bakemonogatari", event_ids: "123794f1-5856-5238-9fb5-380ed5d2e2f0", author_ids: [], publisher: "Pika", publishing_year: null, ean: "9781942993896", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11259582-L.jpg", publisher_url: "https://openlibrary.org/publishers/Pika", leslibraires_url: "https://www.leslibraires.fr/livre/9781942993896", enrichment_source: null },
+  { id: "8f3dfff9-18f4-517b-956a-375093f86315", title: "Ballades", event_ids: "12815554-e509-5c87-be90-52d0ba1546af", author_ids: ["d34f9a45-6215-5a8a-b4d6-dfb9d6a92541"], publisher: "Atrabile", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Ballades", enrichment_source: null },
+  { id: "d0773c0e-efce-5e3f-b88c-b401e6925875", title: "Barbara l'entre-deux monde", event_ids: "d22485f9-9242-5a72-bc1e-9c223c27134d", author_ids: ["45d6dbf8-fbd9-578b-9e9f-8402dc2d31e7"], publisher: "Akata", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Akata", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Barbara%20l'entre-deux%20monde", enrichment_source: null },
+  { id: "1c16dd39-9b71-570b-adf9-dd949b0876ed", title: "Batman et robin - Année 1", event_ids: "e86ed83c-1690-5160-a736-d4ab397e1adf", author_ids: ["c87d7744-49cb-5480-8fd5-ac0903b18d99", "643adc5f-050b-514f-855f-2ff87a990c08"], publisher: "Urban", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Batman%20et%20robin%20-%20Ann%C3%A9e%201", enrichment_source: null },
+  { id: "bf4fe76d-85e6-5b2b-8093-bd397f29ccc2", title: "Beastars", event_ids: "7373210e-8d7c-5ea1-a2de-8f97310f21f9", author_ids: ["5becded1-8df8-5719-8df7-76a7c8641ec1"], publisher: "Ki-oon", publishing_year: 2019, ean: "9781974707980", summary: null, publication_date: "2017-01-01T00:00:00.000Z", page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8758521-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ki-oon", leslibraires_url: "https://www.leslibraires.fr/livre/9781974707980", enrichment_source: null },
+  { id: "795ed7d3-240b-5db3-8a23-41fe5531f853", title: "Belleville story", event_ids: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2", author_ids: ["27924509-cf04-5879-b755-b018b8bb79a4", "fd980b15-243b-5a7e-98a4-46024c3809b9"], publisher: "Dargaud", publishing_year: 2013, ean: "9788467914696", summary: null, publication_date: "2014-03-20T00:00:00.000Z", page_count: 168, price: null, cover_url: "https://covers.openlibrary.org/b/id/13509442-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9788467914696", enrichment_source: null },
+  { id: "88083fb1-f033-50a2-a26a-84921246605c", title: "Bergères guerrières", event_ids: "123794f1-5856-5238-9fb5-380ed5d2e2f0", author_ids: ["1a7ad751-eef5-54c6-af64-bf354fc1c6bb", "8ebd502e-0353-5076-9daf-ef5e18c72f6c"], publisher: "Glenat", publishing_year: null, ean: "9782344024096", summary: null, publication_date: "2018-09-04T00:00:00.000Z", page_count: 72, price: null, cover_url: "https://covers.openlibrary.org/b/id/11134172-L.jpg", publisher_url: "https://openlibrary.org/publishers/Glenat", leslibraires_url: "https://www.leslibraires.fr/livre/9782344024096", enrichment_source: null },
+  { id: "233df3dc-5aec-5505-b208-b7dad00c99b1", title: "Berserk", event_ids: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc", author_ids: ["5687b7c6-fc2f-5234-8443-9dccba2dbe03"], publisher: "Glenat", publishing_year: 1997, ean: "9788493212513", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/869205-L.jpg", publisher_url: "https://openlibrary.org/publishers/Glenat", leslibraires_url: "https://www.leslibraires.fr/livre/9788493212513", enrichment_source: null },
+  { id: "9c926764-7669-5585-8219-0f0fb31f3498", title: "Betty Boob", event_ids: "e53c882f-3627-5b43-b1d8-ee7469a56d93", author_ids: ["1cb65ab4-91ec-58a4-b86b-15848303925f", "48f4c9b6-4f07-53ad-bd78-dfc79b024297"], publisher: "Casterman", publishing_year: 2017, ean: "9781684151646", summary: null, publication_date: "2018-01-01T00:00:00.000Z", page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9781684151646", enrichment_source: null },
+  { id: "c5f4a66e-a9f9-530f-8694-d73e0c2f8e4c", title: "Beverly", event_ids: "07171107-88be-5a83-be43-0205a9c53237", author_ids: ["ef2a5874-3ec2-5b7d-b363-c8c94498ec1a"], publisher: "Presque Lune", publishing_year: 2017, ean: "9781770462250", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12599204-L.jpg", publisher_url: "https://openlibrary.org/publishers/Presque%20Lune", leslibraires_url: "https://www.leslibraires.fr/livre/9781770462250", enrichment_source: null },
+  { id: "1446edf4-27ba-5484-9124-b0655c28fa02", title: "Big Kids", event_ids: "4773d958-16dc-5d09-ac56-048ca6df63b8", author_ids: ["befc47ec-c72f-58e3-8519-a28173853443"], publisher: "Atrabile", publishing_year: 2017, ean: "9782889230525", summary: null, publication_date: "2016-01-01T00:00:00.000Z", page_count: 96, price: null, cover_url: "https://covers.openlibrary.org/b/id/12585510-L.jpg", publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/livre/9782889230525", enrichment_source: null },
+  { id: "af92af68-880b-54ec-9b11-b63ac826149b", title: "Billy Bat", event_ids: "94e69eb9-e081-52d8-a886-1e8990ac7c1b", author_ids: ["96909ed8-afbc-51b4-828e-cf484c613c2d"], publisher: "Pika", publishing_year: null, ean: "9784063728125", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8432532-L.jpg", publisher_url: "https://openlibrary.org/publishers/Pika", leslibraires_url: "https://www.leslibraires.fr/livre/9784063728125", enrichment_source: null },
+  { id: "68213172-a9fb-5a77-9b90-2668f465ed84", title: "Black Dog", event_ids: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319", author_ids: ["a296e419-1a8d-59a9-a3cd-d3ee5ba81fc9"], publisher: "Glénat BD", publishing_year: 2017, ean: "9781506717524", summary: null, publication_date: "2020-01-01T00:00:00.000Z", page_count: 128, price: null, cover_url: "https://covers.openlibrary.org/b/id/8908087-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat%20BD", leslibraires_url: "https://www.leslibraires.fr/livre/9781506717524", enrichment_source: null },
+  { id: "da0ebc32-b9ab-5dbd-a2ef-1ef33fd0c3ea", title: "Black panther ennemi d'état", event_ids: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2", author_ids: ["40790dc7-7194-5449-98fe-ccc3f6fa7767", "2e83f03b-61b3-5559-8c7b-9f91ce6434b7"], publisher: "Panini Comics France", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Panini%20Comics%20France", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Black%20panther%20ennemi%20d'%C3%A9tat", enrichment_source: null },
+  { id: "321c2793-05ba-57fa-abc0-2c59c7c6aaa3", title: "Blacksad pour de faux", event_ids: "7a658366-6710-5724-859d-c94de9e9d9ab", author_ids: [], publisher: null, publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: null, leslibraires_url: "https://www.leslibraires.fr/recherche?query=Blacksad%20pour%20de%20faux", enrichment_source: null },
+  { id: "045e3ca9-5744-52bb-ba4c-d69f08e9c343", title: "Blanc Autour", event_ids: "b2b823be-b192-5bd5-9047-db6dac16cd7a", author_ids: ["7116930d-8c4e-548c-b9e6-248dafce1360", "35a4d2db-5e22-555d-bdcc-c806c0ae5f35"], publisher: "DARGAUD", publishing_year: 2021, ean: "9782505082460", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10544333-L.jpg", publisher_url: "https://openlibrary.org/publishers/DARGAUD", leslibraires_url: "https://www.leslibraires.fr/livre/9782505082460", enrichment_source: null },
+  { id: "81d0933e-90f7-5b74-b9fb-ba27cc47fa12", title: "Bleak", event_ids: "208965ad-c1ba-5935-ad9c-599ec120152f", author_ids: ["9ebb375a-570f-5d10-af89-e2581554813f", "67a61400-02a1-5e8a-815f-efe1aaff4044"], publisher: "LINK DIGITAL", publishing_year: 2022, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/LINK%20DIGITAL", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Bleak", enrichment_source: null },
+  { id: "a287fabc-b371-534f-b5ae-bce6b907b35f", title: "Blues", event_ids: "9892d986-cf7a-5e39-8f31-7e0e110e3565", author_ids: ["64050749-07c1-53a7-82b9-41a75f355e82"], publisher: "Mosquito", publishing_year: 2007, ean: "9788873901557", summary: null, publication_date: "2009-01-01T00:00:00.000Z", page_count: 61, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Mosquito", leslibraires_url: "https://www.leslibraires.fr/livre/9788873901557", enrichment_source: null },
+  { id: "5ee6ce29-7b61-53b4-8994-a0a2e783cf92", title: "Bone", event_ids: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405", author_ids: ["41d4d07a-dd5b-575e-8575-182029f2ffbc"], publisher: "Delcourt", publishing_year: 1991, ean: "9782756073354", summary: "Bone est une série de comics américain en noir et blanc de fantasy humoristique créée par Jeff Smith. La série est traduite en français par Anne Capuron et éditée aux Éditions Delcourt.\r\n\r\nSynopsis : \r\nFone Bone et ses cousins, Phoney Bone et Smiley Bone, s'enfuient de Boneville à la suite de plusieurs malversations de Phoney. Ils se retrouvent dans une vallée étrange peuplée d'humains, de rats-garous et de dragons. Leur arrivée va déclencher une guerre entre les forces du Mal et du Bien.", publication_date: "2015-11-12T00:00:00.000Z", page_count: 1344, price: 55, cover_url: "https://covers.openlibrary.org/b/id/3810109-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782756073354", enrichment_source: null },
+  { id: "27aa754b-ec29-5d31-aac3-143f9055fdb5", title: "Boris l'enfant patate", event_ids: "437bf521-fecc-5100-9170-e59fe3b5a117", author_ids: ["c53c562f-90cf-52c7-852e-ba4fa5778897"], publisher: "Misma", publishing_year: 2018, ean: "9782916254609", summary: null, publication_date: "2018-01-01T00:00:00.000Z", page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Misma", leslibraires_url: "https://www.leslibraires.fr/livre/9782916254609", enrichment_source: null },
+  { id: "3d3f33fa-274c-5750-bbe8-b8a37f599031", title: "Bouche du diable", event_ids: "2fc305c6-f0c7-5462-9a45-89241614c418", author_ids: ["1b65525f-ca97-5987-ac69-2799896f5fbf", "012cf8c2-f922-5759-a7c4-244fe42ff33d"], publisher: "Casterman", publishing_year: 1990, ean: "9782203388321", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/3089571-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203388321", enrichment_source: null },
+  { id: "76da166c-6887-58fe-839c-5ceb1d79b8ee", title: "Boule de Feu", event_ids: "bf7694bb-b7a0-5258-9679-5e32f0e0399f", author_ids: ["24f5b427-235c-5460-9de0-85f11a01139a"], publisher: "2024", publishing_year: null, ean: "9782901000631", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11309762-L.jpg", publisher_url: "https://openlibrary.org/publishers/2024", leslibraires_url: "https://www.leslibraires.fr/livre/9782901000631", enrichment_source: null },
+  { id: "259a0454-9500-5b1b-be3c-1039abe5838a", title: "Boys Run the Riot", event_ids: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1", author_ids: ["eae3e547-17c4-5a9d-9f08-a099870e7427"], publisher: "Akata", publishing_year: null, ean: "9781646512485", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11252554-L.jpg", publisher_url: "https://openlibrary.org/publishers/Akata", leslibraires_url: "https://www.leslibraires.fr/livre/9781646512485", enrichment_source: null },
+  { id: "6719474d-ed51-5f92-8278-3646bb92c03b", title: "Bride stories", event_ids: "611db4de-5ee6-5c83-83c5-af36e6222068", author_ids: [], publisher: "Ki-oon", publishing_year: null, ean: "9798514197620", summary: "The cold passed reluctantly from the earth, and the retiring fogs revealed an army stretched out on the hills, resting.", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8236915-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ki-oon", leslibraires_url: "https://www.leslibraires.fr/livre/9798514197620", enrichment_source: null },
+  { id: "b86b53b5-7121-5fae-8ed9-50fc48076812", title: "Bunker", event_ids: "eede8ed7-1012-5831-95cb-b0d7c540f82c", author_ids: ["2822bd0a-4242-59a8-a4dd-2a9d553c94f0"], publisher: "Dupuis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Bunker", enrichment_source: null },
+  { id: "e316844c-27bd-5037-a0f8-1327a62e748f", title: "Bébé Fille", event_ids: "1320b429-70e2-593e-976d-0cc9646e88c8", author_ids: ["9a3c0069-aa3f-5826-9ef1-9f344244d3dc"], publisher: "Même Pas Mal", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/M%C3%AAme%20Pas%20Mal", leslibraires_url: "https://www.leslibraires.fr/recherche?query=B%C3%A9b%C3%A9%20Fille", enrichment_source: null },
+  { id: "5864aefd-c512-5acd-bfd4-654a9577e01f", title: "C'est un oiseau", event_ids: "41d4751a-0f18-5d59-86d2-8e48b38d35fb", author_ids: ["c49f0cdc-1a16-51f1-aec9-b96dbb3ecfab", "f32dd3ed-2196-56e7-bb1a-41d07e59b2f7"], publisher: "Urban Comics", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=C'est%20un%20oiseau", enrichment_source: null },
+  { id: "12865e73-340e-5385-a1c0-8dcd99f6ad82", title: "Capacity", event_ids: "709fba55-6a76-5210-83d2-4b1f0c2dd39d", author_ids: ["e02ab7f1-a215-5b6d-a012-ed8916473101"], publisher: "Ici Même", publishing_year: null, ean: "9780988814950", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Ici%20M%C3%AAme", leslibraires_url: "https://www.leslibraires.fr/livre/9780988814950", enrichment_source: null },
+  { id: "1fe8553a-dc4f-557c-b0c8-ed285d25d513", title: "Capitaine Mulet", event_ids: "634fc1df-6058-5247-a08c-fad69ce34c2e", author_ids: ["7ca4b9c7-18bd-5d69-9771-bd4f479f8b57"], publisher: "Editions 2024", publishing_year: 2016, ean: "9782919242269", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12831959-L.jpg", publisher_url: "https://openlibrary.org/publishers/Editions%202024", leslibraires_url: "https://www.leslibraires.fr/livre/9782919242269", enrichment_source: null },
+  { id: "f82923f6-8cff-5419-927a-c3db18e9992f", title: "Carbone & Silicium", event_ids: "709fba55-6a76-5210-83d2-4b1f0c2dd39d", author_ids: ["1cc29f88-7e7f-56ef-b1db-5e3a60803a8b"], publisher: "Ankama", publishing_year: null, ean: "9783967923957", summary: null, publication_date: "2020-01-01T00:00:00.000Z", page_count: 267, price: null, cover_url: "https://covers.openlibrary.org/b/id/14831622-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ankama", leslibraires_url: "https://www.leslibraires.fr/livre/9783967923957", enrichment_source: null },
+  { id: "ab707df2-5f9e-5bce-ba06-da7fc0e88bfd", title: "Cardcaptor Sakura", event_ids: "075999c0-bbf4-5524-9f02-8526d66cd913", author_ids: ["969606f1-a82b-5683-8a38-a91089eb9598"], publisher: "Pika", publishing_year: null, ean: "9781595828088", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8973074-L.jpg", publisher_url: "https://openlibrary.org/publishers/Pika", leslibraires_url: "https://www.leslibraires.fr/livre/9781595828088", enrichment_source: null },
+  { id: "a3a08375-70c5-5185-aa11-1970757201c6", title: "Carnation", event_ids: "41d4751a-0f18-5d59-86d2-8e48b38d35fb", author_ids: ["c8a55c08-f0a1-57c9-a276-d164183edeb8"], publisher: "Casterman", publishing_year: 2017, ean: "9782203087767", summary: null, publication_date: "2014-01-01T00:00:00.000Z", page_count: 247, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203087767", enrichment_source: null },
+  { id: "5cad8b88-954e-5800-bf00-9a0844b4317d", title: "Carnet de santé foireuse", event_ids: "577662aa-e0e0-5fc7-9538-eea8c644fac8", author_ids: ["93d9e02c-ca19-59ba-a0ff-fe436c3a55bf"], publisher: "Delcourt", publishing_year: 2016, ean: "9782756066394", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10866390-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782756066394", enrichment_source: null },
+  { id: "4fe38dd6-5f77-5f47-8a7d-4a869f44334a", title: "Cauchemar", event_ids: "1871fd36-4f87-59f2-9dfb-a14b9259289e", author_ids: ["3b40ac72-a75f-5c79-bd75-a460f955ae58"], publisher: "l'Employé du moi", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/l'Employ%C3%A9%20du%20moi", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Cauchemar", enrichment_source: null },
+  { id: "83e86609-2b52-52ab-b6f2-454f3f4f1588", title: "Cendres", event_ids: "962b55da-7635-5b79-975c-44b8cd63497b", author_ids: ["ef93712c-4767-58cf-bde5-b0d4e4447cc3"], publisher: "Rackham", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Rackham", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Cendres", enrichment_source: null },
+  { id: "fb6cbc79-3c98-5889-838a-b334b7606395", title: "Chair à Canon", event_ids: "28a72776-8abd-56ff-a48b-fe50c1c9add1", author_ids: ["ae7b2afb-f773-5588-a836-7f22fa49d247"], publisher: "Flblb", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Flblb", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Chair%20%C3%A0%20Canon", enrichment_source: null },
+  { id: "4752dff7-0fcb-5360-a636-374577c0b313", title: "Chaque jour Dracula", event_ids: "41d6ae0e-8b21-541d-a141-e8cc0134bbab", author_ids: ["dccf230a-7e53-53fc-8c68-d313d60245f3", "035010a7-3a33-5cdf-b3bc-237e47b1ac05"], publisher: "Delcourt", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Chaque%20jour%20Dracula", enrichment_source: null },
+  { id: "d6aa2f0e-42e0-5e88-9aca-0f988aaf0156", title: "Charlie Chan hock Chye", event_ids: "a25ef389-a3d0-5e2e-a153-2e280ed21d81", author_ids: ["0afb0661-1df4-536c-9666-10c4b38bb243"], publisher: "Urban Comics", publishing_year: 2017, ean: "9788865439142", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10141681-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9788865439142", enrichment_source: null },
+  { id: "fb96800d-99ad-51c1-a1e8-f27c7d8fbb10", title: "Cigish", event_ids: "00e27df2-3483-5397-bfdb-e40b84d0dd1c", author_ids: ["b51e43e0-93f2-5e19-a4ea-6c9847f8a7e3"], publisher: "Ankama", publishing_year: 2015, ean: "9782359103809", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13246018-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ankama", leslibraires_url: "https://www.leslibraires.fr/livre/9782359103809", enrichment_source: null },
+  { id: "e2e2f078-9136-5fed-a6e2-ddc3cde39297", title: "Citéville", event_ids: "e0863d9e-e93d-525a-9dbb-89140edf2588", author_ids: [], publisher: null, publishing_year: null, ean: "9782360811694", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10866574-L.jpg", publisher_url: null, leslibraires_url: "https://www.leslibraires.fr/livre/9782360811694", enrichment_source: null },
+  { id: "4aa33079-62c2-5233-88ae-8e754c339e59", title: "Clementine", event_ids: "d22485f9-9242-5a72-bc1e-9c223c27134d", author_ids: ["57c07569-26eb-52d4-ab34-f8c8caa94ccc"], publisher: "Delcourt", publishing_year: null, ean: "9781534397378", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/15111890-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9781534397378", enrichment_source: null },
+  { id: "39c9b8b4-fc17-5fb3-bda6-7f183cca54c7", title: "Clémence en colère", event_ids: "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85", author_ids: ["07e138d4-c5e0-5e13-81c4-b924dca78d61"], publisher: "La Ville Brûle", publishing_year: null, ean: "9782360121663", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/15150412-L.jpg", publisher_url: "https://openlibrary.org/publishers/La%20Ville%20Br%C3%BBle", leslibraires_url: "https://www.leslibraires.fr/livre/9782360121663", enrichment_source: null },
+  { id: "ba70089b-dc50-5706-ae33-e7b7f3d3c4ed", title: "Come Over Come Over", event_ids: "f60c9074-4b14-5a21-8163-ab8c49f0d987", author_ids: ["044a392b-edae-5a8b-bf64-8bc911b445b8"], publisher: "Ça et Là", publishing_year: null, ean: "9780060965044", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/9310581-L.jpg", publisher_url: "https://openlibrary.org/publishers/%C3%87a%20et%20L%C3%A0", leslibraires_url: "https://www.leslibraires.fr/livre/9780060965044", enrichment_source: null },
+  { id: "d7db5c18-6776-5197-b68c-f61569bd178a", title: "Commando Culotte", event_ids: "634fc1df-6058-5247-a08c-fad69ce34c2e", author_ids: ["07e138d4-c5e0-5e13-81c4-b924dca78d61"], publisher: "Ankama", publishing_year: 2016, ean: "9782359108163", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10871499-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ankama", leslibraires_url: "https://www.leslibraires.fr/livre/9782359108163", enrichment_source: null },
+  { id: "6f40ce09-c1fc-56c3-b191-aaef5f620982", title: "Comme un Chef", event_ids: "8057115a-7249-5288-a959-7f770b0707da", author_ids: ["0cc64c64-f713-57ca-a315-70087758c502", "f42b2254-0bb6-589f-b754-788623bc0690"], publisher: "Casterman", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Comme%20un%20Chef", enrichment_source: null },
+  { id: "91796292-f679-5dc3-8e16-f53e3cd37480", title: "Comme un frisson", event_ids: "ceff02b3-7019-5ae7-8968-0907eff83fdb", author_ids: ["0334ed05-27b2-5dea-b180-3ab2692d85e7"], publisher: "Vide Cocagne", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Vide%20Cocagne", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Comme%20un%20frisson", enrichment_source: null },
+  { id: "5879ed08-b528-54fa-b889-cb9b6654c5e6", title: "Comment faire fortune en juin 40", event_ids: "fc63aa8e-600f-5543-807f-73035f19248e", author_ids: ["55310ba7-320a-5abb-8b39-eff41549b0f1", "5c38e890-27df-567f-9c6f-bcec8ceea617", "a0303dba-bfa5-5dbc-8c2a-7cc1352a5f7e"], publisher: "Casterman", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Comment%20faire%20fortune%20en%20juin%2040", enrichment_source: null },
+  { id: "a5c2edd4-0e57-5aff-ad51-1da715ae3f5e", title: "Comment le roi a perdu la tête", event_ids: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4", author_ids: ["a367fe72-04a8-59a8-955b-882054715ed1"], publisher: "çà et là", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/%C3%A7%C3%A0%20et%20l%C3%A0", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Comment%20le%20roi%20a%20perdu%20la%20t%C3%AAte", enrichment_source: null },
+  { id: "f85336b5-f4df-5112-a405-cf0dbd14fd50", title: "Commissaire Kouamé", event_ids: "cc962b47-ac4d-5add-8aeb-39e10f0374e6", author_ids: ["ecb145e1-13b8-59fa-8422-1fbb2a505946", "aadfc208-0268-5ff7-b840-57b854a09cce"], publisher: "Gallimard BD", publishing_year: null, ean: "9782075150194", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12560535-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gallimard%20BD", leslibraires_url: "https://www.leslibraires.fr/livre/9782075150194", enrichment_source: null },
+  { id: "06ce7cf3-e238-5bb4-80c8-2000e8c536c7", title: "Comtesse", event_ids: "99984239-be4b-5527-ac6f-2efffaa923c7", author_ids: ["df9128c9-cec9-53c8-8729-617042111988"], publisher: "Les Requins Marteaux", publishing_year: 2010, ean: "9782849610923", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20Requins%20Marteaux", leslibraires_url: "https://www.leslibraires.fr/livre/9782849610923", enrichment_source: null },
+  { id: "2f23ec7b-6aa5-5cf5-b8ac-331ee184fe94", title: "Coney Island Baby", event_ids: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e", author_ids: ["e5020b23-1913-5091-8e95-fb8deb0a3b96"], publisher: "l’Association", publishing_year: null, ean: "9782844143938", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10911162-L.jpg", publisher_url: "https://openlibrary.org/publishers/l%E2%80%99Association", leslibraires_url: "https://www.leslibraires.fr/livre/9782844143938", enrichment_source: null },
+  { id: "e0f10239-868a-5cde-b6dd-9c94fed8d7b5", title: "Contes ordinaires d'une société résignée", event_ids: "41d6ae0e-8b21-541d-a141-e8cc0134bbab", author_ids: ["226380ae-66d4-55d7-bf85-5d57c33b16c8"], publisher: "Fluide Glacial", publishing_year: 2018, ean: "9782378780586", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Fluide%20Glacial", leslibraires_url: "https://www.leslibraires.fr/livre/9782378780586", enrichment_source: null },
+  { id: "b2b56cf4-189b-5c0f-b0a9-b3f4944df2f8", title: "Corps Vivante", event_ids: "eede8ed7-1012-5831-95cb-b0d7c540f82c", author_ids: ["e7bad250-6da0-56ae-ab7c-bb32c2243587"], publisher: "Pow Pow", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Pow%20Pow", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Corps%20Vivante", enrichment_source: null },
+  { id: "52b5768f-92ea-5ea0-864c-f91c838da16c", title: "Cosmoknights", event_ids: "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85", author_ids: ["e1d64487-9066-57a4-a82b-f95b1f11a41f"], publisher: "Bliss", publishing_year: null, ean: "9788467959864", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14009362-L.jpg", publisher_url: "https://openlibrary.org/publishers/Bliss", leslibraires_url: "https://www.leslibraires.fr/livre/9788467959864", enrichment_source: null },
+  { id: "163d1778-437a-5b0b-a41c-477e1740f9d6", title: "Cot Cot", event_ids: "d7bb79a6-c63f-532e-9f9a-c52593db9321", author_ids: ["74fe19ba-aed1-535a-b8e0-d23ecae07b52"], publisher: "Atrabile", publishing_year: 2003, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Cot%20Cot", enrichment_source: null },
+  { id: "cef800c9-32c9-52ab-bf7c-f734ba6c65db", title: "Daddy's girl", event_ids: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82", author_ids: ["32df707a-3433-582f-b61e-ae27388d4713"], publisher: "L'Association", publishing_year: 1996, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/7999141-L.jpg", publisher_url: "https://openlibrary.org/publishers/L'Association", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Daddy's%20girl", enrichment_source: null },
+  { id: "a9f1ba28-8e3f-5925-8f8c-bd63fb271d1b", title: "Dai Dark", event_ids: "826204d2-0a18-5f15-81c0-1f9730761358", author_ids: ["2c0a8d04-1eac-5612-a1c7-676822d9ad90"], publisher: "Soleil", publishing_year: null, ean: "9781648273674", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14553284-L.jpg", publisher_url: "https://openlibrary.org/publishers/Soleil", leslibraires_url: "https://www.leslibraires.fr/livre/9781648273674", enrichment_source: null },
+  { id: "8e76ff82-caba-5256-b56f-36fdcc09b8cc", title: "DanDaDan", event_ids: "8057115a-7249-5288-a959-7f770b0707da", author_ids: ["0d7a1f2e-614f-5f9b-9eb0-e977c4413fbc"], publisher: "Crunchyroll", publishing_year: null, ean: "9781974755110", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14868022-L.jpg", publisher_url: "https://openlibrary.org/publishers/Crunchyroll", leslibraires_url: "https://www.leslibraires.fr/livre/9781974755110", enrichment_source: null },
+  { id: "8ac3624a-93f8-5771-975b-942423b399b5", title: "Dans un rayon de soleil", event_ids: "7373210e-8d7c-5ea1-a2de-8f97310f21f9", author_ids: ["5210ee98-eddf-5485-bec1-870d0de8270b"], publisher: "Gallimard BD", publishing_year: 2019, ean: "9782075108829", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12385491-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gallimard%20BD", leslibraires_url: "https://www.leslibraires.fr/livre/9782075108829", enrichment_source: null },
+  { id: "e2d4bc7b-ec4b-5fb3-880e-e94f5c8c0eaa", title: "Dark Knight, une histoire vraie", event_ids: "2412bc73-7636-5bb4-84b3-059088f2b82f", author_ids: ["3614d1a7-ee71-5831-acc7-36feb510177c", "8f0a123e-a29e-5620-989c-8b6e9bc9f3de"], publisher: "Urban Comics", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Dark%20Knight%2C%20une%20histoire%20vraie", enrichment_source: null },
+  { id: "3c1a9222-8bc6-5dc9-9f80-8d86851d8aec", title: "Dead Dead Demon's De dedede Destruction", event_ids: "016d6e71-04fa-5718-bbc4-42c714e709a9", author_ids: ["b4e9729a-f1c7-5994-b791-a4c365333f5b"], publisher: "Kana", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kana", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Dead%20Dead%20Demon's%20De%20dedede%20Destruction", enrichment_source: null },
+  { id: "3d1c60ea-55ba-5ab4-a4fb-8b946c6b1c19", title: "Deadly class", event_ids: "07171107-88be-5a83-be43-0205a9c53237", author_ids: ["8f8828b6-eed2-5ab6-8658-c165aa638119", "66b3e971-8a48-589a-bb44-75fb4755cf25"], publisher: "Urban Comics", publishing_year: 2015, ean: "9781534311459", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/7866728-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781534311459", enrichment_source: null },
+  { id: "48a7b58b-aa17-5b0d-98ec-fe8a997395c0", title: "Demande à Modigliani", event_ids: "3d3c0b42-70a2-5146-a04f-9b0782e75776", author_ids: ["2d932312-b0bc-5bac-9c2d-dfe07ecede95"], publisher: "Naban", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Naban", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Demande%20%C3%A0%20Modigliani", enrichment_source: null },
+  { id: "a1271973-c370-5a5f-a7d4-8feb30577f49", title: "Dernier arpenteur des sables", event_ids: "577662aa-e0e0-5fc7-9538-eea8c644fac8", author_ids: ["fbc80bf7-51eb-58fc-b8c2-66228d9518a3"], publisher: "Cambourakis", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Cambourakis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Dernier%20arpenteur%20des%20sables", enrichment_source: null },
+  { id: "6a5e1b8a-0898-5cbd-b53c-ffcb5fb7bb59", title: "Dernier test avant l'apocalypse", event_ids: "19afc03b-0b2f-5102-946c-c27a7158332e", author_ids: ["a3c116a8-7515-5b5a-808f-6912b470b716"], publisher: "Delcourt/Tonkam", publishing_year: 2013, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt%2FTonkam", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Dernier%20test%20avant%20l'apocalypse", enrichment_source: null },
+  { id: "aa01d166-f99b-5537-9d2f-99f433ffdc97", title: "Des maux à dire", event_ids: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa", author_ids: ["61d33246-60ce-54a8-9d34-3b08a03ebd0a"], publisher: "Sarbacane", publishing_year: null, ean: "9788419670144", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/15152777-L.jpg", publisher_url: "https://openlibrary.org/publishers/Sarbacane", leslibraires_url: "https://www.leslibraires.fr/livre/9788419670144", enrichment_source: null },
+  { id: "7e0fbd51-70be-5b79-b9fd-fdcbdbe6784d", title: "Des-agréments d'un voyage d'agrément", event_ids: "a03c92e9-d27b-5a1a-83b5-01c0a6448113", author_ids: ["1a18f2fb-0d2c-54c5-a763-fdadef46f041"], publisher: "2024", publishing_year: null, ean: "9782913493162", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/5205318-L.jpg", publisher_url: "https://openlibrary.org/publishers/2024", leslibraires_url: "https://www.leslibraires.fr/livre/9782913493162", enrichment_source: null },
+  { id: "32c39747-541d-55b3-b217-835c9e26ffdb", title: "Doc Frankenstein", event_ids: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d", author_ids: ["f8f3e6c7-7f1c-5fa4-95b3-e5943256b388", "cb340fda-dc8b-599c-9ba4-114eff1ad741"], publisher: "Huginn & Muninn", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Huginn%20%26%20Muninn", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Doc%20Frankenstein", enrichment_source: null },
+  { id: "f276e705-9146-5580-823a-15d8c2591660", title: "Dope Rider", event_ids: "bf7694bb-b7a0-5258-9679-5e32f0e0399f", author_ids: ["12d81cb8-0977-5c8d-95e1-546f5eddf90d"], publisher: "Tanibis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Tanibis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Dope%20Rider", enrichment_source: null },
+  { id: "e897052f-d4f2-5e42-9731-c4f7b672d891", title: "Dr. Stone", event_ids: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4", author_ids: ["c3a1940c-7540-5034-8b6c-ca60b59520b3", "68134aa4-2f64-5303-a042-788e170ddea9"], publisher: "Glénat", publishing_year: null, ean: "9786075681191", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12836956-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9786075681191", enrichment_source: null },
+  { id: "9b7133ae-5594-5171-a72d-28be9d48ac38", title: "Décris-Ravage", event_ids: "10c922a7-8e8b-50ca-ae70-0e9dad0db06b", author_ids: ["28ec0041-d45e-5c0f-855e-36d755e3a8cc", "8de0a770-0d52-5e17-97db-ef10383eb7e6"], publisher: "Atrabile", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/recherche?query=D%C3%A9cris-Ravage", enrichment_source: null },
+  { id: "5664c22b-88d2-5a47-bf61-fb3e4f657a0b", title: "Déesse", event_ids: "282002d3-3314-58cb-a08c-56d1b660f8ed", author_ids: ["df9128c9-cec9-53c8-8729-617042111988"], publisher: "Les Requins Marteaux", publishing_year: null, ean: "9782849612538", summary: null, publication_date: "2019-09-19T00:00:00.000Z", page_count: 128, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20Requins%20Marteaux", leslibraires_url: "https://www.leslibraires.fr/livre/9782849612538", enrichment_source: null },
+  { id: "b4e6e54b-c87a-5158-b824-bba62706d262", title: "Eclat(s) d’âme", event_ids: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2", author_ids: ["458151c8-dc97-5fef-8d61-bef98aaace70"], publisher: "Akata", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Akata", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Eclat(s)%20d%E2%80%99%C3%A2me", enrichment_source: null },
+  { id: "0e8111d0-2e90-54c7-88b1-43b0e0881cc9", title: "Ecoute, jolie Marcia", event_ids: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36", author_ids: ["faf147b2-0071-53bc-bd91-a89be82a3bde"], publisher: "ça et là", publishing_year: null, ean: "9782369902959", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12554062-L.jpg", publisher_url: "https://openlibrary.org/publishers/%C3%A7a%20et%20l%C3%A0", leslibraires_url: "https://www.leslibraires.fr/livre/9782369902959", enrichment_source: null },
+  { id: "dc370931-0191-5023-a121-09e365903d81", title: "Elle", event_ids: "defb09ef-c4e5-542b-acdf-e0b5029140ba", author_ids: ["298957cc-14c1-506e-b3d1-61603cbccd87"], publisher: "L' association", publishing_year: 2014, ean: "9780460003711", summary: "LATE in the afternoon of a chilly day in February, two gentlemen were sitting alone over their wine, in a well-furnished dining parlor, in the town of P-, in Kentucky.", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12728198-L.jpg", publisher_url: "https://openlibrary.org/publishers/L'%20association", leslibraires_url: "https://www.leslibraires.fr/livre/9780460003711", enrichment_source: null },
+  { id: "081abfa6-a3db-5c8b-ac64-f2ef4e0beb4d", title: "Emma CakeCup", event_ids: "208965ad-c1ba-5935-ad9c-599ec120152f", author_ids: ["002b8b8f-eaec-50aa-b1a9-dd32ff43ef58", "c6c2e2e5-de20-5485-a998-76541abafe3e"], publisher: "Jungle", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Jungle", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Emma%20CakeCup", enrichment_source: null },
+  { id: "5be2ee50-4405-56c2-b59f-fbdc8438e45e", title: "Emma G. Wilford", event_ids: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319", author_ids: ["095fe88f-e6bc-523c-a338-d927d8a46767", "2a1ed255-67b2-58cd-b606-8c8dd612fa86"], publisher: "Soleil", publishing_year: 2017, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Soleil", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Emma%20G.%20Wilford", enrichment_source: null },
+  { id: "43bbd0e5-e692-5e43-950a-eb10bd288972", title: "En temps de guerre", event_ids: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6", author_ids: ["54ffe919-5f0b-553a-bd79-e6c9314fe6ba"], publisher: "Misma", publishing_year: 2015, ean: "9782916254418", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10866395-L.jpg", publisher_url: "https://openlibrary.org/publishers/Misma", leslibraires_url: "https://www.leslibraires.fr/livre/9782916254418", enrichment_source: null },
+  { id: "ff441b8a-e7d8-56d6-889a-43edd430e38d", title: "Epiphania", event_ids: "962b55da-7635-5b79-975c-44b8cd63497b", author_ids: ["d98bf4ce-fabc-518d-9a7b-415fda62817e"], publisher: "Casterman", publishing_year: 2017, ean: "9788416435647", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10197593-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9788416435647", enrichment_source: null },
+  { id: "e7880ee2-b182-5a13-8a84-f3877bd0a932", title: "Evol", event_ids: "1871fd36-4f87-59f2-9dfb-a14b9259289e", author_ids: ["7a222e55-c2c0-5fff-acc7-4a9c36238f5f"], publisher: "Delcourt", publishing_year: null, ean: "9788411502894", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13915857-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9788411502894", enrichment_source: null },
+  { id: "20804294-4e09-50cd-94bd-8372e5d99a58", title: "Extases", event_ids: "e3653545-0c2a-50bd-8d14-699d252b53a9", author_ids: ["dfb60faa-598f-5699-8b2f-01a78e66cd35"], publisher: "Casterman BD", publishing_year: null, ean: "9782203218307", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10466769-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman%20BD", leslibraires_url: "https://www.leslibraires.fr/livre/9782203218307", enrichment_source: null },
+  { id: "85b4afe0-39bc-53e9-b894-84624222cc7d", title: "Extremity", event_ids: "e3653545-0c2a-50bd-8d14-699d252b53a9", author_ids: ["53e5ed3c-b20d-5b8d-b590-3e185b8a81c5"], publisher: "Delcourt Comics", publishing_year: null, ean: "9780801014390", summary: "Genesis appropriately stands as the first book of the OT and serves as an essential introduction to the whole Bible.", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12707846-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9780801014390", enrichment_source: null },
+  { id: "920c0bc3-909f-517c-8194-eec53442da3a", title: "FUN", event_ids: "e53c882f-3627-5b43-b1d8-ee7469a56d93", author_ids: ["e8be046b-4ab7-5bf1-b064-43221857647d", "a12a8cd7-361a-5455-a8da-350b55b581b1"], publisher: "Ici Même", publishing_year: 2015, ean: "9788876182518", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Ici%20M%C3%AAme", leslibraires_url: "https://www.leslibraires.fr/livre/9788876182518", enrichment_source: null },
+  { id: "6dcd8372-864e-593c-aa7b-d1c4421ca80a", title: "Facteur pour femmes", event_ids: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a", author_ids: ["e9d80524-250a-5eed-b35a-7c4e80bac050", "9425decb-3a8b-5e37-aac5-5ccb7a8b06d7"], publisher: "Grand Angle", publishing_year: 2015, ean: "9782818975510", summary: null, publication_date: "2021-03-02T00:00:00.000Z", page_count: 112, price: null, cover_url: "https://covers.openlibrary.org/b/id/13111711-L.jpg", publisher_url: "https://openlibrary.org/publishers/Grand%20Angle", leslibraires_url: "https://www.leslibraires.fr/livre/9782818975510", enrichment_source: null },
+  { id: "8a50365e-9da9-59dd-bc97-969ed43c22c7", title: "Far Sector", event_ids: "b6b7fc5a-d592-5d96-854f-05558c763187", author_ids: ["57a7df47-868e-598d-8320-562a491eec09", "29e81ba3-c9a8-5437-a577-2324e84c2a22"], publisher: "Urban Comics", publishing_year: null, ean: "9781799500360", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781799500360", enrichment_source: null },
+  { id: "169ce90d-4993-5277-b4b4-898b948ae30b", title: "Feu de paille", event_ids: "577662aa-e0e0-5fc7-9538-eea8c644fac8", author_ids: ["0ca16d5c-a8ba-5db2-9f06-f74b056d9c83"], publisher: "6 Pieds Sous Terre", publishing_year: 2015, ean: "9782352121152", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/6%20Pieds%20Sous%20Terre", leslibraires_url: "https://www.leslibraires.fr/livre/9782352121152", enrichment_source: null },
+  { id: "209120cd-8ef2-5051-9030-5750844215c5", title: "Flippette & Venere", event_ids: "090131b6-3b33-5b91-ac22-f73f60f5d347", author_ids: ["8c05c235-5085-5da5-975c-95a3ec03a0ce"], publisher: "Delcourt", publishing_year: 2020, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Flippette%20%26%20Venere", enrichment_source: null },
+  { id: "debf7682-e9ad-587d-a814-efdeaad2c9e7", title: "Forté", event_ids: "b6b7fc5a-d592-5d96-854f-05558c763187", author_ids: ["0399b1c8-5e87-58d3-8ea8-63453280e3bb", "83cd0cff-b455-5d5f-b0d2-1620f35ecd54"], publisher: "Dargaud", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/9610588-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Fort%C3%A9", enrichment_source: null },
+  { id: "70aad9fb-30b1-5177-8126-c531467c028e", title: "Fraction", event_ids: "3b113b35-2d55-51c4-a846-f640bae083f4", author_ids: ["b4ba44f4-199f-5988-8479-e4422af71a49"], publisher: "IMHO", publishing_year: 2012, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/IMHO", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Fraction", enrichment_source: null },
+  { id: "aa142d80-6e53-53cf-ad01-13c8af2060cf", title: "Fraise et Chocolat", event_ids: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e", author_ids: ["f42b2254-0bb6-589f-b754-788623bc0690"], publisher: "es Impressions Nouvelles", publishing_year: null, ean: "9782874492075", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/es%20Impressions%20Nouvelles", leslibraires_url: "https://www.leslibraires.fr/livre/9782874492075", enrichment_source: null },
+  { id: "20219cc1-6639-5762-9325-1f565d5143ce", title: "Fun Home", event_ids: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4", author_ids: ["c31ac25f-8577-51a4-8112-3280350d8f34"], publisher: "Denoël Graphic", publishing_year: null, ean: "9788498671230", summary: "LIKE MANY FATHERS, MINE COULD OCCASIONALLY BE PREVAILED ON FOR A SPOT OF \"AIRPLANE.\"", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12366765-L.jpg", publisher_url: "https://openlibrary.org/publishers/Deno%C3%ABl%20Graphic", leslibraires_url: "https://www.leslibraires.fr/livre/9788498671230", enrichment_source: null },
+  { id: "c8efe667-cfa0-5265-92b3-8f32fbeb53b1", title: "Gazoline l'intégrale", event_ids: "fc63aa8e-600f-5543-807f-73035f19248e", author_ids: ["33d9e522-4553-5c30-84d9-90627de2766d"], publisher: "Les Requins Marteaux", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20Requins%20Marteaux", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Gazoline%20l'int%C3%A9grale", enrichment_source: null },
+  { id: "72f2081f-6273-5dc2-8c7b-28dc3370c098", title: "Ghost World", event_ids: "81b7b345-17ae-599b-8c17-b38aafc42040", author_ids: ["64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8"], publisher: "Cornélius", publishing_year: 2016, ean: "9781560974277", summary: null, publication_date: "2008-03-30T00:00:00.000Z", page_count: 80, price: null, cover_url: "https://covers.openlibrary.org/b/id/791370-L.jpg", publisher_url: "https://openlibrary.org/publishers/Corn%C3%A9lius", leslibraires_url: "https://www.leslibraires.fr/livre/9781560974277", enrichment_source: null },
+  { id: "4bb23804-0bcf-59c4-b051-ebf483efde5f", title: "Gideon falls", event_ids: "75bd8d09-d669-50a0-a00c-48987b2b9472", author_ids: ["3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0", "b4be3d64-8025-58ce-8c65-532412a7a00a"], publisher: "Urban Comics", publishing_year: 2018, ean: "9781534318670", summary: null, publication_date: "2021-01-01T00:00:00.000Z", page_count: 112, price: null, cover_url: "https://covers.openlibrary.org/b/id/10873820-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781534318670", enrichment_source: null },
+  { id: "dd62a84b-d5d0-581d-85ff-398583396ee1", title: "Gloutons et Dragons", event_ids: "3d9441c7-6496-5d72-9e60-65b6ea76742a", author_ids: ["ac8b85c4-99d5-5de7-a631-34672a8a642e"], publisher: "Sakka", publishing_year: null, ean: "9782203202900", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11185627-L.jpg", publisher_url: "https://openlibrary.org/publishers/Sakka", leslibraires_url: "https://www.leslibraires.fr/livre/9782203202900", enrichment_source: null },
+  { id: "ea9613e4-c0a1-5a88-b2a4-fc986c9f2240", title: "Gokinjo", event_ids: "15afad0f-6a49-5a5d-9361-e696250a3993", author_ids: ["6dc1449e-5778-5046-ae1c-0025d5d15b13"], publisher: "Delcourt", publishing_year: null, ean: "9784088550961", summary: null, publication_date: "1997-07-31T00:00:00.000Z", page_count: 121, price: null, cover_url: "https://covers.openlibrary.org/b/id/1041409-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9784088550961", enrichment_source: null },
+  { id: "956b5864-d695-5e4f-b6f3-48078e019fe0", title: "Gotham Central", event_ids: "075999c0-bbf4-5524-9f02-8526d66cd913", author_ids: ["eb085332-9b22-53f0-a527-1e929572ab5a", "00db3447-5ed5-5ba8-a2af-2dd9199c5602"], publisher: "Urban Comics", publishing_year: null, ean: "9781401225216", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12696127-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781401225216", enrichment_source: null },
+  { id: "bfaec5be-c8a1-5bc8-a268-c883a4cd4ffe", title: "Green Lantern & Green Arrow", event_ids: "fc63aa8e-600f-5543-807f-73035f19248e", author_ids: ["1447e129-555d-532d-8df9-d42e6407feef", "21ea33cb-1507-5e60-80c3-10871c80788b", "dd7e20bf-bcd1-5b90-a7d5-96c2ef461276"], publisher: "Urban Comics", publishing_year: 2014, ean: "9781401295530", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13866568-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781401295530", enrichment_source: null },
+  { id: "6abe3396-863c-534c-ab1f-f19543d6c60d", title: "Gros Ours et Petit Lapin", event_ids: "acaef519-c1b3-5690-84b1-d8fb25759813", author_ids: ["8d7dbf62-af3b-5183-9758-a74bff3e93b2"], publisher: "Misma", publishing_year: 2016, ean: "9782916254500", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Misma", leslibraires_url: "https://www.leslibraires.fr/livre/9782916254500", enrichment_source: null },
+  { id: "beee135e-1fed-5a0c-9083-dde2ebaec54d", title: "Gros bois", event_ids: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b", author_ids: ["0cf5be42-674c-5e17-9e49-7fb184b1431c"], publisher: "Les enfants rouges", publishing_year: 2014, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20enfants%20rouges", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Gros%20bois", enrichment_source: null },
+  { id: "2e080007-73f3-551b-9c26-e8e9ebec19d2", title: "Gunnm", event_ids: "81b7b345-17ae-599b-8c17-b38aafc42040", author_ids: ["65e00d00-102a-5d11-a8ee-1ae12e5f8022"], publisher: "Glénat", publishing_year: 2016, ean: "9788417537272", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13482139-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9788417537272", enrichment_source: null },
+  { id: "b089120d-7f10-5457-96b1-b233822e6f5e", title: "Harleen", event_ids: "3d3c0b42-70a2-5146-a04f-9b0782e75776", author_ids: ["60d5489b-14e3-518b-9109-e042747d08ff"], publisher: "Urban Comics", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Harleen", enrichment_source: null },
+  { id: "3dc033eb-0039-59b2-a5c3-2dd8754bcfcc", title: "Heartful Company", event_ids: "d7bb79a6-c63f-532e-9f9a-c52593db9321", author_ids: ["ecc84076-df42-5c48-b1a3-d3d8a57b3771", "bd3ae08f-db85-5ec7-997d-14285b672739"], publisher: "IMHO", publishing_year: 2013, ean: "9781718778863", summary: "The book in your hands is the most accessible of all literary masterpieces, and one of the strangest.", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10527843-L.jpg", publisher_url: "https://openlibrary.org/publishers/IMHO", leslibraires_url: "https://www.leslibraires.fr/livre/9781718778863", enrichment_source: null },
+  { id: "980619c8-13ee-54cf-960c-0ad3a452965b", title: "Helen de Wyndhorn", event_ids: "72255258-5a8d-5944-9c4c-0f6f07a6db10", author_ids: ["67021253-b3f9-5131-a5a1-6f1e6996c8bd", "04566a81-2c42-5f40-84bf-169e9ff41670"], publisher: "Glénat", publishing_year: null, ean: "9788556512581", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/15172412-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9788556512581", enrichment_source: null },
+  { id: "9f0067bc-02b7-50da-a83e-61b896fc352d", title: "Hobo Mom", event_ids: "3b113b35-2d55-51c4-a846-f640bae083f4", author_ids: ["40a78c44-4310-5562-8dc7-76d43d290bda"], publisher: "L'Employé du Moi", publishing_year: 2015, ean: "9782390040101", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10864717-L.jpg", publisher_url: "https://openlibrary.org/publishers/L'Employ%C3%A9%20du%20Moi", leslibraires_url: "https://www.leslibraires.fr/livre/9782390040101", enrichment_source: null },
+  { id: "5ce81c2c-23ca-5bfe-899a-011a2c38e9e0", title: "Hoka Hey !", event_ids: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e", author_ids: ["591a05fd-7b21-55d5-bd3a-0214e741d120"], publisher: "Rue de Sèvres (Label 619)", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Rue%20de%20S%C3%A8vres%20(Label%20619)", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Hoka%20Hey%20!", enrichment_source: null },
+  { id: "c422ca47-19e7-5530-96ae-3099c5ec9dc8", title: "Hollywood menteur", event_ids: "f60c9074-4b14-5a21-8163-ab8c49f0d987", author_ids: ["466e5af5-67e4-5fcb-b087-0e8d4f1a7ed6"], publisher: "Futuropolis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Hollywood%20menteur", enrichment_source: null },
+  { id: "7e408fbd-928f-56ab-b646-d972f5e24698", title: "Horreur cosmique", event_ids: "75bd8d09-d669-50a0-a00c-48987b2b9472", author_ids: ["cc2cbfb1-a137-5c56-8a23-2671597ab919", "0e19ff22-af4d-56a0-abcc-86cb2a09490d"], publisher: "Rackham", publishing_year: 2015, ean: "9782878271904", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10524759-L.jpg", publisher_url: "https://openlibrary.org/publishers/Rackham", leslibraires_url: "https://www.leslibraires.fr/livre/9782878271904", enrichment_source: null },
+  { id: "50457d0a-d275-54ae-a701-73038d4557e5", title: "Hors-jeu", event_ids: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf", author_ids: ["a1538e2c-43f9-5a42-8d71-008ad928bf75"], publisher: "L'Agrume", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/L'Agrume", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Hors-jeu", enrichment_source: null },
+  { id: "b543747f-1269-5f2c-98d3-13188b27d9b0", title: "Héroïque fantaisie", event_ids: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2", author_ids: ["28cc0b40-521b-52be-b4d4-a956755eb971"], publisher: "Les Requins Marteaux", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20Requins%20Marteaux", leslibraires_url: "https://www.leslibraires.fr/recherche?query=H%C3%A9ro%C3%AFque%20fantaisie", enrichment_source: null },
+  { id: "ad666457-dc66-5f79-a8e2-24d71257ce29", title: "I am the Eggman", event_ids: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1", author_ids: ["0f40eecd-24cf-5c5c-8330-f71cda6d02c3"], publisher: "L'Association", publishing_year: null, ean: "9782844148100", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11300755-L.jpg", publisher_url: "https://openlibrary.org/publishers/L'Association", leslibraires_url: "https://www.leslibraires.fr/livre/9782844148100", enrichment_source: null },
+  { id: "ea17e67e-3aed-5734-bee3-23d291cb2e65", title: "Ici", event_ids: "634fc1df-6058-5247-a08c-fad69ce34c2e", author_ids: ["d95d8155-cb3d-51b6-aa89-a6c1c7d4efda"], publisher: "Casterman", publishing_year: 2015, ean: "9782070652440", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/7401081-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782070652440", enrichment_source: null },
+  { id: "bde7b6df-1144-56af-8a15-03f3710adb93", title: "Ici même", event_ids: "075999c0-bbf4-5524-9f02-8526d66cd913", author_ids: ["f00e5d5f-7bc4-58c0-98a0-7c48ff1b2ead", "8519e2d5-a656-5ce0-9642-74f939ba1e60"], publisher: "Casterman", publishing_year: null, ean: "9788498143836", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/973000-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9788498143836", enrichment_source: null },
+  { id: "0527534f-2c66-5d92-94d5-e579f45fd919", title: "Idéal Standard", event_ids: "e17498f8-e03e-5e24-8a88-9c976c869054", author_ids: ["df9128c9-cec9-53c8-8729-617042111988"], publisher: "Dargaud", publishing_year: 2017, ean: "9782205073157", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/15121688-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782205073157", enrichment_source: null },
+  { id: "fbb83c90-bc31-53bb-82f1-62a4921b7b66", title: "Idées Noires", event_ids: "a03c92e9-d27b-5a1a-83b5-01c0a6448113", author_ids: ["c86e250b-e9c3-59aa-869a-9ab8b53022f1"], publisher: "Fluide Glacial", publishing_year: null, ean: "9788775298532", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Fluide%20Glacial", leslibraires_url: "https://www.leslibraires.fr/livre/9788775298532", enrichment_source: null },
+  { id: "30dd4d30-1325-557c-b42b-6ad0894bf6b8", title: "Il y a longtemps que je t'aime", event_ids: "72255258-5a8d-5944-9c4c-0f6f07a6db10", author_ids: ["da90896c-8026-554d-a736-441570b78261"], publisher: "Casterman", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Il%20y%20a%20longtemps%20que%20je%20t'aime", enrichment_source: null },
+  { id: "c7de24d2-2e14-55d4-9ba8-d7999551971b", title: "Ils Brûlent", event_ids: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e", author_ids: ["0334ed05-27b2-5dea-b180-3ab2692d85e7"], publisher: "6 pieds sous terre", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/6%20pieds%20sous%20terre", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Ils%20Br%C3%BBlent", enrichment_source: null },
+  { id: "fff5e173-faf5-5091-b143-91036a35047d", title: "In Waves", event_ids: "123794f1-5856-5238-9fb5-380ed5d2e2f0", author_ids: ["b9adbafa-9486-52d4-bfd9-7072efd368ae"], publisher: "Casterman", publishing_year: null, ean: "9782203192393", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12385048-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203192393", enrichment_source: null },
+  { id: "99f378b2-5ec4-5e8c-9e8d-eec995fc7e71", title: "In these words", event_ids: "611db4de-5ee6-5c83-83c5-af36e6222068", author_ids: ["05eb8f95-5ac9-5a9c-8111-7901bcf3d397", "019a8caf-92e3-54b4-8add-539931bc8478"], publisher: "Manga Taifu", publishing_year: null, ean: "9781625480163", summary: null, publication_date: "2013-01-01T00:00:00.000Z", page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Manga%20Taifu", leslibraires_url: "https://www.leslibraires.fr/livre/9781625480163", enrichment_source: null },
+  { id: "0829463a-3433-53e5-ac54-605311f73a69", title: "It's Lonely at the Center of the Earth", event_ids: "826204d2-0a18-5f15-81c0-1f9730761358", author_ids: ["ec033c79-cf70-5028-8b1d-6b02cccf0b5c"], publisher: "Hi Comics", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Hi%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=It's%20Lonely%20at%20the%20Center%20of%20the%20Earth", enrichment_source: null },
+  { id: "d3ae501d-a740-50fa-9b36-23681a63e221", title: "Je voudrais me suicider mais j'ai pas le temps", event_ids: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a", author_ids: ["31387e90-fc18-5d6c-8a6a-6bd2ceef6053", "542d6a4e-eee5-5d28-b43b-1522bc6c23b7"], publisher: "Dargaud", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Je%20voudrais%20me%20suicider%20mais%20j'ai%20pas%20le%20temps", enrichment_source: null },
+  { id: "9915da9c-e3bf-579d-9399-0cca6f6854ed", title: "Je, François Villon", event_ids: "a162a1f8-1fec-55a0-838d-7c9173f88142", author_ids: ["37c48d00-bc91-517c-b977-e253bcc19204"], publisher: "Delcourt", publishing_year: 2017, ean: "9782413001867", summary: null, publication_date: "2017-11-21T00:00:00.000Z", page_count: 216, price: null, cover_url: "https://covers.openlibrary.org/b/id/10939904-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782413001867", enrichment_source: null },
+  { id: "99f43ae7-65c3-5f0b-bd9a-336ad6735fea", title: "Jean Doux et le mystère de la disquette molle", event_ids: "15afad0f-6a49-5a5d-9361-e696250a3993", author_ids: ["089c60ee-cedc-54f3-9c4d-9414af218b1b"], publisher: "Delcourt", publishing_year: null, ean: "9782756079332", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11311384-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782756079332", enrichment_source: null },
+  { id: "87fa356f-0b28-50f7-ad0f-7608ec05705e", title: "Johnny Ryan touche le fond", event_ids: "962b55da-7635-5b79-975c-44b8cd63497b", author_ids: ["b3477ea0-acf7-5378-921f-003ae0d32b4b"], publisher: "Misma", publishing_year: 2017, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Misma", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Johnny%20Ryan%20touche%20le%20fond", enrichment_source: null },
+  { id: "7a876a7a-5b64-5cde-9870-ecb1aa6d034c", title: "Jojo bizarre adventure - Diamond is unbreakable", event_ids: "19afc03b-0b2f-5102-946c-c27a7158332e", author_ids: ["03cdc5ac-b075-5ab7-9fc8-3d64cdf0096d"], publisher: "Delcourt/Tonkam", publishing_year: 2015, ean: "9781974708116", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10130815-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt%2FTonkam", leslibraires_url: "https://www.leslibraires.fr/livre/9781974708116", enrichment_source: null },
+  { id: "795622ed-bfb2-50c3-8569-fb6f10d3cddd", title: "Jolies ténèbres", event_ids: "2456ad86-5acc-5301-9bd6-90548d61b552", author_ids: ["742c3aed-25a1-5152-a908-bd41647dc69a", "b818290e-2fbd-585a-828a-479920a33e88"], publisher: "Dupuis", publishing_year: 2009, ean: "9781770461291", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12572299-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/livre/9781770461291", enrichment_source: null },
+  { id: "e71a06a2-fc10-56f0-b0a6-f5b1ec6ce8d4", title: "Journal", event_ids: "77c01a2a-d1e6-590e-b030-9b97131b7e52", author_ids: ["e7bad250-6da0-56ae-ab7c-bb32c2243587"], publisher: "L'Agrume", publishing_year: 2014, ean: "9780987963093", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/L'Agrume", leslibraires_url: "https://www.leslibraires.fr/livre/9780987963093", enrichment_source: null },
+  { id: "5b09fc60-7852-5dd7-85fd-47d06d44ac08", title: "Journal 1&2", event_ids: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1", author_ids: ["1e2535bc-1306-5edf-a096-6619d1fc69f0"], publisher: "Delcourt", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Journal%201%262", enrichment_source: null },
+  { id: "1d9f61ac-e443-5d00-95d6-232abbc96584", title: "Journal d'une disparition", event_ids: "12815554-e509-5c87-be90-52d0ba1546af", author_ids: ["0b088127-8e8e-5e67-aade-8ee924e23e14"], publisher: "Kana", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kana", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Journal%20d'une%20disparition", enrichment_source: null },
+  { id: "c77e8572-a4d7-5a3e-b772-31dd942e9d39", title: "Journal d’un ingénu et L’espoir malgré tout", event_ids: "75bd8d09-d669-50a0-a00c-48987b2b9472", author_ids: ["2d4623d8-e667-5373-b0e8-0933cc33d64e"], publisher: "Dupuis", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Journal%20d%E2%80%99un%20ing%C3%A9nu%20et%20L%E2%80%99espoir%20malgr%C3%A9%20tout", enrichment_source: null },
+  { id: "9fb8bc86-0c68-5c44-a864-1bd65f4c4114", title: "Julius Corentin Acquefacques, prisonnier des rêves - L'origines", event_ids: "12815554-e509-5c87-be90-52d0ba1546af", author_ids: ["a0e8081c-c789-5249-a9ad-938d911d3d15"], publisher: "Delcourt", publishing_year: null, ean: "9782906187795", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782906187795", enrichment_source: null },
+  { id: "2ab19c62-8468-5b16-99a6-f5b97153b993", title: "Jupiter's Legacy T1 et 2", event_ids: "41d6ae0e-8b21-541d-a141-e8cc0134bbab", author_ids: ["5867fc24-0362-5151-a5c0-a8846e846594", "950aea29-52b1-5b38-916e-69bd7222eed0"], publisher: "Panini Comics France", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Panini%20Comics%20France", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Jupiter's%20Legacy%20T1%20et%202", enrichment_source: null },
+  { id: "808def66-0261-5fb0-adf1-2e8c3f8761d8", title: "Justice League - Crise d'identité", event_ids: "aabf7c0f-3e3c-53d0-8439-2987209842ce", author_ids: ["566e776d-c9d5-52e2-8388-6dad7d49b424", "b922cef3-2fc8-568f-a16c-87f17c81465e"], publisher: "Urban Comics", publishing_year: 2013, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Justice%20League%20-%20Crise%20d'identit%C3%A9", enrichment_source: null },
+  { id: "e2102e41-2abb-59a4-b7fe-8d4ecc23e1da", title: "Kageki Shojo saison 0", event_ids: "075999c0-bbf4-5524-9f02-8526d66cd913", author_ids: ["5c77edf3-4fb1-52ab-ab5c-229c1eb836e8"], publisher: "Noeve Grafx", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Noeve%20Grafx", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Kageki%20Shojo%20saison%200", enrichment_source: null },
+  { id: "e0079da4-868b-589a-8dc6-7c04973b026b", title: "Kimi le vieux chien", event_ids: "f4307f94-c546-5685-b0d8-adc74d04b6cc", author_ids: ["8d7dbf62-af3b-5183-9758-a74bff3e93b2"], publisher: "Misma", publishing_year: null, ean: "9782916254654", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12840684-L.jpg", publisher_url: "https://openlibrary.org/publishers/Misma", leslibraires_url: "https://www.leslibraires.fr/livre/9782916254654", enrichment_source: null },
+  { id: "7769da5e-26ce-5da9-bec0-7a649cbadc21", title: "Kindom Come", event_ids: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4", author_ids: ["643adc5f-050b-514f-855f-2ff87a990c08", "cf7a99fa-a50c-569b-b9bd-f5e5c1769357"], publisher: "Urban Comics", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Kindom%20Come", enrichment_source: null },
+  { id: "42bcdd54-8a27-5fbc-b679-565b1ae82f57", title: "Kitaro le repoussant", event_ids: "016d6e71-04fa-5718-bbc4-42c714e709a9", author_ids: ["8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1"], publisher: "Cornélius", publishing_year: 2011, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Corn%C3%A9lius", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Kitaro%20le%20repoussant", enrichment_source: null },
+  { id: "13cec0e3-d7e3-54da-be39-8ea04750452b", title: "Kobane Calling", event_ids: "acaef519-c1b3-5690-84b1-d8fb25759813", author_ids: ["8d89626c-33ca-5927-9738-0bf520f4b52e"], publisher: "Cambourakis​", publishing_year: 2016, ean: "9788832734591", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/9379584-L.jpg", publisher_url: "https://openlibrary.org/publishers/Cambourakis%E2%80%8B", leslibraires_url: "https://www.leslibraires.fr/livre/9788832734591", enrichment_source: null },
+  { id: "904c9d20-f81a-591d-b110-2e457f6d8f60", title: "Koko n'aime pas le capitalisme", event_ids: "eede8ed7-1012-5831-95cb-b0d7c540f82c", author_ids: ["54bfd2ce-3cf6-5269-8baa-e3571399f282"], publisher: "bandes détournées", publishing_year: null, ean: "9782956690641", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14855051-L.jpg", publisher_url: "https://openlibrary.org/publishers/bandes%20d%C3%A9tourn%C3%A9es", leslibraires_url: "https://www.leslibraires.fr/livre/9782956690641", enrichment_source: null },
+  { id: "621f773d-d0aa-5e22-bf81-c530967a1fbe", title: "Koma", event_ids: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4", author_ids: ["70125cb3-0e45-5bc9-9aef-4cbb67edb051", "d665cfb4-c5db-586a-ad00-d7483be1868f"], publisher: "les Humanoïdes Associés", publishing_year: null, ean: "9781594651472", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/les%20Humano%C3%AFdes%20Associ%C3%A9s", leslibraires_url: "https://www.leslibraires.fr/livre/9781594651472", enrichment_source: null },
+  { id: "45a36e4f-7780-53c1-b774-353b3aa6e85e", title: "Kwoloon Généric Romance", event_ids: "e17498f8-e03e-5e24-8a88-9c976c869054", author_ids: ["b6ec5ccc-d0ec-5f4f-971f-7e1f961f15f1"], publisher: "Kana", publishing_year: 2021, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kana", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Kwoloon%20G%C3%A9n%C3%A9ric%20Romance", enrichment_source: null },
+  { id: "493aa385-71e1-5b94-937d-fc270fd2d7bc", title: "L'Autoroute du Soleil", event_ids: "090131b6-3b33-5b91-ac22-f73f60f5d347", author_ids: ["23c4dbf2-da76-5959-b5c8-de2b87f8dc74"], publisher: "Casterman", publishing_year: 2016, ean: "9782203372061", summary: null, publication_date: "1995-09-24T00:00:00.000Z", page_count: 430, price: null, cover_url: "https://covers.openlibrary.org/b/id/973076-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203372061", enrichment_source: null },
+  { id: "acef282e-003f-5e71-a1db-09b55471da17", title: "L'attente infinie", event_ids: "9892d986-cf7a-5e39-8f31-7e0e110e3565", author_ids: ["c1ffebeb-922e-5aec-a97e-43302c30360d"], publisher: "L'Agrume", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/L'Agrume", leslibraires_url: "https://www.leslibraires.fr/recherche?query=L'attente%20infinie", enrichment_source: null },
+  { id: "d6cae607-a1ff-5926-a3f2-bb062c84ffb8", title: "L'encyclopedie des débuts de la terre", event_ids: "5530f067-a32c-51e1-9ad7-97cf775ed705", author_ids: ["d8152d45-6327-555b-bab0-5773452caeed"], publisher: "Casterman", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=L'encyclopedie%20des%20d%C3%A9buts%20de%20la%20terre", enrichment_source: null },
+  { id: "9e1ead2f-e94b-51c4-a530-25ff413b4630", title: "L'enfantôme", event_ids: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a", author_ids: ["8c3c54b4-5338-5cf9-9db4-e376482d841b"], publisher: "Glénat", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/recherche?query=L'enfant%C3%B4me", enrichment_source: null },
+  { id: "bde8dc28-1f8e-58e9-8de4-8efd46178c54", title: "L'essentiel de Gouines à suivre", event_ids: "eb52c998-b16a-55d6-a25e-fc780089bc5b", author_ids: ["c31ac25f-8577-51a4-8112-3280350d8f34"], publisher: "Même Pas Mal", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/M%C3%AAme%20Pas%20Mal", leslibraires_url: "https://www.leslibraires.fr/recherche?query=L'essentiel%20de%20Gouines%20%C3%A0%20suivre", enrichment_source: null },
+  { id: "0f4c7769-b9a0-5d86-90c2-0dab9cdecac5", title: "L'homme qui tua Lucky Luke", event_ids: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf", author_ids: ["453525aa-7f27-5d42-ba7b-d5459af791fc"], publisher: "Casterman", publishing_year: 2016, ean: "9781800440630", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9781800440630", enrichment_source: null },
+  { id: "3bb145fc-9ba1-546b-84c5-b9bd43d58ef3", title: "L'odeur des garçons affamés", event_ids: "b0b01187-3e41-530a-b69d-1b778156244a", author_ids: ["5dffb67a-5aac-5df7-8cff-c42c4085749e", "2f4e23e5-9feb-53ab-beae-4555370c8f0d"], publisher: "Casterman BD", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman%20BD", leslibraires_url: "https://www.leslibraires.fr/recherche?query=L'odeur%20des%20gar%C3%A7ons%20affam%C3%A9s", enrichment_source: null },
+  { id: "4855cab9-a793-5a3b-b9ed-a1ae11a4cb96", title: "L'origine du monde", event_ids: "acaef519-c1b3-5690-84b1-d8fb25759813", author_ids: ["6036d73a-1f6b-581b-8e41-74a385c4be82"], publisher: "Rackham", publishing_year: 2016, ean: "9781683961109", summary: null, publication_date: "2018-08-27T00:00:00.000Z", page_count: 144, price: null, cover_url: "https://covers.openlibrary.org/b/id/10454240-L.jpg", publisher_url: "https://openlibrary.org/publishers/Rackham", leslibraires_url: "https://www.leslibraires.fr/livre/9781683961109", enrichment_source: null },
+  { id: "0fe6b6ee-7baa-56dc-ab21-40f63a87421b", title: "L'ère des cristaux", event_ids: "437bf521-fecc-5100-9170-e59fe3b5a117", author_ids: ["9e03747d-9a8a-5a37-bef0-6c60c93c5600"], publisher: "Glénat Manga", publishing_year: 2016, ean: "9782344046616", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11285035-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat%20Manga", leslibraires_url: "https://www.leslibraires.fr/livre/9782344046616", enrichment_source: null },
+  { id: "5cf79362-fbc8-5768-a71e-da1f3da4979b", title: "LEVANTS", event_ids: "1b7d31e9-f721-586b-a7b0-535c61a4ede7", author_ids: ["21e8c9b3-1fc6-5b3f-9c64-fbc955194792"], publisher: "Atrabile", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/recherche?query=LEVANTS", enrichment_source: null },
+  { id: "f865a993-10dd-5daf-9303-db5328540034", title: "La Marque Jaune", event_ids: "814b8d2c-b7ac-5509-9440-0e6532e9847a", author_ids: ["f88b6be4-be83-553a-9a10-0c3ff88d9c71"], publisher: "Dargaud", publishing_year: null, ean: "9782804004620", summary: null, publication_date: "1989-01-01T00:00:00.000Z", page_count: 95, price: null, cover_url: "https://covers.openlibrary.org/b/id/8380438-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782804004620", enrichment_source: null },
+  { id: "e00d76ed-0c5c-5fcb-b972-355c57612e91", title: "La Mer à boire", event_ids: "ec126adf-2c87-51c4-b109-22b7689339ad", author_ids: ["c75bf8ef-b761-59b7-aa36-7db51b472618"], publisher: "2024", publishing_year: null, ean: "9782383870340", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13007955-L.jpg", publisher_url: "https://openlibrary.org/publishers/2024", leslibraires_url: "https://www.leslibraires.fr/livre/9782383870340", enrichment_source: null },
+  { id: "def98803-9ae8-50cc-9cb5-3d7c8bbc9c7c", title: "La Montagne entre nous", event_ids: "2e34799f-dc59-5357-a523-c317961dfd16", author_ids: ["e9c52477-ae82-5bb5-862b-fe4d54df2502", "787e0d65-0fe6-5b9f-a9ec-1afe8993ea3d"], publisher: "Sarbacane", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Sarbacane", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20Montagne%20entre%20nous", enrichment_source: null },
+  { id: "d77af3ef-1018-580f-8b4b-bdac6993c4b9", title: "La Nuit Mange le jour", event_ids: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1", author_ids: ["4102d5a8-722f-5280-a290-ccc976747c79", "a0ad17df-cc7c-5579-a3f6-7fea6f6b69f5"], publisher: "Glénat", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20Nuit%20Mange%20le%20jour", enrichment_source: null },
+  { id: "553ba159-d15e-5f69-a159-fc28c71edeca", title: "La Princesse du château sans fin", event_ids: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36", author_ids: ["b4ba44f4-199f-5988-8479-e4422af71a49"], publisher: "Huber éditions", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Huber%20%C3%A9ditions", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20Princesse%20du%20ch%C3%A2teau%20sans%20fin", enrichment_source: null },
+  { id: "e6eb00f3-e29c-59a5-bf7e-7ca9a65fcd33", title: "La Route", event_ids: "d22485f9-9242-5a72-bc1e-9c223c27134d", author_ids: ["d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2"], publisher: "Dargaud", publishing_year: null, ean: "9782205208153", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/15137132-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782205208153", enrichment_source: null },
+  { id: "c36e3da5-0be8-5732-a555-fb7a2b9adc95", title: "La Terre des fils", event_ids: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405", author_ids: ["1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5"], publisher: "Futuropolis", publishing_year: null, ean: "9782754822527", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12585710-L.jpg", publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/livre/9782754822527", enrichment_source: null },
+  { id: "3d70b2d5-2977-5edc-972d-5f5e66124eef", title: "La balade nationale", event_ids: "7373210e-8d7c-5ea1-a2de-8f97310f21f9", author_ids: ["11ccdb5b-b14e-5297-93a6-144b65c6a374", "0fa6efdf-5b59-5497-a4a0-2412cc8f2249"], publisher: "La Découverte", publishing_year: 2017, ean: "9782707192356", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10583756-L.jpg", publisher_url: "https://openlibrary.org/publishers/La%20D%C3%A9couverte", leslibraires_url: "https://www.leslibraires.fr/livre/9782707192356", enrichment_source: null },
+  { id: "b94bc845-eb86-5631-9fb8-fcaf3f1b0ed5", title: "La caste des metas-Barons", event_ids: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc", author_ids: ["10a532a2-fbf4-5e12-af99-152a45092deb", "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b"], publisher: "Les humanoides associes", publishing_year: 2002, ean: "9782731613872", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/984972-L.jpg", publisher_url: "https://openlibrary.org/publishers/Les%20humanoides%20associes", leslibraires_url: "https://www.leslibraires.fr/livre/9782731613872", enrichment_source: null },
+  { id: "8912ab3c-bf35-5595-bdb9-3c6357a2e7b9", title: "La colère de Fantomas", event_ids: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6", author_ids: ["95fa1c0a-912a-55cc-8056-f531d33f882e", "48f4c9b6-4f07-53ad-bd78-dfc79b024297"], publisher: "Dargaud", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20col%C3%A8re%20de%20Fantomas", enrichment_source: null },
+  { id: "ec050548-66da-5642-af27-79ee4e0f5571", title: "La dernière comédie de Paolo Pinnochio", event_ids: "ec126adf-2c87-51c4-b109-22b7689339ad", author_ids: ["ec3adb15-c596-5229-b64a-d324f9941ab6"], publisher: "Tanibis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Tanibis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20derni%C3%A8re%20com%C3%A9die%20de%20Paolo%20Pinnochio", enrichment_source: null },
+  { id: "5792de8a-229c-5f32-9cd0-3d9421f85b62", title: "La fille dans l'écran", event_ids: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1", author_ids: ["517fda5b-0d2f-5cb9-a689-38ded1fc1732", "f98adb03-4782-5e7d-858c-cea66c569d0a"], publisher: "Marabulles", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Marabulles", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20fille%20dans%20l'%C3%A9cran", enrichment_source: null },
+  { id: "7b7682a7-12fd-5c89-81c1-ce4b2ec3cedd", title: "La fille de la plage", event_ids: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82", author_ids: ["b4e9729a-f1c7-5994-b791-a4c365333f5b"], publisher: "IMHO", publishing_year: 2014, ean: "9782364810044", summary: null, publication_date: "2015-01-01T00:00:00.000Z", page_count: 214, price: null, cover_url: "https://covers.openlibrary.org/b/id/12465152-L.jpg", publisher_url: "https://openlibrary.org/publishers/IMHO", leslibraires_url: "https://www.leslibraires.fr/livre/9782364810044", enrichment_source: null },
+  { id: "4c2f3bd9-177e-561b-a197-3579528230ae", title: "La lune est blanche", event_ids: "defb09ef-c4e5-542b-acdf-e0b5029140ba", author_ids: ["72a26f1a-77d7-531c-a4f4-2018eeb616ce", "b678c865-cc90-539b-8e87-b8b7bd979836"], publisher: "Futuropolis", publishing_year: 2014, ean: "9782754816090", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13254620-L.jpg", publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/livre/9782754816090", enrichment_source: null },
+  { id: "8347cdbe-e853-583d-a6f8-3288b8bb55a5", title: "La mère et la mort", event_ids: "19afc03b-0b2f-5102-946c-c27a7158332e", author_ids: ["84220ea6-51be-54b2-8524-36bc6a1ad7c5"], publisher: "Le Tripode", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Le%20Tripode", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20m%C3%A8re%20et%20la%20mort", enrichment_source: null },
+  { id: "429db244-0244-5954-aed2-67933069011e", title: "La paresse du panda", event_ids: "9892d986-cf7a-5e39-8f31-7e0e110e3565", author_ids: ["d0b44328-312e-5462-94fc-6071926328cf"], publisher: "Casterman", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20paresse%20du%20panda", enrichment_source: null },
+  { id: "09bd361d-294b-548e-81d2-a24ce73e755a", title: "La pipe de Marcos", event_ids: "7e9194c4-701f-58d0-801d-6b0a204ec1d4", author_ids: ["5a27bd93-6368-5a71-863e-b2984c27b7da"], publisher: "Rackham", publishing_year: 2005, ean: "9788495825902", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10873647-L.jpg", publisher_url: "https://openlibrary.org/publishers/Rackham", leslibraires_url: "https://www.leslibraires.fr/livre/9788495825902", enrichment_source: null },
+  { id: "ae0bc9de-368c-501b-bad7-5bbbe89576fb", title: "La république du catch", event_ids: "2456ad86-5acc-5301-9bd6-90548d61b552", author_ids: ["e09ec5a1-670e-5f3d-9f32-349c029bac21"], publisher: "Casterman", publishing_year: 2013, ean: "9782203095588", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10867232-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203095588", enrichment_source: null },
+  { id: "a968de90-88cc-5e8a-b553-d7298afa9d74", title: "La saga de Grimr", event_ids: "e53c882f-3627-5b43-b1d8-ee7469a56d93", author_ids: ["035c9f3a-3ce1-5d0c-8ea8-44c33fa53465"], publisher: "Delcourt", publishing_year: 2017, ean: "9782756080642", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10488831-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782756080642", enrichment_source: null },
+  { id: "871a5231-dd60-5c65-9b18-723b1565ffa1", title: "La structure est pourrie camarade", event_ids: "a162a1f8-1fec-55a0-838d-7c9173f88142", author_ids: ["d7ebbe2d-e613-5ff8-939b-63886c183c10", "6c202026-ad9b-5d9f-a7cb-35d1e0009667"], publisher: "Actes Sud Bd", publishing_year: 2017, ean: "9782330072773", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Actes%20Sud%20Bd", leslibraires_url: "https://www.leslibraires.fr/livre/9782330072773", enrichment_source: null },
+  { id: "09bf28a9-0ce1-5a09-a99c-a21fcffed008", title: "La tendresse des pierres", event_ids: "5530f067-a32c-51e1-9ad7-97cf775ed705", author_ids: ["f51793e5-443e-5f81-a04e-65fb91a807e1"], publisher: "Magnani", publishing_year: 2013, ean: "9782953981797", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10866362-L.jpg", publisher_url: "https://openlibrary.org/publishers/Magnani", leslibraires_url: "https://www.leslibraires.fr/livre/9782953981797", enrichment_source: null },
+  { id: "0a1fa77f-b0ff-55a3-ba65-d274ab0605d3", title: "La terre des fils", event_ids: "ceff02b3-7019-5ae7-8968-0907eff83fdb", author_ids: ["1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5"], publisher: "Futuropolis", publishing_year: 2017, ean: "9782754822527", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12585710-L.jpg", publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/livre/9782754822527", enrichment_source: null },
+  { id: "9ea2ba3b-2b4e-5225-9479-85a8b1c8761a", title: "La virginité passée 30 an", event_ids: "282002d3-3314-58cb-a08c-56d1b660f8ed", author_ids: ["9ce7b8ea-d8e8-5148-be02-bd7675f97a2e", "101177af-518d-573a-9f37-7d1907f8557a", "f95bf41f-d4da-5636-8d31-4a16f45f86ae"], publisher: "Akata", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Akata", leslibraires_url: "https://www.leslibraires.fr/recherche?query=La%20virginit%C3%A9%20pass%C3%A9e%2030%20an", enrichment_source: null },
+  { id: "e9a8d3e6-7671-5522-9438-1ca74a7d4a54", title: "Ladyboy vs Yakuzas", event_ids: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a", author_ids: ["9ce7b8ea-d8e8-5148-be02-bd7675f97a2e"], publisher: "Akata", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Akata", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Ladyboy%20vs%20Yakuzas", enrichment_source: null },
+  { id: "e37157f2-efbb-508a-bc47-17a90bc02c84", title: "Lanfeust de Troy", event_ids: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1", author_ids: ["9d6057a1-8a84-5712-9f8c-4f2e530b2f34", "5b576627-0b89-5180-bd78-cb87eb672cd0"], publisher: "Soleil", publishing_year: null, ean: "9788416428892", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13947934-L.jpg", publisher_url: "https://openlibrary.org/publishers/Soleil", leslibraires_url: "https://www.leslibraires.fr/livre/9788416428892", enrichment_source: null },
+  { id: "f6c7005e-7b64-5eef-844a-2ac4acdc1b07", title: "Le Bestiaire du Crépuscule", event_ids: "814b8d2c-b7ac-5509-9440-0e6532e9847a", author_ids: ["48aace14-0b8f-5dc9-aee0-2b52c883a081"], publisher: "Dupuis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20Bestiaire%20du%20Cr%C3%A9puscule", enrichment_source: null },
+  { id: "fdf7972d-6b2b-5ace-9939-d1b83cedae14", title: "Le Cas David Zimmerman", event_ids: "8f478152-30c0-53a8-ae55-0f5108d32a6d", author_ids: ["3b934034-aca9-5ef9-a4d4-f0dbf63716dd", "a531559e-8dbe-5b47-b3b7-b6e452214bd7"], publisher: "Sarbacane", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Sarbacane", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20Cas%20David%20Zimmerman", enrichment_source: null },
+  { id: "506574d1-5d79-5ea8-a30b-2de7549df7f9", title: "Le Cauchemar argenté", event_ids: "41d4751a-0f18-5d59-86d2-8e48b38d35fb", author_ids: ["926f14bf-2ff3-58be-b4a8-bfc69cd4f9fb"], publisher: "Mosquito", publishing_year: 2017, ean: "9782352834366", summary: null, publication_date: "2017-01-01T00:00:00.000Z", page_count: 205, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Mosquito", leslibraires_url: "https://www.leslibraires.fr/livre/9782352834366", enrichment_source: null },
+  { id: "6285af41-5732-5e84-907f-7c1c6393c5e5", title: "Le Chemisier", event_ids: "8057115a-7249-5288-a959-7f770b0707da", author_ids: ["552512e4-a3e7-5246-89cf-9ddee4ca5e17"], publisher: "Casterman", publishing_year: null, ean: "9782203168770", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13941840-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203168770", enrichment_source: null },
+  { id: "8faa03ae-f8f4-5b68-9059-c0c628f85707", title: "Le Dieu Vagabond", event_ids: "1320b429-70e2-593e-976d-0cc9646e88c8", author_ids: ["588613c4-6e68-5359-ada6-29b7ff634885"], publisher: "Sarbacane", publishing_year: null, ean: "9782377310463", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10866757-L.jpg", publisher_url: "https://openlibrary.org/publishers/Sarbacane", leslibraires_url: "https://www.leslibraires.fr/livre/9782377310463", enrichment_source: null },
+  { id: "73418c95-df6c-50b9-8713-0cd6437ca1e8", title: "Le Goût de la nectarine", event_ids: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d", author_ids: ["1f638d4e-04ec-5db9-840e-ac7e034bf933"], publisher: "Sarbacane", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Sarbacane", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20Go%C3%BBt%20de%20la%20nectarine", enrichment_source: null },
+  { id: "7c33cd89-18a5-55ee-a927-d33a3b91a4d4", title: "Le Grand Vide", event_ids: "8057115a-7249-5288-a959-7f770b0707da", author_ids: ["6c618371-acaa-57cf-916f-31d5288f8285"], publisher: "2024", publishing_year: null, ean: "9782901000709", summary: null, publication_date: "2021-08-19T00:00:00.000Z", page_count: 204, price: null, cover_url: "https://covers.openlibrary.org/b/id/12554069-L.jpg", publisher_url: "https://openlibrary.org/publishers/2024", leslibraires_url: "https://www.leslibraires.fr/livre/9782901000709", enrichment_source: null },
+  { id: "21bdadd2-bb70-57c4-9fac-bb1eef30acc0", title: "Le Grand mort", event_ids: "437bf521-fecc-5100-9170-e59fe3b5a117", author_ids: ["a353a8e9-4956-50a4-b70d-e0b753fcf522", "f7afb30f-e1e2-556c-9c9a-43825f33af8f", "7118c1e0-6a54-5867-b9b0-151ba357e1c8"], publisher: "Vents d'Ouest", publishing_year: 2007, ean: "9782749305950", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14550123-L.jpg", publisher_url: "https://openlibrary.org/publishers/Vents%20d'Ouest", leslibraires_url: "https://www.leslibraires.fr/livre/9782749305950", enrichment_source: null },
+  { id: "1a3f1d17-bebd-5ddb-abe3-9533675f24a8", title: "Le Jeu des hirondelles", event_ids: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4", author_ids: ["56030257-e26e-53d8-9d62-6471ba32ecce"], publisher: "Cambourakis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Cambourakis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20Jeu%20des%20hirondelles", enrichment_source: null },
+  { id: "a0258b1a-9505-561d-a6a8-ca69479420d8", title: "Le Jeune Albert", event_ids: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405", author_ids: ["ae96a2ee-5217-5ca6-b422-07d3393e3b41"], publisher: "Les Humanoïdes Associés", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20Humano%C3%AFdes%20Associ%C3%A9s", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20Jeune%20Albert", enrichment_source: null },
+  { id: "3dddd453-4856-5647-b862-58ee435de96b", title: "Le Nirvana est ici", event_ids: "2e34799f-dc59-5357-a523-c317961dfd16", author_ids: ["5a24ef24-132a-56bc-aef0-b3b1529d528e"], publisher: "Seuil", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Seuil", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20Nirvana%20est%20ici", enrichment_source: null },
+  { id: "71b57a4d-63c6-5220-b416-c2eacf41695e", title: "Le Requiem du roi des roses", event_ids: "2e34799f-dc59-5357-a523-c317961dfd16", author_ids: ["3732fd8e-96c9-58f7-8134-54e3af2e2b77"], publisher: "Kioon", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kioon", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20Requiem%20du%20roi%20des%20roses", enrichment_source: null },
+  { id: "510487fd-029b-5a3b-9700-0d11d9582757", title: "Le Roi Méduse", event_ids: "d97b7ed2-8888-563d-a3ab-85aa06e98884", author_ids: ["5140c72e-436a-5c58-85af-fde4a31bd1da"], publisher: "Actes Sud BD", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Actes%20Sud%20BD", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20Roi%20M%C3%A9duse", enrichment_source: null },
+  { id: "e36d75cf-f479-5e9b-b009-eecbf2f6e86d", title: "Le Tigre des neiges", event_ids: "e0863d9e-e93d-525a-9dbb-89140edf2588", author_ids: [], publisher: null, publishing_year: null, ean: "9782353481637", summary: null, publication_date: "2020-09-02T00:00:00.000Z", page_count: 216, price: null, cover_url: "https://covers.openlibrary.org/b/id/10463281-L.jpg", publisher_url: null, leslibraires_url: "https://www.leslibraires.fr/livre/9782353481637", enrichment_source: null },
+  { id: "ff97eec9-4561-5965-b9fd-31a81ed88ca1", title: "Le concile des arbres", event_ids: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf", author_ids: ["d9ccf51f-773d-5fc2-96b6-c595993dc4d5", "9329ecf2-fb88-5cda-93d0-4d796212135a"], publisher: "Dargaud", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20concile%20des%20arbres", enrichment_source: null },
+  { id: "80fb2922-29f9-5231-ba34-224676df214b", title: "Le confesseur sauvage", event_ids: "b0b01187-3e41-530a-b69d-1b778156244a", author_ids: ["7fe75a35-1d64-517a-885f-630c30ee6ba0"], publisher: "Glénat", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20confesseur%20sauvage", enrichment_source: null },
+  { id: "9f71560e-9697-518d-a092-a2e73ca2c608", title: "Le cycle de Cyann", event_ids: "709fba55-6a76-5210-83d2-4b1f0c2dd39d", author_ids: ["a98cd576-0496-5016-8738-c111b1250f68", "85773f9c-27a8-5d21-9786-fad52ff3180e"], publisher: "Casterman", publishing_year: null, ean: "9782756062167", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/973128-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782756062167", enrichment_source: null },
+  { id: "6a77cc15-294a-5114-8d5f-73d5d402ab51", title: "Le dernier Atlas", event_ids: "e3653545-0c2a-50bd-8d14-699d252b53a9", author_ids: ["8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87", "4d8e72d3-3b12-548b-b11e-25da6ce04060"], publisher: "Dupuis", publishing_year: null, ean: "9782800171166", summary: null, publication_date: "2019-03-14T00:00:00.000Z", page_count: 232, price: null, cover_url: "https://covers.openlibrary.org/b/id/12385045-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/livre/9782800171166", enrichment_source: null },
+  { id: "2a776a76-0486-5fa8-a693-0507a23edda8", title: "Le divin scénario", event_ids: "f4307f94-c546-5685-b0d8-adc74d04b6cc", author_ids: ["f6acf67b-3605-510c-89f9-da99c5668419", "588613c4-6e68-5359-ada6-29b7ff634885"], publisher: "Actes Sud", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Actes%20Sud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20divin%20sc%C3%A9nario", enrichment_source: null },
+  { id: "0600c708-f469-5a62-87d6-0081966be2b0", title: "Le fils de l'ours père", event_ids: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e", author_ids: ["21e8c9b3-1fc6-5b3f-9c64-fbc955194792"], publisher: "Hoochie Coochie", publishing_year: null, ean: "9782916049496", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Hoochie%20Coochie", leslibraires_url: "https://www.leslibraires.fr/livre/9782916049496", enrichment_source: null },
+  { id: "94bd0510-12eb-51a0-a26e-0c444a702785", title: "Le grand méchant renard", event_ids: "00e27df2-3483-5397-bfdb-e40b84d0dd1c", author_ids: ["bb4e4e79-2608-504d-8924-888397c60925"], publisher: "Delcourt", publishing_year: 2015, ean: "9782756051246", summary: null, publication_date: "2015-01-20T00:00:00.000Z", page_count: 192, price: null, cover_url: "https://covers.openlibrary.org/b/id/10867922-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782756051246", enrichment_source: null },
+  { id: "2f0d945f-bd63-5967-9a57-844e20b11675", title: "Le privilège des Dieux", event_ids: "b2b823be-b192-5bd5-9047-db6dac16cd7a", author_ids: ["eb5d6e96-6e8e-5188-8ea6-58cc19c59957"], publisher: "Les requins Marteaux", publishing_year: 2020, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20requins%20Marteaux", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20privil%C3%A8ge%20des%20Dieux", enrichment_source: null },
+  { id: "e49de7c1-067d-5937-b900-075d3a2f7799", title: "Le sculpteur", event_ids: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82", author_ids: ["3c63d44c-9b4f-596e-9bd5-84c3786f15dd"], publisher: "Rue de Sèvre", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Rue%20de%20S%C3%A8vre", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Le%20sculpteur", enrichment_source: null },
+  { id: "bab472e5-dba8-56e8-94b4-eaca12df0767", title: "Le temps est proche", event_ids: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a", author_ids: ["0de81355-7467-5c84-ac5a-fda83bddd329"], publisher: "The Hoochie Coochie", publishing_year: 2012, ean: "9782916049274", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10554195-L.jpg", publisher_url: "https://openlibrary.org/publishers/The%20Hoochie%20Coochie", leslibraires_url: "https://www.leslibraires.fr/livre/9782916049274", enrichment_source: null },
+  { id: "935c5f25-3edb-5853-91ea-c0c75d211ba5", title: "Le trône d’argile", event_ids: "15afad0f-6a49-5a5d-9361-e696250a3993", author_ids: ["63afd855-4f1d-51bb-a5c5-faf4676934bd", "731fd7b0-dd35-5c0e-a77b-6d21464732f8", "7dc8b037-9a91-58d1-8b32-74b2c39834f2", "4f07590b-71c7-574a-a119-11a46258f06a"], publisher: "Delcourt", publishing_year: null, ean: "9782756014609", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12946590-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782756014609", enrichment_source: null },
+  { id: "6cbc856d-bbf3-517d-8096-69dcf2e9b270", title: "Les 100 nuits de Héros", event_ids: "aabf7c0f-3e3c-53d0-8439-2987209842ce", author_ids: ["d8152d45-6327-555b-bab0-5773452caeed"], publisher: "Casterman", publishing_year: 2017, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20100%20nuits%20de%20H%C3%A9ros", enrichment_source: null },
+  { id: "1c9e35cc-80d4-5dce-8e80-2874fe876600", title: "Les Ames enflammées", event_ids: "3d9441c7-6496-5d72-9e60-65b6ea76742a", author_ids: ["bac10044-bf28-587c-bf43-2ca135089535"], publisher: "Glénat", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20Ames%20enflamm%C3%A9es", enrichment_source: null },
+  { id: "06d42289-e3ad-57c0-aade-03088507faa9", title: "Les Contes de la mansarde", event_ids: "826204d2-0a18-5f15-81c0-1f9730761358", author_ids: ["206efe6f-29f9-5386-b123-f2bbd3f27f6d", "d52a43df-2aa2-547e-b98d-830dec705d02"], publisher: "L'Employé du moi", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/L'Employ%C3%A9%20du%20moi", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20Contes%20de%20la%20mansarde", enrichment_source: null },
+  { id: "fc62fcaa-84ef-5a91-a79d-34ee62b436ef", title: "Les Guerres de Lucas", event_ids: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa", author_ids: ["0609ba11-9dd6-51a2-a1fa-5945569f3a15", "2b7ad5e3-6b65-5786-bd5f-d02f8bcdde29"], publisher: "Deman", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Deman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20Guerres%20de%20Lucas", enrichment_source: null },
+  { id: "58bf1586-0770-5e05-9d5e-84b033947d1f", title: "Les Ombres", event_ids: "709fba55-6a76-5210-83d2-4b1f0c2dd39d", author_ids: ["635f02aa-96a4-5530-bbea-013c415c8290", "09a3b727-757e-5f3a-84f0-75b4364f9c63"], publisher: "Dargaud", publishing_year: null, ean: "9782205086249", summary: null, publication_date: "2020-01-01T00:00:00.000Z", page_count: 178, price: null, cover_url: "https://covers.openlibrary.org/b/id/14821083-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782205086249", enrichment_source: null },
+  { id: "406eb059-e7e8-54f1-8f89-cddea6c629e0", title: "Les Sauvages", event_ids: "814b8d2c-b7ac-5509-9440-0e6532e9847a", author_ids: ["6ada2d73-1f4e-5954-8c72-bc0404fa4307"], publisher: "Actes Sud/ L’An 2", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Actes%20Sud%2F%20L%E2%80%99An%202", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20Sauvages", enrichment_source: null },
+  { id: "5bebe1b3-ed45-5b99-bc12-026abccc686e", title: "Les Sentiments du prince Charles", event_ids: "e17498f8-e03e-5e24-8a88-9c976c869054", author_ids: ["6036d73a-1f6b-581b-8e41-74a385c4be82"], publisher: "Rackham", publishing_year: 2012, ean: "9782878271980", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12814543-L.jpg", publisher_url: "https://openlibrary.org/publishers/Rackham", leslibraires_url: "https://www.leslibraires.fr/livre/9782878271980", enrichment_source: null },
+  { id: "fd110a14-3cb4-5407-a837-b3bae1c9b278", title: "Les Yeux d'Alex", event_ids: "b148c708-8268-57c5-987d-7c673b310cee", author_ids: ["cb6b2c97-9182-501d-90a0-2c812dd7d641"], publisher: "Glénat", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20Yeux%20d'Alex", enrichment_source: null },
+  { id: "d7561c34-87ed-5351-9dcd-cabcdda88eb9", title: "Les aventures de Freddy Lombard, La comète de Carthage", event_ids: "10c922a7-8e8b-50ca-ae70-0e9dad0db06b", author_ids: ["ae96a2ee-5217-5ca6-b422-07d3393e3b41"], publisher: "Les Humanoïdes Associés", publishing_year: 2014, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20Humano%C3%AFdes%20Associ%C3%A9s", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20aventures%20de%20Freddy%20Lombard%2C%20La%20com%C3%A8te%20de%20Carthage", enrichment_source: null },
+  { id: "609fe001-1408-54fc-8686-1a7094aaa0da", title: "Les contes de la crypte", event_ids: "090131b6-3b33-5b91-ac22-f73f60f5d347", author_ids: ["581a5d0a-41d0-54b0-8ccb-9f5dac37c4e3"], publisher: "Akileos", publishing_year: 2020, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Akileos", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20contes%20de%20la%20crypte", enrichment_source: null },
+  { id: "b8354485-7ce8-5d1c-a71b-bca27475f6c7", title: "Les derniers jours d'un immortel", event_ids: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319", author_ids: ["8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87", "4d8e72d3-3b12-548b-b11e-25da6ce04060"], publisher: "Futuropolis", publishing_year: 2013, ean: "9782754801584", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10911190-L.jpg", publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/livre/9782754801584", enrichment_source: null },
+  { id: "7b60d495-19b6-5aec-83d2-df40acb1d3e8", title: "Les faux lieux", event_ids: "b148c708-8268-57c5-987d-7c673b310cee", author_ids: ["cf14aca0-99b7-5e93-bac5-cc55c93da085"], publisher: "Akileos", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Akileos", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20faux%20lieux", enrichment_source: null },
+  { id: "a487bacd-3e60-5db3-9c0f-e8167d21ca9d", title: "Les filles de Salem", event_ids: "19afc03b-0b2f-5102-946c-c27a7158332e", author_ids: ["34342b16-3119-579b-9c61-ef99940a8224"], publisher: "Dargaud", publishing_year: 2018, ean: "9782205077025", summary: null, publication_date: "2018-09-20T00:00:00.000Z", page_count: 200, price: null, cover_url: "https://covers.openlibrary.org/b/id/10874433-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782205077025", enrichment_source: null },
+  { id: "b84e2de9-9773-5fb3-b098-95600aabefb4", title: "Les fils d'El Topo", event_ids: "acaef519-c1b3-5690-84b1-d8fb25759813", author_ids: ["e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b", "a0b94843-ddbb-5e2e-94f4-31715a79ae96"], publisher: "Glénat", publishing_year: 2016, ean: "9782344004487", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9782344004487", enrichment_source: null },
+  { id: "f2ece642-d63f-5322-8208-0d755268b0a7", title: "Les ignorants", event_ids: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc", author_ids: ["81eb6653-4aac-5e37-b82d-5e6552f5669a"], publisher: "Futuropolis", publishing_year: 2011, ean: "9782754803823", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/7110841-L.jpg", publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/livre/9782754803823", enrichment_source: null },
+  { id: "08e65064-e95c-5215-8c3d-adb674683828", title: "Les nuits d'aksehir", event_ids: "ceff02b3-7019-5ae7-8968-0907eff83fdb", author_ids: ["37d869e4-02d9-5885-a0c5-62e7f626e80d"], publisher: "Akata", publishing_year: 2017, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Akata", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20nuits%20d'aksehir", enrichment_source: null },
+  { id: "d6777df6-7ff7-5d60-883a-8b4a3ea24742", title: "Les spectateurs", event_ids: "b0b01187-3e41-530a-b69d-1b778156244a", author_ids: ["09ba303e-ed68-5c29-bac3-42f3ca9dc165"], publisher: "Casterman BD", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman%20BD", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Les%20spectateurs", enrichment_source: null },
+  { id: "605a6f52-dfac-5d30-9135-70f21673a9c9", title: "Lettre à Blue bird", event_ids: "22747bbf-a596-5a9a-aaea-99acc760e0d9", author_ids: ["bb3b2c50-6f6f-552e-a8aa-c43c4c7b9427"], publisher: "Frémok", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Fr%C3%A9mok", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Lettre%20%C3%A0%20Blue%20bird", enrichment_source: null },
+  { id: "db8922f2-954d-5063-9ca0-699e952b7520", title: "Little tulip", event_ids: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b", author_ids: ["3bb69f39-439a-56b4-8c8b-84229ff231ba", "4d4f91cb-cbe7-5303-8271-d641cf6a6221"], publisher: "Le Lombard", publishing_year: 2014, ean: "9782803634170", summary: null, publication_date: "2014-11-05T00:00:00.000Z", page_count: 88, price: null, cover_url: "https://covers.openlibrary.org/b/id/12541043-L.jpg", publisher_url: "https://openlibrary.org/publishers/Le%20Lombard", leslibraires_url: "https://www.leslibraires.fr/livre/9782803634170", enrichment_source: null },
+  { id: "95b4b543-ca5b-5c52-a9a8-ee27b4ebe32b", title: "Lock and Key", event_ids: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1", author_ids: ["604f3749-8f3e-5862-a9e5-04fa037f26c0", "38ca6247-1af6-574c-b8c6-2ce51282d966"], publisher: "Hicomics", publishing_year: null, ean: "9781600102370", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/6671226-L.jpg", publisher_url: "https://openlibrary.org/publishers/Hicomics", leslibraires_url: "https://www.leslibraires.fr/livre/9781600102370", enrichment_source: null },
+  { id: "fb7e1f82-d227-5650-85b7-c44a4f634109", title: "Louis Riel", event_ids: "a162a1f8-1fec-55a0-838d-7c9173f88142", author_ids: ["cdc82420-f432-5f59-a469-f2e496e2ec4d"], publisher: "La Pastèque", publishing_year: 2004, ean: "9781894937894", summary: "In 1670 the king of England granted Rupert's Land to a fur-trading enterprise called the Hudson's Bay Company.", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/943967-L.jpg", publisher_url: "https://openlibrary.org/publishers/La%20Past%C3%A8que", leslibraires_url: "https://www.leslibraires.fr/livre/9781894937894", enrichment_source: null },
+  { id: "06175f53-82fc-5df0-a3d6-33be607df9c8", title: "Love in vain", event_ids: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9", author_ids: ["402fbda6-fe33-5e95-a64c-4385f9029a38", "499e8af8-50a7-57f3-8d89-f5d793796f9d"], publisher: "Glénat", publishing_year: 2014, ean: "9782344003398", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10624873-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9782344003398", enrichment_source: null },
+  { id: "809c07eb-4cdb-564d-801f-810e13afae93", title: "Luke Cage", event_ids: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2", author_ids: ["86408786-4e90-52b4-aa67-30066872af26", "fe17f662-7b96-54eb-a378-d165448e83c6"], publisher: "Panini Comics France", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Panini%20Comics%20France", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Luke%20Cage", enrichment_source: null },
+  { id: "46840f52-8e72-51fa-8308-bfe9e584b7c8", title: "Lupus", event_ids: "8b17df4f-c7a6-568b-bba7-e9f0474230ac", author_ids: ["2f4e23e5-9feb-53ab-beae-4555370c8f0d"], publisher: "Atrabile", publishing_year: null, ean: "9781603094597", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13927516-L.jpg", publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/livre/9781603094597", enrichment_source: null },
+  { id: "5c6c2ec3-ceeb-5561-af33-6dc9d7f3f5c4", title: "Luthor", event_ids: "634fc1df-6058-5247-a08c-fad69ce34c2e", author_ids: ["307d6d57-5e9c-5093-81f8-c14ebd1a70bf", "87b5bd4e-962b-5128-b63a-fcb5a620a097"], publisher: "Urban Comics", publishing_year: 2016, ean: "9781401204549", summary: null, publication_date: "2005-12-31T00:00:00.000Z", page_count: 144, price: null, cover_url: "https://covers.openlibrary.org/b/id/749091-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781401204549", enrichment_source: null },
+  { id: "22bae3a8-139b-5a3f-932f-80fc901d43af", title: "L’Origine du Monstre", event_ids: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e", author_ids: ["d055575f-870c-5ed6-8371-8ede4af900c1"], publisher: "Requins Marteaux", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Requins%20Marteaux", leslibraires_url: "https://www.leslibraires.fr/recherche?query=L%E2%80%99Origine%20du%20Monstre", enrichment_source: null },
+  { id: "21801dc4-dd74-5bc0-881d-89f0328bcfcf", title: "L’art de la vulve une obscénité ?", event_ids: "75bd8d09-d669-50a0-a00c-48987b2b9472", author_ids: ["1c483a7c-e6bb-582a-8792-0cc4e649f4d0"], publisher: "Presque Lune", publishing_year: 2018, ean: "9782917897348", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Presque%20Lune", leslibraires_url: "https://www.leslibraires.fr/livre/9782917897348", enrichment_source: null },
+  { id: "9a9a15ba-5c4a-5d05-9b95-0f346d811cf6", title: "MW", event_ids: "e3653545-0c2a-50bd-8d14-699d252b53a9", author_ids: ["91077797-d951-5025-a095-fef1a2b3bb5f"], publisher: "Delcourt/Tonkam", publishing_year: null, ean: "9781934287729", summary: "Excuse me... Is this the road to T city?", publication_date: "2010-01-01T00:00:00.000Z", page_count: 584, price: null, cover_url: "https://covers.openlibrary.org/b/id/959005-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt%2FTonkam", leslibraires_url: "https://www.leslibraires.fr/livre/9781934287729", enrichment_source: null },
+  { id: "330732a9-e0e1-5cf1-a00d-ecd08a2bc222", title: "Ma famille imaginaire", event_ids: "3d3c0b42-70a2-5146-a04f-9b0782e75776", author_ids: ["98f266c0-cb80-5d14-8e5c-697e49b48751"], publisher: "L'Agrume", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/L'Agrume", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Ma%20famille%20imaginaire", enrichment_source: null },
+  { id: "45654738-801a-54ec-a4da-363363691092", title: "Macadam Byzance", event_ids: "7373210e-8d7c-5ea1-a2de-8f97310f21f9", author_ids: ["5e40aaad-a8ad-59d4-8f7c-0fc6c135a0cd", "e60fbf0f-6d78-5335-af27-7dca3f46b9b0"], publisher: "Fluide Glacial", publishing_year: 2019, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Fluide%20Glacial", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Macadam%20Byzance", enrichment_source: null },
+  { id: "a363d9bd-8981-5155-9eb6-c9cef10c231a", title: "Madones et Putains", event_ids: "ec126adf-2c87-51c4-b109-22b7689339ad", author_ids: ["e5020b23-1913-5091-8e95-fb8deb0a3b96"], publisher: "Dupuis", publishing_year: null, ean: "9791034758746", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/15113416-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/livre/9791034758746", enrichment_source: null },
+  { id: "9c1164e3-301e-5075-af2f-013c819bb56a", title: "Magic order", event_ids: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2", author_ids: ["5867fc24-0362-5151-a5c0-a8846e846594", "a35e9edb-f6b1-5319-a1b2-1d16cc509e2a"], publisher: "Panini Comics France", publishing_year: null, ean: "9783741612435", summary: null, publication_date: "2019-04-22T00:00:00.000Z", page_count: 176, price: null, cover_url: "https://covers.openlibrary.org/b/id/8794780-L.jpg", publisher_url: "https://openlibrary.org/publishers/Panini%20Comics%20France", leslibraires_url: "https://www.leslibraires.fr/livre/9783741612435", enrichment_source: null },
+  { id: "995dd270-3ead-51df-a96b-919cd922cbea", title: "Magic pen", event_ids: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9", author_ids: ["43871c3f-7878-50fd-8691-838780202913"], publisher: "Casterman", publishing_year: 2014, ean: "9780861662364", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12182265-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9780861662364", enrichment_source: null },
+  { id: "122a0172-06d1-548d-a796-547d56b7fa4c", title: "Malavalle", event_ids: "aabf7c0f-3e3c-53d0-8439-2987209842ce", author_ids: ["10666593-e9d3-5312-90c8-4ef8d1e3cebe", "3f2d648d-6795-56c7-a81a-4a98b852b1a0"], publisher: "Realistes", publishing_year: 2021, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Realistes", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Malavalle", enrichment_source: null },
+  { id: "12d42d70-3a3c-5d61-bf59-ac8cc63ba0a5", title: "Malgré tout", event_ids: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d", author_ids: ["35cf1a17-190f-5618-a7fe-4554e75983f4"], publisher: "Dargaud", publishing_year: null, ean: "9782505081500", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10840617-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782505081500", enrichment_source: null },
+  { id: "19a60d41-85b5-5230-8e6c-e5537981a6f4", title: "Malgré tout je suis ici", event_ids: "8f478152-30c0-53a8-ae55-0f5108d32a6d", author_ids: [], publisher: "l'Association", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/l'Association", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Malgr%C3%A9%20tout%20je%20suis%20ici", enrichment_source: null },
+  { id: "455fed83-1d56-56f4-b2e3-46efbcc1f0e1", title: "Maléfiques", event_ids: "15afad0f-6a49-5a5d-9361-e696250a3993", author_ids: ["e5020b23-1913-5091-8e95-fb8deb0a3b96"], publisher: "L'Association", publishing_year: null, ean: "9782844147592", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/L'Association", leslibraires_url: "https://www.leslibraires.fr/livre/9782844147592", enrichment_source: null },
+  { id: "c7c00974-55df-5ddb-9094-599a49fedc04", title: "Manger", event_ids: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a", author_ids: ["ce1989f6-f25c-5cf4-9899-cb4528ed5422"], publisher: "Cambourakis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Cambourakis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Manger", enrichment_source: null },
+  { id: "2a5e1c5f-476c-5d4e-81f3-2b78cb856e41", title: "Mashle", event_ids: "f4307f94-c546-5685-b0d8-adc74d04b6cc", author_ids: ["fd8a5c80-b148-5a48-a880-d38d2e74bf5a"], publisher: "Kazé", publishing_year: null, ean: "9782820340801", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12102647-L.jpg", publisher_url: "https://openlibrary.org/publishers/Kaz%C3%A9", leslibraires_url: "https://www.leslibraires.fr/livre/9782820340801", enrichment_source: null },
+  { id: "69f9074f-83c0-57ba-977b-1125d2fbae16", title: "Medley", event_ids: "77c01a2a-d1e6-590e-b030-9b97131b7e52", author_ids: ["5ad0a9e1-5ffa-5c14-a110-f2130ce3514f"], publisher: "Même Pas Mal", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/M%C3%AAme%20Pas%20Mal", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Medley", enrichment_source: null },
+  { id: "385f1264-4b26-5572-b2a8-10343d26cc7c", title: "Megg Mogg And Owl - Maximal Spleen", event_ids: "b2b823be-b192-5bd5-9047-db6dac16cd7a", author_ids: ["06ae0839-7b89-5d3a-bf83-99dc6830803a"], publisher: "Misma", publishing_year: 2014, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Misma", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Megg%20Mogg%20And%20Owl%20-%20Maximal%20Spleen", enrichment_source: null },
+  { id: "f95d6e61-6426-5b0b-9311-b9e8ecb36b78", title: "Mekka Nikki", event_ids: "8f478152-30c0-53a8-ae55-0f5108d32a6d", author_ids: ["25a92ac6-0606-546b-91d9-21824fdc82a1", "ee98cfb4-9b32-5356-b3be-337badf7aa02"], publisher: "Les Humanoïdes associés", publishing_year: null, ean: "9782379360145", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10508319-L.jpg", publisher_url: "https://openlibrary.org/publishers/Les%20Humano%C3%AFdes%20associ%C3%A9s", leslibraires_url: "https://www.leslibraires.fr/livre/9782379360145", enrichment_source: null },
+  { id: "8cf6bed4-1fb3-55c1-a44b-1d26a4467c32", title: "Mickey's craziest adventures", event_ids: "77c01a2a-d1e6-590e-b030-9b97131b7e52", author_ids: ["29c51d18-72d7-5715-8d93-7f49418467af", "63e6bbf9-501c-5cab-a447-df8eca94278c"], publisher: "Glénat", publishing_year: 2016, ean: "9781631406942", summary: null, publication_date: "2016-12-12T00:00:00.000Z", page_count: 48, price: null, cover_url: "https://covers.openlibrary.org/b/id/8846511-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9781631406942", enrichment_source: null },
+  { id: "d0acc909-4425-5267-a65a-41d9ca5be16b", title: "Mimikaki", event_ids: "07171107-88be-5a83-be43-0205a9c53237", author_ids: ["f405fdc1-4877-50a2-b054-8198ebc80a55"], publisher: "Le Lézard Noir", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Le%20L%C3%A9zard%20Noir", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Mimikaki", enrichment_source: null },
+  { id: "8b049e1b-5908-5c4b-972e-d34e04c6ab0c", title: "Mind MGMT", event_ids: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4", author_ids: ["088ef0e0-f6d5-5b0b-8bbe-34adf8a69a86"], publisher: "éditions Monsieur Toussaint Louverture", publishing_year: null, ean: "9781616557980", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13068001-L.jpg", publisher_url: "https://openlibrary.org/publishers/%C3%A9ditions%20Monsieur%20Toussaint%20Louverture", leslibraires_url: "https://www.leslibraires.fr/livre/9781616557980", enrichment_source: null },
+  { id: "75fc73a4-84d6-50f0-99d9-b7445c392bb8", title: "Mind game", event_ids: "defb09ef-c4e5-542b-acdf-e0b5029140ba", author_ids: ["402fbda6-fe33-5e95-a64c-4385f9029a38", "499e8af8-50a7-57f3-8d89-f5d793796f9d"], publisher: "IMHO", publishing_year: 2014, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/IMHO", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Mind%20game", enrichment_source: null },
+  { id: "b6e3995c-deef-5246-a9b0-df3a38e0f7e8", title: "Mister Miracle", event_ids: "943ef86c-2f3d-5418-811c-3984ec44218e", author_ids: ["67021253-b3f9-5131-a5a1-6f1e6996c8bd", "cd86941a-d2f6-535f-bb9b-ae9e1a277c61"], publisher: "Urban Comics", publishing_year: null, ean: "9781401283544", summary: null, publication_date: "2019-02-18T00:00:00.000Z", page_count: 320, price: null, cover_url: "https://covers.openlibrary.org/b/id/8805644-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781401283544", enrichment_source: null },
+  { id: "331c85b8-47f5-56b5-bdb2-c4ad8b36a229", title: "Mitterand, un jeune homme de droite", event_ids: "00e27df2-3483-5397-bfdb-e40b84d0dd1c", author_ids: ["ce0db7bb-6bd3-522e-bc15-0b4f81ad598e", "ecb4c9b9-3668-504e-b85a-91058c2412a2"], publisher: "Rue de Sèvres", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Rue%20de%20S%C3%A8vres", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Mitterand%2C%20un%20jeune%20homme%20de%20droite", enrichment_source: null },
+  { id: "b0b3870c-0997-5868-bd23-6e08e3cc0aac", title: "Mobile Suit Gundam - The origin", event_ids: "3d9441c7-6496-5d72-9e60-65b6ea76742a", author_ids: ["06d2e44e-3bc3-5c38-80b2-d2bc46f5a2d5"], publisher: "Vega", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Vega", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Mobile%20Suit%20Gundam%20-%20The%20origin", enrichment_source: null },
+  { id: "7cb93591-7dde-59e6-9afd-dc565a390435", title: "Moi ce que j'aime c'est les monstres", event_ids: "07171107-88be-5a83-be43-0205a9c53237", author_ids: ["a4c619ad-7880-5c8f-aeef-ac6c22630f6d"], publisher: "Monsieur Toussaint Louverture", publishing_year: 2018, ean: "9791090724471", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8263418-L.jpg", publisher_url: "https://openlibrary.org/publishers/Monsieur%20Toussaint%20Louverture", leslibraires_url: "https://www.leslibraires.fr/livre/9791090724471", enrichment_source: null },
+  { id: "be84548c-9e26-56ea-a97d-bdf4b9653250", title: "Moins qu'hier (plus que demain)", event_ids: "e17498f8-e03e-5e24-8a88-9c976c869054", author_ids: ["831f7cc9-9ad6-5358-8ca1-1d671a6cb6f1"], publisher: "Glenat", publishing_year: 2018, ean: "9782344025796", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11256446-L.jpg", publisher_url: "https://openlibrary.org/publishers/Glenat", leslibraires_url: "https://www.leslibraires.fr/livre/9782344025796", enrichment_source: null },
+  { id: "9491f949-140c-5092-9add-d05dc3983fe1", title: "Monsieur Léotard", event_ids: "81b7b345-17ae-599b-8c17-b38aafc42040", author_ids: ["eb457afe-c7d7-5465-91f5-1f76bbd153d4", "aabdfb6d-def7-59e7-aef7-caf4f826425e"], publisher: "Çà et là", publishing_year: 2016, ean: "9782369902300", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/5730763-L.jpg", publisher_url: "https://openlibrary.org/publishers/%C3%87%C3%A0%20et%20l%C3%A0", leslibraires_url: "https://www.leslibraires.fr/livre/9782369902300", enrichment_source: null },
+  { id: "47a951d2-d847-566a-9180-6dad63037708", title: "Motor Girl", event_ids: "2412bc73-7636-5bb4-84b3-059088f2b82f", author_ids: ["d7afa3d1-9cbc-5630-9a1e-36550ba2ae00"], publisher: "Delcourt", publishing_year: null, ean: "9781892597663", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14642480-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9781892597663", enrichment_source: null },
+  { id: "b7cfe93d-0614-51ed-9121-129779a36201", title: "My Hero Academia", event_ids: "016d6e71-04fa-5718-bbc4-42c714e709a9", author_ids: ["685f38e5-4320-5e62-9650-764382aed9a2"], publisher: "Ki-oon", publishing_year: 2014, ean: "9781421582702", summary: null, publication_date: "2015-01-01T00:00:00.000Z", page_count: 208, price: null, cover_url: "https://covers.openlibrary.org/b/id/8491062-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ki-oon", leslibraires_url: "https://www.leslibraires.fr/livre/9781421582702", enrichment_source: null },
+  { id: "a9faa5b6-9672-510a-bd92-634e3aeb2240", title: "My home hero", event_ids: "611db4de-5ee6-5c83-83c5-af36e6222068", author_ids: ["2e7138da-8cc1-50d9-846f-ea5c74a98cf7", "4c6305bb-724f-5f86-ae00-73e45454b903"], publisher: "Kurokawa", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kurokawa", leslibraires_url: "https://www.leslibraires.fr/recherche?query=My%20home%20hero", enrichment_source: null },
+  { id: "ca07d9e7-2615-5857-8ff2-c8a481345db9", title: "Mécanique Céleste", event_ids: "1871fd36-4f87-59f2-9dfb-a14b9259289e", author_ids: ["671a3790-6703-5f60-93f7-4c8096394838"], publisher: "Dargaud", publishing_year: null, ean: "9782205078183", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10839408-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782205078183", enrichment_source: null },
+  { id: "967b3863-f429-58b5-804c-12a7b22632fd", title: "Mémoires d’un frêne", event_ids: "2fc305c6-f0c7-5462-9a45-89241614c418", author_ids: ["e0661633-2b9b-5f5f-8b1c-9dc7473c5037"], publisher: "Rue de l’échiquier", publishing_year: 2018, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Rue%20de%20l%E2%80%99%C3%A9chiquier", leslibraires_url: "https://www.leslibraires.fr/recherche?query=M%C3%A9moires%20d%E2%80%99un%20fr%C3%AAne", enrichment_source: null },
+  { id: "e4e1d8bd-5c94-57eb-9b76-45b0d2e3c1b7", title: "NESKA", event_ids: "35935fa2-a008-5d4a-837d-ff51e42f0123", author_ids: ["6b955294-0c6d-5b47-8a7f-7a46611b7aa4"], publisher: "Delcourt", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/recherche?query=NESKA", enrichment_source: null },
+  { id: "dcc25ccb-bc58-5f18-9a49-a54fc52fdcf3", title: "Nako", event_ids: "f900f0b1-9572-5d14-82cc-81f65d0543b6", author_ids: ["d16f0632-6f42-5729-a856-4a25f9e5396d"], publisher: "Michel Lafon", publishing_year: null, ean: "9782749938493", summary: null, publication_date: "2020-10-07T00:00:00.000Z", page_count: 203, price: null, cover_url: "https://covers.openlibrary.org/b/id/10481595-L.jpg", publisher_url: "https://openlibrary.org/publishers/Michel%20Lafon", leslibraires_url: "https://www.leslibraires.fr/livre/9782749938493", enrichment_source: null },
+  { id: "77b2a2e9-cb9b-5999-9b0a-81ffd06b392c", title: "Never go home", event_ids: "962b55da-7635-5b79-975c-44b8cd63497b", author_ids: ["b52d45f1-1dd3-55f6-bb85-67fcb65cea0b", "e0985a1b-4ff4-5b75-8ca7-3067999c69d5", "91ea0576-e99f-559b-8107-43c5a962ce61"], publisher: "Glénat Comics", publishing_year: 2017, ean: "9781628750843", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8920035-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781628750843", enrichment_source: null },
+  { id: "7d723523-0d8a-5c4f-a040-8ff0cca2bc83", title: "Nightly News", event_ids: "d3eafa10-a745-5597-94cb-39521449a60e", author_ids: ["fd51ff5e-d84e-5eae-8cd0-e095e96e3dba"], publisher: "Urban", publishing_year: 2014, ean: "9781582407661", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/2936549-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban", leslibraires_url: "https://www.leslibraires.fr/livre/9781582407661", enrichment_source: null },
+  { id: "531a885c-829a-59e3-9ce8-4af27ee228e2", title: "Nimona", event_ids: "cc962b47-ac4d-5add-8aeb-39e10f0374e6", author_ids: ["beb683f9-838a-5ab5-915e-50e5ee57e66f"], publisher: "Dargaud", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Nimona", enrichment_source: null },
+  { id: "0c7c6682-3287-56d0-a8d6-82aea0648529", title: "Nobles Paysans", event_ids: "b6b7fc5a-d592-5d96-854f-05558c763187", author_ids: ["c8a7e06b-5246-59d8-988d-2f1dfc3dcbe7"], publisher: "Kurokawa", publishing_year: null, ean: "9782368521632", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10605866-L.jpg", publisher_url: "https://openlibrary.org/publishers/Kurokawa", leslibraires_url: "https://www.leslibraires.fr/livre/9782368521632", enrichment_source: null },
+  { id: "970a07a3-e2a0-5c36-bf0f-9a6f4ea83dad", title: "NononBa", event_ids: "8b17df4f-c7a6-568b-bba7-e9f0474230ac", author_ids: ["8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1"], publisher: "Cornelius", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Cornelius", leslibraires_url: "https://www.leslibraires.fr/recherche?query=NononBa", enrichment_source: null },
+  { id: "7afa0be1-9f65-5af9-b8ca-8febc5ccfa4a", title: "Oh, Lenny", event_ids: "b148c708-8268-57c5-987d-7c673b310cee", author_ids: ["413f2343-f0c5-5672-aa0a-050973a682f9"], publisher: "Tanibis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Tanibis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Oh%2C%20Lenny", enrichment_source: null },
+  { id: "1ed863f9-5aea-574a-8e7a-8a8f061235e5", title: "Oiseaux de papier", event_ids: "3d3c0b42-70a2-5146-a04f-9b0782e75776", author_ids: ["e91e7e71-ed2e-5acb-a42e-2ad624b8ab41"], publisher: "ça et là", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/%C3%A7a%20et%20l%C3%A0", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Oiseaux%20de%20papier", enrichment_source: null },
+  { id: "fa63dd8d-c49f-5a56-9f07-8f6fbbb45dbc", title: "Opus", event_ids: "943ef86c-2f3d-5418-811c-3984ec44218e", author_ids: ["2d4e035b-babd-5524-8a3e-9bcba6e75ec5"], publisher: "IMHO", publishing_year: null, ean: "9781616556068", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/9329167-L.jpg", publisher_url: "https://openlibrary.org/publishers/IMHO", leslibraires_url: "https://www.leslibraires.fr/livre/9781616556068", enrichment_source: null },
+  { id: "31218cb7-1c1c-5c1e-ba45-3383eb2db2a4", title: "Orange", event_ids: "b0b01187-3e41-530a-b69d-1b778156244a", author_ids: ["c5e6aaf1-2b53-5f0e-bce2-0c4c94f86c6f"], publisher: "Akata", publishing_year: 2014, ean: "9782369742791", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12714007-L.jpg", publisher_url: "https://openlibrary.org/publishers/Akata", leslibraires_url: "https://www.leslibraires.fr/livre/9782369742791", enrichment_source: null },
+  { id: "4335f95a-162b-55fd-bc33-9ae6270eaa96", title: "Otto l'homme réécrit", event_ids: "7e9194c4-701f-58d0-801d-6b0a204ec1d4", author_ids: ["a0e8081c-c789-5249-a9ad-938d911d3d15"], publisher: "Delcourt", publishing_year: 2016, ean: "9782756080192", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12553920-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782756080192", enrichment_source: null },
+  { id: "56fc148f-32d4-5cb2-a0e4-8eee0f478cfb", title: "Otto ou l'île miroir", event_ids: "282002d3-3314-58cb-a08c-56d1b660f8ed", author_ids: ["79173c52-b077-58b7-9de5-213f60a8f298"], publisher: "2024", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/2024", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Otto%20ou%20l'%C3%AEle%20miroir", enrichment_source: null },
+  { id: "76b4d2f1-cdb5-5aae-9479-3daf719d8adb", title: "Palepoli", event_ids: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9", author_ids: ["bd00fc5a-20dc-576b-bad2-a3336306d052"], publisher: "IMHO", publishing_year: 2012, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/IMHO", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Palepoli", enrichment_source: null },
+  { id: "ed1239f8-6705-59cc-89fa-0f58a386644e", title: "Panorama", event_ids: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36", author_ids: ["c5b9e189-2937-5717-9cfa-4bf3ca95975e"], publisher: "Delirium", publishing_year: null, ean: "9791090916845", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12841993-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delirium", leslibraires_url: "https://www.leslibraires.fr/livre/9791090916845", enrichment_source: null },
+  { id: "8f57610f-1014-5596-8015-17b94899cd58", title: "Panthere", event_ids: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9", author_ids: ["5140c72e-436a-5c58-85af-fde4a31bd1da"], publisher: "Actes Sud", publishing_year: 2014, ean: "9781770462267", summary: null, publication_date: "2016-01-01T00:00:00.000Z", page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14631036-L.jpg", publisher_url: "https://openlibrary.org/publishers/Actes%20Sud", leslibraires_url: "https://www.leslibraires.fr/livre/9781770462267", enrichment_source: null },
+  { id: "93c55d49-da91-53a8-9384-a9e74f86fe92", title: "Papa Situations", event_ids: "208965ad-c1ba-5935-ad9c-599ec120152f", author_ids: ["3ecb51cb-7330-5551-b059-2bc07bbe2220"], publisher: "Dupuis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Papa%20Situations", enrichment_source: null },
+  { id: "2577974a-9695-5f41-94a9-6ba5ebd90174", title: "Parker - La Proie", event_ids: "e86ed83c-1690-5160-a736-d4ab397e1adf", author_ids: ["16787ee4-56ac-5736-b0b0-2d831ee42d6c", "f149dc55-7d01-5e6c-89f4-ed837f8de8b5"], publisher: "Dupuis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Parker%20-%20La%20Proie", enrichment_source: null },
+  { id: "3d6f3134-2abf-5826-9462-12df423eeb00", title: "Passions", event_ids: "943ef86c-2f3d-5418-811c-3984ec44218e", author_ids: ["2149320d-2c93-5c48-92dd-fd4a4b4a2916"], publisher: "Fluide Glacial", publishing_year: null, ean: "9781931038423", summary: null, publication_date: "2007-01-01T00:00:00.000Z", page_count: 271, price: null, cover_url: "https://covers.openlibrary.org/b/id/2120110-L.jpg", publisher_url: "https://openlibrary.org/publishers/Fluide%20Glacial", leslibraires_url: "https://www.leslibraires.fr/livre/9781931038423", enrichment_source: null },
+  { id: "5c0d585f-9e55-51fb-bb16-f98389cb7ce4", title: "Patience", event_ids: "ceff02b3-7019-5ae7-8968-0907eff83fdb", author_ids: ["64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8"], publisher: "Cornélius", publishing_year: 2016, ean: "9781606999059", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12514768-L.jpg", publisher_url: "https://openlibrary.org/publishers/Corn%C3%A9lius", leslibraires_url: "https://www.leslibraires.fr/livre/9781606999059", enrichment_source: null },
+  { id: "da2485f6-6f49-5a22-a601-34c06f8fe55f", title: "Pauline à Paris", event_ids: "3b113b35-2d55-51c4-a846-f640bae083f4", author_ids: ["86b380e5-e629-5310-a14c-a81874f5b0be"], publisher: "FLBLB", publishing_year: 2015, ean: "9782357610903", summary: null, publication_date: "2015-01-01T00:00:00.000Z", page_count: 141, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/FLBLB", leslibraires_url: "https://www.leslibraires.fr/livre/9782357610903", enrichment_source: null },
+  { id: "2ad5e35b-e8b1-57e4-b566-1e1eb9fdb2aa", title: "Paysage après la bataille", event_ids: "41d4751a-0f18-5d59-86d2-8e48b38d35fb", author_ids: ["bf478f85-abfd-5914-acc2-eb7ae099bad6", "b0f40b74-5f7d-5e03-9420-f2c5732abccf"], publisher: "Actes Sud BD", publishing_year: 2016, ean: "9782330069988", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10862955-L.jpg", publisher_url: "https://openlibrary.org/publishers/Actes%20Sud%20BD", leslibraires_url: "https://www.leslibraires.fr/livre/9782330069988", enrichment_source: null },
+  { id: "16564728-90ed-5edc-8eae-08a5f7785cff", title: "Peau d'homme", event_ids: "e0863d9e-e93d-525a-9dbb-89140edf2588", author_ids: [], publisher: null, publishing_year: null, ean: "9782344010648", summary: null, publication_date: "2020-06-02T00:00:00.000Z", page_count: 160, price: null, cover_url: "https://covers.openlibrary.org/b/id/10840839-L.jpg", publisher_url: null, leslibraires_url: "https://www.leslibraires.fr/livre/9782344010648", enrichment_source: null },
+  { id: "33368bc9-256a-520a-88cc-b78bd19c6dce", title: "Peau de mille bêtes", event_ids: "f900f0b1-9572-5d14-82cc-81f65d0543b6", author_ids: ["35a4d2db-5e22-555d-bdcc-c806c0ae5f35"], publisher: "Delcourt", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Peau%20de%20mille%20b%C3%AAtes", enrichment_source: null },
+  { id: "8a70367d-933d-5179-ad05-41d287a8027e", title: "Pelote dans la fumée", event_ids: "a25ef389-a3d0-5e2e-a153-2e280ed21d81", author_ids: ["1f5f75e0-7638-50f5-80af-9cd35b1db3a9"], publisher: "Actes Sud Bd", publishing_year: 2013, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Actes%20Sud%20Bd", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Pelote%20dans%20la%20fum%C3%A9e", enrichment_source: null },
+  { id: "c503e169-f7e8-50eb-bba0-7d391d6a17ce", title: "Petite Forêt", event_ids: "d97b7ed2-8888-563d-a3ab-85aa06e98884", author_ids: ["a47f6301-1e18-51f0-8386-ac488ee37b7c"], publisher: "Delcourt", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Petite%20For%C3%AAt", enrichment_source: null },
+  { id: "fc30f32a-3e20-5385-b28a-7439ee532389", title: "Philémon - le Naufragé du \"A\"", event_ids: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa", author_ids: ["2c5d1ecf-6832-57d5-b546-c500ad06204d"], publisher: "Dargaud", publishing_year: null, ean: "9782205055054", summary: "AH!... LE CALME DE LA VIE CHAMPETRE . . .", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/3091282-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9782205055054", enrichment_source: null },
+  { id: "80e320c2-11e7-595b-89ba-24b81ea6d621", title: "Phénix, L’oiseau de feu", event_ids: "1320b429-70e2-593e-976d-0cc9646e88c8", author_ids: ["91077797-d951-5025-a095-fef1a2b3bb5f"], publisher: "Delcourt", publishing_year: null, ean: "9782845801455", summary: null, publication_date: "2007-03-06T00:00:00.000Z", page_count: 368, price: null, cover_url: "https://covers.openlibrary.org/b/id/10705829-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782845801455", enrichment_source: null },
+  { id: "50afc3e1-c60e-5915-b756-8b0760228a32", title: "Pilou l'apprenti gigolo", event_ids: "72255258-5a8d-5944-9c4c-0f6f07a6db10", author_ids: ["04cef3b4-6b2a-5efc-85f2-2a0ff95481cd"], publisher: "IMHO", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/IMHO", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Pilou%20l'apprenti%20gigolo", enrichment_source: null },
+  { id: "a2edcba9-4069-57fa-860a-9b0f656b7911", title: "Pilules Bleues", event_ids: "41d6ae0e-8b21-541d-a141-e8cc0134bbab", author_ids: ["2f4e23e5-9feb-53ab-beae-4555370c8f0d"], publisher: "Atrabile", publishing_year: 2001, ean: "9782889230129", summary: null, publication_date: "2001-01-01T00:00:00.000Z", page_count: 190, price: null, cover_url: "https://covers.openlibrary.org/b/id/7376265-L.jpg", publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/livre/9782889230129", enrichment_source: null },
+  { id: "903acafa-4e30-5dcb-85ec-e2d1ce52d741", title: "Pinocchio", event_ids: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc", author_ids: ["fd5a8b65-5f73-54a0-a57e-54dfea8abc8c"], publisher: "Les requins Marteaux", publishing_year: 2008, ean: "9780867197518", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8546011-L.jpg", publisher_url: "https://openlibrary.org/publishers/Les%20requins%20Marteaux", leslibraires_url: "https://www.leslibraires.fr/livre/9780867197518", enrichment_source: null },
+  { id: "4066190a-e2a3-5eda-bb01-cd996e6b7eda", title: "Planetarium Ghost Travel", event_ids: "3d9441c7-6496-5d72-9e60-65b6ea76742a", author_ids: ["5ffbe2d2-ae0e-55cf-b3ab-8c691acbaddf"], publisher: "Renard Doré", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Renard%20Dor%C3%A9", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Planetarium%20Ghost%20Travel", enrichment_source: null },
+  { id: "4d775666-080c-5f46-ab43-983746584a96", title: "Planètes", event_ids: "611db4de-5ee6-5c83-83c5-af36e6222068", author_ids: ["183f199f-a026-5761-9ec8-c69c66040044"], publisher: "Panini Collections", publishing_year: null, ean: "9781595324672", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/865434-L.jpg", publisher_url: "https://openlibrary.org/publishers/Panini%20Collections", leslibraires_url: "https://www.leslibraires.fr/livre/9781595324672", enrichment_source: null },
+  { id: "515abf3f-be71-5dc5-a79a-662cd25fccf6", title: "Play With Fire", event_ids: "b6b7fc5a-d592-5d96-854f-05558c763187", author_ids: ["c9b6be22-065c-5547-a9aa-9db3a027d1e6"], publisher: "Ici Même", publishing_year: null, ean: "9788885621992", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Ici%20M%C3%AAme", leslibraires_url: "https://www.leslibraires.fr/livre/9788885621992", enrichment_source: null },
+  { id: "d0dbce49-10b1-5c8d-8c0e-20f9c9c83c98", title: "Plus si entente", event_ids: "d3eafa10-a745-5597-94cb-39521449a60e", author_ids: ["bdb4565e-067f-56ca-8936-a076246543f4", "2027444e-c012-54a3-aec8-f68484ffe1eb"], publisher: "Actes Sud", publishing_year: 2014, ean: "9782330030513", summary: null, publication_date: "2014-09-30T00:00:00.000Z", page_count: 171, price: null, cover_url: "https://covers.openlibrary.org/b/id/8377257-L.jpg", publisher_url: "https://openlibrary.org/publishers/Actes%20Sud", leslibraires_url: "https://www.leslibraires.fr/livre/9782330030513", enrichment_source: null },
+  { id: "c63fb7f3-28e9-51b0-a879-a22cae604ae9", title: "Pluto", event_ids: "bf7694bb-b7a0-5258-9679-5e32f0e0399f", author_ids: ["96909ed8-afbc-51b4-828e-cf484c613c2d"], publisher: "Kana", publishing_year: null, ean: "9781421532677", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11297281-L.jpg", publisher_url: "https://openlibrary.org/publishers/Kana", leslibraires_url: "https://www.leslibraires.fr/livre/9781421532677", enrichment_source: null },
+  { id: "f5bfa282-0bba-5c25-819a-7189c4fa979f", title: "Poison City", event_ids: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6", author_ids: ["f22a840a-ae7b-585b-b790-d0e5e0a22043"], publisher: "Ki-Oon", publishing_year: 2015, ean: "9782355927928", summary: null, publication_date: "2015-01-01T00:00:00.000Z", page_count: 231, price: null, cover_url: "https://covers.openlibrary.org/b/id/11322490-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ki-Oon", leslibraires_url: "https://www.leslibraires.fr/livre/9782355927928", enrichment_source: null },
+  { id: "c4a296ae-92a4-59dc-9301-4a603a7cffd0", title: "Police Lunaire", event_ids: "eb52c998-b16a-55d6-a25e-fc780089bc5b", author_ids: ["82f0f18e-ef7e-5f41-8047-ad16d91e05e4"], publisher: "Editions 2024", publishing_year: 2016, ean: "9782919242573", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12553931-L.jpg", publisher_url: "https://openlibrary.org/publishers/Editions%202024", leslibraires_url: "https://www.leslibraires.fr/livre/9782919242573", enrichment_source: null },
+  { id: "89d152e7-f57c-5b0e-8d95-8f5fad2dc896", title: "Poulet aux prunes", event_ids: "e86ed83c-1690-5160-a736-d4ab397e1adf", author_ids: ["9f6d02b9-d58d-521b-bac5-a096f26c125a"], publisher: "l'Association", publishing_year: null, ean: "9780375424151", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/1992667-L.jpg", publisher_url: "https://openlibrary.org/publishers/l'Association", leslibraires_url: "https://www.leslibraires.fr/livre/9780375424151", enrichment_source: null },
+  { id: "55173791-1d25-5974-be37-4ae3bfac5225", title: "Poème du vent et des arbres", event_ids: "f60c9074-4b14-5a21-8163-ab8c49f0d987", author_ids: ["d6e87a93-7b87-56df-b0b5-784f597acfd5"], publisher: "Naban", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Naban", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Po%C3%A8me%20du%20vent%20et%20des%20arbres", enrichment_source: null },
+  { id: "f2860692-948f-5d47-b998-60f799a21268", title: "Presque", event_ids: "77c01a2a-d1e6-590e-b030-9b97131b7e52", author_ids: ["d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2"], publisher: "Les Rêveurs", publishing_year: 2010, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20R%C3%AAveurs", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Presque", enrichment_source: null },
+  { id: "ef0b7e38-3627-5f6e-b460-3e92a56d3a13", title: "Pretty Deadly", event_ids: "cc962b47-ac4d-5add-8aeb-39e10f0374e6", author_ids: ["a6b81f1d-dc27-5aa3-877e-d3e6bd44907d", "e00c6e9a-cecb-5393-9a29-204cb3947ce9"], publisher: "Glénat BD", publishing_year: null, ean: "9781607069621", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/7865725-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat%20BD", leslibraires_url: "https://www.leslibraires.fr/livre/9781607069621", enrichment_source: null },
+  { id: "04614ebb-df6b-5425-9f49-a953190b114f", title: "Préférence système", event_ids: "123794f1-5856-5238-9fb5-380ed5d2e2f0", author_ids: ["10666593-e9d3-5312-90c8-4ef8d1e3cebe"], publisher: "Denoël Graphic", publishing_year: null, ean: "9782207142219", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10838537-L.jpg", publisher_url: "https://openlibrary.org/publishers/Deno%C3%ABl%20Graphic", leslibraires_url: "https://www.leslibraires.fr/livre/9782207142219", enrichment_source: null },
+  { id: "112b74f7-40f7-535a-aab9-b13d3c94c4d2", title: "Punk Rock Jesus", event_ids: "9892d986-cf7a-5e39-8f31-7e0e110e3565", author_ids: ["f2c424bc-1c49-51c1-b24c-e35a2aa03969"], publisher: "Urban Comics", publishing_year: 2013, ean: "9781401237684", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/7333135-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781401237684", enrichment_source: null },
+  { id: "99cf5bac-a6b4-5fa0-ace7-3b6acdda880b", title: "QUENOTTE et Le Monde fantastique", event_ids: "1b7d31e9-f721-586b-a7b0-535c61a4ede7", author_ids: ["ec7b8039-9647-53bd-98df-c4980ff84587"], publisher: "Casterman", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/recherche?query=QUENOTTE%20et%20Le%20Monde%20fantastique", enrichment_source: null },
+  { id: "11d7eace-ebf2-59d3-a330-cd442d3557a3", title: "Quand souffle le vent", event_ids: "22747bbf-a596-5a9a-aaea-99acc760e0d9", author_ids: ["4abb5d53-7a59-5901-8c93-7de96ba7c098"], publisher: "Tanibis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Tanibis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Quand%20souffle%20le%20vent", enrichment_source: null },
+  { id: "5a8ed5c1-88a2-5654-88d7-c1d974ade6b3", title: "Quoi de plus normal qu'infliger la vie?", event_ids: "4773d958-16dc-5d09-ac56-048ca6df63b8", author_ids: ["38a340c0-3423-5b21-8f83-9db6313b7522"], publisher: "Arbitraire", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Arbitraire", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Quoi%20de%20plus%20normal%20qu'infliger%20la%20vie%3F", enrichment_source: null },
+  { id: "485c9772-b7f3-5b59-99a0-5bc51d90677a", title: "Racket", event_ids: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82", author_ids: ["000c49b2-0453-5107-a06f-58c9b1fea271"], publisher: "Futuropolis", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Racket", enrichment_source: null },
+  { id: "ec34073f-32f3-5b74-8e70-eb2e9937a36f", title: "Ranma 1/2", event_ids: "b148c708-8268-57c5-987d-7c673b310cee", author_ids: ["aea68d40-ddb1-5354-b4e8-5fb4dbca4c9e"], publisher: "Glénat", publishing_year: null, ean: "9781415637975", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/8246200-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9781415637975", enrichment_source: null },
+  { id: "4e54d086-2092-5623-81ce-cdb52ee354a3", title: "Raowl", event_ids: "f900f0b1-9572-5d14-82cc-81f65d0543b6", author_ids: ["0d6d184b-a29e-53a7-8833-1d8d959e8b67"], publisher: "dupuis", publishing_year: null, ean: "9788417989606", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14025980-L.jpg", publisher_url: "https://openlibrary.org/publishers/dupuis", leslibraires_url: "https://www.leslibraires.fr/livre/9788417989606", enrichment_source: null },
+  { id: "fa873fe7-0449-5f89-8fc9-cfe1654b8041", title: "Renégat", event_ids: "2456ad86-5acc-5301-9bd6-90548d61b552", author_ids: ["8de0a770-0d52-5e17-97db-ef10383eb7e6"], publisher: "The Hoochie Coochie", publishing_year: 2012, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/The%20Hoochie%20Coochie", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Ren%C3%A9gat", enrichment_source: null },
+  { id: "13a95766-1ae7-52fc-8158-e51115b8fa4a", title: "René•e au bois dormant", event_ids: "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85", author_ids: ["cc4653dc-b615-54e5-bac1-c35dc48d1341"], publisher: "sarbacane", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/sarbacane", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Ren%C3%A9%E2%80%A2e%20au%20bois%20dormant", enrichment_source: null },
+  { id: "677a0a0d-9f0e-5524-892e-5feeda95fa37", title: "Revanche", event_ids: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405", author_ids: ["2c1293b1-0b71-5d73-9217-34bf2c597b62"], publisher: "Hoochie Coochie", publishing_year: null, ean: "9782916049793", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12554079-L.jpg", publisher_url: "https://openlibrary.org/publishers/Hoochie%20Coochie", leslibraires_url: "https://www.leslibraires.fr/livre/9782916049793", enrichment_source: null },
+  { id: "0227a664-60ac-5e77-bb89-031cf0893d1e", title: "Road to Nowhere", event_ids: "94e69eb9-e081-52d8-a886-1e8990ac7c1b", author_ids: ["e7455245-dd03-5c13-a656-e0c6420e9265"], publisher: "Misma", publishing_year: null, ean: "9782916254685", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Misma", leslibraires_url: "https://www.leslibraires.fr/livre/9782916254685", enrichment_source: null },
+  { id: "bb95f1ee-35e4-5172-bcf9-11aa19d39885", title: "Roger et ses humains", event_ids: "208965ad-c1ba-5935-ad9c-599ec120152f", author_ids: ["740a55f0-b066-529c-aad3-be7706f65d0c", "728ca873-d312-575d-b216-7d2f31953628"], publisher: "Dupuis", publishing_year: null, ean: "9782800164199", summary: null, publication_date: "2015-01-01T00:00:00.000Z", page_count: 88, price: null, cover_url: "https://covers.openlibrary.org/b/id/14140832-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/livre/9782800164199", enrichment_source: null },
+  { id: "a8f38346-3d87-5afd-9d0c-423aea300f2a", title: "Rose Profond", event_ids: "5530f067-a32c-51e1-9ad7-97cf775ed705", author_ids: ["e2973a8e-b6fe-5378-b489-513f29620f71", "06153a78-09a9-505d-94b2-6d01b716bd24"], publisher: "Casterman", publishing_year: 2015, ean: "9782203091795", summary: null, publication_date: "2015-01-01T00:00:00.000Z", page_count: 74, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203091795", enrichment_source: null },
+  { id: "d0b3e70f-1430-5736-8b87-84b725afaebe", title: "Runaways", event_ids: "e0863d9e-e93d-525a-9dbb-89140edf2588", author_ids: [], publisher: null, publishing_year: null, ean: "9780099410218", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/9322902-L.jpg", publisher_url: null, leslibraires_url: "https://www.leslibraires.fr/livre/9780099410218", enrichment_source: null },
+  { id: "0eb55165-0714-592e-b967-ca0d76ba06ff", title: "SHERIFF OF BABYLON", event_ids: "35935fa2-a008-5d4a-837d-ff51e42f0123", author_ids: ["67021253-b3f9-5131-a5a1-6f1e6996c8bd", "cd86941a-d2f6-535f-bb9b-ae9e1a277c61"], publisher: "Urban Comics", publishing_year: null, ean: "9781401264666", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13050885-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781401264666", enrichment_source: null },
+  { id: "6486c644-9f52-5b81-8121-a07c9ca820d3", title: "SNOTGIRL", event_ids: "1b7d31e9-f721-586b-a7b0-535c61a4ede7", author_ids: ["1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3", "cd9ac32b-5e63-5ee4-a040-0a08d8da008c"], publisher: "Glénat", publishing_year: null, ean: "9785913396006", summary: null, publication_date: "2019-01-01T00:00:00.000Z", page_count: 137, price: null, cover_url: "https://covers.openlibrary.org/b/id/9247144-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9785913396006", enrichment_source: null },
+  { id: "a8920edf-9eb7-5296-9429-4a13002c70c4", title: "Sacrifice", event_ids: "22747bbf-a596-5a9a-aaea-99acc760e0d9", author_ids: ["f7168e39-bf20-5d5a-91f5-7b0b971b588c", "8b277120-560b-5807-b3c5-c0a546bce427"], publisher: "Urban", publishing_year: null, ean: "9781534397897", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/14567241-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban", leslibraires_url: "https://www.leslibraires.fr/livre/9781534397897", enrichment_source: null },
+  { id: "1bc85f3d-8932-5b00-b6fd-333b32ee53b9", title: "Saint-Elme", event_ids: "22747bbf-a596-5a9a-aaea-99acc760e0d9", author_ids: ["3254de0b-373e-565d-9416-53a8316474c8", "2f4e23e5-9feb-53ab-beae-4555370c8f0d"], publisher: "Delcourt", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Saint-Elme", enrichment_source: null },
+  { id: "90a07961-765f-588b-a9b1-147327ff19e6", title: "Saison des Roses", event_ids: "943ef86c-2f3d-5418-811c-3984ec44218e", author_ids: ["92d63259-a236-5255-8a90-bf9776649674"], publisher: "FLBLB", publishing_year: null, ean: "9782357611764", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10471980-L.jpg", publisher_url: "https://openlibrary.org/publishers/FLBLB", leslibraires_url: "https://www.leslibraires.fr/livre/9782357611764", enrichment_source: null },
+  { id: "d535ad5b-baf2-54af-b3d5-17d8b52332ff", title: "Saison des roses", event_ids: "f900f0b1-9572-5d14-82cc-81f65d0543b6", author_ids: ["92d63259-a236-5255-8a90-bf9776649674"], publisher: "FLBLB", publishing_year: null, ean: "9782357611764", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10471980-L.jpg", publisher_url: "https://openlibrary.org/publishers/FLBLB", leslibraires_url: "https://www.leslibraires.fr/livre/9782357611764", enrichment_source: null },
+  { id: "98a1d8c6-853d-5970-b117-ace76d927b91", title: "Salammbô", event_ids: "b2b823be-b192-5bd5-9047-db6dac16cd7a", author_ids: ["141dc09a-4241-51b4-a81e-5402d1647f96"], publisher: "Glenat", publishing_year: 1991, ean: "9782723479912", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Glenat", leslibraires_url: "https://www.leslibraires.fr/livre/9782723479912", enrichment_source: null },
+  { id: "79894bab-2308-5561-b5ba-b688a26f6672", title: "Saveur coco", event_ids: "d3eafa10-a745-5597-94cb-39521449a60e", author_ids: ["a7e5dfca-337c-58a2-8dfb-d1469b851bd9"], publisher: "Dargaud", publishing_year: 2013, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Saveur%20coco", enrichment_source: null },
+  { id: "7c7c3feb-134e-5fcd-8be5-c580ee005cb1", title: "Scalp", event_ids: "a25ef389-a3d0-5e2e-a153-2e280ed21d81", author_ids: ["8fe7fe5d-f5d1-57fa-9b23-8613e9714774"], publisher: "Futuropolis", publishing_year: 2017, ean: "9782754812078", summary: null, publication_date: "2017-01-02T00:00:00.000Z", page_count: 192, price: null, cover_url: "https://covers.openlibrary.org/b/id/12585695-L.jpg", publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/livre/9782754812078", enrichment_source: null },
+  { id: "24c15eca-cdd6-52e2-ae02-ca99c6a37884", title: "Scott Pilgrim", event_ids: "2412bc73-7636-5bb4-84b3-059088f2b82f", author_ids: ["1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3"], publisher: "HiComics", publishing_year: null, ean: "9788490323991", summary: "Scott Pilgrim Is Dating A High Schooler?", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/960258-L.jpg", publisher_url: "https://openlibrary.org/publishers/HiComics", leslibraires_url: "https://www.leslibraires.fr/livre/9788490323991", enrichment_source: null },
+  { id: "395b6a6b-7acb-5a84-8ddf-e855409977b8", title: "Seconds", event_ids: "437bf521-fecc-5100-9170-e59fe3b5a117", author_ids: ["1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3"], publisher: "Dargaud", publishing_year: 2014, ean: "9780345529374", summary: null, publication_date: "2016-11-12T00:00:00.000Z", page_count: 332, price: null, cover_url: "https://covers.openlibrary.org/b/id/8993851-L.jpg", publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/livre/9780345529374", enrichment_source: null },
+  { id: "3852be01-9880-52eb-8493-9b3a5758e58f", title: "Senso", event_ids: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4", author_ids: ["95d147eb-c140-5339-ad8e-0d09bd1bb49f"], publisher: "Delcourt", publishing_year: null, ean: "9789626345429", summary: "»Nun was sagen Sie dazu, mein Fürst, Genua und Lucca sind nunmehr Erbgüter der Familie Bonaparte!", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12621906-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9789626345429", enrichment_source: null },
+  { id: "599583d1-2538-5fdb-ad77-90fc339b3178", title: "Sentimental Kiss", event_ids: "d97b7ed2-8888-563d-a3ab-85aa06e98884", author_ids: ["e582c7f5-c5b4-5f7e-ac05-d3296bfd9708"], publisher: "l'Employé du moi", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/l'Employ%C3%A9%20du%20moi", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Sentimental%20Kiss", enrichment_source: null },
+  { id: "1d56642e-0dc1-5f4a-aae2-0fa94df543fd", title: "Shangri-la", event_ids: "a25ef389-a3d0-5e2e-a153-2e280ed21d81", author_ids: ["1cc29f88-7e7f-56ef-b1db-5e3a60803a8b"], publisher: "Ankama", publishing_year: 2016, ean: "9781951719982", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10840434-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ankama", leslibraires_url: "https://www.leslibraires.fr/livre/9781951719982", enrichment_source: null },
+  { id: "f9700842-783a-547b-b038-f388c81263c4", title: "Shit is Real", event_ids: "1871fd36-4f87-59f2-9dfb-a14b9259289e", author_ids: ["86f3e63b-c414-594e-af58-abfb190ddea2"], publisher: "l'Employé du moi", publishing_year: null, ean: "9783956400636", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10912180-L.jpg", publisher_url: "https://openlibrary.org/publishers/l'Employ%C3%A9%20du%20moi", leslibraires_url: "https://www.leslibraires.fr/livre/9783956400636", enrichment_source: null },
+  { id: "20d228c3-067c-5067-90c8-cb8cc271fe6f", title: "Six-Gun Gorilla", event_ids: "2456ad86-5acc-5301-9bd6-90548d61b552", author_ids: ["61b42f2a-c779-5680-b591-6e6128f1a1b7", "42648312-3057-56f3-a03c-346bc337f3f8"], publisher: "Ankama", publishing_year: 2015, ean: "9781608863907", summary: null, publication_date: "2014-01-01T00:00:00.000Z", page_count: 160, price: null, cover_url: "https://covers.openlibrary.org/b/id/12939233-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ankama", leslibraires_url: "https://www.leslibraires.fr/livre/9781608863907", enrichment_source: null },
+  { id: "34373ae6-8241-5dfd-ac94-c657bd97af69", title: "Slava T01", event_ids: "826204d2-0a18-5f15-81c0-1f9730761358", author_ids: ["3c90a47b-00bd-5d72-b26e-14e9361de953"], publisher: "Dargaud", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Slava%20T01", enrichment_source: null },
+  { id: "7655deef-be68-561d-a942-3a401c24343e", title: "Snapdragon", event_ids: "f4307f94-c546-5685-b0d8-adc74d04b6cc", author_ids: ["4a7a4f1c-41b7-5fc8-920d-ac55b12d15d1"], publisher: "Kinaye", publishing_year: null, ean: "9782357990807", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/9322939-L.jpg", publisher_url: "https://openlibrary.org/publishers/Kinaye", leslibraires_url: "https://www.leslibraires.fr/livre/9782357990807", enrichment_source: null },
+  { id: "37e7a325-c27f-5f10-a2d6-21765d017dd8", title: "Soft City", event_ids: "99984239-be4b-5527-ac6f-2efffaa923c7", author_ids: ["be1bbed6-3d2a-5949-9210-263612f09011"], publisher: "Editions Inculte", publishing_year: 2017, ean: "9781681370460", summary: null, publication_date: "2016-01-01T00:00:00.000Z", page_count: 167, price: null, cover_url: "https://covers.openlibrary.org/b/id/8270114-L.jpg", publisher_url: "https://openlibrary.org/publishers/Editions%20Inculte", leslibraires_url: "https://www.leslibraires.fr/livre/9781681370460", enrichment_source: null },
+  { id: "543529b3-41ab-5afc-a381-7ed1bfab677b", title: "Soichi", event_ids: "94e69eb9-e081-52d8-a886-1e8990ac7c1b", author_ids: ["bac0e452-b75b-5cc7-a4e4-ad8adf9ba347"], publisher: "Mangetsu", publishing_year: null, ean: "9781974739028", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Mangetsu", leslibraires_url: "https://www.leslibraires.fr/livre/9781974739028", enrichment_source: null },
+  { id: "49643a22-7c3c-590e-909d-2b458a3c9812", title: "Solanin", event_ids: "4773d958-16dc-5d09-ac56-048ca6df63b8", author_ids: ["b4e9729a-f1c7-5994-b791-a4c365333f5b"], publisher: "Kana", publishing_year: 2007, ean: "9781421523217", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/6132517-L.jpg", publisher_url: "https://openlibrary.org/publishers/Kana", leslibraires_url: "https://www.leslibraires.fr/livre/9781421523217", enrichment_source: null },
+  { id: "00b764c7-9e57-5a44-8922-76ffc6c0c006", title: "Soleil mécanique", event_ids: "090131b6-3b33-5b91-ac22-f73f60f5d347", author_ids: ["f1c41fdd-a85b-58e1-b10d-1c31f9803326"], publisher: "Ca et la", publishing_year: 2021, ean: "9782369902898", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10672052-L.jpg", publisher_url: "https://openlibrary.org/publishers/Ca%20et%20la", leslibraires_url: "https://www.leslibraires.fr/livre/9782369902898", enrichment_source: null },
+  { id: "46c2d81c-4961-5353-9c99-230e81b565d0", title: "Soli Deo Gloria", event_ids: "59b9a96e-b2d0-5d31-9167-293aed303df5", author_ids: ["69eb4ee1-b8a0-50b0-adec-5f64e115725a", "1a9c1499-d284-5ffe-9045-4e3918619a42"], publisher: "Dupuis", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Soli%20Deo%20Gloria", enrichment_source: null },
+  { id: "78e93b93-fff0-5559-a078-8ca878174a6c", title: "Solitude d'un autre genre", event_ids: "2e34799f-dc59-5357-a523-c317961dfd16", author_ids: ["091254d8-d0c9-5726-a5c2-f19e2f7c8d92"], publisher: "Pika", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Pika", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Solitude%20d'un%20autre%20genre", enrichment_source: null },
+  { id: "d8f9a56b-3061-5c16-9cce-1d231de67319", title: "Something is Killing the Children", event_ids: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4", author_ids: ["11132b63-24cf-5e0c-87e3-f82a28ac89e8", "11b97ae6-9bb9-56c9-914a-c8e0fe79156c"], publisher: "Urban Comics", publishing_year: null, ean: "9781646684373", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12705634-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781646684373", enrichment_source: null },
+  { id: "9ac45906-4b6a-5ca4-805b-f64aec4b90bc", title: "Spirou, La lumière de Bornéo", event_ids: "eb52c998-b16a-55d6-a25e-fc780089bc5b", author_ids: ["f780ae12-bdb3-5934-a7eb-c1a220d6c1f7", "095fe88f-e6bc-523c-a338-d927d8a46767"], publisher: "Dupuis", publishing_year: 2016, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dupuis", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Spirou%2C%20La%20lumi%C3%A8re%20de%20Born%C3%A9o", enrichment_source: null },
+  { id: "ebab55bf-6f8b-5ebe-8a63-63805845355c", title: "Stigma, odyssée sporale", event_ids: "d97b7ed2-8888-563d-a3ab-85aa06e98884", author_ids: ["e6332846-dc60-5a6c-83ab-f5180adb17d5"], publisher: "Casterman", publishing_year: null, ean: "9782203225800", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203225800", enrichment_source: null },
+  { id: "c11af8d5-9a5d-5d5d-8a37-806ab326e55e", title: "Stigmates", event_ids: "577662aa-e0e0-5fc7-9538-eea8c644fac8", author_ids: ["1a15581a-5279-5430-876c-2e8ffa8ff9a9"], publisher: "Casterman", publishing_year: 2015, ean: "9788806151324", summary: null, publication_date: "1999-01-01T00:00:00.000Z", page_count: 186, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9788806151324", enrichment_source: null },
+  { id: "5a7dd53b-1495-5663-bea2-733fedd1d228", title: "Stupor Mundi", event_ids: "7e9194c4-701f-58d0-801d-6b0a204ec1d4", author_ids: ["b84a8b0d-c5d4-50a0-98ca-7499c46b7968"], publisher: "Gallimard BD", publishing_year: 2016, ean: "9782070668434", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12553935-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gallimard%20BD", leslibraires_url: "https://www.leslibraires.fr/livre/9782070668434", enrichment_source: null },
+  { id: "264198c3-9db1-53e1-9cf2-57062511f327", title: "Sunny", event_ids: "a162a1f8-1fec-55a0-838d-7c9173f88142", author_ids: ["038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3"], publisher: "Kana", publishing_year: 2014, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kana", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Sunny", enrichment_source: null },
+  { id: "0d8ca287-8e3d-55a9-9f4f-bbe8a1a62c40", title: "Super Sourde", event_ids: "d7bb79a6-c63f-532e-9f9a-c52593db9321", author_ids: ["160a3ea0-3de2-5647-bd35-de0856ad7ff1"], publisher: "Les Arènes", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Les%20Ar%C3%A8nes", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Super%20Sourde", enrichment_source: null },
+  { id: "979cc21c-4c87-5805-b5f5-6f5f3f1606d2", title: "Superman identité secrète", event_ids: "defb09ef-c4e5-542b-acdf-e0b5029140ba", author_ids: ["6b6badf0-ebf9-58a7-8c65-f1d065349439", "fa90699d-7b23-523d-b295-cb62820b4f9b"], publisher: "Urban Comics", publishing_year: 2014, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Superman%20identit%C3%A9%20secr%C3%A8te", enrichment_source: null },
+  { id: "344c953c-2f98-510e-9642-b193cc079eeb", title: "Sweet Thoot", event_ids: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2", author_ids: ["3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0"], publisher: "Urban Comics", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Sweet%20Thoot", enrichment_source: null },
+  { id: "0a23fbe5-b7b7-547f-95ef-c8e4c169ba84", title: "TED DRÔLE DE COCO", event_ids: "35935fa2-a008-5d4a-837d-ff51e42f0123", author_ids: ["d055575f-870c-5ed6-8371-8ede4af900c1"], publisher: "Atrabile", publishing_year: null, ean: "9782889230709", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12839007-L.jpg", publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/livre/9782889230709", enrichment_source: null },
+  { id: "36e7eb28-ed60-5818-bc3a-eb39ae1e3105", title: "Tel qu'en lui même enfin", event_ids: "00e27df2-3483-5397-bfdb-e40b84d0dd1c", author_ids: ["073d9082-a5d3-506a-985d-eb0aebe059a8"], publisher: "L'Association", publishing_year: 2015, ean: "9782844145659", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10866382-L.jpg", publisher_url: "https://openlibrary.org/publishers/L'Association", leslibraires_url: "https://www.leslibraires.fr/livre/9782844145659", enrichment_source: null },
+  { id: "df990528-33c4-5c15-87e0-ad4119be24f3", title: "The Nice house on the lake", event_ids: "2412bc73-7636-5bb4-84b3-059088f2b82f", author_ids: ["11132b63-24cf-5e0c-87e3-f82a28ac89e8"], publisher: "Urban Comics", publishing_year: null, ean: "9781779514349", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12705638-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781779514349", enrichment_source: null },
+  { id: "91f06cb8-a704-5705-b48a-2015fa0dd6b8", title: "The Unwritten", event_ids: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2", author_ids: ["ac8ec002-305d-51dd-96b9-2c2c6d35b9ab", "4622e2be-836f-5c71-a681-8a7b8692853d"], publisher: "Urban Comics", publishing_year: null, ean: "9781401246945", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781401246945", enrichment_source: null },
+  { id: "913d07b5-d10c-59ba-9f1d-9a2b4c3ad13d", title: "The Wake", event_ids: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b", author_ids: ["d4584704-3ebe-5a6f-b8f9-bf17fa741a33", "f2c424bc-1c49-51c1-b24c-e35a2aa03969"], publisher: "Urban Comics", publishing_year: 2015, ean: "9781619825413", summary: "THE LOGBOOK OF CAPTAIN ROBERT WALTON FROM THE SHIP, THE ARCHANGEL.", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12356249-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781619825413", enrichment_source: null },
+  { id: "0ef59048-c3fb-5ea8-b650-75dafe1998cf", title: "The Wicked + The Divine", event_ids: "99984239-be4b-5527-ac6f-2efffaa923c7", author_ids: ["081b0e0b-4da2-5f56-bf65-0bd4159a6420", "0708b86c-85b5-5300-9cd9-a2bda4f0a606"], publisher: "Glénat Comics", publishing_year: 2016, ean: "9781534308404", summary: null, publication_date: "2018-01-01T00:00:00.000Z", page_count: 208, price: null, cover_url: "https://covers.openlibrary.org/b/id/12722445-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781534308404", enrichment_source: null },
+  { id: "d7d58ce0-3034-5dc1-ad26-f2ba302c0559", title: "Time Paradox Ghostwriter", event_ids: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d", author_ids: ["e5d3b413-fc6e-5914-a5e2-4cca6c66a3b4", "a613ac87-f316-5eb1-a41b-c629d3975868"], publisher: "Crunchyroll/Kazé", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Crunchyroll%2FKaz%C3%A9", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Time%20Paradox%20Ghostwriter", enrichment_source: null },
+  { id: "f9920e4a-7ba8-5f19-8842-ceaf65dd8b9d", title: "Titeuf - Bienvenue en adolescence", event_ids: "3b113b35-2d55-51c4-a846-f640bae083f4", author_ids: ["94dabec5-6d21-52f5-bcb2-0298eeca942e"], publisher: "Glénat", publishing_year: 2015, ean: "9782344008461", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10505975-L.jpg", publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/livre/9782344008461", enrichment_source: null },
+  { id: "5d75aa1d-71ee-5ee7-be23-59e9d10c519a", title: "Titre oublié manga avec enfant", event_ids: "7a658366-6710-5724-859d-c94de9e9d9ab", author_ids: [], publisher: null, publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: null, leslibraires_url: "https://www.leslibraires.fr/recherche?query=Titre%20oubli%C3%A9%20manga%20avec%20enfant", enrichment_source: null },
+  { id: "4926fa87-8fac-59ea-b462-beaa8865b399", title: "Tokyo Alien Bros", event_ids: "eede8ed7-1012-5831-95cb-b0d7c540f82c", author_ids: ["7036c4fd-e408-5618-af2e-9baaff128651"], publisher: "Lézard Noir", publishing_year: null, ean: "9781974747290", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/L%C3%A9zard%20Noir", leslibraires_url: "https://www.leslibraires.fr/livre/9781974747290", enrichment_source: null },
+  { id: "473edb56-8483-5f87-ae9a-226e5639da7c", title: "Tokyo Tarareba Girls", event_ids: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4", author_ids: ["a257ccd6-592f-5169-9247-729f4a009e2d"], publisher: "lézard Noir", publishing_year: null, ean: "9781632366863", summary: null, publication_date: "2018-01-01T00:00:00.000Z", page_count: 167, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/l%C3%A9zard%20Noir", leslibraires_url: "https://www.leslibraires.fr/livre/9781632366863", enrichment_source: null },
+  { id: "7ecc3faa-7448-57ea-b3c3-3fe72ddd322b", title: "Tokyo ces jours-ci", event_ids: "e86ed83c-1690-5160-a736-d4ab397e1adf", author_ids: ["038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3"], publisher: "Kana", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kana", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Tokyo%20ces%20jours-ci", enrichment_source: null },
+  { id: "cd0cdc46-bfd4-5850-beaf-3019f10e3e7b", title: "Tomino la maudite", event_ids: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4", author_ids: ["2bd1623e-7f3d-543a-b05c-628bb3e6d6b4"], publisher: "Casterman", publishing_year: null, ean: "9782203210110", summary: null, publication_date: "2021-05-11T00:00:00.000Z", page_count: 320, price: null, cover_url: "https://covers.openlibrary.org/b/id/10585115-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203210110", enrichment_source: null },
+  { id: "a88d2dfe-e823-5455-b5a7-a9eea7604db2", title: "Toonzie", event_ids: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4", author_ids: ["55a709af-cd36-5f34-9454-177b62ab1b72"], publisher: "2024", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/2024", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Toonzie", enrichment_source: null },
+  { id: "126597e8-c9b9-59ea-bd95-81b0e7b61342", title: "Toujours tout foutre en l'air", event_ids: "cc962b47-ac4d-5add-8aeb-39e10f0374e6", author_ids: ["7dcf6112-1145-5af4-82fb-e9b92015aa1d"], publisher: "Revival", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Revival", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Toujours%20tout%20foutre%20en%20l'air", enrichment_source: null },
+  { id: "92d5d028-df2f-5e50-b4b7-9887ae2f807b", title: "Toutes les morts de Laila Starr", event_ids: "1320b429-70e2-593e-976d-0cc9646e88c8", author_ids: ["4eee69a6-88fd-5e48-b8f5-dd582920a450", "94b0e949-b89d-5ea5-b0b9-7cbd0ac73da4"], publisher: "Urban Comics", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Toutes%20les%20morts%20de%20Laila%20Starr", enrichment_source: null },
+  { id: "219fdb59-446f-5ec8-ada8-aa3432778341", title: "Transperceneige", event_ids: "a03c92e9-d27b-5a1a-83b5-01c0a6448113", author_ids: ["4262dd32-264e-5b27-89d4-b8f1d948b32c", "acaa9413-e232-5de0-95fa-e139a9ece44f", "5d4b528a-9838-5b47-9940-6c3506237d97"], publisher: "Casterman", publishing_year: null, ean: "9782203334182", summary: null, publication_date: "1984-01-01T00:00:00.000Z", page_count: 134, price: null, cover_url: "https://covers.openlibrary.org/b/id/14834886-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203334182", enrichment_source: null },
+  { id: "ee4b52be-c659-5eff-ae4e-44cebfeb024c", title: "Trashed", event_ids: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a", author_ids: ["96f050f1-d364-5995-835b-e0735f743da1"], publisher: "çà et là", publishing_year: 2015, ean: "9781419714542", summary: "WHAT DID OGGY STOP FOR?", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12211547-L.jpg", publisher_url: "https://openlibrary.org/publishers/%C3%A7%C3%A0%20et%20l%C3%A0", leslibraires_url: "https://www.leslibraires.fr/livre/9781419714542", enrichment_source: null },
+  { id: "92d4a711-7df9-52a6-aef4-35cf71bbc16a", title: "Tulipe", event_ids: "7e9194c4-701f-58d0-801d-6b0a204ec1d4", author_ids: ["7ca4b9c7-18bd-5d69-9771-bd4f479f8b57"], publisher: "Editions 2024", publishing_year: 2016, ean: "9782919242641", summary: null, publication_date: "2016-11-15T00:00:00.000Z", page_count: 158, price: null, cover_url: "https://covers.openlibrary.org/b/id/12553937-L.jpg", publisher_url: "https://openlibrary.org/publishers/Editions%202024", leslibraires_url: "https://www.leslibraires.fr/livre/9782919242641", enrichment_source: null },
+  { id: "22420ca8-73c3-508a-a4ca-2f9378f14338", title: "Tête de chien", event_ids: "59b9a96e-b2d0-5d31-9167-293aed303df5", author_ids: ["2ceec585-d739-59b6-948a-6b8117a74f5e", "d1a00a6a-c6a2-526c-8bca-05745c2bdcc0"], publisher: "Dargaud", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Dargaud", leslibraires_url: "https://www.leslibraires.fr/recherche?query=T%C3%AAte%20de%20chien", enrichment_source: null },
+  { id: "a07deabb-ba5c-5b23-bd86-e977a8865e6c", title: "ULTRALAZER", event_ids: "1b7d31e9-f721-586b-a7b0-535c61a4ede7", author_ids: ["5bd9bdce-2827-5048-84b1-476815daaeff", "96ee5e02-42ba-5540-b8a7-b2b639a577bb", "aaff7554-0102-5996-beae-0993b356a202"], publisher: "Delcourt", publishing_year: null, ean: "9782756091785", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12819451-L.jpg", publisher_url: "https://openlibrary.org/publishers/Delcourt", leslibraires_url: "https://www.leslibraires.fr/livre/9782756091785", enrichment_source: null },
+  { id: "1de89bb4-2d86-543c-845e-fba8f42fc847", title: "Un Orage par jour", event_ids: "d22485f9-9242-5a72-bc1e-9c223c27134d", author_ids: ["da949bb6-12f0-5d85-b093-d2ec26926f91"], publisher: "Keribus", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Keribus", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Un%20Orage%20par%20jour", enrichment_source: null },
+  { id: "6d437cee-8870-53d7-bffa-9aba1bb92823", title: "Un picsou qui ressemble à Bernard Arnault", event_ids: "7a658366-6710-5724-859d-c94de9e9d9ab", author_ids: [], publisher: null, publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: null, leslibraires_url: "https://www.leslibraires.fr/recherche?query=Un%20picsou%20qui%20ressemble%20%C3%A0%20Bernard%20Arnault", enrichment_source: null },
+  { id: "2d214a1a-d718-56ca-b4b1-daecd27fbc70", title: "Un visage familier", event_ids: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36", author_ids: ["befc47ec-c72f-58e3-8519-a28173853443"], publisher: "Atrabile", publishing_year: null, ean: "9782889231096", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/12554099-L.jpg", publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/livre/9782889231096", enrichment_source: null },
+  { id: "3da21605-8214-54c2-b22c-e217a9c9ce93", title: "Un vrai guerrier ne meurt jamais même si ça signifie la mort", event_ids: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b", author_ids: ["0eb89bcb-1cb8-54fb-84dd-ae9d7268c805"], publisher: "Arbitraire", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Arbitraire", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Un%20vrai%20guerrier%20ne%20meurt%20jamais%20m%C3%AAme%20si%20%C3%A7a%20signifie%20la%20mort", enrichment_source: null },
+  { id: "18b43f2b-e8c9-553e-92e1-c13027830753", title: "Une collision accidentelle sur le chemin de l’école peut elle donner lieu à un baiser ?", event_ids: "016d6e71-04fa-5718-bbc4-42c714e709a9", author_ids: ["b4ba44f4-199f-5988-8479-e4422af71a49"], publisher: "IMHO", publishing_year: 2013, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/IMHO", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Une%20collision%20accidentelle%20sur%20le%20chemin%20de%20l%E2%80%99%C3%A9cole%20peut%20elle%20donner%20lieu%20%C3%A0%20un%20baiser%20%3F", enrichment_source: null },
+  { id: "3ffeb194-5cc8-5d05-ade9-964f5999aa79", title: "Une féssée et au lit", event_ids: "d7bb79a6-c63f-532e-9f9a-c52593db9321", author_ids: ["aedca89a-5fbd-5370-bd4f-613e59392e1e"], publisher: "The Hoochie Coochie", publishing_year: 2016, ean: "9782916049649", summary: null, publication_date: "2016-01-01T00:00:00.000Z", page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/The%20Hoochie%20Coochie", leslibraires_url: "https://www.leslibraires.fr/livre/9782916049649", enrichment_source: null },
+  { id: "714b0f37-f73f-5508-825c-281074c8aebe", title: "Une nuit avec toi", event_ids: "bf7694bb-b7a0-5258-9679-5e32f0e0399f", author_ids: ["3147fff6-a2e8-5fc8-8085-78440711c1b3"], publisher: "Glénat", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Gl%C3%A9nat", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Une%20nuit%20avec%20toi", enrichment_source: null },
+  { id: "975d271b-e1e0-54f8-9273-2debfe877e0f", title: "Une soeur", event_ids: "4773d958-16dc-5d09-ac56-048ca6df63b8", author_ids: ["552512e4-a3e7-5246-89cf-9ddee4ca5e17"], publisher: "Casterman", publishing_year: 2017, ean: "9782203224780", summary: null, publication_date: "2021-05-25T00:00:00.000Z", page_count: 224, price: null, cover_url: "https://covers.openlibrary.org/b/id/10883976-L.jpg", publisher_url: "https://openlibrary.org/publishers/Casterman", leslibraires_url: "https://www.leslibraires.fr/livre/9782203224780", enrichment_source: null },
+  { id: "38c7eb79-a784-51a2-bf4e-94b788834ea9", title: "Une tête bien vide", event_ids: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6", author_ids: ["617cfc5a-f2fa-5b31-9e82-f0e71d742d38"], publisher: "Atrabile", publishing_year: 2015, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Atrabile", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Une%20t%C3%AAte%20bien%20vide", enrichment_source: null },
+  { id: "bb2f4bd6-ea0d-5028-bd8d-d3eb6437888c", title: "Ushima, l'usurier de l'ombre", event_ids: "94e69eb9-e081-52d8-a886-1e8990ac7c1b", author_ids: ["3ed49b39-8117-577d-ba13-6ac94a9e388b"], publisher: "Kana", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Kana", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Ushima%2C%20l'usurier%20de%20l'ombre", enrichment_source: null },
+  { id: "0ee6ba43-46ad-5c80-8a2e-5114850d943b", title: "Vater und sohn", event_ids: "fc63aa8e-600f-5543-807f-73035f19248e", author_ids: ["6784186c-7620-5323-ba49-f65e51e6ae6f"], publisher: "Warum / Vraoum", publishing_year: 2015, ean: null, summary: null, publication_date: "1986-01-01T00:00:00.000Z", page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Warum%20%2F%20Vraoum", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Vater%20und%20sohn", enrichment_source: null },
+  { id: "deb20c8e-015a-5c9c-9686-1111263e8a0a", title: "Violette Morris - à abattre par tous moyens", event_ids: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1", author_ids: ["cd5b8826-38e8-5380-86f3-a2d6735d723a", "1f55bd80-400f-5c7c-98ed-d29a9fff6cbe", "030b9850-5805-5d5d-b8ef-9d9d2f42cdd6", "b791b4d4-8740-554d-ad07-82218d8bb7ed"], publisher: "Futuropolis", publishing_year: null, ean: "9782754821650", summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/livre/9782754821650", enrichment_source: null },
+  { id: "b5c177d6-e429-538f-84b3-6f857b20a7a4", title: "Vive la marée !", event_ids: "81b7b345-17ae-599b-8c17-b38aafc42040", author_ids: ["343a491e-3575-5f01-bd10-fce806418d2d", "63d2e556-4c79-555b-afec-1eb4a3f509a5"], publisher: "Futuropolis", publishing_year: 2015, ean: "9782754812146", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/10867239-L.jpg", publisher_url: "https://openlibrary.org/publishers/Futuropolis", leslibraires_url: "https://www.leslibraires.fr/livre/9782754812146", enrichment_source: null },
+  { id: "e24b2289-3eba-5581-9e3b-7c3d08251f70", title: "Walicho", event_ids: "28a72776-8abd-56ff-a48b-fe50c1c9add1", author_ids: ["11f8a644-a339-59d8-af48-8b26d8709fbd"], publisher: "Ça et là", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/%C3%87a%20et%20l%C3%A0", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Walicho", enrichment_source: null },
+  { id: "af8eb788-7a27-5205-84b1-ae1298595b7d", title: "Whiskey and New York", event_ids: "814b8d2c-b7ac-5509-9440-0e6532e9847a", author_ids: ["c1ffebeb-922e-5aec-a97e-43302c30360d"], publisher: "l’Agrume", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/l%E2%80%99Agrume", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Whiskey%20and%20New%20York", enrichment_source: null },
+  { id: "f6807abd-c884-551c-ad68-32d7182e64bc", title: "White Trash", event_ids: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf", author_ids: ["c533d6df-4b35-5261-9157-fa3cef0e4088"], publisher: "Ankama", publishing_year: 2016, ean: "9781781168219", summary: null, publication_date: "2015-01-01T00:00:00.000Z", page_count: 128, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Ankama", leslibraires_url: "https://www.leslibraires.fr/livre/9781781168219", enrichment_source: null },
+  { id: "67a5f9be-05e5-5595-a37f-a5ab7ac9952b", title: "Wonder Woman Dead Earth", event_ids: "a03c92e9-d27b-5a1a-83b5-01c0a6448113", author_ids: ["53e5ed3c-b20d-5b8d-b590-3e185b8a81c5"], publisher: "Urban", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Urban", leslibraires_url: "https://www.leslibraires.fr/recherche?query=Wonder%20Woman%20Dead%20Earth", enrichment_source: null },
+  { id: "0e432312-5b7e-50f8-afba-7869c1256706", title: "Y le dernier homme", event_ids: "2fc305c6-f0c7-5462-9a45-89241614c418", author_ids: ["ed1a4f6d-3f61-5ebf-95d6-dffa1b57b17e", "04714650-136f-580a-ba12-2816571f86cf"], publisher: "Urban Comics", publishing_year: 2012, ean: "9781549872990", summary: "TWYFORD, at the Bishop of St. Asaph's, 1771.", publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/5647361-L.jpg", publisher_url: "https://openlibrary.org/publishers/Urban%20Comics", leslibraires_url: "https://www.leslibraires.fr/livre/9781549872990", enrichment_source: null },
+  { id: "c2f61a7e-3816-5686-b9e5-d9556ee77049", title: "l'Amour Après", event_ids: "28a72776-8abd-56ff-a48b-fe50c1c9add1", author_ids: ["c6bfc388-ba3c-5aa7-b627-d7528e7b7f95", "ff780b2f-973b-5b78-8aaf-b22f31bc1bb4"], publisher: "Virages Graphiques", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/Virages%20Graphiques", leslibraires_url: "https://www.leslibraires.fr/recherche?query=l'Amour%20Apr%C3%A8s", enrichment_source: null },
+  { id: "66419695-ae35-53a0-b7db-55e99b5d6b02", title: "la Baleine Bibliothèque", event_ids: "8b17df4f-c7a6-568b-bba7-e9f0474230ac", author_ids: ["095fe88f-e6bc-523c-a338-d927d8a46767", "b64f17a8-7cde-5016-a0ba-5e4599ad52f2"], publisher: "le Lombard", publishing_year: null, ean: "9782803677962", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11165672-L.jpg", publisher_url: "https://openlibrary.org/publishers/le%20Lombard", leslibraires_url: "https://www.leslibraires.fr/livre/9782803677962", enrichment_source: null },
+  { id: "90278e20-06f0-50f8-a8f0-04b97acfe3ce", title: "la Fille de la plage", event_ids: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e", author_ids: ["b4e9729a-f1c7-5994-b791-a4c365333f5b"], publisher: "éditions IMHO", publishing_year: null, ean: "9782364810044", summary: null, publication_date: "2015-01-01T00:00:00.000Z", page_count: 214, price: null, cover_url: "https://covers.openlibrary.org/b/id/12465152-L.jpg", publisher_url: "https://openlibrary.org/publishers/%C3%A9ditions%20IMHO", leslibraires_url: "https://www.leslibraires.fr/livre/9782364810044", enrichment_source: null },
+  { id: "945ced24-f871-580c-a2cd-e55da6520b39", title: "la Revanche des Bibliothécaires", event_ids: "8b17df4f-c7a6-568b-bba7-e9f0474230ac", author_ids: ["82f0f18e-ef7e-5f41-8047-ad16d91e05e4"], publisher: "2024", publishing_year: null, ean: "9782383870234", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/13105690-L.jpg", publisher_url: "https://openlibrary.org/publishers/2024", leslibraires_url: "https://www.leslibraires.fr/livre/9782383870234", enrichment_source: null },
+  { id: "28c74fd2-511a-5728-a28e-8876fa62ece8", title: "la fille maudite du capitaine pirate", event_ids: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e", author_ids: ["bc5f45bb-b47a-5c9e-9452-990ca3ac5f9a"], publisher: "éditions de la Cerise", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/%C3%A9ditions%20de%20la%20Cerise", leslibraires_url: "https://www.leslibraires.fr/recherche?query=la%20fille%20maudite%20du%20capitaine%20pirate", enrichment_source: null },
+  { id: "01c74bc6-960a-58b3-9069-ca12ec2fb9b4", title: "le Choeur des Femmes", event_ids: "ec126adf-2c87-51c4-b109-22b7689339ad", author_ids: ["901b17fe-09a8-5b9f-9f5d-a73d92a26547"], publisher: "Lombard", publishing_year: null, ean: "9782803677139", summary: null, publication_date: null, page_count: null, price: null, cover_url: "https://covers.openlibrary.org/b/id/11326667-L.jpg", publisher_url: "https://openlibrary.org/publishers/Lombard", leslibraires_url: "https://www.leslibraires.fr/livre/9782803677139", enrichment_source: null },
+  { id: "a01a8124-f371-5a31-a90b-8bcf85d43a7c", title: "titre oublié BD avec grenouille", event_ids: "7a658366-6710-5724-859d-c94de9e9d9ab", author_ids: [], publisher: null, publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: null, leslibraires_url: "https://www.leslibraires.fr/recherche?query=titre%20oubli%C3%A9%20BD%20avec%20grenouille", enrichment_source: null },
+  { id: "69fc7e78-c691-52d1-9568-ff25b698eaab", title: "Âme augmentée", event_ids: "12815554-e509-5c87-be90-52d0ba1546af", author_ids: ["1895a4c2-2cf2-5967-b5b1-2b87bfb4c910"], publisher: "404 graphics", publishing_year: null, ean: null, summary: null, publication_date: null, page_count: null, price: null, cover_url: null, publisher_url: "https://openlibrary.org/publishers/404%20graphics", leslibraires_url: "https://www.leslibraires.fr/recherche?query=%C3%82me%20augment%C3%A9e", enrichment_source: null },
+];
+
+const authorEvents = [
+  { authorId: "fd51ff5e-d84e-5eae-8cd0-e095e96e3dba", eventId: "d3eafa10-a745-5597-94cb-39521449a60e" },
+  { authorId: "2503e0ea-8931-5458-afc8-90b272d6baa0", eventId: "d3eafa10-a745-5597-94cb-39521449a60e" },
+  { authorId: "bdb4565e-067f-56ca-8936-a076246543f4", eventId: "d3eafa10-a745-5597-94cb-39521449a60e" },
+  { authorId: "2027444e-c012-54a3-aec8-f68484ffe1eb", eventId: "d3eafa10-a745-5597-94cb-39521449a60e" },
+  { authorId: "a7e5dfca-337c-58a2-8dfb-d1469b851bd9", eventId: "d3eafa10-a745-5597-94cb-39521449a60e" },
+  { authorId: "43871c3f-7878-50fd-8691-838780202913", eventId: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9" },
+  { authorId: "bd00fc5a-20dc-576b-bad2-a3336306d052", eventId: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9" },
+  { authorId: "402fbda6-fe33-5e95-a64c-4385f9029a38", eventId: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9" },
+  { authorId: "499e8af8-50a7-57f3-8d89-f5d793796f9d", eventId: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9" },
+  { authorId: "5140c72e-436a-5c58-85af-fde4a31bd1da", eventId: "d5f75c97-9c89-5bba-b8ae-3a252399c8f9" },
+  { authorId: "298957cc-14c1-506e-b3d1-61603cbccd87", eventId: "defb09ef-c4e5-542b-acdf-e0b5029140ba" },
+  { authorId: "72a26f1a-77d7-531c-a4f4-2018eeb616ce", eventId: "defb09ef-c4e5-542b-acdf-e0b5029140ba" },
+  { authorId: "b678c865-cc90-539b-8e87-b8b7bd979836", eventId: "defb09ef-c4e5-542b-acdf-e0b5029140ba" },
+  { authorId: "402fbda6-fe33-5e95-a64c-4385f9029a38", eventId: "defb09ef-c4e5-542b-acdf-e0b5029140ba" },
+  { authorId: "499e8af8-50a7-57f3-8d89-f5d793796f9d", eventId: "defb09ef-c4e5-542b-acdf-e0b5029140ba" },
+  { authorId: "6b6badf0-ebf9-58a7-8c65-f1d065349439", eventId: "defb09ef-c4e5-542b-acdf-e0b5029140ba" },
+  { authorId: "fa90699d-7b23-523d-b295-cb62820b4f9b", eventId: "defb09ef-c4e5-542b-acdf-e0b5029140ba" },
+  { authorId: "0cf5be42-674c-5e17-9e49-7fb184b1431c", eventId: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b" },
+  { authorId: "d4584704-3ebe-5a6f-b8f9-bf17fa741a33", eventId: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b" },
+  { authorId: "f2c424bc-1c49-51c1-b24c-e35a2aa03969", eventId: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b" },
+  { authorId: "3bb69f39-439a-56b4-8c8b-84229ff231ba", eventId: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b" },
+  { authorId: "4d4f91cb-cbe7-5303-8271-d641cf6a6221", eventId: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b" },
+  { authorId: "0eb89bcb-1cb8-54fb-84dd-ae9d7268c805", eventId: "f22d82a6-0cbb-545d-ac4e-4d6766dd929b" },
+  { authorId: "95fa1c0a-912a-55cc-8056-f531d33f882e", eventId: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6" },
+  { authorId: "48f4c9b6-4f07-53ad-bd78-dfc79b024297", eventId: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6" },
+  { authorId: "54ffe919-5f0b-553a-bd79-e6c9314fe6ba", eventId: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6" },
+  { authorId: "f22a840a-ae7b-585b-b790-d0e5e0a22043", eventId: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6" },
+  { authorId: "617cfc5a-f2fa-5b31-9e82-f0e71d742d38", eventId: "f9362d2e-7799-5314-8d0f-7bfbebbc45b6" },
+  { authorId: "82b73354-e24a-5897-a4d7-a14c69097c14", eventId: "5530f067-a32c-51e1-9ad7-97cf775ed705" },
+  { authorId: "950aea29-52b1-5b38-916e-69bd7222eed0", eventId: "5530f067-a32c-51e1-9ad7-97cf775ed705" },
+  { authorId: "e2973a8e-b6fe-5378-b489-513f29620f71", eventId: "5530f067-a32c-51e1-9ad7-97cf775ed705" },
+  { authorId: "06153a78-09a9-505d-94b2-6d01b716bd24", eventId: "5530f067-a32c-51e1-9ad7-97cf775ed705" },
+  { authorId: "f51793e5-443e-5f81-a04e-65fb91a807e1", eventId: "5530f067-a32c-51e1-9ad7-97cf775ed705" },
+  { authorId: "d8152d45-6327-555b-bab0-5773452caeed", eventId: "5530f067-a32c-51e1-9ad7-97cf775ed705" },
+  { authorId: "e09ec5a1-670e-5f3d-9f32-349c029bac21", eventId: "2456ad86-5acc-5301-9bd6-90548d61b552" },
+  { authorId: "61b42f2a-c779-5680-b591-6e6128f1a1b7", eventId: "2456ad86-5acc-5301-9bd6-90548d61b552" },
+  { authorId: "42648312-3057-56f3-a03c-346bc337f3f8", eventId: "2456ad86-5acc-5301-9bd6-90548d61b552" },
+  { authorId: "8de0a770-0d52-5e17-97db-ef10383eb7e6", eventId: "2456ad86-5acc-5301-9bd6-90548d61b552" },
+  { authorId: "742c3aed-25a1-5152-a908-bd41647dc69a", eventId: "2456ad86-5acc-5301-9bd6-90548d61b552" },
+  { authorId: "b818290e-2fbd-585a-828a-479920a33e88", eventId: "2456ad86-5acc-5301-9bd6-90548d61b552" },
+  { authorId: "3c63d44c-9b4f-596e-9bd5-84c3786f15dd", eventId: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82" },
+  { authorId: "32df707a-3433-582f-b61e-ae27388d4713", eventId: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82" },
+  { authorId: "b4e9729a-f1c7-5994-b791-a4c365333f5b", eventId: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82" },
+  { authorId: "000c49b2-0453-5107-a06f-58c9b1fea271", eventId: "b9550565-c4f9-51fc-b8e1-1259a3c5cc82" },
+  { authorId: "b4ba44f4-199f-5988-8479-e4422af71a49", eventId: "3b113b35-2d55-51c4-a846-f640bae083f4" },
+  { authorId: "94dabec5-6d21-52f5-bcb2-0298eeca942e", eventId: "3b113b35-2d55-51c4-a846-f640bae083f4" },
+  { authorId: "40a78c44-4310-5562-8dc7-76d43d290bda", eventId: "3b113b35-2d55-51c4-a846-f640bae083f4" },
+  { authorId: "86b380e5-e629-5310-a14c-a81874f5b0be", eventId: "3b113b35-2d55-51c4-a846-f640bae083f4" },
+  { authorId: "b51e43e0-93f2-5e19-a4ea-6c9847f8a7e3", eventId: "00e27df2-3483-5397-bfdb-e40b84d0dd1c" },
+  { authorId: "bb4e4e79-2608-504d-8924-888397c60925", eventId: "00e27df2-3483-5397-bfdb-e40b84d0dd1c" },
+  { authorId: "073d9082-a5d3-506a-985d-eb0aebe059a8", eventId: "00e27df2-3483-5397-bfdb-e40b84d0dd1c" },
+  { authorId: "ce0db7bb-6bd3-522e-bc15-0b4f81ad598e", eventId: "00e27df2-3483-5397-bfdb-e40b84d0dd1c" },
+  { authorId: "ecb4c9b9-3668-504e-b85a-91058c2412a2", eventId: "00e27df2-3483-5397-bfdb-e40b84d0dd1c" },
+  { authorId: "e9d80524-250a-5eed-b35a-7c4e80bac050", eventId: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a" },
+  { authorId: "9425decb-3a8b-5e37-aac5-5ccb7a8b06d7", eventId: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a" },
+  { authorId: "96f050f1-d364-5995-835b-e0735f743da1", eventId: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a" },
+  { authorId: "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e", eventId: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a" },
+  { authorId: "0de81355-7467-5c84-ac5a-fda83bddd329", eventId: "590aeb5c-04d1-5591-8c71-8f194fe9dd1a" },
+  { authorId: "55310ba7-320a-5abb-8b39-eff41549b0f1", eventId: "fc63aa8e-600f-5543-807f-73035f19248e" },
+  { authorId: "5c38e890-27df-567f-9c6f-bcec8ceea617", eventId: "fc63aa8e-600f-5543-807f-73035f19248e" },
+  { authorId: "a0303dba-bfa5-5dbc-8c2a-7cc1352a5f7e", eventId: "fc63aa8e-600f-5543-807f-73035f19248e" },
+  { authorId: "33d9e522-4553-5c30-84d9-90627de2766d", eventId: "fc63aa8e-600f-5543-807f-73035f19248e" },
+  { authorId: "6784186c-7620-5323-ba49-f65e51e6ae6f", eventId: "fc63aa8e-600f-5543-807f-73035f19248e" },
+  { authorId: "1447e129-555d-532d-8df9-d42e6407feef", eventId: "fc63aa8e-600f-5543-807f-73035f19248e" },
+  { authorId: "21ea33cb-1507-5e60-80c3-10871c80788b", eventId: "fc63aa8e-600f-5543-807f-73035f19248e" },
+  { authorId: "dd7e20bf-bcd1-5b90-a7d5-96c2ef461276", eventId: "fc63aa8e-600f-5543-807f-73035f19248e" },
+  { authorId: "93d9e02c-ca19-59ba-a0ff-fe436c3a55bf", eventId: "577662aa-e0e0-5fc7-9538-eea8c644fac8" },
+  { authorId: "fbc80bf7-51eb-58fc-b8c2-66228d9518a3", eventId: "577662aa-e0e0-5fc7-9538-eea8c644fac8" },
+  { authorId: "0ca16d5c-a8ba-5db2-9f06-f74b056d9c83", eventId: "577662aa-e0e0-5fc7-9538-eea8c644fac8" },
+  { authorId: "1a15581a-5279-5430-876c-2e8ffa8ff9a9", eventId: "577662aa-e0e0-5fc7-9538-eea8c644fac8" },
+  { authorId: "f2c424bc-1c49-51c1-b24c-e35a2aa03969", eventId: "9892d986-cf7a-5e39-8f31-7e0e110e3565" },
+  { authorId: "c1ffebeb-922e-5aec-a97e-43302c30360d", eventId: "9892d986-cf7a-5e39-8f31-7e0e110e3565" },
+  { authorId: "d0b44328-312e-5462-94fc-6071926328cf", eventId: "9892d986-cf7a-5e39-8f31-7e0e110e3565" },
+  { authorId: "64050749-07c1-53a7-82b9-41a75f355e82", eventId: "9892d986-cf7a-5e39-8f31-7e0e110e3565" },
+  { authorId: "d95d8155-cb3d-51b6-aa89-a6c1c7d4efda", eventId: "634fc1df-6058-5247-a08c-fad69ce34c2e" },
+  { authorId: "307d6d57-5e9c-5093-81f8-c14ebd1a70bf", eventId: "634fc1df-6058-5247-a08c-fad69ce34c2e" },
+  { authorId: "87b5bd4e-962b-5128-b63a-fcb5a620a097", eventId: "634fc1df-6058-5247-a08c-fad69ce34c2e" },
+  { authorId: "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57", eventId: "634fc1df-6058-5247-a08c-fad69ce34c2e" },
+  { authorId: "07e138d4-c5e0-5e13-81c4-b924dca78d61", eventId: "634fc1df-6058-5247-a08c-fad69ce34c2e" },
+  { authorId: "29c51d18-72d7-5715-8d93-7f49418467af", eventId: "77c01a2a-d1e6-590e-b030-9b97131b7e52" },
+  { authorId: "63e6bbf9-501c-5cab-a447-df8eca94278c", eventId: "77c01a2a-d1e6-590e-b030-9b97131b7e52" },
+  { authorId: "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2", eventId: "77c01a2a-d1e6-590e-b030-9b97131b7e52" },
+  { authorId: "5ad0a9e1-5ffa-5c14-a110-f2130ce3514f", eventId: "77c01a2a-d1e6-590e-b030-9b97131b7e52" },
+  { authorId: "e7bad250-6da0-56ae-ab7c-bb32c2243587", eventId: "77c01a2a-d1e6-590e-b030-9b97131b7e52" },
+  { authorId: "5dffb67a-5aac-5df7-8cff-c42c4085749e", eventId: "b0b01187-3e41-530a-b69d-1b778156244a" },
+  { authorId: "2f4e23e5-9feb-53ab-beae-4555370c8f0d", eventId: "b0b01187-3e41-530a-b69d-1b778156244a" },
+  { authorId: "7fe75a35-1d64-517a-885f-630c30ee6ba0", eventId: "b0b01187-3e41-530a-b69d-1b778156244a" },
+  { authorId: "c5e6aaf1-2b53-5f0e-bce2-0c4c94f86c6f", eventId: "b0b01187-3e41-530a-b69d-1b778156244a" },
+  { authorId: "09ba303e-ed68-5c29-bac3-42f3ca9dc165", eventId: "b0b01187-3e41-530a-b69d-1b778156244a" },
+  { authorId: "453525aa-7f27-5d42-ba7b-d5459af791fc", eventId: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf" },
+  { authorId: "a1538e2c-43f9-5a42-8d71-008ad928bf75", eventId: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf" },
+  { authorId: "d9ccf51f-773d-5fc2-96b6-c595993dc4d5", eventId: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf" },
+  { authorId: "9329ecf2-fb88-5cda-93d0-4d796212135a", eventId: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf" },
+  { authorId: "c533d6df-4b35-5261-9157-fa3cef0e4088", eventId: "ebcd603e-64b3-5e3d-bb18-e26dcae09acf" },
+  { authorId: "8d89626c-33ca-5927-9738-0bf520f4b52e", eventId: "acaef519-c1b3-5690-84b1-d8fb25759813" },
+  { authorId: "6036d73a-1f6b-581b-8e41-74a385c4be82", eventId: "acaef519-c1b3-5690-84b1-d8fb25759813" },
+  { authorId: "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b", eventId: "acaef519-c1b3-5690-84b1-d8fb25759813" },
+  { authorId: "a0b94843-ddbb-5e2e-94f4-31715a79ae96", eventId: "acaef519-c1b3-5690-84b1-d8fb25759813" },
+  { authorId: "8d7dbf62-af3b-5183-9758-a74bff3e93b2", eventId: "acaef519-c1b3-5690-84b1-d8fb25759813" },
+  { authorId: "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8", eventId: "81b7b345-17ae-599b-8c17-b38aafc42040" },
+  { authorId: "65e00d00-102a-5d11-a8ee-1ae12e5f8022", eventId: "81b7b345-17ae-599b-8c17-b38aafc42040" },
+  { authorId: "343a491e-3575-5f01-bd10-fce806418d2d", eventId: "81b7b345-17ae-599b-8c17-b38aafc42040" },
+  { authorId: "63d2e556-4c79-555b-afec-1eb4a3f509a5", eventId: "81b7b345-17ae-599b-8c17-b38aafc42040" },
+  { authorId: "eb457afe-c7d7-5465-91f5-1f76bbd153d4", eventId: "81b7b345-17ae-599b-8c17-b38aafc42040" },
+  { authorId: "aabdfb6d-def7-59e7-aef7-caf4f826425e", eventId: "81b7b345-17ae-599b-8c17-b38aafc42040" },
+  { authorId: "c31ac25f-8577-51a4-8112-3280350d8f34", eventId: "eb52c998-b16a-55d6-a25e-fc780089bc5b" },
+  { authorId: "f780ae12-bdb3-5934-a7eb-c1a220d6c1f7", eventId: "eb52c998-b16a-55d6-a25e-fc780089bc5b" },
+  { authorId: "095fe88f-e6bc-523c-a338-d927d8a46767", eventId: "eb52c998-b16a-55d6-a25e-fc780089bc5b" },
+  { authorId: "82f0f18e-ef7e-5f41-8047-ad16d91e05e4", eventId: "eb52c998-b16a-55d6-a25e-fc780089bc5b" },
+  { authorId: "2f89aaac-ebdd-5a34-a0a8-e93588b567e4", eventId: "eb52c998-b16a-55d6-a25e-fc780089bc5b" },
+  { authorId: "74fe19ba-aed1-535a-b8e0-d23ecae07b52", eventId: "d7bb79a6-c63f-532e-9f9a-c52593db9321" },
+  { authorId: "aedca89a-5fbd-5370-bd4f-613e59392e1e", eventId: "d7bb79a6-c63f-532e-9f9a-c52593db9321" },
+  { authorId: "ecc84076-df42-5c48-b1a3-d3d8a57b3771", eventId: "d7bb79a6-c63f-532e-9f9a-c52593db9321" },
+  { authorId: "bd3ae08f-db85-5ec7-997d-14285b672739", eventId: "d7bb79a6-c63f-532e-9f9a-c52593db9321" },
+  { authorId: "160a3ea0-3de2-5647-bd35-de0856ad7ff1", eventId: "d7bb79a6-c63f-532e-9f9a-c52593db9321" },
+  { authorId: "b84a8b0d-c5d4-50a0-98ca-7499c46b7968", eventId: "7e9194c4-701f-58d0-801d-6b0a204ec1d4" },
+  { authorId: "a0e8081c-c789-5249-a9ad-938d911d3d15", eventId: "7e9194c4-701f-58d0-801d-6b0a204ec1d4" },
+  { authorId: "7ca4b9c7-18bd-5d69-9771-bd4f479f8b57", eventId: "7e9194c4-701f-58d0-801d-6b0a204ec1d4" },
+  { authorId: "5a27bd93-6368-5a71-863e-b2984c27b7da", eventId: "7e9194c4-701f-58d0-801d-6b0a204ec1d4" },
+  { authorId: "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b", eventId: "a25ef389-a3d0-5e2e-a153-2e280ed21d81" },
+  { authorId: "8fe7fe5d-f5d1-57fa-9b23-8613e9714774", eventId: "a25ef389-a3d0-5e2e-a153-2e280ed21d81" },
+  { authorId: "0afb0661-1df4-536c-9666-10c4b38bb243", eventId: "a25ef389-a3d0-5e2e-a153-2e280ed21d81" },
+  { authorId: "1f5f75e0-7638-50f5-80af-9cd35b1db3a9", eventId: "a25ef389-a3d0-5e2e-a153-2e280ed21d81" },
+  { authorId: "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3", eventId: "a162a1f8-1fec-55a0-838d-7c9173f88142" },
+  { authorId: "cdc82420-f432-5f59-a469-f2e496e2ec4d", eventId: "a162a1f8-1fec-55a0-838d-7c9173f88142" },
+  { authorId: "37c48d00-bc91-517c-b977-e253bcc19204", eventId: "a162a1f8-1fec-55a0-838d-7c9173f88142" },
+  { authorId: "d7ebbe2d-e613-5ff8-939b-63886c183c10", eventId: "a162a1f8-1fec-55a0-838d-7c9173f88142" },
+  { authorId: "6c202026-ad9b-5d9f-a7cb-35d1e0009667", eventId: "a162a1f8-1fec-55a0-838d-7c9173f88142" },
+  { authorId: "552512e4-a3e7-5246-89cf-9ddee4ca5e17", eventId: "4773d958-16dc-5d09-ac56-048ca6df63b8" },
+  { authorId: "b4e9729a-f1c7-5994-b791-a4c365333f5b", eventId: "4773d958-16dc-5d09-ac56-048ca6df63b8" },
+  { authorId: "38a340c0-3423-5b21-8f83-9db6313b7522", eventId: "4773d958-16dc-5d09-ac56-048ca6df63b8" },
+  { authorId: "befc47ec-c72f-58e3-8519-a28173853443", eventId: "4773d958-16dc-5d09-ac56-048ca6df63b8" },
+  { authorId: "c49f0cdc-1a16-51f1-aec9-b96dbb3ecfab", eventId: "41d4751a-0f18-5d59-86d2-8e48b38d35fb" },
+  { authorId: "f32dd3ed-2196-56e7-bb1a-41d07e59b2f7", eventId: "41d4751a-0f18-5d59-86d2-8e48b38d35fb" },
+  { authorId: "bf478f85-abfd-5914-acc2-eb7ae099bad6", eventId: "41d4751a-0f18-5d59-86d2-8e48b38d35fb" },
+  { authorId: "b0f40b74-5f7d-5e03-9420-f2c5732abccf", eventId: "41d4751a-0f18-5d59-86d2-8e48b38d35fb" },
+  { authorId: "c8a55c08-f0a1-57c9-a276-d164183edeb8", eventId: "41d4751a-0f18-5d59-86d2-8e48b38d35fb" },
+  { authorId: "926f14bf-2ff3-58be-b4a8-bfc69cd4f9fb", eventId: "41d4751a-0f18-5d59-86d2-8e48b38d35fb" },
+  { authorId: "d98bf4ce-fabc-518d-9a7b-415fda62817e", eventId: "962b55da-7635-5b79-975c-44b8cd63497b" },
+  { authorId: "b52d45f1-1dd3-55f6-bb85-67fcb65cea0b", eventId: "962b55da-7635-5b79-975c-44b8cd63497b" },
+  { authorId: "e0985a1b-4ff4-5b75-8ca7-3067999c69d5", eventId: "962b55da-7635-5b79-975c-44b8cd63497b" },
+  { authorId: "91ea0576-e99f-559b-8107-43c5a962ce61", eventId: "962b55da-7635-5b79-975c-44b8cd63497b" },
+  { authorId: "ef93712c-4767-58cf-bde5-b0d4e4447cc3", eventId: "962b55da-7635-5b79-975c-44b8cd63497b" },
+  { authorId: "b3477ea0-acf7-5378-921f-003ae0d32b4b", eventId: "962b55da-7635-5b79-975c-44b8cd63497b" },
+  { authorId: "035c9f3a-3ce1-5d0c-8ea8-44c33fa53465", eventId: "e53c882f-3627-5b43-b1d8-ee7469a56d93" },
+  { authorId: "1cb65ab4-91ec-58a4-b86b-15848303925f", eventId: "e53c882f-3627-5b43-b1d8-ee7469a56d93" },
+  { authorId: "48f4c9b6-4f07-53ad-bd78-dfc79b024297", eventId: "e53c882f-3627-5b43-b1d8-ee7469a56d93" },
+  { authorId: "e8be046b-4ab7-5bf1-b064-43221857647d", eventId: "e53c882f-3627-5b43-b1d8-ee7469a56d93" },
+  { authorId: "a12a8cd7-361a-5455-a8da-350b55b581b1", eventId: "e53c882f-3627-5b43-b1d8-ee7469a56d93" },
+  { authorId: "db9a12ff-381c-54a8-847d-511a1a18e953", eventId: "e53c882f-3627-5b43-b1d8-ee7469a56d93" },
+  { authorId: "685f38e5-4320-5e62-9650-764382aed9a2", eventId: "016d6e71-04fa-5718-bbc4-42c714e709a9" },
+  { authorId: "b4e9729a-f1c7-5994-b791-a4c365333f5b", eventId: "016d6e71-04fa-5718-bbc4-42c714e709a9" },
+  { authorId: "b4ba44f4-199f-5988-8479-e4422af71a49", eventId: "016d6e71-04fa-5718-bbc4-42c714e709a9" },
+  { authorId: "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1", eventId: "016d6e71-04fa-5718-bbc4-42c714e709a9" },
+  { authorId: "081b0e0b-4da2-5f56-bf65-0bd4159a6420", eventId: "99984239-be4b-5527-ac6f-2efffaa923c7" },
+  { authorId: "0708b86c-85b5-5300-9cd9-a2bda4f0a606", eventId: "99984239-be4b-5527-ac6f-2efffaa923c7" },
+  { authorId: "a730029a-5fc8-5f2d-83ee-d08a20957c8c", eventId: "99984239-be4b-5527-ac6f-2efffaa923c7" },
+  { authorId: "df9128c9-cec9-53c8-8729-617042111988", eventId: "99984239-be4b-5527-ac6f-2efffaa923c7" },
+  { authorId: "be1bbed6-3d2a-5949-9210-263612f09011", eventId: "99984239-be4b-5527-ac6f-2efffaa923c7" },
+  { authorId: "ce395aec-bccb-5983-acf4-6da1f7dc05d3", eventId: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319" },
+  { authorId: "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87", eventId: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319" },
+  { authorId: "4d8e72d3-3b12-548b-b11e-25da6ce04060", eventId: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319" },
+  { authorId: "095fe88f-e6bc-523c-a338-d927d8a46767", eventId: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319" },
+  { authorId: "2a1ed255-67b2-58cd-b606-8c8dd612fa86", eventId: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319" },
+  { authorId: "a296e419-1a8d-59a9-a3cd-d3ee5ba81fc9", eventId: "6726e0d7-3eb4-5b42-b5e8-d3bd3088b319" },
+  { authorId: "ae96a2ee-5217-5ca6-b422-07d3393e3b41", eventId: "10c922a7-8e8b-50ca-ae70-0e9dad0db06b" },
+  { authorId: "289863c6-a5cf-5a8e-ac03-c19aae5a032f", eventId: "10c922a7-8e8b-50ca-ae70-0e9dad0db06b" },
+  { authorId: "28ec0041-d45e-5c0f-855e-36d755e3a8cc", eventId: "10c922a7-8e8b-50ca-ae70-0e9dad0db06b" },
+  { authorId: "8de0a770-0d52-5e17-97db-ef10383eb7e6", eventId: "10c922a7-8e8b-50ca-ae70-0e9dad0db06b" },
+  { authorId: "2f4e23e5-9feb-53ab-beae-4555370c8f0d", eventId: "41d6ae0e-8b21-541d-a141-e8cc0134bbab" },
+  { authorId: "5867fc24-0362-5151-a5c0-a8846e846594", eventId: "41d6ae0e-8b21-541d-a141-e8cc0134bbab" },
+  { authorId: "950aea29-52b1-5b38-916e-69bd7222eed0", eventId: "41d6ae0e-8b21-541d-a141-e8cc0134bbab" },
+  { authorId: "226380ae-66d4-55d7-bf85-5d57c33b16c8", eventId: "41d6ae0e-8b21-541d-a141-e8cc0134bbab" },
+  { authorId: "dccf230a-7e53-53fc-8c68-d313d60245f3", eventId: "41d6ae0e-8b21-541d-a141-e8cc0134bbab" },
+  { authorId: "035010a7-3a33-5cdf-b3bc-237e47b1ac05", eventId: "41d6ae0e-8b21-541d-a141-e8cc0134bbab" },
+  { authorId: "ed1a4f6d-3f61-5ebf-95d6-dffa1b57b17e", eventId: "2fc305c6-f0c7-5462-9a45-89241614c418" },
+  { authorId: "04714650-136f-580a-ba12-2816571f86cf", eventId: "2fc305c6-f0c7-5462-9a45-89241614c418" },
+  { authorId: "eeab9dd3-5b67-53d1-8012-0b2cc71f0442", eventId: "2fc305c6-f0c7-5462-9a45-89241614c418" },
+  { authorId: "44528b19-7eac-5aab-8e73-bbc8f7c11c8b", eventId: "2fc305c6-f0c7-5462-9a45-89241614c418" },
+  { authorId: "1b65525f-ca97-5987-ac69-2799896f5fbf", eventId: "2fc305c6-f0c7-5462-9a45-89241614c418" },
+  { authorId: "012cf8c2-f922-5759-a7c4-244fe42ff33d", eventId: "2fc305c6-f0c7-5462-9a45-89241614c418" },
+  { authorId: "e0661633-2b9b-5f5f-8b1c-9dc7473c5037", eventId: "2fc305c6-f0c7-5462-9a45-89241614c418" },
+  { authorId: "8f8828b6-eed2-5ab6-8658-c165aa638119", eventId: "07171107-88be-5a83-be43-0205a9c53237" },
+  { authorId: "66b3e971-8a48-589a-bb44-75fb4755cf25", eventId: "07171107-88be-5a83-be43-0205a9c53237" },
+  { authorId: "a4c619ad-7880-5c8f-aeef-ac6c22630f6d", eventId: "07171107-88be-5a83-be43-0205a9c53237" },
+  { authorId: "f405fdc1-4877-50a2-b054-8198ebc80a55", eventId: "07171107-88be-5a83-be43-0205a9c53237" },
+  { authorId: "ef2a5874-3ec2-5b7d-b363-c8c94498ec1a", eventId: "07171107-88be-5a83-be43-0205a9c53237" },
+  { authorId: "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3", eventId: "437bf521-fecc-5100-9170-e59fe3b5a117" },
+  { authorId: "9e03747d-9a8a-5a37-bef0-6c60c93c5600", eventId: "437bf521-fecc-5100-9170-e59fe3b5a117" },
+  { authorId: "c53c562f-90cf-52c7-852e-ba4fa5778897", eventId: "437bf521-fecc-5100-9170-e59fe3b5a117" },
+  { authorId: "a353a8e9-4956-50a4-b70d-e0b753fcf522", eventId: "437bf521-fecc-5100-9170-e59fe3b5a117" },
+  { authorId: "f7afb30f-e1e2-556c-9c9a-43825f33af8f", eventId: "437bf521-fecc-5100-9170-e59fe3b5a117" },
+  { authorId: "7118c1e0-6a54-5867-b9b0-151ba357e1c8", eventId: "437bf521-fecc-5100-9170-e59fe3b5a117" },
+  { authorId: "34342b16-3119-579b-9c61-ef99940a8224", eventId: "19afc03b-0b2f-5102-946c-c27a7158332e" },
+  { authorId: "03cdc5ac-b075-5ab7-9fc8-3d64cdf0096d", eventId: "19afc03b-0b2f-5102-946c-c27a7158332e" },
+  { authorId: "a3c116a8-7515-5b5a-808f-6912b470b716", eventId: "19afc03b-0b2f-5102-946c-c27a7158332e" },
+  { authorId: "84220ea6-51be-54b2-8524-36bc6a1ad7c5", eventId: "19afc03b-0b2f-5102-946c-c27a7158332e" },
+  { authorId: "2d4623d8-e667-5373-b0e8-0933cc33d64e", eventId: "75bd8d09-d669-50a0-a00c-48987b2b9472" },
+  { authorId: "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0", eventId: "75bd8d09-d669-50a0-a00c-48987b2b9472" },
+  { authorId: "b4be3d64-8025-58ce-8c65-532412a7a00a", eventId: "75bd8d09-d669-50a0-a00c-48987b2b9472" },
+  { authorId: "cc2cbfb1-a137-5c56-8a23-2671597ab919", eventId: "75bd8d09-d669-50a0-a00c-48987b2b9472" },
+  { authorId: "0e19ff22-af4d-56a0-abcc-86cb2a09490d", eventId: "75bd8d09-d669-50a0-a00c-48987b2b9472" },
+  { authorId: "1c483a7c-e6bb-582a-8792-0cc4e649f4d0", eventId: "75bd8d09-d669-50a0-a00c-48987b2b9472" },
+  { authorId: "458151c8-dc97-5fef-8d61-bef98aaace70", eventId: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2" },
+  { authorId: "3b0d46d4-d6dc-5829-b7bf-e74755ca1ff0", eventId: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2" },
+  { authorId: "28cc0b40-521b-52be-b4d4-a956755eb971", eventId: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2" },
+  { authorId: "27924509-cf04-5879-b755-b018b8bb79a4", eventId: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2" },
+  { authorId: "fd980b15-243b-5a7e-98a4-46024c3809b9", eventId: "61341a8b-4c8c-56b4-856b-8ddfa3fd4ba2" },
+  { authorId: "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5", eventId: "ceff02b3-7019-5ae7-8968-0907eff83fdb" },
+  { authorId: "0334ed05-27b2-5dea-b180-3ab2692d85e7", eventId: "ceff02b3-7019-5ae7-8968-0907eff83fdb" },
+  { authorId: "64bcc6da-c0b5-540c-a6a6-eaeb6731bbf8", eventId: "ceff02b3-7019-5ae7-8968-0907eff83fdb" },
+  { authorId: "37d869e4-02d9-5885-a0c5-62e7f626e80d", eventId: "ceff02b3-7019-5ae7-8968-0907eff83fdb" },
+  { authorId: "11ccdb5b-b14e-5297-93a6-144b65c6a374", eventId: "7373210e-8d7c-5ea1-a2de-8f97310f21f9" },
+  { authorId: "0fa6efdf-5b59-5497-a4a0-2412cc8f2249", eventId: "7373210e-8d7c-5ea1-a2de-8f97310f21f9" },
+  { authorId: "5becded1-8df8-5719-8df7-76a7c8641ec1", eventId: "7373210e-8d7c-5ea1-a2de-8f97310f21f9" },
+  { authorId: "5210ee98-eddf-5485-bec1-870d0de8270b", eventId: "7373210e-8d7c-5ea1-a2de-8f97310f21f9" },
+  { authorId: "5e40aaad-a8ad-59d4-8f7c-0fc6c135a0cd", eventId: "7373210e-8d7c-5ea1-a2de-8f97310f21f9" },
+  { authorId: "e60fbf0f-6d78-5335-af27-7dca3f46b9b0", eventId: "7373210e-8d7c-5ea1-a2de-8f97310f21f9" },
+  { authorId: "8bf7cd2a-5d3c-56a2-872c-08bd03f0fc87", eventId: "e3653545-0c2a-50bd-8d14-699d252b53a9" },
+  { authorId: "4d8e72d3-3b12-548b-b11e-25da6ce04060", eventId: "e3653545-0c2a-50bd-8d14-699d252b53a9" },
+  { authorId: "dfb60faa-598f-5699-8b2f-01a78e66cd35", eventId: "e3653545-0c2a-50bd-8d14-699d252b53a9" },
+  { authorId: "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5", eventId: "e3653545-0c2a-50bd-8d14-699d252b53a9" },
+  { authorId: "91077797-d951-5025-a095-fef1a2b3bb5f", eventId: "e3653545-0c2a-50bd-8d14-699d252b53a9" },
+  { authorId: "2e7138da-8cc1-50d9-846f-ea5c74a98cf7", eventId: "611db4de-5ee6-5c83-83c5-af36e6222068" },
+  { authorId: "4c6305bb-724f-5f86-ae00-73e45454b903", eventId: "611db4de-5ee6-5c83-83c5-af36e6222068" },
+  { authorId: "183f199f-a026-5761-9ec8-c69c66040044", eventId: "611db4de-5ee6-5c83-83c5-af36e6222068" },
+  { authorId: "05eb8f95-5ac9-5a9c-8111-7901bcf3d397", eventId: "611db4de-5ee6-5c83-83c5-af36e6222068" },
+  { authorId: "019a8caf-92e3-54b4-8add-539931bc8478", eventId: "611db4de-5ee6-5c83-83c5-af36e6222068" },
+  { authorId: "6b955294-0c6d-5b47-8a7f-7a46611b7aa4", eventId: "35935fa2-a008-5d4a-837d-ff51e42f0123" },
+  { authorId: "d055575f-870c-5ed6-8371-8ede4af900c1", eventId: "35935fa2-a008-5d4a-837d-ff51e42f0123" },
+  { authorId: "77897035-979e-5c77-9015-a3d636adb490", eventId: "35935fa2-a008-5d4a-837d-ff51e42f0123" },
+  { authorId: "67021253-b3f9-5131-a5a1-6f1e6996c8bd", eventId: "35935fa2-a008-5d4a-837d-ff51e42f0123" },
+  { authorId: "cd86941a-d2f6-535f-bb9b-ae9e1a277c61", eventId: "35935fa2-a008-5d4a-837d-ff51e42f0123" },
+  { authorId: "e5020b23-1913-5091-8e95-fb8deb0a3b96", eventId: "15afad0f-6a49-5a5d-9361-e696250a3993" },
+  { authorId: "6dc1449e-5778-5046-ae1c-0025d5d15b13", eventId: "15afad0f-6a49-5a5d-9361-e696250a3993" },
+  { authorId: "63afd855-4f1d-51bb-a5c5-faf4676934bd", eventId: "15afad0f-6a49-5a5d-9361-e696250a3993" },
+  { authorId: "731fd7b0-dd35-5c0e-a77b-6d21464732f8", eventId: "15afad0f-6a49-5a5d-9361-e696250a3993" },
+  { authorId: "7dc8b037-9a91-58d1-8b32-74b2c39834f2", eventId: "15afad0f-6a49-5a5d-9361-e696250a3993" },
+  { authorId: "4f07590b-71c7-574a-a119-11a46258f06a", eventId: "15afad0f-6a49-5a5d-9361-e696250a3993" },
+  { authorId: "089c60ee-cedc-54f3-9c4d-9414af218b1b", eventId: "15afad0f-6a49-5a5d-9361-e696250a3993" },
+  { authorId: "2149320d-2c93-5c48-92dd-fd4a4b4a2916", eventId: "943ef86c-2f3d-5418-811c-3984ec44218e" },
+  { authorId: "92d63259-a236-5255-8a90-bf9776649674", eventId: "943ef86c-2f3d-5418-811c-3984ec44218e" },
+  { authorId: "67021253-b3f9-5131-a5a1-6f1e6996c8bd", eventId: "943ef86c-2f3d-5418-811c-3984ec44218e" },
+  { authorId: "cd86941a-d2f6-535f-bb9b-ae9e1a277c61", eventId: "943ef86c-2f3d-5418-811c-3984ec44218e" },
+  { authorId: "2d4e035b-babd-5524-8a3e-9bcba6e75ec5", eventId: "943ef86c-2f3d-5418-811c-3984ec44218e" },
+  { authorId: "ac8ec002-305d-51dd-96b9-2c2c6d35b9ab", eventId: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2" },
+  { authorId: "4622e2be-836f-5c71-a681-8a7b8692853d", eventId: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2" },
+  { authorId: "5867fc24-0362-5151-a5c0-a8846e846594", eventId: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2" },
+  { authorId: "a35e9edb-f6b1-5319-a1b2-1d16cc509e2a", eventId: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2" },
+  { authorId: "40790dc7-7194-5449-98fe-ccc3f6fa7767", eventId: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2" },
+  { authorId: "2e83f03b-61b3-5559-8c7b-9f91ce6434b7", eventId: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2" },
+  { authorId: "86408786-4e90-52b4-aa67-30066872af26", eventId: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2" },
+  { authorId: "fe17f662-7b96-54eb-a378-d165448e83c6", eventId: "d7b3cb60-82d7-5ed6-9e24-5df38660b7e2" },
+  { authorId: "10666593-e9d3-5312-90c8-4ef8d1e3cebe", eventId: "123794f1-5856-5238-9fb5-380ed5d2e2f0" },
+  { authorId: "b9adbafa-9486-52d4-bfd9-7072efd368ae", eventId: "123794f1-5856-5238-9fb5-380ed5d2e2f0" },
+  { authorId: "1a7ad751-eef5-54c6-af64-bf354fc1c6bb", eventId: "123794f1-5856-5238-9fb5-380ed5d2e2f0" },
+  { authorId: "8ebd502e-0353-5076-9daf-ef5e18c72f6c", eventId: "123794f1-5856-5238-9fb5-380ed5d2e2f0" },
+  { authorId: "92d63259-a236-5255-8a90-bf9776649674", eventId: "f900f0b1-9572-5d14-82cc-81f65d0543b6" },
+  { authorId: "d16f0632-6f42-5729-a856-4a25f9e5396d", eventId: "f900f0b1-9572-5d14-82cc-81f65d0543b6" },
+  { authorId: "0d6d184b-a29e-53a7-8833-1d8d959e8b67", eventId: "f900f0b1-9572-5d14-82cc-81f65d0543b6" },
+  { authorId: "35a4d2db-5e22-555d-bdcc-c806c0ae5f35", eventId: "f900f0b1-9572-5d14-82cc-81f65d0543b6" },
+  { authorId: "cdc82420-f432-5f59-a469-f2e496e2ec4d", eventId: "282002d3-3314-58cb-a08c-56d1b660f8ed" },
+  { authorId: "9ce7b8ea-d8e8-5148-be02-bd7675f97a2e", eventId: "282002d3-3314-58cb-a08c-56d1b660f8ed" },
+  { authorId: "101177af-518d-573a-9f37-7d1907f8557a", eventId: "282002d3-3314-58cb-a08c-56d1b660f8ed" },
+  { authorId: "f95bf41f-d4da-5636-8d31-4a16f45f86ae", eventId: "282002d3-3314-58cb-a08c-56d1b660f8ed" },
+  { authorId: "df9128c9-cec9-53c8-8729-617042111988", eventId: "282002d3-3314-58cb-a08c-56d1b660f8ed" },
+  { authorId: "79173c52-b077-58b7-9de5-213f60a8f298", eventId: "282002d3-3314-58cb-a08c-56d1b660f8ed" },
+  { authorId: "21e8c9b3-1fc6-5b3f-9c64-fbc955194792", eventId: "1b7d31e9-f721-586b-a7b0-535c61a4ede7" },
+  { authorId: "ec7b8039-9647-53bd-98df-c4980ff84587", eventId: "1b7d31e9-f721-586b-a7b0-535c61a4ede7" },
+  { authorId: "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3", eventId: "1b7d31e9-f721-586b-a7b0-535c61a4ede7" },
+  { authorId: "cd9ac32b-5e63-5ee4-a040-0a08d8da008c", eventId: "1b7d31e9-f721-586b-a7b0-535c61a4ede7" },
+  { authorId: "5bd9bdce-2827-5048-84b1-476815daaeff", eventId: "1b7d31e9-f721-586b-a7b0-535c61a4ede7" },
+  { authorId: "96ee5e02-42ba-5540-b8a7-b2b639a577bb", eventId: "1b7d31e9-f721-586b-a7b0-535c61a4ede7" },
+  { authorId: "aaff7554-0102-5996-beae-0993b356a202", eventId: "1b7d31e9-f721-586b-a7b0-535c61a4ede7" },
+  { authorId: "95d147eb-c140-5339-ad8e-0d09bd1bb49f", eventId: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4" },
+  { authorId: "643adc5f-050b-514f-855f-2ff87a990c08", eventId: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4" },
+  { authorId: "cf7a99fa-a50c-569b-b9bd-f5e5c1769357", eventId: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4" },
+  { authorId: "c3a1940c-7540-5034-8b6c-ca60b59520b3", eventId: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4" },
+  { authorId: "68134aa4-2f64-5303-a042-788e170ddea9", eventId: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4" },
+  { authorId: "a367fe72-04a8-59a8-955b-882054715ed1", eventId: "8fbf38d9-87d9-54df-ad0f-ce0e935813e4" },
+  { authorId: "7dcf6112-1145-5af4-82fb-e9b92015aa1d", eventId: "cc962b47-ac4d-5add-8aeb-39e10f0374e6" },
+  { authorId: "ecb145e1-13b8-59fa-8422-1fbb2a505946", eventId: "cc962b47-ac4d-5add-8aeb-39e10f0374e6" },
+  { authorId: "aadfc208-0268-5ff7-b840-57b854a09cce", eventId: "cc962b47-ac4d-5add-8aeb-39e10f0374e6" },
+  { authorId: "beb683f9-838a-5ab5-915e-50e5ee57e66f", eventId: "cc962b47-ac4d-5add-8aeb-39e10f0374e6" },
+  { authorId: "a6b81f1d-dc27-5aa3-877e-d3e6bd44907d", eventId: "cc962b47-ac4d-5add-8aeb-39e10f0374e6" },
+  { authorId: "e00c6e9a-cecb-5393-9a29-204cb3947ce9", eventId: "cc962b47-ac4d-5add-8aeb-39e10f0374e6" },
+  { authorId: "1cc29f88-7e7f-56ef-b1db-5e3a60803a8b", eventId: "709fba55-6a76-5210-83d2-4b1f0c2dd39d" },
+  { authorId: "e02ab7f1-a215-5b6d-a012-ed8916473101", eventId: "709fba55-6a76-5210-83d2-4b1f0c2dd39d" },
+  { authorId: "635f02aa-96a4-5530-bbea-013c415c8290", eventId: "709fba55-6a76-5210-83d2-4b1f0c2dd39d" },
+  { authorId: "09a3b727-757e-5f3a-84f0-75b4364f9c63", eventId: "709fba55-6a76-5210-83d2-4b1f0c2dd39d" },
+  { authorId: "a98cd576-0496-5016-8738-c111b1250f68", eventId: "709fba55-6a76-5210-83d2-4b1f0c2dd39d" },
+  { authorId: "85773f9c-27a8-5d21-9786-fad52ff3180e", eventId: "709fba55-6a76-5210-83d2-4b1f0c2dd39d" },
+  { authorId: "4a7a4f1c-41b7-5fc8-920d-ac55b12d15d1", eventId: "f4307f94-c546-5685-b0d8-adc74d04b6cc" },
+  { authorId: "f6acf67b-3605-510c-89f9-da99c5668419", eventId: "f4307f94-c546-5685-b0d8-adc74d04b6cc" },
+  { authorId: "588613c4-6e68-5359-ada6-29b7ff634885", eventId: "f4307f94-c546-5685-b0d8-adc74d04b6cc" },
+  { authorId: "8d7dbf62-af3b-5183-9758-a74bff3e93b2", eventId: "f4307f94-c546-5685-b0d8-adc74d04b6cc" },
+  { authorId: "fd8a5c80-b148-5a48-a880-d38d2e74bf5a", eventId: "f4307f94-c546-5685-b0d8-adc74d04b6cc" },
+  { authorId: "a257ccd6-592f-5169-9247-729f4a009e2d", eventId: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4" },
+  { authorId: "11132b63-24cf-5e0c-87e3-f82a28ac89e8", eventId: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4" },
+  { authorId: "11b97ae6-9bb9-56c9-914a-c8e0fe79156c", eventId: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4" },
+  { authorId: "2bd1623e-7f3d-543a-b05c-628bb3e6d6b4", eventId: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4" },
+  { authorId: "56030257-e26e-53d8-9d62-6471ba32ecce", eventId: "5d4270fe-0c68-5bf2-92e5-75ad356de8a4" },
+  { authorId: "581a5d0a-41d0-54b0-8ccb-9f5dac37c4e3", eventId: "090131b6-3b33-5b91-ac22-f73f60f5d347" },
+  { authorId: "23c4dbf2-da76-5959-b5c8-de2b87f8dc74", eventId: "090131b6-3b33-5b91-ac22-f73f60f5d347" },
+  { authorId: "8c05c235-5085-5da5-975c-95a3ec03a0ce", eventId: "090131b6-3b33-5b91-ac22-f73f60f5d347" },
+  { authorId: "f1c41fdd-a85b-58e1-b10d-1c31f9803326", eventId: "090131b6-3b33-5b91-ac22-f73f60f5d347" },
+  { authorId: "06ae0839-7b89-5d3a-bf83-99dc6830803a", eventId: "b2b823be-b192-5bd5-9047-db6dac16cd7a" },
+  { authorId: "eb5d6e96-6e8e-5188-8ea6-58cc19c59957", eventId: "b2b823be-b192-5bd5-9047-db6dac16cd7a" },
+  { authorId: "7116930d-8c4e-548c-b9e6-248dafce1360", eventId: "b2b823be-b192-5bd5-9047-db6dac16cd7a" },
+  { authorId: "35a4d2db-5e22-555d-bdcc-c806c0ae5f35", eventId: "b2b823be-b192-5bd5-9047-db6dac16cd7a" },
+  { authorId: "141dc09a-4241-51b4-a81e-5402d1647f96", eventId: "b2b823be-b192-5bd5-9047-db6dac16cd7a" },
+  { authorId: "df9128c9-cec9-53c8-8729-617042111988", eventId: "e17498f8-e03e-5e24-8a88-9c976c869054" },
+  { authorId: "6036d73a-1f6b-581b-8e41-74a385c4be82", eventId: "e17498f8-e03e-5e24-8a88-9c976c869054" },
+  { authorId: "b6ec5ccc-d0ec-5f4f-971f-7e1f961f15f1", eventId: "e17498f8-e03e-5e24-8a88-9c976c869054" },
+  { authorId: "831f7cc9-9ad6-5358-8ca1-1d671a6cb6f1", eventId: "e17498f8-e03e-5e24-8a88-9c976c869054" },
+  { authorId: "a1b4ee86-d88a-5c9f-a04e-fb542537c0f0", eventId: "aabf7c0f-3e3c-53d0-8439-2987209842ce" },
+  { authorId: "566e776d-c9d5-52e2-8388-6dad7d49b424", eventId: "aabf7c0f-3e3c-53d0-8439-2987209842ce" },
+  { authorId: "b922cef3-2fc8-568f-a16c-87f17c81465e", eventId: "aabf7c0f-3e3c-53d0-8439-2987209842ce" },
+  { authorId: "d8152d45-6327-555b-bab0-5773452caeed", eventId: "aabf7c0f-3e3c-53d0-8439-2987209842ce" },
+  { authorId: "10666593-e9d3-5312-90c8-4ef8d1e3cebe", eventId: "aabf7c0f-3e3c-53d0-8439-2987209842ce" },
+  { authorId: "3f2d648d-6795-56c7-a81a-4a98b852b1a0", eventId: "aabf7c0f-3e3c-53d0-8439-2987209842ce" },
+  { authorId: "9d6057a1-8a84-5712-9f8c-4f2e530b2f34", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "5b576627-0b89-5180-bd78-cb87eb672cd0", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "0f40eecd-24cf-5c5c-8330-f71cda6d02c3", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "cd5b8826-38e8-5380-86f3-a2d6735d723a", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "1f55bd80-400f-5c7c-98ed-d29a9fff6cbe", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "030b9850-5805-5d5d-b8ef-9d9d2f42cdd6", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "b791b4d4-8740-554d-ad07-82218d8bb7ed", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "604f3749-8f3e-5862-a9e5-04fa037f26c0", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "38ca6247-1af6-574c-b8c6-2ce51282d966", eventId: "8a669087-f5d9-5ad7-8e68-ebb6a641bcc1" },
+  { authorId: "befc47ec-c72f-58e3-8519-a28173853443", eventId: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36" },
+  { authorId: "b4ba44f4-199f-5988-8479-e4422af71a49", eventId: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36" },
+  { authorId: "faf147b2-0071-53bc-bd91-a89be82a3bde", eventId: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36" },
+  { authorId: "c5b9e189-2937-5717-9cfa-4bf3ca95975e", eventId: "c6c3bfe8-27bb-5f87-8f63-9c307b2adb36" },
+  { authorId: "eae3e547-17c4-5a9d-9f08-a099870e7427", eventId: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1" },
+  { authorId: "1e2535bc-1306-5edf-a096-6619d1fc69f0", eventId: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1" },
+  { authorId: "517fda5b-0d2f-5cb9-a689-38ded1fc1732", eventId: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1" },
+  { authorId: "f98adb03-4782-5e7d-858c-cea66c569d0a", eventId: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1" },
+  { authorId: "4102d5a8-722f-5280-a290-ccc976747c79", eventId: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1" },
+  { authorId: "a0ad17df-cc7c-5579-a3f6-7fea6f6b69f5", eventId: "c1b58e60-3d64-5fd5-aa5d-83a476a8bab1" },
+  { authorId: "002b8b8f-eaec-50aa-b1a9-dd32ff43ef58", eventId: "208965ad-c1ba-5935-ad9c-599ec120152f" },
+  { authorId: "c6c2e2e5-de20-5485-a998-76541abafe3e", eventId: "208965ad-c1ba-5935-ad9c-599ec120152f" },
+  { authorId: "3ecb51cb-7330-5551-b059-2bc07bbe2220", eventId: "208965ad-c1ba-5935-ad9c-599ec120152f" },
+  { authorId: "9ebb375a-570f-5d10-af89-e2581554813f", eventId: "208965ad-c1ba-5935-ad9c-599ec120152f" },
+  { authorId: "67a61400-02a1-5e8a-815f-efe1aaff4044", eventId: "208965ad-c1ba-5935-ad9c-599ec120152f" },
+  { authorId: "740a55f0-b066-529c-aad3-be7706f65d0c", eventId: "208965ad-c1ba-5935-ad9c-599ec120152f" },
+  { authorId: "728ca873-d312-575d-b216-7d2f31953628", eventId: "208965ad-c1ba-5935-ad9c-599ec120152f" },
+  { authorId: "4262dd32-264e-5b27-89d4-b8f1d948b32c", eventId: "a03c92e9-d27b-5a1a-83b5-01c0a6448113" },
+  { authorId: "acaa9413-e232-5de0-95fa-e139a9ece44f", eventId: "a03c92e9-d27b-5a1a-83b5-01c0a6448113" },
+  { authorId: "5d4b528a-9838-5b47-9940-6c3506237d97", eventId: "a03c92e9-d27b-5a1a-83b5-01c0a6448113" },
+  { authorId: "1a18f2fb-0d2c-54c5-a763-fdadef46f041", eventId: "a03c92e9-d27b-5a1a-83b5-01c0a6448113" },
+  { authorId: "53e5ed3c-b20d-5b8d-b590-3e185b8a81c5", eventId: "a03c92e9-d27b-5a1a-83b5-01c0a6448113" },
+  { authorId: "c86e250b-e9c3-59aa-869a-9ab8b53022f1", eventId: "a03c92e9-d27b-5a1a-83b5-01c0a6448113" },
+  { authorId: "e5020b23-1913-5091-8e95-fb8deb0a3b96", eventId: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e" },
+  { authorId: "b4e9729a-f1c7-5994-b791-a4c365333f5b", eventId: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e" },
+  { authorId: "f42b2254-0bb6-589f-b754-788623bc0690", eventId: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e" },
+  { authorId: "d055575f-870c-5ed6-8371-8ede4af900c1", eventId: "eeadbfa3-c51f-50a0-ab86-e2ac7810303e" },
+  { authorId: "70125cb3-0e45-5bc9-9aef-4cbb67edb051", eventId: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4" },
+  { authorId: "d665cfb4-c5db-586a-ad00-d7483be1868f", eventId: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4" },
+  { authorId: "088ef0e0-f6d5-5b0b-8bbe-34adf8a69a86", eventId: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4" },
+  { authorId: "55a709af-cd36-5f34-9454-177b62ab1b72", eventId: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4" },
+  { authorId: "c31ac25f-8577-51a4-8112-3280350d8f34", eventId: "2c1a0bf6-fd69-5ce4-a0dc-4c49a0a5c1b4" },
+  { authorId: "6c618371-acaa-57cf-916f-31d5288f8285", eventId: "8057115a-7249-5288-a959-7f770b0707da" },
+  { authorId: "0d7a1f2e-614f-5f9b-9eb0-e977c4413fbc", eventId: "8057115a-7249-5288-a959-7f770b0707da" },
+  { authorId: "0cc64c64-f713-57ca-a315-70087758c502", eventId: "8057115a-7249-5288-a959-7f770b0707da" },
+  { authorId: "f42b2254-0bb6-589f-b754-788623bc0690", eventId: "8057115a-7249-5288-a959-7f770b0707da" },
+  { authorId: "552512e4-a3e7-5246-89cf-9ddee4ca5e17", eventId: "8057115a-7249-5288-a959-7f770b0707da" },
+  { authorId: "9a3c0069-aa3f-5826-9ef1-9f344244d3dc", eventId: "1320b429-70e2-593e-976d-0cc9646e88c8" },
+  { authorId: "4eee69a6-88fd-5e48-b8f5-dd582920a450", eventId: "1320b429-70e2-593e-976d-0cc9646e88c8" },
+  { authorId: "94b0e949-b89d-5ea5-b0b9-7cbd0ac73da4", eventId: "1320b429-70e2-593e-976d-0cc9646e88c8" },
+  { authorId: "91077797-d951-5025-a095-fef1a2b3bb5f", eventId: "1320b429-70e2-593e-976d-0cc9646e88c8" },
+  { authorId: "588613c4-6e68-5359-ada6-29b7ff634885", eventId: "1320b429-70e2-593e-976d-0cc9646e88c8" },
+  { authorId: "c1ffebeb-922e-5aec-a97e-43302c30360d", eventId: "814b8d2c-b7ac-5509-9440-0e6532e9847a" },
+  { authorId: "48aace14-0b8f-5dc9-aee0-2b52c883a081", eventId: "814b8d2c-b7ac-5509-9440-0e6532e9847a" },
+  { authorId: "6ada2d73-1f4e-5954-8c72-bc0404fa4307", eventId: "814b8d2c-b7ac-5509-9440-0e6532e9847a" },
+  { authorId: "f88b6be4-be83-553a-9a10-0c3ff88d9c71", eventId: "814b8d2c-b7ac-5509-9440-0e6532e9847a" },
+  { authorId: "ec3adb15-c596-5229-b64a-d324f9941ab6", eventId: "ec126adf-2c87-51c4-b109-22b7689339ad" },
+  { authorId: "e5020b23-1913-5091-8e95-fb8deb0a3b96", eventId: "ec126adf-2c87-51c4-b109-22b7689339ad" },
+  { authorId: "901b17fe-09a8-5b9f-9f5d-a73d92a26547", eventId: "ec126adf-2c87-51c4-b109-22b7689339ad" },
+  { authorId: "c75bf8ef-b761-59b7-aa36-7db51b472618", eventId: "ec126adf-2c87-51c4-b109-22b7689339ad" },
+  { authorId: "2822bd0a-4242-59a8-a4dd-2a9d553c94f0", eventId: "eede8ed7-1012-5831-95cb-b0d7c540f82c" },
+  { authorId: "7036c4fd-e408-5618-af2e-9baaff128651", eventId: "eede8ed7-1012-5831-95cb-b0d7c540f82c" },
+  { authorId: "e7bad250-6da0-56ae-ab7c-bb32c2243587", eventId: "eede8ed7-1012-5831-95cb-b0d7c540f82c" },
+  { authorId: "54bfd2ce-3cf6-5269-8baa-e3571399f282", eventId: "eede8ed7-1012-5831-95cb-b0d7c540f82c" },
+  { authorId: "1dd69284-50bc-5d0f-bc2c-f05b6d15d4b3", eventId: "2412bc73-7636-5bb4-84b3-059088f2b82f" },
+  { authorId: "3614d1a7-ee71-5831-acc7-36feb510177c", eventId: "2412bc73-7636-5bb4-84b3-059088f2b82f" },
+  { authorId: "8f0a123e-a29e-5620-989c-8b6e9bc9f3de", eventId: "2412bc73-7636-5bb4-84b3-059088f2b82f" },
+  { authorId: "11132b63-24cf-5e0c-87e3-f82a28ac89e8", eventId: "2412bc73-7636-5bb4-84b3-059088f2b82f" },
+  { authorId: "d7afa3d1-9cbc-5630-9a1e-36550ba2ae00", eventId: "2412bc73-7636-5bb4-84b3-059088f2b82f" },
+  { authorId: "81eb6653-4aac-5e37-b82d-5e6552f5669a", eventId: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc" },
+  { authorId: "10a532a2-fbf4-5e12-af99-152a45092deb", eventId: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc" },
+  { authorId: "e98c2e27-b0f3-5c53-b4b4-6deb8dd0969b", eventId: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc" },
+  { authorId: "5687b7c6-fc2f-5234-8443-9dccba2dbe03", eventId: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc" },
+  { authorId: "fd5a8b65-5f73-54a0-a57e-54dfea8abc8c", eventId: "7cfd32e5-2609-59f6-8a7c-b9a75bd93ddc" },
+  { authorId: "e5d3b413-fc6e-5914-a5e2-4cca6c66a3b4", eventId: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d" },
+  { authorId: "a613ac87-f316-5eb1-a41b-c629d3975868", eventId: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d" },
+  { authorId: "1f638d4e-04ec-5db9-840e-ac7e034bf933", eventId: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d" },
+  { authorId: "f8f3e6c7-7f1c-5fa4-95b3-e5943256b388", eventId: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d" },
+  { authorId: "cb340fda-dc8b-599c-9ba4-114eff1ad741", eventId: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d" },
+  { authorId: "35cf1a17-190f-5618-a7fe-4554e75983f4", eventId: "90f854a6-e76e-5e9b-8868-3e30eaf40e0d" },
+  { authorId: "21e8c9b3-1fc6-5b3f-9c64-fbc955194792", eventId: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e" },
+  { authorId: "bc5f45bb-b47a-5c9e-9452-990ca3ac5f9a", eventId: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e" },
+  { authorId: "0334ed05-27b2-5dea-b180-3ab2692d85e7", eventId: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e" },
+  { authorId: "591a05fd-7b21-55d5-bd3a-0214e741d120", eventId: "63b8a88a-a47e-5b0d-a5b7-0f857ab8e48e" },
+  { authorId: "2f4e23e5-9feb-53ab-beae-4555370c8f0d", eventId: "8b17df4f-c7a6-568b-bba7-e9f0474230ac" },
+  { authorId: "095fe88f-e6bc-523c-a338-d927d8a46767", eventId: "8b17df4f-c7a6-568b-bba7-e9f0474230ac" },
+  { authorId: "b64f17a8-7cde-5016-a0ba-5e4599ad52f2", eventId: "8b17df4f-c7a6-568b-bba7-e9f0474230ac" },
+  { authorId: "8c8cfd0d-2ff8-55d1-bf5e-f83410306fb1", eventId: "8b17df4f-c7a6-568b-bba7-e9f0474230ac" },
+  { authorId: "82f0f18e-ef7e-5f41-8047-ad16d91e05e4", eventId: "8b17df4f-c7a6-568b-bba7-e9f0474230ac" },
+  { authorId: "12d81cb8-0977-5c8d-95e1-546f5eddf90d", eventId: "bf7694bb-b7a0-5258-9679-5e32f0e0399f" },
+  { authorId: "3147fff6-a2e8-5fc8-8085-78440711c1b3", eventId: "bf7694bb-b7a0-5258-9679-5e32f0e0399f" },
+  { authorId: "96909ed8-afbc-51b4-828e-cf484c613c2d", eventId: "bf7694bb-b7a0-5258-9679-5e32f0e0399f" },
+  { authorId: "24f5b427-235c-5460-9de0-85f11a01139a", eventId: "bf7694bb-b7a0-5258-9679-5e32f0e0399f" },
+  { authorId: "3b40ac72-a75f-5c79-bd75-a460f955ae58", eventId: "1871fd36-4f87-59f2-9dfb-a14b9259289e" },
+  { authorId: "671a3790-6703-5f60-93f7-4c8096394838", eventId: "1871fd36-4f87-59f2-9dfb-a14b9259289e" },
+  { authorId: "86f3e63b-c414-594e-af58-abfb190ddea2", eventId: "1871fd36-4f87-59f2-9dfb-a14b9259289e" },
+  { authorId: "7a222e55-c2c0-5fff-acc7-4a9c36238f5f", eventId: "1871fd36-4f87-59f2-9dfb-a14b9259289e" },
+  { authorId: "1afe6f24-4e41-56d1-a10e-f3bd77b1e3f5", eventId: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405" },
+  { authorId: "ae96a2ee-5217-5ca6-b422-07d3393e3b41", eventId: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405" },
+  { authorId: "2c1293b1-0b71-5d73-9217-34bf2c597b62", eventId: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405" },
+  { authorId: "41d4d07a-dd5b-575e-8575-182029f2ffbc", eventId: "9d44e8ca-98e0-57f9-97c8-957ce1fe0405" },
+  { authorId: "b28aa578-42b6-53f0-ba2e-0e91a837d1cc", eventId: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa" },
+  { authorId: "2c5d1ecf-6832-57d5-b546-c500ad06204d", eventId: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa" },
+  { authorId: "61d33246-60ce-54a8-9d34-3b08a03ebd0a", eventId: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa" },
+  { authorId: "0609ba11-9dd6-51a2-a1fa-5945569f3a15", eventId: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa" },
+  { authorId: "2b7ad5e3-6b65-5786-bd5f-d02f8bcdde29", eventId: "09591678-ae62-5c46-99bc-8a8b4eaa0ffa" },
+  { authorId: "57a7df47-868e-598d-8320-562a491eec09", eventId: "b6b7fc5a-d592-5d96-854f-05558c763187" },
+  { authorId: "29e81ba3-c9a8-5437-a577-2324e84c2a22", eventId: "b6b7fc5a-d592-5d96-854f-05558c763187" },
+  { authorId: "c9b6be22-065c-5547-a9aa-9db3a027d1e6", eventId: "b6b7fc5a-d592-5d96-854f-05558c763187" },
+  { authorId: "c8a7e06b-5246-59d8-988d-2f1dfc3dcbe7", eventId: "b6b7fc5a-d592-5d96-854f-05558c763187" },
+  { authorId: "0399b1c8-5e87-58d3-8ea8-63453280e3bb", eventId: "b6b7fc5a-d592-5d96-854f-05558c763187" },
+  { authorId: "83cd0cff-b455-5d5f-b0d2-1620f35ecd54", eventId: "b6b7fc5a-d592-5d96-854f-05558c763187" },
+  { authorId: "5c77edf3-4fb1-52ab-ab5c-229c1eb836e8", eventId: "075999c0-bbf4-5524-9f02-8526d66cd913" },
+  { authorId: "eb085332-9b22-53f0-a527-1e929572ab5a", eventId: "075999c0-bbf4-5524-9f02-8526d66cd913" },
+  { authorId: "00db3447-5ed5-5ba8-a2af-2dd9199c5602", eventId: "075999c0-bbf4-5524-9f02-8526d66cd913" },
+  { authorId: "969606f1-a82b-5683-8a38-a91089eb9598", eventId: "075999c0-bbf4-5524-9f02-8526d66cd913" },
+  { authorId: "f00e5d5f-7bc4-58c0-98a0-7c48ff1b2ead", eventId: "075999c0-bbf4-5524-9f02-8526d66cd913" },
+  { authorId: "8519e2d5-a656-5ce0-9642-74f939ba1e60", eventId: "075999c0-bbf4-5524-9f02-8526d66cd913" },
+  { authorId: "e1d64487-9066-57a4-a82b-f95b1f11a41f", eventId: "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85" },
+  { authorId: "cc4653dc-b615-54e5-bac1-c35dc48d1341", eventId: "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85" },
+  { authorId: "07e138d4-c5e0-5e13-81c4-b924dca78d61", eventId: "7cb0e7e6-cbc0-59b2-a19b-dfe02cee7c85" },
+  { authorId: "e91e7e71-ed2e-5acb-a42e-2ad624b8ab41", eventId: "3d3c0b42-70a2-5146-a04f-9b0782e75776" },
+  { authorId: "2d932312-b0bc-5bac-9c2d-dfe07ecede95", eventId: "3d3c0b42-70a2-5146-a04f-9b0782e75776" },
+  { authorId: "60d5489b-14e3-518b-9109-e042747d08ff", eventId: "3d3c0b42-70a2-5146-a04f-9b0782e75776" },
+  { authorId: "98f266c0-cb80-5d14-8e5c-697e49b48751", eventId: "3d3c0b42-70a2-5146-a04f-9b0782e75776" },
+  { authorId: "45d6dbf8-fbd9-578b-9e9f-8402dc2d31e7", eventId: "d22485f9-9242-5a72-bc1e-9c223c27134d" },
+  { authorId: "57c07569-26eb-52d4-ab34-f8c8caa94ccc", eventId: "d22485f9-9242-5a72-bc1e-9c223c27134d" },
+  { authorId: "da949bb6-12f0-5d85-b093-d2ec26926f91", eventId: "d22485f9-9242-5a72-bc1e-9c223c27134d" },
+  { authorId: "d46c7036-5dcf-5b2b-8dc5-d09fabdacbb2", eventId: "d22485f9-9242-5a72-bc1e-9c223c27134d" },
+  { authorId: "2c0a8d04-1eac-5612-a1c7-676822d9ad90", eventId: "826204d2-0a18-5f15-81c0-1f9730761358" },
+  { authorId: "206efe6f-29f9-5386-b123-f2bbd3f27f6d", eventId: "826204d2-0a18-5f15-81c0-1f9730761358" },
+  { authorId: "d52a43df-2aa2-547e-b98d-830dec705d02", eventId: "826204d2-0a18-5f15-81c0-1f9730761358" },
+  { authorId: "3c90a47b-00bd-5d72-b26e-14e9361de953", eventId: "826204d2-0a18-5f15-81c0-1f9730761358" },
+  { authorId: "ec033c79-cf70-5028-8b1d-6b02cccf0b5c", eventId: "826204d2-0a18-5f15-81c0-1f9730761358" },
+  { authorId: "25a92ac6-0606-546b-91d9-21824fdc82a1", eventId: "8f478152-30c0-53a8-ae55-0f5108d32a6d" },
+  { authorId: "ee98cfb4-9b32-5356-b3be-337badf7aa02", eventId: "8f478152-30c0-53a8-ae55-0f5108d32a6d" },
+  { authorId: "3b934034-aca9-5ef9-a4d4-f0dbf63716dd", eventId: "8f478152-30c0-53a8-ae55-0f5108d32a6d" },
+  { authorId: "a531559e-8dbe-5b47-b3b7-b6e452214bd7", eventId: "8f478152-30c0-53a8-ae55-0f5108d32a6d" },
+  { authorId: "bed4e616-fb1a-51d5-8789-d3a7c519765c", eventId: "8f478152-30c0-53a8-ae55-0f5108d32a6d" },
+  { authorId: "c6bfc388-ba3c-5aa7-b627-d7528e7b7f95", eventId: "28a72776-8abd-56ff-a48b-fe50c1c9add1" },
+  { authorId: "ff780b2f-973b-5b78-8aaf-b22f31bc1bb4", eventId: "28a72776-8abd-56ff-a48b-fe50c1c9add1" },
+  { authorId: "e2139e97-c7d1-5124-b077-ea4291aa3032", eventId: "28a72776-8abd-56ff-a48b-fe50c1c9add1" },
+  { authorId: "11f8a644-a339-59d8-af48-8b26d8709fbd", eventId: "28a72776-8abd-56ff-a48b-fe50c1c9add1" },
+  { authorId: "ae7b2afb-f773-5588-a836-7f22fa49d247", eventId: "28a72776-8abd-56ff-a48b-fe50c1c9add1" },
+  { authorId: "06d2e44e-3bc3-5c38-80b2-d2bc46f5a2d5", eventId: "3d9441c7-6496-5d72-9e60-65b6ea76742a" },
+  { authorId: "bac10044-bf28-587c-bf43-2ca135089535", eventId: "3d9441c7-6496-5d72-9e60-65b6ea76742a" },
+  { authorId: "5ffbe2d2-ae0e-55cf-b3ab-8c691acbaddf", eventId: "3d9441c7-6496-5d72-9e60-65b6ea76742a" },
+  { authorId: "ac8b85c4-99d5-5de7-a631-34672a8a642e", eventId: "3d9441c7-6496-5d72-9e60-65b6ea76742a" },
+  { authorId: "ce1989f6-f25c-5cf4-9899-cb4528ed5422", eventId: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a" },
+  { authorId: "8fe7fe5d-f5d1-57fa-9b23-8613e9714774", eventId: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a" },
+  { authorId: "31387e90-fc18-5d6c-8a6a-6bd2ceef6053", eventId: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a" },
+  { authorId: "542d6a4e-eee5-5d28-b43b-1522bc6c23b7", eventId: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a" },
+  { authorId: "8c3c54b4-5338-5cf9-9db4-e376482d841b", eventId: "f84bf9dc-cd69-5ea1-8de2-8d84c49c453a" },
+  { authorId: "0b088127-8e8e-5e67-aade-8ee924e23e14", eventId: "12815554-e509-5c87-be90-52d0ba1546af" },
+  { authorId: "d34f9a45-6215-5a8a-b4d6-dfb9d6a92541", eventId: "12815554-e509-5c87-be90-52d0ba1546af" },
+  { authorId: "a0e8081c-c789-5249-a9ad-938d911d3d15", eventId: "12815554-e509-5c87-be90-52d0ba1546af" },
+  { authorId: "1895a4c2-2cf2-5967-b5b1-2b87bfb4c910", eventId: "12815554-e509-5c87-be90-52d0ba1546af" },
+  { authorId: "a47f6301-1e18-51f0-8386-ac488ee37b7c", eventId: "d97b7ed2-8888-563d-a3ab-85aa06e98884" },
+  { authorId: "e6332846-dc60-5a6c-83ab-f5180adb17d5", eventId: "d97b7ed2-8888-563d-a3ab-85aa06e98884" },
+  { authorId: "e582c7f5-c5b4-5f7e-ac05-d3296bfd9708", eventId: "d97b7ed2-8888-563d-a3ab-85aa06e98884" },
+  { authorId: "5140c72e-436a-5c58-85af-fde4a31bd1da", eventId: "d97b7ed2-8888-563d-a3ab-85aa06e98884" },
+  { authorId: "5a24ef24-132a-56bc-aef0-b3b1529d528e", eventId: "2e34799f-dc59-5357-a523-c317961dfd16" },
+  { authorId: "091254d8-d0c9-5726-a5c2-f19e2f7c8d92", eventId: "2e34799f-dc59-5357-a523-c317961dfd16" },
+  { authorId: "3732fd8e-96c9-58f7-8134-54e3af2e2b77", eventId: "2e34799f-dc59-5357-a523-c317961dfd16" },
+  { authorId: "e9c52477-ae82-5bb5-862b-fe4d54df2502", eventId: "2e34799f-dc59-5357-a523-c317961dfd16" },
+  { authorId: "787e0d65-0fe6-5b9f-a9ec-1afe8993ea3d", eventId: "2e34799f-dc59-5357-a523-c317961dfd16" },
+  { authorId: "c87d7744-49cb-5480-8fd5-ac0903b18d99", eventId: "e86ed83c-1690-5160-a736-d4ab397e1adf" },
+  { authorId: "643adc5f-050b-514f-855f-2ff87a990c08", eventId: "e86ed83c-1690-5160-a736-d4ab397e1adf" },
+  { authorId: "038c7ffd-f91b-5d74-85b4-4ad2c6c32bf3", eventId: "e86ed83c-1690-5160-a736-d4ab397e1adf" },
+  { authorId: "16787ee4-56ac-5736-b0b0-2d831ee42d6c", eventId: "e86ed83c-1690-5160-a736-d4ab397e1adf" },
+  { authorId: "f149dc55-7d01-5e6c-89f4-ed837f8de8b5", eventId: "e86ed83c-1690-5160-a736-d4ab397e1adf" },
+  { authorId: "9f6d02b9-d58d-521b-bac5-a096f26c125a", eventId: "e86ed83c-1690-5160-a736-d4ab397e1adf" },
+  { authorId: "d6e87a93-7b87-56df-b0b5-784f597acfd5", eventId: "f60c9074-4b14-5a21-8163-ab8c49f0d987" },
+  { authorId: "fab79174-cd77-5bff-8ef0-204115fd6685", eventId: "f60c9074-4b14-5a21-8163-ab8c49f0d987" },
+  { authorId: "044a392b-edae-5a8b-bf64-8bc911b445b8", eventId: "f60c9074-4b14-5a21-8163-ab8c49f0d987" },
+  { authorId: "466e5af5-67e4-5fcb-b087-0e8d4f1a7ed6", eventId: "f60c9074-4b14-5a21-8163-ab8c49f0d987" },
+  { authorId: "cf14aca0-99b7-5e93-bac5-cc55c93da085", eventId: "b148c708-8268-57c5-987d-7c673b310cee" },
+  { authorId: "413f2343-f0c5-5672-aa0a-050973a682f9", eventId: "b148c708-8268-57c5-987d-7c673b310cee" },
+  { authorId: "aea68d40-ddb1-5354-b4e8-5fb4dbca4c9e", eventId: "b148c708-8268-57c5-987d-7c673b310cee" },
+  { authorId: "cb6b2c97-9182-501d-90a0-2c812dd7d641", eventId: "b148c708-8268-57c5-987d-7c673b310cee" },
+  { authorId: "96909ed8-afbc-51b4-828e-cf484c613c2d", eventId: "94e69eb9-e081-52d8-a886-1e8990ac7c1b" },
+  { authorId: "e7455245-dd03-5c13-a656-e0c6420e9265", eventId: "94e69eb9-e081-52d8-a886-1e8990ac7c1b" },
+  { authorId: "3ed49b39-8117-577d-ba13-6ac94a9e388b", eventId: "94e69eb9-e081-52d8-a886-1e8990ac7c1b" },
+  { authorId: "bac0e452-b75b-5cc7-a4e4-ad8adf9ba347", eventId: "94e69eb9-e081-52d8-a886-1e8990ac7c1b" },
+  { authorId: "4abb5d53-7a59-5901-8c93-7de96ba7c098", eventId: "22747bbf-a596-5a9a-aaea-99acc760e0d9" },
+  { authorId: "3254de0b-373e-565d-9416-53a8316474c8", eventId: "22747bbf-a596-5a9a-aaea-99acc760e0d9" },
+  { authorId: "2f4e23e5-9feb-53ab-beae-4555370c8f0d", eventId: "22747bbf-a596-5a9a-aaea-99acc760e0d9" },
+  { authorId: "bb3b2c50-6f6f-552e-a8aa-c43c4c7b9427", eventId: "22747bbf-a596-5a9a-aaea-99acc760e0d9" },
+  { authorId: "f7168e39-bf20-5d5a-91f5-7b0b971b588c", eventId: "22747bbf-a596-5a9a-aaea-99acc760e0d9" },
+  { authorId: "8b277120-560b-5807-b3c5-c0a546bce427", eventId: "22747bbf-a596-5a9a-aaea-99acc760e0d9" },
+  { authorId: "67021253-b3f9-5131-a5a1-6f1e6996c8bd", eventId: "72255258-5a8d-5944-9c4c-0f6f07a6db10" },
+  { authorId: "04566a81-2c42-5f40-84bf-169e9ff41670", eventId: "72255258-5a8d-5944-9c4c-0f6f07a6db10" },
+  { authorId: "7a56b388-39a7-5b66-af71-1a9304760e4a", eventId: "72255258-5a8d-5944-9c4c-0f6f07a6db10" },
+  { authorId: "a7e5dfca-337c-58a2-8dfb-d1469b851bd9", eventId: "72255258-5a8d-5944-9c4c-0f6f07a6db10" },
+  { authorId: "da90896c-8026-554d-a736-441570b78261", eventId: "72255258-5a8d-5944-9c4c-0f6f07a6db10" },
+  { authorId: "04cef3b4-6b2a-5efc-85f2-2a0ff95481cd", eventId: "72255258-5a8d-5944-9c4c-0f6f07a6db10" },
+  { authorId: "d4584704-3ebe-5a6f-b8f9-bf17fa741a33", eventId: "59b9a96e-b2d0-5d31-9167-293aed303df5" },
+  { authorId: "dfaa83f5-acf7-5b22-baf7-0bf497056f9e", eventId: "59b9a96e-b2d0-5d31-9167-293aed303df5" },
+  { authorId: "2ceec585-d739-59b6-948a-6b8117a74f5e", eventId: "59b9a96e-b2d0-5d31-9167-293aed303df5" },
+  { authorId: "d1a00a6a-c6a2-526c-8bca-05745c2bdcc0", eventId: "59b9a96e-b2d0-5d31-9167-293aed303df5" },
+  { authorId: "69eb4ee1-b8a0-50b0-adec-5f64e115725a", eventId: "59b9a96e-b2d0-5d31-9167-293aed303df5" },
+  { authorId: "1a9c1499-d284-5ffe-9045-4e3918619a42", eventId: "59b9a96e-b2d0-5d31-9167-293aed303df5" },
+];
+
+module.exports = { events, bds, authors, authorEvents };
