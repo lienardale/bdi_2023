@@ -2,7 +2,7 @@
 // Usage: node scripts/seedv2.js
 
 const { PrismaClient } = require("@prisma/client");
-const { events, bds, authors } = require("../app/lib/placeholder-bdi-data.js");
+const { events, bds, authors, authorEvents } = require("../app/lib/placeholder-bdi-data.js");
 
 const prisma = new PrismaClient();
 
@@ -14,33 +14,40 @@ async function main() {
   await prisma.event.deleteMany();
   await prisma.author.deleteMany();
 
-  // 1. Seed Authors
+  // 1. Seed Authors (with enrichment fields)
   console.log(`Seeding ${authors.length} authors...`);
   for (const author of authors) {
     await prisma.author.create({
       data: {
         id: author.id,
         name: author.name,
+        bio: author.bio ?? null,
+        bio_source: author.bio_source ?? null,
+        photo_url: author.photo_url ?? null,
+        wikipedia_url: author.wikipedia_url ?? null,
       },
     });
   }
   console.log(`  Done.`);
 
-  // 2. Seed Events
+  // 2. Seed Events (with hour, place, cover_url)
   console.log(`Seeding ${events.length} events...`);
   for (const event of events) {
     await prisma.event.create({
       data: {
         id: event.id,
         name: event.name,
-        date: new Date(event.date_time),
-        fb_event: event.fb_event,
+        date: new Date(event.date),
+        hour: event.hour ?? null,
+        place: event.place ?? null,
+        fb_event: event.fb_event ?? null,
+        cover_url: event.cover_url ?? null,
       },
     });
   }
   console.log(`  Done.`);
 
-  // 3. Seed BDs
+  // 3. Seed BDs (with enrichment fields)
   console.log(`Seeding ${bds.length} BDs...`);
   for (const bd of bds) {
     await prisma.bd.create({
@@ -48,8 +55,17 @@ async function main() {
         id: bd.id,
         title: bd.title,
         eventId: bd.event_ids,
-        publisher: bd.publisher,
-        publishing_year: bd.publishing_year,
+        publisher: bd.publisher ?? null,
+        publishing_year: bd.publishing_year ?? null,
+        ean: bd.ean ?? null,
+        summary: bd.summary ?? null,
+        publication_date: bd.publication_date ? new Date(bd.publication_date) : null,
+        page_count: bd.page_count ?? null,
+        price: bd.price ?? null,
+        cover_url: bd.cover_url ?? null,
+        publisher_url: bd.publisher_url ?? null,
+        leslibraires_url: bd.leslibraires_url ?? null,
+        enrichment_source: bd.enrichment_source ?? null,
       },
     });
   }
@@ -71,25 +87,17 @@ async function main() {
   }
   console.log(`  ${bdAuthorCount} BdAuthor links created.`);
 
-  // 5. Seed AuthorEvent junction table
-  // Derive from BD data: an author is linked to an event if they wrote a BD for that event
-  console.log("Seeding AuthorEvent links...");
-  const authorEventPairs = new Set();
-  for (const bd of bds) {
-    for (const authorId of bd.author_ids) {
-      const key = `${authorId}:${bd.event_ids}`;
-      if (!authorEventPairs.has(key)) {
-        authorEventPairs.add(key);
-        await prisma.authorEvent.create({
-          data: {
-            authorId: authorId,
-            eventId: bd.event_ids,
-          },
-        });
-      }
-    }
+  // 5. Seed AuthorEvent junction table (from explicit data)
+  console.log(`Seeding ${authorEvents.length} AuthorEvent links...`);
+  for (const ae of authorEvents) {
+    await prisma.authorEvent.create({
+      data: {
+        authorId: ae.authorId,
+        eventId: ae.eventId,
+      },
+    });
   }
-  console.log(`  ${authorEventPairs.size} AuthorEvent links created.`);
+  console.log(`  Done.`);
 
   console.log("\nSeed complete!");
 }
