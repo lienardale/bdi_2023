@@ -27,6 +27,9 @@ export async function GET() {
     ean: bd.ean || '',
     summary: bd.summary || '',
     cover_url: bd.cover_url || '',
+    publication_date: bd.publication_date ? bd.publication_date.toISOString().split('T')[0] : '',
+    page_count: bd.page_count ?? '',
+    price: bd.price ? String(bd.price) : '',
   }));
 
   const csv = generateCsv(data);

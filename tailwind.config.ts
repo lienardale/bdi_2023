@@ -17,6 +17,15 @@ const config: Config = {
           500: '#0070F3',
           600: '#2F6FEB',
         },
+        brand: {
+          red: '#E63946',
+          blue: '#1D3557',
+          yellow: '#F4D35E',
+          dark: '#1A1A2E',
+        },
+      },
+      fontFamily: {
+        comic: ['Bangers', 'cursive'],
       },
     },
     keyframes: {

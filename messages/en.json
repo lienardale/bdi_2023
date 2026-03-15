@@ -14,17 +14,24 @@
     "delete": "Delete",
     "cancel": "Cancel",
     "save": "Save",
-    "facebook": "facebook"
+    "facebook": "facebook",
+    "actions": "Actions",
+    "confirmDelete": "Confirm deletion",
+    "confirmDeleteMessage": "Are you sure you want to delete this item?",
+    "noData": "No data available.",
+    "contact": "Contact"
   },
   "home": {
     "title": "Home",
+    "nextEvent": "Next event",
     "nextEventDate": "Next event date",
     "nextEventName": "Next event",
     "totalBds": "Total Comics",
     "totalAuthors": "Total Authors",
-    "recentEvents": "Recent events",
-    "topAuthors": "Top authors",
-    "bdsPerYear": "Comics per year"
+    "addToCalendar": "Add to calendar",
+    "crowdfundingTitle": "Crowdfunding for La Revue des Idées",
+    "crowdfundingCta": "Support the crowdfunding",
+    "instagramFeed": "Follow us on Instagram"
   },
   "events": {
     "title": "Events",
@@ -32,7 +39,12 @@
     "date": "Date",
     "fbEvent": "Facebook link",
     "eventLink": "event link",
-    "bdCount": "{count} comic(s)"
+    "bdCount": "{count} comic(s)",
+    "year": "Year",
+    "hour": "Time",
+    "place": "Place",
+    "addToCalendar": "Add to calendar",
+    "openMap": "Open in Google Maps"
   },
   "bds": {
     "title": "Comics",
@@ -44,13 +56,23 @@
     "bdLink": "comic link",
     "summary": "Summary",
     "ean": "EAN",
-    "bdiLink": "BDI Link"
+    "bdiLink": "BDI Link",
+    "coverUrl": "Cover URL",
+    "publisherUrl": "Publisher URL",
+    "leslibrairesUrl": "leslibraires.fr URL",
+    "selectEvent": "Select an event",
+    "multiSelectHint": "Ctrl+click for multi-select",
+    "publicationDate": "Publication date",
+    "pageCount": "Number of pages",
+    "price": "Price (€)"
   },
   "authors": {
     "title": "Authors",
     "name": "Name",
     "biography": "Biography",
-    "wikipedia": "Wikipedia"
+    "wikipedia": "Wikipedia",
+    "photoUrl": "Photo URL",
+    "wikipediaUrl": "Wikipedia URL"
   },
   "filters": {
     "all": "All",
@@ -58,9 +80,18 @@
     "event": "Event",
     "publisher": "Publisher"
   },
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out through any of these channels.",
+    "email": "Email",
+    "facebookPage": "BDI Facebook page",
+    "instagramProfile": "@labandedesidees"
+  },
   "admin": {
     "title": "Administration",
     "backToSite": "Back to site",
+    "dashboard": "Admin",
+    "nextEvent": "Next BDI",
     "importExport": "CSV Import / Export",
     "export": "Export",
     "import": "Import",
@@ -70,9 +101,21 @@
     "importType": "Type",
     "importFile": "CSV file",
     "importButton": "Import",
+    "importError": "Import error.",
     "enrichment": "Data enrichment",
     "enrichmentDescription": "Auto-fill missing fields via Open Library and Wikipedia APIs.",
     "enrichAllBds": "Enrich all comics",
-    "enrichAllAuthors": "Enrich all authors"
+    "enrichAllAuthors": "Enrich all authors",
+    "enrichmentBdsTitle": "Comics",
+    "enrichmentAuthorsTitle": "Authors",
+    "enrichmentBdsDesc": "Lookup EAN, cover and summary via Open Library. Generates leslibraires.fr links.",
+    "enrichmentAuthorsDesc": "Lookup biography, photo and Wikipedia link via the Wikipedia API (FR then EN).",
+    "enrichmentInProgress": "Enrichment in progress...",
+    "enrich": "Enrich",
+    "enriching": "Enriching...",
+    "viewOnSite": "View on site",
+    "enrichmentCoversTitle": "Event covers",
+    "enrichmentCoversDesc": "Fetch cover images from Facebook links (OG image).",
+    "enrichAllCovers": "Enrich all covers"
   }
 }

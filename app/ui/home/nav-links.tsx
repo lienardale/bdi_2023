@@ -4,35 +4,37 @@ import {
   UserGroupIcon,
   HomeIcon,
   CalendarIcon,
-  ChatBubbleLeftIcon
+  ChatBubbleLeftIcon,
+  EnvelopeIcon,
 } from '@heroicons/react/24/outline';
-import Link from 'next/link'
-import { usePathname } from 'next/navigation';
+import { Link, usePathname } from '@/i18n/routing';
 import clsx from 'clsx';
-
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
-const links = [
-  { name: 'Home', href: '/home', icon: HomeIcon },
-  {name: 'Events', href:'/home/events', icon: CalendarIcon},
-  {name: 'Bds', href:'/home/bds', icon: ChatBubbleLeftIcon},
-  {name: 'Authors', href:'/home/authors', icon: UserGroupIcon}
-];
+import { useTranslations } from 'next-intl';
 
 export default function NavLinks() {
   const pathname = usePathname();
+  const t = useTranslations('common');
+
+  const links = [
+    { name: t('home'), href: '/', icon: HomeIcon },
+    { name: t('events'), href: '/events', icon: CalendarIcon },
+    { name: t('bds'), href: '/bds', icon: ChatBubbleLeftIcon },
+    { name: t('authors'), href: '/authors', icon: UserGroupIcon },
+    { name: t('contact'), href: '/contact', icon: EnvelopeIcon },
+  ];
+
   return (
     <>
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
           <Link
-            key={link.name}
+            key={link.href}
             href={link.href}
             className={clsx(
-              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-brand-yellow/30 hover:text-brand-blue md:flex-none md:justify-start md:p-2 md:px-3',
               {
-                'bg-sky-100 text-blue-600': pathname === link.href,
+                'bg-brand-yellow/30 text-brand-blue font-semibold': pathname === link.href,
               },
             )}
           >

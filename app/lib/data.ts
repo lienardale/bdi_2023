@@ -3,23 +3,36 @@ import {
   BdsTable,
   AuthorsTable
 } from './definitions';
-import { unstable_noStore as noStore } from 'next/cache';
+import { connection } from 'next/server';
 import prisma from './prisma';
 
 export async function fetchCardData() {
-  noStore();
+  await connection();
   try {
-    const [nextEvent, numberOfBds, numberOfAuthors] = await Promise.all([
-      prisma.event.findFirst({ orderBy: { date: 'desc' } }),
+    const [upcomingEvent, mostRecentEvent, numberOfBds, numberOfAuthors] = await Promise.all([
+      prisma.event.findFirst({
+        where: { date: { gte: new Date() } },
+        orderBy: { date: 'asc' },
+        select: { id: true, name: true, date: true, hour: true, place: true },
+      }),
+      prisma.event.findFirst({
+        orderBy: { date: 'desc' },
+        select: { id: true, name: true, date: true, hour: true, place: true },
+      }),
       prisma.bd.count(),
       prisma.author.count(),
     ]);
+    const nextEvent = upcomingEvent ?? mostRecentEvent;
 
     return {
       numberOfAuthors,
       numberOfBds,
       nextBdiDate: nextEvent?.date.toDateString() || '',
       nextBdiName: nextEvent?.name || '',
+      nextEventId: nextEvent?.id || null,
+      nextEventHour: nextEvent?.hour || null,
+      nextEventPlace: nextEvent?.place || null,
+      nextEventDateRaw: nextEvent?.date || null,
     };
   } catch (error) {
     console.error('Database Error:', error);
@@ -27,56 +40,10 @@ export async function fetchCardData() {
   }
 }
 
-export async function fetchDashboardData() {
-  noStore();
-  try {
-    const [totalEvents, totalBds, totalAuthors, recentEvents, topAuthors, bdsPerYear] = await Promise.all([
-      prisma.event.count(),
-      prisma.bd.count(),
-      prisma.author.count(),
-      prisma.event.findMany({
-        orderBy: { date: 'desc' },
-        take: 5,
-        include: {
-          bds: { select: { id: true } },
-        },
-      }),
-      prisma.author.findMany({
-        orderBy: { bds: { _count: 'desc' } },
-        take: 5,
-        include: {
-          _count: { select: { bds: true } },
-        },
-      }),
-      prisma.bd.groupBy({
-        by: ['publishing_year'],
-        _count: { id: true },
-        where: { publishing_year: { not: null } },
-        orderBy: { publishing_year: 'asc' },
-      }),
-    ]);
-
-    return {
-      totalEvents,
-      totalBds,
-      totalAuthors,
-      recentEvents,
-      topAuthors,
-      bdsPerYear: bdsPerYear.map(g => ({
-        year: g.publishing_year!,
-        count: g._count.id,
-      })),
-    };
-  } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch dashboard data.');
-  }
-}
-
 // --- Filter option fetchers ---
 
 export async function fetchEventYears(): Promise<number[]> {
-  noStore();
+  await connection();
   const events = await prisma.event.findMany({
     select: { date: true },
     orderBy: { date: 'desc' },
@@ -86,7 +53,7 @@ export async function fetchEventYears(): Promise<number[]> {
 }
 
 export async function fetchEventOptions(): Promise<{ id: string; name: string }[]> {
-  noStore();
+  await connection();
   return prisma.event.findMany({
     select: { id: true, name: true },
     orderBy: { date: 'desc' },
@@ -94,7 +61,7 @@ export async function fetchEventOptions(): Promise<{ id: string; name: string }[
 }
 
 export async function fetchPublishers(): Promise<string[]> {
-  noStore();
+  await connection();
   const bds = await prisma.bd.findMany({
     select: { publisher: true },
     where: { publisher: { not: null } },
@@ -105,7 +72,7 @@ export async function fetchPublishers(): Promise<string[]> {
 }
 
 export async function fetchBdYears(): Promise<number[]> {
-  noStore();
+  await connection();
   const bds = await prisma.bd.findMany({
     select: { publishing_year: true },
     where: { publishing_year: { not: null } },
@@ -118,7 +85,7 @@ export async function fetchBdYears(): Promise<number[]> {
 // --- Filtered queries with cross-entity search ---
 
 export async function fetchFilteredEvents(query: string, year?: number) {
-  noStore();
+  await connection();
   try {
     const where: any = {};
 
@@ -164,7 +131,7 @@ export async function fetchFilteredEvents(query: string, year?: number) {
 }
 
 export async function fetchEventById(id: string) {
-  noStore();
+  await connection();
   try {
     const event = await prisma.event.findFirst({
       where: { id },
@@ -197,7 +164,7 @@ export async function fetchFilteredBds(
   query: string,
   filters?: { eventId?: string; publisher?: string; year?: number }
 ) {
-  noStore();
+  await connection();
   try {
     const where: any = {};
     const andConditions: any[] = [];
@@ -249,7 +216,7 @@ export async function fetchFilteredBds(
 }
 
 export async function fetchBdById(id: string) {
-  noStore();
+  await connection();
   try {
     const bd = await prisma.bd.findFirst({
       where: { id },
@@ -272,7 +239,7 @@ export async function fetchBdById(id: string) {
 }
 
 export async function fetchFilteredAuthors(query: string, eventId?: string) {
-  noStore();
+  await connection();
   try {
     const where: any = {};
     const andConditions: any[] = [];
@@ -316,8 +283,120 @@ export async function fetchFilteredAuthors(query: string, eventId?: string) {
   }
 }
 
+const ADMIN_PAGE_SIZE = 20;
+
+export async function fetchPaginatedEvents(page: number = 1, query?: string, year?: number) {
+  await connection();
+  const where: any = {};
+  const andConditions: any[] = [];
+
+  if (query) {
+    andConditions.push({
+      OR: [
+        { name: { contains: query, mode: 'insensitive' } },
+        { bds: { some: { title: { contains: query, mode: 'insensitive' } } } },
+      ],
+    });
+  }
+  if (year) {
+    andConditions.push({
+      date: { gte: new Date(`${year}-01-01`), lt: new Date(`${year + 1}-01-01`) },
+    });
+  }
+  if (andConditions.length > 0) where.AND = andConditions;
+
+  const [events, total] = await Promise.all([
+    prisma.event.findMany({
+      orderBy: { date: 'desc' },
+      include: {
+        bds: { select: { id: true, title: true, authors: { select: { author: { select: { id: true, name: true } } } } } },
+      },
+      skip: (page - 1) * ADMIN_PAGE_SIZE,
+      take: ADMIN_PAGE_SIZE,
+      where,
+    }),
+    prisma.event.count({ where }),
+  ]);
+  return {
+    data: events as EventsTable[],
+    totalPages: Math.ceil(total / ADMIN_PAGE_SIZE),
+  };
+}
+
+export async function fetchPaginatedBds(
+  page: number = 1,
+  query?: string,
+  filters?: { eventId?: string; publisher?: string; year?: number }
+) {
+  await connection();
+  const where: any = {};
+  const andConditions: any[] = [];
+
+  if (query) {
+    andConditions.push({
+      OR: [
+        { title: { contains: query, mode: 'insensitive' } },
+        { publisher: { contains: query, mode: 'insensitive' } },
+        { authors: { some: { author: { name: { contains: query, mode: 'insensitive' } } } } },
+        { event: { name: { contains: query, mode: 'insensitive' } } },
+      ],
+    });
+  }
+  if (filters?.eventId) andConditions.push({ eventId: filters.eventId });
+  if (filters?.publisher) andConditions.push({ publisher: filters.publisher });
+  if (filters?.year) andConditions.push({ publishing_year: filters.year });
+  if (andConditions.length > 0) where.AND = andConditions;
+
+  const [bds, total] = await Promise.all([
+    prisma.bd.findMany({
+      orderBy: { title: 'asc' },
+      include: {
+        event: { select: { id: true, name: true } },
+        authors: { select: { author: { select: { id: true, name: true } } } },
+      },
+      skip: (page - 1) * ADMIN_PAGE_SIZE,
+      take: ADMIN_PAGE_SIZE,
+      where,
+    }),
+    prisma.bd.count({ where }),
+  ]);
+  return {
+    data: bds as BdsTable[],
+    totalPages: Math.ceil(total / ADMIN_PAGE_SIZE),
+  };
+}
+
+export async function fetchPaginatedAuthors(page: number = 1, query?: string) {
+  await connection();
+  const where: any = {};
+
+  if (query) {
+    where.OR = [
+      { name: { contains: query, mode: 'insensitive' } },
+      { bds: { some: { bd: { title: { contains: query, mode: 'insensitive' } } } } },
+    ];
+  }
+
+  const [authors, total] = await Promise.all([
+    prisma.author.findMany({
+      orderBy: { name: 'asc' },
+      include: {
+        bds: { select: { bd: { select: { id: true, title: true } } } },
+      },
+      skip: (page - 1) * ADMIN_PAGE_SIZE,
+      take: ADMIN_PAGE_SIZE,
+      where,
+    }),
+    prisma.author.count({ where }),
+  ]);
+  return {
+    data: authors as AuthorsTable[],
+    totalPages: Math.ceil(total / ADMIN_PAGE_SIZE),
+  };
+}
+
 export async function fetchAuthorById(id: string) {
-  noStore();
+  await connection();
   try {
     const author = await prisma.author.findFirst({
       where: { id },

@@ -1,5 +1,5 @@
 import { lusitana } from '@/app/ui/fonts';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import clsx from 'clsx';
 
 interface Breadcrumb {

@@ -3,8 +3,9 @@ import EventForm from '@/app/ui/admin/events/event-form';
 import { fetchEventById } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 
-export default async function EditEventPage({ params }: { params: { id: string } }) {
-  const event = await fetchEventById(params.id);
+export default async function EditEventPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const event = await fetchEventById(id);
   if (!event) notFound();
 
   return (
@@ -12,7 +13,7 @@ export default async function EditEventPage({ params }: { params: { id: string }
       <Breadcrumbs
         breadcrumbs={[
           { label: 'Événements', href: '/admin/events' },
-          { label: 'Modifier', href: `/admin/events/${params.id}/edit`, active: true },
+          { label: 'Modifier', href: `/admin/events/${id}/edit`, active: true },
         ]}
       />
       <EventForm event={event} />

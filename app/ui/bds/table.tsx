@@ -1,5 +1,5 @@
 import { BdsTable } from '@/app/lib/definitions';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 export default async function AllBdsTable({
   bds,
@@ -21,13 +21,13 @@ export default async function AllBdsTable({
                     <div className="flex items-center justify-between border-b pb-4 flex-col">
                       <div>
                         <div className="mb-2 flex items-center flex-col">
-                          <p className="flex items-center gap-3">
+                          <Link href={`/bds/${bd.id}`} className="text-blue-600 hover:underline font-medium">
                             {bd.title}
-                          </p>
+                          </Link>
                           {bd.authors.map(({ author }) => (
-                            <div key={author.id} className="flex items-center gap-3 text-gray-500">
+                            <Link key={author.id} href={`/authors/${author.id}`} className="text-gray-500 hover:underline">
                               {author.name}
-                            </div>
+                            </Link>
                           ))}
                           <p className="text-sm text-gray-500">
                             {bd.publisher}
@@ -37,13 +37,9 @@ export default async function AllBdsTable({
                           </p>
                           <div className="flex gap-2 mt-2">
                             <Link
-                              href={`/home/events/${bd.eventId}`}
+                              href={`/events/${bd.eventId}`}
                               className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
                             >lien event</Link>
-                            <Link
-                              href={`/home/bds/${bd.id}`}
-                              className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                            >lien bd</Link>
                           </div>
                         </div>
                       </div>
@@ -69,25 +65,22 @@ export default async function AllBdsTable({
                     <th scope="col" className="px-4 py-5 font-medium">
                       BDI
                     </th>
-                    <th scope="col" className="px-4 py-5 font-medium">
-                      Link
-                    </th>
                   </tr>
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 text-gray-900">
                   {bds.map((bd) => (
                     <tr key={bd.id} className="group">
-                      <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
-                        <div className="flex items-center gap-3">
-                          <p>{bd.title}</p>
-                        </div>
+                      <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
+                        <Link href={`/bds/${bd.id}`} className="text-blue-600 hover:underline">
+                          {bd.title}
+                        </Link>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {bd.authors.map(({ author }) => (
-                          <div key={author.id} className="flex items-center gap-3">
+                          <Link key={author.id} href={`/authors/${author.id}`} className="block text-blue-600 hover:underline">
                             {author.name}
-                          </div>
+                          </Link>
                         ))}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
@@ -98,15 +91,9 @@ export default async function AllBdsTable({
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         <Link
-                          href={`/home/events/${bd.eventId}`}
-                          className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                          href={`/events/${bd.eventId}`}
+                          className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
                         >lien event</Link>
-                      </td>
-                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        <Link
-                          href={`/home/bds/${bd.id}`}
-                          className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                        >lien bd</Link>
                       </td>
                     </tr>
                   ))}
