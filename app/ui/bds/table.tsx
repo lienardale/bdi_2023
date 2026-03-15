@@ -1,105 +1,141 @@
 import { BdsTable } from '@/app/lib/definitions';
 import { Link } from '@/i18n/routing';
+import { getTranslations } from 'next-intl/server';
+import SortableHeader from '@/app/ui/sortable-header';
 
 export default async function AllBdsTable({
   bds,
 }: {
   bds: BdsTable[];
 }) {
+  const t = await getTranslations();
+
   return (
     <div className="w-full">
       <div className="mt-6 flow-root">
-        <div className="overflow-x-auto">
-          <div className="inline-block min-w-full align-middle">
-            <div className="overflow-hidden rounded-md bg-gray-50 p-2 md:pt-0">
-              <div className="md:hidden">
-                {bds?.map((bd) => (
-                  <div
-                    key={bd.id}
-                    className="mb-2 w-full rounded-md bg-white p-4"
-                  >
-                    <div className="flex items-center justify-between border-b pb-4 flex-col">
-                      <div>
-                        <div className="mb-2 flex items-center flex-col">
-                          <Link href={`/bds/${bd.id}`} className="text-blue-600 hover:underline font-medium">
-                            {bd.title}
+        <div className="w-full">
+          <div className="overflow-hidden rounded-md bg-muted p-2 md:pt-0">
+            <div className="md:hidden card-cycle">
+              {bds?.map((bd) => (
+                <div
+                  key={bd.id}
+                  className="mb-2 w-full rounded-md bg-card p-4"
+                >
+                  <div className="flex items-center justify-between flex-col">
+                    <div>
+                      <div className="mb-2 flex items-center flex-col">
+                        <Link href={`/bds/${bd.id}`} className="text-primary hover:underline font-medium">
+                          {bd.title}
+                        </Link>
+                        {bd.authors.map(({ author }) => (
+                          <Link key={author.id} href={`/authors/${author.id}`} className="text-muted-foreground hover:underline">
+                            {author.name}
                           </Link>
-                          {bd.authors.map(({ author }) => (
-                            <Link key={author.id} href={`/authors/${author.id}`} className="text-gray-500 hover:underline">
-                              {author.name}
+                        ))}
+                        <p className="text-sm text-muted-foreground">
+                          {bd.publisherRef ? (
+                            <Link href={`/publishers/${bd.publisherRef.id}`} className="hover:underline">
+                              {bd.publisherRef.name}
                             </Link>
-                          ))}
-                          <p className="text-sm text-gray-500">
-                            {bd.publisher}
-                          </p>
-                          <p className="text-sm text-gray-500">
-                            {bd.publishing_year}
-                          </p>
-                          <div className="flex gap-2 mt-2">
-                            <Link
-                              href={`/events/${bd.eventId}`}
-                              className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                            >lien event</Link>
-                          </div>
+                          ) : bd.publisher}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          {bd.publishing_year}
+                        </p>
+                        <div className="flex gap-2 mt-2">
+                          <Link
+                            href={`/events/${bd.eventId}`}
+                            className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary/90"
+                          >{t('bds.eventLink')}</Link>
                         </div>
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
-              <table className="hidden min-w-full rounded-md text-gray-900 md:table">
-                <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
-                  <tr>
-                    <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
-                      Title
-                    </th>
-                    <th scope="col" className="px-3 py-5 font-medium">
-                      Authors
-                    </th>
-                    <th scope="col" className="px-3 py-5 font-medium">
-                      Publisher
-                    </th>
-                    <th scope="col" className="px-3 py-5 font-medium">
-                      Year
-                    </th>
-                    <th scope="col" className="px-4 py-5 font-medium">
-                      BDI
-                    </th>
-                  </tr>
-                </thead>
+                </div>
+              ))}
+            </div>
+            <table className="hidden w-full rounded-md text-foreground md:table" style={{ tableLayout: 'fixed' }}>
+              <colgroup>
+                <col style={{ width: '26%' }} />
+                <col style={{ width: '20%' }} />
+                <col style={{ width: '14%' }} />
+                <col style={{ width: '8%' }} />
+                <col style={{ width: '8%' }} />
+                <col style={{ width: '12%' }} />
+                <col style={{ width: '8%' }} />
+              </colgroup>
+              <thead className="rounded-md bg-muted text-left text-sm font-normal">
+                <tr>
+                  <SortableHeader column="title" label={t('bds.bdTitle')} defaultOrder="asc" />
+                  <SortableHeader column="author" label={t('common.authors')} defaultOrder="asc" />
+                  <th scope="col" className="px-3 py-5 font-medium">
+                    {t('bds.publisher')}
+                  </th>
+                  <SortableHeader column="price" label={t('bds.priceShort')} defaultOrder="desc" />
+                  <SortableHeader column="pages" label={t('bds.pages')} defaultOrder="desc" />
+                  <th scope="col" className="px-3 py-5 font-medium text-center">
+                    Libraires
+                  </th>
+                  <SortableHeader column="bdi" label={t('bds.bdi')} defaultOrder="desc" />
+                </tr>
+              </thead>
 
-                <tbody className="divide-y divide-gray-200 text-gray-900">
-                  {bds.map((bd) => (
+              <tbody className="text-foreground card-cycle">
+                {bds.map((bd) => {
+                  const bdiNumber = bd.event?.name?.match(/#(\d+)/)?.[0];
+                  return (
                     <tr key={bd.id} className="group">
-                      <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
-                        <Link href={`/bds/${bd.id}`} className="text-blue-600 hover:underline">
-                          {bd.title}
-                        </Link>
-                      </td>
-                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {bd.authors.map(({ author }) => (
-                          <Link key={author.id} href={`/authors/${author.id}`} className="block text-blue-600 hover:underline">
-                            {author.name}
+                      <td className="bg-card py-5 pl-4 pr-3 text-sm sm:pl-6">
+                        <div className="max-w-full overflow-x-auto">
+                          <Link href={`/bds/${bd.id}`} className="text-primary hover:underline whitespace-nowrap">
+                            {bd.title}
                           </Link>
-                        ))}
+                        </div>
                       </td>
-                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {bd.publisher}
+                      <td className="bg-card px-4 py-5 text-sm">
+                        <div className="max-w-full overflow-x-auto">
+                          {bd.authors.map(({ author }) => (
+                            <Link key={author.id} href={`/authors/${author.id}`} className="block text-primary hover:underline whitespace-nowrap">
+                              {author.name}
+                            </Link>
+                          ))}
+                        </div>
                       </td>
-                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        {bd.publishing_year}
+                      <td className="bg-card px-4 py-5 text-sm">
+                        <div className="truncate">
+                          {bd.publisherRef ? (
+                            <Link href={`/publishers/${bd.publisherRef.id}`} className="text-primary hover:underline">
+                              {bd.publisherRef.name}
+                            </Link>
+                          ) : bd.publisher}
+                        </div>
                       </td>
-                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
+                      <td className="bg-card px-3 py-5 text-sm whitespace-nowrap">
+                        {bd.price ? `${bd.price}€` : '–'}
+                      </td>
+                      <td className="bg-card px-3 py-5 text-sm whitespace-nowrap">
+                        {bd.page_count ?? '–'}
+                      </td>
+                      <td className="bg-card px-3 py-5 text-sm text-center">
+                        {bd.leslibraires_url ? (
+                          <a
+                            href={bd.leslibraires_url}
+                            target="_blank"
+                            className="rounded-md bg-primary px-3 py-1 text-xs text-primary-foreground transition-colors hover:bg-primary/90"
+                          >{t('bds.buy')}</a>
+                        ) : '–'}
+                      </td>
+                      <td className="bg-card px-3 py-5 text-sm text-center">
                         <Link
                           href={`/events/${bd.eventId}`}
-                          className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                        >lien event</Link>
+                          className="text-primary hover:underline font-medium"
+                        >{bdiNumber || t('bds.bdi')}</Link>
                       </td>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

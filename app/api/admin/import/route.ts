@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/app/lib/prisma';
 import { parseCsv } from '@/app/lib/csv';
-import { auth } from '@/auth';
+import { requireAdminApi } from '@/app/lib/auth-utils';
 
 export async function POST(request: NextRequest) {
-  const session = await auth();
-  if (!session?.user || (session.user as any).role !== 'admin') {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  const forbidden = await requireAdminApi();
+  if (forbidden) return forbidden;
 
   const formData = await request.formData();
   const file = formData.get('file') as File;
@@ -84,8 +82,19 @@ export async function POST(request: NextRequest) {
           })
         );
 
+        let publisherId: string | null = null;
+        if (row.publisher) {
+          const pub = await prisma.publisher.upsert({
+            where: { name: row.publisher },
+            update: {},
+            create: { name: row.publisher },
+          });
+          publisherId = pub.id;
+        }
+
         const bdData = {
             publisher: row.publisher || null,
+            publisherId,
             publishing_year: row.publishing_year ? parseInt(row.publishing_year) : null,
             eventId: event.id,
             ean: row.ean || null,

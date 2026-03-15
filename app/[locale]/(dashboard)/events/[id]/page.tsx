@@ -26,14 +26,14 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       )}
       <h1 className="text-xl md:text-2xl font-bold mb-4">{event.name}</h1>
 
-      <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-600">
+      <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-muted-foreground">
         <span>{event.date.toLocaleDateString()}</span>
         {event.hour && <span>{event.hour}</span>}
         {event.place && (
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.place)}`}
             target="_blank"
-            className="flex items-center gap-1 text-blue-600 hover:underline"
+            className="flex items-center gap-1 text-primary hover:underline"
           >
             <MapPinIcon className="w-4 h-4" />
             {event.place}
@@ -41,37 +41,41 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         )}
         <a
           href={`/api/event/${id}/ics`}
-          className="flex items-center gap-1 rounded-md bg-blue-500 px-3 py-1 text-sm text-white hover:bg-blue-400"
+          className="flex items-center gap-1 rounded-md bg-primary px-3 py-1 text-sm text-primary-foreground hover:bg-primary/90"
         >
           <CalendarIcon className="w-4 h-4" />
           {t('addToCalendar')}
         </a>
       </div>
 
-      <div className="md:hidden">
+      <div className="md:hidden card-cycle">
         {event.bds.map((bd) => (
           <div
             key={bd.id}
-            className="mb-2 w-full rounded-md bg-white p-4 shadow-sm"
+            className="mb-2 w-full rounded-md bg-card p-4 shadow-xs"
           >
-            <Link href={`/bds/${bd.id}`} className="font-medium text-blue-600 hover:underline">{bd.title}</Link>
-            <div className="mt-1 text-sm text-gray-500">
+            <Link href={`/bds/${bd.id}`} className="font-medium text-primary hover:underline">{bd.title}</Link>
+            <div className="mt-1 flex flex-wrap gap-x-2 gap-y-1 text-sm text-muted-foreground">
               {bd.authors.map(({ author }) => (
-                <Link key={author.id} href={`/authors/${author.id}`} className="mr-2 text-blue-600 hover:underline">{author.name}</Link>
+                <Link key={author.id} href={`/authors/${author.id}`} className="text-primary hover:underline">{author.name}</Link>
               ))}
             </div>
-            {bd.publisher && (
-              <p className="text-sm text-gray-500">{bd.publisher}</p>
+            {(bd.publisherRef || bd.publisher) && (
+              <p className="text-sm text-muted-foreground">
+                {bd.publisherRef ? (
+                  <Link href={`/publishers/${bd.publisherRef.id}`} className="hover:underline">{bd.publisherRef.name}</Link>
+                ) : bd.publisher}
+              </p>
             )}
             {bd.publishing_year && (
-              <p className="text-sm text-gray-500">{bd.publishing_year}</p>
+              <p className="text-sm text-muted-foreground">{bd.publishing_year}</p>
             )}
           </div>
         ))}
       </div>
 
-      <table className="hidden min-w-full rounded-md text-gray-900 md:table">
-        <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
+      <table className="hidden min-w-full rounded-md text-foreground md:table">
+        <thead className="rounded-md bg-muted text-left text-sm font-normal">
           <tr>
             <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
               Title
@@ -88,21 +92,23 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-gray-200 text-gray-900">
+        <tbody className="divide-y divide-border text-foreground">
           {event.bds.map((bd) => (
             <tr key={bd.id} className="group">
-              <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
-                <Link href={`/bds/${bd.id}`} className="text-blue-600 hover:underline">{bd.title}</Link>
+              <td className="whitespace-nowrap bg-card py-5 pl-4 pr-3 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
+                <Link href={`/bds/${bd.id}`} className="text-primary hover:underline">{bd.title}</Link>
               </td>
-              <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
+              <td className="whitespace-nowrap bg-card px-4 py-5 text-sm">
                 {bd.authors.map(({ author }) => (
-                  <Link key={author.id} href={`/authors/${author.id}`} className="block text-blue-600 hover:underline">{author.name}</Link>
+                  <Link key={author.id} href={`/authors/${author.id}`} className="block text-primary hover:underline">{author.name}</Link>
                 ))}
               </td>
-              <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                {bd.publisher}
+              <td className="whitespace-nowrap bg-card px-4 py-5 text-sm">
+                {bd.publisherRef ? (
+                  <Link href={`/publishers/${bd.publisherRef.id}`} className="text-primary hover:underline">{bd.publisherRef.name}</Link>
+                ) : bd.publisher}
               </td>
-              <td className="whitespace-nowrap bg-white px-4 py-5 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md">
+              <td className="whitespace-nowrap bg-card px-4 py-5 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md">
                 {bd.publishing_year}
               </td>
             </tr>
@@ -111,7 +117,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       </table>
 
       <footer className="mt-6">
-        <Link href="/events" className="rounded-md bg-gray-500 px-4 py-2 text-sm text-white transition-colors hover:bg-gray-400">Retour à la liste</Link>
+        <Link href="/events" className="rounded-md bg-muted px-4 py-2 text-sm text-foreground transition-colors hover:bg-muted/80">Retour à la liste</Link>
       </footer>
     </main>
   );

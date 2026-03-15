@@ -39,7 +39,7 @@ export default function ImportExportPage() {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="rounded-xl bg-gray-50 p-6">
+        <div className="rounded-xl bg-card p-6 border border-border">
           <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
             <ArrowDownTrayIcon className="w-5" />
             {t('export')}
@@ -47,26 +47,26 @@ export default function ImportExportPage() {
           <div className="flex flex-col gap-3">
             <a
               href="/api/admin/export/events"
-              className="flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-500"
+              className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
             >
               {t('exportEvents')}
             </a>
             <a
               href="/api/admin/export/bds"
-              className="flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-500"
+              className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
             >
               {t('exportBds')}
             </a>
             <a
               href="/api/admin/export/authors"
-              className="flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-500"
+              className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
             >
               {t('exportAuthors')}
             </a>
           </div>
         </div>
 
-        <div className="rounded-xl bg-gray-50 p-6">
+        <div className="rounded-xl bg-card p-6 border border-border">
           <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
             <ArrowUpTrayIcon className="w-5" />
             {t('import')}
@@ -77,7 +77,7 @@ export default function ImportExportPage() {
               <select
                 value={importEntity}
                 onChange={(e) => setImportEntity(e.target.value)}
-                className="block w-full rounded-md border border-gray-200 py-2 px-3 text-sm"
+                className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm"
               >
                 <option value="events">{tCommon('events')}</option>
                 <option value="bds">{tCommon('bds')}</option>

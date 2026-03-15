@@ -1,6 +1,5 @@
 import { lusitana } from '@/app/ui/fonts';
 import { getTranslations } from 'next-intl/server';
-import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -21,8 +20,8 @@ export default async function Page() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
         </svg>
       ),
-      bg: 'bg-blue-50 hover:bg-blue-100',
-      color: 'text-blue-700',
+      bg: 'bg-primary/10 hover:bg-primary/20',
+      color: 'text-primary',
     },
     {
       title: 'Facebook',
@@ -33,8 +32,8 @@ export default async function Page() {
           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
         </svg>
       ),
-      bg: 'bg-blue-50 hover:bg-blue-100',
-      color: 'text-blue-600',
+      bg: 'bg-primary/10 hover:bg-primary/20',
+      color: 'text-primary',
     },
     {
       title: 'Instagram',
@@ -55,14 +54,14 @@ export default async function Page() {
       <h1 className={`${lusitana.className} mb-6 text-xl md:text-2xl`}>
         {t('title')}
       </h1>
-      <p className="mb-8 text-gray-600">{t('description')}</p>
+      <p className="mb-8 text-muted-foreground">{t('description')}</p>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <a
             key={card.title}
             href={card.href}
             target={card.href.startsWith('mailto:') ? undefined : '_blank'}
-            className={`flex flex-col items-center gap-3 rounded-xl p-8 shadow-sm transition-colors ${card.bg}`}
+            className={`flex flex-col items-center gap-3 rounded-xl p-8 shadow-xs transition-colors border border-border ${card.bg}`}
           >
             <div className={card.color}>{card.icon}</div>
             <h2 className="text-lg font-semibold">{card.title}</h2>

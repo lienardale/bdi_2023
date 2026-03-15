@@ -71,7 +71,7 @@ const mockAuth = vi.mocked(auth);
 // In real HTML forms, all inputs submit as '' (not null).
 // FormData.get() returns null for missing keys, so we must set all fields.
 const BD_DEFAULTS: Record<string, string> = {
-  title: '', eventId: '', publisher: '', publishing_year: '',
+  title: '', eventId: '', publisherId: '', publishing_year: '',
   authorIds: '', ean: '', summary: '', publication_date: '',
   page_count: '', price: '', cover_url: '', publisher_url: '', leslibraires_url: '',
 };
@@ -211,7 +211,7 @@ describe('Server Actions', () => {
       const fd = makeFormData({
         title: 'Astérix',
         eventId: 'event-uuid',
-        publisher: 'Dargaud',
+        publisherId: 'pub-uuid',
         publishing_year: '2020',
         authorIds: 'author1,author2',
         ean: '9782070612758',
@@ -225,7 +225,7 @@ describe('Server Actions', () => {
         data: expect.objectContaining({
           title: 'Astérix',
           eventId: 'event-uuid',
-          publisher: 'Dargaud',
+          publisherId: 'pub-uuid',
           publishing_year: 2020,
           ean: '9782070612758',
           summary: 'A great comic',
@@ -247,7 +247,7 @@ describe('Server Actions', () => {
         data: expect.objectContaining({
           title: 'Minimal BD',
           eventId: 'event-uuid',
-          publisher: null,
+          publisherId: null,
           publishing_year: null,
           page_count: null,
           price: null,

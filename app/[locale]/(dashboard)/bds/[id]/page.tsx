@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
     <main>
       <div className="flex flex-col items-center md:flex-row md:items-start gap-6">
         {bd.cover_url && (
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <img
               src={bd.cover_url}
               alt={`Couverture de ${bd.title}`}
@@ -26,32 +26,35 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
           <div className="rounded-md text-center md:text-left text-m font-bold text-xl">
             {bd.title}
           </div>
-          <div className="mt-2 text-gray-600">
+          <div className="mt-2 text-muted-foreground">
             {bd.authors.map(({ author }) =>
-              <Link key={author.id} href={`/authors/${author.id}`} className="mr-2 text-blue-600 hover:underline">{author.name}</Link>
+              <Link key={author.id} href={`/authors/${author.id}`} className="mr-2 text-primary hover:underline">{author.name}</Link>
             )}
           </div>
-          {bd.publisher && (
-            <p className="mt-1 text-sm text-gray-500">
-              {bd.publisher_url ? (
-                <a href={bd.publisher_url} target="_blank" className="hover:underline text-blue-600">{bd.publisher}</a>
+          {(bd.publisherRef || bd.publisher) && (
+            <p className="mt-1 text-sm text-muted-foreground">
+              {bd.publisherRef ? (
+                <Link href={`/publishers/${bd.publisherRef.id}`} className="hover:underline text-primary">{bd.publisherRef.name}</Link>
               ) : bd.publisher}
+              {bd.publisher_url && (
+                <> (<a href={bd.publisher_url} target="_blank" className="hover:underline text-primary text-xs">site</a>)</>
+              )}
             </p>
           )}
           {bd.publishing_year && (
-            <p className="text-sm text-gray-500">{bd.publishing_year}</p>
+            <p className="text-sm text-muted-foreground">{bd.publishing_year}</p>
           )}
           {bd.ean && (
-            <p className="text-sm text-gray-400 mt-1">EAN: {bd.ean}</p>
+            <p className="text-sm text-muted-foreground/60 mt-1">EAN: {bd.ean}</p>
           )}
           {bd.publication_date && (
-            <p className="text-sm text-gray-500 mt-1">Publication: {new Date(bd.publication_date).toLocaleDateString()}</p>
+            <p className="text-sm text-muted-foreground mt-1">Publication: {new Date(bd.publication_date).toLocaleDateString()}</p>
           )}
           {bd.page_count && (
-            <p className="text-sm text-gray-500">{bd.page_count} pages</p>
+            <p className="text-sm text-muted-foreground">{bd.page_count} pages</p>
           )}
           {bd.price && (
-            <p className="text-sm text-gray-500">{Number(bd.price).toFixed(2)} €</p>
+            <p className="text-sm text-muted-foreground">{Number(bd.price).toFixed(2)} €</p>
           )}
         </div>
       </div>
@@ -59,14 +62,14 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       {bd.summary && (
         <div className="mt-6">
           <h2 className="font-semibold mb-2">Résumé</h2>
-          <p className="text-sm text-gray-700 leading-relaxed">{bd.summary}</p>
+          <p className="text-sm text-foreground/80 leading-relaxed">{bd.summary}</p>
         </div>
       )}
 
       <div className="mt-6 flex gap-3 flex-wrap">
         <Link
           href={`/events/${bd.eventId}`}
-          className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400">
+          className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary/90">
           Lien BDI
         </Link>
         {bd.leslibraires_url && (
@@ -79,7 +82,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         )}
         <Link
           href="/bds"
-          className="rounded-md bg-gray-500 px-4 py-2 text-sm text-white transition-colors hover:bg-gray-400">
+          className="rounded-md bg-muted px-4 py-2 text-sm text-foreground transition-colors hover:bg-muted/80">
           Retour à la liste
         </Link>
       </div>

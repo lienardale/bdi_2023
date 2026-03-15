@@ -8,23 +8,26 @@ import ConfirmDeleteButton from '@/app/ui/admin/confirm-delete-button';
 import AdminPagination from '@/app/ui/admin/pagination';
 import Search from '@/app/ui/search';
 import FilterSelect from '@/app/ui/filter-select';
+import SortableHeader from '@/app/ui/sortable-header';
 
 export default async function AdminBdsPage({
   searchParams,
 }: {
-  searchParams?: Promise<{ page?: string; query?: string; eventId?: string; publisher?: string; year?: string }>;
+  searchParams?: Promise<{ page?: string; query?: string; eventId?: string; publisherId?: string; year?: string; sort?: string; order?: string }>;
 }) {
   const resolvedParams = await searchParams;
   const page = Number(resolvedParams?.page || '1');
   const query = resolvedParams?.query || '';
+  const sort = resolvedParams?.sort;
+  const order = resolvedParams?.order;
   const filters = {
     eventId: resolvedParams?.eventId || undefined,
-    publisher: resolvedParams?.publisher || undefined,
+    publisherId: resolvedParams?.publisherId || undefined,
     year: resolvedParams?.year ? parseInt(resolvedParams.year) : undefined,
   };
 
   const [{ data: bds, totalPages }, eventOptions, publishers, bdYears] = await Promise.all([
-    fetchPaginatedBds(page, query, filters),
+    fetchPaginatedBds(page, query, filters, sort, order),
     fetchEventOptions(),
     fetchPublishers(),
     fetchBdYears(),
@@ -39,7 +42,7 @@ export default async function AdminBdsPage({
         <h1 className={`${lusitana.className} text-2xl`}>{t('title')}</h1>
         <Link
           href="/admin/bds/create"
-          className="flex h-10 items-center rounded-lg bg-blue-600 px-4 text-sm font-medium text-white hover:bg-blue-500"
+          className="flex h-10 items-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90"
         >
           <PlusIcon className="h-5 mr-2" />
           {tCommon('create')}
@@ -53,9 +56,9 @@ export default async function AdminBdsPage({
           options={eventOptions.map(e => ({ value: e.id, label: e.name }))}
         />
         <FilterSelect
-          paramName="publisher"
+          paramName="publisherId"
           label={tFilters('publisher')}
-          options={publishers.map(p => ({ value: p, label: p }))}
+          options={publishers.map(p => ({ value: p.id, label: p.name }))}
         />
         <FilterSelect
           paramName="year"
@@ -63,42 +66,81 @@ export default async function AdminBdsPage({
           options={bdYears.map(y => ({ value: String(y), label: String(y) }))}
         />
       </div>
-      <div className="overflow-x-auto">
-        <table className="min-w-full rounded-md text-gray-900">
-          <thead className="bg-gray-50 text-left text-sm font-normal">
+      <div className="overflow-hidden">
+        <table className="w-full rounded-md text-foreground" style={{ tableLayout: 'fixed' }}>
+          <colgroup>
+            <col style={{ width: '22%' }} />
+            <col style={{ width: '18%' }} />
+            <col style={{ width: '16%' }} />
+            <col style={{ width: '8%' }} />
+            <col style={{ width: '8%' }} />
+            <col style={{ width: '10%' }} />
+            <col style={{ width: '8%' }} />
+            <col style={{ width: '10%' }} />
+          </colgroup>
+          <thead className="bg-muted text-left text-sm font-normal">
             <tr>
-              <th className="px-4 py-3 font-medium">{t('bdTitle')}</th>
+              <SortableHeader column="title" label={t('bdTitle')} defaultOrder="asc" />
               <th className="px-4 py-3 font-medium">{tCommon('authors')}</th>
               <th className="px-4 py-3 font-medium">{t('publisher')}</th>
-              <th className="px-4 py-3 font-medium">{tCommon('events')}</th>
+              <SortableHeader column="price" label={t('priceShort')} defaultOrder="desc" />
+              <SortableHeader column="pages" label={t('pages')} defaultOrder="desc" />
+              <th className="px-4 py-3 font-medium text-center">Libraires</th>
+              <SortableHeader column="bdi" label={t('bdi')} defaultOrder="desc" />
               <th className="px-4 py-3 font-medium">{tCommon('actions')}</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
-            {bds.map((bd) => (
-              <tr key={bd.id}>
-                <td className="whitespace-nowrap bg-white px-4 py-3 text-sm">
-                  <Link href={`/admin/bds/${bd.id}/edit`} className="text-blue-600 hover:underline">{bd.title}</Link>
-                </td>
-                <td className="bg-white px-4 py-3 text-sm">
-                  {bd.authors.map(({ author }) => (
-                    <Link key={author.id} href={`/admin/authors/${author.id}/edit`} className="text-blue-600 hover:underline mr-1">{author.name}</Link>
-                  ))}
-                </td>
-                <td className="whitespace-nowrap bg-white px-4 py-3 text-sm">{bd.publisher}</td>
-                <td className="whitespace-nowrap bg-white px-4 py-3 text-sm">
-                  <Link href={`/admin/events/${bd.event.id}/edit`} className="text-blue-600 hover:underline">{bd.event.name}</Link>
-                </td>
-                <td className="whitespace-nowrap bg-white px-4 py-3 text-sm">
-                  <div className="flex gap-2">
-                    <Link href={`/admin/bds/${bd.id}/edit`} className="rounded-md border p-2 hover:bg-gray-100">
-                      <PencilIcon className="w-4" />
-                    </Link>
-                    <ConfirmDeleteButton action={async () => { 'use server'; await deleteBd(bd.id); }} />
-                  </div>
-                </td>
-              </tr>
-            ))}
+          <tbody className="divide-y divide-border">
+            {bds.map((bd) => {
+              const bdiNumber = bd.event?.name?.match(/#(\d+)/)?.[0];
+              return (
+                <tr key={bd.id}>
+                  <td className="bg-card px-4 py-3 text-sm truncate">
+                    <Link href={`/admin/bds/${bd.id}/edit`} className="text-primary hover:underline">{bd.title}</Link>
+                  </td>
+                  <td className="bg-card px-4 py-3 text-sm">
+                    <div className="max-w-full overflow-hidden">
+                      {bd.authors.map(({ author }) => (
+                        <Link key={author.id} href={`/admin/authors/${author.id}/edit`} className="block text-primary hover:underline truncate">{author.name}</Link>
+                      ))}
+                    </div>
+                  </td>
+                  <td className="bg-card px-4 py-3 text-sm truncate">
+                    {bd.publisherRef ? (
+                      <Link href={`/admin/publishers/${bd.publisherRef.id}/edit`} className="text-primary hover:underline">{bd.publisherRef.name}</Link>
+                    ) : bd.publisher}
+                  </td>
+                  <td className="bg-card px-4 py-3 text-sm">
+                    {bd.price ? `${bd.price}€` : '–'}
+                  </td>
+                  <td className="bg-card px-4 py-3 text-sm">
+                    {bd.page_count ?? '–'}
+                  </td>
+                  <td className="bg-card px-4 py-3 text-sm text-center">
+                    {bd.leslibraires_url ? (
+                      <a href={bd.leslibraires_url} target="_blank"
+                        className="rounded-md bg-primary px-3 py-1 text-xs text-primary-foreground transition-colors hover:bg-primary/90"
+                      >{t('buy')}</a>
+                    ) : '–'}
+                  </td>
+                  <td className="bg-card px-4 py-3 text-sm text-center">
+                    {bd.event ? (
+                      <Link href={`/admin/events/${bd.event.id}/edit`} className="text-primary hover:underline font-medium">
+                        {bdiNumber || t('bdi')}
+                      </Link>
+                    ) : '–'}
+                  </td>
+                  <td className="bg-card px-4 py-3 text-sm">
+                    <div className="flex gap-2">
+                      <Link href={`/admin/bds/${bd.id}/edit`} className="rounded-md border border-border p-2 hover:bg-muted">
+                        <PencilIcon className="w-4" />
+                      </Link>
+                      <ConfirmDeleteButton action={async () => { 'use server'; await deleteBd(bd.id); }} />
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

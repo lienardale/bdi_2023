@@ -13,7 +13,7 @@ function q(s: string | null | undefined): string {
 }
 
 async function main() {
-  const [events, bds, authors, authorEvents] = await Promise.all([
+  const [events, bds, authors, authorEvents, publishers] = await Promise.all([
     prisma.event.findMany({ orderBy: { date: 'asc' } }),
     prisma.bd.findMany({
       orderBy: { title: 'asc' },
@@ -24,6 +24,7 @@ async function main() {
       include: { bds: { select: { bdId: true } } },
     }),
     prisma.authorEvent.findMany(),
+    prisma.publisher.findMany({ orderBy: { name: 'asc' } }),
   ]);
 
   let out = `// Auto-generated from database on ${new Date().toISOString().slice(0, 10)}\n`;
@@ -44,13 +45,20 @@ async function main() {
   }
   out += '];\n\n';
 
+  // Publishers
+  out += 'const publishers = [\n';
+  for (const p of publishers) {
+    out += `  { id: ${q(p.id)}, name: ${q(p.name)}, parentId: ${q(p.parentId)} },\n`;
+  }
+  out += '];\n\n';
+
   // BDs
   out += 'const bds = [\n';
   for (const b of bds) {
     const authorIds = b.authors.map((a) => a.authorId);
     const price = b.price != null ? String(b.price) : 'null';
     const pubDate = b.publication_date ? q(b.publication_date.toISOString()) : 'null';
-    out += `  { id: ${q(b.id)}, title: ${q(b.title)}, event_ids: ${q(b.eventId)}, author_ids: [${authorIds.map((id) => q(id)).join(', ')}], publisher: ${q(b.publisher)}, publishing_year: ${b.publishing_year ?? 'null'}, ean: ${q(b.ean)}, summary: ${q(b.summary)}, publication_date: ${pubDate}, page_count: ${b.page_count ?? 'null'}, price: ${price}, cover_url: ${q(b.cover_url)}, publisher_url: ${q(b.publisher_url)}, leslibraires_url: ${q(b.leslibraires_url)}, enrichment_source: ${q(b.enrichment_source)} },\n`;
+    out += `  { id: ${q(b.id)}, title: ${q(b.title)}, event_ids: ${q(b.eventId)}, author_ids: [${authorIds.map((id) => q(id)).join(', ')}], publisher: ${q(b.publisher)}, publisherId: ${q(b.publisherId)}, publishing_year: ${b.publishing_year ?? 'null'}, ean: ${q(b.ean)}, summary: ${q(b.summary)}, publication_date: ${pubDate}, page_count: ${b.page_count ?? 'null'}, price: ${price}, cover_url: ${q(b.cover_url)}, publisher_url: ${q(b.publisher_url)}, leslibraires_url: ${q(b.leslibraires_url)}, enrichment_source: ${q(b.enrichment_source)} },\n`;
   }
   out += '];\n\n';
 
@@ -61,12 +69,12 @@ async function main() {
   }
   out += '];\n\n';
 
-  out += 'module.exports = { events, bds, authors, authorEvents };\n';
+  out += 'module.exports = { events, bds, authors, authorEvents, publishers };\n';
 
   const outPath = path.join(__dirname, '..', 'app', 'lib', 'placeholder-bdi-data.js');
   fs.writeFileSync(outPath, out);
   console.log(`Written ${outPath}`);
-  console.log(`  Events: ${events.length}, Authors: ${authors.length}, BDs: ${bds.length}, AuthorEvents: ${authorEvents.length}`);
+  console.log(`  Events: ${events.length}, Authors: ${authors.length}, Publishers: ${publishers.length}, BDs: ${bds.length}, AuthorEvents: ${authorEvents.length}`);
 }
 
 main()

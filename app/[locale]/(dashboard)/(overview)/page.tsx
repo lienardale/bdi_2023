@@ -22,9 +22,9 @@ export default async function Page() {
           alt="La Revue des Idées"
           className="w-full h-32 md:h-48 object-cover"
         />
-        <div className="absolute inset-0 bg-brand-dark/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-foreground/60 flex items-center justify-center">
           <h1 className={`${bangers.className} text-3xl md:text-5xl text-white tracking-wide`}>
-            Bande des Idées
+            La Bande des Idées
           </h1>
         </div>
       </div>
@@ -63,7 +63,7 @@ export default async function Page() {
 
       {/* Instagram feed */}
       <div className="mt-6">
-        <h2 className="mb-4 text-lg font-semibold text-gray-700">
+        <h2 className="mb-4 text-lg font-semibold text-foreground">
           {t('instagramFeed')}
         </h2>
         <InstagramFeed />

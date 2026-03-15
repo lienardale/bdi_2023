@@ -6,7 +6,7 @@ export default function BDILogo() {
     <div
       className={`${lusitana.className} flex flex-row items-center leading-none text-white`}
     >
-      <BookOpenIcon className="h-12 w-12 rotate-[345deg]" />
+      <BookOpenIcon className="h-12 w-12 rotate-345" />
       <p className="text-[44px]">BDI</p>
     </div>
   );

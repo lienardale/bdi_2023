@@ -17,7 +17,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => switchLocale('fr')}
         className={`px-2 py-1 text-xs rounded ${
-          locale === 'fr' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          locale === 'fr' ? 'bg-white text-primary font-semibold' : 'text-sidebar-foreground hover:bg-white/20'
         }`}
       >
         FR
@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => switchLocale('en')}
         className={`px-2 py-1 text-xs rounded ${
-          locale === 'en' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          locale === 'en' ? 'bg-white text-primary font-semibold' : 'text-sidebar-foreground hover:bg-white/20'
         }`}
       >
         EN

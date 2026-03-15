@@ -3,7 +3,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useSearchParams } from 'next/navigation';
 import { Link, usePathname } from '@/i18n/routing';
-import clsx from 'clsx';
+import { cn } from '@/app/lib/utils';
 
 export default function AdminPagination({ totalPages }: { totalPages: number }) {
   const pathname = usePathname();
@@ -31,8 +31,8 @@ export default function AdminPagination({ totalPages }: { totalPages: number }) 
     <div className="mt-4 flex items-center justify-center gap-1">
       <Link
         href={createPageUrl(Math.max(1, currentPage - 1))}
-        className={clsx(
-          'rounded-md border p-2 hover:bg-gray-100',
+        className={cn(
+          'rounded-md border border-border p-2 hover:bg-muted',
           currentPage <= 1 && 'pointer-events-none opacity-50',
         )}
       >
@@ -40,14 +40,14 @@ export default function AdminPagination({ totalPages }: { totalPages: number }) 
       </Link>
       {pages.map((p, i) =>
         p === '...' ? (
-          <span key={`ellipsis-${i}`} className="px-2 text-sm text-gray-500">...</span>
+          <span key={`ellipsis-${i}`} className="px-2 text-sm text-muted-foreground">...</span>
         ) : (
           <Link
             key={p}
             href={createPageUrl(p)}
-            className={clsx(
-              'rounded-md border px-3 py-1 text-sm hover:bg-gray-100',
-              currentPage === p && 'bg-blue-600 text-white border-blue-600 hover:bg-blue-500',
+            className={cn(
+              'rounded-md border border-border px-3 py-1 text-sm hover:bg-muted',
+              currentPage === p && 'bg-primary text-primary-foreground border-primary hover:bg-primary/90',
             )}
           >
             {p}
@@ -56,8 +56,8 @@ export default function AdminPagination({ totalPages }: { totalPages: number }) 
       )}
       <Link
         href={createPageUrl(Math.min(totalPages, currentPage + 1))}
-        className={clsx(
-          'rounded-md border p-2 hover:bg-gray-100',
+        className={cn(
+          'rounded-md border border-border p-2 hover:bg-muted',
           currentPage >= totalPages && 'pointer-events-none opacity-50',
         )}
       >

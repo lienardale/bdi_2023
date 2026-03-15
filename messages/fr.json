@@ -19,7 +19,8 @@
     "confirmDelete": "Confirmer la suppression",
     "confirmDeleteMessage": "Êtes-vous sûr de vouloir supprimer cet élément ?",
     "noData": "Pas de données disponibles.",
-    "contact": "Contact"
+    "contact": "Contact",
+    "publishers": "Éditeurs"
   },
   "home": {
     "title": "Accueil",
@@ -44,7 +45,8 @@
     "hour": "Heure",
     "place": "Lieu",
     "addToCalendar": "Ajouter au calendrier",
-    "openMap": "Ouvrir dans Google Maps"
+    "openMap": "Ouvrir dans Google Maps",
+    "placePlaceholder": "Rechercher une adresse..."
   },
   "bds": {
     "title": "BDs",
@@ -64,7 +66,10 @@
     "multiSelectHint": "Ctrl+clic pour sélection multiple",
     "publicationDate": "Date de publication",
     "pageCount": "Nombre de pages",
-    "price": "Prix (€)"
+    "price": "Prix (€)",
+    "priceShort": "Prix",
+    "pages": "Pages",
+    "buy": "Acheter"
   },
   "authors": {
     "title": "Auteurs",
@@ -74,11 +79,24 @@
     "photoUrl": "URL photo",
     "wikipediaUrl": "URL Wikipedia"
   },
+  "publishers": {
+    "title": "Éditeurs",
+    "name": "Nom",
+    "parent": "Éditeur parent",
+    "imprints": "Imprints",
+    "bdCount": "Nombre de BDs",
+    "backToBds": "Retour aux BDs",
+    "noBds": "Aucune BD pour cet éditeur.",
+    "parentPublisher": "Éditeur parent",
+    "imprintsList": "Labels",
+    "bdsList": "Bandes dessinées"
+  },
   "filters": {
     "all": "Tous",
     "year": "Année",
     "event": "Événement",
-    "publisher": "Éditeur"
+    "publisher": "Éditeur",
+    "author": "Auteur"
   },
   "contact": {
     "title": "Contact",
@@ -86,6 +104,10 @@
     "email": "Email",
     "facebookPage": "Page Facebook BDI",
     "instagramProfile": "@labandedesidees"
+  },
+  "errors": {
+    "forbidden": "Vous n'avez pas les droits nécessaires pour accéder à cette page.",
+    "backToHome": "Retour à l'accueil"
   },
   "admin": {
     "title": "Administration",
@@ -116,6 +138,21 @@
     "viewOnSite": "Voir sur le site",
     "enrichmentCoversTitle": "Couvertures événements",
     "enrichmentCoversDesc": "Récupère les images de couverture depuis les liens Facebook (OG image).",
-    "enrichAllCovers": "Enrichir toutes les couvertures"
+    "enrichAllCovers": "Enrichir toutes les couvertures",
+    "stats": "Statistiques"
+  },
+  "adminStats": {
+    "title": "Statistiques",
+    "totalBds": "Total BDs",
+    "totalAuthors": "Total Auteurs",
+    "totalEvents": "Total Événements",
+    "totalPublishers": "Total Éditeurs",
+    "medianPages": "Pages (médiane)",
+    "medianPrice": "Prix (médiane)",
+    "avgBdsPerEvent": "BDs / événement",
+    "bdsPerYear": "BDs par année",
+    "eventsPerYear": "Événements par année",
+    "topAuthors": "Top 10 Auteurs",
+    "topPublishers": "Top 10 Éditeurs"
   }
 }

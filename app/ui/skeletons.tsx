@@ -1,18 +1,18 @@
 // Loading animation
 const shimmer =
-  'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent';
+  'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-linear-to-r before:from-transparent before:via-white/60 before:to-transparent';
 
 export function CardSkeleton() {
   return (
     <div
-      className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm`}
+      className={`${shimmer} relative overflow-hidden rounded-xl bg-muted p-2 shadow-xs`}
     >
       <div className="flex p-4">
-        <div className="h-5 w-5 rounded-md bg-gray-200" />
-        <div className="ml-2 h-6 w-16 rounded-md bg-gray-200 text-sm font-medium" />
+        <div className="h-5 w-5 rounded-md bg-muted-foreground/20" />
+        <div className="ml-2 h-6 w-16 rounded-md bg-muted-foreground/20 text-sm font-medium" />
       </div>
-      <div className="flex items-center justify-center truncate rounded-xl bg-white px-4 py-8">
-        <div className="h-7 w-20 rounded-md bg-gray-200" />
+      <div className="flex items-center justify-center truncate rounded-xl bg-card px-4 py-8">
+        <div className="h-7 w-20 rounded-md bg-muted-foreground/20" />
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ export default function DashboardSkeleton() {
   return (
     <>
       <div
-        className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-gray-100`}
+        className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-muted`}
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <CardSkeleton />
@@ -47,20 +47,20 @@ export default function DashboardSkeleton() {
 
 export function TableRowSkeleton() {
   return (
-    <tr className="w-full border-b border-gray-100 last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">
+    <tr className="w-full border-b border-muted last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">
       <td className="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
         <div className="flex items-center gap-3">
-          <div className="h-6 w-24 rounded bg-gray-100"></div>
+          <div className="h-6 w-24 rounded bg-muted"></div>
         </div>
       </td>
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-32 rounded bg-gray-100"></div>
+        <div className="h-6 w-32 rounded bg-muted"></div>
       </td>
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
+        <div className="h-6 w-16 rounded bg-muted"></div>
       </td>
       <td className="whitespace-nowrap px-3 py-3">
-        <div className="h-6 w-16 rounded bg-gray-100"></div>
+        <div className="h-6 w-16 rounded bg-muted"></div>
       </td>
     </tr>
   );
@@ -70,9 +70,9 @@ export function TableSkeleton() {
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
-        <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
-          <table className="hidden min-w-full text-gray-900 md:table">
-            <tbody className="bg-white">
+        <div className="rounded-lg bg-muted p-2 md:pt-0">
+          <table className="hidden min-w-full text-foreground md:table">
+            <tbody className="bg-card">
               <TableRowSkeleton />
               <TableRowSkeleton />
               <TableRowSkeleton />

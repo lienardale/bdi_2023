@@ -13,17 +13,17 @@ export default async function AdminDashboard() {
         {t('title')}
       </h1>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-xl bg-gray-50 p-4 shadow-sm">
-          <p className="text-sm text-gray-500">{t('nextEvent')}</p>
+        <div className="rounded-xl bg-card p-4 shadow-xs border border-border">
+          <p className="text-sm text-muted-foreground">{t('nextEvent')}</p>
           <p className="text-lg font-semibold">{nextBdiName}</p>
-          <p className="text-sm text-gray-500">{nextBdiDate}</p>
+          <p className="text-sm text-muted-foreground">{nextBdiDate}</p>
         </div>
-        <div className="rounded-xl bg-gray-50 p-4 shadow-sm">
-          <p className="text-sm text-gray-500">{tHome('totalBds')}</p>
+        <div className="rounded-xl bg-card p-4 shadow-xs border border-border">
+          <p className="text-sm text-muted-foreground">{tHome('totalBds')}</p>
           <p className="text-2xl font-semibold">{numberOfBds}</p>
         </div>
-        <div className="rounded-xl bg-gray-50 p-4 shadow-sm">
-          <p className="text-sm text-gray-500">{tHome('totalAuthors')}</p>
+        <div className="rounded-xl bg-card p-4 shadow-xs border border-border">
+          <p className="text-sm text-muted-foreground">{tHome('totalAuthors')}</p>
           <p className="text-2xl font-semibold">{numberOfAuthors}</p>
         </div>
       </div>

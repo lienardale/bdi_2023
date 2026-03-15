@@ -77,22 +77,22 @@ export default function EnrichmentPage() {
       <div className="mt-3">
         {state.loading && state.total > 0 && (
           <>
-            <div className="w-full bg-gray-200 rounded-full h-2.5 mb-2">
+            <div className="w-full bg-muted rounded-full h-2.5 mb-2">
               <div
-                className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
+                className="bg-primary h-2.5 rounded-full transition-all duration-300"
                 style={{ width: `${(state.current / state.total) * 100}%` }}
               />
             </div>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-muted-foreground">
               {state.current}/{state.total} — {state.currentName}
             </p>
           </>
         )}
         {state.loading && state.total === 0 && (
-          <p className="text-sm text-gray-500">{t('enrichmentInProgress')}</p>
+          <p className="text-sm text-muted-foreground">{t('enrichmentInProgress')}</p>
         )}
         {state.message && (
-          <p className="text-sm bg-white rounded-md p-2">{state.message}</p>
+          <p className="text-sm bg-card rounded-md p-2 border border-border">{state.message}</p>
         )}
       </div>
     );
@@ -103,50 +103,50 @@ export default function EnrichmentPage() {
       <h1 className={`${lusitana.className} mb-6 text-xl md:text-2xl`}>
         {t('enrichment')}
       </h1>
-      <p className="text-sm text-gray-500 mb-6">
+      <p className="text-sm text-muted-foreground mb-6">
         {t('enrichmentDescription')}
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="rounded-xl bg-gray-50 p-6">
+        <div className="rounded-xl bg-card p-6 border border-border">
           <h2 className="text-lg font-semibold mb-4">{t('enrichmentBdsTitle')}</h2>
-          <p className="text-sm text-gray-500 mb-4">
+          <p className="text-sm text-muted-foreground mb-4">
             {t('enrichmentBdsDesc')}
           </p>
           <button
             onClick={() => startEnrichment('bds')}
             disabled={bdState.loading || authorState.loading}
-            className="rounded-md bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-500 disabled:opacity-50"
+            className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
           >
             {t('enrichAllBds')}
           </button>
           {renderProgress(bdState)}
         </div>
 
-        <div className="rounded-xl bg-gray-50 p-6">
+        <div className="rounded-xl bg-card p-6 border border-border">
           <h2 className="text-lg font-semibold mb-4">{t('enrichmentAuthorsTitle')}</h2>
-          <p className="text-sm text-gray-500 mb-4">
+          <p className="text-sm text-muted-foreground mb-4">
             {t('enrichmentAuthorsDesc')}
           </p>
           <button
             onClick={() => startEnrichment('authors')}
             disabled={bdState.loading || authorState.loading}
-            className="rounded-md bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-500 disabled:opacity-50"
+            className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
           >
             {t('enrichAllAuthors')}
           </button>
           {renderProgress(authorState)}
         </div>
 
-        <div className="rounded-xl bg-gray-50 p-6">
+        <div className="rounded-xl bg-card p-6 border border-border">
           <h2 className="text-lg font-semibold mb-4">{t('enrichmentCoversTitle')}</h2>
-          <p className="text-sm text-gray-500 mb-4">
+          <p className="text-sm text-muted-foreground mb-4">
             {t('enrichmentCoversDesc')}
           </p>
           <button
             onClick={() => startEnrichment('event-covers')}
             disabled={bdState.loading || authorState.loading || coverState.loading}
-            className="rounded-md bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-500 disabled:opacity-50"
+            className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
           >
             {t('enrichAllCovers')}
           </button>

@@ -18,15 +18,19 @@ export default async function Page({
     query?: string;
     page?: string;
     year?: string;
+    sort?: string;
+    order?: string;
   }>;
 }) {
   const t = await getTranslations();
   const resolvedParams = await searchParams;
   const query = resolvedParams?.query || '';
   const year = resolvedParams?.year ? parseInt(resolvedParams.year) : undefined;
+  const sort = resolvedParams?.sort;
+  const order = resolvedParams?.order;
 
   const [events, years] = await Promise.all([
-    fetchFilteredEvents(query, year),
+    fetchFilteredEvents(query, year, sort, order),
     fetchEventYears(),
   ]);
 

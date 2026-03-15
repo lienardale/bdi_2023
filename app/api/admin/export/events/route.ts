@@ -1,13 +1,11 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/app/lib/prisma';
 import { generateCsv } from '@/app/lib/csv';
-import { auth } from '@/auth';
+import { requireAdminApi } from '@/app/lib/auth-utils';
 
 export async function GET() {
-  const session = await auth();
-  if (!session?.user || (session.user as any).role !== 'admin') {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  const forbidden = await requireAdminApi();
+  if (forbidden) return forbidden;
 
   const events = await prisma.event.findMany({
     orderBy: { date: 'desc' },

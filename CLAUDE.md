@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Next.js 16 app for **Bande des Idées** (BDI), a French comic book association. Public-facing site with admin back-office. Tracks events, comic books (BDs), and authors with many-to-many relationships.
+Next.js 16 app for **La Bande des Idées** (BDI), a French comic book association. Public-facing site with admin back-office. Tracks events, comic books (BDs), and authors with many-to-many relationships.
 
 **Stack:** Next.js 16 (App Router), React 19, Prisma 5 + PostgreSQL, NextAuth v5 beta (Google OAuth), next-intl, TailwindCSS 3, Zod, Vitest
 

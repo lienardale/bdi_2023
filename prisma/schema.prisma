@@ -18,23 +18,34 @@ model Author {
   wikipedia_url String?       @db.Text
 }
 
+model Publisher {
+  id       String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name     String      @unique @db.VarChar(255)
+  parentId String?     @db.Uuid
+  parent   Publisher?  @relation("PublisherImprints", fields: [parentId], references: [id])
+  imprints Publisher[] @relation("PublisherImprints")
+  bds      Bd[]
+}
+
 model Bd {
-  id               String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  eventId          String     @db.Uuid
-  event            Event      @relation(fields: [eventId], references: [id])
+  id               String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  eventId          String      @db.Uuid
+  event            Event       @relation(fields: [eventId], references: [id])
   authors          BdAuthor[]
-  title            String     @unique @db.VarChar(255)
+  title            String      @unique @db.VarChar(255)
   publisher        String?
+  publisherId      String?     @db.Uuid
+  publisherRef     Publisher?  @relation(fields: [publisherId], references: [id])
   publishing_year  Int?
-  ean              String?    @db.VarChar(13)
-  summary          String?    @db.Text
-  publication_date DateTime?  @db.Date
+  ean              String?     @db.VarChar(13)
+  summary          String?     @db.Text
+  publication_date DateTime?   @db.Date
   page_count       Int?
-  price            Decimal?   @db.Decimal(10, 2)
-  cover_url          String?    @db.Text
-  publisher_url      String?    @db.Text
-  leslibraires_url   String?    @db.Text
-  enrichment_source  String?    @db.VarChar(50)
+  price            Decimal?    @db.Decimal(10, 2)
+  cover_url          String?   @db.Text
+  publisher_url      String?   @db.Text
+  leslibraires_url   String?   @db.Text
+  enrichment_source  String?   @db.VarChar(50)
 }
 
 model Event {

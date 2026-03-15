@@ -2,6 +2,7 @@ import { inter } from '@/app/ui/fonts';
 import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
   title: {
@@ -26,6 +27,7 @@ export default async function LocaleLayout({
       <body className={`${inter.className} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <Toaster richColors position="top-right" />
         </NextIntlClientProvider>
       </body>
     </html>

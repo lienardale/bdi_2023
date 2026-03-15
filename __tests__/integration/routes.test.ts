@@ -99,9 +99,9 @@ describe('API routes', () => {
     expect(res.status).toBe(200);
   });
 
-  it('GET /api/admin/export/events returns 401 when unauthenticated', async () => {
+  it('GET /api/admin/export/events returns 403 when unauthenticated', async () => {
     const res = await fetchRoute('/api/admin/export/events');
-    expect(res.status).toBe(401);
+    expect(res.status).toBe(403);
   });
 });
 

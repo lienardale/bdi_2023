@@ -5,18 +5,11 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { getLocale } from 'next-intl/server';
 import prisma from './prisma';
-import { auth } from '@/auth';
+import { requireAdmin } from './auth-utils';
 
 async function localizedPath(path: string): Promise<string> {
   const locale = await getLocale();
   return `/${locale}${path}`;
-}
-
-async function requireAdmin() {
-  const session = await auth();
-  if (!session?.user || (session.user as any).role !== 'admin') {
-    throw new Error('Unauthorized');
-  }
 }
 
 // Event actions
@@ -108,7 +101,7 @@ export async function deleteEvent(id: string): Promise<void> {
 const BdSchema = z.object({
   title: z.string().min(1, 'Le titre est requis'),
   eventId: z.string().min(1, 'L\'événement est requis'),
-  publisher: z.string().optional(),
+  publisherId: z.string().optional(),
   publishing_year: z.coerce.number().optional(),
   authorIds: z.string().optional(),
   ean: z.string().max(13).optional(),
@@ -122,7 +115,7 @@ const BdSchema = z.object({
 });
 
 export type BdState = {
-  errors?: { title?: string[]; eventId?: string[]; publisher?: string[]; publishing_year?: string[] };
+  errors?: { title?: string[]; eventId?: string[]; publisherId?: string[]; publishing_year?: string[] };
   message?: string | null;
   success?: boolean;
 };
@@ -132,7 +125,7 @@ export async function createBd(prevState: BdState, formData: FormData) {
   const validatedFields = BdSchema.safeParse({
     title: formData.get('title'),
     eventId: formData.get('eventId'),
-    publisher: formData.get('publisher'),
+    publisherId: formData.get('publisherId'),
     publishing_year: formData.get('publishing_year') || undefined,
     authorIds: formData.get('authorIds'),
     ean: formData.get('ean'),
@@ -149,7 +142,7 @@ export async function createBd(prevState: BdState, formData: FormData) {
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { title, eventId, publisher, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
+  const { title, eventId, publisherId, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
   const authorIdList = authorIds ? authorIds.split(',').filter(Boolean) : [];
 
   try {
@@ -157,7 +150,7 @@ export async function createBd(prevState: BdState, formData: FormData) {
       data: {
         title,
         eventId,
-        publisher: publisher || null,
+        publisherId: publisherId || null,
         publishing_year: publishing_year || null,
         ean: ean || null,
         summary: summary || null,
@@ -186,7 +179,7 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
   const validatedFields = BdSchema.safeParse({
     title: formData.get('title'),
     eventId: formData.get('eventId'),
-    publisher: formData.get('publisher'),
+    publisherId: formData.get('publisherId'),
     publishing_year: formData.get('publishing_year') || undefined,
     authorIds: formData.get('authorIds'),
     ean: formData.get('ean'),
@@ -203,7 +196,7 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { title, eventId, publisher, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
+  const { title, eventId, publisherId, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
   const authorIdList = authorIds ? authorIds.split(',').filter(Boolean) : [];
 
   try {
@@ -212,7 +205,7 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
       data: {
         title,
         eventId,
-        publisher: publisher || null,
+        publisherId: publisherId || null,
         publishing_year: publishing_year || null,
         ean: ean || null,
         summary: summary || null,
@@ -330,4 +323,80 @@ export async function deleteAuthor(id: string): Promise<void> {
   }
   revalidatePath('/admin/authors');
   revalidatePath('/authors');
+}
+
+// Publisher actions
+
+const PublisherSchema = z.object({
+  name: z.string().min(1, 'Le nom est requis'),
+  parentId: z.string().optional(),
+});
+
+export type PublisherState = {
+  errors?: { name?: string[] };
+  message?: string | null;
+  success?: boolean;
+};
+
+export async function createPublisher(prevState: PublisherState, formData: FormData) {
+  await requireAdmin();
+  const validatedFields = PublisherSchema.safeParse({
+    name: formData.get('name'),
+    parentId: formData.get('parentId'),
+  });
+
+  if (!validatedFields.success) {
+    return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
+  }
+
+  const { name, parentId } = validatedFields.data;
+  try {
+    await prisma.publisher.create({
+      data: { name, parentId: parentId || null },
+    });
+  } catch (error) {
+    return { message: 'Erreur: impossible de créer l\'éditeur.' };
+  }
+
+  revalidatePath('/admin/publishers');
+  redirect(await localizedPath('/admin/publishers'));
+}
+
+export async function updatePublisher(id: string, prevState: PublisherState, formData: FormData) {
+  await requireAdmin();
+  const validatedFields = PublisherSchema.safeParse({
+    name: formData.get('name'),
+    parentId: formData.get('parentId'),
+  });
+
+  if (!validatedFields.success) {
+    return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
+  }
+
+  const { name, parentId } = validatedFields.data;
+  try {
+    await prisma.publisher.update({
+      where: { id },
+      data: { name, parentId: parentId || null },
+    });
+  } catch (error) {
+    return { message: 'Erreur: impossible de mettre à jour l\'éditeur.' };
+  }
+
+  revalidatePath('/admin/publishers');
+  return { success: true, message: 'Éditeur mis à jour.' };
+}
+
+export async function deletePublisher(id: string): Promise<void> {
+  await requireAdmin();
+  try {
+    // Unlink BDs from this publisher
+    await prisma.bd.updateMany({ where: { publisherId: id }, data: { publisherId: null } });
+    // Unlink imprints
+    await prisma.publisher.updateMany({ where: { parentId: id }, data: { parentId: null } });
+    await prisma.publisher.delete({ where: { id } });
+  } catch (error) {
+    console.error('Delete publisher error:', error);
+  }
+  revalidatePath('/admin/publishers');
 }

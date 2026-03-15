@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { auth } from '@/auth';
+import { requireAdminApi } from '@/app/lib/auth-utils';
 import prisma from '@/app/lib/prisma';
 import { lookupBd, generateLeslibrairesUrl } from '@/app/lib/enrichment/ean-lookup';
 import { lookupAuthor } from '@/app/lib/enrichment/author-lookup';
@@ -10,10 +10,8 @@ function delay(ms: number) {
 }
 
 export async function GET(request: NextRequest) {
-  const session = await auth();
-  if (!session?.user || (session.user as any).role !== 'admin') {
-    return new Response('Unauthorized', { status: 401 });
-  }
+  const forbidden = await requireAdminApi();
+  if (forbidden) return forbidden;
 
   const entity = request.nextUrl.searchParams.get('entity');
   if (entity !== 'bds' && entity !== 'authors' && entity !== 'event-covers') {
@@ -31,7 +29,10 @@ export async function GET(request: NextRequest) {
         if (entity === 'bds') {
           const bds = await prisma.bd.findMany({
             where: { OR: [{ ean: null }, { cover_url: null }, { summary: null }, { page_count: null }, { publication_date: null }] },
-            include: { authors: { select: { author: { select: { name: true } } } } },
+            include: {
+              authors: { select: { author: { select: { name: true } } } },
+              publisherRef: { select: { name: true } },
+            },
           });
 
           send({ type: 'start', total: bds.length });
@@ -52,8 +53,9 @@ export async function GET(request: NextRequest) {
             if (!bd.leslibraires_url) {
               data.leslibraires_url = generateLeslibrairesUrl(result.ean || bd.ean, bd.title);
             }
-            if (!bd.publisher_url && bd.publisher) {
-              data.publisher_url = `https://openlibrary.org/publishers/${encodeURIComponent(bd.publisher)}`;
+            const publisherName = bd.publisherRef?.name || bd.publisher;
+            if (!bd.publisher_url && publisherName) {
+              data.publisher_url = `https://openlibrary.org/publishers/${encodeURIComponent(publisherName)}`;
             }
 
             if (Object.keys(data).length > 0) {

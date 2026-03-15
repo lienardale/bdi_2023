@@ -14,25 +14,25 @@ export default function RecentEvents({ events, title }: { events: RecentEvent[];
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         {title}
       </h2>
-      <div className="rounded-xl bg-gray-50 p-4">
-        <div className="bg-white px-6">
+      <div className="rounded-xl bg-card p-4 border border-border">
+        <div className="bg-background px-6 rounded-lg">
           {events.map((event, i) => (
             <div
               key={event.id}
-              className={`flex flex-row items-center justify-between py-4 ${i !== 0 ? 'border-t' : ''}`}
+              className={`flex flex-row items-center justify-between py-4 ${i !== 0 ? 'border-t border-border' : ''}`}
             >
               <div className="min-w-0">
                 <Link
                   href={`/events/${event.id}`}
-                  className="truncate text-sm font-semibold md:text-base hover:text-blue-600"
+                  className="truncate text-sm font-semibold md:text-base hover:text-primary"
                 >
                   {event.name}
                 </Link>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-muted-foreground">
                   {event.date.toDateString()}
                 </p>
               </div>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-muted-foreground">
                 {event.bds.length} BD{event.bds.length > 1 ? 's' : ''}
               </p>
             </div>
