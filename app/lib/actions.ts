@@ -3,9 +3,14 @@
 import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
-import { signIn } from '@/auth';
+import { getLocale } from 'next-intl/server';
 import prisma from './prisma';
 import { auth } from '@/auth';
+
+async function localizedPath(path: string): Promise<string> {
+  const locale = await getLocale();
+  return `/${locale}${path}`;
+}
 
 async function requireAdmin() {
   const session = await auth();
@@ -14,31 +19,20 @@ async function requireAdmin() {
   }
 }
 
-export async function authenticate(
-  prevState: string | undefined,
-  formData: FormData,
-) {
-  try {
-    await signIn('credentials', Object.fromEntries(formData));
-  } catch (error) {
-    if ((error as Error).message.includes('CredentialsSignin')) {
-      return 'CredentialSignin';
-    }
-    throw error;
-  }
-}
-
 // Event actions
 
 const EventSchema = z.object({
   name: z.string().min(1, 'Le nom est requis'),
   date: z.string().min(1, 'La date est requise'),
+  hour: z.string().optional(),
+  place: z.string().optional(),
   fb_event: z.string().optional(),
 });
 
 export type EventState = {
   errors?: { name?: string[]; date?: string[]; fb_event?: string[] };
   message?: string | null;
+  success?: boolean;
 };
 
 export async function createEvent(prevState: EventState, formData: FormData) {
@@ -46,6 +40,8 @@ export async function createEvent(prevState: EventState, formData: FormData) {
   const validatedFields = EventSchema.safeParse({
     name: formData.get('name'),
     date: formData.get('date'),
+    hour: formData.get('hour'),
+    place: formData.get('place'),
     fb_event: formData.get('fb_event'),
   });
 
@@ -53,18 +49,18 @@ export async function createEvent(prevState: EventState, formData: FormData) {
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { name, date, fb_event } = validatedFields.data;
+  const { name, date, hour, place, fb_event } = validatedFields.data;
   try {
     await prisma.event.create({
-      data: { name, date: new Date(date), fb_event: fb_event || null },
+      data: { name, date: new Date(date), hour: hour || null, place: place || null, fb_event: fb_event || null },
     });
   } catch (error) {
     return { message: 'Erreur: impossible de créer l\'événement.' };
   }
 
   revalidatePath('/admin/events');
-  revalidatePath('/home/events');
-  redirect('/admin/events');
+  revalidatePath('/events');
+  redirect(await localizedPath('/admin/events'));
 }
 
 export async function updateEvent(id: string, prevState: EventState, formData: FormData) {
@@ -72,6 +68,8 @@ export async function updateEvent(id: string, prevState: EventState, formData: F
   const validatedFields = EventSchema.safeParse({
     name: formData.get('name'),
     date: formData.get('date'),
+    hour: formData.get('hour'),
+    place: formData.get('place'),
     fb_event: formData.get('fb_event'),
   });
 
@@ -79,19 +77,19 @@ export async function updateEvent(id: string, prevState: EventState, formData: F
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { name, date, fb_event } = validatedFields.data;
+  const { name, date, hour, place, fb_event } = validatedFields.data;
   try {
     await prisma.event.update({
       where: { id },
-      data: { name, date: new Date(date), fb_event: fb_event || null },
+      data: { name, date: new Date(date), hour: hour || null, place: place || null, fb_event: fb_event || null },
     });
   } catch (error) {
     return { message: 'Erreur: impossible de mettre à jour l\'événement.' };
   }
 
   revalidatePath('/admin/events');
-  revalidatePath('/home/events');
-  redirect('/admin/events');
+  revalidatePath('/events');
+  return { success: true, message: 'Événement mis à jour.' };
 }
 
 export async function deleteEvent(id: string): Promise<void> {
@@ -102,7 +100,7 @@ export async function deleteEvent(id: string): Promise<void> {
     console.error('Delete event error:', error);
   }
   revalidatePath('/admin/events');
-  revalidatePath('/home/events');
+  revalidatePath('/events');
 }
 
 // BD actions
@@ -115,6 +113,9 @@ const BdSchema = z.object({
   authorIds: z.string().optional(),
   ean: z.string().max(13).optional(),
   summary: z.string().optional(),
+  publication_date: z.string().optional(),
+  page_count: z.coerce.number().optional(),
+  price: z.coerce.number().optional(),
   cover_url: z.string().optional(),
   publisher_url: z.string().optional(),
   leslibraires_url: z.string().optional(),
@@ -123,6 +124,7 @@ const BdSchema = z.object({
 export type BdState = {
   errors?: { title?: string[]; eventId?: string[]; publisher?: string[]; publishing_year?: string[] };
   message?: string | null;
+  success?: boolean;
 };
 
 export async function createBd(prevState: BdState, formData: FormData) {
@@ -135,6 +137,9 @@ export async function createBd(prevState: BdState, formData: FormData) {
     authorIds: formData.get('authorIds'),
     ean: formData.get('ean'),
     summary: formData.get('summary'),
+    publication_date: formData.get('publication_date'),
+    page_count: formData.get('page_count') || undefined,
+    price: formData.get('price') || undefined,
     cover_url: formData.get('cover_url'),
     publisher_url: formData.get('publisher_url'),
     leslibraires_url: formData.get('leslibraires_url'),
@@ -144,7 +149,7 @@ export async function createBd(prevState: BdState, formData: FormData) {
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { title, eventId, publisher, publishing_year, authorIds, ean, summary, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
+  const { title, eventId, publisher, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
   const authorIdList = authorIds ? authorIds.split(',').filter(Boolean) : [];
 
   try {
@@ -156,6 +161,9 @@ export async function createBd(prevState: BdState, formData: FormData) {
         publishing_year: publishing_year || null,
         ean: ean || null,
         summary: summary || null,
+        publication_date: publication_date ? new Date(publication_date) : null,
+        page_count: page_count || null,
+        price: price || null,
         cover_url: cover_url || null,
         publisher_url: publisher_url || null,
         leslibraires_url: leslibraires_url || null,
@@ -169,8 +177,8 @@ export async function createBd(prevState: BdState, formData: FormData) {
   }
 
   revalidatePath('/admin/bds');
-  revalidatePath('/home/bds');
-  redirect('/admin/bds');
+  revalidatePath('/bds');
+  redirect(await localizedPath('/admin/bds'));
 }
 
 export async function updateBd(id: string, prevState: BdState, formData: FormData) {
@@ -183,6 +191,9 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
     authorIds: formData.get('authorIds'),
     ean: formData.get('ean'),
     summary: formData.get('summary'),
+    publication_date: formData.get('publication_date'),
+    page_count: formData.get('page_count') || undefined,
+    price: formData.get('price') || undefined,
     cover_url: formData.get('cover_url'),
     publisher_url: formData.get('publisher_url'),
     leslibraires_url: formData.get('leslibraires_url'),
@@ -192,7 +203,7 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { title, eventId, publisher, publishing_year, authorIds, ean, summary, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
+  const { title, eventId, publisher, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
   const authorIdList = authorIds ? authorIds.split(',').filter(Boolean) : [];
 
   try {
@@ -205,6 +216,9 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
         publishing_year: publishing_year || null,
         ean: ean || null,
         summary: summary || null,
+        publication_date: publication_date ? new Date(publication_date) : null,
+        page_count: page_count || null,
+        price: price || null,
         cover_url: cover_url || null,
         publisher_url: publisher_url || null,
         leslibraires_url: leslibraires_url || null,
@@ -219,8 +233,8 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
   }
 
   revalidatePath('/admin/bds');
-  revalidatePath('/home/bds');
-  redirect('/admin/bds');
+  revalidatePath('/bds');
+  return { success: true, message: 'BD mise à jour.' };
 }
 
 export async function deleteBd(id: string): Promise<void> {
@@ -232,7 +246,7 @@ export async function deleteBd(id: string): Promise<void> {
     console.error('Delete BD error:', error);
   }
   revalidatePath('/admin/bds');
-  revalidatePath('/home/bds');
+  revalidatePath('/bds');
 }
 
 // Author actions
@@ -247,6 +261,7 @@ const AuthorSchema = z.object({
 export type AuthorState = {
   errors?: { name?: string[] };
   message?: string | null;
+  success?: boolean;
 };
 
 export async function createAuthor(prevState: AuthorState, formData: FormData) {
@@ -272,8 +287,8 @@ export async function createAuthor(prevState: AuthorState, formData: FormData) {
   }
 
   revalidatePath('/admin/authors');
-  revalidatePath('/home/authors');
-  redirect('/admin/authors');
+  revalidatePath('/authors');
+  redirect(await localizedPath('/admin/authors'));
 }
 
 export async function updateAuthor(id: string, prevState: AuthorState, formData: FormData) {
@@ -300,8 +315,8 @@ export async function updateAuthor(id: string, prevState: AuthorState, formData:
   }
 
   revalidatePath('/admin/authors');
-  revalidatePath('/home/authors');
-  redirect('/admin/authors');
+  revalidatePath('/authors');
+  return { success: true, message: 'Auteur mis à jour.' };
 }
 
 export async function deleteAuthor(id: string): Promise<void> {
@@ -314,5 +329,5 @@ export async function deleteAuthor(id: string): Promise<void> {
     console.error('Delete author error:', error);
   }
   revalidatePath('/admin/authors');
-  revalidatePath('/home/authors');
+  revalidatePath('/authors');
 }

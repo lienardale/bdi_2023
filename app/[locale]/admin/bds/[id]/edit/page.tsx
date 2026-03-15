@@ -4,24 +4,28 @@ import { fetchBdById } from '@/app/lib/data';
 import prisma from '@/app/lib/prisma';
 import { notFound } from 'next/navigation';
 
-export default async function EditBdPage({ params }: { params: { id: string } }) {
+export default async function EditBdPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const [bd, events, authors] = await Promise.all([
-    fetchBdById(params.id),
+    fetchBdById(id),
     prisma.event.findMany({ orderBy: { date: 'desc' }, select: { id: true, name: true } }),
     prisma.author.findMany({ orderBy: { name: 'asc' }, select: { id: true, name: true } }),
   ]);
 
   if (!bd) notFound();
 
+  // Convert Prisma Decimal to plain number for client component serialization
+  const serializedBd = { ...bd, price: bd.price ? Number(bd.price) : null };
+
   return (
     <main>
       <Breadcrumbs
         breadcrumbs={[
           { label: 'BDs', href: '/admin/bds' },
-          { label: 'Modifier', href: `/admin/bds/${params.id}/edit`, active: true },
+          { label: 'Modifier', href: `/admin/bds/${id}/edit`, active: true },
         ]}
       />
-      <BdForm bd={bd} events={events} authors={authors} />
+      <BdForm bd={serializedBd} events={events} authors={authors} />
     </main>
   );
 }

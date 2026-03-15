@@ -1,11 +1,11 @@
 import { PencilIcon, TrashIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { deleteEvent } from '@/app/lib/actions';
 
 export function UpdateEvent({ id }: { id: string }) {
   return (
     <Link
-    href={`/home/events/${id}/edit`}
+    href={`/events/${id}/edit`}
       className="rounded-md border p-2 hover:bg-gray-100"
     >
       <PencilIcon className="w-5" />

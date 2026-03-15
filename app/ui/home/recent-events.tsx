@@ -1,5 +1,5 @@
 import { lusitana } from '@/app/ui/fonts';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 type RecentEvent = {
   id: string;
@@ -8,11 +8,11 @@ type RecentEvent = {
   bds: { id: string }[];
 };
 
-export default function RecentEvents({ events }: { events: RecentEvent[] }) {
+export default function RecentEvents({ events, title }: { events: RecentEvent[]; title: string }) {
   return (
     <div className="w-full md:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
-        Derniers événements
+        {title}
       </h2>
       <div className="rounded-xl bg-gray-50 p-4">
         <div className="bg-white px-6">
@@ -23,7 +23,7 @@ export default function RecentEvents({ events }: { events: RecentEvent[] }) {
             >
               <div className="min-w-0">
                 <Link
-                  href={`/home/events/${event.id}`}
+                  href={`/events/${event.id}`}
                   className="truncate text-sm font-semibold md:text-base hover:text-blue-600"
                 >
                   {event.name}

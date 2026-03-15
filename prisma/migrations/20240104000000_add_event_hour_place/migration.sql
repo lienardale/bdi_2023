@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Event" ADD COLUMN "hour" VARCHAR(5),
+ADD COLUMN "place" VARCHAR(255);

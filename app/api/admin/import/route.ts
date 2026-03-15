@@ -21,6 +21,7 @@ export async function POST(request: NextRequest) {
 
   try {
     let count = 0;
+    let skipped = 0;
 
     if (entity === 'events') {
       const rows = parseCsv<{ name: string; date: string; fb_event?: string }>(csvText);
@@ -61,43 +62,54 @@ export async function POST(request: NextRequest) {
         ean?: string;
         summary?: string;
         cover_url?: string;
+        publication_date?: string;
+        page_count?: string;
+        price?: string;
       }>(csvText);
 
       for (const row of rows) {
         const event = await prisma.event.findUnique({ where: { name: row.event } });
-        if (!event) continue;
+        if (!event) { skipped++; continue; }
 
         const authorNames = row.authors ? row.authors.split(';').map(n => n.trim()).filter(Boolean) : [];
+
+        const authorConnections = await Promise.all(
+          authorNames.map(async (name) => {
+            const author = await prisma.author.upsert({
+              where: { name },
+              update: {},
+              create: { name },
+            });
+            return { authorId: author.id };
+          })
+        );
+
+        const bdData = {
+            publisher: row.publisher || null,
+            publishing_year: row.publishing_year ? parseInt(row.publishing_year) : null,
+            eventId: event.id,
+            ean: row.ean || null,
+            summary: row.summary || null,
+            cover_url: row.cover_url || null,
+            publication_date: row.publication_date ? new Date(row.publication_date) : null,
+            page_count: row.page_count ? parseInt(row.page_count) : null,
+            price: row.price ? parseFloat(row.price) : null,
+        };
 
         await prisma.bd.upsert({
           where: { title: row.title },
           update: {
-            publisher: row.publisher || null,
-            publishing_year: row.publishing_year ? parseInt(row.publishing_year) : null,
-            eventId: event.id,
-            ean: row.ean || null,
-            summary: row.summary || null,
-            cover_url: row.cover_url || null,
+            ...bdData,
+            authors: {
+              deleteMany: {},
+              create: authorConnections,
+            },
           },
           create: {
             title: row.title,
-            publisher: row.publisher || null,
-            publishing_year: row.publishing_year ? parseInt(row.publishing_year) : null,
-            eventId: event.id,
-            ean: row.ean || null,
-            summary: row.summary || null,
-            cover_url: row.cover_url || null,
+            ...bdData,
             authors: {
-              create: await Promise.all(
-                authorNames.map(async (name) => {
-                  const author = await prisma.author.upsert({
-                    where: { name },
-                    update: {},
-                    create: { name },
-                  });
-                  return { authorId: author.id };
-                })
-              ),
+              create: authorConnections,
             },
           },
         });
@@ -107,7 +119,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid entity' }, { status: 400 });
     }
 
-    return NextResponse.json({ message: `${count} ${entity} imported successfully` });
+    return NextResponse.json({ message: `${count} ${entity} imported successfully`, count, skipped });
   } catch (error) {
     console.error('Import error:', error);
     return NextResponse.json({ error: 'Import failed' }, { status: 500 });

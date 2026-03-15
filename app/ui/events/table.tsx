@@ -1,6 +1,6 @@
 import { lusitana } from '@/app/ui/fonts';
 import { EventsTable } from '@/app/lib/definitions';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 export default async function AllEventsTable({
   events,
@@ -22,9 +22,9 @@ export default async function AllEventsTable({
                     <div className="flex items-center justify-between border-b pb-4">
                       <div>
                         <div className="mb-2 flex items-center">
-                          <div className="flex items-center gap-3">
+                          <Link href={`/events/${event.id}`} className="text-blue-600 hover:underline font-medium">
                             {event.name}
-                          </div>
+                          </Link>
                         </div>
                         <p className="text-sm text-gray-500">
                           {event.date.toDateString()}
@@ -32,28 +32,25 @@ export default async function AllEventsTable({
                         <div className="text-sm text-gray-500">
                           {event.bds.map((bd) => (
                             <div key={bd.id} className="flex items-center gap-3 w-full justify-between">
-                              <div>{bd.title}</div>
+                              <Link href={`/bds/${bd.id}`} className="text-blue-600 hover:underline">{bd.title}</Link>
                               <div className='flex flex-col justify-end items-start'>
                                 {bd.authors.map(({ author }) => (
-                                  <div key={author.id}>
+                                  <Link key={author.id} href={`/authors/${author.id}`} className="text-blue-600 hover:underline">
                                     {author.name}
-                                  </div>
+                                  </Link>
                                 ))}
                               </div>
                             </div>
                           ))}
                         </div>
-                        <br></br>
-                        <p className="text-sm text-gray-500 justify-evenly flex">
-                          <a target="_blank"
-                            href={`${event.fb_event}`}
-                            className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                          >facebook</a>
-                          <Link
-                            href={`/home/events/${event.id}`}
-                            className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                          >lien</Link>
-                        </p>
+                        {event.fb_event && (
+                          <p className="text-sm text-gray-500 mt-2">
+                            <a target="_blank"
+                              href={`${event.fb_event}`}
+                              className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                            >facebook</a>
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -77,34 +74,31 @@ export default async function AllEventsTable({
                     <th scope="col" className="px-3 py-5 font-medium">
                       Fb event
                     </th>
-                    <th scope="col" className="px-4 py-5 font-medium">
-                      Link
-                    </th>
                   </tr>
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 text-gray-900">
                   {events.map((event) => (
                     <tr key={event.id} className="group">
-                      <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
-                        <div className="flex items-center gap-3">
-                          <p>{event.name}</p>
-                        </div>
+                      <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
+                        <Link href={`/events/${event.id}`} className="text-blue-600 hover:underline">
+                          {event.name}
+                        </Link>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {event.bds.map((bd) => (
-                          <div key={bd.id} className="flex items-center gap-3">
-                            <p>{bd.title}</p>
-                          </div>
+                          <Link key={bd.id} href={`/bds/${bd.id}`} className="block text-blue-600 hover:underline">
+                            {bd.title}
+                          </Link>
                         ))}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {event.bds.map((bd) => (
                           <div key={bd.id} className="flex items-center gap-3">
                             {bd.authors.map(({ author }) => (
-                              <div key={author.id}>
-                                <p>{author.name}</p>
-                              </div>
+                              <Link key={author.id} href={`/authors/${author.id}`} className="text-blue-600 hover:underline">
+                                {author.name}
+                              </Link>
                             ))}
                           </div>
                         ))}
@@ -113,16 +107,12 @@ export default async function AllEventsTable({
                         {event.date.toDateString()}
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        <a target="_blank"
-                          href={`${event.fb_event}`}
-                          className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                        >facebook</a>
-                      </td>
-                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        <Link
-                          href={`/home/events/${event.id}`}
-                          className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                        >lien</Link>
+                        {event.fb_event && (
+                          <a target="_blank"
+                            href={`${event.fb_event}`}
+                            className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+                          >facebook</a>
+                        )}
                       </td>
                     </tr>
                   ))}

@@ -1,5 +1,5 @@
 import { AuthorsTable } from '@/app/lib/definitions';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 export default async function AllAuthorsTable({
   authors,
@@ -21,15 +21,14 @@ export default async function AllAuthorsTable({
                     <div className="flex items-center justify-between border-b pb-4 flex-col">
                       <div>
                         <div className="mb-2 flex items-center flex-col">
-                          <div className="flex items-center gap-3">
-                            <p>{author.name}</p>
-                          </div>
-                          <br></br>
-                          <div className="flex items-center gap-3 flex-col">
+                          <Link href={`/authors/${author.id}`} className="text-blue-600 hover:underline font-medium">
+                            {author.name}
+                          </Link>
+                          <div className="flex items-center gap-3 flex-col mt-2">
                             {author.bds.map(({ bd }) => (
-                              <div key={bd.id} className="flex items-center gap-3">
-                                <p>{bd.title}</p>
-                              </div>
+                              <Link key={bd.id} href={`/bds/${bd.id}`} className="text-sm text-blue-600 hover:underline">
+                                {bd.title}
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -47,32 +46,23 @@ export default async function AllAuthorsTable({
                     <th scope="col" className="px-3 py-5 font-medium">
                       Bds
                     </th>
-                    <th scope="col" className="px-4 py-5 font-medium">
-                      Link
-                    </th>
                   </tr>
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 text-gray-900">
                   {authors.map((author) => (
                     <tr key={author.id} className="group">
-                      <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
-                        <div className="flex items-center gap-3">
-                          <p>{author.name}</p>
-                        </div>
+                      <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
+                        <Link href={`/authors/${author.id}`} className="text-blue-600 hover:underline">
+                          {author.name}
+                        </Link>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
                         {author.bds.map(({ bd }) => (
-                          <div key={bd.id} className="flex items-center gap-3">
-                            <p>{bd.title}</p>
-                          </div>
+                          <Link key={bd.id} href={`/bds/${bd.id}`} className="block text-blue-600 hover:underline">
+                            {bd.title}
+                          </Link>
                         ))}
-                      </td>
-                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                        <Link
-                          href={`/home/authors/${author.id}`}
-                          className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
-                        >lien</Link>
                       </td>
                     </tr>
                   ))}

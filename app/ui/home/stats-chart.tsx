@@ -2,9 +2,9 @@ import { lusitana } from '@/app/ui/fonts';
 
 type YearData = { year: number; count: number };
 
-export default function StatsChart({ data }: { data: YearData[] }) {
+export default function StatsChart({ data, title }: { data: YearData[]; title: string }) {
   if (data.length === 0) {
-    return <p className="mt-4 text-gray-400">Pas de données disponibles.</p>;
+    return <p className="mt-4 text-gray-400">{title}</p>;
   }
 
   const maxCount = Math.max(...data.map(d => d.count));
@@ -13,7 +13,7 @@ export default function StatsChart({ data }: { data: YearData[] }) {
   return (
     <div className="w-full md:col-span-4 lg:col-span-8">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
-        BDs par année
+        {title}
       </h2>
       <div className="rounded-xl bg-gray-50 p-4">
         <div className="flex items-end gap-1 rounded-md bg-white p-4" style={{ height: `${chartHeight + 40}px` }}>
