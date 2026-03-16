@@ -10,7 +10,7 @@ export default function ImportExportPage() {
   const tCommon = useTranslations('common');
   const [importEntity, setImportEntity] = useState('events');
   const [importFile, setImportFile] = useState<File | null>(null);
-  const [importResult, setImportResult] = useState<{ message: string; count?: number; skipped?: number; error?: string } | null>(null);
+  const [importResult, setImportResult] = useState<{ message: string; count?: number; skipped?: number; error?: string; details?: string; errors?: string[] } | null>(null);
 
   const handleImport = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -113,9 +113,24 @@ export default function ImportExportPage() {
             </button>
             {importResult && (
               <div className={`text-sm rounded-md p-3 ${importResult.error ? 'bg-red-50 text-red-700' : 'bg-green-50 text-green-700'}`}>
-                <p className="font-medium">{importResult.message}</p>
+                <p className="font-medium">{importResult.message || importResult.error}</p>
+                {importResult.details && (
+                  <p className="mt-1 text-xs font-mono break-all">{importResult.details}</p>
+                )}
                 {importResult.count !== undefined && (
                   <p className="mt-1">Imported: {importResult.count}{importResult.skipped ? ` | Skipped: ${importResult.skipped}` : ''}</p>
+                )}
+                {importResult.errors && importResult.errors.length > 0 && (
+                  <details className="mt-2">
+                    <summary className="cursor-pointer font-medium">
+                      {importResult.errors.length} error(s)
+                    </summary>
+                    <ul className="mt-1 list-disc pl-4 text-xs font-mono max-h-48 overflow-y-auto">
+                      {importResult.errors.map((err, i) => (
+                        <li key={i} className="break-all">{err}</li>
+                      ))}
+                    </ul>
+                  </details>
                 )}
               </div>
             )}

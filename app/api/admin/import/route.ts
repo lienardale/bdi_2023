@@ -92,87 +92,117 @@ export async function POST(request: NextRequest) {
         enrichment_source?: string;
       }>(csvText);
 
+      const errors: string[] = [];
+
       for (const row of rows) {
-        // Support both 'events' (semicolon-separated) and legacy 'event' (single)
-        const eventNames = row.events
-          ? row.events.split(';').map(n => n.trim()).filter(Boolean)
-          : row.event
-            ? [row.event.trim()]
-            : [];
+        try {
+          // Support both 'events' (semicolon-separated) and legacy 'event' (single)
+          const eventNames = row.events
+            ? row.events.split(';').map(n => n.trim()).filter(Boolean)
+            : row.event
+              ? [row.event.trim()]
+              : [];
 
-        const eventConnections: { eventId: string }[] = [];
-        let skipRow = false;
-        for (const eventName of eventNames) {
-          const event = await prisma.event.findUnique({ where: { name: eventName } });
-          if (!event) { skipRow = true; break; }
-          eventConnections.push({ eventId: event.id });
-        }
-        if (skipRow || eventConnections.length === 0) { skipped++; continue; }
+          const eventConnections: { eventId: string }[] = [];
+          let skipRow = false;
+          for (const eventName of eventNames) {
+            const event = await prisma.event.findUnique({ where: { name: eventName } });
+            if (!event) { skipRow = true; break; }
+            eventConnections.push({ eventId: event.id });
+          }
+          if (skipRow || eventConnections.length === 0) { skipped++; continue; }
 
-        const authorNames = row.authors ? row.authors.split(';').map(n => n.trim()).filter(Boolean) : [];
+          const authorNames = row.authors ? row.authors.split(';').map(n => n.trim()).filter(Boolean) : [];
 
-        const authorConnections = await Promise.all(
-          authorNames.map(async (name) => {
-            const author = await prisma.author.upsert({
-              where: { name },
+          const authorConnections = await Promise.all(
+            authorNames.map(async (name) => {
+              const author = await prisma.author.upsert({
+                where: { name },
+                update: {},
+                create: { name },
+              });
+              return { authorId: author.id };
+            })
+          );
+
+          let publisherId: string | null = null;
+          if (row.publisher) {
+            const pub = await prisma.publisher.upsert({
+              where: { name: row.publisher },
               update: {},
-              create: { name },
+              create: { name: row.publisher },
             });
-            return { authorId: author.id };
-          })
-        );
+            publisherId = pub.id;
+          }
 
-        let publisherId: string | null = null;
-        if (row.publisher) {
-          const pub = await prisma.publisher.upsert({
-            where: { name: row.publisher },
-            update: {},
-            create: { name: row.publisher },
+          // Validate numeric/date fields
+          const publishingYear = row.publishing_year ? parseInt(row.publishing_year) : null;
+          const pageCount = row.page_count ? parseInt(row.page_count) : null;
+          const price = row.price ? parseFloat(row.price) : null;
+          const pubDate = row.publication_date ? new Date(row.publication_date) : null;
+
+          if ((publishingYear !== null && isNaN(publishingYear)) ||
+              (pageCount !== null && isNaN(pageCount)) ||
+              (price !== null && isNaN(price)) ||
+              (pubDate !== null && isNaN(pubDate.getTime()))) {
+            errors.push(`"${row.title}": invalid numeric/date value`);
+            skipped++;
+            continue;
+          }
+
+          const bdData = {
+              publisher: row.publisher || null,
+              publisherId,
+              publishing_year: publishingYear,
+              ean: row.ean || null,
+              summary: row.summary || null,
+              cover_url: row.cover_url || null,
+              publication_date: pubDate,
+              page_count: pageCount,
+              price,
+              publisher_url: row.publisher_url || null,
+              leslibraires_url: row.leslibraires_url || null,
+              enrichment_source: row.enrichment_source || null,
+          };
+
+          await prisma.bd.upsert({
+            where: { title: row.title },
+            update: {
+              ...bdData,
+              authors: {
+                deleteMany: {},
+                create: authorConnections,
+              },
+              events: {
+                deleteMany: {},
+                create: eventConnections,
+              },
+            },
+            create: {
+              title: row.title,
+              ...bdData,
+              authors: {
+                create: authorConnections,
+              },
+              events: {
+                create: eventConnections,
+              },
+            },
           });
-          publisherId = pub.id;
+          count++;
+        } catch (err) {
+          const msg = err instanceof Error ? err.message : String(err);
+          errors.push(`"${row.title}": ${msg}`);
+          skipped++;
         }
-
-        const bdData = {
-            publisher: row.publisher || null,
-            publisherId,
-            publishing_year: row.publishing_year ? parseInt(row.publishing_year) : null,
-            ean: row.ean || null,
-            summary: row.summary || null,
-            cover_url: row.cover_url || null,
-            publication_date: row.publication_date ? new Date(row.publication_date) : null,
-            page_count: row.page_count ? parseInt(row.page_count) : null,
-            price: row.price ? parseFloat(row.price) : null,
-            publisher_url: row.publisher_url || null,
-            leslibraires_url: row.leslibraires_url || null,
-            enrichment_source: row.enrichment_source || null,
-        };
-
-        await prisma.bd.upsert({
-          where: { title: row.title },
-          update: {
-            ...bdData,
-            authors: {
-              deleteMany: {},
-              create: authorConnections,
-            },
-            events: {
-              deleteMany: {},
-              create: eventConnections,
-            },
-          },
-          create: {
-            title: row.title,
-            ...bdData,
-            authors: {
-              create: authorConnections,
-            },
-            events: {
-              create: eventConnections,
-            },
-          },
-        });
-        count++;
       }
+
+      return NextResponse.json({
+        message: `${count} ${entity} imported successfully`,
+        count,
+        skipped,
+        errors: errors.length > 0 ? errors : undefined,
+      });
     } else {
       return NextResponse.json({ error: 'Invalid entity' }, { status: 400 });
     }
@@ -180,6 +210,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: `${count} ${entity} imported successfully`, count, skipped });
   } catch (error) {
     console.error('Import error:', error);
-    return NextResponse.json({ error: 'Import failed' }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return NextResponse.json({ error: 'Import failed', details: message }, { status: 500 });
   }
 }
