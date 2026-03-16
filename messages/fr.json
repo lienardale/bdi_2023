@@ -125,8 +125,7 @@
     "importFile": "Fichier CSV",
     "importButton": "Importer",
     "importError": "Erreur lors de l'import.",
-    "viewOnSite": "Voir sur le site",
-    "stats": "Statistiques"
+    "viewOnSite": "Voir sur le site"
   },
   "adminStats": {
     "title": "Statistiques",
@@ -134,11 +133,9 @@
     "totalAuthors": "Total Auteur·ices",
     "totalEvents": "Total Événements",
     "totalPublishers": "Total Maisons d'Édition",
+    "totalPages": "Total pages",
     "medianPages": "Pages (médiane)",
     "medianPrice": "Prix (médiane)",
-    "avgBdsPerEvent": "BDs / événement",
-    "bdsPerYear": "BDs par année",
-    "eventsPerYear": "Événements par année",
     "topAuthors": "Top 10 Auteur·ices",
     "topPublishers": "Top 10 Maisons d'Édition"
   }

@@ -4,7 +4,6 @@ import {
   ArrowsRightLeftIcon,
   BookOpenIcon,
   CalendarIcon,
-  ChartBarIcon,
   ChatBubbleLeftIcon,
   HomeIcon,
   UserGroupIcon,
@@ -25,7 +24,6 @@ export default function AdminSidebar() {
     { name: t('authors'), href: '/admin/authors' as const, icon: UserGroupIcon },
     { name: t('publishers'), href: '/admin/publishers' as const, icon: BookOpenIcon },
     { name: tAdmin('importExport'), href: '/admin/import-export' as const, icon: ArrowsRightLeftIcon },
-    { name: tAdmin('stats'), href: '/admin/stats' as const, icon: ChartBarIcon },
   ];
 
   return (

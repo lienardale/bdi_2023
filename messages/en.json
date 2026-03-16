@@ -125,8 +125,7 @@
     "importFile": "CSV file",
     "importButton": "Import",
     "importError": "Import error.",
-    "viewOnSite": "View on site",
-    "stats": "Statistics"
+    "viewOnSite": "View on site"
   },
   "adminStats": {
     "title": "Statistics",
@@ -134,11 +133,9 @@
     "totalAuthors": "Total Authors",
     "totalEvents": "Total Events",
     "totalPublishers": "Total Publishers",
+    "totalPages": "Total pages",
     "medianPages": "Pages (median)",
     "medianPrice": "Price (median)",
-    "avgBdsPerEvent": "Comics / event",
-    "bdsPerYear": "Comics per year",
-    "eventsPerYear": "Events per year",
     "topAuthors": "Top 10 Authors",
     "topPublishers": "Top 10 Publishers"
   }

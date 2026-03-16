@@ -622,19 +622,21 @@ export type AggregateStats = {
   totalAuthors: number;
   totalEvents: number;
   totalPublishers: number;
+  totalPages: number;
   medianPages: number | null;
   medianPrice: number | null;
-  avgBdsPerEvent: number | null;
 };
 
 export async function fetchAggregateStats(): Promise<AggregateStats> {
   await connection();
-  const [totalBds, totalAuthors, totalEvents, totalPublishers] = await Promise.all([
+  const [totalBds, totalAuthors, totalEvents, totalPublishers, pageSum] = await Promise.all([
     prisma.bd.count(),
     prisma.author.count(),
     prisma.event.count(),
     prisma.publisher.count(),
+    prisma.bd.aggregate({ _sum: { page_count: true } }),
   ]);
+  const totalPages = pageSum._sum.page_count ?? 0;
 
   // Median pages
   const pagesData = await prisma.bd.findMany({
@@ -654,16 +656,13 @@ export async function fetchAggregateStats(): Promise<AggregateStats> {
   const prices = pricesData.map(b => Number(b.price));
   const medianPrice = prices.length > 0 ? prices[Math.floor(prices.length / 2)] : null;
 
-  // Avg BDs per event
-  const avgBdsPerEvent = totalEvents > 0 ? Math.round((totalBds / totalEvents) * 10) / 10 : null;
-
   return {
     totalBds,
     totalAuthors,
     totalEvents,
     totalPublishers,
+    totalPages,
     medianPages,
     medianPrice,
-    avgBdsPerEvent,
   };
 }

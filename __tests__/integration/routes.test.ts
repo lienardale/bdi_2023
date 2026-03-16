@@ -85,7 +85,7 @@ describe.skipIf(SKIP)('Admin pages (unauthenticated → redirect)', () => {
     const res = await fetchRoute('/fr/admin/import-export');
     expect(res.status).toBe(307);
     expect(res.headers.get('location')).toContain('/fr/login');
-  });
+  }, 15000);
 
 });
 

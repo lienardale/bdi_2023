@@ -10,6 +10,7 @@ vi.mock('@/app/lib/prisma', () => ({
       groupBy: vi.fn(),
       count: vi.fn(),
       findMany: vi.fn(),
+      aggregate: vi.fn(),
     },
     event: {
       findMany: vi.fn(),
@@ -80,6 +81,9 @@ describe('fetchAggregateStats', () => {
     vi.mocked(prisma.author.count).mockResolvedValue(50);
     vi.mocked(prisma.event.count).mockResolvedValue(20);
     vi.mocked(prisma.publisher.count).mockResolvedValue(15);
+    vi.mocked(prisma.bd.aggregate).mockResolvedValue({
+      _sum: { page_count: 4800 },
+    } as any);
 
     // Pages data (sorted)
     vi.mocked(prisma.bd.findMany)
@@ -100,9 +104,9 @@ describe('fetchAggregateStats', () => {
     expect(result.totalAuthors).toBe(50);
     expect(result.totalEvents).toBe(20);
     expect(result.totalPublishers).toBe(15);
+    expect(result.totalPages).toBe(4800);
     expect(result.medianPages).toBe(48);
     expect(result.medianPrice).toBe(12.50);
-    expect(result.avgBdsPerEvent).toBe(5);
   });
 
   it('handles zero events gracefully', async () => {
@@ -110,14 +114,17 @@ describe('fetchAggregateStats', () => {
     vi.mocked(prisma.author.count).mockResolvedValue(0);
     vi.mocked(prisma.event.count).mockResolvedValue(0);
     vi.mocked(prisma.publisher.count).mockResolvedValue(0);
+    vi.mocked(prisma.bd.aggregate).mockResolvedValue({
+      _sum: { page_count: null },
+    } as any);
 
     vi.mocked(prisma.bd.findMany)
       .mockResolvedValueOnce([] as any)
       .mockResolvedValueOnce([] as any);
 
     const result = await fetchAggregateStats();
+    expect(result.totalPages).toBe(0);
     expect(result.medianPages).toBeNull();
     expect(result.medianPrice).toBeNull();
-    expect(result.avgBdsPerEvent).toBeNull();
   });
 });

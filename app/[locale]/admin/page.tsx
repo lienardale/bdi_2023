@@ -1,31 +1,68 @@
 import { lusitana } from '@/app/ui/fonts';
-import { fetchCardData } from '@/app/lib/data';
-import { getTranslations } from 'next-intl/server';
+import {
+  fetchCardData,
+  fetchAggregateStats,
+  fetchTopAuthors,
+  fetchTopPublishers,
+} from '@/app/lib/data';
+import { getTranslations, getLocale } from 'next-intl/server';
+import { formatDate } from '@/app/lib/utils';
+import TopAuthors from '@/app/ui/home/top-authors';
+import TopPublishers from '@/app/ui/admin/stats/top-publishers';
 
 export default async function AdminDashboard() {
-  const { numberOfBds, numberOfAuthors, nextBdiDate, nextBdiName } = await fetchCardData();
+  const [cardData, stats, topAuthors, topPublishers] = await Promise.all([
+    fetchCardData(),
+    fetchAggregateStats(),
+    fetchTopAuthors(10),
+    fetchTopPublishers(10),
+  ]);
+
   const t = await getTranslations('admin');
-  const tHome = await getTranslations('home');
+  const tStats = await getTranslations('adminStats');
+  const locale = await getLocale();
+
+  const nextEventDate = cardData.nextEventDateRaw
+    ? formatDate(cardData.nextEventDateRaw, locale, 'short')
+    : '';
+
+  const kpis = [
+    { label: tStats('totalBds'), value: stats.totalBds },
+    { label: tStats('totalAuthors'), value: stats.totalAuthors },
+    { label: tStats('totalEvents'), value: stats.totalEvents },
+    { label: tStats('totalPublishers'), value: stats.totalPublishers },
+    { label: tStats('totalPages'), value: stats.totalPages.toLocaleString(locale === 'fr' ? 'fr-FR' : 'en-US') },
+    { label: tStats('medianPages'), value: stats.medianPages ?? '—' },
+    { label: tStats('medianPrice'), value: stats.medianPrice != null ? `${stats.medianPrice.toFixed(2)} €` : '—' },
+  ];
 
   return (
     <main>
-      <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+      <h1 className={`${lusitana.className} mb-6 text-xl md:text-2xl`}>
         {t('title')}
       </h1>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-xl bg-card p-4 shadow-xs border border-border">
-          <p className="text-sm text-muted-foreground">{t('nextEvent')}</p>
-          <p className="text-lg font-semibold">{nextBdiName}</p>
-          <p className="text-sm text-muted-foreground">{nextBdiDate}</p>
-        </div>
-        <div className="rounded-xl bg-card p-4 shadow-xs border border-border">
-          <p className="text-sm text-muted-foreground">{tHome('totalBds')}</p>
-          <p className="text-2xl font-semibold">{numberOfBds}</p>
-        </div>
-        <div className="rounded-xl bg-card p-4 shadow-xs border border-border">
-          <p className="text-sm text-muted-foreground">{tHome('totalAuthors')}</p>
-          <p className="text-2xl font-semibold">{numberOfAuthors}</p>
-        </div>
+
+      {/* Next event highlight */}
+      <div className="rounded-xl bg-card p-4 shadow-xs border border-border mb-6">
+        <p className="text-sm text-muted-foreground">{t('nextEvent')}</p>
+        <p className="text-lg font-semibold">{cardData.nextBdiName}</p>
+        <p className="text-sm text-muted-foreground">{nextEventDate}</p>
+      </div>
+
+      {/* KPI cards */}
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 mb-8">
+        {kpis.map((kpi) => (
+          <div key={kpi.label} className="rounded-xl bg-card p-4 shadow-xs border border-border">
+            <p className="text-sm text-muted-foreground">{kpi.label}</p>
+            <p className="text-2xl font-semibold">{kpi.value}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Rankings */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <TopAuthors authors={topAuthors} title={tStats('topAuthors')} />
+        <TopPublishers publishers={topPublishers} title={tStats('topPublishers')} />
       </div>
     </main>
   );
