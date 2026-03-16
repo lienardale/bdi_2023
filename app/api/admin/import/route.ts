@@ -151,7 +151,6 @@ export async function POST(request: NextRequest) {
           }
 
           const bdData = {
-              publisher: row.publisher || null,
               publisherId,
               publishing_year: publishingYear,
               ean: row.ean || null,
