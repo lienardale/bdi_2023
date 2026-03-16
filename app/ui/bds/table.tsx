@@ -42,11 +42,14 @@ export default async function AllBdsTable({
                         <p className="text-sm text-muted-foreground">
                           {bd.publishing_year}
                         </p>
-                        <div className="flex gap-2 mt-2">
-                          <Link
-                            href={`/events/${bd.eventId}`}
-                            className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary/90"
-                          >{t('bds.eventLink')}</Link>
+                        <div className="flex gap-2 mt-2 flex-wrap">
+                          {bd.events.map(({ event }) => (
+                            <Link
+                              key={event.id}
+                              href={`/events/${event.id}`}
+                              className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary/90"
+                            >{event.name.match(/#(\d+)/)?.[0] || t('bds.eventLink')}</Link>
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -82,7 +85,6 @@ export default async function AllBdsTable({
 
               <tbody className="text-foreground card-cycle">
                 {bds.map((bd) => {
-                  const bdiNumber = bd.event?.name?.match(/#(\d+)/)?.[0];
                   return (
                     <tr key={bd.id} className="group">
                       <td className="bg-card py-5 pl-4 pr-3 text-sm sm:pl-6">
@@ -126,10 +128,16 @@ export default async function AllBdsTable({
                         ) : '–'}
                       </td>
                       <td className="bg-card px-3 py-5 text-sm text-center">
-                        <Link
-                          href={`/events/${bd.eventId}`}
-                          className="text-primary hover:underline font-medium"
-                        >{bdiNumber || t('bds.bdi')}</Link>
+                        {bd.events.map(({ event }) => {
+                          const bdiNum = event.name?.match(/#(\d+)/)?.[0];
+                          return (
+                            <Link
+                              key={event.id}
+                              href={`/events/${event.id}`}
+                              className="block text-primary hover:underline font-medium"
+                            >{bdiNum || t('bds.bdi')}</Link>
+                          );
+                        })}
                       </td>
                     </tr>
                   );

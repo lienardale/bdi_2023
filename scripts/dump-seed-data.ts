@@ -17,7 +17,10 @@ async function main() {
     prisma.event.findMany({ orderBy: { date: 'asc' } }),
     prisma.bd.findMany({
       orderBy: { title: 'asc' },
-      include: { authors: { select: { authorId: true } } },
+      include: {
+        authors: { select: { authorId: true } },
+        events: { select: { eventId: true } },
+      },
     }),
     prisma.author.findMany({
       orderBy: { name: 'asc' },
@@ -56,9 +59,10 @@ async function main() {
   out += 'const bds = [\n';
   for (const b of bds) {
     const authorIds = b.authors.map((a) => a.authorId);
+    const eventIds = b.events.map((e) => e.eventId);
     const price = b.price != null ? String(b.price) : 'null';
     const pubDate = b.publication_date ? q(b.publication_date.toISOString()) : 'null';
-    out += `  { id: ${q(b.id)}, title: ${q(b.title)}, event_ids: ${q(b.eventId)}, author_ids: [${authorIds.map((id) => q(id)).join(', ')}], publisher: ${q(b.publisher)}, publisherId: ${q(b.publisherId)}, publishing_year: ${b.publishing_year ?? 'null'}, ean: ${q(b.ean)}, summary: ${q(b.summary)}, publication_date: ${pubDate}, page_count: ${b.page_count ?? 'null'}, price: ${price}, cover_url: ${q(b.cover_url)}, publisher_url: ${q(b.publisher_url)}, leslibraires_url: ${q(b.leslibraires_url)}, enrichment_source: ${q(b.enrichment_source)} },\n`;
+    out += `  { id: ${q(b.id)}, title: ${q(b.title)}, event_ids: [${eventIds.map((id) => q(id)).join(', ')}], author_ids: [${authorIds.map((id) => q(id)).join(', ')}], publisher: ${q(b.publisher)}, publisherId: ${q(b.publisherId)}, publishing_year: ${b.publishing_year ?? 'null'}, ean: ${q(b.ean)}, summary: ${q(b.summary)}, publication_date: ${pubDate}, page_count: ${b.page_count ?? 'null'}, price: ${price}, cover_url: ${q(b.cover_url)}, publisher_url: ${q(b.publisher_url)}, leslibraires_url: ${q(b.leslibraires_url)}, enrichment_source: ${q(b.enrichment_source)} },\n`;
   }
   out += '];\n\n';
 

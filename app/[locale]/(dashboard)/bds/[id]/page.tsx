@@ -67,11 +67,14 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       )}
 
       <div className="mt-6 flex gap-3 flex-wrap">
-        <Link
-          href={`/events/${bd.eventId}`}
-          className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary/90">
-          Lien BDI
-        </Link>
+        {bd.events.map(({ event }) => (
+          <Link
+            key={event.id}
+            href={`/events/${event.id}`}
+            className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary/90">
+            {event.name.match(/#(\d+)/)?.[0] || 'Lien BDI'}
+          </Link>
+        ))}
         {bd.leslibraires_url && (
           <a
             href={bd.leslibraires_url}

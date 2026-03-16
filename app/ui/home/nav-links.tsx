@@ -4,8 +4,9 @@ import {
   UserGroupIcon,
   HomeIcon,
   CalendarIcon,
-  ChatBubbleLeftIcon,
+  BookOpenIcon,
   EnvelopeIcon,
+  BuildingStorefrontIcon,
 } from '@heroicons/react/24/outline';
 import { Link, usePathname } from '@/i18n/routing';
 import { cn } from '@/app/lib/utils';
@@ -18,8 +19,9 @@ export default function NavLinks() {
   const links = [
     { name: t('home'), href: '/', icon: HomeIcon },
     { name: t('events'), href: '/events', icon: CalendarIcon },
-    { name: t('bds'), href: '/bds', icon: ChatBubbleLeftIcon },
+    { name: t('bds'), href: '/bds', icon: BookOpenIcon },
     { name: t('authors'), href: '/authors', icon: UserGroupIcon },
+    { name: t('publishers'), href: '/publishers', icon: BuildingStorefrontIcon },
     { name: t('contact'), href: '/contact', icon: EnvelopeIcon },
   ];
 

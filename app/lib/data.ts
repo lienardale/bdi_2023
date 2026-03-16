@@ -99,8 +99,8 @@ export async function fetchFilteredEvents(query: string, year?: number, sort?: s
     if (query) {
       where.OR = [
         { name: { contains: query, mode: "insensitive" } },
-        { bds: { some: { title: { contains: query, mode: "insensitive" } } } },
-        { bds: { some: { authors: { some: { author: { name: { contains: query, mode: "insensitive" } } } } } } },
+        { bds: { some: { bd: { title: { contains: query, mode: "insensitive" } } } } },
+        { bds: { some: { bd: { authors: { some: { author: { name: { contains: query, mode: "insensitive" } } } } } } } },
       ];
     }
 
@@ -119,12 +119,16 @@ export async function fetchFilteredEvents(query: string, year?: number, sort?: s
       include: {
         bds: {
           select: {
-            id: true,
-            title: true,
-            authors: {
+            bd: {
               select: {
-                author: {
-                  select: { id: true, name: true }
+                id: true,
+                title: true,
+                authors: {
+                  select: {
+                    author: {
+                      select: { id: true, name: true }
+                    }
+                  }
                 }
               }
             }
@@ -148,15 +152,19 @@ export async function fetchEventById(id: string) {
       include: {
         bds: {
           select: {
-            id: true,
-            title: true,
-            publisher: true,
-            publisherRef: { select: { id: true, name: true } },
-            publishing_year: true,
-            authors: {
+            bd: {
               select: {
-                author: {
-                  select: { id: true, name: true }
+                id: true,
+                title: true,
+                publisher: true,
+                publisherRef: { select: { id: true, name: true } },
+                publishing_year: true,
+                authors: {
+                  select: {
+                    author: {
+                      select: { id: true, name: true }
+                    }
+                  }
                 }
               }
             }
@@ -188,13 +196,13 @@ export async function fetchFilteredBds(
           { title: { contains: query, mode: "insensitive" } },
           { publisherRef: { name: { contains: query, mode: "insensitive" } } },
           { authors: { some: { author: { name: { contains: query, mode: "insensitive" } } } } },
-          { event: { name: { contains: query, mode: "insensitive" } } },
+          { events: { some: { event: { name: { contains: query, mode: "insensitive" } } } } },
         ],
       });
     }
 
     if (filters?.eventId) {
-      andConditions.push({ eventId: filters.eventId });
+      andConditions.push({ events: { some: { eventId: filters.eventId } } });
     }
     if (filters?.publisherId) {
       andConditions.push({ publisherId: filters.publisherId });
@@ -215,15 +223,15 @@ export async function fetchFilteredBds(
       title: { title: dir },
       price: { price: dir },
       pages: { page_count: dir },
-      bdi: { event: { date: dir } },
     };
+    // 'bdi' sort: no longer possible at Prisma level with M2M, handled in JS
     // 'author' sort is handled in JS after fetch (M2M prevents Prisma-level sort)
-    const orderBy = sort && sort !== 'author' && orderByMap[sort] ? orderByMap[sort] : { title: 'asc' };
+    const orderBy = sort && sort !== 'author' && sort !== 'bdi' && orderByMap[sort] ? orderByMap[sort] : { title: 'asc' };
 
-    const bds = await prisma.bd.findMany({
+    let bds = await prisma.bd.findMany({
       orderBy,
       include: {
-        event: { select: { id: true, name: true } },
+        events: { select: { event: { select: { id: true, name: true, date: true } } } },
         publisherRef: { select: { id: true, name: true } },
         authors: {
           select: {
@@ -235,7 +243,17 @@ export async function fetchFilteredBds(
       },
       where,
     });
-    return bds as BdsTable[];
+
+    // JS-level sort for 'bdi' (by first event date)
+    if (sort === 'bdi') {
+      bds = bds.sort((a, b) => {
+        const dateA = a.events[0]?.event?.date?.getTime() ?? 0;
+        const dateB = b.events[0]?.event?.date?.getTime() ?? 0;
+        return dir === 'asc' ? dateA - dateB : dateB - dateA;
+      });
+    }
+
+    return bds as unknown as BdsTable[];
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch bds table.');
@@ -248,7 +266,7 @@ export async function fetchBdById(id: string) {
     const bd = await prisma.bd.findFirst({
       where: { id },
       include: {
-        event: { select: { id: true, name: true } },
+        events: { select: { event: { select: { id: true, name: true } } } },
         publisherRef: { select: { id: true, name: true } },
         authors: {
           select: {
@@ -283,7 +301,7 @@ export async function fetchFilteredAuthors(query: string, eventId?: string) {
 
     if (eventId) {
       andConditions.push({
-        bds: { some: { bd: { eventId } } },
+        bds: { some: { bd: { events: { some: { eventId } } } } },
       });
     }
 
@@ -322,7 +340,7 @@ export async function fetchPaginatedEvents(page: number = 1, query?: string, yea
     andConditions.push({
       OR: [
         { name: { contains: query, mode: 'insensitive' } },
-        { bds: { some: { title: { contains: query, mode: 'insensitive' } } } },
+        { bds: { some: { bd: { title: { contains: query, mode: 'insensitive' } } } } },
       ],
     });
   }
@@ -340,7 +358,17 @@ export async function fetchPaginatedEvents(page: number = 1, query?: string, yea
     prisma.event.findMany({
       orderBy,
       include: {
-        bds: { select: { id: true, title: true, authors: { select: { author: { select: { id: true, name: true } } } } } },
+        bds: {
+          select: {
+            bd: {
+              select: {
+                id: true,
+                title: true,
+                authors: { select: { author: { select: { id: true, name: true } } } },
+              },
+            },
+          },
+        },
       },
       skip: (page - 1) * ADMIN_PAGE_SIZE,
       take: ADMIN_PAGE_SIZE,
@@ -371,11 +399,11 @@ export async function fetchPaginatedBds(
         { title: { contains: query, mode: 'insensitive' } },
         { publisherRef: { name: { contains: query, mode: 'insensitive' } } },
         { authors: { some: { author: { name: { contains: query, mode: 'insensitive' } } } } },
-        { event: { name: { contains: query, mode: 'insensitive' } } },
+        { events: { some: { event: { name: { contains: query, mode: 'insensitive' } } } } },
       ],
     });
   }
-  if (filters?.eventId) andConditions.push({ eventId: filters.eventId });
+  if (filters?.eventId) andConditions.push({ events: { some: { eventId: filters.eventId } } });
   if (filters?.publisherId) andConditions.push({ publisherId: filters.publisherId });
   if (filters?.year) andConditions.push({ publishing_year: filters.year });
   if (andConditions.length > 0) where.AND = andConditions;
@@ -385,15 +413,14 @@ export async function fetchPaginatedBds(
     title: { title: dir },
     price: { price: dir },
     pages: { page_count: dir },
-    bdi: { event: { date: dir } },
   };
-  const orderBy = sort && orderByMap[sort] ? orderByMap[sort] : { title: 'asc' };
+  const orderBy = sort && sort !== 'bdi' && orderByMap[sort] ? orderByMap[sort] : { title: 'asc' };
 
   const [bds, total] = await Promise.all([
     prisma.bd.findMany({
       orderBy,
       include: {
-        event: { select: { id: true, name: true } },
+        events: { select: { event: { select: { id: true, name: true } } } },
         publisherRef: { select: { id: true, name: true } },
         authors: { select: { author: { select: { id: true, name: true } } } },
       },
@@ -472,13 +499,29 @@ export async function fetchPublisherById(id: string) {
         select: {
           id: true, title: true,
           authors: { select: { author: { select: { id: true, name: true } } } },
-          event: { select: { id: true, name: true } },
+          events: { select: { event: { select: { id: true, name: true } } } },
         },
         orderBy: { title: 'asc' },
       },
     },
   });
   return publisher;
+}
+
+export async function fetchFilteredPublishers(query?: string) {
+  await connection();
+  const where: any = {};
+  if (query) {
+    where.name = { contains: query, mode: 'insensitive' };
+  }
+  return prisma.publisher.findMany({
+    orderBy: { name: 'asc' },
+    include: {
+      _count: { select: { bds: true } },
+      bds: { select: { id: true, title: true }, orderBy: { title: 'asc' } },
+    },
+    where,
+  });
 }
 
 export async function fetchPaginatedPublishers(page: number = 1, query?: string) {

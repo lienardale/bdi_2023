@@ -10,7 +10,7 @@ export async function GET() {
   const bds = await prisma.bd.findMany({
     orderBy: { title: 'asc' },
     include: {
-      event: { select: { name: true } },
+      events: { select: { event: { select: { name: true } } } },
       publisherRef: { select: { name: true } },
       authors: { select: { author: { select: { name: true } } } },
     },
@@ -21,7 +21,7 @@ export async function GET() {
     title: bd.title,
     publisher: bd.publisherRef?.name || bd.publisher || '',
     publishing_year: bd.publishing_year || '',
-    event: bd.event.name,
+    events: bd.events.map(e => e.event.name).join('; '),
     authors: bd.authors.map(a => a.author.name).join('; '),
     ean: bd.ean || '',
     summary: bd.summary || '',

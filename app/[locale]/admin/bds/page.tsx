@@ -92,7 +92,6 @@ export default async function AdminBdsPage({
           </thead>
           <tbody className="divide-y divide-border">
             {bds.map((bd) => {
-              const bdiNumber = bd.event?.name?.match(/#(\d+)/)?.[0];
               return (
                 <tr key={bd.id}>
                   <td className="bg-card px-4 py-3 text-sm truncate">
@@ -124,11 +123,14 @@ export default async function AdminBdsPage({
                     ) : '–'}
                   </td>
                   <td className="bg-card px-4 py-3 text-sm text-center">
-                    {bd.event ? (
-                      <Link href={`/admin/events/${bd.event.id}/edit`} className="text-primary hover:underline font-medium">
-                        {bdiNumber || t('bdi')}
-                      </Link>
-                    ) : '–'}
+                    {bd.events.length > 0 ? bd.events.map(({ event }) => {
+                      const bdiNum = event.name?.match(/#(\d+)/)?.[0];
+                      return (
+                        <Link key={event.id} href={`/admin/events/${event.id}/edit`} className="block text-primary hover:underline font-medium">
+                          {bdiNum || t('bdi')}
+                        </Link>
+                      );
+                    }) : '–'}
                   </td>
                   <td className="bg-card px-4 py-3 text-sm">
                     <div className="flex gap-2">
