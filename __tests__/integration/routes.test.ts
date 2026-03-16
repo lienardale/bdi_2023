@@ -1,12 +1,13 @@
 import { describe, it, expect } from 'vitest';
 
 const BASE_URL = process.env.TEST_BASE_URL || 'http://localhost:3000';
+const SKIP = !process.env.TEST_BASE_URL && process.env.CI === 'true';
 
 async function fetchRoute(path: string) {
   return fetch(`${BASE_URL}${path}`, { redirect: 'manual' });
 }
 
-describe('Public pages', () => {
+describe.skipIf(SKIP)('Public pages', () => {
   it('GET /fr returns 200', async () => {
     const res = await fetchRoute('/fr');
     expect(res.status).toBe(200);
@@ -28,7 +29,7 @@ describe('Public pages', () => {
   });
 });
 
-describe('Dashboard pages (public)', () => {
+describe.skipIf(SKIP)('Dashboard pages (public)', () => {
   it('GET /fr returns 200', async () => {
     const res = await fetchRoute('/fr');
     expect(res.status).toBe(200);
@@ -55,7 +56,7 @@ describe('Dashboard pages (public)', () => {
   });
 });
 
-describe('Admin pages (unauthenticated → redirect)', () => {
+describe.skipIf(SKIP)('Admin pages (unauthenticated → redirect)', () => {
   it('GET /fr/admin redirects to login', async () => {
     const res = await fetchRoute('/fr/admin');
     expect(res.status).toBe(307);
@@ -88,7 +89,7 @@ describe('Admin pages (unauthenticated → redirect)', () => {
 
 });
 
-describe('API routes', () => {
+describe.skipIf(SKIP)('API routes', () => {
   it('GET /api/auth/providers returns 200', async () => {
     const res = await fetchRoute('/api/auth/providers');
     expect(res.status).toBe(200);
@@ -100,7 +101,7 @@ describe('API routes', () => {
   });
 });
 
-describe('Security headers', () => {
+describe.skipIf(SKIP)('Security headers', () => {
   it('includes X-Frame-Options: DENY', async () => {
     const res = await fetchRoute('/fr');
     expect(res.headers.get('x-frame-options')).toBe('DENY');
