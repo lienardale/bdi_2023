@@ -47,24 +47,28 @@ export default function ImportExportPage() {
           <div className="flex flex-col gap-3">
             <a
               href="/api/admin/export/events"
+              download
               className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
             >
               {t('exportEvents')}
             </a>
             <a
               href="/api/admin/export/bds"
+              download
               className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
             >
               {t('exportBds')}
             </a>
             <a
               href="/api/admin/export/authors"
+              download
               className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
             >
               {t('exportAuthors')}
             </a>
             <a
               href="/api/admin/export/publishers"
+              download
               className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
             >
               {t('exportPublishers')}
