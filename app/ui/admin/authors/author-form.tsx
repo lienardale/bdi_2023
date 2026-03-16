@@ -28,11 +28,18 @@ export default function AuthorForm({
   const tAdmin = useTranslations('admin');
 
   const [isDirty, setIsDirty] = useState(false);
+  const [prevState, setPrevState] = useState(state);
+
+  if (prevState !== state) {
+    setPrevState(state);
+    if (state.success) {
+      setIsDirty(false);
+    }
+  }
 
   useEffect(() => {
     if (state.success) {
       toast.success(state.message || 'OK');
-      setIsDirty(false);
     } else if (state.message && !state.success) {
       toast.error(state.message);
     }

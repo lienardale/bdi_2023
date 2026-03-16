@@ -4,7 +4,7 @@
     "build": "next build --webpack",
     "dev": "next dev --webpack",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx",
+    "lint": "eslint .",
     "seed": "node -r dotenv/config ./scripts/seedv2.js",
     "migrate:publishers": "npx tsx scripts/migrate-publishers.ts",
     "fix:covers": "npx tsx scripts/fix-event-covers.ts",
