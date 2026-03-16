@@ -33,9 +33,9 @@ export default async function AllEventsTable({
                       <p className="text-sm text-muted-foreground">
                         {event.date.toLocaleDateString(locale === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
                       </p>
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-sm text-muted-foreground divide-y divide-foreground/5">
                         {event.bds.map(({ bd }) => (
-                          <div key={bd.id} className="flex items-center gap-3 w-full justify-between">
+                          <div key={bd.id} className="flex items-center gap-3 w-full justify-between py-1">
                             <Link href={`/bds/${bd.id}`} className="text-primary hover:underline">{bd.title}</Link>
                             <div className='flex flex-col items-end text-right'>
                               {bd.authors.map(({ author }) => (

@@ -443,14 +443,14 @@ export async function addInstagramPost(
   const { shortcode } = validatedFields.data;
 
   try {
-    const maxPos = await prisma.instagramPost.aggregate({
-      _max: { position: true },
-    });
-    const nextPosition = (maxPos._max.position ?? 0) + 1;
-
-    await prisma.instagramPost.create({
-      data: { shortcode, position: nextPosition },
-    });
+    await prisma.$transaction([
+      prisma.instagramPost.updateMany({
+        data: { position: { increment: 1 } },
+      }),
+      prisma.instagramPost.create({
+        data: { shortcode, position: 0 },
+      }),
+    ]);
   } catch {
     return { message: "Erreur: impossible d'ajouter le post Instagram." };
   }

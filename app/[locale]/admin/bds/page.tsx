@@ -50,23 +50,68 @@ export default async function AdminBdsPage({
       </div>
       <div className="mt-2 mb-4 flex flex-wrap items-center gap-2">
         <Search placeholder={tCommon('search')} />
-        <FilterSelect
-          paramName="eventId"
-          label={tFilters('event')}
-          options={eventOptions.map(e => ({ value: e.id, label: e.name }))}
-        />
-        <FilterSelect
-          paramName="publisherId"
-          label={tFilters('publisher')}
-          options={publishers.map(p => ({ value: p.id, label: p.name }))}
-        />
-        <FilterSelect
-          paramName="year"
-          label={tFilters('year')}
-          options={bdYears.map(y => ({ value: String(y), label: String(y) }))}
-        />
+        <div className="hidden md:flex flex-wrap items-center gap-2">
+          <FilterSelect
+            paramName="eventId"
+            label={tFilters('event')}
+            options={eventOptions.map(e => ({ value: e.id, label: e.name }))}
+          />
+          <FilterSelect
+            paramName="publisherId"
+            label={tFilters('publisher')}
+            options={publishers.map(p => ({ value: p.id, label: p.name }))}
+          />
+          <FilterSelect
+            paramName="year"
+            label={tFilters('year')}
+            options={bdYears.map(y => ({ value: String(y), label: String(y) }))}
+          />
+        </div>
       </div>
-      <div className="overflow-hidden">
+      {/* Mobile cards */}
+      <div className="space-y-3 md:hidden">
+        {bds.map((bd) => (
+          <div key={bd.id} className="rounded-lg bg-card border border-border p-4">
+            <div className="flex items-start justify-between gap-2">
+              <div className="min-w-0">
+                <Link href={`/admin/bds/${bd.id}/edit`} className="font-medium text-primary hover:underline">
+                  {bd.title}
+                </Link>
+                <div className="mt-0.5 flex flex-wrap gap-x-2 text-xs text-muted-foreground">
+                  {bd.authors.map(({ author }) => (
+                    <span key={author.id}>{author.name}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="flex shrink-0 gap-1">
+                <Link href={`/admin/bds/${bd.id}/edit`} className="rounded-md border border-border p-1.5 hover:bg-muted">
+                  <PencilIcon className="w-3.5" />
+                </Link>
+                <ConfirmDeleteButton action={async () => { 'use server'; await deleteBd(bd.id); }} />
+              </div>
+            </div>
+            <div className="mt-2 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-muted-foreground">
+              {(bd.publisherRef || bd.publisher) && (
+                <span>{bd.publisherRef?.name || bd.publisher}</span>
+              )}
+              {bd.price && <span>{Number(bd.price)}€</span>}
+              {bd.page_count && <span>{bd.page_count}p.</span>}
+              {bd.events.length > 0 && bd.events.map(({ event }) => {
+                const bdiNum = event.name?.match(/#(\d+)/)?.[0];
+                return <span key={event.id} className="font-medium">{bdiNum || t('bdi')}</span>;
+              })}
+            </div>
+            {bd.leslibraires_url && (
+              <a href={bd.leslibraires_url} target="_blank"
+                className="mt-2 inline-block rounded-md bg-primary px-2 py-0.5 text-xs text-primary-foreground hover:bg-primary/90"
+              >{t('buy')}</a>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop table */}
+      <div className="hidden md:block overflow-hidden">
         <table className="w-full rounded-md text-foreground" style={{ tableLayout: 'fixed' }}>
           <colgroup>
             <col style={{ width: '22%' }} />

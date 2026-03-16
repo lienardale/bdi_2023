@@ -58,25 +58,25 @@ export default async function Page({
       <div className="flex w-full items-center justify-between">
         <h1 className={`${lusitana.className} text-xl md:text-2xl`}>{t('bds.title')}</h1>
       </div>
-      <div className="mt-4 grid grid-cols-2 gap-2 md:mt-8 md:flex md:flex-wrap md:items-center">
-        <div className="col-span-2">
-          <Search placeholder={t('common.search')} />
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2 md:mt-8">
+        <Search placeholder={t('common.search')} />
+        <div className="hidden md:flex md:flex-wrap md:gap-2">
+          <FilterSelect
+            paramName="eventId"
+            label={t('filters.event')}
+            options={eventOptions.map(e => ({ value: e.id, label: e.name }))}
+          />
+          <FilterSelect
+            paramName="publisherId"
+            label={t('filters.publisher')}
+            options={publishers.map(p => ({ value: p.id, label: p.name }))}
+          />
+          <FilterSelect
+            paramName="authorId"
+            label={t('filters.author')}
+            options={authorOptions.map(a => ({ value: a.id, label: a.name }))}
+          />
         </div>
-        <FilterSelect
-          paramName="eventId"
-          label={t('filters.event')}
-          options={eventOptions.map(e => ({ value: e.id, label: e.name }))}
-        />
-        <FilterSelect
-          paramName="publisherId"
-          label={t('filters.publisher')}
-          options={publishers.map(p => ({ value: p.id, label: p.name }))}
-        />
-        <FilterSelect
-          paramName="authorId"
-          label={t('filters.author')}
-          options={authorOptions.map(a => ({ value: a.id, label: a.name }))}
-        />
       </div>
       <BdsTable bds={bds} />
     </main>

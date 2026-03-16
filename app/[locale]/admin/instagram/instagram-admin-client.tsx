@@ -134,7 +134,23 @@ export default function InstagramAdminClient({
                 key={post.id}
                 className="flex items-center gap-3 px-4 py-3"
               >
-                {/* Shortcode + preview link */}
+                {/* Thumbnail preview */}
+                <a
+                  href={`https://www.instagram.com/p/${post.shortcode}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 w-16 h-16 rounded overflow-hidden border border-border bg-muted"
+                >
+                  <iframe
+                    src={`https://www.instagram.com/p/${post.shortcode}/embed/captioned/`}
+                    className="w-[300px] h-[400px] border-0 pointer-events-none"
+                    style={{ transform: 'scale(0.213)', transformOrigin: 'top left' }}
+                    tabIndex={-1}
+                    loading="lazy"
+                  />
+                </a>
+
+                {/* Shortcode */}
                 <div className="flex-1 min-w-0">
                   <a
                     href={`https://www.instagram.com/p/${post.shortcode}/`}

@@ -41,11 +41,13 @@ export default async function Page({
       </div>
       <div className="mt-4 flex flex-wrap items-center justify-between gap-2 md:mt-8">
         <Search placeholder={t('common.search')} />
-        <FilterSelect
-          paramName="year"
-          label={t('filters.year')}
-          options={years.map(y => ({ value: String(y), label: String(y) }))}
-        />
+        <div className="hidden md:block">
+          <FilterSelect
+            paramName="year"
+            label={t('filters.year')}
+            options={years.map(y => ({ value: String(y), label: String(y) }))}
+          />
+        </div>
       </div>
       <EventsTable events={events} />
     </main>

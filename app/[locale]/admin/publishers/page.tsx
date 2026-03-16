@@ -36,7 +36,33 @@ export default async function AdminPublishersPage({
       <div className="mt-2 mb-4 flex flex-wrap items-center gap-2">
         <Search placeholder={tCommon('search')} />
       </div>
-      <div className="overflow-hidden">
+      {/* Mobile cards */}
+      <div className="space-y-3 md:hidden">
+        {publishers.map((publisher) => (
+          <div key={publisher.id} className="rounded-lg bg-card border border-border p-4">
+            <div className="flex items-start justify-between gap-2">
+              <div className="min-w-0">
+                <Link href={`/admin/publishers/${publisher.id}/edit`} className="font-medium text-primary hover:underline">
+                  {publisher.name}
+                </Link>
+                <div className="mt-0.5 flex flex-wrap gap-x-3 text-xs text-muted-foreground">
+                  {publisher.parent?.name && <span>{publisher.parent.name}</span>}
+                  <span>{publisher._count.bds} BD{publisher._count.bds > 1 ? 's' : ''}</span>
+                </div>
+              </div>
+              <div className="flex shrink-0 gap-1">
+                <Link href={`/admin/publishers/${publisher.id}/edit`} className="rounded-md border border-border p-1.5 hover:bg-muted">
+                  <PencilIcon className="w-3.5" />
+                </Link>
+                <ConfirmDeleteButton action={async () => { 'use server'; await deletePublisher(publisher.id); }} />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop table */}
+      <div className="hidden md:block overflow-hidden">
         <table className="w-full rounded-md text-foreground" style={{ tableLayout: 'fixed' }}>
           <colgroup>
             <col style={{ width: '35%' }} />

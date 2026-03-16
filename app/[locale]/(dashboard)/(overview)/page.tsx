@@ -68,9 +68,14 @@ export default async function Page() {
 
       {/* Instagram feed */}
       <div className="mt-6">
-        <h2 className="mb-4 text-lg font-semibold text-foreground">
+        <a
+          href="https://www.instagram.com/labandedesidees/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-4 inline-block rounded-md bg-gradient-to-r from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888] px-4 py-2 text-lg font-semibold text-white transition-opacity hover:opacity-90"
+        >
           {t('instagramFeed')}
-        </h2>
+        </a>
         <InstagramFeed shortcodes={shortcodes} />
       </div>
     </main>
