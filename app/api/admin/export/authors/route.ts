@@ -15,6 +15,7 @@ export async function GET() {
     id: a.id,
     name: a.name,
     bio: a.bio || '',
+    bio_source: a.bio_source || '',
     photo_url: a.photo_url || '',
     wikipedia_url: a.wikipedia_url || '',
   }));

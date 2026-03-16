@@ -8,6 +8,7 @@
 # testing
 /coverage
 screenchots/*
+scripts/output/*
 
 # next.js
 /.next/
@@ -40,6 +41,7 @@ next-env.d.ts
 # IDE / editor
 .vscode/
 .devcontainer/
+.claude/
 
 # data files
 *.csv

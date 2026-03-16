@@ -7,7 +7,6 @@ import {
   ChartBarIcon,
   ChatBubbleLeftIcon,
   HomeIcon,
-  SparklesIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
 import { Link, usePathname } from '@/i18n/routing';
@@ -26,7 +25,6 @@ export default function AdminSidebar() {
     { name: t('authors'), href: '/admin/authors' as const, icon: UserGroupIcon },
     { name: t('publishers'), href: '/admin/publishers' as const, icon: BookOpenIcon },
     { name: tAdmin('importExport'), href: '/admin/import-export' as const, icon: ArrowsRightLeftIcon },
-    { name: tAdmin('enrichment'), href: '/admin/enrichment' as const, icon: SparklesIcon },
     { name: tAdmin('stats'), href: '/admin/stats' as const, icon: ChartBarIcon },
   ];
 

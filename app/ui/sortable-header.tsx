@@ -38,15 +38,26 @@ export default function SortableHeader({
       : ChevronDownIcon
     : ChevronUpDownIcon;
 
+  const sortDirection = isActive ? (currentOrder === 'asc' ? 'ascending' : 'descending') : 'none';
+
   return (
     <th
       scope="col"
       className="px-3 py-5 font-medium cursor-pointer select-none hover:bg-muted/50"
       onClick={handleClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleClick();
+        }
+      }}
+      tabIndex={0}
+      role="columnheader"
+      aria-sort={sortDirection}
     >
       <span className="inline-flex items-center gap-1">
         {label}
-        <Icon className="w-4 h-4" />
+        <Icon className="w-4 h-4" aria-hidden="true" />
       </span>
     </th>
   );

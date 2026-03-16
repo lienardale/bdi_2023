@@ -28,7 +28,7 @@ export default function FilterSelect({
 
   return (
     <select
-      className="rounded-md border border-input bg-background py-[9px] px-3 text-sm outline-2"
+      className="rounded-md border border-input bg-background py-[9px] px-3 text-base md:text-sm outline-2"
       value={searchParams.get(paramName) || ''}
       onChange={(e) => handleChange(e.target.value)}
       aria-label={label}

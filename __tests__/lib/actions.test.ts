@@ -34,6 +34,7 @@ vi.mock('@/app/lib/prisma', () => ({
       create: vi.fn(),
       update: vi.fn(),
       delete: vi.fn(),
+      updateMany: vi.fn(),
     },
     bdAuthor: {
       deleteMany: vi.fn(),
@@ -49,6 +50,12 @@ vi.mock('@/app/lib/prisma', () => ({
     authorEvent: {
       deleteMany: vi.fn(),
     },
+    publisher: {
+      create: vi.fn(),
+      update: vi.fn(),
+      delete: vi.fn(),
+      updateMany: vi.fn(),
+    },
   },
 }));
 
@@ -62,6 +69,9 @@ import {
   createAuthor,
   updateAuthor,
   deleteAuthor,
+  createPublisher,
+  updatePublisher,
+  deletePublisher,
 } from '@/app/lib/actions';
 import { auth } from '@/auth';
 import prisma from '@/app/lib/prisma';
@@ -385,6 +395,74 @@ describe('Server Actions', () => {
     });
   });
 
+  // --- Publisher actions ---
+  describe('Publisher Zod validation', () => {
+    it('rejects empty name', async () => {
+      const fd = makeFormData({ name: '', parentId: '' });
+      const result = await createPublisher({}, fd);
+      expect(result.errors?.name).toBeDefined();
+      expect(result.message).toContain('Champs manquants');
+    });
+
+    it('creates publisher with valid name', async () => {
+      vi.mocked(prisma.publisher.create).mockResolvedValue({} as any);
+      const fd = makeFormData({ name: 'Dargaud', parentId: '' });
+      await expect(createPublisher({}, fd)).rejects.toThrow(REDIRECT_ERROR);
+      expect(prisma.publisher.create).toHaveBeenCalledWith({
+        data: { name: 'Dargaud', parentId: null },
+      });
+    });
+
+    it('creates publisher with parent', async () => {
+      vi.mocked(prisma.publisher.create).mockResolvedValue({} as any);
+      const fd = makeFormData({ name: 'Delcourt Tonkam', parentId: 'parent-uuid' });
+      await expect(createPublisher({}, fd)).rejects.toThrow(REDIRECT_ERROR);
+      expect(prisma.publisher.create).toHaveBeenCalledWith({
+        data: { name: 'Delcourt Tonkam', parentId: 'parent-uuid' },
+      });
+    });
+  });
+
+  describe('Publisher update', () => {
+    it('updates publisher and returns success', async () => {
+      vi.mocked(prisma.publisher.update).mockResolvedValue({} as any);
+      const fd = makeFormData({ name: 'Updated Publisher', parentId: '' });
+      const result = await updatePublisher('pub-id', {}, fd);
+      expect(result.success).toBe(true);
+      expect(prisma.publisher.update).toHaveBeenCalledWith({
+        where: { id: 'pub-id' },
+        data: { name: 'Updated Publisher', parentId: null },
+      });
+    });
+
+    it('returns error on Prisma failure', async () => {
+      vi.mocked(prisma.publisher.update).mockRejectedValue(new Error('DB error'));
+      const fd = makeFormData({ name: 'Test', parentId: '' });
+      const result = await updatePublisher('pub-id', {}, fd);
+      expect(result.message).toContain('Erreur');
+    });
+  });
+
+  describe('Publisher delete', () => {
+    it('unlinks BDs and imprints before deleting', async () => {
+      vi.mocked(prisma.bd.updateMany).mockResolvedValue({} as any);
+      vi.mocked(prisma.publisher.updateMany).mockResolvedValue({} as any);
+      vi.mocked(prisma.publisher.delete).mockResolvedValue({} as any);
+
+      await deletePublisher('pub-id');
+      expect(prisma.bd.updateMany).toHaveBeenCalledWith({
+        where: { publisherId: 'pub-id' },
+        data: { publisherId: null },
+      });
+      expect(prisma.publisher.updateMany).toHaveBeenCalledWith({
+        where: { parentId: 'pub-id' },
+        data: { parentId: null },
+      });
+      expect(prisma.publisher.delete).toHaveBeenCalledWith({ where: { id: 'pub-id' } });
+      expect(revalidatePath).toHaveBeenCalledWith('/admin/publishers');
+    });
+  });
+
   // --- Error handling ---
   describe('Error handling', () => {
     it('createEvent returns error message on Prisma failure', async () => {
@@ -405,6 +483,13 @@ describe('Server Actions', () => {
       vi.mocked(prisma.author.create).mockRejectedValue(new Error('DB error'));
       const fd = makeFormData({ name: 'Test' }, AUTHOR_DEFAULTS);
       const result = await createAuthor({}, fd);
+      expect(result.message).toContain('Erreur');
+    });
+
+    it('createPublisher returns error message on Prisma failure', async () => {
+      vi.mocked(prisma.publisher.create).mockRejectedValue(new Error('DB error'));
+      const fd = makeFormData({ name: 'Test', parentId: '' });
+      const result = await createPublisher({}, fd);
       expect(result.message).toContain('Erreur');
     });
   });

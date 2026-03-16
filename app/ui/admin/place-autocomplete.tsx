@@ -115,12 +115,24 @@ export default function PlaceAutocomplete({
         placeholder={t('placePlaceholder')}
         className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm"
         autoComplete="off"
+        role="combobox"
+        aria-expanded={isOpen}
+        aria-autocomplete="list"
+        aria-controls="place-listbox"
+        aria-activedescendant={activeIndex >= 0 ? `place-option-${activeIndex}` : undefined}
       />
       {isOpen && (
-        <ul className="absolute left-0 right-0 mt-1 bg-card border border-border rounded-md shadow-md z-10 max-h-60 overflow-y-auto">
+        <ul
+          id="place-listbox"
+          role="listbox"
+          className="absolute left-0 right-0 mt-1 bg-card border border-border rounded-md shadow-md z-10 max-h-60 overflow-y-auto"
+        >
           {results.map((r, i) => (
             <li
               key={r.place_id}
+              id={`place-option-${i}`}
+              role="option"
+              aria-selected={i === activeIndex}
               className={`px-3 py-2 text-sm cursor-pointer hover:bg-muted ${i === activeIndex ? 'bg-muted' : ''}`}
               onMouseDown={() => select(r)}
             >

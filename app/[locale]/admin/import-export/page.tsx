@@ -63,6 +63,12 @@ export default function ImportExportPage() {
             >
               {t('exportAuthors')}
             </a>
+            <a
+              href="/api/admin/export/publishers"
+              className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
+            >
+              {t('exportPublishers')}
+            </a>
           </div>
         </div>
 
@@ -79,6 +85,7 @@ export default function ImportExportPage() {
                 onChange={(e) => setImportEntity(e.target.value)}
                 className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm"
               >
+                <option value="publishers">{tCommon('publishers')}</option>
                 <option value="events">{tCommon('events')}</option>
                 <option value="bds">{tCommon('bds')}</option>
                 <option value="authors">{tCommon('authors')}</option>
