@@ -1,9 +1,17 @@
-import '@/app/ui/global.css'
+import '@/app/ui/global.css';
+import { inter } from '@/app/ui/fonts';
+import { getLocale } from 'next-intl/server';
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  const locale = await getLocale();
+
+  return (
+    <html lang={locale}>
+      <body className={`${inter.className} antialiased`}>{children}</body>
+    </html>
+  );
 }
