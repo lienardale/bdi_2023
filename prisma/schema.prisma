@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url = env("LOCAL_POSTGRES_URL")
+  url = env("POSTGRES_URL")
 }
 
 model Author {
@@ -57,14 +57,6 @@ model Event {
   place    String?       @db.VarChar(255)
   fb_event  String?
   cover_url String?  @db.Text
-}
-
-model users {
-  id       String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name     String @db.VarChar(255)
-  email    String @unique
-  password String
-  role     String @default("user")
 }
 
 model BdAuthor {
