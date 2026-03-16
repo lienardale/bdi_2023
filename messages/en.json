@@ -125,7 +125,19 @@
     "importFile": "CSV file",
     "importButton": "Import",
     "importError": "Import error.",
-    "viewOnSite": "View on site"
+    "viewOnSite": "View on site",
+    "instagram": "Instagram"
+  },
+  "adminInstagram": {
+    "title": "Instagram Posts",
+    "shortcode": "Shortcode",
+    "active": "Active",
+    "inactive": "Inactive",
+    "addPost": "Add a post",
+    "shortcodePlaceholder": "e.g. DVvnJlaDKNN",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "noPostsYet": "No Instagram posts configured."
   },
   "adminStats": {
     "title": "Statistics",

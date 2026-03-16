@@ -666,3 +666,22 @@ export async function fetchAggregateStats(): Promise<AggregateStats> {
     medianPrice,
   };
 }
+
+// ---------- Instagram Posts ----------
+
+export async function fetchActiveInstagramPosts() {
+  await connection();
+  return prisma.instagramPost.findMany({
+    where: { active: true },
+    orderBy: { position: 'asc' },
+    select: { id: true, shortcode: true },
+  });
+}
+
+export async function fetchAllInstagramPosts() {
+  await connection();
+  return prisma.instagramPost.findMany({
+    orderBy: { position: 'asc' },
+    select: { id: true, shortcode: true, position: true, active: true },
+  });
+}

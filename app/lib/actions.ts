@@ -410,3 +410,95 @@ export async function deletePublisher(id: string): Promise<void> {
   }
   revalidatePath('/admin/publishers');
 }
+
+// Instagram Post actions
+
+const InstagramPostSchema = z.object({
+  shortcode: z.string().min(1, 'Le shortcode est requis').max(50),
+});
+
+export type InstagramPostState = {
+  errors?: { shortcode?: string[] };
+  message?: string | null;
+  success?: boolean;
+};
+
+export async function addInstagramPost(
+  prevState: InstagramPostState,
+  formData: FormData,
+): Promise<InstagramPostState> {
+  await requireAdmin();
+
+  const validatedFields = InstagramPostSchema.safeParse({
+    shortcode: formData.get('shortcode'),
+  });
+
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Champs manquants.',
+    };
+  }
+
+  const { shortcode } = validatedFields.data;
+
+  try {
+    const maxPos = await prisma.instagramPost.aggregate({
+      _max: { position: true },
+    });
+    const nextPosition = (maxPos._max.position ?? 0) + 1;
+
+    await prisma.instagramPost.create({
+      data: { shortcode, position: nextPosition },
+    });
+  } catch {
+    return { message: "Erreur: impossible d'ajouter le post Instagram." };
+  }
+
+  revalidatePath('/admin/instagram');
+  revalidatePath('/');
+  return { success: true, message: 'Post Instagram ajouté.' };
+}
+
+export async function deleteInstagramPost(id: string): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.instagramPost.delete({ where: { id } });
+  } catch (error) {
+    console.error('Delete Instagram post error:', error);
+  }
+  revalidatePath('/admin/instagram');
+  revalidatePath('/');
+}
+
+export async function toggleInstagramPost(id: string, active: boolean): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.instagramPost.update({
+      where: { id },
+      data: { active },
+    });
+  } catch (error) {
+    console.error('Toggle Instagram post error:', error);
+  }
+  revalidatePath('/admin/instagram');
+  revalidatePath('/');
+}
+
+export async function reorderInstagramPosts(orderedIds: string[]): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.$transaction(
+      orderedIds.map((id, index) =>
+        prisma.instagramPost.update({
+          where: { id },
+          data: { position: index + 1 },
+        }),
+      ),
+    );
+  } catch (error) {
+    console.error('Reorder Instagram posts error:', error);
+  }
+  revalidatePath('/admin/instagram');
+  revalidatePath('/');
+}

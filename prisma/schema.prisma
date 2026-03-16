@@ -86,3 +86,10 @@ model BdEvent {
 
   @@id([bdId, eventId])
 }
+
+model InstagramPost {
+  id        String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  shortcode String  @unique @db.VarChar(50)
+  position  Int
+  active    Boolean @default(true)
+}

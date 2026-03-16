@@ -113,7 +113,7 @@
     "title": "Administration",
     "backToSite": "Retour au site",
     "dashboard": "Admin",
-    "nextEvent": "Prochain BDI",
+    "nextEvent": "Prochaine BDI",
     "importExport": "Import / Export CSV",
     "export": "Export",
     "import": "Import",
@@ -125,7 +125,19 @@
     "importFile": "Fichier CSV",
     "importButton": "Importer",
     "importError": "Erreur lors de l'import.",
-    "viewOnSite": "Voir sur le site"
+    "viewOnSite": "Voir sur le site",
+    "instagram": "Instagram"
+  },
+  "adminInstagram": {
+    "title": "Posts Instagram",
+    "shortcode": "Shortcode",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "addPost": "Ajouter un post",
+    "shortcodePlaceholder": "Ex: DVvnJlaDKNN",
+    "moveUp": "Monter",
+    "moveDown": "Descendre",
+    "noPostsYet": "Aucun post Instagram configuré."
   },
   "adminStats": {
     "title": "Statistiques",

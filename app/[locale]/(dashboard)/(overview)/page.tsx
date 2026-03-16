@@ -4,6 +4,7 @@ import { bangers } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import { CardSkeleton } from '@/app/ui/skeletons';
 import { getTranslations } from 'next-intl/server';
+import { fetchActiveInstagramPosts } from '@/app/lib/data';
 
 export async function generateMetadata() {
   const t = await getTranslations('home');
@@ -11,7 +12,11 @@ export async function generateMetadata() {
 }
 
 export default async function Page() {
-  const t = await getTranslations('home');
+  const [t, instagramPosts] = await Promise.all([
+    getTranslations('home'),
+    fetchActiveInstagramPosts(),
+  ]);
+  const shortcodes = instagramPosts.map((p) => p.shortcode);
 
   return (
     <main>
@@ -66,7 +71,7 @@ export default async function Page() {
         <h2 className="mb-4 text-lg font-semibold text-foreground">
           {t('instagramFeed')}
         </h2>
-        <InstagramFeed />
+        <InstagramFeed shortcodes={shortcodes} />
       </div>
     </main>
   );

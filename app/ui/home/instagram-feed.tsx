@@ -1,18 +1,11 @@
 'use client';
 
-// Add Instagram post shortcodes here (the part after /p/ in the post URL)
-// e.g. https://www.instagram.com/p/ABC123/ → 'ABC123'
-const INSTAGRAM_SHORTCODES = [
-  'DVvnJlaDKNN',
-  'DVqbhv9DGUr',
-  'DVbiRVLjD3E',
-  'DUoAk1HDNnu',
-  'DTf5__QjLU1',
-  'DSKYK80DG0z',
-];
-
-export default function InstagramFeed() {
-  if (INSTAGRAM_SHORTCODES.length === 0) {
+export default function InstagramFeed({
+  shortcodes,
+}: {
+  shortcodes: string[];
+}) {
+  if (shortcodes.length === 0) {
     return (
       <a
         href="https://www.instagram.com/labandedesidees/"
@@ -33,7 +26,7 @@ export default function InstagramFeed() {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {INSTAGRAM_SHORTCODES.map((code) => (
+      {shortcodes.map((code) => (
         <iframe
           key={code}
           src={`https://www.instagram.com/p/${code}/embed/`}
