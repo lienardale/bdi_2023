@@ -2,8 +2,6 @@ import {
   CalendarDaysIcon,
   ClockIcon,
   MapPinIcon,
-  ChatBubbleLeftIcon,
-  UserGroupIcon,
 } from '@heroicons/react/24/outline';
 import { lusitana } from '@/app/ui/fonts';
 import { fetchCardData } from '@/app/lib/data';
@@ -12,8 +10,6 @@ import { Link } from '@/i18n/routing';
 
 export default async function Cards() {
   const {
-    numberOfBds,
-    numberOfAuthors,
     nextBdiDate,
     nextBdiName,
     nextEventId,
@@ -84,31 +80,6 @@ export default async function Cards() {
         </div>
       </div>
 
-      {/* Total BDs */}
-      <Link href="/bds" className="group">
-        <div className="rounded-xl bg-card p-2 shadow-sm border border-border group-hover:shadow-md transition-shadow">
-          <div className="flex p-4">
-            <ChatBubbleLeftIcon className="h-5 w-5 text-muted-foreground" />
-            <h3 className="ml-2 text-sm font-medium">{t('totalBds')}</h3>
-          </div>
-          <p className={`${lusitana.className} truncate rounded-xl bg-background px-4 py-8 text-center text-2xl`}>
-            {numberOfBds}
-          </p>
-        </div>
-      </Link>
-
-      {/* Total Authors */}
-      <Link href="/authors" className="group">
-        <div className="rounded-xl bg-card p-2 shadow-sm border border-border group-hover:shadow-md transition-shadow">
-          <div className="flex p-4">
-            <UserGroupIcon className="h-5 w-5 text-muted-foreground" />
-            <h3 className="ml-2 text-sm font-medium">{t('totalAuthors')}</h3>
-          </div>
-          <p className={`${lusitana.className} truncate rounded-xl bg-background px-4 py-8 text-center text-2xl`}>
-            {numberOfAuthors}
-          </p>
-        </div>
-      </Link>
     </>
   );
 }

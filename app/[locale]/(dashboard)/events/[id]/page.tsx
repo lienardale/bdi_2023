@@ -49,7 +49,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       </div>
 
       <div className="md:hidden card-cycle">
-        {event.bds.map((bd) => (
+        {event.bds.map(({ bd }) => (
           <div
             key={bd.id}
             className="mb-2 w-full rounded-md bg-card p-4 shadow-xs"
@@ -93,7 +93,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         </thead>
 
         <tbody className="divide-y divide-border text-foreground">
-          {event.bds.map((bd) => (
+          {event.bds.map(({ bd }) => (
             <tr key={bd.id} className="group">
               <td className="whitespace-nowrap bg-card py-5 pl-4 pr-3 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
                 <Link href={`/bds/${bd.id}`} className="text-primary hover:underline">{bd.title}</Link>

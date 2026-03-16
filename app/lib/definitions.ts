@@ -22,8 +22,7 @@ export type PublisherOption = {
 
 export type BdsTable = {
   id: string;
-  eventId: string;
-  event: { id: string; name: string };
+  events: { event: { id: string; name: string } }[];
   authors: { author: { id: string; name: string } }[];
   title: string;
   publisher: string | null;
@@ -47,12 +46,14 @@ export type EventsTable = {
   hour: string | null;
   place: string | null;
   bds: {
-    id: string;
-    title: string;
-    publisher?: string | null;
-    publisherRef?: { id: string; name: string } | null;
-    publishing_year?: number | null;
-    authors: { author: { id: string; name: string } }[];
+    bd: {
+      id: string;
+      title: string;
+      publisher?: string | null;
+      publisherRef?: { id: string; name: string } | null;
+      publishing_year?: number | null;
+      authors: { author: { id: string; name: string } }[];
+    };
   }[];
   fb_event: string | null;
   cover_url: string | null;

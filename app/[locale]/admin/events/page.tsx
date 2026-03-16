@@ -72,7 +72,7 @@ export default async function AdminEventsPage({
           <tbody className="divide-y divide-border">
             {events.map((event) => {
               const uniqueAuthors = new Map<string, { id: string; name: string }>();
-              event.bds.forEach(bd => {
+              event.bds.forEach(({ bd }) => {
                 bd.authors.forEach(({ author }) => {
                   if (!uniqueAuthors.has(author.id)) uniqueAuthors.set(author.id, author);
                 });
@@ -84,7 +84,7 @@ export default async function AdminEventsPage({
                   </td>
                   <td className="bg-card px-4 py-3 text-sm">
                     <div className="max-w-full overflow-hidden">
-                      {event.bds.map(bd => (
+                      {event.bds.map(({ bd }) => (
                         <Link key={bd.id} href={`/admin/bds/${bd.id}/edit`} className="block text-primary hover:underline truncate">
                           {bd.title}
                         </Link>

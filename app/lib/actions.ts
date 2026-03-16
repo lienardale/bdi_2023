@@ -88,6 +88,8 @@ export async function updateEvent(id: string, prevState: EventState, formData: F
 export async function deleteEvent(id: string): Promise<void> {
   await requireAdmin();
   try {
+    await prisma.bdEvent.deleteMany({ where: { eventId: id } });
+    await prisma.authorEvent.deleteMany({ where: { eventId: id } });
     await prisma.event.delete({ where: { id } });
   } catch (error) {
     console.error('Delete event error:', error);
@@ -100,7 +102,7 @@ export async function deleteEvent(id: string): Promise<void> {
 
 const BdSchema = z.object({
   title: z.string().min(1, 'Le titre est requis'),
-  eventId: z.string().min(1, 'L\'événement est requis'),
+  eventIds: z.string().optional(),
   publisherId: z.string().optional(),
   publishing_year: z.coerce.number().optional(),
   authorIds: z.string().optional(),
@@ -115,7 +117,7 @@ const BdSchema = z.object({
 });
 
 export type BdState = {
-  errors?: { title?: string[]; eventId?: string[]; publisherId?: string[]; publishing_year?: string[] };
+  errors?: { title?: string[]; eventIds?: string[]; publisherId?: string[]; publishing_year?: string[] };
   message?: string | null;
   success?: boolean;
 };
@@ -124,7 +126,7 @@ export async function createBd(prevState: BdState, formData: FormData) {
   await requireAdmin();
   const validatedFields = BdSchema.safeParse({
     title: formData.get('title'),
-    eventId: formData.get('eventId'),
+    eventIds: formData.get('eventIds'),
     publisherId: formData.get('publisherId'),
     publishing_year: formData.get('publishing_year') || undefined,
     authorIds: formData.get('authorIds'),
@@ -142,14 +144,14 @@ export async function createBd(prevState: BdState, formData: FormData) {
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { title, eventId, publisherId, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
+  const { title, eventIds, publisherId, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
   const authorIdList = authorIds ? authorIds.split(',').filter(Boolean) : [];
+  const eventIdList: string[] = eventIds ? JSON.parse(eventIds) : [];
 
   try {
     await prisma.bd.create({
       data: {
         title,
-        eventId,
         publisherId: publisherId || null,
         publishing_year: publishing_year || null,
         ean: ean || null,
@@ -162,6 +164,9 @@ export async function createBd(prevState: BdState, formData: FormData) {
         leslibraires_url: leslibraires_url || null,
         authors: {
           create: authorIdList.map(authorId => ({ authorId })),
+        },
+        events: {
+          create: eventIdList.map(eventId => ({ eventId })),
         },
       },
     });
@@ -178,7 +183,7 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
   await requireAdmin();
   const validatedFields = BdSchema.safeParse({
     title: formData.get('title'),
-    eventId: formData.get('eventId'),
+    eventIds: formData.get('eventIds'),
     publisherId: formData.get('publisherId'),
     publishing_year: formData.get('publishing_year') || undefined,
     authorIds: formData.get('authorIds'),
@@ -196,15 +201,15 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { title, eventId, publisherId, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
+  const { title, eventIds, publisherId, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
   const authorIdList = authorIds ? authorIds.split(',').filter(Boolean) : [];
+  const eventIdList: string[] = eventIds ? JSON.parse(eventIds) : [];
 
   try {
     await prisma.bd.update({
       where: { id },
       data: {
         title,
-        eventId,
         publisherId: publisherId || null,
         publishing_year: publishing_year || null,
         ean: ean || null,
@@ -218,6 +223,10 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
         authors: {
           deleteMany: {},
           create: authorIdList.map(authorId => ({ authorId })),
+        },
+        events: {
+          deleteMany: {},
+          create: eventIdList.map(eventId => ({ eventId })),
         },
       },
     });
@@ -234,6 +243,7 @@ export async function deleteBd(id: string): Promise<void> {
   await requireAdmin();
   try {
     await prisma.bdAuthor.deleteMany({ where: { bdId: id } });
+    await prisma.bdEvent.deleteMany({ where: { bdId: id } });
     await prisma.bd.delete({ where: { id } });
   } catch (error) {
     console.error('Delete BD error:', error);

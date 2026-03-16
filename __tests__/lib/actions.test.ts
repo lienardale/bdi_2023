@@ -38,6 +38,9 @@ vi.mock('@/app/lib/prisma', () => ({
     bdAuthor: {
       deleteMany: vi.fn(),
     },
+    bdEvent: {
+      deleteMany: vi.fn(),
+    },
     author: {
       create: vi.fn(),
       update: vi.fn(),
@@ -71,7 +74,7 @@ const mockAuth = vi.mocked(auth);
 // In real HTML forms, all inputs submit as '' (not null).
 // FormData.get() returns null for missing keys, so we must set all fields.
 const BD_DEFAULTS: Record<string, string> = {
-  title: '', eventId: '', publisherId: '', publishing_year: '',
+  title: '', eventIds: '', publisherId: '', publishing_year: '',
   authorIds: '', ean: '', summary: '', publication_date: '',
   page_count: '', price: '', cover_url: '', publisher_url: '', leslibraires_url: '',
 };
@@ -140,7 +143,7 @@ describe('Server Actions', () => {
 
     it('redirects BDs with locale prefix', async () => {
       vi.mocked(prisma.bd.create).mockResolvedValue({} as any);
-      const fd = makeFormData({ title: 'BD', eventId: 'ev-id' }, BD_DEFAULTS);
+      const fd = makeFormData({ title: 'BD', eventIds: '["ev-id"]' }, BD_DEFAULTS);
       await expect(createBd({}, fd)).rejects.toThrow(REDIRECT_ERROR);
       expect(redirect).toHaveBeenCalledWith('/fr/admin/bds');
     });
@@ -189,19 +192,19 @@ describe('Server Actions', () => {
   // --- BD validation ---
   describe('BD Zod validation', () => {
     it('rejects empty title', async () => {
-      const fd = makeFormData({ title: '', eventId: 'some-id' }, BD_DEFAULTS);
+      const fd = makeFormData({ title: '', eventIds: '["some-id"]' }, BD_DEFAULTS);
       const result = await createBd({}, fd);
       expect(result.errors?.title).toBeDefined();
     });
 
-    it('rejects empty eventId', async () => {
-      const fd = makeFormData({ title: 'Test BD', eventId: '' }, BD_DEFAULTS);
-      const result = await createBd({}, fd);
-      expect(result.errors?.eventId).toBeDefined();
+    it('accepts empty eventIds (optional)', async () => {
+      vi.mocked(prisma.bd.create).mockResolvedValue({} as any);
+      const fd = makeFormData({ title: 'Test BD', eventIds: '' }, BD_DEFAULTS);
+      await expect(createBd({}, fd)).rejects.toThrow(REDIRECT_ERROR);
     });
 
     it('rejects EAN longer than 13 chars', async () => {
-      const fd = makeFormData({ title: 'Test', eventId: 'id', ean: '12345678901234' }, BD_DEFAULTS);
+      const fd = makeFormData({ title: 'Test', eventIds: '["id"]', ean: '12345678901234' }, BD_DEFAULTS);
       const result = await createBd({}, fd);
       expect(result.errors).toBeDefined();
     });
@@ -210,7 +213,7 @@ describe('Server Actions', () => {
       vi.mocked(prisma.bd.create).mockResolvedValue({} as any);
       const fd = makeFormData({
         title: 'Astérix',
-        eventId: 'event-uuid',
+        eventIds: '["event-uuid"]',
         publisherId: 'pub-uuid',
         publishing_year: '2020',
         authorIds: 'author1,author2',
@@ -224,7 +227,6 @@ describe('Server Actions', () => {
       expect(prisma.bd.create).toHaveBeenCalledWith({
         data: expect.objectContaining({
           title: 'Astérix',
-          eventId: 'event-uuid',
           publisherId: 'pub-uuid',
           publishing_year: 2020,
           ean: '9782070612758',
@@ -235,22 +237,27 @@ describe('Server Actions', () => {
           authors: {
             create: [{ authorId: 'author1' }, { authorId: 'author2' }],
           },
+          events: {
+            create: [{ eventId: 'event-uuid' }],
+          },
         }),
       });
     });
 
     it('handles optional fields gracefully', async () => {
       vi.mocked(prisma.bd.create).mockResolvedValue({} as any);
-      const fd = makeFormData({ title: 'Minimal BD', eventId: 'event-uuid' }, BD_DEFAULTS);
+      const fd = makeFormData({ title: 'Minimal BD', eventIds: '["event-uuid"]' }, BD_DEFAULTS);
       await expect(createBd({}, fd)).rejects.toThrow(REDIRECT_ERROR);
       expect(prisma.bd.create).toHaveBeenCalledWith({
         data: expect.objectContaining({
           title: 'Minimal BD',
-          eventId: 'event-uuid',
           publisherId: null,
           publishing_year: null,
           page_count: null,
           price: null,
+          events: {
+            create: [{ eventId: 'event-uuid' }],
+          },
         }),
       });
     });
@@ -312,9 +319,9 @@ describe('Server Actions', () => {
       expect(revalidatePath).toHaveBeenCalledWith('/admin/events');
     });
 
-    it('updateBd syncs author relationships', async () => {
+    it('updateBd syncs author and event relationships', async () => {
       vi.mocked(prisma.bd.update).mockResolvedValue({} as any);
-      const fd = makeFormData({ title: 'Updated BD', eventId: 'ev-id', authorIds: 'a1,a2' }, BD_DEFAULTS);
+      const fd = makeFormData({ title: 'Updated BD', eventIds: '["ev-id"]', authorIds: 'a1,a2' }, BD_DEFAULTS);
       const result = await updateBd('bd-id', {}, fd);
       expect(result.success).toBe(true);
       expect(prisma.bd.update).toHaveBeenCalledWith({
@@ -323,6 +330,10 @@ describe('Server Actions', () => {
           authors: {
             deleteMany: {},
             create: [{ authorId: 'a1' }, { authorId: 'a2' }],
+          },
+          events: {
+            deleteMany: {},
+            create: [{ eventId: 'ev-id' }],
           },
         }),
       });
@@ -342,18 +353,24 @@ describe('Server Actions', () => {
 
   // --- Delete actions ---
   describe('Delete actions', () => {
-    it('deleteEvent calls prisma.event.delete', async () => {
+    it('deleteEvent removes relations first then deletes', async () => {
+      vi.mocked(prisma.bdEvent.deleteMany).mockResolvedValue({} as any);
+      vi.mocked(prisma.authorEvent.deleteMany).mockResolvedValue({} as any);
       vi.mocked(prisma.event.delete).mockResolvedValue({} as any);
       await deleteEvent('event-id');
+      expect(prisma.bdEvent.deleteMany).toHaveBeenCalledWith({ where: { eventId: 'event-id' } });
+      expect(prisma.authorEvent.deleteMany).toHaveBeenCalledWith({ where: { eventId: 'event-id' } });
       expect(prisma.event.delete).toHaveBeenCalledWith({ where: { id: 'event-id' } });
       expect(revalidatePath).toHaveBeenCalledWith('/admin/events');
     });
 
-    it('deleteBd removes author relations first', async () => {
+    it('deleteBd removes author and event relations first', async () => {
       vi.mocked(prisma.bdAuthor.deleteMany).mockResolvedValue({} as any);
+      vi.mocked(prisma.bdEvent.deleteMany).mockResolvedValue({} as any);
       vi.mocked(prisma.bd.delete).mockResolvedValue({} as any);
       await deleteBd('bd-id');
       expect(prisma.bdAuthor.deleteMany).toHaveBeenCalledWith({ where: { bdId: 'bd-id' } });
+      expect(prisma.bdEvent.deleteMany).toHaveBeenCalledWith({ where: { bdId: 'bd-id' } });
       expect(prisma.bd.delete).toHaveBeenCalledWith({ where: { id: 'bd-id' } });
     });
 
@@ -379,7 +396,7 @@ describe('Server Actions', () => {
 
     it('createBd returns error message on Prisma failure', async () => {
       vi.mocked(prisma.bd.create).mockRejectedValue(new Error('DB error'));
-      const fd = makeFormData({ title: 'Test', eventId: 'id' }, BD_DEFAULTS);
+      const fd = makeFormData({ title: 'Test', eventIds: '["id"]' }, BD_DEFAULTS);
       const result = await createBd({}, fd);
       expect(result.message).toContain('Erreur');
     });

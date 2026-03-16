@@ -29,8 +29,7 @@ model Publisher {
 
 model Bd {
   id               String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  eventId          String      @db.Uuid
-  event            Event       @relation(fields: [eventId], references: [id])
+  events           BdEvent[]
   authors          BdAuthor[]
   title            String      @unique @db.VarChar(255)
   publisher        String?
@@ -51,7 +50,7 @@ model Bd {
 model Event {
   id       String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name     String        @unique @db.VarChar(255)
-  bds      Bd[]
+  bds      BdEvent[]
   authors  AuthorEvent[]
   date     DateTime      @unique @db.Date
   hour     String?       @db.VarChar(5)
@@ -84,4 +83,13 @@ model AuthorEvent {
   eventId  String @db.Uuid
 
   @@id([authorId, eventId])
+}
+
+model BdEvent {
+  bd      Bd     @relation(fields: [bdId], references: [id])
+  bdId    String @db.Uuid
+  event   Event  @relation(fields: [eventId], references: [id])
+  eventId String @db.Uuid
+
+  @@id([bdId, eventId])
 }

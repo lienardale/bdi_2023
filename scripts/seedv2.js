@@ -68,11 +68,12 @@ async function main() {
   // 4. Seed BDs (with enrichment fields)
   console.log(`Seeding ${bds.length} BDs...`);
   for (const bd of bds) {
+    // Support both legacy single event_ids (string) and new array format
+    const eventIds = Array.isArray(bd.event_ids) ? bd.event_ids : bd.event_ids ? [bd.event_ids] : [];
     await prisma.bd.create({
       data: {
         id: bd.id,
         title: bd.title,
-        eventId: bd.event_ids,
         publisher: bd.publisher ?? null,
         publisherId: bd.publisherId ?? null,
         publishing_year: bd.publishing_year ?? null,
@@ -85,6 +86,9 @@ async function main() {
         publisher_url: bd.publisher_url ?? null,
         leslibraires_url: bd.leslibraires_url ?? null,
         enrichment_source: bd.enrichment_source ?? null,
+        events: {
+          create: eventIds.map(eventId => ({ eventId })),
+        },
       },
     });
   }

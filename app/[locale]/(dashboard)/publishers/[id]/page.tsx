@@ -7,6 +7,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   const { id } = await params;
   const publisher = await fetchPublisherById(id);
   const t = await getTranslations('publishers');
+  const tCommon = await getTranslations('common');
 
   if (!publisher) {
     notFound();
@@ -47,21 +48,53 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         {publisher.bds.length === 0 ? (
           <p className="text-sm text-muted-foreground">{t('noBds')}</p>
         ) : (
-          <div className="space-y-2">
-            {publisher.bds.map((bd) => (
-              <div key={bd.id} className="flex items-center gap-3">
-                <Link href={`/bds/${bd.id}`} className="text-primary hover:underline">
-                  {bd.title}
-                </Link>
-                <span className="text-sm text-muted-foreground">
-                  {bd.authors.map(({ author }) => (
-                    <Link key={author.id} href={`/authors/${author.id}`} className="text-primary hover:underline mr-1">
-                      {author.name}
-                    </Link>
-                  ))}
-                </span>
-              </div>
-            ))}
+          <div className="overflow-hidden rounded-md bg-muted p-2 md:pt-0">
+            <div className="md:hidden card-cycle">
+              {publisher.bds.map((bd) => (
+                <div key={bd.id} className="mb-2 w-full rounded-md bg-card p-4">
+                  <Link href={`/bds/${bd.id}`} className="text-primary hover:underline font-medium">
+                    {bd.title}
+                  </Link>
+                  <div className="mt-1 text-sm">
+                    {bd.authors.map(({ author }) => (
+                      <Link key={author.id} href={`/authors/${author.id}`} className="block text-primary hover:underline">
+                        {author.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <table className="hidden w-full rounded-md text-foreground md:table" style={{ tableLayout: 'fixed' }}>
+              <colgroup>
+                <col style={{ width: '50%' }} />
+                <col style={{ width: '50%' }} />
+              </colgroup>
+              <thead className="rounded-lg text-left text-sm font-normal">
+                <tr>
+                  <th scope="col" className="px-4 py-5 font-medium sm:pl-6">{t('bdsList')}</th>
+                  <th scope="col" className="px-3 py-5 font-medium">{tCommon('authors')}</th>
+                </tr>
+              </thead>
+              <tbody className="text-foreground card-cycle">
+                {publisher.bds.map((bd) => (
+                  <tr key={bd.id} className="group">
+                    <td className="bg-card px-4 py-5 sm:pl-6 text-sm truncate">
+                      <Link href={`/bds/${bd.id}`} className="text-primary hover:underline">
+                        {bd.title}
+                      </Link>
+                    </td>
+                    <td className="bg-card px-3 py-5 text-sm">
+                      {bd.authors.map(({ author }) => (
+                        <Link key={author.id} href={`/authors/${author.id}`} className="block text-primary hover:underline truncate">
+                          {author.name}
+                        </Link>
+                      ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </div>

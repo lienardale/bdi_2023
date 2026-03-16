@@ -33,7 +33,7 @@ export default async function AllEventsTable({
                         {event.date.toLocaleDateString(locale === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
                       </p>
                       <div className="text-sm text-muted-foreground">
-                        {event.bds.map((bd) => (
+                        {event.bds.map(({ bd }) => (
                           <div key={bd.id} className="flex items-center gap-3 w-full justify-between">
                             <Link href={`/bds/${bd.id}`} className="text-primary hover:underline">{bd.title}</Link>
                             <div className='flex flex-col items-end'>
@@ -104,7 +104,7 @@ export default async function AllEventsTable({
                       </td>
                       <td className="bg-card px-4 py-5 text-sm">
                         <div className="max-w-full overflow-x-auto">
-                          {event.bds.map((bd) => (
+                          {event.bds.map(({ bd }) => (
                             <Link key={bd.id} href={`/bds/${bd.id}`} className="block text-primary hover:underline whitespace-nowrap">
                               {bd.title}
                             </Link>
@@ -113,7 +113,7 @@ export default async function AllEventsTable({
                       </td>
                       <td className="bg-card px-4 py-5 text-sm">
                         <div className="max-w-full overflow-x-auto">
-                          {event.bds.map((bd) => (
+                          {event.bds.map(({ bd }) => (
                             <div key={bd.id} className="flex items-center gap-3 whitespace-nowrap">
                               {bd.authors.map(({ author }) => (
                                 <Link key={author.id} href={`/authors/${author.id}`} className="text-primary hover:underline">

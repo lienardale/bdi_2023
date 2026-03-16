@@ -55,7 +55,8 @@ export async function POST(request: NextRequest) {
         title: string;
         publisher?: string;
         publishing_year?: string;
-        event: string;
+        event?: string;
+        events?: string;
         authors?: string;
         ean?: string;
         summary?: string;
@@ -66,8 +67,21 @@ export async function POST(request: NextRequest) {
       }>(csvText);
 
       for (const row of rows) {
-        const event = await prisma.event.findUnique({ where: { name: row.event } });
-        if (!event) { skipped++; continue; }
+        // Support both 'events' (semicolon-separated) and legacy 'event' (single)
+        const eventNames = row.events
+          ? row.events.split(';').map(n => n.trim()).filter(Boolean)
+          : row.event
+            ? [row.event.trim()]
+            : [];
+
+        const eventConnections: { eventId: string }[] = [];
+        let skipRow = false;
+        for (const eventName of eventNames) {
+          const event = await prisma.event.findUnique({ where: { name: eventName } });
+          if (!event) { skipRow = true; break; }
+          eventConnections.push({ eventId: event.id });
+        }
+        if (skipRow || eventConnections.length === 0) { skipped++; continue; }
 
         const authorNames = row.authors ? row.authors.split(';').map(n => n.trim()).filter(Boolean) : [];
 
@@ -96,7 +110,6 @@ export async function POST(request: NextRequest) {
             publisher: row.publisher || null,
             publisherId,
             publishing_year: row.publishing_year ? parseInt(row.publishing_year) : null,
-            eventId: event.id,
             ean: row.ean || null,
             summary: row.summary || null,
             cover_url: row.cover_url || null,
@@ -113,12 +126,19 @@ export async function POST(request: NextRequest) {
               deleteMany: {},
               create: authorConnections,
             },
+            events: {
+              deleteMany: {},
+              create: eventConnections,
+            },
           },
           create: {
             title: row.title,
             ...bdData,
             authors: {
               create: authorConnections,
+            },
+            events: {
+              create: eventConnections,
             },
           },
         });

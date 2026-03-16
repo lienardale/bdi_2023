@@ -23,7 +23,7 @@ export default function BdForm({
   bd?: {
     id: string;
     title: string;
-    eventId: string;
+    events: { event: { id: string; name: string } }[];
     publisherId: string | null;
     publisherRef: { id: string; name: string } | null;
     publisher: string | null;
@@ -50,6 +50,9 @@ export default function BdForm({
   const tAuthors = useTranslations('authors');
   const tAdmin = useTranslations('admin');
 
+  const [selectedEventIds, setSelectedEventIds] = useState<string[]>(
+    bd?.events.map(e => e.event.id) || []
+  );
   const [selectedAuthorIds, setSelectedAuthorIds] = useState<string[]>(
     bd?.authors.map(a => a.author.id) || []
   );
@@ -88,16 +91,18 @@ export default function BdForm({
         </div>
 
         <div className="mb-4">
-          <label htmlFor="eventId" className="mb-2 block text-sm font-medium">{tCommon('events')}</label>
-          <select id="eventId" name="eventId" defaultValue={bd?.eventId}
-            className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm">
-            <option value="">{t('selectEvent')}</option>
+          <label className="mb-2 block text-sm font-medium">{tCommon('events')}</label>
+          <input type="hidden" name="eventIds" value={JSON.stringify(selectedEventIds)} />
+          <select multiple value={selectedEventIds}
+            onChange={(e) => setSelectedEventIds(Array.from(e.target.selectedOptions, o => o.value))}
+            className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm min-h-[120px]">
             {events.map((event) => (
               <option key={event.id} value={event.id}>{event.name}</option>
             ))}
           </select>
-          {state.errors?.eventId && (
-            <div className="mt-2 text-sm text-destructive">{state.errors.eventId.map((e) => <p key={e}>{e}</p>)}</div>
+          <p className="mt-1 text-xs text-muted-foreground">{t('multiSelectHint')}</p>
+          {state.errors?.eventIds && (
+            <div className="mt-2 text-sm text-destructive">{state.errors.eventIds.map((e) => <p key={e}>{e}</p>)}</div>
           )}
         </div>
 
