@@ -17,7 +17,7 @@ export default async function EditPublisherPage({ params }: { params: Promise<{ 
     <main>
       <Breadcrumbs
         breadcrumbs={[
-          { label: 'Éditeurs', href: '/admin/publishers' },
+          { label: 'Maisons d\'Édition', href: '/admin/publishers' },
           { label: 'Modifier', href: `/admin/publishers/${id}/edit`, active: true },
         ]}
       />

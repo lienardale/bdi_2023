@@ -286,7 +286,7 @@ export async function createAuthor(prevState: AuthorState, formData: FormData) {
       data: { name, bio: bio || null, photo_url: photo_url || null, wikipedia_url: wikipedia_url || null },
     });
   } catch (error) {
-    return { message: 'Erreur: impossible de créer l\'auteur.' };
+    return { message: 'Erreur: impossible de créer l\'auteur·ice.' };
   }
 
   revalidatePath('/admin/authors');
@@ -314,12 +314,12 @@ export async function updateAuthor(id: string, prevState: AuthorState, formData:
       data: { name, bio: bio || null, photo_url: photo_url || null, wikipedia_url: wikipedia_url || null },
     });
   } catch (error) {
-    return { message: 'Erreur: impossible de mettre à jour l\'auteur.' };
+    return { message: 'Erreur: impossible de mettre à jour l\'auteur·ice.' };
   }
 
   revalidatePath('/admin/authors');
   revalidatePath('/authors');
-  return { success: true, message: 'Auteur mis à jour.' };
+  return { success: true, message: 'Auteur·ice mis·e à jour.' };
 }
 
 export async function deleteAuthor(id: string): Promise<void> {
@@ -365,7 +365,7 @@ export async function createPublisher(prevState: PublisherState, formData: FormD
       data: { name, parentId: parentId || null },
     });
   } catch (error) {
-    return { message: 'Erreur: impossible de créer l\'éditeur.' };
+    return { message: 'Erreur: impossible de créer la maison d\'édition.' };
   }
 
   revalidatePath('/admin/publishers');
@@ -390,11 +390,11 @@ export async function updatePublisher(id: string, prevState: PublisherState, for
       data: { name, parentId: parentId || null },
     });
   } catch (error) {
-    return { message: 'Erreur: impossible de mettre à jour l\'éditeur.' };
+    return { message: 'Erreur: impossible de mettre à jour la maison d\'édition.' };
   }
 
   revalidatePath('/admin/publishers');
-  return { success: true, message: 'Éditeur mis à jour.' };
+  return { success: true, message: 'Maison d\'édition mise à jour.' };
 }
 
 export async function deletePublisher(id: string): Promise<void> {

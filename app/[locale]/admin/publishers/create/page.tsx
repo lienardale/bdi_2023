@@ -12,7 +12,7 @@ export default async function CreatePublisherPage() {
     <main>
       <Breadcrumbs
         breadcrumbs={[
-          { label: 'Éditeurs', href: '/admin/publishers' },
+          { label: 'Maisons d\'Édition', href: '/admin/publishers' },
           { label: 'Créer', href: '/admin/publishers/create', active: true },
         ]}
       />

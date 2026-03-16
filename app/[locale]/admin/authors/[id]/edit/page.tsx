@@ -12,7 +12,7 @@ export default async function EditAuthorPage({ params }: { params: Promise<{ id:
     <main>
       <Breadcrumbs
         breadcrumbs={[
-          { label: 'Auteurs', href: '/admin/authors' },
+          { label: 'Auteur·ices', href: '/admin/authors' },
           { label: 'Modifier', href: `/admin/authors/${id}/edit`, active: true },
         ]}
       />

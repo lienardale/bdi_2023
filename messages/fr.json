@@ -3,7 +3,7 @@
     "home": "Accueil",
     "events": "Événements",
     "bds": "BDs",
-    "authors": "Auteurs",
+    "authors": "Auteur·ices",
     "admin": "Admin",
     "signOut": "Déconnexion",
     "search": "Rechercher...",
@@ -20,7 +20,7 @@
     "confirmDeleteMessage": "Êtes-vous sûr de vouloir supprimer cet élément ?",
     "noData": "Pas de données disponibles.",
     "contact": "Contact",
-    "publishers": "Éditeurs"
+    "publishers": "Maisons d'Édition"
   },
   "home": {
     "title": "Accueil",
@@ -28,7 +28,7 @@
     "nextEventDate": "Date prochain événement",
     "nextEventName": "Prochain événement",
     "totalBds": "Total BDs",
-    "totalAuthors": "Total Auteurs",
+    "totalAuthors": "Total Auteur·ices",
     "addToCalendar": "Ajouter au calendrier",
     "crowdfundingTitle": "Crowdfunding de La Revue des Idées",
     "crowdfundingCta": "Participer au crowdfunding",
@@ -51,7 +51,7 @@
   "bds": {
     "title": "BDs",
     "bdTitle": "Titre",
-    "publisher": "Éditeur",
+    "publisher": "Maison d'Édition",
     "year": "Année",
     "bdi": "BDI",
     "eventLink": "lien event",
@@ -60,7 +60,7 @@
     "ean": "EAN",
     "bdiLink": "Lien BDI",
     "coverUrl": "URL couverture",
-    "publisherUrl": "URL éditeur",
+    "publisherUrl": "URL maison d'édition",
     "leslibrairesUrl": "URL leslibraires.fr",
     "selectEvent": "Sélectionner un événement",
     "multiSelectHint": "Ctrl+clic pour sélection multiple",
@@ -72,7 +72,7 @@
     "buy": "Acheter"
   },
   "authors": {
-    "title": "Auteurs",
+    "title": "Auteur·ices",
     "name": "Nom",
     "biography": "Biographie",
     "wikipedia": "Wikipedia",
@@ -80,14 +80,14 @@
     "wikipediaUrl": "URL Wikipedia"
   },
   "publishers": {
-    "title": "Éditeurs",
+    "title": "Maisons d'Édition",
     "name": "Nom",
-    "parent": "Éditeur parent",
+    "parent": "Maison d'Édition parente",
     "imprints": "Imprints",
     "bdCount": "Nombre de BDs",
     "backToBds": "Retour aux BDs",
-    "noBds": "Aucune BD pour cet éditeur.",
-    "parentPublisher": "Éditeur parent",
+    "noBds": "Aucune BD pour cette maison d'édition.",
+    "parentPublisher": "Maison d'Édition parente",
     "imprintsList": "Labels",
     "bdsList": "Bandes dessinées"
   },
@@ -95,8 +95,8 @@
     "all": "Tous",
     "year": "Année",
     "event": "Événement",
-    "publisher": "Éditeur",
-    "author": "Auteur"
+    "publisher": "Maison d'Édition",
+    "author": "Auteur·ice"
   },
   "contact": {
     "title": "Contact",
@@ -119,8 +119,8 @@
     "import": "Import",
     "exportEvents": "Exporter les événements",
     "exportBds": "Exporter les BDs",
-    "exportAuthors": "Exporter les auteurs",
-    "exportPublishers": "Exporter les éditeurs",
+    "exportAuthors": "Exporter les auteur·ices",
+    "exportPublishers": "Exporter les maisons d'édition",
     "importType": "Type",
     "importFile": "Fichier CSV",
     "importButton": "Importer",
@@ -131,15 +131,15 @@
   "adminStats": {
     "title": "Statistiques",
     "totalBds": "Total BDs",
-    "totalAuthors": "Total Auteurs",
+    "totalAuthors": "Total Auteur·ices",
     "totalEvents": "Total Événements",
-    "totalPublishers": "Total Éditeurs",
+    "totalPublishers": "Total Maisons d'Édition",
     "medianPages": "Pages (médiane)",
     "medianPrice": "Prix (médiane)",
     "avgBdsPerEvent": "BDs / événement",
     "bdsPerYear": "BDs par année",
     "eventsPerYear": "Événements par année",
-    "topAuthors": "Top 10 Auteurs",
-    "topPublishers": "Top 10 Éditeurs"
+    "topAuthors": "Top 10 Auteur·ices",
+    "topPublishers": "Top 10 Maisons d'Édition"
   }
 }

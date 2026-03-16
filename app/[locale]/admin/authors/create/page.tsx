@@ -6,7 +6,7 @@ export default function CreateAuthorPage() {
     <main>
       <Breadcrumbs
         breadcrumbs={[
-          { label: 'Auteurs', href: '/admin/authors' },
+          { label: 'Auteur·ices', href: '/admin/authors' },
           { label: 'Créer', href: '/admin/authors/create', active: true },
         ]}
       />
