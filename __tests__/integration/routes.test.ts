@@ -86,11 +86,6 @@ describe('Admin pages (unauthenticated → redirect)', () => {
     expect(res.headers.get('location')).toContain('/fr/login');
   });
 
-  it('GET /fr/admin/enrichment redirects to login', async () => {
-    const res = await fetchRoute('/fr/admin/enrichment');
-    expect(res.status).toBe(307);
-    expect(res.headers.get('location')).toContain('/fr/login');
-  });
 });
 
 describe('API routes', () => {

@@ -9,6 +9,7 @@ import AdminPagination from '@/app/ui/admin/pagination';
 import Search from '@/app/ui/search';
 import FilterSelect from '@/app/ui/filter-select';
 import SortableHeader from '@/app/ui/sortable-header';
+import { isValidFbEventUrl, normalizeFbEventUrl } from '@/app/lib/url-utils';
 
 export default async function AdminEventsPage({
   searchParams,
@@ -102,8 +103,9 @@ export default async function AdminEventsPage({
                   </td>
                   <td className="bg-card px-4 py-3 text-sm truncate">{event.date.toDateString()}</td>
                   <td className="bg-card px-4 py-3 text-sm">
-                    {event.fb_event && (
-                      <a target="_blank" href={event.fb_event}
+                    {isValidFbEventUrl(event.fb_event) && (
+                      <a target="_blank" rel="noopener noreferrer"
+                        href={normalizeFbEventUrl(event.fb_event!)!}
                         className="rounded-md bg-primary px-3 py-1 text-xs text-primary-foreground transition-colors hover:bg-primary/90"
                       >FB</a>
                     )}

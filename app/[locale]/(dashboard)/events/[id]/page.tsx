@@ -3,6 +3,7 @@ import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import EventCoverImage from "@/app/ui/event-cover-image";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -16,13 +17,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   return (
     <main>
       {event.cover_url && (
-        <div className="mb-4">
-          <img
-            src={event.cover_url}
-            alt={event.name}
-            className="w-full max-h-64 object-cover rounded-lg shadow-md"
-          />
-        </div>
+        <EventCoverImage src={event.cover_url} alt={event.name} />
       )}
       <h1 className="text-xl md:text-2xl font-bold mb-4">{event.name}</h1>
 

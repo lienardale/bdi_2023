@@ -2,6 +2,7 @@ import { EventsTable } from '@/app/lib/definitions';
 import { Link } from '@/i18n/routing';
 import { getTranslations, getLocale } from 'next-intl/server';
 import SortableHeader from '@/app/ui/sortable-header';
+import { isValidFbEventUrl, normalizeFbEventUrl } from '@/app/lib/url-utils';
 
 export default async function AllEventsTable({
   events,
@@ -22,7 +23,7 @@ export default async function AllEventsTable({
                   key={event.id}
                   className="mb-2 w-full rounded-md bg-card p-4"
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="w-full">
                     <div>
                       <div className="mb-2 flex items-center">
                         <Link href={`/events/${event.id}`} className="text-primary hover:underline font-medium">
@@ -36,7 +37,7 @@ export default async function AllEventsTable({
                         {event.bds.map(({ bd }) => (
                           <div key={bd.id} className="flex items-center gap-3 w-full justify-between">
                             <Link href={`/bds/${bd.id}`} className="text-primary hover:underline">{bd.title}</Link>
-                            <div className='flex flex-col items-end'>
+                            <div className='flex flex-col items-end text-right'>
                               {bd.authors.map(({ author }) => (
                                 <Link key={author.id} href={`/authors/${author.id}`} className="text-primary hover:underline">
                                   {author.name}
@@ -46,10 +47,11 @@ export default async function AllEventsTable({
                           </div>
                         ))}
                       </div>
-                      {event.fb_event && (
+                      {isValidFbEventUrl(event.fb_event) && (
                         <p className="text-sm text-muted-foreground mt-2">
                           <a target="_blank"
-                            href={`${event.fb_event}`}
+                            rel="noopener noreferrer"
+                            href={normalizeFbEventUrl(event.fb_event!)!}
                             className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary/90"
                           >facebook</a>
                         </p>
@@ -128,9 +130,10 @@ export default async function AllEventsTable({
                         {event.date.toLocaleDateString(locale === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' })}
                       </td>
                       <td className="bg-card px-4 py-5 text-sm">
-                        {event.fb_event && (
+                        {isValidFbEventUrl(event.fb_event) && (
                           <a target="_blank"
-                            href={`${event.fb_event}`}
+                            rel="noopener noreferrer"
+                            href={normalizeFbEventUrl(event.fb_event!)!}
                             className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary/90"
                           >facebook</a>
                         )}

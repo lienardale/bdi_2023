@@ -15,7 +15,10 @@ export async function GET() {
     id: e.id,
     name: e.name,
     date: e.date.toISOString().split('T')[0],
+    hour: e.hour || '',
+    place: e.place || '',
     fb_event: e.fb_event || '',
+    cover_url: e.cover_url || '',
   }));
 
   const csv = generateCsv(data);

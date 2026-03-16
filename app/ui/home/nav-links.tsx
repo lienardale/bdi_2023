@@ -33,13 +33,14 @@ export default function NavLinks() {
           <Link
             key={link.href}
             href={link.href}
+            aria-label={link.name}
             className={cn(
-              'flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium text-sidebar-foreground hover:bg-white hover:text-primary md:flex-none md:justify-start md:p-2 md:px-3',
+              'flex h-[48px] grow items-center justify-center gap-2 rounded-md p-2 text-sm font-medium text-sidebar-foreground hover:bg-white hover:text-primary md:flex-none md:justify-start md:px-3',
               pathname === link.href && 'bg-white text-primary font-semibold',
             )}
           >
-            <LinkIcon className="w-6" />
-            <p className="hidden md:block">{link.name}</p>
+            <LinkIcon className="w-6" aria-hidden="true" />
+            <span className="hidden md:block">{link.name}</span>
           </Link>
         );
       })}

@@ -13,6 +13,8 @@ export default function Toast({
 }) {
   return (
     <div
+      role="alert"
+      aria-live="assertive"
       className={clsx(
         'fixed top-4 right-4 z-50 flex items-center gap-3 rounded-lg px-4 py-3 shadow-lg text-sm text-white transition-all',
         {
@@ -27,8 +29,8 @@ export default function Toast({
         <XCircleIcon className="w-5 h-5 shrink-0" />
       )}
       <span>{toast.message}</span>
-      <button onClick={onDismiss} className="ml-2 hover:opacity-80">
-        <XMarkIcon className="w-4 h-4" />
+      <button onClick={onDismiss} aria-label="Dismiss" className="ml-2 hover:opacity-80">
+        <XMarkIcon className="w-4 h-4" aria-hidden="true" />
       </button>
     </div>
   );

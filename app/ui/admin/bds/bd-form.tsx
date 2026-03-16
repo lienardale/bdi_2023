@@ -4,10 +4,9 @@ import { Link } from '@/i18n/routing';
 import { Button } from '@/app/ui/button';
 import { useActionState, useEffect } from 'react';
 import { createBd, updateBd, BdState } from '@/app/lib/actions';
-import { enrichBd } from '@/app/lib/actions-enrichment';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { SparklesIcon, EyeIcon } from '@heroicons/react/24/outline';
+import { EyeIcon } from '@heroicons/react/24/outline';
 import { toast } from 'sonner';
 
 type Event = { id: string; name: string };
@@ -57,8 +56,6 @@ export default function BdForm({
     bd?.authors.map(a => a.author.id) || []
   );
   const [isDirty, setIsDirty] = useState(false);
-  const [enriching, setEnriching] = useState(false);
-  const [enrichMessage, setEnrichMessage] = useState('');
 
   useEffect(() => {
     if (state.success) {
@@ -68,15 +65,6 @@ export default function BdForm({
       toast.error(state.message);
     }
   }, [state]);
-
-  const handleEnrich = async () => {
-    if (!bd) return;
-    setEnriching(true);
-    setEnrichMessage('');
-    const result = await enrichBd(bd.id);
-    setEnrichMessage(result.message);
-    setEnriching(false);
-  };
 
   return (
     <form action={dispatch} onChange={() => setIsDirty(true)}>
@@ -204,22 +192,8 @@ export default function BdForm({
             {tAdmin('viewOnSite')}
           </Link>
         )}
-        {bd && (
-          <button
-            type="button"
-            onClick={handleEnrich}
-            disabled={enriching}
-            className="flex h-10 items-center gap-2 rounded-lg bg-purple-600 px-4 text-sm font-medium text-white hover:bg-purple-500 disabled:opacity-50"
-          >
-            <SparklesIcon className="w-4" />
-            {enriching ? tAdmin('enriching') : tAdmin('enrich')}
-          </button>
-        )}
         <Button type="submit" disabled={bd && !isDirty}>{bd ? tCommon('edit') : tCommon('create')}</Button>
       </div>
-      {enrichMessage && (
-        <p className="mt-2 text-sm text-green-700 bg-green-50 rounded-md p-2">{enrichMessage}</p>
-      )}
     </form>
   );
 }

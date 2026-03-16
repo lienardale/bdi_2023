@@ -26,9 +26,10 @@ export default function ConfirmDeleteButton({
       <AlertDialogTrigger asChild>
         <button
           type="button"
+          aria-label={t('delete')}
           className="rounded-md border border-border p-2 hover:bg-muted"
         >
-          <TrashIcon className="w-4" />
+          <TrashIcon className="w-4" aria-hidden="true" />
         </button>
       </AlertDialogTrigger>
       <AlertDialogContent>
