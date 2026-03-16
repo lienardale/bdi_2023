@@ -5,18 +5,20 @@ import {
 } from '@heroicons/react/24/outline';
 import { lusitana } from '@/app/ui/fonts';
 import { fetchCardData } from '@/app/lib/data';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
+import { formatDate } from '@/app/lib/utils';
 
 export default async function Cards() {
   const {
-    nextBdiDate,
     nextBdiName,
     nextEventId,
     nextEventHour,
     nextEventPlace,
+    nextEventDateRaw,
   } = await fetchCardData();
   const t = await getTranslations('home');
+  const locale = await getLocale();
 
   const mapsUrl = nextEventPlace
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nextEventPlace)}`
@@ -46,7 +48,7 @@ export default async function Cards() {
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <span className="flex items-center gap-1">
               <ClockIcon className="h-4 w-4" />
-              {nextBdiDate}
+              {nextEventDateRaw ? formatDate(nextEventDateRaw, locale, 'long') : ''}
               {nextEventHour && ` — ${nextEventHour}`}
             </span>
             {nextEventPlace && (

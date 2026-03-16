@@ -1,14 +1,16 @@
 import { fetchEventById } from "@/app/lib/data";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import EventCoverImage from "@/app/ui/event-cover-image";
+import { formatDate } from "@/app/lib/utils";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const event = await fetchEventById(id);
   const t = await getTranslations('events');
+  const locale = await getLocale();
 
   if (!event) {
     notFound();
@@ -22,7 +24,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       <h1 className="text-xl md:text-2xl font-bold mb-4">{event.name}</h1>
 
       <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-muted-foreground">
-        <span>{event.date.toLocaleDateString()}</span>
+        <span>{formatDate(event.date, locale, 'long')}</span>
         {event.hour && <span>{event.hour}</span>}
         {event.place && (
           <a

@@ -1,10 +1,13 @@
 import { fetchBdById } from "@/app/lib/data";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import { getLocale } from "next-intl/server";
+import { formatDate } from "@/app/lib/utils";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const bd = await fetchBdById(id);
+  const locale = await getLocale();
 
   if (!bd) {
     notFound();
@@ -48,7 +51,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
             <p className="text-sm text-muted-foreground/60 mt-1">EAN: {bd.ean}</p>
           )}
           {bd.publication_date && (
-            <p className="text-sm text-muted-foreground mt-1">Publication: {new Date(bd.publication_date).toLocaleDateString()}</p>
+            <p className="text-sm text-muted-foreground mt-1">Publication: {formatDate(new Date(bd.publication_date), locale, 'short')}</p>
           )}
           {bd.page_count && (
             <p className="text-sm text-muted-foreground">{bd.page_count} pages</p>

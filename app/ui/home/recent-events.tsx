@@ -1,5 +1,6 @@
 import { lusitana } from '@/app/ui/fonts';
 import { Link } from '@/i18n/routing';
+import { formatDate } from '@/app/lib/utils';
 
 type RecentEvent = {
   id: string;
@@ -8,7 +9,7 @@ type RecentEvent = {
   bds: { id: string }[];
 };
 
-export default function RecentEvents({ events, title }: { events: RecentEvent[]; title: string }) {
+export default function RecentEvents({ events, title, locale = 'fr' }: { events: RecentEvent[]; title: string; locale?: string }) {
   return (
     <div className="w-full md:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
@@ -29,7 +30,7 @@ export default function RecentEvents({ events, title }: { events: RecentEvent[];
                   {event.name}
                 </Link>
                 <p className="text-sm text-muted-foreground">
-                  {event.date.toDateString()}
+                  {formatDate(event.date, locale, 'short')}
                 </p>
               </div>
               <p className="text-sm text-muted-foreground">

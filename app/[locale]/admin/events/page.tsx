@@ -3,7 +3,8 @@ import { fetchPaginatedEvents, fetchEventYears } from '@/app/lib/data';
 import { Link } from '@/i18n/routing';
 import { PlusIcon, PencilIcon } from '@heroicons/react/24/outline';
 import { deleteEvent } from '@/app/lib/actions';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
+import { formatDate } from '@/app/lib/utils';
 import ConfirmDeleteButton from '@/app/ui/admin/confirm-delete-button';
 import AdminPagination from '@/app/ui/admin/pagination';
 import Search from '@/app/ui/search';
@@ -29,6 +30,7 @@ export default async function AdminEventsPage({
   ]);
   const t = await getTranslations('events');
   const tCommon = await getTranslations('common');
+  const locale = await getLocale();
 
   return (
     <main>
@@ -101,7 +103,7 @@ export default async function AdminEventsPage({
                       ))}
                     </div>
                   </td>
-                  <td className="bg-card px-4 py-3 text-sm truncate">{event.date.toDateString()}</td>
+                  <td className="bg-card px-4 py-3 text-sm truncate">{formatDate(event.date, locale, 'short')}</td>
                   <td className="bg-card px-4 py-3 text-sm">
                     {isValidFbEventUrl(event.fb_event) && (
                       <a target="_blank" rel="noopener noreferrer"
