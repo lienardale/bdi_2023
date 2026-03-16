@@ -1,10 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/app/lib/prisma';
 import { parseCsv } from '@/app/lib/csv';
-import { requireAdminApi } from '@/app/lib/auth-utils';
+import { requireImportApi } from '@/app/lib/auth-utils';
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+const MAX_ROWS = 500;
+
+/** Only allow http(s) URLs; reject javascript:, data:, etc. Returns null for empty/missing. */
+function sanitizeUrl(url: string | undefined | null): string | null {
+  if (!url || !url.trim()) return null;
+  const trimmed = url.trim();
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return null; // reject non-http(s) URLs
+}
 
 export async function POST(request: NextRequest) {
-  const forbidden = await requireAdminApi();
+  const forbidden = await requireImportApi();
   if (forbidden) return forbidden;
 
   const formData = await request.formData();
@@ -15,6 +26,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'File and entity required' }, { status: 400 });
   }
 
+  if (file.size > MAX_FILE_SIZE) {
+    return NextResponse.json({ error: `File too large (max ${MAX_FILE_SIZE / 1024 / 1024}MB)` }, { status: 400 });
+  }
+
   const csvText = await file.text();
 
   try {
@@ -23,6 +38,9 @@ export async function POST(request: NextRequest) {
 
     if (entity === 'publishers') {
       const rows = parseCsv<{ name: string; parent?: string }>(csvText);
+      if (rows.length > MAX_ROWS) {
+        return NextResponse.json({ error: `Too many rows (max ${MAX_ROWS})` }, { status: 400 });
+      }
       for (const row of rows) {
         let parentId: string | null = null;
         if (row.parent) {
@@ -42,13 +60,16 @@ export async function POST(request: NextRequest) {
       }
     } else if (entity === 'events') {
       const rows = parseCsv<{ name: string; date: string; hour?: string; place?: string; fb_event?: string; cover_url?: string }>(csvText);
+      if (rows.length > MAX_ROWS) {
+        return NextResponse.json({ error: `Too many rows (max ${MAX_ROWS})` }, { status: 400 });
+      }
       for (const row of rows) {
         const eventData = {
           date: new Date(row.date),
           hour: row.hour || null,
           place: row.place || null,
-          fb_event: row.fb_event || null,
-          cover_url: row.cover_url || null,
+          fb_event: sanitizeUrl(row.fb_event),
+          cover_url: sanitizeUrl(row.cover_url),
         };
         await prisma.event.upsert({
           where: { name: row.name },
@@ -59,12 +80,15 @@ export async function POST(request: NextRequest) {
       }
     } else if (entity === 'authors') {
       const rows = parseCsv<{ name: string; bio?: string; bio_source?: string; photo_url?: string; wikipedia_url?: string }>(csvText);
+      if (rows.length > MAX_ROWS) {
+        return NextResponse.json({ error: `Too many rows (max ${MAX_ROWS})` }, { status: 400 });
+      }
       for (const row of rows) {
         const authorData = {
           bio: row.bio || null,
           bio_source: row.bio_source || null,
-          photo_url: row.photo_url || null,
-          wikipedia_url: row.wikipedia_url || null,
+          photo_url: sanitizeUrl(row.photo_url),
+          wikipedia_url: sanitizeUrl(row.wikipedia_url),
         };
         await prisma.author.upsert({
           where: { name: row.name },
@@ -91,6 +115,10 @@ export async function POST(request: NextRequest) {
         leslibraires_url?: string;
         enrichment_source?: string;
       }>(csvText);
+
+      if (rows.length > MAX_ROWS) {
+        return NextResponse.json({ error: `Too many rows (max ${MAX_ROWS})` }, { status: 400 });
+      }
 
       const errors: string[] = [];
 
@@ -155,12 +183,12 @@ export async function POST(request: NextRequest) {
               publishing_year: publishingYear,
               ean: row.ean || null,
               summary: row.summary || null,
-              cover_url: row.cover_url || null,
+              cover_url: sanitizeUrl(row.cover_url),
               publication_date: pubDate,
               page_count: pageCount,
               price,
-              publisher_url: row.publisher_url || null,
-              leslibraires_url: row.leslibraires_url || null,
+              publisher_url: sanitizeUrl(row.publisher_url),
+              leslibraires_url: sanitizeUrl(row.leslibraires_url),
               enrichment_source: row.enrichment_source || null,
           };
 
