@@ -14,10 +14,9 @@ Next.js 16 app for **La Bande des Idées** (BDI), a French comic book associatio
 npm run dev          # Start dev server (webpack mode — required by next-intl)
 npm run build        # Production build (webpack mode)
 npm run lint         # ESLint 9 flat config
-npm run test         # Vitest (81 tests)
+npm run test         # Vitest (142 tests)
 npm run test:watch   # Vitest in watch mode
 npm run seed         # Seed database (scripts/seedv2.js)
-npm run enrich       # Run enrichment pipeline
 ```
 
 `postinstall` runs `prisma generate` automatically.
@@ -29,8 +28,6 @@ Vitest with jsdom environment. Tests live in `__tests__/`:
 - `lib/actions.test.ts` — Server Action validation and DB mutations
 - `lib/csv.test.ts` — CSV import/export parsing
 - `lib/ics.test.ts` — iCalendar file generation
-- `lib/enrichment/author-lookup.test.ts` — Wikipedia/Wikidata lookups
-- `lib/enrichment/ean-lookup.test.ts` — OpenLibrary EAN lookups
 - `i18n/messages.test.ts` — validates fr.json and en.json key parity
 - `integration/routes.test.ts` — route rendering smoke tests
 
@@ -38,18 +35,18 @@ All tests mock Next.js server functions (`redirect`, `revalidatePath`, `auth`). 
 
 ## Database
 
-Prisma schema at `prisma/schema.prisma`. Connection string via `LOCAL_POSTGRES_URL` env var.
+Prisma schema at `prisma/schema.prisma`. Connection string via `POSTGRES_URL` env var.
 
 **Core models:**
 - **Event** — name, date (unique), hour, place, fb_event, cover_url
-- **Bd** — title (unique), publisher, publishing_year, eventId (FK to Event); enrichment fields: ean, summary, cover_url, publisher_url, leslibraires_url, publication_date, page_count, price
+- **Bd** — title (unique), publisher, publishing_year, publisherId (FK to Publisher); enrichment fields: ean, summary, cover_url, publisher_url, leslibraires_url, publication_date, page_count, price
 - **Author** — name (unique); enrichment fields: bio, bio_source, photo_url, wikipedia_url
+- **Publisher** — name (unique), parentId (self-referential FK for imprints)
 
 **Junction tables** for many-to-many:
 - **BdAuthor** — Bd ↔ Author (composite PK: `[authorId, bdId]`)
 - **AuthorEvent** — Author ↔ Event (composite PK: `[authorId, eventId]`)
-
-Legacy `users` table exists for credentials auth (unused since Google OAuth migration).
+- **BdEvent** — Bd ↔ Event (composite PK: `[bdId, eventId]`)
 
 Prisma client singleton in `app/lib/prisma.ts` prevents hot-reload connection leaks.
 
@@ -69,25 +66,21 @@ All routes are i18n-aware under `[locale]` (fr/en, default: fr).
 **Admin pages** — `/admin/` (protected, requires Google OAuth + whitelisted email):
 - `admin/` — admin dashboard
 - `admin/events/`, `admin/bds/`, `admin/authors/` — CRUD with create/edit forms
-- `admin/enrichment` — auto-fill missing data via Wikipedia and OpenLibrary APIs
-- `admin/import-export` — CSV import/export
+- `admin/import-export` — CSV import/export (publishers, authors, events, BDs)
 
 **API routes** — `app/api/`:
 - `auth/[...nextauth]` — NextAuth handlers
 - `event/[id]/ics` — iCalendar download for an event
-- `admin/enrich` — enrichment endpoint
-- `admin/export/{events,bds,authors}` — CSV export
+- `admin/export/{events,bds,authors,publishers}` — CSV export
 - `admin/import` — CSV import
 
 ### Key lib files (`app/lib/`)
 
 - **data.ts** — Prisma queries: `fetchCardData`, `fetchFiltered*`, `fetchPaginated*`, `fetch*ById`
 - **actions.ts** — Server Actions for form CRUD (Zod-validated)
-- **actions-enrichment.ts** — Server Actions for enrichment pipeline
 - **definitions.ts** — TypeScript types (`EventsTable`, `BdsTable`, `AuthorsTable`)
 - **ics.ts** — iCalendar (.ics) file generation
 - **csv.ts** — CSV parsing/export helpers
-- **enrichment/** — `author-lookup.ts` (Wikipedia/Wikidata), `ean-lookup.ts` (OpenLibrary), `og-image.ts` (OG image scraping)
 - **prisma.ts** — Prisma client singleton
 
 ### UI components (`app/ui/`)
