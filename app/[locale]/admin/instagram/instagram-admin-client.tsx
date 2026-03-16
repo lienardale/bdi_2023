@@ -15,6 +15,7 @@ import ConfirmDeleteButton from '@/app/ui/admin/confirm-delete-button';
 import {
   ArrowUpIcon,
   ArrowDownIcon,
+  InformationCircleIcon,
 } from '@heroicons/react/24/outline';
 
 type InstagramPostRow = {
@@ -73,9 +74,27 @@ export default function InstagramAdminClient({
 
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
+      <h1 className={`${lusitana.className} mb-2 text-xl md:text-2xl`}>
         {t('title')}
       </h1>
+      <p className="mb-6 text-sm text-muted-foreground">{t('description')}</p>
+
+      {/* Help box */}
+      <div className="mb-6 rounded-lg border border-border bg-muted/50 p-4">
+        <div className="flex items-center gap-2 mb-2">
+          <InformationCircleIcon className="w-5 h-5 text-primary" />
+          <h2 className="text-sm font-semibold">{t('helpTitle')}</h2>
+        </div>
+        <ol className="list-decimal list-inside space-y-1 text-sm text-muted-foreground">
+          <li>{t('helpStep1')}</li>
+          <li>{t.rich('helpStep2', { strong: (chunks) => <strong className="font-semibold text-foreground">{chunks}</strong> })}</li>
+          <li>{t('helpStep3')}</li>
+        </ol>
+        <div className="mt-3 space-y-1 text-sm text-muted-foreground">
+          <p><span className="font-medium text-foreground">Actif / Inactif :</span> {t('helpToggle')}</p>
+          <p><span className="font-medium text-foreground">&#8593; &#8595; :</span> {t('helpReorder')}</p>
+        </div>
+      </div>
 
       {/* Add form */}
       <form ref={formRef} action={dispatch} className="mb-6">
