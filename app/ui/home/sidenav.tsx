@@ -1,7 +1,7 @@
 import { Link } from '@/i18n/routing';
 import NavLinks from '@/app/ui/home/nav-links';
 import LanguageSwitcher from '@/app/ui/language-switcher';
-import { PowerIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+import { ArrowRightEndOnRectangleIcon, PowerIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 import { auth, signOut } from '@/auth';
 import { getTranslations } from 'next-intl/server';
 
@@ -38,7 +38,7 @@ export default async function SideNav() {
             <span className="hidden md:block">{t('admin')}</span>
           </Link>
         )}
-        {session && (
+        {session ? (
           <form
             action={async () => {
               'use server';
@@ -50,6 +50,15 @@ export default async function SideNav() {
               <span className="hidden md:block">{t('signOut')}</span>
             </button>
           </form>
+        ) : (
+          <Link
+            href="/login"
+            aria-label={t('signIn')}
+            className="flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium text-sidebar-foreground hover:bg-white hover:text-primary md:flex-none md:justify-start md:p-2 md:px-3"
+          >
+            <ArrowRightEndOnRectangleIcon className="w-6" aria-hidden="true" />
+            <span className="hidden md:block">{t('signIn')}</span>
+          </Link>
         )}
       </div>
     </nav>

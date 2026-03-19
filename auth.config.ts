@@ -30,9 +30,12 @@ export const authConfig = {
 
       // Allow login page always
       if (isOnLogin) {
-        // If already logged in, redirect to home
+        // If already logged in, redirect to admin
         if (isLoggedIn) {
-          return Response.redirect(new URL('/', nextUrl));
+          // Preserve locale prefix if present
+          const localeMatch = nextUrl.pathname.match(/^\/(fr|en)/);
+          const localePrefix = localeMatch ? localeMatch[0] : '';
+          return Response.redirect(new URL(`${localePrefix}/admin`, nextUrl));
         }
         return true;
       }

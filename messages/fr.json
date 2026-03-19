@@ -6,6 +6,7 @@
     "authors": "Auteur·ices",
     "admin": "Admin",
     "signOut": "Déconnexion",
+    "signIn": "Connexion",
     "search": "Rechercher...",
     "back": "Retour à la liste",
     "link": "lien",
@@ -104,6 +105,10 @@
     "email": "Email",
     "facebookPage": "Page Facebook BDI",
     "instagramProfile": "@labandedesidees"
+  },
+  "login": {
+    "description": "Connectez-vous pour accéder au back-office.",
+    "googleButton": "Se connecter avec Google"
   },
   "errors": {
     "forbidden": "Vous n'avez pas les droits nécessaires pour accéder à cette page.",

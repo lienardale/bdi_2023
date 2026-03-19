@@ -2,8 +2,12 @@
 
 import { lusitana } from '@/app/ui/fonts';
 import { signIn } from 'next-auth/react';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function LoginForm() {
+  const locale = useLocale();
+  const t = useTranslations('login');
+
   return (
     <div className="flex-1 rounded-lg bg-card px-6 pb-4 pt-8 border border-border shadow-sm">
       <div className="flex justify-center mb-4">
@@ -13,10 +17,10 @@ export default function LoginForm() {
         Bande des Idées
       </h1>
       <p className="mb-6 text-sm text-muted-foreground">
-        Connectez-vous pour accéder au back-office.
+        {t('description')}
       </p>
       <button
-        onClick={() => signIn('google', { callbackUrl: '/' })}
+        onClick={() => signIn('google', { callbackUrl: `/${locale}/admin` })}
         className="flex w-full items-center justify-center gap-3 rounded-lg bg-card border border-border px-4 py-3 text-sm font-medium text-foreground shadow-xs hover:bg-muted transition-colors"
       >
         <svg className="h-5 w-5" viewBox="0 0 24 24">
@@ -37,7 +41,7 @@ export default function LoginForm() {
             fill="#EA4335"
           />
         </svg>
-        Sign in with Google
+        {t('googleButton')}
       </button>
     </div>
   );
