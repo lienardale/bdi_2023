@@ -6,6 +6,7 @@
     "authors": "Authors",
     "admin": "Admin",
     "signOut": "Sign Out",
+    "signIn": "Sign In",
     "search": "Search...",
     "back": "Back to list",
     "link": "link",
@@ -104,6 +105,10 @@
     "email": "Email",
     "facebookPage": "BDI Facebook page",
     "instagramProfile": "@labandedesidees"
+  },
+  "login": {
+    "description": "Sign in to access the back-office.",
+    "googleButton": "Sign in with Google"
   },
   "errors": {
     "forbidden": "You do not have permission to access this page.",
