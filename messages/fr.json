@@ -70,6 +70,8 @@
     "price": "Prix (€)",
     "priceShort": "Prix",
     "pages": "Pages",
+    "genre": "Genre",
+    "subGenre": "Sous genre",
     "buy": "Acheter"
   },
   "authors": {
