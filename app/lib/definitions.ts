@@ -20,10 +20,17 @@ export type PublisherOption = {
   name: string;
 };
 
+export type GenresTable = {
+  id: string;
+  name: string;
+  _count: { bds: number };
+};
+
 export type BdsTable = {
   id: string;
   events: { event: { id: string; name: string } }[];
   authors: { author: { id: string; name: string } }[];
+  genres: { genre: { id: string; name: string } }[];
   title: string;
   publisher: string | null;
   publisherId: string | null;

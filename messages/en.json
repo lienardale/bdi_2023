@@ -70,8 +70,7 @@
     "price": "Price (€)",
     "priceShort": "Price",
     "pages": "Pages",
-    "genre": "Genre",
-    "subGenre": "Sub genre",
+    "genres": "Genres",
     "buy": "Buy"
   },
   "authors": {
@@ -99,7 +98,8 @@
     "year": "Year",
     "event": "Event",
     "publisher": "Publisher",
-    "author": "Author"
+    "author": "Author",
+    "genre": "Genre"
   },
   "contact": {
     "title": "Contact",
@@ -133,7 +133,9 @@
     "importButton": "Import",
     "importError": "Import error.",
     "viewOnSite": "View on site",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "genres": "Genres",
+    "exportGenres": "Export genres"
   },
   "adminInstagram": {
     "title": "Instagram Posts",
@@ -163,6 +165,16 @@
     "medianPages": "Pages (median)",
     "medianPrice": "Price (median)",
     "topAuthors": "Top 10 Authors",
-    "topPublishers": "Top 10 Publishers"
+    "topPublishers": "Top 10 Publishers",
+    "totalGenres": "Total Genres",
+    "topGenres": "Top 10 Genres"
+  },
+  "genres": {
+    "title": "Genres",
+    "name": "Name",
+    "bdCount": "Comic count",
+    "noBds": "No comics for this genre.",
+    "create": "Create genre",
+    "edit": "Edit genre"
   }
 }

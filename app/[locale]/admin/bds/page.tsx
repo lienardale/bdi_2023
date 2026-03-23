@@ -1,5 +1,6 @@
 import { lusitana } from '@/app/ui/fonts';
-import { fetchPaginatedBds, fetchEventOptions, fetchPublishers, fetchBdYears } from '@/app/lib/data';
+import { fetchPaginatedBds, fetchEventOptions, fetchPublishers, fetchBdYears, fetchGenreOptions } from '@/app/lib/data';
+import { Badge } from '@/app/ui/shadcn/badge';
 import { Link } from '@/i18n/routing';
 import { PlusIcon, PencilIcon } from '@heroicons/react/24/outline';
 import { deleteBd } from '@/app/lib/actions';
@@ -13,7 +14,7 @@ import SortableHeader from '@/app/ui/sortable-header';
 export default async function AdminBdsPage({
   searchParams,
 }: {
-  searchParams?: Promise<{ page?: string; query?: string; eventId?: string; publisherId?: string; year?: string; sort?: string; order?: string }>;
+  searchParams?: Promise<{ page?: string; query?: string; eventId?: string; publisherId?: string; year?: string; genreId?: string; sort?: string; order?: string }>;
 }) {
   const resolvedParams = await searchParams;
   const page = Number(resolvedParams?.page || '1');
@@ -24,13 +25,15 @@ export default async function AdminBdsPage({
     eventId: resolvedParams?.eventId || undefined,
     publisherId: resolvedParams?.publisherId || undefined,
     year: resolvedParams?.year ? parseInt(resolvedParams.year) : undefined,
+    genreId: resolvedParams?.genreId || undefined,
   };
 
-  const [{ data: bds, totalPages }, eventOptions, publishers, bdYears] = await Promise.all([
+  const [{ data: bds, totalPages }, eventOptions, publishers, bdYears, genreOptions] = await Promise.all([
     fetchPaginatedBds(page, query, filters, sort, order),
     fetchEventOptions(),
     fetchPublishers(),
     fetchBdYears(),
+    fetchGenreOptions(),
   ]);
   const t = await getTranslations('bds');
   const tCommon = await getTranslations('common');
@@ -65,6 +68,11 @@ export default async function AdminBdsPage({
             paramName="year"
             label={tFilters('year')}
             options={bdYears.map(y => ({ value: String(y), label: String(y) }))}
+          />
+          <FilterSelect
+            paramName="genreId"
+            label={tFilters('genre')}
+            options={genreOptions.map(g => ({ value: g.id, label: g.name }))}
           />
         </div>
       </div>
@@ -101,6 +109,13 @@ export default async function AdminBdsPage({
                 return <span key={event.id} className="font-medium">{bdiNum || t('bdi')}</span>;
               })}
             </div>
+            {bd.genres.length > 0 && (
+              <div className="mt-1.5 flex flex-wrap gap-1">
+                {bd.genres.map(({ genre }) => (
+                  <Badge key={genre.id} variant="secondary" className="text-xs">{genre.name}</Badge>
+                ))}
+              </div>
+            )}
             {bd.leslibraires_url && (
               <a href={bd.leslibraires_url} target="_blank"
                 className="mt-2 inline-block rounded-md bg-primary px-2 py-0.5 text-xs text-primary-foreground hover:bg-primary/90"
@@ -114,20 +129,22 @@ export default async function AdminBdsPage({
       <div className="hidden md:block overflow-hidden">
         <table className="w-full rounded-md text-foreground" style={{ tableLayout: 'fixed' }}>
           <colgroup>
-            <col style={{ width: '22%' }} />
-            <col style={{ width: '18%' }} />
-            <col style={{ width: '16%' }} />
-            <col style={{ width: '8%' }} />
-            <col style={{ width: '8%' }} />
+            <col style={{ width: '20%' }} />
+            <col style={{ width: '14%' }} />
+            <col style={{ width: '12%' }} />
+            <col style={{ width: '12%' }} />
+            <col style={{ width: '7%' }} />
+            <col style={{ width: '7%' }} />
             <col style={{ width: '10%' }} />
-            <col style={{ width: '8%' }} />
-            <col style={{ width: '10%' }} />
+            <col style={{ width: '7%' }} />
+            <col style={{ width: '11%' }} />
           </colgroup>
           <thead className="bg-muted text-left text-sm font-normal">
             <tr>
               <SortableHeader column="title" label={t('bdTitle')} defaultOrder="asc" />
               <th className="px-4 py-3 font-medium">{tCommon('authors')}</th>
               <th className="px-4 py-3 font-medium">{t('publisher')}</th>
+              <th className="px-4 py-3 font-medium">{t('genres')}</th>
               <SortableHeader column="price" label={t('priceShort')} defaultOrder="desc" />
               <SortableHeader column="pages" label={t('pages')} defaultOrder="desc" />
               <th className="px-4 py-3 font-medium text-center">Libraires</th>
@@ -153,6 +170,16 @@ export default async function AdminBdsPage({
                     {bd.publisherRef ? (
                       <Link href={`/admin/publishers/${bd.publisherRef.id}/edit`} className="text-primary hover:underline">{bd.publisherRef.name}</Link>
                     ) : bd.publisher}
+                  </td>
+                  <td className="bg-card px-4 py-3 text-sm">
+                    <div className="flex flex-wrap gap-1 max-h-[3.5rem] overflow-hidden">
+                      {bd.genres.slice(0, 3).map(({ genre }) => (
+                        <Badge key={genre.id} variant="secondary" className="text-xs">{genre.name}</Badge>
+                      ))}
+                      {bd.genres.length > 3 && (
+                        <span className="text-xs text-muted-foreground">+{bd.genres.length - 3}</span>
+                      )}
+                    </div>
                   </td>
                   <td className="bg-card px-4 py-3 text-sm">
                     {bd.price ? `${bd.price}€` : '–'}

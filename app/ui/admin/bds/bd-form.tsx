@@ -12,12 +12,14 @@ import { toast } from 'sonner';
 type Event = { id: string; name: string };
 type Author = { id: string; name: string };
 type Publisher = { id: string; name: string };
+type Genre = { id: string; name: string };
 
 export default function BdForm({
   bd,
   events,
   authors,
   publishers,
+  genres,
 }: {
   bd?: {
     id: string;
@@ -36,10 +38,12 @@ export default function BdForm({
     publisher_url: string | null;
     leslibraires_url: string | null;
     authors: { author: { id: string; name: string } }[];
+    genres: { genre: { id: string; name: string } }[];
   };
   events: Event[];
   authors: Author[];
   publishers: Publisher[];
+  genres: Genre[];
 }) {
   const initialState: BdState = { message: null, errors: {} };
   const action = bd ? updateBd.bind(null, bd.id) : createBd;
@@ -54,6 +58,9 @@ export default function BdForm({
   );
   const [selectedAuthorIds, setSelectedAuthorIds] = useState<string[]>(
     bd?.authors.map(a => a.author.id) || []
+  );
+  const [selectedGenreIds, setSelectedGenreIds] = useState<string[]>(
+    bd?.genres?.map(g => g.genre.id) || []
   );
   const [isDirty, setIsDirty] = useState(false);
   const [prevState, setPrevState] = useState(state);
@@ -178,6 +185,19 @@ export default function BdForm({
             className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm min-h-[120px]">
             {authors.map((author) => (
               <option key={author.id} value={author.id}>{author.name}</option>
+            ))}
+          </select>
+          <p className="mt-1 text-xs text-muted-foreground">{t('multiSelectHint')}</p>
+        </div>
+
+        <div className="mb-4">
+          <label className="mb-2 block text-sm font-medium">{t('genres')}</label>
+          <input type="hidden" name="genreIds" value={JSON.stringify(selectedGenreIds)} />
+          <select multiple value={selectedGenreIds}
+            onChange={(e) => { setSelectedGenreIds(Array.from(e.target.selectedOptions, o => o.value)); setIsDirty(true); }}
+            className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm min-h-[120px]">
+            {genres.map((genre) => (
+              <option key={genre.id} value={genre.id}>{genre.name}</option>
             ))}
           </select>
           <p className="mt-1 text-xs text-muted-foreground">{t('multiSelectHint')}</p>

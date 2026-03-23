@@ -13,6 +13,7 @@ export async function GET() {
       events: { select: { event: { select: { name: true } } } },
       publisherRef: { select: { name: true } },
       authors: { select: { author: { select: { name: true } } } },
+      genres: { select: { genre: { select: { name: true } } } },
     },
   });
 
@@ -23,6 +24,7 @@ export async function GET() {
     publishing_year: bd.publishing_year || '',
     events: bd.events.map(e => e.event.name).join('; '),
     authors: bd.authors.map(a => a.author.name).join('; '),
+    genres: bd.genres.map(g => g.genre.name).join('; '),
     ean: bd.ean || '',
     summary: bd.summary || '',
     cover_url: bd.cover_url || '',

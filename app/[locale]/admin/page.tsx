@@ -4,18 +4,21 @@ import {
   fetchAggregateStats,
   fetchTopAuthors,
   fetchTopPublishers,
+  fetchTopGenres,
 } from '@/app/lib/data';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { formatDate } from '@/app/lib/utils';
 import TopAuthors from '@/app/ui/home/top-authors';
 import TopPublishers from '@/app/ui/admin/stats/top-publishers';
+import TopGenres from '@/app/ui/admin/stats/top-genres';
 
 export default async function AdminDashboard() {
-  const [cardData, stats, topAuthors, topPublishers] = await Promise.all([
+  const [cardData, stats, topAuthors, topPublishers, topGenres] = await Promise.all([
     fetchCardData(),
     fetchAggregateStats(),
     fetchTopAuthors(10),
     fetchTopPublishers(10),
+    fetchTopGenres(10),
   ]);
 
   const t = await getTranslations('admin');
@@ -31,6 +34,7 @@ export default async function AdminDashboard() {
     { label: tStats('totalAuthors'), value: stats.totalAuthors },
     { label: tStats('totalEvents'), value: stats.totalEvents },
     { label: tStats('totalPublishers'), value: stats.totalPublishers },
+    { label: tStats('totalGenres'), value: stats.totalGenres },
     { label: tStats('totalPages'), value: stats.totalPages.toLocaleString(locale === 'fr' ? 'fr-FR' : 'en-US') },
     { label: tStats('medianPages'), value: stats.medianPages ?? '—' },
     { label: tStats('medianPrice'), value: stats.medianPrice != null ? `${stats.medianPrice.toFixed(2)} €` : '—' },
@@ -60,9 +64,10 @@ export default async function AdminDashboard() {
       </div>
 
       {/* Rankings */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <TopAuthors authors={topAuthors} title={tStats('topAuthors')} />
         <TopPublishers publishers={topPublishers} title={tStats('topPublishers')} />
+        <TopGenres genres={topGenres} title={tStats('topGenres')} />
       </div>
     </main>
   );
