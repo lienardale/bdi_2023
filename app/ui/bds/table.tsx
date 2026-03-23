@@ -2,6 +2,7 @@ import { BdsTable } from '@/app/lib/definitions';
 import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import SortableHeader from '@/app/ui/sortable-header';
+import GenreBadges from '@/app/ui/bds/genre-badges';
 
 export default async function AllBdsTable({
   bds,
@@ -42,6 +43,11 @@ export default async function AllBdsTable({
                         <p className="text-sm text-muted-foreground">
                           {bd.publishing_year}
                         </p>
+                        {bd.genres.length > 0 && (
+                          <div className="mt-1">
+                            <GenreBadges genres={bd.genres} maxVisible={3} />
+                          </div>
+                        )}
                         <div className="flex gap-2 mt-2 flex-wrap">
                           {bd.events.map(({ event }) => (
                             <Link
@@ -59,11 +65,12 @@ export default async function AllBdsTable({
             </div>
             <table className="hidden w-full rounded-md text-foreground md:table" style={{ tableLayout: 'fixed' }}>
               <colgroup>
-                <col style={{ width: '26%' }} />
-                <col style={{ width: '20%' }} />
-                <col style={{ width: '14%' }} />
-                <col style={{ width: '8%' }} />
-                <col style={{ width: '8%' }} />
+                <col style={{ width: '22%' }} />
+                <col style={{ width: '16%' }} />
+                <col style={{ width: '12%' }} />
+                <col style={{ width: '12%' }} />
+                <col style={{ width: '7%' }} />
+                <col style={{ width: '7%' }} />
                 <col style={{ width: '12%' }} />
                 <col style={{ width: '8%' }} />
               </colgroup>
@@ -73,6 +80,9 @@ export default async function AllBdsTable({
                   <SortableHeader column="author" label={t('common.authors')} defaultOrder="asc" />
                   <th scope="col" className="px-3 py-5 font-medium">
                     {t('bds.publisher')}
+                  </th>
+                  <th scope="col" className="px-3 py-5 font-medium">
+                    {t('bds.genres')}
                   </th>
                   <SortableHeader column="price" label={t('bds.priceShort')} defaultOrder="desc" />
                   <SortableHeader column="pages" label={t('bds.pages')} defaultOrder="desc" />
@@ -111,6 +121,9 @@ export default async function AllBdsTable({
                             </Link>
                           ) : bd.publisher}
                         </div>
+                      </td>
+                      <td className="bg-card px-3 py-5 text-sm">
+                        <GenreBadges genres={bd.genres} maxVisible={2} />
                       </td>
                       <td className="bg-card px-3 py-5 text-sm whitespace-nowrap">
                         {bd.price ? `${bd.price}€` : '–'}

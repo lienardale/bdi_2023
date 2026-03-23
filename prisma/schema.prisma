@@ -28,10 +28,17 @@ model Publisher {
   bds      Bd[]
 }
 
+model Genre {
+  id   String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name String    @unique @db.VarChar(100)
+  bds  BdGenre[]
+}
+
 model Bd {
   id               String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   events           BdEvent[]
   authors          BdAuthor[]
+  genres           BdGenre[]
   title            String      @unique @db.VarChar(255)
   publisher        String?
   publisherId      String?     @db.Uuid
@@ -85,6 +92,15 @@ model BdEvent {
   eventId String @db.Uuid
 
   @@id([bdId, eventId])
+}
+
+model BdGenre {
+  bd      Bd     @relation(fields: [bdId], references: [id])
+  bdId    String @db.Uuid
+  genre   Genre  @relation(fields: [genreId], references: [id])
+  genreId String @db.Uuid
+
+  @@id([bdId, genreId])
 }
 
 model InstagramPost {

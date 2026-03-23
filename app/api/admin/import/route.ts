@@ -105,6 +105,7 @@ export async function POST(request: NextRequest) {
         event?: string;
         events?: string;
         authors?: string;
+        genres?: string;
         ean?: string;
         summary?: string;
         cover_url?: string;
@@ -150,6 +151,18 @@ export async function POST(request: NextRequest) {
                 create: { name },
               });
               return { authorId: author.id };
+            })
+          );
+
+          const genreNames = row.genres ? row.genres.split(';').map(n => n.trim()).filter(Boolean) : [];
+          const genreConnections = await Promise.all(
+            genreNames.map(async (name) => {
+              const genre = await prisma.genre.upsert({
+                where: { name },
+                update: {},
+                create: { name },
+              });
+              return { genreId: genre.id };
             })
           );
 
@@ -204,6 +217,10 @@ export async function POST(request: NextRequest) {
                 deleteMany: {},
                 create: eventConnections,
               },
+              genres: {
+                deleteMany: {},
+                create: genreConnections,
+              },
             },
             create: {
               title: row.title,
@@ -213,6 +230,9 @@ export async function POST(request: NextRequest) {
               },
               events: {
                 create: eventConnections,
+              },
+              genres: {
+                create: genreConnections,
               },
             },
           });
@@ -230,6 +250,19 @@ export async function POST(request: NextRequest) {
         skipped,
         errors: errors.length > 0 ? errors : undefined,
       });
+    } else if (entity === 'genres') {
+      const rows = parseCsv<{ name: string }>(csvText);
+      if (rows.length > MAX_ROWS) {
+        return NextResponse.json({ error: `Too many rows (max ${MAX_ROWS})` }, { status: 400 });
+      }
+      for (const row of rows) {
+        await prisma.genre.upsert({
+          where: { name: row.name },
+          update: {},
+          create: { name: row.name },
+        });
+        count++;
+      }
     } else {
       return NextResponse.json({ error: 'Invalid entity' }, { status: 400 });
     }

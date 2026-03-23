@@ -1,4 +1,4 @@
-import { fetchFilteredBds, fetchEventOptions, fetchPublishers, fetchAuthorOptions } from '@/app/lib/data';
+import { fetchFilteredBds, fetchEventOptions, fetchPublishers, fetchAuthorOptions, fetchGenreOptions } from '@/app/lib/data';
 import BdsTable from '@/app/ui/bds/table';
 import FilterSelect from '@/app/ui/filter-select';
 import { lusitana } from '@/app/ui/fonts';
@@ -20,6 +20,7 @@ export default async function Page({
     eventId?: string;
     publisherId?: string;
     authorId?: string;
+    genreId?: string;
     sort?: string;
     order?: string;
   }>;
@@ -33,13 +34,15 @@ export default async function Page({
     eventId: resolvedParams?.eventId || undefined,
     publisherId: resolvedParams?.publisherId || undefined,
     authorId: resolvedParams?.authorId || undefined,
+    genreId: resolvedParams?.genreId || undefined,
   };
 
-  const [fetchedBds, eventOptions, publishers, authorOptions] = await Promise.all([
+  const [fetchedBds, eventOptions, publishers, authorOptions, genreOptions] = await Promise.all([
     fetchFilteredBds(query, filters, sort, order),
     fetchEventOptions(),
     fetchPublishers(),
     fetchAuthorOptions(),
+    fetchGenreOptions(),
   ]);
 
   // JS-level sort for author (M2M prevents Prisma-level sort)
@@ -75,6 +78,11 @@ export default async function Page({
             paramName="authorId"
             label={t('filters.author')}
             options={authorOptions.map(a => ({ value: a.id, label: a.name }))}
+          />
+          <FilterSelect
+            paramName="genreId"
+            label={t('filters.genre')}
+            options={genreOptions.map(g => ({ value: g.id, label: g.name }))}
           />
         </div>
       </div>

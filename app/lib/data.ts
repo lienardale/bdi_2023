@@ -3,6 +3,7 @@ import {
   BdsTable,
   AuthorsTable,
   PublisherOption,
+  GenresTable,
 } from './definitions';
 import { connection } from 'next/server';
 import prisma from './prisma';
@@ -87,6 +88,14 @@ export async function fetchAuthorOptions(): Promise<{ id: string; name: string }
     orderBy: { name: 'asc' },
   });
   return authors;
+}
+
+export async function fetchGenreOptions(): Promise<{ id: string; name: string }[]> {
+  await connection();
+  return prisma.genre.findMany({
+    select: { id: true, name: true },
+    orderBy: { name: 'asc' },
+  });
 }
 
 // --- Filtered queries with cross-entity search ---
@@ -181,7 +190,7 @@ export async function fetchEventById(id: string) {
 
 export async function fetchFilteredBds(
   query: string,
-  filters?: { eventId?: string; publisherId?: string; year?: number; authorId?: string },
+  filters?: { eventId?: string; publisherId?: string; year?: number; authorId?: string; genreId?: string },
   sort?: string,
   order?: string,
 ) {
@@ -197,6 +206,7 @@ export async function fetchFilteredBds(
           { publisherRef: { name: { contains: query, mode: "insensitive" } } },
           { authors: { some: { author: { name: { contains: query, mode: "insensitive" } } } } },
           { events: { some: { event: { name: { contains: query, mode: "insensitive" } } } } },
+          { genres: { some: { genre: { name: { contains: query, mode: "insensitive" } } } } },
         ],
       });
     }
@@ -212,6 +222,9 @@ export async function fetchFilteredBds(
     }
     if (filters?.authorId) {
       andConditions.push({ authors: { some: { authorId: filters.authorId } } });
+    }
+    if (filters?.genreId) {
+      andConditions.push({ genres: { some: { genreId: filters.genreId } } });
     }
 
     if (andConditions.length > 0) {
@@ -239,7 +252,8 @@ export async function fetchFilteredBds(
               select: { id: true, name: true }
             }
           }
-        }
+        },
+        genres: { select: { genre: { select: { id: true, name: true } } } },
       },
       where,
     });
@@ -274,7 +288,8 @@ export async function fetchBdById(id: string) {
               select: { id: true, name: true }
             }
           }
-        }
+        },
+        genres: { select: { genre: { select: { id: true, name: true } } } },
       }
     });
     return bd as BdsTable | null;
@@ -385,7 +400,7 @@ export async function fetchPaginatedEvents(page: number = 1, query?: string, yea
 export async function fetchPaginatedBds(
   page: number = 1,
   query?: string,
-  filters?: { eventId?: string; publisherId?: string; year?: number },
+  filters?: { eventId?: string; publisherId?: string; year?: number; genreId?: string },
   sort?: string,
   order?: string,
 ) {
@@ -400,12 +415,14 @@ export async function fetchPaginatedBds(
         { publisherRef: { name: { contains: query, mode: 'insensitive' } } },
         { authors: { some: { author: { name: { contains: query, mode: 'insensitive' } } } } },
         { events: { some: { event: { name: { contains: query, mode: 'insensitive' } } } } },
+        { genres: { some: { genre: { name: { contains: query, mode: 'insensitive' } } } } },
       ],
     });
   }
   if (filters?.eventId) andConditions.push({ events: { some: { eventId: filters.eventId } } });
   if (filters?.publisherId) andConditions.push({ publisherId: filters.publisherId });
   if (filters?.year) andConditions.push({ publishing_year: filters.year });
+  if (filters?.genreId) andConditions.push({ genres: { some: { genreId: filters.genreId } } });
   if (andConditions.length > 0) where.AND = andConditions;
 
   const dir = (order === 'asc' || order === 'desc' ? order : 'asc') as 'asc' | 'desc';
@@ -423,6 +440,7 @@ export async function fetchPaginatedBds(
         events: { select: { event: { select: { id: true, name: true } } } },
         publisherRef: { select: { id: true, name: true } },
         authors: { select: { author: { select: { id: true, name: true } } } },
+        genres: { select: { genre: { select: { id: true, name: true } } } },
       },
       skip: (page - 1) * ADMIN_PAGE_SIZE,
       take: ADMIN_PAGE_SIZE,
@@ -622,6 +640,7 @@ export type AggregateStats = {
   totalAuthors: number;
   totalEvents: number;
   totalPublishers: number;
+  totalGenres: number;
   totalPages: number;
   medianPages: number | null;
   medianPrice: number | null;
@@ -629,11 +648,12 @@ export type AggregateStats = {
 
 export async function fetchAggregateStats(): Promise<AggregateStats> {
   await connection();
-  const [totalBds, totalAuthors, totalEvents, totalPublishers, pageSum] = await Promise.all([
+  const [totalBds, totalAuthors, totalEvents, totalPublishers, totalGenres, pageSum] = await Promise.all([
     prisma.bd.count(),
     prisma.author.count(),
     prisma.event.count(),
     prisma.publisher.count(),
+    prisma.genre.count(),
     prisma.bd.aggregate({ _sum: { page_count: true } }),
   ]);
   const totalPages = pageSum._sum.page_count ?? 0;
@@ -661,10 +681,76 @@ export async function fetchAggregateStats(): Promise<AggregateStats> {
     totalAuthors,
     totalEvents,
     totalPublishers,
+    totalGenres,
     totalPages,
     medianPages,
     medianPrice,
   };
+}
+
+// ---------- Genre queries ----------
+
+export async function fetchPaginatedGenres(page: number = 1, query?: string) {
+  await connection();
+  const where: any = {};
+  if (query) {
+    where.name = { contains: query, mode: 'insensitive' };
+  }
+
+  const [genres, total] = await Promise.all([
+    prisma.genre.findMany({
+      orderBy: { name: 'asc' },
+      include: { _count: { select: { bds: true } } },
+      skip: (page - 1) * ADMIN_PAGE_SIZE,
+      take: ADMIN_PAGE_SIZE,
+      where,
+    }),
+    prisma.genre.count({ where }),
+  ]);
+  return {
+    data: genres as GenresTable[],
+    totalPages: Math.ceil(total / ADMIN_PAGE_SIZE),
+  };
+}
+
+export async function fetchGenreById(id: string) {
+  await connection();
+  return prisma.genre.findFirst({
+    where: { id },
+    include: {
+      _count: { select: { bds: true } },
+      bds: {
+        select: {
+          bd: {
+            select: {
+              id: true, title: true,
+              authors: { select: { author: { select: { id: true, name: true } } } },
+            },
+          },
+        },
+        orderBy: { bd: { title: 'asc' } },
+      },
+    },
+  });
+}
+
+export type TopGenre = {
+  id: string;
+  name: string;
+  _count: { bds: number };
+};
+
+export async function fetchTopGenres(limit: number = 10): Promise<TopGenre[]> {
+  await connection();
+  return prisma.genre.findMany({
+    select: {
+      id: true,
+      name: true,
+      _count: { select: { bds: true } },
+    },
+    orderBy: { bds: { _count: 'desc' } },
+    take: limit,
+  });
 }
 
 // ---------- Instagram Posts ----------

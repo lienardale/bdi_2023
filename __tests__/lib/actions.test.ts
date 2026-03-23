@@ -42,6 +42,14 @@ vi.mock('@/app/lib/prisma', () => ({
     bdEvent: {
       deleteMany: vi.fn(),
     },
+    bdGenre: {
+      deleteMany: vi.fn(),
+    },
+    genre: {
+      create: vi.fn(),
+      update: vi.fn(),
+      delete: vi.fn(),
+    },
     author: {
       create: vi.fn(),
       update: vi.fn(),
@@ -85,7 +93,7 @@ const mockAuth = vi.mocked(auth);
 // FormData.get() returns null for missing keys, so we must set all fields.
 const BD_DEFAULTS: Record<string, string> = {
   title: '', eventIds: '', publisherId: '', publishing_year: '',
-  authorIds: '', ean: '', summary: '', publication_date: '',
+  authorIds: '', genreIds: '', ean: '', summary: '', publication_date: '',
   page_count: '', price: '', cover_url: '', publisher_url: '', leslibraires_url: '',
 };
 
@@ -329,9 +337,9 @@ describe('Server Actions', () => {
       expect(revalidatePath).toHaveBeenCalledWith('/admin/events');
     });
 
-    it('updateBd syncs author and event relationships', async () => {
+    it('updateBd syncs author, event and genre relationships', async () => {
       vi.mocked(prisma.bd.update).mockResolvedValue({} as any);
-      const fd = makeFormData({ title: 'Updated BD', eventIds: '["ev-id"]', authorIds: 'a1,a2' }, BD_DEFAULTS);
+      const fd = makeFormData({ title: 'Updated BD', eventIds: '["ev-id"]', authorIds: 'a1,a2', genreIds: '["g1"]' }, BD_DEFAULTS);
       const result = await updateBd('bd-id', {}, fd);
       expect(result.success).toBe(true);
       expect(prisma.bd.update).toHaveBeenCalledWith({
@@ -344,6 +352,10 @@ describe('Server Actions', () => {
           events: {
             deleteMany: {},
             create: [{ eventId: 'ev-id' }],
+          },
+          genres: {
+            deleteMany: {},
+            create: [{ genreId: 'g1' }],
           },
         }),
       });
@@ -374,13 +386,15 @@ describe('Server Actions', () => {
       expect(revalidatePath).toHaveBeenCalledWith('/admin/events');
     });
 
-    it('deleteBd removes author and event relations first', async () => {
+    it('deleteBd removes author, event and genre relations first', async () => {
       vi.mocked(prisma.bdAuthor.deleteMany).mockResolvedValue({} as any);
       vi.mocked(prisma.bdEvent.deleteMany).mockResolvedValue({} as any);
+      vi.mocked(prisma.bdGenre.deleteMany).mockResolvedValue({} as any);
       vi.mocked(prisma.bd.delete).mockResolvedValue({} as any);
       await deleteBd('bd-id');
       expect(prisma.bdAuthor.deleteMany).toHaveBeenCalledWith({ where: { bdId: 'bd-id' } });
       expect(prisma.bdEvent.deleteMany).toHaveBeenCalledWith({ where: { bdId: 'bd-id' } });
+      expect(prisma.bdGenre.deleteMany).toHaveBeenCalledWith({ where: { bdId: 'bd-id' } });
       expect(prisma.bd.delete).toHaveBeenCalledWith({ where: { id: 'bd-id' } });
     });
 

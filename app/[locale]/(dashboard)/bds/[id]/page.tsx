@@ -3,6 +3,7 @@ import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getLocale } from "next-intl/server";
 import { formatDate } from "@/app/lib/utils";
+import { Badge } from "@/app/ui/shadcn/badge";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -58,6 +59,13 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
           )}
           {bd.price && (
             <p className="text-sm text-muted-foreground">{Number(bd.price).toFixed(2)} €</p>
+          )}
+          {bd.genres.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {bd.genres.map(({ genre }) => (
+                <Badge key={genre.id} variant="secondary">{genre.name}</Badge>
+              ))}
+            </div>
           )}
         </div>
       </div>

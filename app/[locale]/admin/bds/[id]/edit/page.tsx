@@ -6,11 +6,12 @@ import { notFound } from 'next/navigation';
 
 export default async function EditBdPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const [bd, events, authors, publishers] = await Promise.all([
+  const [bd, events, authors, publishers, genres] = await Promise.all([
     fetchBdById(id),
     prisma.event.findMany({ orderBy: { date: 'desc' }, select: { id: true, name: true } }),
     prisma.author.findMany({ orderBy: { name: 'asc' }, select: { id: true, name: true } }),
     prisma.publisher.findMany({ orderBy: { name: 'asc' }, select: { id: true, name: true } }),
+    prisma.genre.findMany({ orderBy: { name: 'asc' }, select: { id: true, name: true } }),
   ]);
 
   if (!bd) notFound();
@@ -26,7 +27,7 @@ export default async function EditBdPage({ params }: { params: Promise<{ id: str
           { label: 'Modifier', href: `/admin/bds/${id}/edit`, active: true },
         ]}
       />
-      <BdForm bd={serializedBd} events={events} authors={authors} publishers={publishers} />
+      <BdForm bd={serializedBd} events={events} authors={authors} publishers={publishers} genres={genres} />
     </main>
   );
 }

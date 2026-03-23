@@ -70,8 +70,7 @@
     "price": "Prix (€)",
     "priceShort": "Prix",
     "pages": "Pages",
-    "genre": "Genre",
-    "subGenre": "Sous genre",
+    "genres": "Genres",
     "buy": "Acheter"
   },
   "authors": {
@@ -99,7 +98,8 @@
     "year": "Année",
     "event": "Événement",
     "publisher": "Maison d'Édition",
-    "author": "Auteur·ice"
+    "author": "Auteur·ice",
+    "genre": "Genre"
   },
   "contact": {
     "title": "Contact",
@@ -133,7 +133,9 @@
     "importButton": "Importer",
     "importError": "Erreur lors de l'import.",
     "viewOnSite": "Voir sur le site",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "genres": "Genres",
+    "exportGenres": "Exporter les genres"
   },
   "adminInstagram": {
     "title": "Posts Instagram",
@@ -163,6 +165,16 @@
     "medianPages": "Pages (médiane)",
     "medianPrice": "Prix (médiane)",
     "topAuthors": "Top 10 Auteur·ices",
-    "topPublishers": "Top 10 Maisons d'Édition"
+    "topPublishers": "Top 10 Maisons d'Édition",
+    "totalGenres": "Total Genres",
+    "topGenres": "Top 10 Genres"
+  },
+  "genres": {
+    "title": "Genres",
+    "name": "Nom",
+    "bdCount": "Nombre de BDs",
+    "noBds": "Aucune BD pour ce genre.",
+    "create": "Créer un genre",
+    "edit": "Modifier le genre"
   }
 }

@@ -7,6 +7,7 @@ import {
   CameraIcon,
   ChatBubbleLeftIcon,
   HomeIcon,
+  TagIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
 import { Link, usePathname } from '@/i18n/routing';
@@ -23,6 +24,7 @@ export default function AdminSidebar() {
     { name: t('events'), href: '/admin/events' as const, icon: CalendarIcon },
     { name: t('bds'), href: '/admin/bds' as const, icon: ChatBubbleLeftIcon },
     { name: t('authors'), href: '/admin/authors' as const, icon: UserGroupIcon },
+    { name: tAdmin('genres'), href: '/admin/genres' as const, icon: TagIcon },
     { name: t('publishers'), href: '/admin/publishers' as const, icon: BookOpenIcon },
     { name: tAdmin('instagram'), href: '/admin/instagram' as const, icon: CameraIcon },
     { name: tAdmin('importExport'), href: '/admin/import-export' as const, icon: ArrowsRightLeftIcon },

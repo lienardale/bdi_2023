@@ -106,6 +106,7 @@ const BdSchema = z.object({
   publisherId: z.string().optional(),
   publishing_year: z.coerce.number().optional(),
   authorIds: z.string().optional(),
+  genreIds: z.string().optional(),
   ean: z.string().max(13).optional(),
   summary: z.string().optional(),
   publication_date: z.string().optional(),
@@ -130,6 +131,7 @@ export async function createBd(prevState: BdState, formData: FormData) {
     publisherId: formData.get('publisherId'),
     publishing_year: formData.get('publishing_year') || undefined,
     authorIds: formData.get('authorIds'),
+    genreIds: formData.get('genreIds'),
     ean: formData.get('ean'),
     summary: formData.get('summary'),
     publication_date: formData.get('publication_date'),
@@ -144,9 +146,10 @@ export async function createBd(prevState: BdState, formData: FormData) {
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { title, eventIds, publisherId, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
+  const { title, eventIds, publisherId, publishing_year, authorIds, genreIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
   const authorIdList = authorIds ? authorIds.split(',').filter(Boolean) : [];
   const eventIdList: string[] = eventIds ? JSON.parse(eventIds) : [];
+  const genreIdList: string[] = genreIds ? JSON.parse(genreIds) : [];
 
   try {
     await prisma.bd.create({
@@ -168,6 +171,9 @@ export async function createBd(prevState: BdState, formData: FormData) {
         events: {
           create: eventIdList.map(eventId => ({ eventId })),
         },
+        genres: {
+          create: genreIdList.map(genreId => ({ genreId })),
+        },
       },
     });
   } catch (error) {
@@ -187,6 +193,7 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
     publisherId: formData.get('publisherId'),
     publishing_year: formData.get('publishing_year') || undefined,
     authorIds: formData.get('authorIds'),
+    genreIds: formData.get('genreIds'),
     ean: formData.get('ean'),
     summary: formData.get('summary'),
     publication_date: formData.get('publication_date'),
@@ -201,9 +208,10 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { title, eventIds, publisherId, publishing_year, authorIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
+  const { title, eventIds, publisherId, publishing_year, authorIds, genreIds, ean, summary, publication_date, page_count, price, cover_url, publisher_url, leslibraires_url } = validatedFields.data;
   const authorIdList = authorIds ? authorIds.split(',').filter(Boolean) : [];
   const eventIdList: string[] = eventIds ? JSON.parse(eventIds) : [];
+  const genreIdList: string[] = genreIds ? JSON.parse(genreIds) : [];
 
   try {
     await prisma.bd.update({
@@ -228,6 +236,10 @@ export async function updateBd(id: string, prevState: BdState, formData: FormDat
           deleteMany: {},
           create: eventIdList.map(eventId => ({ eventId })),
         },
+        genres: {
+          deleteMany: {},
+          create: genreIdList.map(genreId => ({ genreId })),
+        },
       },
     });
   } catch (error) {
@@ -244,6 +256,7 @@ export async function deleteBd(id: string): Promise<void> {
   try {
     await prisma.bdAuthor.deleteMany({ where: { bdId: id } });
     await prisma.bdEvent.deleteMany({ where: { bdId: id } });
+    await prisma.bdGenre.deleteMany({ where: { bdId: id } });
     await prisma.bd.delete({ where: { id } });
   } catch (error) {
     console.error('Delete BD error:', error);
@@ -409,6 +422,73 @@ export async function deletePublisher(id: string): Promise<void> {
     console.error('Delete publisher error:', error);
   }
   revalidatePath('/admin/publishers');
+}
+
+// Genre actions
+
+const GenreSchema = z.object({
+  name: z.string().min(1, 'Le nom est requis'),
+});
+
+export type GenreState = {
+  errors?: { name?: string[] };
+  message?: string | null;
+  success?: boolean;
+};
+
+export async function createGenre(prevState: GenreState, formData: FormData) {
+  await requireAdmin();
+  const validatedFields = GenreSchema.safeParse({
+    name: formData.get('name'),
+  });
+
+  if (!validatedFields.success) {
+    return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
+  }
+
+  const { name } = validatedFields.data;
+  try {
+    await prisma.genre.create({ data: { name } });
+  } catch (error) {
+    return { message: 'Erreur: impossible de créer le genre.' };
+  }
+
+  revalidatePath('/admin/genres');
+  redirect(await localizedPath('/admin/genres'));
+}
+
+export async function updateGenre(id: string, prevState: GenreState, formData: FormData) {
+  await requireAdmin();
+  const validatedFields = GenreSchema.safeParse({
+    name: formData.get('name'),
+  });
+
+  if (!validatedFields.success) {
+    return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
+  }
+
+  const { name } = validatedFields.data;
+  try {
+    await prisma.genre.update({ where: { id }, data: { name } });
+  } catch (error) {
+    return { message: 'Erreur: impossible de mettre à jour le genre.' };
+  }
+
+  revalidatePath('/admin/genres');
+  revalidatePath('/bds');
+  return { success: true, message: 'Genre mis à jour.' };
+}
+
+export async function deleteGenre(id: string): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.bdGenre.deleteMany({ where: { genreId: id } });
+    await prisma.genre.delete({ where: { id } });
+  } catch (error) {
+    console.error('Delete genre error:', error);
+  }
+  revalidatePath('/admin/genres');
+  revalidatePath('/bds');
 }
 
 // Instagram Post actions

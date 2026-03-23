@@ -24,6 +24,10 @@ vi.mock('@/app/lib/prisma', () => ({
       findMany: vi.fn(),
       count: vi.fn(),
     },
+    genre: {
+      findMany: vi.fn(),
+      count: vi.fn(),
+    },
   },
 }));
 
@@ -81,6 +85,7 @@ describe('fetchAggregateStats', () => {
     vi.mocked(prisma.author.count).mockResolvedValue(50);
     vi.mocked(prisma.event.count).mockResolvedValue(20);
     vi.mocked(prisma.publisher.count).mockResolvedValue(15);
+    vi.mocked(prisma.genre.count).mockResolvedValue(8);
     vi.mocked(prisma.bd.aggregate).mockResolvedValue({
       _sum: { page_count: 4800 },
     } as any);
@@ -104,6 +109,7 @@ describe('fetchAggregateStats', () => {
     expect(result.totalAuthors).toBe(50);
     expect(result.totalEvents).toBe(20);
     expect(result.totalPublishers).toBe(15);
+    expect(result.totalGenres).toBe(8);
     expect(result.totalPages).toBe(4800);
     expect(result.medianPages).toBe(48);
     expect(result.medianPrice).toBe(12.50);
@@ -114,6 +120,7 @@ describe('fetchAggregateStats', () => {
     vi.mocked(prisma.author.count).mockResolvedValue(0);
     vi.mocked(prisma.event.count).mockResolvedValue(0);
     vi.mocked(prisma.publisher.count).mockResolvedValue(0);
+    vi.mocked(prisma.genre.count).mockResolvedValue(0);
     vi.mocked(prisma.bd.aggregate).mockResolvedValue({
       _sum: { page_count: null },
     } as any);

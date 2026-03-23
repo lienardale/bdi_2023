@@ -12,6 +12,7 @@
     "consolidate:publishers": "npx tsx scripts/consolidate-publishers.ts",
     "export:split": "npx tsx scripts/export-split-csv.ts",
     "apply:review": "npx tsx scripts/apply-review-fixes.ts",
+    "enrich:genres": "npx tsx scripts/enrich-genres.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "postinstall": "prisma generate"

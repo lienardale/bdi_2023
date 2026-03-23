@@ -73,6 +73,13 @@ export default function ImportExportClient({ canImport }: { canImport: boolean }
             >
               {t('exportPublishers')}
             </a>
+            <a
+              href="/api/admin/export/genres"
+              download
+              className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
+            >
+              {t('exportGenres')}
+            </a>
           </div>
         </div>
 
@@ -94,6 +101,7 @@ export default function ImportExportClient({ canImport }: { canImport: boolean }
                   <option value="events">{tCommon('events')}</option>
                   <option value="bds">{tCommon('bds')}</option>
                   <option value="authors">{tCommon('authors')}</option>
+                  <option value="genres">{t('genres')}</option>
                 </select>
               </div>
               <div>
