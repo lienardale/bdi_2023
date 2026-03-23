@@ -33,8 +33,10 @@ function shortenAddress(result: NominatimResult): string {
 
 export default function PlaceAutocomplete({
   defaultValue = '',
+  onValueChange,
 }: {
   defaultValue?: string;
+  onValueChange?: (value: string) => void;
 }) {
   const t = useTranslations('events');
   const [query, setQuery] = useState(defaultValue);
@@ -67,12 +69,15 @@ export default function PlaceAutocomplete({
 
   const handleChange = (value: string) => {
     setQuery(value);
+    onValueChange?.(value);
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => search(value), 300);
   };
 
   const select = (result: NominatimResult) => {
-    setQuery(shortenAddress(result));
+    const short = shortenAddress(result);
+    setQuery(short);
+    onValueChange?.(short);
     setIsOpen(false);
     setResults([]);
   };

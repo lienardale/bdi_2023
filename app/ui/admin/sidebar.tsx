@@ -6,6 +6,7 @@ import {
   CalendarIcon,
   CameraIcon,
   ChatBubbleLeftIcon,
+  DocumentIcon,
   HomeIcon,
   TagIcon,
   UserGroupIcon,
@@ -18,10 +19,12 @@ export default function AdminSidebar() {
   const pathname = usePathname();
   const t = useTranslations('common');
   const tAdmin = useTranslations('admin');
+  const tWizard = useTranslations('wizard');
 
   const links = [
     { name: tAdmin('dashboard'), href: '/admin' as const, icon: HomeIcon },
     { name: t('events'), href: '/admin/events' as const, icon: CalendarIcon },
+    { name: tWizard('drafts'), href: '/admin/drafts' as const, icon: DocumentIcon },
     { name: t('bds'), href: '/admin/bds' as const, icon: ChatBubbleLeftIcon },
     { name: t('authors'), href: '/admin/authors' as const, icon: UserGroupIcon },
     { name: tAdmin('genres'), href: '/admin/genres' as const, icon: TagIcon },
