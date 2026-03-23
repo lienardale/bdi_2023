@@ -98,6 +98,31 @@ export async function fetchGenreOptions(): Promise<{ id: string; name: string }[
   });
 }
 
+export async function fetchBdOptions(): Promise<{ id: string; title: string }[]> {
+  await connection();
+  return prisma.bd.findMany({
+    select: { id: true, title: true },
+    orderBy: { title: 'asc' },
+  });
+}
+
+export async function fetchWizardDrafts(email: string) {
+  await connection();
+  return prisma.wizardDraft.findMany({
+    where: { email },
+    select: { id: true, name: true, data: true, updatedAt: true },
+    orderBy: { updatedAt: 'desc' },
+  });
+}
+
+export async function fetchWizardDraftById(id: string) {
+  await connection();
+  return prisma.wizardDraft.findUnique({
+    where: { id },
+    select: { id: true, name: true, data: true, updatedAt: true },
+  });
+}
+
 // --- Filtered queries with cross-entity search ---
 
 export async function fetchFilteredEvents(query: string, year?: number, sort?: string, order?: string) {

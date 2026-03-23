@@ -46,6 +46,53 @@ export type BdsTable = {
   leslibraires_url: string | null;
 }
 
+// Wizard types
+
+export type WizardBdEntry = {
+  tempId: string;
+  mode: 'existing' | 'new';
+  existingId?: string;
+  title?: string;
+  publisherId?: string;
+  publisherMode?: 'existing' | 'new';
+  newPublisherName?: string;
+  publishing_year?: number;
+  ean?: string;
+  summary?: string;
+  cover_url?: string;
+  publisher_url?: string;
+  leslibraires_url?: string;
+  publication_date?: string;
+  page_count?: number;
+  price?: number;
+  genreIds?: string[];
+};
+
+export type WizardAuthorEntry = {
+  tempId: string;
+  mode: 'existing' | 'new';
+  existingId?: string;
+  name?: string;
+  bio?: string;
+  photo_url?: string;
+  wikipedia_url?: string;
+  bdTempIds?: string[];
+};
+
+export type WizardEvent = {
+  name: string;
+  date: string;
+  hour: string;
+  place: string;
+  fb_event: string;
+};
+
+export type WizardData = {
+  event: WizardEvent;
+  bds: WizardBdEntry[];
+  authors: WizardAuthorEntry[];
+};
+
 export type EventsTable = {
   id: string;
   name: string;

@@ -491,6 +491,270 @@ export async function deleteGenre(id: string): Promise<void> {
   revalidatePath('/bds');
 }
 
+// Event Wizard action
+
+const WizardBdSchema = z.object({
+  mode: z.enum(['existing', 'new']),
+  existingId: z.string().optional(),
+  title: z.string().optional(),
+  publisherId: z.string().optional(),
+  publisherMode: z.enum(['existing', 'new']).optional(),
+  newPublisherName: z.string().optional(),
+  publishing_year: z.coerce.number().optional(),
+  ean: z.string().max(13).optional(),
+  summary: z.string().optional(),
+  cover_url: z.string().optional(),
+  publisher_url: z.string().optional(),
+  leslibraires_url: z.string().optional(),
+  publication_date: z.string().optional(),
+  page_count: z.coerce.number().optional(),
+  price: z.coerce.number().optional(),
+  genreIds: z.array(z.string()).optional(),
+});
+
+const WizardAuthorSchema = z.object({
+  tempId: z.string(),
+  mode: z.enum(['existing', 'new']),
+  existingId: z.string().optional(),
+  name: z.string().optional(),
+  bio: z.string().optional(),
+  photo_url: z.string().optional(),
+  wikipedia_url: z.string().optional(),
+  bdTempIds: z.array(z.string()).optional(),
+});
+
+const WizardPayloadSchema = z.object({
+  event: z.object({
+    name: z.string().min(1, 'Le nom est requis'),
+    date: z.string().min(1, 'La date est requise'),
+    hour: z.string().optional(),
+    place: z.string().optional(),
+    fb_event: z.string().optional(),
+  }),
+  bds: z.array(z.object({
+    tempId: z.string(),
+    ...WizardBdSchema.shape,
+  })),
+  authors: z.array(WizardAuthorSchema),
+});
+
+export type WizardActionState = {
+  message?: string | null;
+  success?: boolean;
+  eventId?: string;
+};
+
+export async function createEventWithRelations(
+  prevState: WizardActionState,
+  formData: FormData,
+): Promise<WizardActionState> {
+  await requireAdmin();
+
+  let payload;
+  try {
+    payload = JSON.parse(formData.get('payload') as string);
+  } catch {
+    return { message: 'Payload invalide.' };
+  }
+
+  const parsed = WizardPayloadSchema.safeParse(payload);
+  if (!parsed.success) {
+    return { message: 'Données invalides: ' + parsed.error.issues.map(i => i.message).join(', ') };
+  }
+
+  const { event, bds, authors } = parsed.data;
+
+  try {
+    await prisma.$transaction(async (tx) => {
+      // 1. Create new publishers
+      const publisherMap = new Map<string, string>(); // tempId -> dbId (using bd tempId)
+      for (const bd of bds) {
+        if (bd.mode === 'new' && bd.publisherMode === 'new' && bd.newPublisherName) {
+          const existing = await tx.publisher.findFirst({ where: { name: bd.newPublisherName } });
+          if (existing) {
+            publisherMap.set(bd.tempId, existing.id);
+          } else {
+            const pub = await tx.publisher.create({ data: { name: bd.newPublisherName } });
+            publisherMap.set(bd.tempId, pub.id);
+          }
+        }
+      }
+
+      // 2. Create new authors
+      const authorIdMap = new Map<string, string>(); // tempId -> dbId
+      for (const author of authors) {
+        if (author.mode === 'existing' && author.existingId) {
+          authorIdMap.set(author.tempId, author.existingId);
+        } else if (author.mode === 'new' && author.name) {
+          const existing = await tx.author.findFirst({ where: { name: author.name } });
+          if (existing) {
+            authorIdMap.set(author.tempId, existing.id);
+          } else {
+            const a = await tx.author.create({
+              data: {
+                name: author.name,
+                bio: author.bio || null,
+                photo_url: author.photo_url || null,
+                wikipedia_url: author.wikipedia_url || null,
+              },
+            });
+            authorIdMap.set(author.tempId, a.id);
+          }
+        }
+      }
+
+      // 3. Create the event
+      const createdEvent = await tx.event.create({
+        data: {
+          name: event.name,
+          date: new Date(event.date),
+          hour: event.hour || null,
+          place: event.place || null,
+          fb_event: event.fb_event || null,
+        },
+      });
+
+      // 4. Create new BDs and link to event
+      const bdIdMap = new Map<string, string>(); // tempId -> dbId
+      for (const bd of bds) {
+        if (bd.mode === 'existing' && bd.existingId) {
+          bdIdMap.set(bd.tempId, bd.existingId);
+          await tx.bdEvent.create({
+            data: { bdId: bd.existingId, eventId: createdEvent.id },
+          });
+        } else if (bd.mode === 'new' && bd.title) {
+          let pubId = bd.publisherId || null;
+          if (bd.publisherMode === 'new' && publisherMap.has(bd.tempId)) {
+            pubId = publisherMap.get(bd.tempId)!;
+          }
+
+          const genreIdList = bd.genreIds ?? [];
+          const createdBd = await tx.bd.create({
+            data: {
+              title: bd.title,
+              publisherId: pubId,
+              publishing_year: bd.publishing_year || null,
+              ean: bd.ean || null,
+              summary: bd.summary || null,
+              cover_url: bd.cover_url || null,
+              publisher_url: bd.publisher_url || null,
+              leslibraires_url: bd.leslibraires_url || null,
+              publication_date: bd.publication_date ? new Date(bd.publication_date) : null,
+              page_count: bd.page_count || null,
+              price: bd.price || null,
+              events: { create: [{ eventId: createdEvent.id }] },
+              genres: { create: genreIdList.map(genreId => ({ genreId })) },
+            },
+          });
+          bdIdMap.set(bd.tempId, createdBd.id);
+        }
+      }
+
+      // 5. Link authors to event + BDs
+      for (const author of authors) {
+        const authorDbId = authorIdMap.get(author.tempId);
+        if (!authorDbId) continue;
+
+        // Link author to event
+        await tx.authorEvent.create({
+          data: { authorId: authorDbId, eventId: createdEvent.id },
+        });
+
+        // Link author to BDs
+        for (const bdTempId of author.bdTempIds ?? []) {
+          const bdDbId = bdIdMap.get(bdTempId);
+          if (bdDbId) {
+            const exists = await tx.bdAuthor.findFirst({
+              where: { authorId: authorDbId, bdId: bdDbId },
+            });
+            if (!exists) {
+              await tx.bdAuthor.create({
+                data: { authorId: authorDbId, bdId: bdDbId },
+              });
+            }
+          }
+        }
+      }
+
+    });
+  } catch (error) {
+    console.error('Wizard error:', error);
+    return { message: 'Erreur lors de la création.' };
+  }
+
+  // Delete draft on success
+  const draftId = formData.get('draftId') as string | null;
+  if (draftId) {
+    await prisma.wizardDraft.delete({ where: { id: draftId } }).catch(() => {});
+  }
+
+  revalidatePath('/admin/drafts');
+  revalidatePath('/admin/events');
+  revalidatePath('/events');
+  revalidatePath('/admin/bds');
+  revalidatePath('/bds');
+  revalidatePath('/admin/authors');
+  revalidatePath('/authors');
+  redirect(await localizedPath('/admin/events'));
+}
+
+// Wizard draft actions
+
+export type DraftState = {
+  message?: string | null;
+  success?: boolean;
+  draftId?: string;
+};
+
+export async function saveWizardDraft(
+  prevState: DraftState,
+  formData: FormData,
+): Promise<DraftState> {
+  await requireAdmin();
+  const { auth } = await import('@/auth');
+  const session = await auth();
+  const email = session?.user?.email;
+  if (!email) return { message: 'Non authentifié.' };
+
+  let data;
+  try {
+    data = JSON.parse(formData.get('payload') as string);
+  } catch {
+    return { message: 'Payload invalide.' };
+  }
+
+  const draftId = formData.get('draftId') as string | null;
+  const name = (data?.event?.name as string) || 'Brouillon';
+
+  try {
+    if (draftId) {
+      await prisma.wizardDraft.update({
+        where: { id: draftId },
+        data: { name, data },
+      });
+      return { success: true, message: 'Brouillon sauvegardé.', draftId };
+    } else {
+      const created = await prisma.wizardDraft.create({
+        data: { email, name, data },
+      });
+      return { success: true, message: 'Brouillon sauvegardé.', draftId: created.id };
+    }
+  } catch (error) {
+    console.error('Save draft error:', error);
+    return { message: 'Erreur lors de la sauvegarde.' };
+  }
+}
+
+export async function deleteWizardDraft(id: string): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.wizardDraft.delete({ where: { id } });
+  } catch (error) {
+    console.error('Delete draft error:', error);
+  }
+  revalidatePath('/admin/drafts');
+}
+
 // Instagram Post actions
 
 const InstagramPostSchema = z.object({
