@@ -7,6 +7,7 @@ import { createGenre, updateGenre, GenreState } from '@/app/lib/actions';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 type Bd = { id: string; title: string };
 
@@ -22,11 +23,11 @@ export default function GenreForm({
   const [state, dispatch] = useActionState<GenreState, FormData>(action, initialState);
   const t = useTranslations('genres');
   const tCommon = useTranslations('common');
-  const tBds = useTranslations('bds');
   const [isDirty, setIsDirty] = useState(false);
   const [selectedBdIds, setSelectedBdIds] = useState<string[]>(
     genre?.bds?.map(b => b.bd.id) || []
   );
+  const [searchTerm, setSearchTerm] = useState('');
   const [prevState, setPrevState] = useState(state);
 
   if (prevState !== state) {
@@ -44,6 +45,17 @@ export default function GenreForm({
     }
   }, [state]);
 
+  const filteredBds = bds.filter((bd) =>
+    bd.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const toggleBd = (bdId: string) => {
+    setSelectedBdIds((prev) =>
+      prev.includes(bdId) ? prev.filter((id) => id !== bdId) : [...prev, bdId]
+    );
+    setIsDirty(true);
+  };
+
   return (
     <form action={dispatch} onChange={() => setIsDirty(true)}>
       <div className="rounded-md bg-card p-4 md:p-6 border border-border">
@@ -59,14 +71,35 @@ export default function GenreForm({
         <div className="mb-4">
           <label className="mb-2 block text-sm font-medium">{t('associatedBds')}</label>
           <input type="hidden" name="bdIds" value={JSON.stringify(selectedBdIds)} />
-          <select multiple value={selectedBdIds}
-            onChange={(e) => { setSelectedBdIds(Array.from(e.target.selectedOptions, o => o.value)); setIsDirty(true); }}
-            className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm min-h-[120px]">
-            {bds.map((bd) => (
-              <option key={bd.id} value={bd.id}>{bd.title}</option>
+          <div className="relative mb-2">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder={t('searchBds')}
+              className="block w-full rounded-md border border-input bg-background py-2 pl-10 pr-3 text-sm placeholder:text-muted-foreground"
+            />
+            <MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-muted-foreground" />
+          </div>
+          <p className="mb-1 text-xs text-muted-foreground">
+            {t('selectedCount', { count: selectedBdIds.length })}
+          </p>
+          <div className="max-h-60 overflow-y-auto rounded-md border border-input bg-background p-1">
+            {filteredBds.map((bd) => (
+              <label
+                key={bd.id}
+                className="flex items-center gap-2 rounded px-2 py-1.5 text-sm hover:bg-muted cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  checked={selectedBdIds.includes(bd.id)}
+                  onChange={() => toggleBd(bd.id)}
+                  className="h-4 w-4 rounded border-input"
+                />
+                {bd.title}
+              </label>
             ))}
-          </select>
-          <p className="mt-1 text-xs text-muted-foreground">{tBds('multiSelectHint')}</p>
+          </div>
         </div>
 
         {state.message && (
