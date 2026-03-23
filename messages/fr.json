@@ -176,7 +176,9 @@
     "noBds": "Aucune BD pour ce genre.",
     "create": "Créer un genre",
     "edit": "Modifier le genre",
-    "associatedBds": "BDs associées"
+    "associatedBds": "BDs associées",
+    "searchBds": "Rechercher une BD...",
+    "selectedCount": "{count} BD(s) sélectionnée(s)"
   },
   "wizard": {
     "title": "Nouvel Événement",

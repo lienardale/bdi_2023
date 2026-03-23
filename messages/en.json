@@ -176,7 +176,9 @@
     "noBds": "No comics for this genre.",
     "create": "Create genre",
     "edit": "Edit genre",
-    "associatedBds": "Associated comics"
+    "associatedBds": "Associated comics",
+    "searchBds": "Search comics...",
+    "selectedCount": "{count} comic(s) selected"
   },
   "wizard": {
     "title": "New Event",
