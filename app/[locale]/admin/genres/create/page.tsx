@@ -1,7 +1,9 @@
 import Breadcrumbs from '@/app/ui/admin/breadcrumbs';
 import GenreForm from '@/app/ui/admin/genres/genre-form';
+import { fetchBdOptions } from '@/app/lib/data';
 
 export default async function CreateGenrePage() {
+  const bds = await fetchBdOptions();
   return (
     <main>
       <Breadcrumbs
@@ -10,7 +12,7 @@ export default async function CreateGenrePage() {
           { label: 'Créer', href: '/admin/genres/create', active: true },
         ]}
       />
-      <GenreForm />
+      <GenreForm bds={bds} />
     </main>
   );
 }

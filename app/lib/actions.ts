@@ -447,13 +447,21 @@ export async function createGenre(prevState: GenreState, formData: FormData) {
   }
 
   const { name } = validatedFields.data;
+  const bdIds = formData.get('bdIds');
+  const bdIdList: string[] = bdIds ? JSON.parse(bdIds as string) : [];
   try {
-    await prisma.genre.create({ data: { name } });
+    await prisma.genre.create({
+      data: {
+        name,
+        bds: { create: bdIdList.map(bdId => ({ bdId })) },
+      },
+    });
   } catch (error) {
     return { message: 'Erreur: impossible de créer le genre.' };
   }
 
   revalidatePath('/admin/genres');
+  revalidatePath('/bds');
   redirect(await localizedPath('/admin/genres'));
 }
 
@@ -468,8 +476,19 @@ export async function updateGenre(id: string, prevState: GenreState, formData: F
   }
 
   const { name } = validatedFields.data;
+  const bdIds = formData.get('bdIds');
+  const bdIdList: string[] = bdIds ? JSON.parse(bdIds as string) : [];
   try {
-    await prisma.genre.update({ where: { id }, data: { name } });
+    await prisma.genre.update({
+      where: { id },
+      data: {
+        name,
+        bds: {
+          deleteMany: {},
+          create: bdIdList.map(bdId => ({ bdId })),
+        },
+      },
+    });
   } catch (error) {
     return { message: 'Erreur: impossible de mettre à jour le genre.' };
   }
