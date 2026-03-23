@@ -8,17 +8,25 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
+type Bd = { id: string; title: string };
+
 export default function GenreForm({
   genre,
+  bds = [],
 }: {
-  genre?: { id: string; name: string };
+  genre?: { id: string; name: string; bds?: { bd: { id: string; title: string } }[] };
+  bds?: Bd[];
 }) {
   const initialState: GenreState = { message: null, errors: {} };
   const action = genre ? updateGenre.bind(null, genre.id) : createGenre;
   const [state, dispatch] = useActionState<GenreState, FormData>(action, initialState);
   const t = useTranslations('genres');
   const tCommon = useTranslations('common');
+  const tBds = useTranslations('bds');
   const [isDirty, setIsDirty] = useState(false);
+  const [selectedBdIds, setSelectedBdIds] = useState<string[]>(
+    genre?.bds?.map(b => b.bd.id) || []
+  );
   const [prevState, setPrevState] = useState(state);
 
   if (prevState !== state) {
@@ -46,6 +54,19 @@ export default function GenreForm({
           {state.errors?.name && (
             <div className="mt-2 text-sm text-destructive">{state.errors.name.map((e) => <p key={e}>{e}</p>)}</div>
           )}
+        </div>
+
+        <div className="mb-4">
+          <label className="mb-2 block text-sm font-medium">{t('associatedBds')}</label>
+          <input type="hidden" name="bdIds" value={JSON.stringify(selectedBdIds)} />
+          <select multiple value={selectedBdIds}
+            onChange={(e) => { setSelectedBdIds(Array.from(e.target.selectedOptions, o => o.value)); setIsDirty(true); }}
+            className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm min-h-[120px]">
+            {bds.map((bd) => (
+              <option key={bd.id} value={bd.id}>{bd.title}</option>
+            ))}
+          </select>
+          <p className="mt-1 text-xs text-muted-foreground">{tBds('multiSelectHint')}</p>
         </div>
 
         {state.message && (

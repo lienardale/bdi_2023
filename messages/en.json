@@ -175,7 +175,8 @@
     "bdCount": "Comic count",
     "noBds": "No comics for this genre.",
     "create": "Create genre",
-    "edit": "Edit genre"
+    "edit": "Edit genre",
+    "associatedBds": "Associated comics"
   },
   "wizard": {
     "title": "New Event",
