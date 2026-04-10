@@ -4,6 +4,7 @@ import { auth, signOut } from '@/auth';
 import { redirect } from 'next/navigation';
 import { PowerIcon } from '@heroicons/react/24/outline';
 import { getTranslations, getLocale } from 'next-intl/server';
+import { brand } from '@/config/brand';
 
 export default async function AdminLayout({
   children,
@@ -33,8 +34,8 @@ export default async function AdminLayout({
             href="/admin"
           >
             <img
-              src="/logo_bdi.jpg"
-              alt="La Bande des Idées"
+              src={brand.assets.logo}
+              alt={brand.longName}
               className="h-12 md:h-24 object-contain rounded-md"
             />
           </Link>

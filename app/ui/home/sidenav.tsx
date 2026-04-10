@@ -4,6 +4,7 @@ import LanguageSwitcher from '@/app/ui/language-switcher';
 import { ArrowRightOnRectangleIcon, PowerIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 import { auth, signOut } from '@/auth';
 import { getTranslations } from 'next-intl/server';
+import { brand } from '@/config/brand';
 
 export default async function SideNav() {
   const session = await auth();
@@ -17,8 +18,8 @@ export default async function SideNav() {
         href="/"
       >
         <img
-          src="/logo_bdi.jpg"
-          alt="Bande des Idées"
+          src={brand.assets.logo}
+          alt={brand.longName}
           className="h-12 md:h-24 object-contain rounded-md"
         />
       </Link>

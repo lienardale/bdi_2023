@@ -3,7 +3,10 @@
 
 :root {
   --radius: 0.625rem;
+}
 
+/* --- BDI palette --- */
+.brand-bdi {
   --background: #FAFAF8;
   --foreground: #1A1A2E;
 
@@ -43,6 +46,49 @@
   --chart-3: #3B5998;
   --chart-4: #D4A843;
   --chart-5: #C89B30;
+}
+
+/* --- CMBD palette (Marseille: Mediterranean blue / sun gold / terracotta / limestone) --- */
+.brand-cmbd {
+  --background: #FAF7F0;
+  --foreground: #0B1D3A;
+
+  --card: #FFFFFF;
+  --card-foreground: #0B1D3A;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #0B1D3A;
+
+  --primary: #0077B6;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #E07A5F;
+  --secondary-foreground: #FFFFFF;
+
+  --accent: #FFC43D;
+  --accent-foreground: #0B1D3A;
+
+  --muted: #EFE9DC;
+  --muted-foreground: #6B6B6B;
+
+  --destructive: #C1292E;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #E4DED0;
+  --input: #E4DED0;
+  --ring: #0077B6;
+
+  --sidebar: #003566;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: #FFC43D;
+  --sidebar-accent-foreground: #0B1D3A;
+  --sidebar-border: #00243F;
+
+  --chart-1: #0077B6;
+  --chart-2: #2A9D8F;
+  --chart-3: #E07A5F;
+  --chart-4: #FFC43D;
+  --chart-5: #023E8A;
 }
 
 @theme inline {
@@ -120,8 +166,8 @@ table:has(.card-cycle) {
   border-bottom-right-radius: 0.5rem;
 }
 
-/* Cycling card colors for list pages */
-.card-cycle > *:nth-child(4n+1) {
+/* --- Cycling card colors — BDI --- */
+.brand-bdi .card-cycle > *:nth-child(4n+1) {
   --card: #2563EB;
   --primary: #FFFFFF;
   --primary-foreground: #2563EB;
@@ -131,7 +177,7 @@ table:has(.card-cycle) {
   color: #FFFFFF;
 }
 
-.card-cycle > *:nth-child(4n+2) {
+.brand-bdi .card-cycle > *:nth-child(4n+2) {
   --card: #E86833;
   --primary: #FFFFFF;
   --primary-foreground: #E86833;
@@ -141,7 +187,7 @@ table:has(.card-cycle) {
   color: #FFFFFF;
 }
 
-.card-cycle > *:nth-child(4n+3) {
+.brand-bdi .card-cycle > *:nth-child(4n+3) {
   --card: #2B9A8F;
   --primary: #FFFFFF;
   --primary-foreground: #2B9A8F;
@@ -151,7 +197,7 @@ table:has(.card-cycle) {
   color: #FFFFFF;
 }
 
-.card-cycle > *:nth-child(4n+4) {
+.brand-bdi .card-cycle > *:nth-child(4n+4) {
   --card: #F4D35E;
   --primary: #2563EB;
   --primary-foreground: #FFFFFF;
@@ -159,6 +205,47 @@ table:has(.card-cycle) {
   --border: rgba(26, 26, 46, 0.2);
   background-color: #F4D35E;
   color: #1A1A2E;
+}
+
+/* --- Cycling card colors — CMBD --- */
+.brand-cmbd .card-cycle > *:nth-child(4n+1) {
+  --card: #0077B6;
+  --primary: #FFFFFF;
+  --primary-foreground: #0077B6;
+  --muted-foreground: rgba(255, 255, 255, 0.75);
+  --border: rgba(255, 255, 255, 0.2);
+  background-color: #0077B6;
+  color: #FFFFFF;
+}
+
+.brand-cmbd .card-cycle > *:nth-child(4n+2) {
+  --card: #E07A5F;
+  --primary: #FFFFFF;
+  --primary-foreground: #E07A5F;
+  --muted-foreground: rgba(255, 255, 255, 0.80);
+  --border: rgba(255, 255, 255, 0.2);
+  background-color: #E07A5F;
+  color: #FFFFFF;
+}
+
+.brand-cmbd .card-cycle > *:nth-child(4n+3) {
+  --card: #2A9D8F;
+  --primary: #FFFFFF;
+  --primary-foreground: #2A9D8F;
+  --muted-foreground: rgba(255, 255, 255, 0.75);
+  --border: rgba(255, 255, 255, 0.2);
+  background-color: #2A9D8F;
+  color: #FFFFFF;
+}
+
+.brand-cmbd .card-cycle > *:nth-child(4n+4) {
+  --card: #FFC43D;
+  --primary: #003566;
+  --primary-foreground: #FFFFFF;
+  --muted-foreground: rgba(11, 29, 58, 0.70);
+  --border: rgba(11, 29, 58, 0.20);
+  background-color: #FFC43D;
+  color: #0B1D3A;
 }
 
 input[type='number'] {

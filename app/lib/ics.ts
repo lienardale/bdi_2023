@@ -1,3 +1,5 @@
+import { brand } from '@/config/brand';
+
 export function generateIcsContent({
   title,
   date,
@@ -32,14 +34,14 @@ export function generateIcsContent({
     dtEnd = `${next.getFullYear()}${pad(next.getMonth() + 1)}${pad(next.getDate())}`;
   }
 
-  const uid = `${y}${m}${d}-${title.replace(/\s+/g, '-').toLowerCase()}@bdi`;
+  const uid = `${y}${m}${d}-${title.replace(/\s+/g, '-').toLowerCase()}@${brand.icsUidSuffix}`;
   const escapedTitle = title.replace(/[,;\\]/g, (c) => `\\${c}`);
   const escapedPlace = place ? place.replace(/[,;\\]/g, (c) => `\\${c}`) : '';
 
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//BDI//Bande des Idées//FR',
+    `PRODID:${brand.icsPRODID}`,
     'BEGIN:VEVENT',
     `UID:${uid}`,
     hour ? `DTSTART:${dtStart}` : `DTSTART;VALUE=DATE:${dtStart}`,

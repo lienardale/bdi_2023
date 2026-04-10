@@ -3,6 +3,7 @@
 import { lusitana } from '@/app/ui/fonts';
 import { signIn } from 'next-auth/react';
 import { useLocale, useTranslations } from 'next-intl';
+import { brand } from '@/config/brand';
 
 export default function LoginForm() {
   const locale = useLocale();
@@ -11,10 +12,10 @@ export default function LoginForm() {
   return (
     <div className="flex-1 rounded-lg bg-card px-6 pb-4 pt-8 border border-border shadow-sm">
       <div className="flex justify-center mb-4">
-        <img src="/logo_bdi.jpg" alt="BDI" className="h-16 object-contain" />
+        <img src={brand.assets.logo} alt={brand.shortName} className="h-16 object-contain" />
       </div>
       <h1 className={`${lusitana.className} mb-3 text-2xl text-center text-foreground`}>
-        Bande des Idées
+        {brand.longName}
       </h1>
       <p className="mb-6 text-sm text-muted-foreground">
         {t('description')}

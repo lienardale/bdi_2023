@@ -2,13 +2,19 @@ import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Toaster } from 'sonner';
+import { brand } from '@/config/brand';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | La BDI',
-    default: 'La BDI',
+    template: brand.metadataTemplate,
+    default: brand.shortName,
   },
-  description: 'Le site officiel de la Bande des Idées',
+  description: brand.description,
+  icons: {
+    icon: brand.assets.icon,
+    apple: brand.assets.appleIcon,
+    shortcut: brand.assets.favicon,
+  },
 };
 
 export default async function LocaleLayout({
