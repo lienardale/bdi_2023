@@ -31,8 +31,6 @@
     "totalBds": "Total Comics",
     "totalAuthors": "Total Authors",
     "addToCalendar": "Add to calendar",
-    "crowdfundingTitle": "Crowdfunding for La Revue des Idées",
-    "crowdfundingCta": "Support the crowdfunding",
     "instagramFeed": "Follow us on Instagram"
   },
   "events": {
@@ -105,8 +103,7 @@
     "title": "Contact",
     "description": "Feel free to reach out through any of these channels.",
     "email": "Email",
-    "facebookPage": "BDI Facebook page",
-    "instagramProfile": "@labandedesidees"
+    "facebookPage": "{brand} Facebook page"
   },
   "login": {
     "description": "Sign in to access the back-office.",
@@ -120,7 +117,7 @@
     "title": "Administration",
     "backToSite": "Back to site",
     "dashboard": "Admin",
-    "nextEvent": "Next BDI",
+    "nextEvent": "Next event",
     "importExport": "CSV Import / Export",
     "export": "Export",
     "import": "Import",

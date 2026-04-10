@@ -1,5 +1,16 @@
-// Prisma-based seed script for BDI data
-// Usage: node scripts/seedv2.js
+// Prisma-based seed script for BDI data.
+// Usage: npm run seed:bdi  (or: BRAND=bdi node -r dotenv/config scripts/seed-bdi.js)
+//
+// Refuses to run against any other brand's database to avoid seeding BDI
+// content into CMBD (or any future brand).
+
+if (process.env.BRAND && process.env.BRAND !== 'bdi') {
+  console.error(
+    `seed:bdi refuses to run with BRAND="${process.env.BRAND}". Expected BRAND=bdi.`,
+  );
+  process.exit(1);
+}
+
 
 const { PrismaClient } = require("@prisma/client");
 const { events, bds, authors, authorEvents, publishers } = require("../app/lib/placeholder-bdi-data.js");

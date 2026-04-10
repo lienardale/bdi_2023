@@ -10,6 +10,10 @@ jobs:
   ci:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        brand: [bdi, cmbd]
+
     steps:
       - uses: actions/checkout@v4
 
@@ -24,10 +28,12 @@ jobs:
 
       - run: npm test
 
-      - name: Build
+      - name: Build (${{ matrix.brand }})
         run: npm run build
         env:
-          POSTGRES_URL: postgresql://user:pass@localhost:5432/bdi
+          BRAND: ${{ matrix.brand }}
+          NEXT_PUBLIC_BRAND: ${{ matrix.brand }}
+          POSTGRES_URL: postgresql://user:pass@localhost:5432/bd_platform
           AUTH_SECRET: ci-test-secret
           GOOGLE_CLIENT_ID: ci-test
           GOOGLE_CLIENT_SECRET: ci-test

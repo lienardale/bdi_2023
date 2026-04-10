@@ -4,51 +4,74 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Next.js 16 app for **La Bande des Idées** (BDI), a French comic book association. Public-facing site with admin back-office. Tracks events, comic books (BDs), and authors with many-to-many relationships.
+Next.js 16 **multi-brand platform** hosting two French comic-book event sites from a single codebase:
 
-**Stack:** Next.js 16 (App Router), React 19, Prisma 5 + PostgreSQL, NextAuth v5 beta (Google OAuth), next-intl, TailwindCSS 3, Zod, Vitest
+- **La Bande des Idées** (BDI) — long-running association, production Vercel deployment
+- **C'est Marseille BD** (CMBD) — brand-new event, not yet deployed
+
+The active brand is selected at build time via the `BRAND` env var (mirrored in `NEXT_PUBLIC_BRAND` for client-side code). Each brand is a separate Vercel deployment with its own Postgres, its own Google OAuth client, its own domain, but the same shared codebase.
+
+**Stack:** Next.js 16 (App Router), React 19, Prisma 5 + PostgreSQL, NextAuth v5 beta (Google OAuth), next-intl, TailwindCSS 4, Zod, Vitest.
+
+## Brand architecture
+
+The brand module lives at `config/brand/`:
+
+- **`types.ts`** — `Brand`, `ThemeColors`, `CrowdfundingFeature` shapes.
+- **`bdi.ts`** — BDI brand config: names, palette, contact info, social URLs, iCal PRODID, assets paths, `features.crowdfunding` populated.
+- **`cmbd.ts`** — CMBD brand config: same shape, Mediterranean palette, CMBD contact info, no crowdfunding.
+- **`registry.ts`** — `Record<BrandId, Brand>` mapping.
+- **`index.ts`** — reads `NEXT_PUBLIC_BRAND` (or falls back to `BRAND`), validates, exports the resolved `brand` object.
+
+Everything else imports `brand` as:
+
+```ts
+import { brand } from '@/config/brand';
+```
+
+Because `NEXT_PUBLIC_BRAND` is inlined into the client bundle at build time, `brand` works in both server and client components — the resolved object is bundled directly, no runtime `process.env` lookup in the browser.
+
+### Adding a new brand
+
+1. Create `config/brand/<id>.ts` exporting a `Brand` object.
+2. Add it to the `brands` record in `config/brand/registry.ts` and update `BrandId` in `config/brand/types.ts`.
+3. Add the brand CSS palette block to `app/ui/global.css` under a new `.brand-<id>` selector, plus four `.brand-<id> .card-cycle > *:nth-child(4n+N)` rules for the list page rotation.
+4. Add placeholder assets under `public/brands/<id>/` (`logo`, `hero`, `icon.png`, `apple-icon.png`, `favicon.png`) and reference them in the brand's `assets` field.
+5. Set `BRAND=<id>` + `NEXT_PUBLIC_BRAND=<id>` in the deployment's env vars.
+6. Point the deployment at a fresh Postgres with migrations applied.
+
+No other file changes needed — every brand-driven string, colour, asset, and feature flag comes from the brand module.
 
 ## Commands
 
 ```bash
-npm run dev          # Start dev server (webpack mode — required by next-intl)
-npm run build        # Production build (webpack mode)
-npm run lint         # ESLint 9 flat config
-npm run test         # Vitest (142 tests)
-npm run test:watch   # Vitest in watch mode
-npm run seed         # Seed database (scripts/seedv2.js)
+npm run dev:bdi        # Start dev server with BRAND=bdi
+npm run dev:cmbd       # Start dev server with BRAND=cmbd
+npm run build:bdi      # Production build for BDI
+npm run build:cmbd     # Production build for CMBD
+npm run lint           # ESLint 9 flat config
+npm run test           # Vitest
+npm run test:watch     # Vitest watch mode
+npm run seed:bdi       # Seed BDI data (refuses unless BRAND=bdi)
 ```
 
 `postinstall` runs `prisma generate` automatically.
 
-## Testing
-
-Vitest with jsdom environment. Tests live in `__tests__/`:
-
-- `lib/actions.test.ts` — Server Action validation and DB mutations
-- `lib/csv.test.ts` — CSV import/export parsing
-- `lib/ics.test.ts` — iCalendar file generation
-- `i18n/messages.test.ts` — validates fr.json and en.json key parity
-- `integration/routes.test.ts` — route rendering smoke tests
-
-All tests mock Next.js server functions (`redirect`, `revalidatePath`, `auth`). Run `npm test` before pushing.
+Webpack mode is required — next-intl's plugin does not support Turbopack. All `dev` / `build` scripts already pass `--webpack`.
 
 ## Database
 
-Prisma schema at `prisma/schema.prisma`. Connection string via `POSTGRES_URL` env var.
+Prisma schema at `prisma/schema.prisma`. Connection string via `POSTGRES_URL` env var. Each brand deployment targets its own Postgres instance; the schema is identical.
 
-**Core models:**
-- **Event** — name, date (unique), hour, place, fb_event, cover_url
-- **Bd** — title (unique), publisher, publishing_year, publisherId (FK to Publisher); enrichment fields: ean, summary, cover_url, publisher_url, leslibraires_url, publication_date, page_count, price
-- **Author** — name (unique); enrichment fields: bio, bio_source, photo_url, wikipedia_url
-- **Publisher** — name (unique), parentId (self-referential FK for imprints)
+**Core models:** `Event`, `Bd`, `Author`, `Publisher`, `Genre`, `InstagramPost`, `WizardDraft`. Junction tables: `BdAuthor`, `AuthorEvent`, `BdEvent`, `BdGenre`. Prisma client singleton in `app/lib/prisma.ts`.
 
-**Junction tables** for many-to-many:
-- **BdAuthor** — Bd ↔ Author (composite PK: `[authorId, bdId]`)
-- **AuthorEvent** — Author ↔ Event (composite PK: `[authorId, eventId]`)
-- **BdEvent** — Bd ↔ Event (composite PK: `[bdId, eventId]`)
+Local Postgres via `docker compose up -d` (see `docker-compose.yml`) — exposes a single `bd_platform` database. Point `.env.local` at it and run `npx prisma migrate deploy` to create the schema.
 
-Prisma client singleton in `app/lib/prisma.ts` prevents hot-reload connection leaks.
+### Per-brand seed scripts
+
+`scripts/seed-bdi.js` seeds ~92 past BDI events, ~110 authors, ~400 comics from `app/lib/placeholder-bdi-data.js`. It refuses to run if `BRAND != 'bdi'` so it can't accidentally pollute a CMBD database.
+
+CMBD has no seed script — the DB starts empty. Populate via the admin UI or the `/admin/import-export` CSV route.
 
 ## Architecture
 
@@ -57,52 +80,57 @@ Prisma client singleton in `app/lib/prisma.ts` prevents hot-reload connection le
 All routes are i18n-aware under `[locale]` (fr/en, default: fr).
 
 **Public pages** — `(dashboard)/` layout group with `SideNav`:
-- `(overview)` — landing page: hero banner, next event card, stats, Ulule CTA, Instagram embeds
-- `events/`, `events/[id]` — event list and detail
-- `bds/`, `bds/[id]` — BD list and detail
-- `authors/`, `authors/[id]` — author list and detail
-- `contact` — contact page
+- `(overview)` — hero banner (brand-driven), next event card, **conditional** crowdfunding banner (only when `brand.features.crowdfunding` is set), Instagram embeds.
+- `events/`, `events/[id]`
+- `bds/`, `bds/[id]`
+- `authors/`, `authors/[id]`
+- `publishers/`, `publishers/[id]`
+- `contact` — brand-driven email, Facebook, Instagram cards.
 
-**Admin pages** — `/admin/` (protected, requires Google OAuth + whitelisted email):
-- `admin/` — admin dashboard
-- `admin/events/`, `admin/bds/`, `admin/authors/` — CRUD with create/edit forms
-- `admin/import-export` — CSV import/export (publishers, authors, events, BDs)
+**Admin pages** — `/admin/` (protected, Google OAuth + email whitelist):
+- CRUD for events, BDs, authors, publishers, genres
+- `admin/import-export` — CSV import/export
+- `admin/instagram` — Instagram post management
+- `admin/wizard` — multi-step new-event wizard
 
-**API routes** — `app/api/`:
-- `auth/[...nextauth]` — NextAuth handlers
-- `event/[id]/ics` — iCalendar download for an event
-- `admin/export/{events,bds,authors,publishers}` — CSV export
-- `admin/import` — CSV import
+**API routes** — `app/api/`: NextAuth handlers, event ICS, admin CSV export/import.
 
 ### Key lib files (`app/lib/`)
 
-- **data.ts** — Prisma queries: `fetchCardData`, `fetchFiltered*`, `fetchPaginated*`, `fetch*ById`
-- **actions.ts** — Server Actions for form CRUD (Zod-validated)
-- **definitions.ts** — TypeScript types (`EventsTable`, `BdsTable`, `AuthorsTable`)
-- **ics.ts** — iCalendar (.ics) file generation
-- **csv.ts** — CSV parsing/export helpers
-- **prisma.ts** — Prisma client singleton
+- **`data.ts`** — Prisma read queries (`fetchCardData`, `fetchFiltered*`, `fetchPaginated*`)
+- **`actions.ts`** — Server Actions, Zod-validated
+- **`definitions.ts`** — TypeScript types
+- **`ics.ts`** — iCalendar generator; PRODID + UID suffix come from `brand.icsPRODID` and `brand.icsUidSuffix`
+- **`csv.ts`** — CSV parse/emit helpers
+- **`prisma.ts`** — Prisma client singleton
 
 ### UI components (`app/ui/`)
 
-Organized by domain: `events/`, `bds/`, `authors/`, `home/`, `admin/`. Shared components (`search.tsx`, `button.tsx`, `skeletons.tsx`, `filter-select.tsx`, `toast.tsx`) at root.
-
-- **home/** — `sidenav.tsx`, `nav-links.tsx`, `cards.tsx`, `instagram-feed.tsx`, `stats-chart.tsx`, `recent-events.tsx`, `top-authors.tsx`
-- **admin/** — `sidebar.tsx`, `breadcrumbs.tsx`, `pagination.tsx`, `confirm-delete-button.tsx`, domain form components
+Organized by domain: `events/`, `bds/`, `authors/`, `home/`, `admin/`, `publishers/`, `genres/`, `wizard/`, `shadcn/`. Shared components at the root of `app/ui/`.
 
 ### Auth
 
-NextAuth v5 beta with **Google OAuth** provider. Admin access restricted to whitelisted emails (configured in `auth.config.ts`). No middleware file — route protection handled via the `authorized()` callback in auth config and admin layout guards.
+NextAuth v5 beta with **Google OAuth** provider. Admin access restricted to whitelisted emails (`ADMIN_EMAILS` env var, read in `auth.config.ts`). No middleware file — route protection handled via the `authorized()` callback and admin layout guards.
 
 ### i18n
 
-**next-intl** with `[locale]` routing. Supported locales: `fr` (default), `en`. Translation files in `messages/{fr,en}.json`. Config in `i18n/routing.ts` and `i18n/request.ts`. The i18n messages test ensures key parity between locale files.
+**next-intl** with `[locale]` routing. Supported locales: `fr` (default), `en`. Translation files in `messages/{fr,en}.json`. The `__tests__/i18n/messages.test.ts` test enforces key parity between locales.
+
+Brand-specific strings (long name, short name, Instagram handle, email, Facebook URL) are **not** in the i18n files — they come from the brand module. The one templated exception is `contact.facebookPage`, which interpolates `brand.longName` via the ICU `{brand}` placeholder.
+
+## Theming
+
+`app/ui/global.css` ships both brand palettes under `.brand-bdi` and `.brand-cmbd` class selectors. The root layout (`app/layout.tsx`) applies `className={brand-${brand.id}}` to `<html>`. The `@theme inline` block hoists the CSS variables into Tailwind utilities (`bg-primary`, `text-accent`, etc.) without change.
+
+The four `.card-cycle > *:nth-child(4n+N)` rules for list-page card rotations are also scoped per brand (`.brand-bdi .card-cycle > …`, `.brand-cmbd .card-cycle > …`).
+
+Fonts are brand-neutral: Inter (body), Lusitana (headings), Bangers (hero) via `next/font/google`.
 
 ## Conventions
 
 - UI text uses i18n keys (French primary, English secondary)
+- Brand-specific values come from `@/config/brand`, not i18n
 - `@/*` path alias mapped to project root
-- Fonts: Inter (body), Lusitana (headings), Bangers (hero title) via `next/font/google`
 - Server Components for data fetching; Client Components (`'use client'`) for interactivity
 - ESLint 9 flat config (`eslint.config.mjs`), extends `next/core-web-vitals`
 - Webpack mode required (next-intl plugin does not support Turbopack)
@@ -111,8 +139,7 @@ NextAuth v5 beta with **Google OAuth** provider. Admin access restricted to whit
 ## Security
 
 - Google OAuth with email whitelist for admin access
-- `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, HSTS, strict Referrer-Policy (configured in `next.config.js` headers)
-- Permissions-Policy disables camera, microphone, geolocation
+- HSTS, X-Frame-Options: DENY, Permissions-Policy disables camera/mic/geolocation, strict Referrer-Policy (configured in `next.config.js` headers)
 - Zod validation on all Server Action form inputs
-- Prisma parameterized queries (no raw SQL, no injection risk)
+- Prisma parameterized queries (no raw SQL)
 - No secrets in client code; env vars via `.env` (see `.env.example`)

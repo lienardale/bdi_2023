@@ -1,15 +1,15 @@
 services:
   postgres:
-    container_name: bdi-postgres
+    container_name: bd-platform-postgres
     image: postgres:16-alpine
     ports:
       - "5432:5432"
     volumes:
-      - bdi_pgdata:/var/lib/postgresql/data
+      - bd_platform_pgdata:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
-      POSTGRES_DB: test_postgres
+      POSTGRES_DB: bd_platform
 
 volumes:
-  bdi_pgdata:
+  bd_platform_pgdata:
