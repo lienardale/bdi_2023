@@ -1,4 +1,5 @@
 {
+  "framework": "nextjs",
   "functions": {
     "app/api/admin/import/route.ts": {
       "maxDuration": 60
