@@ -98,6 +98,7 @@ export type WizardEvent = {
   hour: string;
   place: string;
   fb_event: string;
+  cover_url: string;
 };
 
 export type WizardData = {

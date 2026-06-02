@@ -30,7 +30,7 @@ function genTempId(prefix: string) {
 
 export const initialWizardState: WizardState = {
   currentStep: 0,
-  event: { name: '', date: '', hour: '20:30', place: '', fb_event: '' },
+  event: { name: '', date: '', hour: '20:30', place: '', fb_event: '', cover_url: '' },
   bds: [],
   authors: [],
 };

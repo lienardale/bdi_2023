@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   normalizeFbEventUrl,
   isValidFbEventUrl,
+  isFacebookCdnUrl,
   sanitizeUrl,
   isValidHttpUrl,
 } from '@/app/lib/url-utils';
@@ -110,6 +111,32 @@ describe('isValidFbEventUrl', () => {
 
   it('returns false for Facebook non-event URLs', () => {
     expect(isValidFbEventUrl('https://www.facebook.com/page/123')).toBe(false);
+  });
+});
+
+describe('isFacebookCdnUrl', () => {
+  it('returns false for nullish', () => {
+    expect(isFacebookCdnUrl(null)).toBe(false);
+    expect(isFacebookCdnUrl(undefined)).toBe(false);
+    expect(isFacebookCdnUrl('')).toBe(false);
+  });
+
+  it('returns true for fbcdn / scontent / lookaside URLs', () => {
+    expect(
+      isFacebookCdnUrl('https://scontent-cdg4-1.xx.fbcdn.net/v/t39/abc.jpg'),
+    ).toBe(true);
+    expect(isFacebookCdnUrl('https://scontent.xx.fbcdn.net/v/abc.jpg')).toBe(true);
+    expect(
+      isFacebookCdnUrl('https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1'),
+    ).toBe(true);
+  });
+
+  it('returns false for event pages and other hosts', () => {
+    expect(isFacebookCdnUrl('https://www.facebook.com/events/123/')).toBe(false);
+    expect(isFacebookCdnUrl('https://covers.openlibrary.org/b/id/1-L.jpg')).toBe(false);
+    expect(
+      isFacebookCdnUrl('https://abc.public.blob.vercel-storage.com/covers/x.jpg'),
+    ).toBe(false);
   });
 });
 

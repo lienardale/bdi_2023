@@ -45,7 +45,14 @@
     "place": "Lieu",
     "addToCalendar": "Ajouter au calendrier",
     "openMap": "Ouvrir dans Google Maps",
-    "placePlaceholder": "Rechercher une adresse..."
+    "placePlaceholder": "Rechercher une adresse...",
+    "coverUrl": "Couverture",
+    "fetchCover": "Récupérer depuis Facebook",
+    "fetchCoverPending": "Récupération…",
+    "fetchCoverEmpty": "Aucune image trouvée sur la page Facebook.",
+    "fetchCoverError": "Échec de la récupération de la couverture.",
+    "fetchCoverInvalid": "Renseignez d'abord un lien d'événement Facebook valide.",
+    "coverRemove": "Retirer la couverture"
   },
   "bds": {
     "title": "BDs",

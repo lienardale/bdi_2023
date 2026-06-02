@@ -38,6 +38,16 @@ export function isValidFbEventUrl(url: string | null | undefined): boolean {
 }
 
 /**
+ * Whether a URL points at Facebook's CDN (scontent*, fbcdn.net, lookaside).
+ * Such URLs are signed and expire, so they must be re-hosted rather than
+ * stored as-is (e.g. an event cover scraped from a Facebook event page).
+ */
+export function isFacebookCdnUrl(url: string | null | undefined): boolean {
+  if (!url) return false;
+  return CDN_PATTERN.test(url);
+}
+
+/**
  * Only allow http(s) URLs; reject javascript:, data:, relative, etc.
  * Returns the trimmed URL or `null` for empty/missing/non-http(s).
  */

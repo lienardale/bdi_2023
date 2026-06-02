@@ -45,7 +45,14 @@
     "place": "Place",
     "addToCalendar": "Add to calendar",
     "openMap": "Open in Google Maps",
-    "placePlaceholder": "Search for an address..."
+    "placePlaceholder": "Search for an address...",
+    "coverUrl": "Cover",
+    "fetchCover": "Fetch from Facebook",
+    "fetchCoverPending": "Fetching…",
+    "fetchCoverEmpty": "No image found on the Facebook page.",
+    "fetchCoverError": "Failed to fetch the cover.",
+    "fetchCoverInvalid": "Enter a valid Facebook event link first.",
+    "coverRemove": "Remove cover"
   },
   "bds": {
     "title": "Comics",

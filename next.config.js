@@ -14,6 +14,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
       { protocol: 'https', hostname: '**.fbcdn.net' },
       { protocol: 'https', hostname: 'img-cache.ulule.com' },
+      { protocol: 'https', hostname: '*.public.blob.vercel-storage.com' },
     ],
   },
   async rewrites() {
