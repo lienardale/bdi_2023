@@ -4,16 +4,20 @@ import { useReducer, useActionState, useEffect, useRef, useState, useTransition 
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { Button } from '@/app/ui/button';
-import { wizardReducer, initialWizardState, WizardState } from './wizard-reducer';
+import { Link } from '@/i18n/routing';
+import {
+  wizardReducer,
+  initialWizardState,
+  migrateDraft,
+  TOTAL_STEPS,
+  WizardState,
+} from './wizard-reducer';
 import { createEventWithRelations, saveWizardDraft, WizardActionState, DraftState } from '@/app/lib/actions';
 import WizardStepper from './wizard-stepper';
 import EventStep from './event-step';
 import BdsStep from './bds-step';
-import AuthorsStep from './authors-step';
 import SummaryStep from './summary-step';
-import { BookmarkIcon } from '@heroicons/react/24/outline';
-
-const TOTAL_STEPS = 4;
+import { BookmarkIcon, ArrowPathIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 
 export default function EventWizard({
   existingBds,
@@ -33,10 +37,10 @@ export default function EventWizard({
   const t = useTranslations('wizard');
   const [state, dispatch] = useReducer(
     wizardReducer,
-    initialDraft ?? initialWizardState,
+    initialDraft ? migrateDraft(initialDraft) : initialWizardState,
   );
   const currentDraftIdRef = useRef<string | undefined>(initialDraftId);
-  const [actionState, formAction] = useActionState<WizardActionState, FormData>(
+  const [actionState, formAction, isPending] = useActionState<WizardActionState, FormData>(
     createEventWithRelations,
     { message: null },
   );
@@ -46,8 +50,10 @@ export default function EventWizard({
   );
   const [, startTransition] = useTransition();
   const [validationError, setValidationError] = useState<string | null>(null);
+  const [dismissed, setDismissed] = useState(false);
+  const showSuccess = !!actionState.success && !dismissed;
 
-  // Handle submission result
+  // Handle submission result — success now returns state (no redirect).
   useEffect(() => {
     if (actionState.success) {
       toast.success(t('successMessage'));
@@ -101,13 +107,11 @@ export default function EventWizard({
           setValidationError(t('publisherNameRequired'));
           return false;
         }
-      }
-    }
-    if (state.currentStep === 2) {
-      for (const author of state.authors) {
-        if (author.mode === 'new' && !author.name) {
-          setValidationError(t('authorNameRequired'));
-          return false;
+        for (const author of bd.authors ?? []) {
+          if (author.mode === 'new' && !author.name) {
+            setValidationError(t('authorNameRequired'));
+            return false;
+          }
         }
       }
     }
@@ -127,6 +131,7 @@ export default function EventWizard({
   };
 
   const handleSubmit = () => {
+    setDismissed(false);
     const payload = JSON.stringify({
       event: state.event,
       bds: state.bds,
@@ -140,8 +145,34 @@ export default function EventWizard({
     formAction(fd);
   };
 
+  const createAnother = () => {
+    dispatch({ type: 'LOAD_DRAFT', draft: initialWizardState });
+    currentDraftIdRef.current = undefined;
+    setDismissed(true);
+  };
+
+  if (showSuccess) {
+    return (
+      <div className="rounded-md bg-card p-8 border border-border text-center space-y-4">
+        <CheckCircleIcon className="h-12 w-12 text-primary mx-auto" />
+        <h2 className="text-lg font-medium">{t('successMessage')}</h2>
+        {state.event.name && <p className="text-sm text-muted-foreground">{state.event.name}</p>}
+        <div className="flex flex-wrap justify-center gap-3">
+          {actionState.eventId && (
+            <Button asChild>
+              <Link href={`/events/${actionState.eventId}`}>{t('viewEvent')}</Link>
+            </Button>
+          )}
+          <Button variant="outline" onClick={createAnother}>
+            {t('createAnother')}
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
   const isLastStep = state.currentStep === TOTAL_STEPS - 1;
-  const isSkippable = state.currentStep === 1 || state.currentStep === 2;
+  const isSkippable = state.currentStep === 1;
 
   return (
     <div>
@@ -154,18 +185,12 @@ export default function EventWizard({
             state={state}
             dispatch={dispatch}
             existingBds={existingBds}
+            existingAuthors={existingAuthors}
             existingPublishers={existingPublishers}
             existingGenres={existingGenres}
           />
         )}
         {state.currentStep === 2 && (
-          <AuthorsStep
-            state={state}
-            dispatch={dispatch}
-            existingAuthors={existingAuthors}
-          />
-        )}
-        {state.currentStep === 3 && (
           <SummaryStep
             state={state}
             existingBds={existingBds}
@@ -178,23 +203,30 @@ export default function EventWizard({
         {validationError && (
           <p className="mt-3 text-sm text-destructive">{validationError}</p>
         )}
+
+        {isLastStep && actionState.message && !actionState.success && (
+          <div className="mt-4 rounded-md border border-destructive/50 bg-destructive/10 p-3 text-sm text-destructive">
+            <p className="font-medium">{actionState.message}</p>
+            <p className="mt-1 text-xs">{t('retryGuidance')}</p>
+          </div>
+        )}
       </div>
 
       <div className="mt-6 flex flex-wrap justify-between gap-3">
         <div className="flex gap-3">
           {state.currentStep > 0 && (
-            <Button type="button" variant="outline" onClick={goPrev}>
+            <Button type="button" variant="outline" onClick={goPrev} disabled={isPending}>
               {t('previous')}
             </Button>
           )}
-          <Button type="button" variant="ghost" onClick={saveDraft}>
+          <Button type="button" variant="ghost" onClick={saveDraft} disabled={isPending}>
             <BookmarkIcon className="h-4 w-4 mr-1" />
             {t('saveDraft')}
           </Button>
         </div>
         <div className="flex gap-3">
           {isSkippable && !isLastStep && (
-            <Button type="button" variant="outline" onClick={() => {
+            <Button type="button" variant="outline" disabled={isPending} onClick={() => {
               setValidationError(null);
               dispatch({ type: 'SET_STEP', step: state.currentStep + 1 });
               saveDraft();
@@ -203,11 +235,18 @@ export default function EventWizard({
             </Button>
           )}
           {isLastStep ? (
-            <Button type="button" onClick={handleSubmit}>
-              {t('submit')}
+            <Button type="button" onClick={handleSubmit} disabled={isPending}>
+              {isPending ? (
+                <>
+                  <ArrowPathIcon className="h-4 w-4 mr-1 animate-spin" />
+                  {t('submitting')}
+                </>
+              ) : (
+                t('submit')
+              )}
             </Button>
           ) : (
-            <Button type="button" onClick={goNext}>
+            <Button type="button" onClick={goNext} disabled={isPending}>
               {t('next')}
             </Button>
           )}

@@ -1,5 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { normalizeFbEventUrl, isValidFbEventUrl } from '@/app/lib/url-utils';
+import {
+  normalizeFbEventUrl,
+  isValidFbEventUrl,
+  sanitizeUrl,
+  isValidHttpUrl,
+} from '@/app/lib/url-utils';
 
 describe('normalizeFbEventUrl', () => {
   it('returns null for empty or whitespace strings', () => {
@@ -105,5 +110,48 @@ describe('isValidFbEventUrl', () => {
 
   it('returns false for Facebook non-event URLs', () => {
     expect(isValidFbEventUrl('https://www.facebook.com/page/123')).toBe(false);
+  });
+});
+
+describe('sanitizeUrl', () => {
+  it('returns null for empty/whitespace/nullish', () => {
+    expect(sanitizeUrl('')).toBeNull();
+    expect(sanitizeUrl('   ')).toBeNull();
+    expect(sanitizeUrl(null)).toBeNull();
+    expect(sanitizeUrl(undefined)).toBeNull();
+  });
+
+  it('passes through http and https URLs (trimmed)', () => {
+    expect(sanitizeUrl('https://example.com/x')).toBe('https://example.com/x');
+    expect(sanitizeUrl('http://example.com')).toBe('http://example.com');
+    expect(sanitizeUrl('  https://example.com/x  ')).toBe('https://example.com/x');
+  });
+
+  it('rejects non-http(s) schemes and relative URLs', () => {
+    expect(sanitizeUrl('javascript:alert(1)')).toBeNull();
+    expect(sanitizeUrl('ftp://example.com')).toBeNull();
+    expect(sanitizeUrl('data:text/html,x')).toBeNull();
+    expect(sanitizeUrl('/relative/path')).toBeNull();
+    expect(sanitizeUrl('example.com')).toBeNull();
+  });
+});
+
+describe('isValidHttpUrl', () => {
+  it('treats empty/nullish as valid (optional field)', () => {
+    expect(isValidHttpUrl('')).toBe(true);
+    expect(isValidHttpUrl('   ')).toBe(true);
+    expect(isValidHttpUrl(null)).toBe(true);
+    expect(isValidHttpUrl(undefined)).toBe(true);
+  });
+
+  it('is true for http(s) URLs', () => {
+    expect(isValidHttpUrl('https://example.com')).toBe(true);
+    expect(isValidHttpUrl('http://example.com/a/b')).toBe(true);
+  });
+
+  it('is false for garbage / non-http(s)', () => {
+    expect(isValidHttpUrl('not a url')).toBe(false);
+    expect(isValidHttpUrl('ftp://example.com')).toBe(false);
+    expect(isValidHttpUrl('javascript:alert(1)')).toBe(false);
   });
 });

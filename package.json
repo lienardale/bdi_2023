@@ -8,11 +8,17 @@
     "dev": "next dev --webpack",
     "dev:bdi": "BRAND=bdi NEXT_PUBLIC_BRAND=bdi next dev --webpack",
     "dev:cmbd": "BRAND=cmbd NEXT_PUBLIC_BRAND=cmbd next dev --webpack",
+    "dev:local": "POSTGRES_URL=postgresql://admin:admin@localhost:5432/bd_platform POSTGRES_URL_NON_POOLING=postgresql://admin:admin@localhost:5432/bd_platform BRAND=bdi NEXT_PUBLIC_BRAND=bdi next dev --webpack",
     "start": "next start",
     "lint": "eslint .",
     "seed:bdi": "BRAND=bdi NEXT_PUBLIC_BRAND=bdi node -r dotenv/config ./scripts/seed-bdi.js",
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose down",
+    "db:reset": "docker compose down -v && docker compose up -d --wait",
+    "db:setup": "bash scripts/test-db.sh --seed",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:integration": "vitest run __tests__/integration",
     "postinstall": "prisma generate"
   },
   "dependencies": {

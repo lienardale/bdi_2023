@@ -26,15 +26,28 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
           <div className="rounded-md text-center md:text-left text-m font-bold text-xl">
             {author.name}
           </div>
-          {author.wikipedia_url && (
-            <a
-              href={author.wikipedia_url}
-              target="_blank"
-              className="text-sm text-primary hover:underline"
-            >
-              Wikipedia
-            </a>
-          )}
+          <div className="flex gap-3">
+            {author.wikipedia_url && (
+              <a
+                href={author.wikipedia_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-primary hover:underline"
+              >
+                Wikipedia
+              </a>
+            )}
+            {author.website && (
+              <a
+                href={author.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-primary hover:underline"
+              >
+                Site web
+              </a>
+            )}
+          </div>
         </div>
       </div>
 

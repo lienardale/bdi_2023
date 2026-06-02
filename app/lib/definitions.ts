@@ -12,6 +12,7 @@ export type AuthorsTable = {
   bio: string | null;
   photo_url: string | null;
   wikipedia_url: string | null;
+  website: string | null;
   bds: { bd: { id: string; title: string } }[];
 }
 
@@ -48,6 +49,17 @@ export type BdsTable = {
 
 // Wizard types
 
+export type WizardBdAuthorEntry = {
+  tempId: string;
+  mode: 'existing' | 'new';
+  existingId?: string;
+  name?: string;
+  bio?: string;
+  photo_url?: string;
+  wikipedia_url?: string;
+  website?: string;
+};
+
 export type WizardBdEntry = {
   tempId: string;
   mode: 'existing' | 'new';
@@ -66,6 +78,7 @@ export type WizardBdEntry = {
   page_count?: number;
   price?: number;
   genreIds?: string[];
+  authors?: WizardBdAuthorEntry[];
 };
 
 export type WizardAuthorEntry = {

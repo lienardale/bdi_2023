@@ -59,13 +59,46 @@ npm run seed:bdi       # Seed BDI data (refuses unless BRAND=bdi)
 
 Webpack mode is required — next-intl's plugin does not support Turbopack. All `dev` / `build` scripts already pass `--webpack`.
 
+### Tests (unit + integration)
+
+The Vitest 4 / Vite 7 / rolldown toolchain needs **Node ≥ 20.19**. The shell default (20.11) fails (`styleText` export missing / `@rolldown/binding-darwin-arm64` not found). Prefix every `npm`/`npx` command — test, lint, build — with a newer Node:
+
+```bash
+export PATH="/Users/alienard/.nvm/versions/node/v22.14.0/bin:$PATH"
+```
+
+If `node_modules` looks gutted (e.g. `picomatch` missing its `index.js`), run `npm ci` under that Node to restore it.
+
+- **Unit tests** need no server: `npm run test` (or target files with `npx vitest run <path>`).
+- **Integration tests** (`__tests__/integration/routes.test.ts`) hit a live dev server over HTTP. They default to `http://localhost:3000` and honor the `TEST_BASE_URL` env var (no file edit needed to retarget a port). The DB-backed list pages only need the schema applied — an empty DB still returns 200 — not seed data.
+
+> ⚠️ **`.env` / `.env.local` point at the remote production Postgres (Vercel).**
+> Never run `prisma migrate deploy` or `seed:bdi` with those loaded — `seed:bdi`
+> clears every table first. Local/test work must point `POSTGRES_URL` at the
+> docker compose DB. The `db:*` and `dev:local` scripts below hard-code
+> `localhost`, so use them rather than the raw commands.
+
+Reusable local DB (docker compose Postgres — `admin/admin`, db `bd_platform`, persistent volume), then run the app + integration suite against it:
+
+```bash
+npm run db:up           # start Postgres, wait until healthy
+npm run db:setup        # up + migrate + seed BDI placeholder data (all vs localhost)
+npm run db:reset        # wipe the volume and recreate a fresh DB
+npm run db:down         # stop
+
+npm run dev:local       # next dev on :3000 with POSTGRES_URL forced to localhost
+npm run test:integration   # vitest integration suite (honors TEST_BASE_URL, default :3000)
+```
+
+`scripts/test-db.sh [--seed]` is the underlying helper — it always targets `localhost`, never the remote DB.
+
 ## Database
 
 Prisma schema at `prisma/schema.prisma`. Connection string via `POSTGRES_URL` env var. Each brand deployment targets its own Postgres instance; the schema is identical.
 
 **Core models:** `Event`, `Bd`, `Author`, `Publisher`, `Genre`, `InstagramPost`, `WizardDraft`. Junction tables: `BdAuthor`, `AuthorEvent`, `BdEvent`, `BdGenre`. Prisma client singleton in `app/lib/prisma.ts`.
 
-Local Postgres via `docker compose up -d` (see `docker-compose.yml`) — exposes a single `bd_platform` database. Point `.env.local` at it and run `npx prisma migrate deploy` to create the schema.
+Local Postgres via `docker compose up -d` (see `docker-compose.yml`) — exposes a single `bd_platform` database (`admin/admin`). Because `.env`/`.env.local` point at the remote production DB, target the local one by overriding `POSTGRES_URL` — the `npm run db:*` / `dev:local` helpers do this (see **Tests** above).
 
 ### Per-brand seed scripts
 

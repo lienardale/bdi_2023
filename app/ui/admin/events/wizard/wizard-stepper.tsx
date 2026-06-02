@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { CheckIcon } from '@heroicons/react/24/solid';
 
-const STEP_KEYS = ['stepEvent', 'stepBds', 'stepAuthors', 'stepSummary'] as const;
+const STEP_KEYS = ['stepEvent', 'stepBds', 'stepSummary'] as const;
 
 export default function WizardStepper({ currentStep }: { currentStep: number }) {
   const t = useTranslations('wizard');

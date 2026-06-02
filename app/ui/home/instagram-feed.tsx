@@ -1,15 +1,17 @@
 'use client';
 
+import { instagramEmbedUrl } from '@/app/lib/instagram';
+
 export default function InstagramFeed({
-  shortcodes,
+  posts,
   instagramUrl,
   instagramHandle,
 }: {
-  shortcodes: string[];
+  posts: { shortcode: string; type?: string | null }[];
   instagramUrl: string;
   instagramHandle: string;
 }) {
-  if (shortcodes.length === 0) {
+  if (posts.length === 0) {
     return (
       <a
         href={instagramUrl}
@@ -30,14 +32,14 @@ export default function InstagramFeed({
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {shortcodes.map((code) => (
+      {posts.map((post) => (
         <iframe
-          key={code}
-          src={`https://www.instagram.com/p/${code}/embed/`}
+          key={post.shortcode}
+          src={instagramEmbedUrl(post.shortcode, post.type)}
           className="w-full border-0 rounded-xl"
           height={480}
           loading="lazy"
-          title={`Instagram post ${code}`}
+          title={`Instagram ${post.shortcode}`}
         />
       ))}
     </div>

@@ -18,6 +18,7 @@ export async function GET() {
     bio_source: a.bio_source || '',
     photo_url: a.photo_url || '',
     wikipedia_url: a.wikipedia_url || '',
+    website: a.website || '',
   }));
 
   const csv = generateCsv(data);

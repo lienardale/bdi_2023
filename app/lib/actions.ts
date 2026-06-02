@@ -6,6 +6,9 @@ import { redirect } from 'next/navigation';
 import { getLocale } from 'next-intl/server';
 import prisma from './prisma';
 import { requireAdmin } from './auth-utils';
+import { sanitizeUrl } from './url-utils';
+import { collectWizardAuthors, derivePublishingYear, prismaErrorMessage } from './wizard-helpers';
+import { parseInstagramUrl } from './instagram';
 
 async function localizedPath(path: string): Promise<string> {
   const locale = await getLocale();
@@ -272,6 +275,7 @@ const AuthorSchema = z.object({
   bio: z.string().optional(),
   photo_url: z.string().optional(),
   wikipedia_url: z.string().optional(),
+  website: z.string().optional(),
 });
 
 export type AuthorState = {
@@ -287,16 +291,23 @@ export async function createAuthor(prevState: AuthorState, formData: FormData) {
     bio: formData.get('bio'),
     photo_url: formData.get('photo_url'),
     wikipedia_url: formData.get('wikipedia_url'),
+    website: formData.get('website'),
   });
 
   if (!validatedFields.success) {
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { name, bio, photo_url, wikipedia_url } = validatedFields.data;
+  const { name, bio, photo_url, wikipedia_url, website } = validatedFields.data;
   try {
     await prisma.author.create({
-      data: { name, bio: bio || null, photo_url: photo_url || null, wikipedia_url: wikipedia_url || null },
+      data: {
+        name,
+        bio: bio || null,
+        photo_url: sanitizeUrl(photo_url),
+        wikipedia_url: sanitizeUrl(wikipedia_url),
+        website: sanitizeUrl(website),
+      },
     });
   } catch (error) {
     return { message: 'Erreur: impossible de créer l\'auteur·ice.' };
@@ -314,17 +325,24 @@ export async function updateAuthor(id: string, prevState: AuthorState, formData:
     bio: formData.get('bio'),
     photo_url: formData.get('photo_url'),
     wikipedia_url: formData.get('wikipedia_url'),
+    website: formData.get('website'),
   });
 
   if (!validatedFields.success) {
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { name, bio, photo_url, wikipedia_url } = validatedFields.data;
+  const { name, bio, photo_url, wikipedia_url, website } = validatedFields.data;
   try {
     await prisma.author.update({
       where: { id },
-      data: { name, bio: bio || null, photo_url: photo_url || null, wikipedia_url: wikipedia_url || null },
+      data: {
+        name,
+        bio: bio || null,
+        photo_url: sanitizeUrl(photo_url),
+        wikipedia_url: sanitizeUrl(wikipedia_url),
+        website: sanitizeUrl(website),
+      },
     });
   } catch (error) {
     return { message: 'Erreur: impossible de mettre à jour l\'auteur·ice.' };
@@ -512,6 +530,21 @@ export async function deleteGenre(id: string): Promise<void> {
 
 // Event Wizard action
 
+// Optional URL field: warn-only on the client, sanitized to null here so a
+// malformed URL never aborts the whole submission (matches CSV import).
+const urlField = z.string().optional().transform((v) => sanitizeUrl(v));
+
+const WizardBdAuthorSchema = z.object({
+  tempId: z.string(),
+  mode: z.enum(['existing', 'new']),
+  existingId: z.string().optional(),
+  name: z.string().optional(),
+  bio: z.string().optional(),
+  photo_url: urlField,
+  wikipedia_url: urlField,
+  website: urlField,
+});
+
 const WizardBdSchema = z.object({
   mode: z.enum(['existing', 'new']),
   existingId: z.string().optional(),
@@ -522,15 +555,17 @@ const WizardBdSchema = z.object({
   publishing_year: z.coerce.number().optional(),
   ean: z.string().max(13).optional(),
   summary: z.string().optional(),
-  cover_url: z.string().optional(),
-  publisher_url: z.string().optional(),
-  leslibraires_url: z.string().optional(),
+  cover_url: urlField,
+  publisher_url: urlField,
+  leslibraires_url: urlField,
   publication_date: z.string().optional(),
   page_count: z.coerce.number().optional(),
   price: z.coerce.number().optional(),
   genreIds: z.array(z.string()).optional(),
+  authors: z.array(WizardBdAuthorSchema).optional(),
 });
 
+// Legacy global-author entry — accepted (optional) for old draft payloads.
 const WizardAuthorSchema = z.object({
   tempId: z.string(),
   mode: z.enum(['existing', 'new']),
@@ -554,7 +589,7 @@ const WizardPayloadSchema = z.object({
     tempId: z.string(),
     ...WizardBdSchema.shape,
   })),
-  authors: z.array(WizardAuthorSchema),
+  authors: z.array(WizardAuthorSchema).optional(),
 });
 
 export type WizardActionState = {
@@ -581,44 +616,53 @@ export async function createEventWithRelations(
     return { message: 'Données invalides: ' + parsed.error.issues.map(i => i.message).join(', ') };
   }
 
-  const { event, bds, authors } = parsed.data;
+  const { event, bds } = parsed.data;
+  // Authors now live nested under each comic; collapse duplicates and gather
+  // the per-comic links + the event-level union.
+  const { distinct: distinctAuthors, perBdLinks } = collectWizardAuthors(bds);
+
+  let createdEventId = '';
 
   try {
     await prisma.$transaction(async (tx) => {
-      // 1. Create new publishers
-      const publisherMap = new Map<string, string>(); // tempId -> dbId (using bd tempId)
+      // 1. Resolve/create publishers (per comic)
+      const publisherMap = new Map<string, string>(); // bd.tempId -> publisher dbId
       for (const bd of bds) {
         if (bd.mode === 'new' && bd.publisherMode === 'new' && bd.newPublisherName) {
-          const existing = await tx.publisher.findFirst({ where: { name: bd.newPublisherName } });
-          if (existing) {
-            publisherMap.set(bd.tempId, existing.id);
-          } else {
-            const pub = await tx.publisher.create({ data: { name: bd.newPublisherName } });
-            publisherMap.set(bd.tempId, pub.id);
-          }
+          const existing = await tx.publisher.findFirst({
+            where: { name: { equals: bd.newPublisherName, mode: 'insensitive' } },
+          });
+          publisherMap.set(
+            bd.tempId,
+            existing?.id ?? (await tx.publisher.create({ data: { name: bd.newPublisherName } })).id,
+          );
         }
       }
 
-      // 2. Create new authors
-      const authorIdMap = new Map<string, string>(); // tempId -> dbId
-      for (const author of authors) {
-        if (author.mode === 'existing' && author.existingId) {
-          authorIdMap.set(author.tempId, author.existingId);
-        } else if (author.mode === 'new' && author.name) {
-          const existing = await tx.author.findFirst({ where: { name: author.name } });
-          if (existing) {
-            authorIdMap.set(author.tempId, existing.id);
-          } else {
-            const a = await tx.author.create({
-              data: {
-                name: author.name,
-                bio: author.bio || null,
-                photo_url: author.photo_url || null,
-                wikipedia_url: author.wikipedia_url || null,
-              },
-            });
-            authorIdMap.set(author.tempId, a.id);
-          }
+      // 2. Resolve/create the distinct authors (deduped across all comics)
+      const authorKeyToDbId = new Map<string, string>();
+      for (const a of distinctAuthors) {
+        if (a.mode === 'existing' && a.existingId) {
+          authorKeyToDbId.set(a.key, a.existingId);
+        } else if (a.mode === 'new' && a.name) {
+          const existing = await tx.author.findFirst({
+            where: { name: { equals: a.name, mode: 'insensitive' } },
+          });
+          authorKeyToDbId.set(
+            a.key,
+            existing?.id ??
+              (
+                await tx.author.create({
+                  data: {
+                    name: a.name,
+                    bio: a.bio || null,
+                    photo_url: a.photo_url || null,
+                    wikipedia_url: a.wikipedia_url || null,
+                    website: a.website || null,
+                  },
+                })
+              ).id,
+          );
         }
       }
 
@@ -632,15 +676,14 @@ export async function createEventWithRelations(
           fb_event: event.fb_event || null,
         },
       });
+      createdEventId = createdEvent.id;
 
-      // 4. Create new BDs and link to event
-      const bdIdMap = new Map<string, string>(); // tempId -> dbId
+      // 4. Create new BDs (or link existing) and connect to the event
+      const bdIdMap = new Map<string, string>(); // bd.tempId -> bd dbId
       for (const bd of bds) {
         if (bd.mode === 'existing' && bd.existingId) {
           bdIdMap.set(bd.tempId, bd.existingId);
-          await tx.bdEvent.create({
-            data: { bdId: bd.existingId, eventId: createdEvent.id },
-          });
+          await tx.bdEvent.create({ data: { bdId: bd.existingId, eventId: createdEvent.id } });
         } else if (bd.mode === 'new' && bd.title) {
           let pubId = bd.publisherId || null;
           if (bd.publisherMode === 'new' && publisherMap.has(bd.tempId)) {
@@ -652,7 +695,7 @@ export async function createEventWithRelations(
             data: {
               title: bd.title,
               publisherId: pubId,
-              publishing_year: bd.publishing_year || null,
+              publishing_year: derivePublishingYear(bd.publication_date),
               ean: bd.ean || null,
               summary: bd.summary || null,
               cover_url: bd.cover_url || null,
@@ -662,43 +705,36 @@ export async function createEventWithRelations(
               page_count: bd.page_count || null,
               price: bd.price || null,
               events: { create: [{ eventId: createdEvent.id }] },
-              genres: { create: genreIdList.map(genreId => ({ genreId })) },
+              genres: { create: genreIdList.map((genreId) => ({ genreId })) },
             },
           });
           bdIdMap.set(bd.tempId, createdBd.id);
         }
       }
 
-      // 5. Link authors to event + BDs
-      for (const author of authors) {
-        const authorDbId = authorIdMap.get(author.tempId);
-        if (!authorDbId) continue;
-
-        // Link author to event
-        await tx.authorEvent.create({
-          data: { authorId: authorDbId, eventId: createdEvent.id },
-        });
-
-        // Link author to BDs
-        for (const bdTempId of author.bdTempIds ?? []) {
-          const bdDbId = bdIdMap.get(bdTempId);
-          if (bdDbId) {
-            const exists = await tx.bdAuthor.findFirst({
-              where: { authorId: authorDbId, bdId: bdDbId },
-            });
-            if (!exists) {
-              await tx.bdAuthor.create({
-                data: { authorId: authorDbId, bdId: bdDbId },
-              });
-            }
-          }
+      // 5. Link authors to comics (BdAuthor) and to the event (AuthorEvent = union)
+      for (const link of perBdLinks) {
+        const authorId = authorKeyToDbId.get(link.authorKey);
+        const bdId = bdIdMap.get(link.bdTempId);
+        if (authorId && bdId) {
+          await tx.bdAuthor.upsert({
+            where: { authorId_bdId: { authorId, bdId } },
+            create: { authorId, bdId },
+            update: {},
+          });
         }
       }
-
+      for (const authorId of Array.from(new Set(authorKeyToDbId.values()))) {
+        await tx.authorEvent.upsert({
+          where: { authorId_eventId: { authorId, eventId: createdEvent.id } },
+          create: { authorId, eventId: createdEvent.id },
+          update: {},
+        });
+      }
     });
   } catch (error) {
     console.error('Wizard error:', error);
-    return { message: 'Erreur lors de la création.' };
+    return { message: prismaErrorMessage(error) ?? 'Erreur lors de la création.' };
   }
 
   // Delete draft on success
@@ -714,7 +750,8 @@ export async function createEventWithRelations(
   revalidatePath('/bds');
   revalidatePath('/admin/authors');
   revalidatePath('/authors');
-  redirect(await localizedPath('/admin/events'));
+
+  return { success: true, eventId: createdEventId };
 }
 
 // Wizard draft actions
@@ -776,8 +813,10 @@ export async function deleteWizardDraft(id: string): Promise<void> {
 
 // Instagram Post actions
 
+// Accept a full Instagram URL (post / reel / tv, with query strings) or a bare
+// shortcode; the value is parsed + normalized before storing.
 const InstagramPostSchema = z.object({
-  shortcode: z.string().min(1, 'Le shortcode est requis').max(50),
+  shortcode: z.string().min(1, "Le code ou l'URL est requis").max(300),
 });
 
 export type InstagramPostState = {
@@ -803,7 +842,13 @@ export async function addInstagramPost(
     };
   }
 
-  const { shortcode } = validatedFields.data;
+  const parsed = parseInstagramUrl(validatedFields.data.shortcode);
+  if (!parsed) {
+    return {
+      errors: { shortcode: ['URL ou code Instagram invalide.'] },
+      message: 'Entrée invalide.',
+    };
+  }
 
   try {
     await prisma.$transaction([
@@ -811,10 +856,13 @@ export async function addInstagramPost(
         data: { position: { increment: 1 } },
       }),
       prisma.instagramPost.create({
-        data: { shortcode, position: 0 },
+        data: { shortcode: parsed.shortcode, type: parsed.type, position: 0 },
       }),
     ]);
-  } catch {
+  } catch (error) {
+    if (error && typeof error === 'object' && 'code' in error && (error as { code?: unknown }).code === 'P2002') {
+      return { message: 'Ce post est déjà ajouté.' };
+    }
     return { message: "Erreur: impossible d'ajouter le post Instagram." };
   }
 

@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   wizardReducer,
   initialWizardState,
+  migrateDraft,
   WizardState,
 } from '@/app/ui/admin/events/wizard/wizard-reducer';
 
@@ -62,6 +63,7 @@ describe('wizardReducer', () => {
       expect(state.bds[0].mode).toBe('new');
       expect(state.bds[0].tempId).toBeTruthy();
       expect(state.bds[0].genreIds).toEqual([]);
+      expect(state.bds[0].authors).toEqual([]);
     });
 
     it('ADD_BD generates unique tempIds', () => {
@@ -80,20 +82,13 @@ describe('wizardReducer', () => {
       expect(state.bds[0].tempId).toBe(remaining);
     });
 
-    it('REMOVE_BD also cleans up author bdTempIds references', () => {
+    it('REMOVE_BD drops the comic and its nested authors', () => {
       let state = wizardReducer(initialWizardState, { type: 'ADD_BD' });
       const bdTempId = state.bds[0].tempId;
-      state = wizardReducer(state, { type: 'ADD_AUTHOR' });
-      const authorTempId = state.authors[0].tempId;
-      state = wizardReducer(state, {
-        type: 'TOGGLE_AUTHOR_BD',
-        authorTempId,
-        bdTempId,
-      });
-      expect(state.authors[0].bdTempIds).toContain(bdTempId);
-
+      state = wizardReducer(state, { type: 'ADD_BD_AUTHOR', bdTempId });
+      expect(state.bds[0].authors).toHaveLength(1);
       state = wizardReducer(state, { type: 'REMOVE_BD', tempId: bdTempId });
-      expect(state.authors[0].bdTempIds).not.toContain(bdTempId);
+      expect(state.bds).toHaveLength(0);
     });
 
     it('UPDATE_BD updates the matching BD entry', () => {
@@ -121,76 +116,89 @@ describe('wizardReducer', () => {
     });
   });
 
-  describe('ADD_AUTHOR / REMOVE_AUTHOR / UPDATE_AUTHOR', () => {
-    it('ADD_AUTHOR appends a new author entry', () => {
-      const state = wizardReducer(initialWizardState, { type: 'ADD_AUTHOR' });
-      expect(state.authors).toHaveLength(1);
-      expect(state.authors[0].mode).toBe('new');
-      expect(state.authors[0].bdTempIds).toEqual([]);
+  describe('nested authors (ADD/UPDATE/REMOVE_BD_AUTHOR)', () => {
+    function bdWithAuthor() {
+      let state = wizardReducer(initialWizardState, { type: 'ADD_BD' });
+      const bdTempId = state.bds[0].tempId;
+      state = wizardReducer(state, { type: 'ADD_BD_AUTHOR', bdTempId });
+      return { state, bdTempId };
+    }
+
+    it('ADD_BD_AUTHOR appends a new author row to the right comic only', () => {
+      let { state } = bdWithAuthor();
+      state = wizardReducer(state, { type: 'ADD_BD' });
+      expect(state.bds[0].authors).toHaveLength(1);
+      expect(state.bds[0].authors![0].mode).toBe('new');
+      expect(state.bds[1].authors).toHaveLength(0);
     });
 
-    it('REMOVE_AUTHOR removes the author by tempId', () => {
-      let state = wizardReducer(initialWizardState, { type: 'ADD_AUTHOR' });
-      state = wizardReducer(state, { type: 'ADD_AUTHOR' });
-      const toRemove = state.authors[0].tempId;
-      state = wizardReducer(state, { type: 'REMOVE_AUTHOR', tempId: toRemove });
-      expect(state.authors).toHaveLength(1);
-      expect(state.authors[0].tempId).not.toBe(toRemove);
-    });
-
-    it('UPDATE_AUTHOR updates the matching author', () => {
-      let state = wizardReducer(initialWizardState, { type: 'ADD_AUTHOR' });
-      state = wizardReducer(state, {
-        type: 'UPDATE_AUTHOR',
-        tempId: state.authors[0].tempId,
-        updates: { name: 'Wilfrid Lupano', bio: 'Scénariste' },
+    it('UPDATE_BD_AUTHOR edits the matching nested author', () => {
+      const { state: initial, bdTempId } = bdWithAuthor();
+      const authorTempId = initial.bds[0].authors![0].tempId;
+      const state = wizardReducer(initial, {
+        type: 'UPDATE_BD_AUTHOR',
+        bdTempId,
+        authorTempId,
+        updates: { name: 'Zep', website: 'https://zep.example' },
       });
-      expect(state.authors[0].name).toBe('Wilfrid Lupano');
-      expect(state.authors[0].bio).toBe('Scénariste');
+      expect(state.bds[0].authors![0].name).toBe('Zep');
+      expect(state.bds[0].authors![0].website).toBe('https://zep.example');
+    });
+
+    it('REMOVE_BD_AUTHOR removes just that row', () => {
+      let { state, bdTempId } = bdWithAuthor();
+      state = wizardReducer(state, { type: 'ADD_BD_AUTHOR', bdTempId });
+      expect(state.bds[0].authors).toHaveLength(2);
+      const firstAuthor = state.bds[0].authors![0].tempId;
+      state = wizardReducer(state, { type: 'REMOVE_BD_AUTHOR', bdTempId, authorTempId: firstAuthor });
+      expect(state.bds[0].authors).toHaveLength(1);
+      expect(state.bds[0].authors![0].tempId).not.toBe(firstAuthor);
     });
   });
 
-  describe('TOGGLE_AUTHOR_BD', () => {
-    it('adds BD link when not present', () => {
-      let state = wizardReducer(initialWizardState, { type: 'ADD_BD' });
-      state = wizardReducer(state, { type: 'ADD_AUTHOR' });
-      const bdTempId = state.bds[0].tempId;
-      const authorTempId = state.authors[0].tempId;
-
-      state = wizardReducer(state, {
-        type: 'TOGGLE_AUTHOR_BD',
-        authorTempId,
-        bdTempId,
-      });
-      expect(state.authors[0].bdTempIds).toContain(bdTempId);
+  describe('migrateDraft', () => {
+    it('fans legacy global authors out into nested comic authors', () => {
+      const draft: WizardState = {
+        currentStep: 2,
+        event: { name: 'X', date: '2026-01-01', hour: '', place: '', fb_event: '' },
+        bds: [
+          { tempId: 'bd-1', mode: 'new', title: 'A', genreIds: [] },
+          { tempId: 'bd-2', mode: 'new', title: 'B', genreIds: [] },
+        ],
+        authors: [
+          { tempId: 'au-1', mode: 'new', name: 'Shared', bdTempIds: ['bd-1', 'bd-2'] },
+          { tempId: 'au-2', mode: 'existing', existingId: 'id-9', bdTempIds: ['bd-1'] },
+        ],
+      };
+      const migrated = migrateDraft(draft);
+      expect(migrated.authors).toHaveLength(0);
+      expect(migrated.bds[0].authors).toHaveLength(2); // Shared + existing
+      expect(migrated.bds[1].authors).toHaveLength(1); // Shared only
+      expect(migrated.bds[0].authors!.map((a) => a.name)).toContain('Shared');
     });
 
-    it('removes BD link when already present (toggle off)', () => {
-      let state = wizardReducer(initialWizardState, { type: 'ADD_BD' });
-      state = wizardReducer(state, { type: 'ADD_AUTHOR' });
-      const bdTempId = state.bds[0].tempId;
-      const authorTempId = state.authors[0].tempId;
-
-      // Toggle on
-      state = wizardReducer(state, { type: 'TOGGLE_AUTHOR_BD', authorTempId, bdTempId });
-      // Toggle off
-      state = wizardReducer(state, { type: 'TOGGLE_AUTHOR_BD', authorTempId, bdTempId });
-      expect(state.authors[0].bdTempIds).not.toContain(bdTempId);
+    it('clamps an out-of-range currentStep (old Authors step) into range', () => {
+      const draft: WizardState = {
+        currentStep: 3,
+        event: { name: 'X', date: '2026-01-01', hour: '', place: '', fb_event: '' },
+        bds: [],
+        authors: [],
+      };
+      expect(migrateDraft(draft).currentStep).toBe(2); // TOTAL_STEPS - 1
     });
 
-    it('does not affect other authors', () => {
-      let state = wizardReducer(initialWizardState, { type: 'ADD_BD' });
-      state = wizardReducer(state, { type: 'ADD_AUTHOR' });
-      state = wizardReducer(state, { type: 'ADD_AUTHOR' });
-      const bdTempId = state.bds[0].tempId;
-
-      state = wizardReducer(state, {
-        type: 'TOGGLE_AUTHOR_BD',
-        authorTempId: state.authors[0].tempId,
-        bdTempId,
-      });
-      expect(state.authors[0].bdTempIds).toContain(bdTempId);
-      expect(state.authors[1].bdTempIds).not.toContain(bdTempId);
+    it('leaves an already-nested draft unchanged (idempotent)', () => {
+      const draft: WizardState = {
+        currentStep: 1,
+        event: { name: 'X', date: '2026-01-01', hour: '', place: '', fb_event: '' },
+        bds: [
+          { tempId: 'bd-1', mode: 'new', title: 'A', genreIds: [], authors: [{ tempId: 'a1', mode: 'new', name: 'Z' }] },
+        ],
+        authors: [],
+      };
+      const migrated = migrateDraft(draft);
+      expect(migrated.bds[0].authors).toHaveLength(1);
+      expect(migrated.bds[0].authors![0].name).toBe('Z');
     });
   });
 

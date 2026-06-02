@@ -98,7 +98,7 @@ const BD_DEFAULTS: Record<string, string> = {
 };
 
 const AUTHOR_DEFAULTS: Record<string, string> = {
-  name: '', bio: '', photo_url: '', wikipedia_url: '',
+  name: '', bio: '', photo_url: '', wikipedia_url: '', website: '',
 };
 
 const EVENT_DEFAULTS: Record<string, string> = {
@@ -296,6 +296,7 @@ describe('Server Actions', () => {
         bio: 'Scénariste français',
         photo_url: 'https://example.com/photo.jpg',
         wikipedia_url: 'https://fr.wikipedia.org/wiki/Goscinny',
+        website: 'https://goscinny.example',
       }, AUTHOR_DEFAULTS);
       await expect(createAuthor({}, fd)).rejects.toThrow(REDIRECT_ERROR);
       expect(prisma.author.create).toHaveBeenCalledWith({
@@ -304,13 +305,14 @@ describe('Server Actions', () => {
           bio: 'Scénariste français',
           photo_url: 'https://example.com/photo.jpg',
           wikipedia_url: 'https://fr.wikipedia.org/wiki/Goscinny',
+          website: 'https://goscinny.example',
         },
       });
     });
 
-    it('sets optional fields to null when empty', async () => {
+    it('sets optional fields to null when empty and sanitizes bad URLs', async () => {
       vi.mocked(prisma.author.create).mockResolvedValue({} as any);
-      const fd = makeFormData({ name: 'Test Author' }, AUTHOR_DEFAULTS);
+      const fd = makeFormData({ name: 'Test Author', photo_url: 'not-a-url' }, AUTHOR_DEFAULTS);
       await expect(createAuthor({}, fd)).rejects.toThrow(REDIRECT_ERROR);
       expect(prisma.author.create).toHaveBeenCalledWith({
         data: {
@@ -318,6 +320,7 @@ describe('Server Actions', () => {
           bio: null,
           photo_url: null,
           wikipedia_url: null,
+          website: null,
         },
       });
     });

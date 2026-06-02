@@ -10,6 +10,11 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: bd_platform
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d bd_platform"]
+      interval: 3s
+      timeout: 3s
+      retries: 15
 
 volumes:
   bd_platform_pgdata:

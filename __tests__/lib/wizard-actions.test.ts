@@ -5,7 +5,7 @@ vi.mock('next/cache', () => ({
   revalidatePath: vi.fn(),
 }));
 
-// Mock next/navigation — redirect throws
+// Mock next/navigation — redirect throws (other actions still use it)
 const REDIRECT_ERROR = new Error('NEXT_REDIRECT');
 vi.mock('next/navigation', () => ({
   redirect: vi.fn(() => { throw REDIRECT_ERROR; }),
@@ -28,9 +28,9 @@ vi.mock('@/app/lib/prisma', () => ({
     event: { create: vi.fn() },
     bd: { create: vi.fn() },
     bdEvent: { create: vi.fn() },
-    bdAuthor: { create: vi.fn(), findFirst: vi.fn() },
+    bdAuthor: { create: vi.fn(), upsert: vi.fn(), findFirst: vi.fn() },
     author: { create: vi.fn(), findFirst: vi.fn() },
-    authorEvent: { create: vi.fn() },
+    authorEvent: { create: vi.fn(), upsert: vi.fn() },
     publisher: { create: vi.fn(), findFirst: vi.fn() },
     wizardDraft: {
       create: vi.fn(),
@@ -76,6 +76,24 @@ function makeWizardFormData(payload: any, draftId?: string) {
   return fd;
 }
 
+// A fresh mock transaction client with every model method the action uses.
+function makeTx(overrides: Record<string, any> = {}) {
+  return {
+    event: { create: vi.fn().mockResolvedValue({ id: 'event-1' }) },
+    publisher: { create: vi.fn().mockResolvedValue({ id: 'pub-1' }), findFirst: vi.fn().mockResolvedValue(null) },
+    author: { create: vi.fn().mockResolvedValue({ id: 'author-db-1' }), findFirst: vi.fn().mockResolvedValue(null) },
+    bd: { create: vi.fn().mockResolvedValue({ id: 'bd-db-1' }) },
+    bdEvent: { create: vi.fn() },
+    bdAuthor: { upsert: vi.fn(), create: vi.fn(), findFirst: vi.fn() },
+    authorEvent: { upsert: vi.fn(), create: vi.fn() },
+    ...overrides,
+  };
+}
+
+function runTransactionWith(tx: any) {
+  vi.mocked(prisma.$transaction).mockImplementation(async (fn: any) => fn(tx));
+}
+
 describe('Wizard Actions', () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -96,164 +114,128 @@ describe('Wizard Actions', () => {
 
     it('rejects missing event name', async () => {
       const payload = makeWizardPayload({ event: { name: '', date: '2026-01-01' } });
-      const fd = makeWizardFormData(payload);
-      const result = await createEventWithRelations({}, fd);
+      const result = await createEventWithRelations({}, makeWizardFormData(payload));
       expect(result.message).toContain('invalides');
     });
 
     it('rejects missing event date', async () => {
       const payload = makeWizardPayload({ event: { name: 'Test', date: '' } });
-      const fd = makeWizardFormData(payload);
-      const result = await createEventWithRelations({}, fd);
+      const result = await createEventWithRelations({}, makeWizardFormData(payload));
       expect(result.message).toContain('invalides');
     });
 
-    it('calls prisma.$transaction with valid event-only payload', async () => {
-      vi.mocked(prisma.$transaction).mockImplementation(async (fn: any) => {
-        const tx = {
-          event: { create: vi.fn().mockResolvedValue({ id: 'event-1' }) },
-          publisher: { create: vi.fn(), findFirst: vi.fn() },
-          author: { create: vi.fn(), findFirst: vi.fn() },
-          bd: { create: vi.fn() },
-          bdEvent: { create: vi.fn() },
-          bdAuthor: { create: vi.fn(), findFirst: vi.fn() },
-          authorEvent: { create: vi.fn() },
-        };
-        await fn(tx);
-        return tx;
-      });
-
-      const payload = makeWizardPayload();
-      const fd = makeWizardFormData(payload);
-      await expect(createEventWithRelations({}, fd)).rejects.toThrow(REDIRECT_ERROR);
+    it('returns success + eventId for a valid event-only payload (no redirect)', async () => {
+      const tx = makeTx();
+      runTransactionWith(tx);
+      const result = await createEventWithRelations({}, makeWizardFormData(makeWizardPayload()));
+      expect(result.success).toBe(true);
+      expect(result.eventId).toBe('event-1');
       expect(prisma.$transaction).toHaveBeenCalledTimes(1);
     });
 
     it('creates new BDs within the transaction', async () => {
-      const mockTx = {
-        event: { create: vi.fn().mockResolvedValue({ id: 'event-1' }) },
-        publisher: { create: vi.fn(), findFirst: vi.fn() },
-        author: { create: vi.fn(), findFirst: vi.fn() },
-        bd: { create: vi.fn().mockResolvedValue({ id: 'bd-1' }) },
-        bdEvent: { create: vi.fn() },
-        bdAuthor: { create: vi.fn(), findFirst: vi.fn() },
-        authorEvent: { create: vi.fn() },
-      };
-      vi.mocked(prisma.$transaction).mockImplementation(async (fn: any) => {
-        await fn(mockTx);
-      });
-
+      const tx = makeTx();
+      runTransactionWith(tx);
       const payload = makeWizardPayload({
         bds: [{ tempId: 'bd-1', mode: 'new', title: 'My BD', genreIds: [] }],
       });
-      const fd = makeWizardFormData(payload);
-      await expect(createEventWithRelations({}, fd)).rejects.toThrow(REDIRECT_ERROR);
-      expect(mockTx.bd.create).toHaveBeenCalledWith(
-        expect.objectContaining({
-          data: expect.objectContaining({ title: 'My BD' }),
-        }),
+      const result = await createEventWithRelations({}, makeWizardFormData(payload));
+      expect(result.success).toBe(true);
+      expect(tx.bd.create).toHaveBeenCalledWith(
+        expect.objectContaining({ data: expect.objectContaining({ title: 'My BD' }) }),
       );
     });
 
     it('links existing BDs to event via bdEvent', async () => {
-      const mockTx = {
-        event: { create: vi.fn().mockResolvedValue({ id: 'event-1' }) },
-        publisher: { create: vi.fn(), findFirst: vi.fn() },
-        author: { create: vi.fn(), findFirst: vi.fn() },
-        bd: { create: vi.fn() },
-        bdEvent: { create: vi.fn() },
-        bdAuthor: { create: vi.fn(), findFirst: vi.fn() },
-        authorEvent: { create: vi.fn() },
-      };
-      vi.mocked(prisma.$transaction).mockImplementation(async (fn: any) => {
-        await fn(mockTx);
-      });
-
+      const tx = makeTx();
+      runTransactionWith(tx);
       const payload = makeWizardPayload({
         bds: [{ tempId: 'bd-1', mode: 'existing', existingId: 'existing-bd-id' }],
       });
-      const fd = makeWizardFormData(payload);
-      await expect(createEventWithRelations({}, fd)).rejects.toThrow(REDIRECT_ERROR);
-      expect(mockTx.bdEvent.create).toHaveBeenCalledWith({
+      await createEventWithRelations({}, makeWizardFormData(payload));
+      expect(tx.bdEvent.create).toHaveBeenCalledWith({
         data: { bdId: 'existing-bd-id', eventId: 'event-1' },
       });
     });
 
-    it('creates new authors and links to event', async () => {
-      const mockTx = {
-        event: { create: vi.fn().mockResolvedValue({ id: 'event-1' }) },
-        publisher: { create: vi.fn(), findFirst: vi.fn() },
-        author: { create: vi.fn().mockResolvedValue({ id: 'author-db-1' }), findFirst: vi.fn().mockResolvedValue(null) },
-        bd: { create: vi.fn() },
-        bdEvent: { create: vi.fn() },
-        bdAuthor: { create: vi.fn(), findFirst: vi.fn() },
-        authorEvent: { create: vi.fn() },
-      };
-      vi.mocked(prisma.$transaction).mockImplementation(async (fn: any) => {
-        await fn(mockTx);
-      });
-
+    it('derives publishing_year from the publication date', async () => {
+      const tx = makeTx();
+      runTransactionWith(tx);
       const payload = makeWizardPayload({
-        authors: [{ tempId: 'a-1', mode: 'new', name: 'Test Author', bdTempIds: [] }],
+        bds: [{ tempId: 'bd-1', mode: 'new', title: 'Dated BD', publication_date: '2024-03-15', genreIds: [] }],
       });
-      const fd = makeWizardFormData(payload);
-      await expect(createEventWithRelations({}, fd)).rejects.toThrow(REDIRECT_ERROR);
-      expect(mockTx.author.create).toHaveBeenCalledWith(
+      await createEventWithRelations({}, makeWizardFormData(payload));
+      expect(tx.bd.create).toHaveBeenCalledWith(
+        expect.objectContaining({ data: expect.objectContaining({ publishing_year: 2024 }) }),
+      );
+    });
+
+    it('creates a nested new author and links it to the comic and the event', async () => {
+      const tx = makeTx();
+      runTransactionWith(tx);
+      const payload = makeWizardPayload({
+        bds: [
+          {
+            tempId: 'bd-1',
+            mode: 'new',
+            title: 'My BD',
+            genreIds: [],
+            authors: [{ tempId: 'a-1', mode: 'new', name: 'Test Author' }],
+          },
+        ],
+      });
+      await createEventWithRelations({}, makeWizardFormData(payload));
+      expect(tx.author.create).toHaveBeenCalledWith(
+        expect.objectContaining({ data: expect.objectContaining({ name: 'Test Author' }) }),
+      );
+      expect(tx.bdAuthor.upsert).toHaveBeenCalledTimes(1);
+      expect(tx.authorEvent.upsert).toHaveBeenCalledWith(
         expect.objectContaining({
-          data: expect.objectContaining({ name: 'Test Author' }),
+          where: { authorId_eventId: { authorId: 'author-db-1', eventId: 'event-1' } },
         }),
       );
-      expect(mockTx.authorEvent.create).toHaveBeenCalledWith({
-        data: { authorId: 'author-db-1', eventId: 'event-1' },
-      });
     });
 
-    it('deletes draft on success when draftId provided', async () => {
-      vi.mocked(prisma.$transaction).mockImplementation(async (fn: any) => {
-        const tx = {
-          event: { create: vi.fn().mockResolvedValue({ id: 'event-1' }) },
-          publisher: { create: vi.fn(), findFirst: vi.fn() },
-          author: { create: vi.fn(), findFirst: vi.fn() },
-          bd: { create: vi.fn() },
-          bdEvent: { create: vi.fn() },
-          bdAuthor: { create: vi.fn(), findFirst: vi.fn() },
-          authorEvent: { create: vi.fn() },
-        };
-        await fn(tx);
+    it('dedups the same new author across two comics into one create + one event link', async () => {
+      const tx = makeTx({
+        bd: { create: vi.fn().mockResolvedValueOnce({ id: 'bd-A' }).mockResolvedValueOnce({ id: 'bd-B' }) },
       });
-      vi.mocked(prisma.wizardDraft.delete).mockResolvedValue({} as any);
-
-      const payload = makeWizardPayload();
-      const fd = makeWizardFormData(payload, 'draft-123');
-      await expect(createEventWithRelations({}, fd)).rejects.toThrow(REDIRECT_ERROR);
-      expect(prisma.wizardDraft.delete).toHaveBeenCalledWith({ where: { id: 'draft-123' } });
+      runTransactionWith(tx);
+      const payload = makeWizardPayload({
+        bds: [
+          { tempId: 'bd-1', mode: 'new', title: 'BD One', genreIds: [], authors: [{ tempId: 'a-1', mode: 'new', name: 'Zep' }] },
+          { tempId: 'bd-2', mode: 'new', title: 'BD Two', genreIds: [], authors: [{ tempId: 'a-2', mode: 'new', name: 'Zep' }] },
+        ],
+      });
+      await createEventWithRelations({}, makeWizardFormData(payload));
+      expect(tx.author.create).toHaveBeenCalledTimes(1); // deduped
+      expect(tx.bdAuthor.upsert).toHaveBeenCalledTimes(2); // one link per comic
+      expect(tx.authorEvent.upsert).toHaveBeenCalledTimes(1); // union = 1 author
     });
 
-    it('returns error message when transaction fails', async () => {
+    it('maps a P2002 duplicate-name violation to a specific French message', async () => {
+      vi.mocked(prisma.$transaction).mockRejectedValue({ code: 'P2002', meta: { target: ['name'] } });
+      const result = await createEventWithRelations({}, makeWizardFormData(makeWizardPayload()));
+      expect(result.message).toBe('Un événement porte déjà ce nom.');
+      expect(result.success).toBeUndefined();
+    });
+
+    it('returns the generic error message for an unknown transaction failure', async () => {
       vi.mocked(prisma.$transaction).mockRejectedValue(new Error('DB error'));
-      const payload = makeWizardPayload();
-      const fd = makeWizardFormData(payload);
-      const result = await createEventWithRelations({}, fd);
+      const result = await createEventWithRelations({}, makeWizardFormData(makeWizardPayload()));
       expect(result.message).toBe('Erreur lors de la création.');
     });
 
-    it('revalidates paths on success', async () => {
-      vi.mocked(prisma.$transaction).mockImplementation(async (fn: any) => {
-        const tx = {
-          event: { create: vi.fn().mockResolvedValue({ id: 'event-1' }) },
-          publisher: { create: vi.fn(), findFirst: vi.fn() },
-          author: { create: vi.fn(), findFirst: vi.fn() },
-          bd: { create: vi.fn() },
-          bdEvent: { create: vi.fn() },
-          bdAuthor: { create: vi.fn(), findFirst: vi.fn() },
-          authorEvent: { create: vi.fn() },
-        };
-        await fn(tx);
-      });
+    it('deletes draft on success when draftId provided', async () => {
+      runTransactionWith(makeTx());
+      vi.mocked(prisma.wizardDraft.delete).mockResolvedValue({} as any);
+      await createEventWithRelations({}, makeWizardFormData(makeWizardPayload(), 'draft-123'));
+      expect(prisma.wizardDraft.delete).toHaveBeenCalledWith({ where: { id: 'draft-123' } });
+    });
 
-      const payload = makeWizardPayload();
-      const fd = makeWizardFormData(payload);
-      await expect(createEventWithRelations({}, fd)).rejects.toThrow(REDIRECT_ERROR);
+    it('revalidates paths on success', async () => {
+      runTransactionWith(makeTx());
+      await createEventWithRelations({}, makeWizardFormData(makeWizardPayload()));
       expect(revalidatePath).toHaveBeenCalledWith('/admin/events');
       expect(revalidatePath).toHaveBeenCalledWith('/events');
       expect(revalidatePath).toHaveBeenCalledWith('/admin/bds');
@@ -272,24 +254,17 @@ describe('Wizard Actions', () => {
 
     it('creates a new draft when no draftId', async () => {
       vi.mocked(prisma.wizardDraft.create).mockResolvedValue({ id: 'new-draft-id' } as any);
-      const payload = makeWizardPayload();
-      const fd = makeWizardFormData(payload);
-      const result = await saveWizardDraft({}, fd);
+      const result = await saveWizardDraft({}, makeWizardFormData(makeWizardPayload()));
       expect(result.success).toBe(true);
       expect(result.draftId).toBe('new-draft-id');
       expect(prisma.wizardDraft.create).toHaveBeenCalledWith({
-        data: expect.objectContaining({
-          email: 'admin@test.com',
-          name: 'Test Event',
-        }),
+        data: expect.objectContaining({ email: 'admin@test.com', name: 'Test Event' }),
       });
     });
 
     it('updates existing draft when draftId provided', async () => {
       vi.mocked(prisma.wizardDraft.update).mockResolvedValue({ id: 'existing-draft' } as any);
-      const payload = makeWizardPayload();
-      const fd = makeWizardFormData(payload, 'existing-draft');
-      const result = await saveWizardDraft({}, fd);
+      const result = await saveWizardDraft({}, makeWizardFormData(makeWizardPayload(), 'existing-draft'));
       expect(result.success).toBe(true);
       expect(result.draftId).toBe('existing-draft');
       expect(prisma.wizardDraft.update).toHaveBeenCalledWith({
@@ -301,8 +276,7 @@ describe('Wizard Actions', () => {
     it('uses "Brouillon" as name when event name is empty', async () => {
       vi.mocked(prisma.wizardDraft.create).mockResolvedValue({ id: 'draft-1' } as any);
       const payload = makeWizardPayload({ event: { name: '' } });
-      const fd = makeWizardFormData(payload);
-      await saveWizardDraft({}, fd);
+      await saveWizardDraft({}, makeWizardFormData(payload));
       expect(prisma.wizardDraft.create).toHaveBeenCalledWith({
         data: expect.objectContaining({ name: 'Brouillon' }),
       });
@@ -310,9 +284,7 @@ describe('Wizard Actions', () => {
 
     it('returns error on DB failure', async () => {
       vi.mocked(prisma.wizardDraft.create).mockRejectedValue(new Error('DB error'));
-      const payload = makeWizardPayload();
-      const fd = makeWizardFormData(payload);
-      const result = await saveWizardDraft({}, fd);
+      const result = await saveWizardDraft({}, makeWizardFormData(makeWizardPayload()));
       expect(result.message).toBe('Erreur lors de la sauvegarde.');
     });
   });
@@ -322,9 +294,7 @@ describe('Wizard Actions', () => {
     it('deletes the draft by ID', async () => {
       vi.mocked(prisma.wizardDraft.delete).mockResolvedValue({} as any);
       await deleteWizardDraft('draft-to-delete');
-      expect(prisma.wizardDraft.delete).toHaveBeenCalledWith({
-        where: { id: 'draft-to-delete' },
-      });
+      expect(prisma.wizardDraft.delete).toHaveBeenCalledWith({ where: { id: 'draft-to-delete' } });
     });
 
     it('revalidates /admin/drafts path', async () => {
