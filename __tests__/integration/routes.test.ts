@@ -3,6 +3,8 @@ import { describe, it, expect } from 'vitest';
 const BASE_URL = process.env.TEST_BASE_URL || 'http://localhost:3000';
 const SKIP = !process.env.TEST_BASE_URL && process.env.CI === 'true';
 
+const UUID = '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}';
+
 async function fetchRoute(path: string) {
   return fetch(`${BASE_URL}${path}`, { redirect: 'manual' });
 }
@@ -53,6 +55,44 @@ describe.skipIf(SKIP)('Dashboard pages (public)', () => {
   it('GET /fr/authors returns 200', async () => {
     const res = await fetchRoute('/fr/authors');
     expect(res.status).toBe(200);
+  });
+});
+
+// Regression guard for the la-bdi.fr outage (P2022 "column does not exist").
+// A column present in the Prisma client but missing from the DB (i.e. a
+// migration that never reached the DB) makes DB-backed pages throw. The list
+// AND detail pages for authors select the affected column, so both 500 — we
+// assert the list is 200 *first* so the test fails loudly instead of skipping
+// when there's nothing to scrape. The homepage streams its shell before the
+// failing query, so it returns 200 even on error; we still assert it isn't the
+// Next.js production server-error page (the exact symptom seen on prod).
+describe.skipIf(SKIP)('Detail pages (DB-backed) render without server errors', () => {
+  async function firstId(listPath: string, segment: string, ctx: { skip: () => void }) {
+    const list = await fetchRoute(listPath);
+    expect(list.status).toBe(200); // a missing DB column 500s the list page — fail, don't skip
+    const id = (await list.text()).match(new RegExp(`/${segment}/(${UUID})`, 'i'))?.[1];
+    if (!id) ctx.skip(); // list is healthy but the DB is empty — nothing to open
+    return id as string;
+  }
+
+  it('GET /fr/authors/[id] returns 200', async (ctx) => {
+    const id = await firstId('/fr/authors', 'authors', ctx);
+    const res = await fetchRoute(`/fr/authors/${id}`);
+    expect(res.status).toBe(200);
+  }, 20000); // DB-backed list + detail can be slow against a dev server with full seed data
+
+  it('GET /fr/bds/[id] returns 200', async (ctx) => {
+    const id = await firstId('/fr/bds', 'bds', ctx);
+    const res = await fetchRoute(`/fr/bds/${id}`);
+    expect(res.status).toBe(200);
+  }, 20000);
+
+  it('GET /fr homepage does not render the server-error page', async () => {
+    const res = await fetchRoute('/fr');
+    const html = await res.text();
+    // Next.js prints this when a Server Component render throws in production.
+    expect(html).not.toContain('Application error');
+    expect(html).not.toContain('server-side exception');
   });
 });
 
