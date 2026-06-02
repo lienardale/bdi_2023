@@ -38,7 +38,7 @@ Because `NEXT_PUBLIC_BRAND` is inlined into the client bundle at build time, `br
 3. Add the brand CSS palette block to `app/ui/global.css` under a new `.brand-<id>` selector, plus four `.brand-<id> .card-cycle > *:nth-child(4n+N)` rules for the list page rotation.
 4. Add placeholder assets under `public/brands/<id>/` (`logo`, `hero`, `icon.png`, `apple-icon.png`, `favicon.png`) and reference them in the brand's `assets` field.
 5. Set `BRAND=<id>` + `NEXT_PUBLIC_BRAND=<id>` in the deployment's env vars.
-6. Point the deployment at a fresh Postgres and set `POSTGRES_URL` + `POSTGRES_URL_NON_POOLING` — the `vercel-build` script applies migrations on first deploy.
+6. Point the deployment at a fresh Postgres and set `POSTGRES_URL` + `POSTGRES_URL_NON_POOLING` — the `vercel-build` script applies migrations on the first production deploy.
 
 No other file changes needed — every brand-driven string, colour, asset, and feature flag comes from the brand module.
 
@@ -96,7 +96,7 @@ npm run test:integration   # vitest integration suite (honors TEST_BASE_URL, def
 
 Prisma schema at `prisma/schema.prisma`. Connection string via `POSTGRES_URL` (migrations use the direct `POSTGRES_URL_NON_POOLING` via `directUrl`). Each brand deployment targets its own Postgres instance; the schema is identical.
 
-**Migrations on deploy:** the `vercel-build` script runs `prisma migrate deploy && next build`, so every Vercel deployment migrates *its own* database (BDI → Vercel Postgres, CMBD → Neon) using that project's env vars — no manual step, no secrets in git. CI (`npm run build`) does not run migrate, so it never touches a real DB.
+**Migrations on deploy:** the `vercel-build` script runs `prisma migrate deploy` **only on production deploys** (gated on `VERCEL_ENV=production`) and then `next build`. So each production deployment migrates *its own* database (BDI → Vercel Postgres, CMBD → Neon) from that project's env vars — no manual step, no secrets in git. Preview deploys skip migrate (they share the prod DB, already migrated), and CI (`npm run build`) never runs migrate.
 
 **Core models:** `Event`, `Bd`, `Author`, `Publisher`, `Genre`, `InstagramPost`, `WizardDraft`. Junction tables: `BdAuthor`, `AuthorEvent`, `BdEvent`, `BdGenre`. Prisma client singleton in `app/lib/prisma.ts`.
 
