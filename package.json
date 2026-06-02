@@ -5,7 +5,7 @@
     "build": "next build --webpack",
     "build:bdi": "BRAND=bdi NEXT_PUBLIC_BRAND=bdi next build --webpack",
     "build:cmbd": "BRAND=cmbd NEXT_PUBLIC_BRAND=cmbd next build --webpack",
-    "vercel-build": "prisma migrate deploy && next build --webpack",
+    "vercel-build": "if [ \"$VERCEL_ENV\" = production ]; then prisma migrate deploy; fi && next build --webpack",
     "dev": "next dev --webpack",
     "dev:bdi": "BRAND=bdi NEXT_PUBLIC_BRAND=bdi next dev --webpack",
     "dev:cmbd": "BRAND=cmbd NEXT_PUBLIC_BRAND=cmbd next dev --webpack",
