@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { WizardState } from './wizard-reducer';
-import { CalendarIcon, BookOpenIcon, UserIcon } from '@heroicons/react/24/outline';
+import { derivePublishingYear } from '@/app/lib/wizard-helpers';
+import { CalendarIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 
 export default function SummaryStep({
   state,
@@ -19,8 +20,6 @@ export default function SummaryStep({
 }) {
   const t = useTranslations('wizard');
   const tEvents = useTranslations('events');
-  const tBds = useTranslations('bds');
-  const tAuthors = useTranslations('authors');
 
   const resolveBdTitle = (bd: typeof state.bds[0]) => {
     if (bd.mode === 'existing' && bd.existingId) {
@@ -29,11 +28,11 @@ export default function SummaryStep({
     return bd.title ?? '?';
   };
 
-  const resolveAuthorName = (author: typeof state.authors[0]) => {
+  const resolveAuthorName = (author: NonNullable<typeof state.bds[0]['authors']>[0]) => {
     if (author.mode === 'existing' && author.existingId) {
       return existingAuthors.find((a) => a.id === author.existingId)?.name ?? '?';
     }
-    return author.name ?? '?';
+    return author.name;
   };
 
   const resolvePublisher = (bd: typeof state.bds[0]) => {
@@ -83,7 +82,7 @@ export default function SummaryStep({
         </dl>
       </div>
 
-      {/* BDs */}
+      {/* BDs (with their authors) */}
       <div className="rounded-md border border-border p-4">
         <h3 className="flex items-center gap-2 font-medium mb-3">
           <BookOpenIcon className="h-5 w-5" />
@@ -93,80 +92,56 @@ export default function SummaryStep({
           <p className="text-sm text-muted-foreground">{t('noBdsAdded')}</p>
         ) : (
           <ul className="space-y-3">
-            {state.bds.map((bd) => (
-              <li key={bd.tempId} className="text-sm border-l-2 border-primary pl-3">
-                <span className="font-medium">{resolveBdTitle(bd)}</span>
-                {bd.mode === 'existing' && (
-                  <span className="ml-2 text-xs text-muted-foreground">({t('selectExisting')})</span>
-                )}
-                {resolvePublisher(bd) && (
-                  <span className="text-muted-foreground"> — {resolvePublisher(bd)}</span>
-                )}
-                {bd.publishing_year && (
-                  <span className="text-muted-foreground"> ({bd.publishing_year})</span>
-                )}
-                {/* Extra details row */}
-                {(bd.ean || bd.page_count || bd.price) && (
-                  <div className="text-xs text-muted-foreground mt-0.5">
-                    {[
-                      bd.ean && `EAN: ${bd.ean}`,
-                      bd.page_count && `${bd.page_count} p.`,
-                      bd.price && `${bd.price} €`,
-                    ].filter(Boolean).join(' · ')}
-                  </div>
-                )}
-                {bd.summary && (
-                  <p className="text-xs text-muted-foreground mt-0.5 line-clamp-2">{bd.summary}</p>
-                )}
-                {resolveGenres(bd).length > 0 && (
-                  <div className="flex gap-1 mt-1">
-                    {resolveGenres(bd).map((g) => (
-                      <span key={g} className="px-1.5 py-0.5 text-xs rounded bg-muted text-muted-foreground">
-                        {g}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-
-      {/* Authors */}
-      <div className="rounded-md border border-border p-4">
-        <h3 className="flex items-center gap-2 font-medium mb-3">
-          <UserIcon className="h-5 w-5" />
-          {t('stepAuthors')} ({state.authors.length})
-        </h3>
-        {state.authors.length === 0 ? (
-          <p className="text-sm text-muted-foreground">{t('noAuthorsAdded')}</p>
-        ) : (
-          <ul className="space-y-3">
-            {state.authors.map((author) => (
-              <li key={author.tempId} className="text-sm border-l-2 border-primary pl-3">
-                <span className="font-medium">{resolveAuthorName(author)}</span>
-                {author.mode === 'existing' && (
-                  <span className="ml-2 text-xs text-muted-foreground">({t('selectExisting')})</span>
-                )}
-                {author.bio && (
-                  <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">{author.bio}</p>
-                )}
-                {(author.bdTempIds?.length ?? 0) > 0 && (
-                  <div className="flex gap-1 mt-1">
-                    {author.bdTempIds!.map((bdTempId) => {
-                      const bd = state.bds.find((b) => b.tempId === bdTempId);
-                      if (!bd) return null;
-                      return (
-                        <span key={bdTempId} className="px-1.5 py-0.5 text-xs rounded bg-muted text-muted-foreground">
-                          {resolveBdTitle(bd)}
+            {state.bds.map((bd) => {
+              const year = derivePublishingYear(bd.publication_date);
+              const authors = (bd.authors ?? [])
+                .map(resolveAuthorName)
+                .filter((n): n is string => Boolean(n));
+              return (
+                <li key={bd.tempId} className="text-sm border-l-2 border-primary pl-3">
+                  <span className="font-medium">{resolveBdTitle(bd)}</span>
+                  {bd.mode === 'existing' && (
+                    <span className="ml-2 text-xs text-muted-foreground">({t('selectExisting')})</span>
+                  )}
+                  {resolvePublisher(bd) && (
+                    <span className="text-muted-foreground"> — {resolvePublisher(bd)}</span>
+                  )}
+                  {year && <span className="text-muted-foreground"> ({year})</span>}
+                  {/* Extra details row */}
+                  {(bd.ean || bd.page_count || bd.price) && (
+                    <div className="text-xs text-muted-foreground mt-0.5">
+                      {[
+                        bd.ean && `EAN: ${bd.ean}`,
+                        bd.page_count && `${bd.page_count} p.`,
+                        bd.price && `${bd.price} €`,
+                      ].filter(Boolean).join(' · ')}
+                    </div>
+                  )}
+                  {bd.summary && (
+                    <p className="text-xs text-muted-foreground mt-0.5 line-clamp-2">{bd.summary}</p>
+                  )}
+                  {resolveGenres(bd).length > 0 && (
+                    <div className="flex gap-1 mt-1 flex-wrap">
+                      {resolveGenres(bd).map((g) => (
+                        <span key={g} className="px-1.5 py-0.5 text-xs rounded bg-muted text-muted-foreground">
+                          {g}
                         </span>
-                      );
-                    })}
-                  </div>
-                )}
-              </li>
-            ))}
+                      ))}
+                    </div>
+                  )}
+                  {authors.length > 0 && (
+                    <div className="flex gap-1 mt-1 flex-wrap">
+                      <span className="text-xs text-muted-foreground">{t('stepAuthors')}:</span>
+                      {authors.map((name, i) => (
+                        <span key={i} className="px-1.5 py-0.5 text-xs rounded bg-muted text-muted-foreground">
+                          {name}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>

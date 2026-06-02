@@ -2,17 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/app/lib/prisma';
 import { parseCsv } from '@/app/lib/csv';
 import { requireImportApi } from '@/app/lib/auth-utils';
+import { sanitizeUrl } from '@/app/lib/url-utils';
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const MAX_ROWS = 500;
-
-/** Only allow http(s) URLs; reject javascript:, data:, etc. Returns null for empty/missing. */
-function sanitizeUrl(url: string | undefined | null): string | null {
-  if (!url || !url.trim()) return null;
-  const trimmed = url.trim();
-  if (/^https?:\/\//i.test(trimmed)) return trimmed;
-  return null; // reject non-http(s) URLs
-}
 
 export async function POST(request: NextRequest) {
   const forbidden = await requireImportApi();
@@ -79,7 +72,7 @@ export async function POST(request: NextRequest) {
         count++;
       }
     } else if (entity === 'authors') {
-      const rows = parseCsv<{ name: string; bio?: string; bio_source?: string; photo_url?: string; wikipedia_url?: string }>(csvText);
+      const rows = parseCsv<{ name: string; bio?: string; bio_source?: string; photo_url?: string; wikipedia_url?: string; website?: string }>(csvText);
       if (rows.length > MAX_ROWS) {
         return NextResponse.json({ error: `Too many rows (max ${MAX_ROWS})` }, { status: 400 });
       }
@@ -89,6 +82,7 @@ export async function POST(request: NextRequest) {
           bio_source: row.bio_source || null,
           photo_url: sanitizeUrl(row.photo_url),
           wikipedia_url: sanitizeUrl(row.wikipedia_url),
+          website: sanitizeUrl(row.website),
         };
         await prisma.author.upsert({
           where: { name: row.name },

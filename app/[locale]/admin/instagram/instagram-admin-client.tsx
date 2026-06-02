@@ -12,6 +12,7 @@ import {
   InstagramPostState,
 } from '@/app/lib/actions';
 import ConfirmDeleteButton from '@/app/ui/admin/confirm-delete-button';
+import { instagramEmbedUrl, instagramPostUrl } from '@/app/lib/instagram';
 import {
   ArrowUpIcon,
   ArrowDownIcon,
@@ -21,6 +22,7 @@ import {
 type InstagramPostRow = {
   id: string;
   shortcode: string;
+  type: string | null;
   position: number;
   active: boolean;
 };
@@ -136,13 +138,13 @@ export default function InstagramAdminClient({
               >
                 {/* Thumbnail preview */}
                 <a
-                  href={`https://www.instagram.com/p/${post.shortcode}/`}
+                  href={instagramPostUrl(post.shortcode, post.type)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="shrink-0 w-16 h-16 rounded overflow-hidden border border-border bg-muted"
                 >
                   <iframe
-                    src={`https://www.instagram.com/p/${post.shortcode}/embed/captioned/`}
+                    src={instagramEmbedUrl(post.shortcode, post.type, true)}
                     className="w-[300px] h-[400px] border-0 pointer-events-none"
                     style={{ transform: 'scale(0.213)', transformOrigin: 'top left' }}
                     tabIndex={-1}
@@ -153,12 +155,12 @@ export default function InstagramAdminClient({
                 {/* Shortcode */}
                 <div className="flex-1 min-w-0">
                   <a
-                    href={`https://www.instagram.com/p/${post.shortcode}/`}
+                    href={instagramPostUrl(post.shortcode, post.type)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-primary hover:underline truncate block"
                   >
-                    {post.shortcode}
+                    {post.type && post.type !== 'post' ? `${post.shortcode} · ${post.type}` : post.shortcode}
                   </a>
                 </div>
 

@@ -17,6 +17,7 @@ model Author {
   bio_source    String?       @db.VarChar(50)
   photo_url     String?       @db.Text
   wikipedia_url String?       @db.Text
+  website       String?       @db.Text
 }
 
 model Publisher {
@@ -106,6 +107,7 @@ model BdGenre {
 model InstagramPost {
   id        String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   shortcode String  @unique @db.VarChar(50)
+  type      String? @default("post") @db.VarChar(10)
   position  Int
   active    Boolean @default(true)
 }

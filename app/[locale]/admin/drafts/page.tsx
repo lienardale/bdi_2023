@@ -30,7 +30,8 @@ export default async function AdminDraftsPage() {
             {drafts.map((draft) => {
               const data = draft.data as WizardState;
               const bdCount = data?.bds?.length ?? 0;
-              const authorCount = data?.authors?.length ?? 0;
+              const authorCount =
+                data?.bds?.flatMap((b) => b.authors ?? []).length || data?.authors?.length || 0;
               const draftName = draft.name || t('untitledDraft');
               return (
                 <div key={draft.id} className="rounded-lg bg-card border border-border p-4">
@@ -88,7 +89,8 @@ export default async function AdminDraftsPage() {
                 {drafts.map((draft) => {
                   const data = draft.data as WizardState;
                   const bdCount = data?.bds?.length ?? 0;
-                  const authorCount = data?.authors?.length ?? 0;
+                  const authorCount =
+                    data?.bds?.flatMap((b) => b.authors ?? []).length || data?.authors?.length || 0;
                   const draftName = draft.name || t('untitledDraft');
                   return (
                     <tr key={draft.id}>

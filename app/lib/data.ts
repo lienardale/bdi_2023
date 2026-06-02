@@ -785,7 +785,7 @@ export async function fetchActiveInstagramPosts() {
   return prisma.instagramPost.findMany({
     where: { active: true },
     orderBy: { position: 'asc' },
-    select: { id: true, shortcode: true },
+    select: { id: true, shortcode: true, type: true },
   });
 }
 
@@ -793,6 +793,6 @@ export async function fetchAllInstagramPosts() {
   await connection();
   return prisma.instagramPost.findMany({
     orderBy: { position: 'asc' },
-    select: { id: true, shortcode: true, position: true, active: true },
+    select: { id: true, shortcode: true, type: true, position: true, active: true },
   });
 }

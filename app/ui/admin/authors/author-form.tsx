@@ -18,6 +18,7 @@ export default function AuthorForm({
     bio: string | null;
     photo_url: string | null;
     wikipedia_url: string | null;
+    website: string | null;
   };
 }) {
   const initialState: AuthorState = { message: null, errors: {} };
@@ -72,6 +73,11 @@ export default function AuthorForm({
           <div>
             <label htmlFor="wikipedia_url" className="mb-2 block text-sm font-medium">{t('wikipediaUrl')}</label>
             <input id="wikipedia_url" name="wikipedia_url" type="text" defaultValue={author?.wikipedia_url || ''}
+              className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm" />
+          </div>
+          <div>
+            <label htmlFor="website" className="mb-2 block text-sm font-medium">{t('website')}</label>
+            <input id="website" name="website" type="text" defaultValue={author?.website || ''}
               className="block w-full rounded-md border border-input bg-background py-2 px-3 text-sm" />
           </div>
         </div>

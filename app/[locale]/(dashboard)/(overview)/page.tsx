@@ -20,7 +20,6 @@ export default async function Page() {
     getLocale(),
   ]);
   const locale = localeStr as Locale;
-  const shortcodes = instagramPosts.map((p) => p.shortcode);
   const crowdfunding = brand.features.crowdfunding;
 
   return (
@@ -84,7 +83,7 @@ export default async function Page() {
           {t('instagramFeed')}
         </a>
         <InstagramFeed
-          shortcodes={shortcodes}
+          posts={instagramPosts}
           instagramUrl={brand.instagramUrl}
           instagramHandle={brand.instagramHandle}
         />
