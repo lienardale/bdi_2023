@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { normalizeFbEventUrl } from '../app/lib/url-utils';
-import { downloadCover } from '../app/lib/enrichment/download-cover';
+import { persistCoverToBlob } from '../app/lib/enrichment/cover-blob';
 import { fetchOgImage } from '../app/lib/enrichment/og-image';
 
 const prisma = new PrismaClient();
@@ -89,13 +89,13 @@ async function main() {
     if (!dryRun) {
       const imageUrl = await fetchOgImage(event.fb_event);
       if (imageUrl) {
-        const localPath = await downloadCover(imageUrl, event.id);
-        if (localPath) {
+        const blobUrl = await persistCoverToBlob(imageUrl, event.id);
+        if (blobUrl) {
           await prisma.event.update({
             where: { id: event.id },
-            data: { cover_url: localPath },
+            data: { cover_url: blobUrl },
           });
-          console.log(`    ✓ Downloaded → ${localPath}`);
+          console.log(`    ✓ Re-hosted → ${blobUrl}`);
           downloaded++;
         } else {
           console.log(`    ✗ Download failed`);
@@ -117,7 +117,11 @@ async function main() {
   console.log('--- Step C: Downloading remaining remote cover_url values ---');
   const remoteCoverEvents = await prisma.event.findMany({
     where: {
-      cover_url: { startsWith: 'http' },
+      AND: [
+        { cover_url: { startsWith: 'http' } },
+        // Already durable — don't re-download covers we've re-hosted on Blob.
+        { NOT: { cover_url: { contains: 'blob.vercel-storage.com' } } },
+      ],
     },
     select: { id: true, name: true, cover_url: true },
   });
@@ -131,13 +135,13 @@ async function main() {
     console.log(`  Downloading cover for "${event.name}"...`);
 
     if (!dryRun) {
-      const localPath = await downloadCover(event.cover_url, event.id);
-      if (localPath) {
+      const blobUrl = await persistCoverToBlob(event.cover_url, event.id);
+      if (blobUrl) {
         await prisma.event.update({
           where: { id: event.id },
-          data: { cover_url: localPath },
+          data: { cover_url: blobUrl },
         });
-        console.log(`    ✓ Saved → ${localPath}`);
+        console.log(`    ✓ Re-hosted → ${blobUrl}`);
         downloadedDirect++;
       } else {
         console.log(`    ✗ Download failed (CDN URL likely expired)`);

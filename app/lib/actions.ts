@@ -6,9 +6,11 @@ import { redirect } from 'next/navigation';
 import { getLocale } from 'next-intl/server';
 import prisma from './prisma';
 import { requireAdmin } from './auth-utils';
-import { sanitizeUrl } from './url-utils';
+import { sanitizeUrl, isValidFbEventUrl, isFacebookCdnUrl } from './url-utils';
 import { collectWizardAuthors, derivePublishingYear, prismaErrorMessage } from './wizard-helpers';
 import { parseInstagramUrl } from './instagram';
+import { fetchOgImage } from './enrichment/og-image';
+import { persistCoverToBlob } from './enrichment/cover-blob';
 
 async function localizedPath(path: string): Promise<string> {
   const locale = await getLocale();
@@ -23,6 +25,7 @@ const EventSchema = z.object({
   hour: z.string().optional(),
   place: z.string().optional(),
   fb_event: z.string().optional(),
+  cover_url: z.string().optional(),
 });
 
 export type EventState = {
@@ -30,6 +33,47 @@ export type EventState = {
   message?: string | null;
   success?: boolean;
 };
+
+/**
+ * Resolve an event's cover after the row exists, then persist it durably.
+ * Runs OUTSIDE any DB transaction (Blob upload is a network call).
+ * - If no cover was provided and auto-scrape is on, pull the Facebook event's
+ *   og:image.
+ * - Re-host expiring Facebook CDN URLs on Blob; stable URLs are left as-is.
+ * Best-effort: failures leave the originally-stored value untouched.
+ */
+async function resolveAndPersistEventCover(
+  eventId: string,
+  opts: { fbEvent?: string | null; coverUrl?: string | null; autoScrape: boolean },
+): Promise<void> {
+  const original = opts.coverUrl ?? null;
+  let cover = original;
+
+  if (!cover && opts.autoScrape && isValidFbEventUrl(opts.fbEvent)) {
+    cover = await fetchOgImage(opts.fbEvent as string);
+  }
+
+  if (cover && isFacebookCdnUrl(cover)) {
+    cover = (await persistCoverToBlob(cover, eventId)) ?? cover;
+  }
+
+  if (cover !== original) {
+    await prisma.event.update({ where: { id: eventId }, data: { cover_url: cover } });
+  }
+}
+
+/**
+ * Scrape the Facebook event's cover (og:image) for a live preview in the admin
+ * forms. Returns the raw (temporary) URL only — Blob re-hosting happens at save
+ * time so discarded previews don't create orphan blobs.
+ */
+export async function fetchEventCoverPreview(
+  fbUrl: string,
+): Promise<{ url: string | null }> {
+  await requireAdmin();
+  if (!isValidFbEventUrl(fbUrl)) return { url: null };
+  return { url: await fetchOgImage(fbUrl) };
+}
 
 export async function createEvent(prevState: EventState, formData: FormData) {
   await requireAdmin();
@@ -45,14 +89,19 @@ export async function createEvent(prevState: EventState, formData: FormData) {
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { name, date, hour, place, fb_event } = validatedFields.data;
+  const { name, date, hour, place, fb_event, cover_url } = validatedFields.data;
+  const cover = sanitizeUrl(cover_url);
+  let createdId: string;
   try {
-    await prisma.event.create({
-      data: { name, date: new Date(date), hour: hour || null, place: place || null, fb_event: fb_event || null },
+    const created = await prisma.event.create({
+      data: { name, date: new Date(date), hour: hour || null, place: place || null, fb_event: fb_event || null, cover_url: cover },
     });
+    createdId = created.id;
   } catch (error) {
     return { message: 'Erreur: impossible de créer l\'événement.' };
   }
+
+  await resolveAndPersistEventCover(createdId, { fbEvent: fb_event, coverUrl: cover, autoScrape: true });
 
   revalidatePath('/admin/events');
   revalidatePath('/events');
@@ -73,15 +122,20 @@ export async function updateEvent(id: string, prevState: EventState, formData: F
     return { errors: validatedFields.error.flatten().fieldErrors, message: 'Champs manquants.' };
   }
 
-  const { name, date, hour, place, fb_event } = validatedFields.data;
+  const { name, date, hour, place, fb_event, cover_url } = validatedFields.data;
+  const cover = sanitizeUrl(cover_url);
   try {
     await prisma.event.update({
       where: { id },
-      data: { name, date: new Date(date), hour: hour || null, place: place || null, fb_event: fb_event || null },
+      data: { name, date: new Date(date), hour: hour || null, place: place || null, fb_event: fb_event || null, cover_url: cover },
     });
   } catch (error) {
     return { message: 'Erreur: impossible de mettre à jour l\'événement.' };
   }
+
+  // Auto-scrape only kicks in when no cover was provided (the form resubmits an
+  // existing cover, so a manual cover is never clobbered).
+  await resolveAndPersistEventCover(id, { fbEvent: fb_event, coverUrl: cover, autoScrape: true });
 
   revalidatePath('/admin/events');
   revalidatePath('/events');
@@ -584,6 +638,7 @@ const WizardPayloadSchema = z.object({
     hour: z.string().optional(),
     place: z.string().optional(),
     fb_event: z.string().optional(),
+    cover_url: urlField,
   }),
   bds: z.array(z.object({
     tempId: z.string(),
@@ -674,6 +729,7 @@ export async function createEventWithRelations(
           hour: event.hour || null,
           place: event.place || null,
           fb_event: event.fb_event || null,
+          cover_url: event.cover_url,
         },
       });
       createdEventId = createdEvent.id;
@@ -736,6 +792,13 @@ export async function createEventWithRelations(
     console.error('Wizard error:', error);
     return { message: prismaErrorMessage(error) ?? 'Erreur lors de la création.' };
   }
+
+  // Resolve + persist the cover after the transaction (Blob upload is network I/O).
+  await resolveAndPersistEventCover(createdEventId, {
+    fbEvent: event.fb_event,
+    coverUrl: event.cover_url,
+    autoScrape: true,
+  });
 
   // Delete draft on success
   const draftId = formData.get('draftId') as string | null;

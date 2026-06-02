@@ -193,6 +193,7 @@ describe('Server Actions', () => {
           hour: null,
           place: null,
           fb_event: null,
+          cover_url: null,
         },
       });
     });

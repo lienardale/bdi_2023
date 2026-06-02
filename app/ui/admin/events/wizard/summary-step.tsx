@@ -79,6 +79,19 @@ export default function SummaryStep({
               <dd className="truncate">{state.event.fb_event}</dd>
             </div>
           )}
+          {state.event.cover_url && (
+            <div className="md:col-span-2">
+              <dt className="text-muted-foreground">{tEvents('coverUrl')}</dt>
+              <dd className="mt-1">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={state.event.cover_url}
+                  alt=""
+                  className="max-h-40 rounded-md border border-border object-cover"
+                />
+              </dd>
+            </div>
+          )}
         </dl>
       </div>
 
