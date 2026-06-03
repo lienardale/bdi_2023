@@ -18,3 +18,7 @@ const darumadrop = localFont({
 });
 
 export const lusitana = brand.headingFont === 'darumadrop' ? darumadrop : lusitanaFont;
+
+// Body font (everything that isn't a heading). For brands with a display heading
+// face we run that face site-wide; otherwise body stays Inter for legibility.
+export const bodyFont = brand.headingFont === 'darumadrop' ? darumadrop : inter;

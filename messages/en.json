@@ -116,7 +116,8 @@
   },
   "login": {
     "description": "Sign in to access the back-office.",
-    "googleButton": "Sign in with Google"
+    "googleButton": "Sign in with Google",
+    "backToSite": "Back to site"
   },
   "errors": {
     "forbidden": "You do not have permission to access this page.",

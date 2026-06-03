@@ -1,5 +1,5 @@
 import '@/app/ui/global.css';
-import { inter } from '@/app/ui/fonts';
+import { bodyFont } from '@/app/ui/fonts';
 import { brand } from '@/config/brand';
 import { getLocale } from 'next-intl/server';
 
@@ -12,7 +12,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`brand-${brand.id}`}>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${bodyFont.className} antialiased`}>{children}</body>
     </html>
   );
 }

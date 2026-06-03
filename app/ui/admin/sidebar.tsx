@@ -14,6 +14,7 @@ import {
 import { Link, usePathname } from '@/i18n/routing';
 import { cn } from '@/app/lib/utils';
 import { useTranslations } from 'next-intl';
+import { brand } from '@/config/brand';
 
 export default function AdminSidebar() {
   const pathname = usePathname();
@@ -46,7 +47,19 @@ export default function AdminSidebar() {
               pathname === link.href && 'bg-white text-primary font-semibold',
             )}
           >
-            <LinkIcon className="w-6" />
+            {brand.compactMobileNav && link.href === '/admin' ? (
+              <>
+                {/* Mobile: the brand logo doubles as the dashboard button. Desktop: home icon. */}
+                <img
+                  src={brand.assets.logo}
+                  alt=""
+                  className="h-7 w-7 shrink-0 rounded object-contain md:hidden"
+                />
+                <LinkIcon className="hidden w-6 md:block" />
+              </>
+            ) : (
+              <LinkIcon className="w-6" />
+            )}
             <p className="hidden md:block">{link.name}</p>
           </Link>
         );

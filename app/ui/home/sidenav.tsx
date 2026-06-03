@@ -3,13 +3,14 @@ import NavLinks from '@/app/ui/home/nav-links';
 import LanguageSwitcher from '@/app/ui/language-switcher';
 import { ArrowRightOnRectangleIcon, PowerIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 import { auth, signOut } from '@/auth';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { brand } from '@/config/brand';
 
 export default async function SideNav() {
   const session = await auth();
   const isAdmin = (session?.user as any)?.role === 'admin';
   const t = await getTranslations('common');
+  const locale = await getLocale();
 
   return (
     <nav aria-label="Main navigation" className={`flex h-full flex-col px-3 ${brand.compactMobileNav ? 'py-2 md:py-4' : 'py-4'} md:px-2 bg-sidebar text-sidebar-foreground`}>
@@ -23,7 +24,7 @@ export default async function SideNav() {
         <img
           src={brand.assets.logo}
           alt={brand.longName}
-          className="h-12 md:h-24 object-contain rounded-md"
+          className="h-12 md:h-24 shrink-0 object-contain rounded-md"
         />
       </Link>
       <div className="flex grow flex-row justify-between space-x-2 overflow-x-auto md:flex-col md:space-x-0 md:space-y-2 md:overflow-x-visible">
@@ -46,7 +47,7 @@ export default async function SideNav() {
           <form
             action={async () => {
               'use server';
-              await signOut();
+              await signOut({ redirectTo: `/${locale}` });
             }}
           >
             <button aria-label={t('signOut')} className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium text-sidebar-foreground hover:bg-white hover:text-primary md:flex-none md:justify-start md:p-2 md:px-3">
