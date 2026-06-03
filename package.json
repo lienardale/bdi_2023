@@ -13,6 +13,7 @@
     "start": "next start",
     "lint": "eslint .",
     "seed:bdi": "BRAND=bdi NEXT_PUBLIC_BRAND=bdi node -r dotenv/config ./scripts/seed-bdi.js",
+    "assets:cmbd": "node scripts/build-cmbd-assets.js",
     "db:up": "docker compose up -d --wait",
     "db:down": "docker compose down",
     "db:reset": "docker compose down -v && docker compose up -d --wait",
