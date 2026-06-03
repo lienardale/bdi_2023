@@ -4,6 +4,7 @@ import { lusitana } from '@/app/ui/fonts';
 import { signIn } from 'next-auth/react';
 import { useLocale, useTranslations } from 'next-intl';
 import { brand } from '@/config/brand';
+import { Link } from '@/i18n/routing';
 
 export default function LoginForm() {
   const locale = useLocale();
@@ -12,7 +13,7 @@ export default function LoginForm() {
   return (
     <div className="flex-1 rounded-lg bg-card px-6 pb-4 pt-8 border border-border shadow-sm">
       <div className="flex justify-center mb-4">
-        <img src={brand.assets.logo} alt={brand.shortName} className="h-16 object-contain" />
+        <img src={brand.assets.logo} alt={brand.shortName} className="h-16 shrink-0 object-contain" />
       </div>
       <h1 className={`${lusitana.className} mb-3 text-2xl text-center text-foreground`}>
         {brand.longName}
@@ -44,6 +45,12 @@ export default function LoginForm() {
         </svg>
         {t('googleButton')}
       </button>
+      <Link
+        href="/"
+        className="mt-4 block text-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <span aria-hidden="true">←</span> {t('backToSite')}
+      </Link>
     </div>
   );
 }

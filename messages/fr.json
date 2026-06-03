@@ -116,7 +116,8 @@
   },
   "login": {
     "description": "Connectez-vous pour accéder au back-office.",
-    "googleButton": "Se connecter avec Google"
+    "googleButton": "Se connecter avec Google",
+    "backToSite": "Retour au site"
   },
   "errors": {
     "forbidden": "Vous n'avez pas les droits nécessaires pour accéder à cette page.",
