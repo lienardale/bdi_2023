@@ -38,6 +38,19 @@ export function isValidFbEventUrl(url: string | null | undefined): boolean {
 }
 
 /**
+ * Extract the numeric Facebook event id from an event URL, or `null`.
+ * Used to derive a stable Blob key for an event's cover so repeated cover
+ * fetches (e.g. live previews) overwrite one object instead of orphaning new ones.
+ */
+export function parseFbEventId(url: string | null | undefined): string | null {
+  if (!url) return null;
+  const normalized = normalizeFbEventUrl(url);
+  if (!normalized) return null;
+  const m = normalized.match(/facebook\.com\/events\/(\d+)/i);
+  return m ? m[1] : null;
+}
+
+/**
  * Whether a URL points at Facebook's CDN (scontent*, fbcdn.net, lookaside).
  * Such URLs are signed and expire, so they must be re-hosted rather than
  * stored as-is (e.g. an event cover scraped from a Facebook event page).

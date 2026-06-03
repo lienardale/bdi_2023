@@ -9,7 +9,14 @@
 
 import { normalizeFbEventUrl } from '../url-utils';
 
-const OG_FETCH_UA =
+/**
+ * Facebook's own crawler identity. Facebook serves OG metadata — and, crucially,
+ * the `lookaside.fbsbx.com/.../crawler/media/` image bytes that an event's
+ * `og:image` points at — only to this User-Agent; a browser UA gets a tiny HTML
+ * stub instead. So both the page scrape (here) and the cover download
+ * (`cover-blob.ts`) must send it.
+ */
+export const CRAWLER_UA =
   'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)';
 
 /** Decode the handful of HTML entities that show up in OG URLs. */
@@ -70,7 +77,7 @@ export async function fetchOgImage(pageUrl: string): Promise<string | null> {
   try {
     const res = await fetch(url, {
       headers: {
-        'User-Agent': OG_FETCH_UA,
+        'User-Agent': CRAWLER_UA,
         Accept: 'text/html,application/xhtml+xml',
         'Accept-Language': 'fr-FR,fr;q=0.9,en;q=0.8',
       },

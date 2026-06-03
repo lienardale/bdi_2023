@@ -3,6 +3,7 @@ import {
   normalizeFbEventUrl,
   isValidFbEventUrl,
   isFacebookCdnUrl,
+  parseFbEventId,
   sanitizeUrl,
   isValidHttpUrl,
 } from '@/app/lib/url-utils';
@@ -137,6 +138,43 @@ describe('isFacebookCdnUrl', () => {
     expect(
       isFacebookCdnUrl('https://abc.public.blob.vercel-storage.com/covers/x.jpg'),
     ).toBe(false);
+  });
+});
+
+describe('parseFbEventId', () => {
+  it('extracts the numeric id from a full event URL', () => {
+    expect(
+      parseFbEventId('https://www.facebook.com/events/1291476083029606/'),
+    ).toBe('1291476083029606');
+  });
+
+  it('works without a protocol prefix', () => {
+    expect(parseFbEventId('facebook.com/events/42')).toBe('42');
+  });
+
+  it('ignores query params after the id', () => {
+    expect(
+      parseFbEventId(
+        'https://www.facebook.com/events/277491040426073/?acontext=%7B%7D',
+      ),
+    ).toBe('277491040426073');
+  });
+
+  it('returns null for CDN image URLs', () => {
+    expect(
+      parseFbEventId(
+        'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1',
+      ),
+    ).toBeNull();
+  });
+
+  it('returns null for non-event Facebook URLs', () => {
+    expect(parseFbEventId('https://www.facebook.com/page/123')).toBeNull();
+  });
+
+  it('returns null for nullish input', () => {
+    expect(parseFbEventId(null)).toBeNull();
+    expect(parseFbEventId(undefined)).toBeNull();
   });
 });
 

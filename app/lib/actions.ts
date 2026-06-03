@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import { getLocale } from 'next-intl/server';
 import prisma from './prisma';
 import { requireAdmin } from './auth-utils';
-import { sanitizeUrl, isValidFbEventUrl, isFacebookCdnUrl } from './url-utils';
+import { sanitizeUrl, isValidFbEventUrl, isFacebookCdnUrl, parseFbEventId } from './url-utils';
 import { collectWizardAuthors, derivePublishingYear, prismaErrorMessage } from './wizard-helpers';
 import { parseInstagramUrl } from './instagram';
 import { fetchOgImage } from './enrichment/og-image';
@@ -63,16 +63,45 @@ async function resolveAndPersistEventCover(
 }
 
 /**
+ * Pick a stable Blob key for a previewed cover. Facebook's event `og:image` is a
+ * crawler-only `lookaside.../crawler/media/?media_id=<id>` URL, so we key by the
+ * Facebook event id (preferred) or the media_id, ensuring repeated previews of
+ * the same event overwrite a single blob rather than orphaning new ones.
+ */
+function previewCoverKey(fbUrl: string, imageUrl: string): string | null {
+  const fbId = parseFbEventId(fbUrl);
+  if (fbId) return `fb-${fbId}`;
+  const mediaId = imageUrl.match(/[?&]media_id=(\d+)/)?.[1];
+  if (mediaId) return `fb-media-${mediaId}`;
+  return null;
+}
+
+/**
  * Scrape the Facebook event's cover (og:image) for a live preview in the admin
- * forms. Returns the raw (temporary) URL only — Blob re-hosting happens at save
- * time so discarded previews don't create orphan blobs.
+ * forms, and re-host it to Blob immediately so the returned URL actually renders
+ * in an <img>. (The og:image for FB events is a `lookaside.../crawler/media/`
+ * URL that only Facebook's crawler UA can dereference — useless in a browser, so
+ * a raw preview would be broken.) Keyed by the event/media id so re-previewing
+ * overwrites one blob. Falls back to the raw URL if re-hosting fails; never throws.
  */
 export async function fetchEventCoverPreview(
   fbUrl: string,
 ): Promise<{ url: string | null }> {
   await requireAdmin();
   if (!isValidFbEventUrl(fbUrl)) return { url: null };
-  return { url: await fetchOgImage(fbUrl) };
+
+  const image = await fetchOgImage(fbUrl);
+  if (!image) return { url: null };
+
+  if (isFacebookCdnUrl(image)) {
+    const key = previewCoverKey(fbUrl, image);
+    if (key) {
+      const blob = await persistCoverToBlob(image, key);
+      return { url: blob ?? image };
+    }
+  }
+
+  return { url: image };
 }
 
 export async function createEvent(prevState: EventState, formData: FormData) {
