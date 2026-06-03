@@ -19,12 +19,20 @@ const prisma = new PrismaClient();
 
 async function main() {
   console.log("Clearing existing data...");
+  // Delete every junction table before the core tables it references, or the
+  // FK constraints fail (P2003) on a DB that already holds data. The four
+  // junctions (BdAuthor, AuthorEvent, BdEvent, BdGenre) all point at Bd /
+  // Author / Event / Genre, so they go first. Among the core tables, Bd must
+  // precede Publisher (Bd.publisherId -> Publisher.id).
   await prisma.bdAuthor.deleteMany();
   await prisma.authorEvent.deleteMany();
+  await prisma.bdEvent.deleteMany();
+  await prisma.bdGenre.deleteMany();
   await prisma.bd.deleteMany();
   await prisma.publisher.deleteMany();
   await prisma.event.deleteMany();
   await prisma.author.deleteMany();
+  await prisma.genre.deleteMany();
 
   // 1. Seed Authors (with enrichment fields)
   console.log(`Seeding ${authors.length} authors...`);
