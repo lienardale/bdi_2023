@@ -12,9 +12,12 @@ export default async function SideNav() {
   const t = await getTranslations('common');
 
   return (
-    <nav aria-label="Main navigation" className="flex h-full flex-col px-3 py-4 md:px-2 bg-sidebar text-sidebar-foreground">
+    <nav aria-label="Main navigation" className={`flex h-full flex-col px-3 ${brand.compactMobileNav ? 'py-2 md:py-4' : 'py-4'} md:px-2 bg-sidebar text-sidebar-foreground`}>
+      {/* Logo header. With compactMobileNav it's hidden on mobile (the home button
+          below shows the logo instead, keeping the top bar thin); otherwise it
+          shows at every breakpoint. */}
       <Link
-        className="mb-2 flex h-20 items-center justify-center rounded-md p-4 md:h-40"
+        className={`mb-2 ${brand.compactMobileNav ? 'hidden md:flex' : 'flex'} h-20 items-center justify-center rounded-md p-4 md:h-40`}
         href="/"
       >
         <img

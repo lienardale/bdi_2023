@@ -11,6 +11,7 @@ import {
 import { Link, usePathname } from '@/i18n/routing';
 import { cn } from '@/app/lib/utils';
 import { useTranslations } from 'next-intl';
+import { brand } from '@/config/brand';
 
 export default function NavLinks() {
   const pathname = usePathname();
@@ -39,7 +40,19 @@ export default function NavLinks() {
               pathname === link.href && 'bg-white text-primary font-semibold',
             )}
           >
-            <LinkIcon className="w-6" aria-hidden="true" />
+            {brand.compactMobileNav && link.href === '/' ? (
+              <>
+                {/* Mobile: the brand logo doubles as the home button. Desktop: house icon. */}
+                <img
+                  src={brand.assets.logo}
+                  alt=""
+                  className="h-7 w-7 shrink-0 rounded object-contain md:hidden"
+                />
+                <LinkIcon className="hidden w-6 md:block" aria-hidden="true" />
+              </>
+            ) : (
+              <LinkIcon className="w-6" aria-hidden="true" />
+            )}
             <span className="hidden md:block">{link.name}</span>
           </Link>
         );

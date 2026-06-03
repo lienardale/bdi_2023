@@ -25,18 +25,28 @@ export default async function Page() {
   return (
     <main>
       {/* Hero banner */}
-      <div className="mb-6 rounded-xl overflow-hidden relative">
-        <img
-          src={brand.assets.hero}
-          alt={brand.longName}
-          className="w-full h-32 md:h-48 object-cover"
-        />
-        <div className="absolute inset-0 bg-foreground/60 flex items-center justify-center">
-          <h1 className={`${bangers.className} text-3xl md:text-5xl text-white tracking-wide`}>
-            {brand.longName}
-          </h1>
+      {brand.heroLayout === 'logo' ? (
+        <div className="mb-6 rounded-xl overflow-hidden bg-background">
+          <img
+            src={brand.assets.hero}
+            alt={brand.longName}
+            className="w-full h-32 md:h-48 object-contain"
+          />
         </div>
-      </div>
+      ) : (
+        <div className="mb-6 rounded-xl overflow-hidden relative">
+          <img
+            src={brand.assets.hero}
+            alt={brand.longName}
+            className="w-full h-32 md:h-48 object-cover"
+          />
+          <div className="absolute inset-0 bg-foreground/60 flex items-center justify-center">
+            <h1 className={`${bangers.className} text-3xl md:text-5xl text-white tracking-wide`}>
+              {brand.longName}
+            </h1>
+          </div>
+        </div>
+      )}
 
       {/* Next event card */}
       <div className="grid gap-6 sm:grid-cols-2">

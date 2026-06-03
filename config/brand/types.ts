@@ -77,6 +77,26 @@ export type Brand = {
   /** Suffix used to build iCalendar UIDs, e.g. "bdi" or "cmbd". */
   icsUidSuffix: string;
   assets: BrandAssets;
+  /**
+   * How the home hero banner renders:
+   * - `'overlay'`: full-bleed hero image darkened by an overlay, brand name on top.
+   * - `'logo'`: the logo shown (contained) on cream, no overlay or title — the logo
+   *   already carries the name.
+   */
+  heroLayout: 'overlay' | 'logo';
+  /**
+   * Heading font (titles site-wide). Body text is always Inter for legibility.
+   * - `'lusitana'`: the default serif.
+   * - `'darumadrop'`: CMBD's rounded hand-drawn display face (bundled at app/fonts/).
+   */
+  headingFont: 'lusitana' | 'darumadrop';
+  /**
+   * Mobile navigation style:
+   * - `true`: compact bar — the logo replaces the home icon and the separate
+   *   logo header is hidden, keeping a thin top bar.
+   * - `false`: classic — logo header on top plus a house icon for home.
+   */
+  compactMobileNav: boolean;
   theme: ThemeColors;
   features: {
     crowdfunding?: CrowdfundingFeature;

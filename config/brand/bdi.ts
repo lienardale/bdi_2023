@@ -20,6 +20,9 @@ export const bdi: Brand = {
     appleIcon: '/brands/bdi/apple-icon.png',
     favicon: '/brands/bdi/favicon.png',
   },
+  heroLayout: 'overlay',
+  headingFont: 'lusitana',
+  compactMobileNav: false,
   theme: {
     background: '#FAFAF8',
     foreground: '#1A1A2E',

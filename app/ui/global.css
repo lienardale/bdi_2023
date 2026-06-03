@@ -50,23 +50,26 @@
 
 /* --- CMBD palette (Marseille: Mediterranean blue / sun gold / terracotta / limestone) --- */
 .brand-cmbd {
+  /* Palette sampled from the CMBD logo: dark blue (navy) #0B2748,
+     light blue (sea) #0E80BE, yellow (sun) #FBC23F, orange (bubble) #E97F5E
+     — on the logo's cream ground. */
   --background: #FAF7F0;
-  --foreground: #0B1D3A;
+  --foreground: #0B2748;
 
   --card: #FFFFFF;
-  --card-foreground: #0B1D3A;
+  --card-foreground: #0B2748;
 
   --popover: #FFFFFF;
-  --popover-foreground: #0B1D3A;
+  --popover-foreground: #0B2748;
 
-  --primary: #0077B6;
+  --primary: #0E80BE;
   --primary-foreground: #FFFFFF;
 
-  --secondary: #E07A5F;
+  --secondary: #E97F5E;
   --secondary-foreground: #FFFFFF;
 
-  --accent: #FFC43D;
-  --accent-foreground: #0B1D3A;
+  --accent: #FBC23F;
+  --accent-foreground: #0B2748;
 
   --muted: #EFE9DC;
   --muted-foreground: #6B6B6B;
@@ -76,19 +79,19 @@
 
   --border: #E4DED0;
   --input: #E4DED0;
-  --ring: #0077B6;
+  --ring: #0E80BE;
 
-  --sidebar: #003566;
+  --sidebar: #0B2748;
   --sidebar-foreground: #FFFFFF;
-  --sidebar-accent: #FFC43D;
-  --sidebar-accent-foreground: #0B1D3A;
-  --sidebar-border: #00243F;
+  --sidebar-accent: #FBC23F;
+  --sidebar-accent-foreground: #0B2748;
+  --sidebar-border: #081B33;
 
-  --chart-1: #0077B6;
-  --chart-2: #2A9D8F;
-  --chart-3: #E07A5F;
-  --chart-4: #FFC43D;
-  --chart-5: #023E8A;
+  --chart-1: #0E80BE;
+  --chart-2: #E97F5E;
+  --chart-3: #FBC23F;
+  --chart-4: #0B2748;
+  --chart-5: #7FB9D9;
 }
 
 @theme inline {
@@ -209,43 +212,43 @@ table:has(.card-cycle) {
 
 /* --- Cycling card colors — CMBD --- */
 .brand-cmbd .card-cycle > *:nth-child(4n+1) {
-  --card: #0077B6;
+  --card: #0E80BE;
   --primary: #FFFFFF;
-  --primary-foreground: #0077B6;
-  --muted-foreground: rgba(255, 255, 255, 0.75);
+  --primary-foreground: #0E80BE;
+  --muted-foreground: rgba(255, 255, 255, 0.80);
   --border: rgba(255, 255, 255, 0.2);
-  background-color: #0077B6;
+  background-color: #0E80BE;
   color: #FFFFFF;
 }
 
 .brand-cmbd .card-cycle > *:nth-child(4n+2) {
-  --card: #E07A5F;
+  --card: #E97F5E;
   --primary: #FFFFFF;
-  --primary-foreground: #E07A5F;
-  --muted-foreground: rgba(255, 255, 255, 0.80);
+  --primary-foreground: #E97F5E;
+  --muted-foreground: rgba(255, 255, 255, 0.85);
   --border: rgba(255, 255, 255, 0.2);
-  background-color: #E07A5F;
+  background-color: #E97F5E;
   color: #FFFFFF;
 }
 
 .brand-cmbd .card-cycle > *:nth-child(4n+3) {
-  --card: #2A9D8F;
+  --card: #0B2748;
   --primary: #FFFFFF;
-  --primary-foreground: #2A9D8F;
+  --primary-foreground: #0B2748;
   --muted-foreground: rgba(255, 255, 255, 0.75);
   --border: rgba(255, 255, 255, 0.2);
-  background-color: #2A9D8F;
+  background-color: #0B2748;
   color: #FFFFFF;
 }
 
 .brand-cmbd .card-cycle > *:nth-child(4n+4) {
-  --card: #FFC43D;
-  --primary: #003566;
+  --card: #FBC23F;
+  --primary: #0B2748;
   --primary-foreground: #FFFFFF;
-  --muted-foreground: rgba(11, 29, 58, 0.70);
-  --border: rgba(11, 29, 58, 0.20);
-  background-color: #FFC43D;
-  color: #0B1D3A;
+  --muted-foreground: rgba(11, 39, 72, 0.72);
+  --border: rgba(11, 39, 72, 0.20);
+  background-color: #FBC23F;
+  color: #0B2748;
 }
 
 input[type='number'] {
