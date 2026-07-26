@@ -66,7 +66,9 @@
   --primary-foreground: #FFFFFF;
 
   --secondary: #E97F5E;
-  --secondary-foreground: #FFFFFF;
+  /* Navy, not white: white on this orange is 2.74:1 and fails WCAG AA even for
+     large text. Navy reaches 5.48:1. Keep in sync with config/brand/cmbd.ts. */
+  --secondary-foreground: #0B2748;
 
   --accent: #FBC23F;
   --accent-foreground: #0B2748;
@@ -221,14 +223,22 @@ table:has(.card-cycle) {
   color: #FFFFFF;
 }
 
+/* Orange is too light to carry white text (2.74:1). This tile follows the same
+   dark-ink pattern as the yellow one below: navy body text at 5.48:1, and a muted
+   tone held at 0.88 alpha so it still clears AA at 4.67:1. */
 .brand-cmbd .card-cycle > *:nth-child(4n+2) {
   --card: #E97F5E;
-  --primary: #FFFFFF;
-  --primary-foreground: #E97F5E;
-  --muted-foreground: rgba(255, 255, 255, 0.85);
-  --border: rgba(255, 255, 255, 0.2);
+  --primary: #0B2748;
+  --primary-foreground: #FFFFFF;
+  --muted-foreground: rgba(11, 39, 72, 0.88);
+  --border: rgba(11, 39, 72, 0.20);
+  /* Badges default to an orange fill, which is this tile's own background — the
+     chip silhouette would disappear. Invert it here, the same way --primary is
+     inverted above: navy fill (5.48:1 against the tile) with cream text. */
+  --secondary: #0B2748;
+  --secondary-foreground: #FAF7F0;
   background-color: #E97F5E;
-  color: #FFFFFF;
+  color: #0B2748;
 }
 
 .brand-cmbd .card-cycle > *:nth-child(4n+3) {
