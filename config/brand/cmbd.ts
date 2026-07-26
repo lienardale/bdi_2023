@@ -38,7 +38,10 @@ export const cmbd: Brand = {
     primary: '#0E80BE',
     primaryForeground: '#FFFFFF',
     secondary: '#E97F5E',
-    secondaryForeground: '#FFFFFF',
+    // Navy, not white: white on this orange is 2.74:1 and fails WCAG AA even for
+    // large text. Navy reaches 5.48:1, and matches how `accent` already pairs a
+    // warm brand colour with navy ink.
+    secondaryForeground: '#0B2748',
     accent: '#FBC23F',
     accentForeground: '#0B2748',
     muted: '#EFE9DC',
@@ -59,6 +62,8 @@ export const cmbd: Brand = {
     chart4: '#0B2748',
     chart5: '#7FB9D9',
     cardCycle: ['#0E80BE', '#E97F5E', '#0B2748', '#FBC23F'],
+    // Both light tiles — orange (4n+2) and gold (4n+4) — carry navy ink; only the
+    // sea-blue and navy tiles take white. See the .brand-cmbd .card-cycle rules.
     cardCycleGoldForeground: '#0B2748',
   },
   features: {
