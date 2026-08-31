@@ -9,6 +9,7 @@ import {
 } from './definitions';
 import { connection } from 'next/server';
 import prisma from './prisma';
+import { withMissingSchemaFallback } from './prisma-errors';
 
 export async function fetchCardData() {
   await connection();
@@ -808,10 +809,17 @@ export async function fetchAllInstagramPosts() {
  */
 export async function fetchLegalPage(): Promise<LegalPageRow | null> {
   await connection();
-  return prisma.legalPage.findUnique({
-    where: { key: 'legal' },
-    select: { active: true, contentFr: true, contentEn: true },
-  });
+  // SideNav calls this on every public page, so a database that has not run the
+  // migration yet must degrade to "no legal page" rather than 500 the whole site.
+  return withMissingSchemaFallback(
+    () =>
+      prisma.legalPage.findUnique({
+        where: { key: 'legal' },
+        select: { active: true, contentFr: true, contentEn: true },
+      }),
+    null,
+    'fetchLegalPage',
+  );
 }
 
 // ---------- Contact sections ----------
@@ -838,18 +846,32 @@ const CONTACT_SECTION_FIELDS = {
  */
 export async function fetchAllContactSections(): Promise<ContactSectionRow[]> {
   await connection();
-  const rows = await prisma.contactSection.findMany({
-    orderBy: [{ position: 'asc' }, { id: 'asc' }],
-    select: CONTACT_SECTION_FIELDS,
-  });
-  return rows as ContactSectionRow[];
+  // Empty is the same signal the contact page already handles: it falls back to
+  // the brand's default cards, which is exactly the pre-migration behaviour.
+  return withMissingSchemaFallback(
+    async () => {
+      const rows = await prisma.contactSection.findMany({
+        orderBy: [{ position: 'asc' }, { id: 'asc' }],
+        select: CONTACT_SECTION_FIELDS,
+      });
+      return rows as ContactSectionRow[];
+    },
+    [] as ContactSectionRow[],
+    'fetchAllContactSections',
+  );
 }
 
 export async function fetchContactSectionById(id: string): Promise<ContactSectionRow | null> {
   await connection();
-  const row = await prisma.contactSection.findFirst({
-    where: { id },
-    select: CONTACT_SECTION_FIELDS,
-  });
-  return row as ContactSectionRow | null;
+  return withMissingSchemaFallback(
+    async () => {
+      const row = await prisma.contactSection.findFirst({
+        where: { id },
+        select: CONTACT_SECTION_FIELDS,
+      });
+      return row as ContactSectionRow | null;
+    },
+    null,
+    'fetchContactSectionById',
+  );
 }
