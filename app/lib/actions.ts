@@ -12,11 +12,11 @@ import { parseInstagramUrl } from './instagram';
 import { sanitizeRichText } from './rich-text';
 import { contactSectionHref, defaultContactSections } from './contact-sections';
 import {
-  CROWDFUNDING_MAX,
-  crowdfundingImageSrc,
-  crowdfundingUrl,
-  defaultCrowdfundingSlides,
-} from './crowdfunding';
+  HIGHLIGHT_MAX,
+  highlightImageSrc,
+  highlightUrl,
+  defaultHighlights,
+} from './highlights';
 import { fetchOgImage } from './enrichment/og-image';
 import { persistCoverToBlob } from './enrichment/cover-blob';
 
@@ -911,6 +911,22 @@ export async function deleteWizardDraft(id: string): Promise<void> {
   revalidatePath('/admin/drafts');
 }
 
+/**
+ * Both home page sections — highlights and Instagram posts — are edited from
+ * the same admin page and rendered by the same public page, so every write to
+ * either invalidates the same two routes.
+ *
+ * Both paths are route *patterns* with the `[locale]` segment and an explicit
+ * `'page'` type; a bare `'/'` matches nothing here, which is why an Instagram
+ * change used to leave the public home page stale.
+ */
+function revalidateAdminHome() {
+  revalidatePath('/[locale]/admin/home', 'page');
+  // Route groups are not part of the URL, so the home page's
+  // `(dashboard)/(overview)` collapses to the bare locale segment.
+  revalidatePath('/[locale]', 'page');
+}
+
 // Instagram Post actions
 
 // Accept a full Instagram URL (post / reel / tv, with query strings) or a bare
@@ -966,8 +982,7 @@ export async function addInstagramPost(
     return { message: "Erreur: impossible d'ajouter le post Instagram." };
   }
 
-  revalidatePath('/admin/instagram');
-  revalidatePath('/');
+  revalidateAdminHome();
   return { success: true, message: 'Post Instagram ajouté.' };
 }
 
@@ -978,8 +993,7 @@ export async function deleteInstagramPost(id: string): Promise<void> {
   } catch (error) {
     console.error('Delete Instagram post error:', error);
   }
-  revalidatePath('/admin/instagram');
-  revalidatePath('/');
+  revalidateAdminHome();
 }
 
 export async function toggleInstagramPost(id: string, active: boolean): Promise<void> {
@@ -992,8 +1006,7 @@ export async function toggleInstagramPost(id: string, active: boolean): Promise<
   } catch (error) {
     console.error('Toggle Instagram post error:', error);
   }
-  revalidatePath('/admin/instagram');
-  revalidatePath('/');
+  revalidateAdminHome();
 }
 
 export async function reorderInstagramPosts(orderedIds: string[]): Promise<void> {
@@ -1010,8 +1023,7 @@ export async function reorderInstagramPosts(orderedIds: string[]): Promise<void>
   } catch (error) {
     console.error('Reorder Instagram posts error:', error);
   }
-  revalidatePath('/admin/instagram');
-  revalidatePath('/');
+  revalidateAdminHome();
 }
 
 // Legal page actions
@@ -1297,28 +1309,28 @@ export async function createDefaultContactSections(): Promise<void> {
   revalidateContact();
 }
 
-// Crowdfunding slide actions
+// Home page highlight actions
 
-const CrowdfundingSlideSchema = z
+const HighlightSchema = z
   .object({
-    titleFr: z.string().min(1, 'Le titre en français est requis').max(CROWDFUNDING_MAX.title),
-    titleEn: z.string().max(CROWDFUNDING_MAX.title).optional(),
-    ctaFr: z.string().min(1, 'Le texte du bouton en français est requis').max(CROWDFUNDING_MAX.cta),
-    ctaEn: z.string().max(CROWDFUNDING_MAX.cta).optional(),
-    url: z.string().min(1, 'Le lien de la campagne est requis').max(CROWDFUNDING_MAX.url),
-    imageUrl: z.string().min(1, "L'image est requise").max(CROWDFUNDING_MAX.imageUrl),
+    titleFr: z.string().min(1, 'Le titre en français est requis').max(HIGHLIGHT_MAX.title),
+    titleEn: z.string().max(HIGHLIGHT_MAX.title).optional(),
+    ctaFr: z.string().min(1, 'Le texte du bouton en français est requis').max(HIGHLIGHT_MAX.cta),
+    ctaEn: z.string().max(HIGHLIGHT_MAX.cta).optional(),
+    url: z.string().min(1, 'Le lien est requis').max(HIGHLIGHT_MAX.url),
+    imageUrl: z.string().min(1, "L'image est requise").max(HIGHLIGHT_MAX.imageUrl),
   })
   // The same helpers the renderer uses decide what is storable, so a slide that
   // would be skipped at render time is rejected here instead of saved silently.
   .superRefine((data, ctx) => {
-    if (crowdfundingUrl(data.url) === null) {
+    if (highlightUrl(data.url) === null) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         path: ['url'],
         message: 'Lien invalide : utilisez une URL https://',
       });
     }
-    if (crowdfundingImageSrc(data.imageUrl) === null) {
+    if (highlightImageSrc(data.imageUrl) === null) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         path: ['imageUrl'],
@@ -1328,7 +1340,7 @@ const CrowdfundingSlideSchema = z
     }
   });
 
-export type CrowdfundingSlideState = {
+export type HighlightState = {
   errors?: {
     titleFr?: string[];
     titleEn?: string[];
@@ -1341,14 +1353,7 @@ export type CrowdfundingSlideState = {
   success?: boolean;
 };
 
-function revalidateCrowdfunding() {
-  revalidatePath('/[locale]/admin/crowdfunding', 'page');
-  // The home page is the only public consumer. Route groups are not part of the
-  // URL, so `(dashboard)/(overview)` collapses to the bare locale segment.
-  revalidatePath('/[locale]', 'page');
-}
-
-function readCrowdfundingSlideForm(formData: FormData) {
+function readHighlightForm(formData: FormData) {
   return {
     titleFr: formData.get('titleFr'),
     titleEn: formData.get('titleEn') || undefined,
@@ -1359,13 +1364,13 @@ function readCrowdfundingSlideForm(formData: FormData) {
   };
 }
 
-export async function createCrowdfundingSlide(
-  prevState: CrowdfundingSlideState,
+export async function createHighlight(
+  prevState: HighlightState,
   formData: FormData,
 ) {
   await requireAdmin();
-  const validatedFields = CrowdfundingSlideSchema.safeParse(
-    readCrowdfundingSlideForm(formData),
+  const validatedFields = HighlightSchema.safeParse(
+    readHighlightForm(formData),
   );
 
   if (!validatedFields.success) {
@@ -1377,11 +1382,11 @@ export async function createCrowdfundingSlide(
 
   const data = validatedFields.data;
   try {
-    const last = await prisma.crowdfundingSlide.findFirst({
+    const last = await prisma.highlight.findFirst({
       orderBy: { position: 'desc' },
       select: { position: true },
     });
-    await prisma.crowdfundingSlide.create({
+    await prisma.highlight.create({
       data: {
         titleFr: data.titleFr,
         titleEn: data.titleEn || null,
@@ -1393,22 +1398,22 @@ export async function createCrowdfundingSlide(
       },
     });
   } catch (error) {
-    console.error('Create crowdfunding slide error:', error);
-    return { message: 'Erreur: impossible de créer la diapositive.' };
+    console.error('Create highlight error:', error);
+    return { message: 'Erreur: impossible de créer la mise en avant.' };
   }
 
-  revalidateCrowdfunding();
-  redirect(await localizedPath('/admin/crowdfunding'));
+  revalidateAdminHome();
+  redirect(await localizedPath('/admin/home?section=highlights'));
 }
 
-export async function updateCrowdfundingSlide(
+export async function updateHighlight(
   id: string,
-  prevState: CrowdfundingSlideState,
+  prevState: HighlightState,
   formData: FormData,
 ) {
   await requireAdmin();
-  const validatedFields = CrowdfundingSlideSchema.safeParse(
-    readCrowdfundingSlideForm(formData),
+  const validatedFields = HighlightSchema.safeParse(
+    readHighlightForm(formData),
   );
 
   if (!validatedFields.success) {
@@ -1420,7 +1425,7 @@ export async function updateCrowdfundingSlide(
 
   const data = validatedFields.data;
   try {
-    await prisma.crowdfundingSlide.update({
+    await prisma.highlight.update({
       where: { id },
       data: {
         titleFr: data.titleFr,
@@ -1432,49 +1437,49 @@ export async function updateCrowdfundingSlide(
       },
     });
   } catch (error) {
-    console.error('Update crowdfunding slide error:', error);
-    return { message: 'Erreur: impossible de mettre à jour la diapositive.' };
+    console.error('Update highlight error:', error);
+    return { message: 'Erreur: impossible de mettre à jour la mise en avant.' };
   }
 
-  revalidateCrowdfunding();
-  return { success: true, message: 'Diapositive mise à jour.' };
+  revalidateAdminHome();
+  return { success: true, message: 'Mise en avant enregistrée.' };
 }
 
-export async function deleteCrowdfundingSlide(id: string): Promise<void> {
+export async function deleteHighlight(id: string): Promise<void> {
   await requireAdmin();
   try {
-    await prisma.crowdfundingSlide.delete({ where: { id } });
+    await prisma.highlight.delete({ where: { id } });
   } catch (error) {
-    console.error('Delete crowdfunding slide error:', error);
+    console.error('Delete highlight error:', error);
   }
-  revalidateCrowdfunding();
+  revalidateAdminHome();
 }
 
-export async function toggleCrowdfundingSlide(id: string, active: boolean): Promise<void> {
+export async function toggleHighlight(id: string, active: boolean): Promise<void> {
   await requireAdmin();
   try {
-    await prisma.crowdfundingSlide.update({ where: { id }, data: { active } });
+    await prisma.highlight.update({ where: { id }, data: { active } });
   } catch (error) {
-    console.error('Toggle crowdfunding slide error:', error);
+    console.error('Toggle highlight error:', error);
   }
-  revalidateCrowdfunding();
+  revalidateAdminHome();
 }
 
-export async function reorderCrowdfundingSlides(orderedIds: string[]): Promise<void> {
+export async function reorderHighlights(orderedIds: string[]): Promise<void> {
   await requireAdmin();
   try {
     await prisma.$transaction(
       orderedIds.map((id, index) =>
-        prisma.crowdfundingSlide.update({
+        prisma.highlight.update({
           where: { id },
           data: { position: index + 1 },
         }),
       ),
     );
   } catch (error) {
-    console.error('Reorder crowdfunding slides error:', error);
+    console.error('Reorder highlights error:', error);
   }
-  revalidateCrowdfunding();
+  revalidateAdminHome();
 }
 
 /**
@@ -1483,16 +1488,16 @@ export async function reorderCrowdfundingSlides(orderedIds: string[]): Promise<v
  * Unlike the contact page there is no automatic fallback, so until this runs
  * the section genuinely does not appear.
  */
-export async function createDefaultCrowdfundingSlides(): Promise<void> {
+export async function createDefaultHighlights(): Promise<void> {
   await requireAdmin();
   try {
-    const existing = await prisma.crowdfundingSlide.count();
+    const existing = await prisma.highlight.count();
     if (existing > 0) return;
 
-    const defaults = defaultCrowdfundingSlides();
+    const defaults = defaultHighlights();
     if (defaults.length === 0) return;
 
-    await prisma.crowdfundingSlide.createMany({
+    await prisma.highlight.createMany({
       data: defaults.map((slide) => ({
         titleFr: slide.titleFr,
         titleEn: slide.titleEn,
@@ -1505,7 +1510,7 @@ export async function createDefaultCrowdfundingSlides(): Promise<void> {
       })),
     });
   } catch (error) {
-    console.error('Create default crowdfunding slides error:', error);
+    console.error('Create default highlights error:', error);
   }
-  revalidateCrowdfunding();
+  revalidateAdminHome();
 }

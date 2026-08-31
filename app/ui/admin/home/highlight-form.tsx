@@ -6,12 +6,12 @@ import { Link } from '@/i18n/routing';
 import { toast } from 'sonner';
 import { Button } from '@/app/ui/button';
 import {
-  createCrowdfundingSlide,
-  updateCrowdfundingSlide,
-  type CrowdfundingSlideState,
+  createHighlight,
+  updateHighlight,
+  type HighlightState,
 } from '@/app/lib/actions';
-import { crowdfundingImageSrc, crowdfundingUrl } from '@/app/lib/crowdfunding';
-import type { CrowdfundingSlideRow } from '@/app/lib/definitions';
+import { highlightImageSrc, highlightUrl } from '@/app/lib/highlights';
+import type { HighlightRow } from '@/app/lib/definitions';
 
 const inputClass =
   'block w-full rounded-md border border-input bg-background py-2 px-3 text-sm';
@@ -27,25 +27,25 @@ function FieldErrors({ errors }: { errors?: string[] }) {
   );
 }
 
-export default function CrowdfundingSlideForm({
-  slide,
+export default function HighlightForm({
+  highlight,
 }: {
-  slide?: CrowdfundingSlideRow;
+  highlight?: HighlightRow;
 }) {
-  const t = useTranslations('adminCrowdfunding');
+  const t = useTranslations('adminHighlights');
   const tCommon = useTranslations('common');
 
-  const initialState: CrowdfundingSlideState = { message: null, errors: {} };
-  const action = slide
-    ? updateCrowdfundingSlide.bind(null, slide.id)
-    : createCrowdfundingSlide;
-  const [state, dispatch] = useActionState<CrowdfundingSlideState, FormData>(
+  const initialState: HighlightState = { message: null, errors: {} };
+  const action = highlight
+    ? updateHighlight.bind(null, highlight.id)
+    : createHighlight;
+  const [state, dispatch] = useActionState<HighlightState, FormData>(
     action,
     initialState,
   );
 
-  const [imageUrl, setImageUrl] = useState(slide?.imageUrl ?? '');
-  const [url, setUrl] = useState(slide?.url ?? '');
+  const [imageUrl, setImageUrl] = useState(highlight?.imageUrl ?? '');
+  const [url, setUrl] = useState(highlight?.url ?? '');
   const [isDirty, setIsDirty] = useState(false);
   const [prevState, setPrevState] = useState(state);
 
@@ -62,8 +62,8 @@ export default function CrowdfundingSlideForm({
   // Live echo of what will actually be stored, using the very helpers the
   // renderer and the Zod schema use — so an admin sees a rejected value here
   // rather than after a failed save.
-  const imagePreview = crowdfundingImageSrc(imageUrl);
-  const urlPreview = crowdfundingUrl(url);
+  const imagePreview = highlightImageSrc(imageUrl);
+  const urlPreview = highlightUrl(url);
 
   return (
     <form action={dispatch} onChange={() => setIsDirty(true)}>
@@ -99,7 +99,7 @@ export default function CrowdfundingSlideForm({
           </div>
         </div>
 
-        {/* Campaign link */}
+        {/* Target link */}
         <div className="mb-6">
           <label htmlFor="url" className="mb-2 block text-sm font-medium">
             {t('url')}
@@ -129,7 +129,7 @@ export default function CrowdfundingSlideForm({
               id="titleFr"
               name="titleFr"
               type="text"
-              defaultValue={slide?.titleFr ?? ''}
+              defaultValue={highlight?.titleFr ?? ''}
               className={inputClass}
             />
             <FieldErrors errors={state.errors?.titleFr} />
@@ -142,7 +142,7 @@ export default function CrowdfundingSlideForm({
               id="ctaFr"
               name="ctaFr"
               type="text"
-              defaultValue={slide?.ctaFr ?? ''}
+              defaultValue={highlight?.ctaFr ?? ''}
               className={inputClass}
             />
             <FieldErrors errors={state.errors?.ctaFr} />
@@ -160,7 +160,7 @@ export default function CrowdfundingSlideForm({
               id="titleEn"
               name="titleEn"
               type="text"
-              defaultValue={slide?.titleEn ?? ''}
+              defaultValue={highlight?.titleEn ?? ''}
               className={inputClass}
             />
             <FieldErrors errors={state.errors?.titleEn} />
@@ -173,7 +173,7 @@ export default function CrowdfundingSlideForm({
               id="ctaEn"
               name="ctaEn"
               type="text"
-              defaultValue={slide?.ctaEn ?? ''}
+              defaultValue={highlight?.ctaEn ?? ''}
               className={inputClass}
             />
             <FieldErrors errors={state.errors?.ctaEn} />
@@ -183,13 +183,13 @@ export default function CrowdfundingSlideForm({
 
       <div className="mt-6 flex justify-end gap-4">
         <Link
-          href="/admin/crowdfunding"
+          href="/admin/home?section=highlights"
           className="flex h-10 items-center rounded-lg bg-muted px-4 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted/70"
         >
           {tCommon('cancel')}
         </Link>
-        <Button type="submit" disabled={Boolean(slide) && !isDirty}>
-          {slide ? tCommon('edit') : tCommon('create')}
+        <Button type="submit" disabled={Boolean(highlight) && !isDirty}>
+          {highlight ? tCommon('edit') : tCommon('create')}
         </Button>
       </div>
     </form>

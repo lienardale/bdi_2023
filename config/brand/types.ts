@@ -38,7 +38,7 @@ export type ThemeColors = {
   cardCycleGoldForeground: string;
 };
 
-export type CrowdfundingFeature = {
+export type HighlightFeature = {
   url: string;
   /** Path under /public (e.g. "/brands/bdi/rdi-cover.jpg"). */
   coverImage: string;
@@ -100,11 +100,11 @@ export type Brand = {
   theme: ThemeColors;
   features: {
     /**
-     * The brand's built-in crowdfunding campaign. No longer read at render
-     * time: the home page section is driven by the CrowdfundingSlide table.
-     * This survives as the seed template the admin can materialise into a
-     * real, editable slide with one click on /admin/crowdfunding.
+     * The brand's built-in default highlight — for BDI, its Ulule crowdfunding
+     * campaign. No longer read at render time: the home page section is driven
+     * by the Highlight table. This survives as the seed template the admin can
+     * materialise into a real, editable row with one click on /admin/home.
      */
-    crowdfunding?: CrowdfundingFeature;
+    defaultHighlight?: HighlightFeature;
   };
 };

@@ -5,7 +5,7 @@ import {
   PublisherOption,
   GenresTable,
   ContactSectionRow,
-  CrowdfundingSlideRow,
+  HighlightRow,
   LegalPageRow,
 } from './definitions';
 import { connection } from 'next/server';
@@ -877,9 +877,9 @@ export async function fetchContactSectionById(id: string): Promise<ContactSectio
   );
 }
 
-// ---------- Crowdfunding slides ----------
+// ---------- Home page highlights ----------
 
-const CROWDFUNDING_SLIDE_FIELDS = {
+const HIGHLIGHT_FIELDS = {
   id: true,
   titleFr: true,
   titleEn: true,
@@ -892,63 +892,64 @@ const CROWDFUNDING_SLIDE_FIELDS = {
 } as const;
 
 // `position` is not unique, so `id` breaks ties and keeps the order stable.
-const CROWDFUNDING_SLIDE_ORDER = [
+const HIGHLIGHT_ORDER = [
   { position: 'asc' },
   { id: 'asc' },
 ] as const;
 
 /**
- * The slides the home page renders, in order. How many come back is the whole
- * rendering rule — none hides the section, one is a static banner, several are
- * a carousel — so the inactive rows are filtered out here rather than later.
+ * The highlights the home page renders, in order. How many come back is the
+ * whole rendering rule — none hides the section, one is a static banner,
+ * several are a carousel — so the inactive rows are filtered out here rather
+ * than later.
  */
-export async function fetchActiveCrowdfundingSlides(): Promise<CrowdfundingSlideRow[]> {
+export async function fetchActiveHighlights(): Promise<HighlightRow[]> {
   await connection();
   // The home page must not 500 on a preview deploy built before the migration
   // reached the shared database; an empty list is exactly "no section".
   return withMissingSchemaFallback(
     async () => {
-      const rows = await prisma.crowdfundingSlide.findMany({
+      const rows = await prisma.highlight.findMany({
         where: { active: true },
-        orderBy: [...CROWDFUNDING_SLIDE_ORDER],
-        select: CROWDFUNDING_SLIDE_FIELDS,
+        orderBy: [...HIGHLIGHT_ORDER],
+        select: HIGHLIGHT_FIELDS,
       });
-      return rows as CrowdfundingSlideRow[];
+      return rows as HighlightRow[];
     },
-    [] as CrowdfundingSlideRow[],
-    'fetchActiveCrowdfundingSlides',
+    [] as HighlightRow[],
+    'fetchActiveHighlights',
   );
 }
 
-/** Every slide, active or not — the admin list needs to show and toggle both. */
-export async function fetchAllCrowdfundingSlides(): Promise<CrowdfundingSlideRow[]> {
+/** Every highlight, active or not — the admin list shows and toggles both. */
+export async function fetchAllHighlights(): Promise<HighlightRow[]> {
   await connection();
   return withMissingSchemaFallback(
     async () => {
-      const rows = await prisma.crowdfundingSlide.findMany({
-        orderBy: [...CROWDFUNDING_SLIDE_ORDER],
-        select: CROWDFUNDING_SLIDE_FIELDS,
+      const rows = await prisma.highlight.findMany({
+        orderBy: [...HIGHLIGHT_ORDER],
+        select: HIGHLIGHT_FIELDS,
       });
-      return rows as CrowdfundingSlideRow[];
+      return rows as HighlightRow[];
     },
-    [] as CrowdfundingSlideRow[],
-    'fetchAllCrowdfundingSlides',
+    [] as HighlightRow[],
+    'fetchAllHighlights',
   );
 }
 
-export async function fetchCrowdfundingSlideById(
+export async function fetchHighlightById(
   id: string,
-): Promise<CrowdfundingSlideRow | null> {
+): Promise<HighlightRow | null> {
   await connection();
   return withMissingSchemaFallback(
     async () => {
-      const row = await prisma.crowdfundingSlide.findFirst({
+      const row = await prisma.highlight.findFirst({
         where: { id },
-        select: CROWDFUNDING_SLIDE_FIELDS,
+        select: HIGHLIGHT_FIELDS,
       });
-      return row as CrowdfundingSlideRow | null;
+      return row as HighlightRow | null;
     },
     null,
-    'fetchCrowdfundingSlideById',
+    'fetchHighlightById',
   );
 }

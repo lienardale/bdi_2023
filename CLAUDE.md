@@ -17,9 +17,9 @@ The active brand is selected at build time via the `BRAND` env var (mirrored in 
 
 The brand module lives at `config/brand/`:
 
-- **`types.ts`** — `Brand`, `ThemeColors`, `CrowdfundingFeature` shapes.
-- **`bdi.ts`** — BDI brand config: names, palette, contact info, social URLs, iCal PRODID, assets paths, `features.crowdfunding` populated.
-- **`cmbd.ts`** — CMBD brand config: same shape, Mediterranean palette, CMBD contact info, no crowdfunding.
+- **`types.ts`** — `Brand`, `ThemeColors`, `HighlightFeature` shapes.
+- **`bdi.ts`** — BDI brand config: names, palette, contact info, social URLs, iCal PRODID, assets paths, `features.defaultHighlight` populated.
+- **`cmbd.ts`** — CMBD brand config: same shape, Mediterranean palette, CMBD contact info, no default highlight.
 - **`registry.ts`** — `Record<BrandId, Brand>` mapping.
 - **`index.ts`** — reads `NEXT_PUBLIC_BRAND` (or falls back to `BRAND`), validates, exports the resolved `brand` object.
 
@@ -98,7 +98,7 @@ Prisma schema at `prisma/schema.prisma`. Connection string via `POSTGRES_URL` (m
 
 **Migrations on deploy:** the `vercel-build` script runs `prisma migrate deploy` **only on production deploys** (gated on `VERCEL_ENV=production`) and then `next build`. So each production deployment migrates *its own* database (BDI → Vercel Postgres, CMBD → Neon) from that project's env vars — no manual step, no secrets in git. Preview deploys skip migrate (they share the prod DB, already migrated), and CI (`npm run build`) never runs migrate.
 
-**Core models:** `Event`, `Bd`, `Author`, `Publisher`, `Genre`, `InstagramPost`, `WizardDraft`. Junction tables: `BdAuthor`, `AuthorEvent`, `BdEvent`, `BdGenre`. Prisma client singleton in `app/lib/prisma.ts`.
+**Core models:** `Event`, `Bd`, `Author`, `Publisher`, `Genre`, `InstagramPost`, `WizardDraft`. Site content: `Highlight`, `ContactSection`, `LegalPage`. Junction tables: `BdAuthor`, `AuthorEvent`, `BdEvent`, `BdGenre`. Prisma client singleton in `app/lib/prisma.ts`.
 
 Local Postgres via `docker compose up -d` (see `docker-compose.yml`) — exposes a single `bd_platform` database (`admin/admin`). Because `.env`/`.env.local` point at the remote production DB, target the local one by overriding `POSTGRES_URL` — the `npm run db:*` / `dev:local` helpers do this (see **Tests** above).
 
@@ -115,7 +115,7 @@ CMBD has no seed script — the DB starts empty. Populate via the admin UI or th
 All routes are i18n-aware under `[locale]` (fr/en, default: fr).
 
 **Public pages** — `(dashboard)/` layout group with `SideNav`:
-- `(overview)` — hero banner (brand-driven), next event card, **conditional** crowdfunding banner (only when `brand.features.crowdfunding` is set), Instagram embeds.
+- `(overview)` — hero banner (brand-driven), next event card, admin-managed highlights section (absent with no active `Highlight` row, a static banner with one, a carousel with several), Instagram embeds.
 - `events/`, `events/[id]`
 - `bds/`, `bds/[id]`
 - `authors/`, `authors/[id]`
@@ -125,8 +125,9 @@ All routes are i18n-aware under `[locale]` (fr/en, default: fr).
 **Admin pages** — `/admin/` (protected, Google OAuth + email whitelist):
 - CRUD for events, BDs, authors, publishers, genres
 - `admin/import-export` — CSV import/export
-- `admin/instagram` — Instagram post management
-- `admin/wizard` — multi-step new-event wizard
+- `admin/home` — the editable home page sections as tabs: Highlights (`?section=highlights`, with `admin/home/highlights/create` and `.../[id]/edit`) and Instagram posts (`?section=instagram`)
+- `admin/contact`, `admin/legal` — contact cards and the legal page
+- `admin/events/create` — multi-step new-event wizard
 
 **API routes** — `app/api/`: NextAuth handlers, event ICS, admin CSV export/import.
 
@@ -136,6 +137,7 @@ All routes are i18n-aware under `[locale]` (fr/en, default: fr).
 - **`actions.ts`** — Server Actions, Zod-validated
 - **`definitions.ts`** — TypeScript types
 - **`ics.ts`** — iCalendar generator; PRODID + UID suffix come from `brand.icsPRODID` and `brand.icsUidSuffix`
+- **`highlights.ts`** — home page highlights: URL/image validation, locale resolution, brand default
 - **`csv.ts`** — CSV parse/emit helpers
 - **`prisma.ts`** — Prisma client singleton
 

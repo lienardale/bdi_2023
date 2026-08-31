@@ -153,17 +153,18 @@ model ContactSection {
   @@index([position])
 }
 
-// Slides of the home page crowdfunding section. How many ACTIVE rows there are
-// is what the public page renders off: zero shows nothing at all, one shows a
-// static banner, several show a carousel. English copy is optional and falls
-// back to French.
-model CrowdfundingSlide {
+// Slides of the home page highlights section: whatever the association wants to
+// promote — a crowdfunding campaign, a partner, a book launch, an announcement.
+// How many ACTIVE rows there are is what the public page renders off: zero shows
+// nothing at all, one shows a static banner, several show a carousel. English
+// copy is optional and falls back to French.
+model Highlight {
   id       String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   titleFr  String  @db.VarChar(160)
   titleEn  String? @db.VarChar(160)
   ctaFr    String  @db.VarChar(80)
   ctaEn    String? @db.VarChar(80)
-  // The campaign link (http/https only) and the banner image, which may also be
+  // The target link (http/https only) and the banner image, which may also be
   // a site-relative path such as /brands/bdi/rdi-cover.jpg.
   url      String  @db.VarChar(500)
   imageUrl String  @db.VarChar(500)

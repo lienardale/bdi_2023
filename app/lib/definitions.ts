@@ -171,7 +171,7 @@ export type LegalPageRow = {
   contentEn: string | null;
 };
 
-export type CrowdfundingSlideRow = {
+export type HighlightRow = {
   id: string;
   titleFr: string;
   titleEn: string | null;
@@ -184,7 +184,7 @@ export type CrowdfundingSlideRow = {
 };
 
 /** A row narrowed to one locale, with both URLs already validated. */
-export type ResolvedCrowdfundingSlide = {
+export type ResolvedHighlight = {
   id: string;
   title: string;
   cta: string;

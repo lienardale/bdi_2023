@@ -4,15 +4,14 @@ import {
   ArrowsRightLeftIcon,
   BookOpenIcon,
   CalendarIcon,
-  CameraIcon,
   ChatBubbleLeftIcon,
   DocumentIcon,
   DocumentTextIcon,
   EnvelopeIcon,
-  HeartIcon,
   HomeIcon,
   TagIcon,
   UserGroupIcon,
+  WindowIcon,
 } from '@heroicons/react/24/outline';
 import { Link, usePathname } from '@/i18n/routing';
 import { cn } from '@/app/lib/utils';
@@ -33,9 +32,8 @@ export default function AdminSidebar() {
     { name: t('authors'), href: '/admin/authors' as const, icon: UserGroupIcon },
     { name: tAdmin('genres'), href: '/admin/genres' as const, icon: TagIcon },
     { name: t('publishers'), href: '/admin/publishers' as const, icon: BookOpenIcon },
-    { name: tAdmin('instagram'), href: '/admin/instagram' as const, icon: CameraIcon },
+    { name: tAdmin('homePage'), href: '/admin/home' as const, icon: WindowIcon },
     { name: tAdmin('contact'), href: '/admin/contact' as const, icon: EnvelopeIcon },
-    { name: tAdmin('crowdfunding'), href: '/admin/crowdfunding' as const, icon: HeartIcon },
     { name: tAdmin('legal'), href: '/admin/legal' as const, icon: DocumentTextIcon },
     { name: tAdmin('importExport'), href: '/admin/import-export' as const, icon: ArrowsRightLeftIcon },
   ];

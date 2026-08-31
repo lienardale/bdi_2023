@@ -1,12 +1,12 @@
 import Cards from '@/app/ui/home/cards';
-import CrowdfundingSection from '@/app/ui/home/crowdfunding-section';
+import HighlightsSection from '@/app/ui/home/highlights-section';
 import InstagramFeed from '@/app/ui/home/instagram-feed';
 import { bangers } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import { CardSkeleton } from '@/app/ui/skeletons';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { fetchActiveCrowdfundingSlides, fetchActiveInstagramPosts } from '@/app/lib/data';
-import { crowdfundingSlidesForDisplay } from '@/app/lib/crowdfunding';
+import { fetchActiveHighlights, fetchActiveInstagramPosts } from '@/app/lib/data';
+import { highlightsForDisplay } from '@/app/lib/highlights';
 import { brand } from '@/config/brand';
 
 export async function generateMetadata() {
@@ -15,13 +15,13 @@ export async function generateMetadata() {
 }
 
 export default async function Page() {
-  const [t, instagramPosts, crowdfundingRows, locale] = await Promise.all([
+  const [t, instagramPosts, highlightRows, locale] = await Promise.all([
     getTranslations('home'),
     fetchActiveInstagramPosts(),
-    fetchActiveCrowdfundingSlides(),
+    fetchActiveHighlights(),
     getLocale(),
   ]);
-  const crowdfundingSlides = crowdfundingSlidesForDisplay(crowdfundingRows, locale);
+  const highlights = highlightsForDisplay(highlightRows, locale);
 
   return (
     <main>
@@ -56,8 +56,8 @@ export default async function Page() {
         </Suspense>
       </div>
 
-      {/* Crowdfunding: absent, a static banner, or a carousel — see the section. */}
-      <CrowdfundingSection slides={crowdfundingSlides} />
+      {/* Highlights: absent, a static banner, or a carousel — see the section. */}
+      <HighlightsSection highlights={highlights} />
 
       {/* Instagram feed */}
       <div className="mt-6">

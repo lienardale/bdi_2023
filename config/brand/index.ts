@@ -1,7 +1,7 @@
 import { brands } from './registry';
 import type { Brand, BrandId } from './types';
 
-export type { Brand, BrandAssets, BrandId, CrowdfundingFeature, Locale, ThemeColors } from './types';
+export type { Brand, BrandAssets, BrandId, HighlightFeature, Locale, ThemeColors } from './types';
 export { brands } from './registry';
 
 // NEXT_PUBLIC_BRAND is inlined into the client bundle at build time by Next.js.

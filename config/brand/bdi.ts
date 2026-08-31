@@ -57,7 +57,9 @@ export const bdi: Brand = {
     cardCycleGoldForeground: '#1A1A2E',
   },
   features: {
-    crowdfunding: {
+    // BDI's built-in highlight happens to be a crowdfunding campaign; the copy
+    // below names a real Ulule campaign and stays as-is.
+    defaultHighlight: {
       url: 'https://fr.ulule.com/la-revue-des-idees',
       coverImage: '/brands/bdi/rdi-cover.jpg',
       title: {

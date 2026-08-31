@@ -157,8 +157,14 @@ describe.skipIf(SKIP)('Admin pages (unauthenticated → redirect)', () => {
     expect(res.headers.get('location')).toContain('/fr/login');
   });
 
-  it('GET /fr/admin/crowdfunding redirects to login', async () => {
-    const res = await fetchRoute('/fr/admin/crowdfunding');
+  it('GET /fr/admin/home redirects to login', async () => {
+    const res = await fetchRoute('/fr/admin/home');
+    expect(res.status).toBe(307);
+    expect(res.headers.get('location')).toContain('/fr/login');
+  });
+
+  it('GET /fr/admin/home?section=instagram redirects to login', async () => {
+    const res = await fetchRoute('/fr/admin/home?section=instagram');
     expect(res.status).toBe(307);
     expect(res.headers.get('location')).toContain('/fr/login');
   });
