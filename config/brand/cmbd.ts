@@ -67,6 +67,6 @@ export const cmbd: Brand = {
     cardCycleGoldForeground: '#0B2748',
   },
   features: {
-    // No crowdfunding for CMBD.
+    // No default highlight for CMBD.
   },
 };

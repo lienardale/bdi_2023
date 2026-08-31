@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
-import CrowdfundingSection from '@/app/ui/home/crowdfunding-section';
-import type { ResolvedCrowdfundingSlide } from '@/app/lib/definitions';
+import HighlightsSection from '@/app/ui/home/highlights-section';
+import type { ResolvedHighlight } from '@/app/lib/definitions';
 import fr from '@/messages/fr.json';
 
-function slide(id: string): ResolvedCrowdfundingSlide {
+function highlight(id: string): ResolvedHighlight {
   return {
     id,
     title: `Campagne ${id}`,
@@ -15,23 +15,23 @@ function slide(id: string): ResolvedCrowdfundingSlide {
   };
 }
 
-function renderSection(slides: ResolvedCrowdfundingSlide[]) {
+function renderSection(highlights: ResolvedHighlight[]) {
   return render(
     <NextIntlClientProvider locale="fr" messages={fr}>
-      <CrowdfundingSection slides={slides} />
+      <HighlightsSection highlights={highlights} />
     </NextIntlClientProvider>,
   );
 }
 
-describe('CrowdfundingSection', () => {
-  it('renders nothing when there is no slide', () => {
+describe('HighlightsSection', () => {
+  it('renders nothing when there is no highlight', () => {
     const { container } = renderSection([]);
     expect(container.textContent).toBe('');
     expect(container.querySelector('img')).toBeNull();
   });
 
-  it('renders a static banner for a single slide', () => {
-    const { container } = renderSection([slide('a')]);
+  it('renders a static banner for a single highlight', () => {
+    const { container } = renderSection([highlight('a')]);
 
     expect(container.querySelector('img')?.getAttribute('src')).toBe(
       '/brands/bdi/rdi-cover.jpg',
@@ -43,14 +43,14 @@ describe('CrowdfundingSection', () => {
     expect(link?.getAttribute('rel')).toBe('noopener noreferrer');
   });
 
-  it('gives a single slide no carousel chrome at all', () => {
-    const { container } = renderSection([slide('a')]);
+  it('gives a single highlight no carousel chrome at all', () => {
+    const { container } = renderSection([highlight('a')]);
     expect(container.querySelector('[aria-roledescription="carousel"]')).toBeNull();
     expect(container.querySelectorAll('button')).toHaveLength(0);
   });
 
-  it('renders a carousel for several slides', () => {
-    const { container } = renderSection([slide('a'), slide('b'), slide('c')]);
+  it('renders a carousel for several highlights', () => {
+    const { container } = renderSection([highlight('a'), highlight('b'), highlight('c')]);
 
     const region = container.querySelector('[aria-roledescription="carousel"]');
     expect(region).not.toBeNull();
@@ -58,22 +58,22 @@ describe('CrowdfundingSection', () => {
     expect(container.querySelectorAll('img')).toHaveLength(3);
   });
 
-  it('gives the carousel prev/next controls and one dot per slide', () => {
-    const { container } = renderSection([slide('a'), slide('b'), slide('c')]);
+  it('gives the carousel prev/next controls and one dot per highlight', () => {
+    const { container } = renderSection([highlight('a'), highlight('b'), highlight('c')]);
 
     // Two arrows plus three dots.
     expect(container.querySelectorAll('button')).toHaveLength(5);
     expect(
-      container.querySelector(`[aria-label="${fr.home.crowdfundingPrevious}"]`),
+      container.querySelector(`[aria-label="${fr.home.highlightsPrevious}"]`),
     ).not.toBeNull();
     expect(
-      container.querySelector(`[aria-label="${fr.home.crowdfundingNext}"]`),
+      container.querySelector(`[aria-label="${fr.home.highlightsNext}"]`),
     ).not.toBeNull();
     expect(container.querySelectorAll('[aria-current]')).toHaveLength(3);
   });
 
-  it('marks the first slide as the current one initially', () => {
-    const { container } = renderSection([slide('a'), slide('b')]);
+  it('marks the first highlight as the current one initially', () => {
+    const { container } = renderSection([highlight('a'), highlight('b')]);
     const dots = Array.from(container.querySelectorAll('[aria-current]'));
     expect(dots.map((d) => d.getAttribute('aria-current'))).toEqual(['true', 'false']);
   });

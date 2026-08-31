@@ -2,7 +2,6 @@
 
 import { useActionState, useEffect, useRef, useTransition } from 'react';
 import { useTranslations } from 'next-intl';
-import { lusitana } from '@/app/ui/fonts';
 import { toast } from 'sonner';
 import {
   addInstagramPost,
@@ -27,13 +26,12 @@ type InstagramPostRow = {
   active: boolean;
 };
 
-export default function InstagramAdminClient({
+export default function InstagramPanel({
   posts,
 }: {
   posts: InstagramPostRow[];
 }) {
   const t = useTranslations('adminInstagram');
-  const tCommon = useTranslations('common');
   const formRef = useRef<HTMLFormElement>(null);
 
   const initialState: InstagramPostState = { message: null, errors: {} };
@@ -76,9 +74,7 @@ export default function InstagramAdminClient({
 
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-2 text-xl md:text-2xl`}>
-        {t('title')}
-      </h1>
+      {/* The page owns the <h1>; this panel is one of its tabs. */}
       <p className="mb-6 text-sm text-muted-foreground">{t('description')}</p>
 
       {/* Help box */}

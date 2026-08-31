@@ -3,23 +3,23 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import CrowdfundingSlide from './crowdfunding-slide';
-import type { ResolvedCrowdfundingSlide } from '@/app/lib/definitions';
+import HighlightSlide from './highlight-slide';
+import type { ResolvedHighlight } from '@/app/lib/definitions';
 
 const AUTOPLAY_MS = 6000;
 
 /**
- * The multi-slide crowdfunding banner.
+ * The multi-highlight banner.
  *
  * Scrolling is native: the track is a scroll-snap container, so touch swipe and
  * trackpad gestures work without a gesture library and without JavaScript
  * running per frame. The buttons and dots drive `scrollTo`, and an `onScroll`
  * listener reads the position back so a swipe keeps the dots in sync.
  */
-export default function CrowdfundingCarousel({
-  slides,
+export default function HighlightsCarousel({
+  highlights,
 }: {
-  slides: ResolvedCrowdfundingSlide[];
+  highlights: ResolvedHighlight[];
 }) {
   const t = useTranslations('home');
   const trackRef = useRef<HTMLUListElement>(null);
@@ -39,7 +39,7 @@ export default function CrowdfundingCarousel({
   const goTo = useCallback(
     (next: number) => {
       const track = trackRef.current;
-      const target = (next + slides.length) % slides.length;
+      const target = (next + highlights.length) % highlights.length;
       setIndex(target);
       // jsdom implements neither scrollTo nor layout, so guard both.
       if (!track || typeof track.scrollTo !== 'function') return;
@@ -48,7 +48,7 @@ export default function CrowdfundingCarousel({
         behavior: reducedMotion ? 'auto' : 'smooth',
       });
     },
-    [reducedMotion, slides.length],
+    [reducedMotion, highlights.length],
   );
 
   // Auto-advance, unless the visitor is interacting with it or has asked for
@@ -57,7 +57,7 @@ export default function CrowdfundingCarousel({
     if (paused || reducedMotion) return;
     const timer = setInterval(() => {
       setIndex((current) => {
-        const next = (current + 1) % slides.length;
+        const next = (current + 1) % highlights.length;
         const track = trackRef.current;
         if (track && typeof track.scrollTo === 'function') {
           track.scrollTo({ left: track.clientWidth * next, behavior: 'smooth' });
@@ -66,7 +66,7 @@ export default function CrowdfundingCarousel({
       });
     }, AUTOPLAY_MS);
     return () => clearInterval(timer);
-  }, [paused, reducedMotion, slides.length]);
+  }, [paused, reducedMotion, highlights.length]);
 
   // Read the scroll position back so swiping updates the dots. Throttled to one
   // read per frame, since scroll fires far more often than that.
@@ -101,7 +101,7 @@ export default function CrowdfundingCarousel({
   return (
     <section
       aria-roledescription="carousel"
-      aria-label={t('crowdfundingRegion')}
+      aria-label={t('highlightsRegion')}
       className="relative"
       onKeyDown={handleKeyDown}
       onMouseEnter={() => setPaused(true)}
@@ -114,14 +114,14 @@ export default function CrowdfundingCarousel({
         onScroll={handleScroll}
         className="no-scrollbar flex snap-x snap-mandatory overflow-x-auto rounded-xl"
       >
-        {slides.map((slide, i) => (
+        {highlights.map((highlight, i) => (
           <li
-            key={slide.id}
+            key={highlight.id}
             className="w-full shrink-0 snap-center"
             aria-roledescription="slide"
-            aria-label={`${i + 1} / ${slides.length}`}
+            aria-label={`${i + 1} / ${highlights.length}`}
           >
-            <CrowdfundingSlide slide={slide} heading="div" />
+            <HighlightSlide highlight={highlight} heading="div" />
           </li>
         ))}
       </ul>
@@ -129,7 +129,7 @@ export default function CrowdfundingCarousel({
       <button
         type="button"
         onClick={() => goTo(index - 1)}
-        aria-label={t('crowdfundingPrevious')}
+        aria-label={t('highlightsPrevious')}
         className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
       >
         <ChevronLeftIcon className="h-5 w-5" />
@@ -137,19 +137,19 @@ export default function CrowdfundingCarousel({
       <button
         type="button"
         onClick={() => goTo(index + 1)}
-        aria-label={t('crowdfundingNext')}
+        aria-label={t('highlightsNext')}
         className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
       >
         <ChevronRightIcon className="h-5 w-5" />
       </button>
 
       <div className="absolute inset-x-0 bottom-3 flex justify-center gap-2">
-        {slides.map((slide, i) => (
+        {highlights.map((highlight, i) => (
           <button
-            key={slide.id}
+            key={highlight.id}
             type="button"
             onClick={() => goTo(i)}
-            aria-label={t('crowdfundingGoToSlide', { number: i + 1 })}
+            aria-label={t('highlightsGoToSlide', { number: i + 1 })}
             aria-current={i === index}
             className={`h-2 w-2 rounded-full transition-colors ${
               i === index ? 'bg-white' : 'bg-white/50 hover:bg-white/80'
