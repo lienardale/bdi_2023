@@ -5,6 +5,7 @@ import {
   PublisherOption,
   GenresTable,
   ContactSectionRow,
+  CrowdfundingSlideRow,
   LegalPageRow,
 } from './definitions';
 import { connection } from 'next/server';
@@ -873,5 +874,81 @@ export async function fetchContactSectionById(id: string): Promise<ContactSectio
     },
     null,
     'fetchContactSectionById',
+  );
+}
+
+// ---------- Crowdfunding slides ----------
+
+const CROWDFUNDING_SLIDE_FIELDS = {
+  id: true,
+  titleFr: true,
+  titleEn: true,
+  ctaFr: true,
+  ctaEn: true,
+  url: true,
+  imageUrl: true,
+  position: true,
+  active: true,
+} as const;
+
+// `position` is not unique, so `id` breaks ties and keeps the order stable.
+const CROWDFUNDING_SLIDE_ORDER = [
+  { position: 'asc' },
+  { id: 'asc' },
+] as const;
+
+/**
+ * The slides the home page renders, in order. How many come back is the whole
+ * rendering rule — none hides the section, one is a static banner, several are
+ * a carousel — so the inactive rows are filtered out here rather than later.
+ */
+export async function fetchActiveCrowdfundingSlides(): Promise<CrowdfundingSlideRow[]> {
+  await connection();
+  // The home page must not 500 on a preview deploy built before the migration
+  // reached the shared database; an empty list is exactly "no section".
+  return withMissingSchemaFallback(
+    async () => {
+      const rows = await prisma.crowdfundingSlide.findMany({
+        where: { active: true },
+        orderBy: [...CROWDFUNDING_SLIDE_ORDER],
+        select: CROWDFUNDING_SLIDE_FIELDS,
+      });
+      return rows as CrowdfundingSlideRow[];
+    },
+    [] as CrowdfundingSlideRow[],
+    'fetchActiveCrowdfundingSlides',
+  );
+}
+
+/** Every slide, active or not — the admin list needs to show and toggle both. */
+export async function fetchAllCrowdfundingSlides(): Promise<CrowdfundingSlideRow[]> {
+  await connection();
+  return withMissingSchemaFallback(
+    async () => {
+      const rows = await prisma.crowdfundingSlide.findMany({
+        orderBy: [...CROWDFUNDING_SLIDE_ORDER],
+        select: CROWDFUNDING_SLIDE_FIELDS,
+      });
+      return rows as CrowdfundingSlideRow[];
+    },
+    [] as CrowdfundingSlideRow[],
+    'fetchAllCrowdfundingSlides',
+  );
+}
+
+export async function fetchCrowdfundingSlideById(
+  id: string,
+): Promise<CrowdfundingSlideRow | null> {
+  await connection();
+  return withMissingSchemaFallback(
+    async () => {
+      const row = await prisma.crowdfundingSlide.findFirst({
+        where: { id },
+        select: CROWDFUNDING_SLIDE_FIELDS,
+      });
+      return row as CrowdfundingSlideRow | null;
+    },
+    null,
+    'fetchCrowdfundingSlideById',
   );
 }

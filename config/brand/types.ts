@@ -99,6 +99,12 @@ export type Brand = {
   compactMobileNav: boolean;
   theme: ThemeColors;
   features: {
+    /**
+     * The brand's built-in crowdfunding campaign. No longer read at render
+     * time: the home page section is driven by the CrowdfundingSlide table.
+     * This survives as the seed template the admin can materialise into a
+     * real, editable slide with one click on /admin/crowdfunding.
+     */
     crowdfunding?: CrowdfundingFeature;
   };
 };

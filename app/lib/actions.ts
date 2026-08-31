@@ -11,6 +11,12 @@ import { collectWizardAuthors, derivePublishingYear, prismaErrorMessage } from '
 import { parseInstagramUrl } from './instagram';
 import { sanitizeRichText } from './rich-text';
 import { contactSectionHref, defaultContactSections } from './contact-sections';
+import {
+  CROWDFUNDING_MAX,
+  crowdfundingImageSrc,
+  crowdfundingUrl,
+  defaultCrowdfundingSlides,
+} from './crowdfunding';
 import { fetchOgImage } from './enrichment/og-image';
 import { persistCoverToBlob } from './enrichment/cover-blob';
 
@@ -1289,4 +1295,217 @@ export async function createDefaultContactSections(): Promise<void> {
     console.error('Create default contact sections error:', error);
   }
   revalidateContact();
+}
+
+// Crowdfunding slide actions
+
+const CrowdfundingSlideSchema = z
+  .object({
+    titleFr: z.string().min(1, 'Le titre en français est requis').max(CROWDFUNDING_MAX.title),
+    titleEn: z.string().max(CROWDFUNDING_MAX.title).optional(),
+    ctaFr: z.string().min(1, 'Le texte du bouton en français est requis').max(CROWDFUNDING_MAX.cta),
+    ctaEn: z.string().max(CROWDFUNDING_MAX.cta).optional(),
+    url: z.string().min(1, 'Le lien de la campagne est requis').max(CROWDFUNDING_MAX.url),
+    imageUrl: z.string().min(1, "L'image est requise").max(CROWDFUNDING_MAX.imageUrl),
+  })
+  // The same helpers the renderer uses decide what is storable, so a slide that
+  // would be skipped at render time is rejected here instead of saved silently.
+  .superRefine((data, ctx) => {
+    if (crowdfundingUrl(data.url) === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['url'],
+        message: 'Lien invalide : utilisez une URL https://',
+      });
+    }
+    if (crowdfundingImageSrc(data.imageUrl) === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['imageUrl'],
+        message:
+          'Image invalide : utilisez une URL https:// ou un chemin interne commençant par /',
+      });
+    }
+  });
+
+export type CrowdfundingSlideState = {
+  errors?: {
+    titleFr?: string[];
+    titleEn?: string[];
+    ctaFr?: string[];
+    ctaEn?: string[];
+    url?: string[];
+    imageUrl?: string[];
+  };
+  message?: string | null;
+  success?: boolean;
+};
+
+function revalidateCrowdfunding() {
+  revalidatePath('/[locale]/admin/crowdfunding', 'page');
+  // The home page is the only public consumer. Route groups are not part of the
+  // URL, so `(dashboard)/(overview)` collapses to the bare locale segment.
+  revalidatePath('/[locale]', 'page');
+}
+
+function readCrowdfundingSlideForm(formData: FormData) {
+  return {
+    titleFr: formData.get('titleFr'),
+    titleEn: formData.get('titleEn') || undefined,
+    ctaFr: formData.get('ctaFr'),
+    ctaEn: formData.get('ctaEn') || undefined,
+    url: formData.get('url'),
+    imageUrl: formData.get('imageUrl'),
+  };
+}
+
+export async function createCrowdfundingSlide(
+  prevState: CrowdfundingSlideState,
+  formData: FormData,
+) {
+  await requireAdmin();
+  const validatedFields = CrowdfundingSlideSchema.safeParse(
+    readCrowdfundingSlideForm(formData),
+  );
+
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Champs manquants.',
+    };
+  }
+
+  const data = validatedFields.data;
+  try {
+    const last = await prisma.crowdfundingSlide.findFirst({
+      orderBy: { position: 'desc' },
+      select: { position: true },
+    });
+    await prisma.crowdfundingSlide.create({
+      data: {
+        titleFr: data.titleFr,
+        titleEn: data.titleEn || null,
+        ctaFr: data.ctaFr,
+        ctaEn: data.ctaEn || null,
+        url: data.url.trim(),
+        imageUrl: data.imageUrl.trim(),
+        position: (last?.position ?? 0) + 1,
+      },
+    });
+  } catch (error) {
+    console.error('Create crowdfunding slide error:', error);
+    return { message: 'Erreur: impossible de créer la diapositive.' };
+  }
+
+  revalidateCrowdfunding();
+  redirect(await localizedPath('/admin/crowdfunding'));
+}
+
+export async function updateCrowdfundingSlide(
+  id: string,
+  prevState: CrowdfundingSlideState,
+  formData: FormData,
+) {
+  await requireAdmin();
+  const validatedFields = CrowdfundingSlideSchema.safeParse(
+    readCrowdfundingSlideForm(formData),
+  );
+
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Champs manquants.',
+    };
+  }
+
+  const data = validatedFields.data;
+  try {
+    await prisma.crowdfundingSlide.update({
+      where: { id },
+      data: {
+        titleFr: data.titleFr,
+        titleEn: data.titleEn || null,
+        ctaFr: data.ctaFr,
+        ctaEn: data.ctaEn || null,
+        url: data.url.trim(),
+        imageUrl: data.imageUrl.trim(),
+      },
+    });
+  } catch (error) {
+    console.error('Update crowdfunding slide error:', error);
+    return { message: 'Erreur: impossible de mettre à jour la diapositive.' };
+  }
+
+  revalidateCrowdfunding();
+  return { success: true, message: 'Diapositive mise à jour.' };
+}
+
+export async function deleteCrowdfundingSlide(id: string): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.crowdfundingSlide.delete({ where: { id } });
+  } catch (error) {
+    console.error('Delete crowdfunding slide error:', error);
+  }
+  revalidateCrowdfunding();
+}
+
+export async function toggleCrowdfundingSlide(id: string, active: boolean): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.crowdfundingSlide.update({ where: { id }, data: { active } });
+  } catch (error) {
+    console.error('Toggle crowdfunding slide error:', error);
+  }
+  revalidateCrowdfunding();
+}
+
+export async function reorderCrowdfundingSlides(orderedIds: string[]): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.$transaction(
+      orderedIds.map((id, index) =>
+        prisma.crowdfundingSlide.update({
+          where: { id },
+          data: { position: index + 1 },
+        }),
+      ),
+    );
+  } catch (error) {
+    console.error('Reorder crowdfunding slides error:', error);
+  }
+  revalidateCrowdfunding();
+}
+
+/**
+ * Materialise the brand's built-in campaign as a real, editable row. Offered in
+ * the admin only while the table is empty, and only for a brand that has one.
+ * Unlike the contact page there is no automatic fallback, so until this runs
+ * the section genuinely does not appear.
+ */
+export async function createDefaultCrowdfundingSlides(): Promise<void> {
+  await requireAdmin();
+  try {
+    const existing = await prisma.crowdfundingSlide.count();
+    if (existing > 0) return;
+
+    const defaults = defaultCrowdfundingSlides();
+    if (defaults.length === 0) return;
+
+    await prisma.crowdfundingSlide.createMany({
+      data: defaults.map((slide) => ({
+        titleFr: slide.titleFr,
+        titleEn: slide.titleEn,
+        ctaFr: slide.ctaFr,
+        ctaEn: slide.ctaEn,
+        url: slide.url,
+        imageUrl: slide.imageUrl,
+        position: slide.position,
+        active: slide.active,
+      })),
+    });
+  } catch (error) {
+    console.error('Create default crowdfunding slides error:', error);
+  }
+  revalidateCrowdfunding();
 }
