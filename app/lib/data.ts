@@ -4,6 +4,8 @@ import {
   AuthorsTable,
   PublisherOption,
   GenresTable,
+  ContactSectionRow,
+  LegalPageRow,
 } from './definitions';
 import { connection } from 'next/server';
 import prisma from './prisma';
@@ -795,4 +797,59 @@ export async function fetchAllInstagramPosts() {
     orderBy: { position: 'asc' },
     select: { id: true, shortcode: true, type: true, position: true, active: true },
   });
+}
+
+// ---------- Legal page ----------
+
+/**
+ * The singleton legal page row. The migration seeds it, but a database that
+ * predates the seed (or a hand-truncated table) returns null, which callers
+ * treat exactly like an inactive page.
+ */
+export async function fetchLegalPage(): Promise<LegalPageRow | null> {
+  await connection();
+  return prisma.legalPage.findUnique({
+    where: { key: 'legal' },
+    select: { active: true, contentFr: true, contentEn: true },
+  });
+}
+
+// ---------- Contact sections ----------
+
+const CONTACT_SECTION_FIELDS = {
+  id: true,
+  kind: true,
+  icon: true,
+  titleFr: true,
+  titleEn: true,
+  textFr: true,
+  textEn: true,
+  value: true,
+  position: true,
+  active: true,
+} as const;
+
+/**
+ * Every section, active or not. The public page needs the inactive ones too:
+ * its "fall back to the brand defaults" rule keys off the table being empty,
+ * not off there being no *active* rows.
+ *
+ * `position` is not unique, so `id` breaks ties and keeps the order stable.
+ */
+export async function fetchAllContactSections(): Promise<ContactSectionRow[]> {
+  await connection();
+  const rows = await prisma.contactSection.findMany({
+    orderBy: [{ position: 'asc' }, { id: 'asc' }],
+    select: CONTACT_SECTION_FIELDS,
+  });
+  return rows as ContactSectionRow[];
+}
+
+export async function fetchContactSectionById(id: string): Promise<ContactSectionRow | null> {
+  await connection();
+  const row = await prisma.contactSection.findFirst({
+    where: { id },
+    select: CONTACT_SECTION_FIELDS,
+  });
+  return row as ContactSectionRow | null;
 }

@@ -126,3 +126,47 @@ export type EventsTable = {
   fb_event: string | null;
   cover_url: string | null;
 }
+
+/** Drives the href scheme and the validation applied to a contact section's value. */
+export type ContactSectionKind = 'mail' | 'phone' | 'link';
+
+/** Purely visual: which glyph the card shows. Independent of the kind. */
+export type ContactIconKey =
+  | 'envelope'
+  | 'phone'
+  | 'link'
+  | 'facebook'
+  | 'instagram'
+  | 'website'
+  | 'x'
+  | 'youtube';
+
+export type ContactSectionRow = {
+  id: string;
+  kind: ContactSectionKind;
+  /** Null when the admin made no explicit choice; the kind then decides. */
+  icon: ContactIconKey | null;
+  titleFr: string;
+  titleEn: string | null;
+  textFr: string;
+  textEn: string | null;
+  value: string;
+  position: number;
+  active: boolean;
+};
+
+/** A row narrowed to one locale, with its href already resolved. */
+export type ResolvedContactSection = {
+  id: string;
+  kind: ContactSectionKind;
+  icon: ContactIconKey;
+  title: string;
+  text: string;
+  href: string | null;
+};
+
+export type LegalPageRow = {
+  active: boolean;
+  contentFr: string | null;
+  contentEn: string | null;
+};

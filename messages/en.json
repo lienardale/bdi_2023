@@ -21,7 +21,8 @@
     "confirmDeleteMessage": "Are you sure you want to delete this item?",
     "noData": "No data available.",
     "contact": "Contact",
-    "publishers": "Publishers"
+    "publishers": "Publishers",
+    "legal": "Legal notice"
   },
   "home": {
     "title": "Home",
@@ -112,7 +113,8 @@
     "title": "Contact",
     "description": "Feel free to reach out through any of these channels.",
     "email": "Email",
-    "facebookPage": "{brand} Facebook page"
+    "facebookPage": "{brand} Facebook page",
+    "noChannels": "No contact channels are configured at the moment."
   },
   "login": {
     "description": "Sign in to access the back-office.",
@@ -142,7 +144,9 @@
     "viewOnSite": "View on site",
     "instagram": "Instagram",
     "genres": "Genres",
-    "exportGenres": "Export genres"
+    "exportGenres": "Export genres",
+    "contact": "Contact",
+    "legal": "Legal notice"
   },
   "adminInstagram": {
     "title": "Instagram Posts",
@@ -234,5 +238,80 @@
     "untitledDraft": "Untitled draft",
     "bdCount": "{count} comic(s)",
     "authorCount": "{count} author(s)"
+  },
+  "legal": {
+    "title": "Legal notice",
+    "empty": "The legal notice has not been written yet."
+  },
+  "adminLegal": {
+    "title": "Legal notice",
+    "description": "Write the page content and choose whether it is visible on the site.",
+    "helpTitle": "How it works",
+    "helpVisibility": "While the page is hidden it does not appear in the menu and its address returns a 404.",
+    "helpContent": "Use the toolbar for headings, lists, bold text and links.",
+    "helpEnglish": "English content is optional: if empty, English visitors see the French content.",
+    "visible": "Page visible",
+    "hidden": "Page hidden",
+    "visibleHint": "The page is reachable and the link appears in the menu.",
+    "hiddenHint": "The page cannot be found and the link does not appear in the menu.",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "nowVisible": "The page is now visible on the site.",
+    "nowHidden": "The page is now hidden.",
+    "contentFr": "Content (French)",
+    "contentEn": "Content (English)",
+    "contentEnHelp": "Optional. Leave empty to show the French content to English visitors.",
+    "bold": "Bold",
+    "italic": "Italic",
+    "heading2": "Heading 2",
+    "heading3": "Heading 3",
+    "bulletList": "Bullet list",
+    "orderedList": "Numbered list",
+    "link": "Link",
+    "undo": "Undo",
+    "redo": "Redo",
+    "linkPrompt": "Link address (https://, mailto:, tel: or an internal path starting with /)",
+    "linkInvalid": "Invalid link: use https://, mailto:, tel: or an internal path starting with /."
+  },
+  "adminContact": {
+    "title": "Contact sections",
+    "description": "Manage the cards shown on the public Contact page.",
+    "helpTitle": "How it works",
+    "helpKind": "The kind (email, phone, link) decides the link produced: mailto:, tel: or the address as-is.",
+    "helpIcon": "The icon is purely visual and can be chosen independently of the kind.",
+    "helpEnglish": "English texts are optional: if empty, English visitors see the French texts.",
+    "helpReorder": "The arrows change the order the cards are displayed in.",
+    "usingDefaultsTitle": "No sections configured",
+    "usingDefaults": "The Contact page currently shows the brand's three default channels. Create them to be able to edit, add or remove them.",
+    "createDefaults": "Create the default sections",
+    "kind": "Kind",
+    "kindMail": "Email",
+    "kindPhone": "Phone",
+    "kindLink": "Link",
+    "icon": "Icon",
+    "iconAuto": "Automatic (based on kind)",
+    "iconEnvelope": "Envelope",
+    "iconPhone": "Phone",
+    "iconLink": "Link",
+    "iconFacebook": "Facebook",
+    "iconInstagram": "Instagram",
+    "iconWebsite": "Website",
+    "iconX": "X (Twitter)",
+    "iconYoutube": "YouTube",
+    "value": "Value",
+    "valueHelpMail": "Email address, for example contact@example.com",
+    "valueHelpPhone": "Phone number, for example 06 12 34 56 78",
+    "valueHelpLink": "Full https:// address, or an internal path starting with / (for example /contact-form)",
+    "linkPreview": "Generated link:",
+    "invalidValue": "Invalid value for this kind",
+    "englishHelp": "English texts (optional)",
+    "titleFr": "Title (French)",
+    "titleEn": "Title (English)",
+    "textFr": "Displayed text (French)",
+    "textEn": "Displayed text (English)",
+    "active": "Active",
+    "inactive": "Inactive",
+    "moveUp": "Move up",
+    "moveDown": "Move down"
   }
 }

@@ -7,13 +7,14 @@ import {
   BookOpenIcon,
   EnvelopeIcon,
   BuildingStorefrontIcon,
+  DocumentTextIcon,
 } from '@heroicons/react/24/outline';
 import { Link, usePathname } from '@/i18n/routing';
 import { cn } from '@/app/lib/utils';
 import { useTranslations } from 'next-intl';
 import { brand } from '@/config/brand';
 
-export default function NavLinks() {
+export default function NavLinks({ legalActive = false }: { legalActive?: boolean }) {
   const pathname = usePathname();
   const t = useTranslations('common');
 
@@ -24,6 +25,11 @@ export default function NavLinks() {
     { name: t('authors'), href: '/authors', icon: UserGroupIcon },
     { name: t('publishers'), href: '/publishers', icon: BuildingStorefrontIcon },
     { name: t('contact'), href: '/contact', icon: EnvelopeIcon },
+    // Only once an admin has activated the page — this is a client component,
+    // so the flag is resolved in SideNav and passed down.
+    ...(legalActive
+      ? [{ name: t('legal'), href: '/legal', icon: DocumentTextIcon }]
+      : []),
   ];
 
   return (

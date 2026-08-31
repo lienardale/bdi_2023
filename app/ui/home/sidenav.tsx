@@ -5,12 +5,15 @@ import { ArrowRightOnRectangleIcon, PowerIcon, WrenchScrewdriverIcon } from '@he
 import { auth, signOut } from '@/auth';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { brand } from '@/config/brand';
+import { fetchLegalPage } from '@/app/lib/data';
 
 export default async function SideNav() {
   const session = await auth();
   const isAdmin = (session?.user as any)?.role === 'admin';
   const t = await getTranslations('common');
   const locale = await getLocale();
+  // NavLinks is a client component and cannot query the database itself.
+  const legalPage = await fetchLegalPage();
 
   return (
     <nav aria-label="Main navigation" className={`flex h-full flex-col px-3 ${brand.compactMobileNav ? 'py-2 md:py-4' : 'py-4'} md:px-2 bg-sidebar text-sidebar-foreground`}>
@@ -28,7 +31,7 @@ export default async function SideNav() {
         />
       </Link>
       <div className="flex grow flex-row justify-between space-x-2 overflow-x-auto md:flex-col md:space-x-0 md:space-y-2 md:overflow-x-visible">
-        <NavLinks />
+        <NavLinks legalActive={Boolean(legalPage?.active)} />
         <div className="hidden h-auto w-full grow rounded-md bg-sidebar-border/20 md:block"></div>
         <div className="flex shrink-0 justify-center py-2">
           <LanguageSwitcher />

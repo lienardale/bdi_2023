@@ -121,3 +121,34 @@ model WizardDraft {
 
   @@index([email])
 }
+
+// Singleton: exactly one row, keyed by `key` so writes are a plain upsert.
+// Hidden (404 + no nav link) until an admin flips `active`.
+model LegalPage {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  key       String   @unique @default("legal") @db.VarChar(50)
+  active    Boolean  @default(false)
+  contentFr String?  @db.Text
+  contentEn String?  @db.Text
+  updatedAt DateTime @updatedAt
+}
+
+// Cards on the public contact page. `kind` drives the href scheme and
+// validation, `icon` only drives the glyph. English copy is optional and
+// falls back to French.
+model ContactSection {
+  id       String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  kind     String  @db.VarChar(10)
+  // Null means "no explicit choice" — the glyph is then derived from the kind,
+  // so a mail section never falls back to a chain-link icon.
+  icon     String? @db.VarChar(20)
+  titleFr  String  @db.VarChar(120)
+  titleEn  String? @db.VarChar(120)
+  textFr   String  @db.VarChar(200)
+  textEn   String? @db.VarChar(200)
+  value    String  @db.VarChar(500)
+  position Int
+  active   Boolean @default(true)
+
+  @@index([position])
+}
