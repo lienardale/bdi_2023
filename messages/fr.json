@@ -21,7 +21,8 @@
     "confirmDeleteMessage": "Êtes-vous sûr de vouloir supprimer cet élément ?",
     "noData": "Pas de données disponibles.",
     "contact": "Contact",
-    "publishers": "Maisons d'Édition"
+    "publishers": "Maisons d'Édition",
+    "legal": "Mentions légales"
   },
   "home": {
     "title": "Accueil",
@@ -112,7 +113,8 @@
     "title": "Contact",
     "description": "N'hésitez pas à nous contacter via l'un de ces canaux.",
     "email": "Email",
-    "facebookPage": "Page Facebook {brand}"
+    "facebookPage": "Page Facebook {brand}",
+    "noChannels": "Aucun canal de contact n'est configuré pour le moment."
   },
   "login": {
     "description": "Connectez-vous pour accéder au back-office.",
@@ -142,7 +144,9 @@
     "viewOnSite": "Voir sur le site",
     "instagram": "Instagram",
     "genres": "Genres",
-    "exportGenres": "Exporter les genres"
+    "exportGenres": "Exporter les genres",
+    "contact": "Contact",
+    "legal": "Mentions légales"
   },
   "adminInstagram": {
     "title": "Posts Instagram",
@@ -234,5 +238,80 @@
     "untitledDraft": "Brouillon sans titre",
     "bdCount": "{count} BD(s)",
     "authorCount": "{count} auteur·ice(s)"
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "empty": "Le contenu des mentions légales n'a pas encore été rédigé."
+  },
+  "adminLegal": {
+    "title": "Mentions légales",
+    "description": "Rédigez le contenu de la page et choisissez si elle est visible sur le site.",
+    "helpTitle": "Comment ça marche",
+    "helpVisibility": "Tant que la page est masquée, elle n'apparaît pas dans le menu et son adresse renvoie une erreur 404.",
+    "helpContent": "Utilisez la barre d'outils pour les titres, les listes, le gras et les liens.",
+    "helpEnglish": "Le contenu anglais est facultatif : s'il est vide, les visiteurs anglophones voient le contenu français.",
+    "visible": "Page visible",
+    "hidden": "Page masquée",
+    "visibleHint": "La page est accessible et le lien apparaît dans le menu.",
+    "hiddenHint": "La page est introuvable et le lien n'apparaît pas dans le menu.",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "nowVisible": "La page est maintenant visible sur le site.",
+    "nowHidden": "La page est maintenant masquée.",
+    "contentFr": "Contenu (français)",
+    "contentEn": "Contenu (anglais)",
+    "contentEnHelp": "Facultatif. Laissez vide pour afficher le contenu français aux visiteurs anglophones.",
+    "bold": "Gras",
+    "italic": "Italique",
+    "heading2": "Titre de niveau 2",
+    "heading3": "Titre de niveau 3",
+    "bulletList": "Liste à puces",
+    "orderedList": "Liste numérotée",
+    "link": "Lien",
+    "undo": "Annuler",
+    "redo": "Rétablir",
+    "linkPrompt": "Adresse du lien (https://, mailto:, tel: ou chemin interne commençant par /)",
+    "linkInvalid": "Lien invalide : utilisez https://, mailto:, tel: ou un chemin interne commençant par /."
+  },
+  "adminContact": {
+    "title": "Sections de contact",
+    "description": "Gérez les cartes affichées sur la page Contact du site.",
+    "helpTitle": "Comment ça marche",
+    "helpKind": "Le type (e-mail, téléphone, lien) détermine le lien produit : mailto:, tel: ou l'adresse telle quelle.",
+    "helpIcon": "L'icône est purement visuelle et peut être choisie indépendamment du type.",
+    "helpEnglish": "Les textes anglais sont facultatifs : s'ils sont vides, les visiteurs anglophones voient les textes français.",
+    "helpReorder": "Les flèches modifient l'ordre d'affichage des cartes.",
+    "usingDefaultsTitle": "Aucune section configurée",
+    "usingDefaults": "La page Contact affiche pour l'instant les trois canaux par défaut de la marque. Créez-les pour pouvoir les modifier, en ajouter ou en supprimer.",
+    "createDefaults": "Créer les sections par défaut",
+    "kind": "Type",
+    "kindMail": "E-mail",
+    "kindPhone": "Téléphone",
+    "kindLink": "Lien",
+    "icon": "Icône",
+    "iconAuto": "Automatique (selon le type)",
+    "iconEnvelope": "Enveloppe",
+    "iconPhone": "Téléphone",
+    "iconLink": "Lien",
+    "iconFacebook": "Facebook",
+    "iconInstagram": "Instagram",
+    "iconWebsite": "Site web",
+    "iconX": "X (Twitter)",
+    "iconYoutube": "YouTube",
+    "value": "Valeur",
+    "valueHelpMail": "Adresse e-mail, par exemple contact@exemple.fr",
+    "valueHelpPhone": "Numéro de téléphone, par exemple 06 12 34 56 78",
+    "valueHelpLink": "Adresse https:// complète, ou chemin interne commençant par / (par exemple /contact-formulaire)",
+    "linkPreview": "Lien généré :",
+    "invalidValue": "Valeur invalide pour ce type",
+    "englishHelp": "Textes anglais (facultatifs)",
+    "titleFr": "Titre (français)",
+    "titleEn": "Titre (anglais)",
+    "textFr": "Texte affiché (français)",
+    "textEn": "Texte affiché (anglais)",
+    "active": "Active",
+    "inactive": "Inactive",
+    "moveUp": "Monter",
+    "moveDown": "Descendre"
   }
 }

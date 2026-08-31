@@ -56,6 +56,18 @@ describe.skipIf(SKIP)('Dashboard pages (public)', () => {
     const res = await fetchRoute('/fr/authors');
     expect(res.status).toBe(200);
   });
+
+  it('GET /fr/contact returns 200', async () => {
+    const res = await fetchRoute('/fr/contact');
+    expect(res.status).toBe(200);
+  });
+
+  // The legal page is hidden until an admin activates it, which is the state a
+  // freshly migrated database is in.
+  it('GET /fr/legal returns 404 while the page is inactive', async () => {
+    const res = await fetchRoute('/fr/legal');
+    expect(res.status).toBe(404);
+  });
 });
 
 // Regression guard for the la-bdi.fr outage (P2022 "column does not exist").
@@ -127,6 +139,17 @@ describe.skipIf(SKIP)('Admin pages (unauthenticated → redirect)', () => {
     expect(res.headers.get('location')).toContain('/fr/login');
   }, 15000);
 
+  it('GET /fr/admin/contact redirects to login', async () => {
+    const res = await fetchRoute('/fr/admin/contact');
+    expect(res.status).toBe(307);
+    expect(res.headers.get('location')).toContain('/fr/login');
+  });
+
+  it('GET /fr/admin/legal redirects to login', async () => {
+    const res = await fetchRoute('/fr/admin/legal');
+    expect(res.status).toBe(307);
+    expect(res.headers.get('location')).toContain('/fr/login');
+  });
 });
 
 describe.skipIf(SKIP)('API routes', () => {

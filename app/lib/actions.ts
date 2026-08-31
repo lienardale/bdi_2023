@@ -9,6 +9,8 @@ import { requireAdmin } from './auth-utils';
 import { sanitizeUrl, isValidFbEventUrl, isFacebookCdnUrl, parseFbEventId } from './url-utils';
 import { collectWizardAuthors, derivePublishingYear, prismaErrorMessage } from './wizard-helpers';
 import { parseInstagramUrl } from './instagram';
+import { sanitizeRichText } from './rich-text';
+import { contactSectionHref, defaultContactSections } from './contact-sections';
 import { fetchOgImage } from './enrichment/og-image';
 import { persistCoverToBlob } from './enrichment/cover-blob';
 
@@ -1004,4 +1006,287 @@ export async function reorderInstagramPosts(orderedIds: string[]): Promise<void>
   }
   revalidatePath('/admin/instagram');
   revalidatePath('/');
+}
+
+// Legal page actions
+
+const LegalPageSchema = z.object({
+  contentFr: z.string().optional(),
+  contentEn: z.string().optional(),
+});
+
+export type LegalPageState = {
+  errors?: { contentFr?: string[]; contentEn?: string[] };
+  message?: string | null;
+  success?: boolean;
+};
+
+// Routes physically live under /[locale], so the dynamic segment is spelled out
+// rather than using the bare '/contact' form used elsewhere in this file.
+// Activation moves a link in the side nav, which is part of the layout.
+function revalidateLegal() {
+  revalidatePath('/[locale]/admin/legal', 'page');
+  revalidatePath('/[locale]/legal', 'page');
+  revalidatePath('/[locale]', 'layout');
+}
+
+export async function saveLegalPage(
+  prevState: LegalPageState,
+  formData: FormData,
+): Promise<LegalPageState> {
+  await requireAdmin();
+  const validatedFields = LegalPageSchema.safeParse({
+    contentFr: formData.get('contentFr'),
+    contentEn: formData.get('contentEn'),
+  });
+
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Champs manquants.',
+    };
+  }
+
+  // The editor is a rich-text field, so its HTML is cleaned against an
+  // allowlist before it is stored — never trust what reaches the action.
+  const contentFr = sanitizeRichText(validatedFields.data.contentFr);
+  const contentEn = sanitizeRichText(validatedFields.data.contentEn);
+
+  try {
+    await prisma.legalPage.upsert({
+      where: { key: 'legal' },
+      update: { contentFr, contentEn },
+      create: { key: 'legal', contentFr, contentEn },
+    });
+  } catch (error) {
+    console.error('Save legal page error:', error);
+    return { message: 'Erreur: impossible d\'enregistrer les mentions légales.' };
+  }
+
+  revalidateLegal();
+  return { success: true, message: 'Mentions légales enregistrées.' };
+}
+
+export async function toggleLegalPage(active: boolean): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.legalPage.upsert({
+      where: { key: 'legal' },
+      update: { active },
+      create: { key: 'legal', active },
+    });
+  } catch (error) {
+    console.error('Toggle legal page error:', error);
+  }
+  revalidateLegal();
+}
+
+// Contact section actions
+
+const ContactSectionSchema = z
+  .object({
+    kind: z.enum(['mail', 'phone', 'link'], {
+      errorMap: () => ({ message: 'Type invalide' }),
+    }),
+    // Optional: an unset icon is stored as NULL and the kind decides the glyph.
+    icon: z
+      .enum(['envelope', 'phone', 'link', 'facebook', 'instagram', 'website', 'x', 'youtube'], {
+        errorMap: () => ({ message: 'Icône invalide' }),
+      })
+      .optional(),
+    titleFr: z.string().min(1, 'Le titre en français est requis').max(120),
+    titleEn: z.string().max(120).optional(),
+    textFr: z.string().min(1, 'Le texte en français est requis').max(200),
+    textEn: z.string().max(200).optional(),
+    value: z.string().min(1, 'La valeur est requise').max(500),
+  })
+  // The href helper is the single source of truth for what a kind accepts, so
+  // an unusable value is rejected here rather than stored and skipped later.
+  .superRefine((data, ctx) => {
+    if (contactSectionHref(data.kind, data.value) === null) {
+      const message =
+        data.kind === 'mail'
+          ? 'Adresse e-mail invalide'
+          : data.kind === 'phone'
+            ? 'Numéro de téléphone invalide'
+            : 'Lien invalide : utilisez une URL https:// ou un chemin interne commençant par /';
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['value'], message });
+    }
+  });
+
+export type ContactSectionState = {
+  errors?: {
+    kind?: string[];
+    icon?: string[];
+    titleFr?: string[];
+    titleEn?: string[];
+    textFr?: string[];
+    textEn?: string[];
+    value?: string[];
+  };
+  message?: string | null;
+  success?: boolean;
+};
+
+function revalidateContact() {
+  revalidatePath('/[locale]/admin/contact', 'page');
+  revalidatePath('/[locale]/contact', 'page');
+}
+
+function readContactSectionForm(formData: FormData) {
+  return {
+    kind: formData.get('kind'),
+    icon: formData.get('icon') || undefined,
+    titleFr: formData.get('titleFr'),
+    titleEn: formData.get('titleEn') || undefined,
+    textFr: formData.get('textFr'),
+    textEn: formData.get('textEn') || undefined,
+    value: formData.get('value'),
+  };
+}
+
+export async function createContactSection(
+  prevState: ContactSectionState,
+  formData: FormData,
+) {
+  await requireAdmin();
+  const validatedFields = ContactSectionSchema.safeParse(readContactSectionForm(formData));
+
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Champs manquants.',
+    };
+  }
+
+  const data = validatedFields.data;
+  try {
+    const last = await prisma.contactSection.findFirst({
+      orderBy: { position: 'desc' },
+      select: { position: true },
+    });
+    await prisma.contactSection.create({
+      data: {
+        kind: data.kind,
+        icon: data.icon ?? null,
+        titleFr: data.titleFr,
+        titleEn: data.titleEn || null,
+        textFr: data.textFr,
+        textEn: data.textEn || null,
+        value: data.value.trim(),
+        position: (last?.position ?? 0) + 1,
+      },
+    });
+  } catch (error) {
+    console.error('Create contact section error:', error);
+    return { message: 'Erreur: impossible de créer la section.' };
+  }
+
+  revalidateContact();
+  redirect(await localizedPath('/admin/contact'));
+}
+
+export async function updateContactSection(
+  id: string,
+  prevState: ContactSectionState,
+  formData: FormData,
+) {
+  await requireAdmin();
+  const validatedFields = ContactSectionSchema.safeParse(readContactSectionForm(formData));
+
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Champs manquants.',
+    };
+  }
+
+  const data = validatedFields.data;
+  try {
+    await prisma.contactSection.update({
+      where: { id },
+      data: {
+        kind: data.kind,
+        icon: data.icon ?? null,
+        titleFr: data.titleFr,
+        titleEn: data.titleEn || null,
+        textFr: data.textFr,
+        textEn: data.textEn || null,
+        value: data.value.trim(),
+      },
+    });
+  } catch (error) {
+    console.error('Update contact section error:', error);
+    return { message: 'Erreur: impossible de mettre à jour la section.' };
+  }
+
+  revalidateContact();
+  return { success: true, message: 'Section mise à jour.' };
+}
+
+export async function deleteContactSection(id: string): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.contactSection.delete({ where: { id } });
+  } catch (error) {
+    console.error('Delete contact section error:', error);
+  }
+  revalidateContact();
+}
+
+export async function toggleContactSection(id: string, active: boolean): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.contactSection.update({ where: { id }, data: { active } });
+  } catch (error) {
+    console.error('Toggle contact section error:', error);
+  }
+  revalidateContact();
+}
+
+export async function reorderContactSections(orderedIds: string[]): Promise<void> {
+  await requireAdmin();
+  try {
+    await prisma.$transaction(
+      orderedIds.map((id, index) =>
+        prisma.contactSection.update({
+          where: { id },
+          data: { position: index + 1 },
+        }),
+      ),
+    );
+  } catch (error) {
+    console.error('Reorder contact sections error:', error);
+  }
+  revalidateContact();
+}
+
+/**
+ * Materialise the brand's default cards as real, editable rows. Offered in the
+ * admin only while the table is empty — the public page is already showing
+ * these same defaults via its fallback, so this changes nothing for visitors.
+ */
+export async function createDefaultContactSections(): Promise<void> {
+  await requireAdmin();
+  try {
+    const existing = await prisma.contactSection.count();
+    if (existing > 0) return;
+
+    await prisma.contactSection.createMany({
+      data: defaultContactSections().map((section) => ({
+        kind: section.kind,
+        icon: section.icon,
+        titleFr: section.titleFr,
+        titleEn: section.titleEn,
+        textFr: section.textFr,
+        textEn: section.textEn,
+        value: section.value,
+        position: section.position,
+        active: section.active,
+      })),
+    });
+  } catch (error) {
+    console.error('Create default contact sections error:', error);
+  }
+  revalidateContact();
 }

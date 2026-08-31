@@ -7,6 +7,8 @@ import {
   CameraIcon,
   ChatBubbleLeftIcon,
   DocumentIcon,
+  DocumentTextIcon,
+  EnvelopeIcon,
   HomeIcon,
   TagIcon,
   UserGroupIcon,
@@ -31,6 +33,8 @@ export default function AdminSidebar() {
     { name: tAdmin('genres'), href: '/admin/genres' as const, icon: TagIcon },
     { name: t('publishers'), href: '/admin/publishers' as const, icon: BookOpenIcon },
     { name: tAdmin('instagram'), href: '/admin/instagram' as const, icon: CameraIcon },
+    { name: tAdmin('contact'), href: '/admin/contact' as const, icon: EnvelopeIcon },
+    { name: tAdmin('legal'), href: '/admin/legal' as const, icon: DocumentTextIcon },
     { name: tAdmin('importExport'), href: '/admin/import-export' as const, icon: ArrowsRightLeftIcon },
   ];
 
