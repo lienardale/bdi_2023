@@ -1,4 +1,10 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
+
+// These tests talk to a real dev server, which compiles each route on its first
+// request. On a cold cache that regularly exceeds vitest's 5s default — whichever
+// route is hit first pays for the shared chunk graph (measured ~10s) — so the
+// whole file gets a budget that reflects compile time rather than response time.
+vi.setConfig({ testTimeout: 30000 });
 
 const BASE_URL = process.env.TEST_BASE_URL || 'http://localhost:3000';
 const SKIP = !process.env.TEST_BASE_URL && process.env.CI === 'true';
