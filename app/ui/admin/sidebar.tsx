@@ -9,6 +9,7 @@ import {
   DocumentIcon,
   DocumentTextIcon,
   EnvelopeIcon,
+  HeartIcon,
   HomeIcon,
   TagIcon,
   UserGroupIcon,
@@ -34,6 +35,7 @@ export default function AdminSidebar() {
     { name: t('publishers'), href: '/admin/publishers' as const, icon: BookOpenIcon },
     { name: tAdmin('instagram'), href: '/admin/instagram' as const, icon: CameraIcon },
     { name: tAdmin('contact'), href: '/admin/contact' as const, icon: EnvelopeIcon },
+    { name: tAdmin('crowdfunding'), href: '/admin/crowdfunding' as const, icon: HeartIcon },
     { name: tAdmin('legal'), href: '/admin/legal' as const, icon: DocumentTextIcon },
     { name: tAdmin('importExport'), href: '/admin/import-export' as const, icon: ArrowsRightLeftIcon },
   ];

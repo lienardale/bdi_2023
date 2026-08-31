@@ -170,3 +170,24 @@ export type LegalPageRow = {
   contentFr: string | null;
   contentEn: string | null;
 };
+
+export type CrowdfundingSlideRow = {
+  id: string;
+  titleFr: string;
+  titleEn: string | null;
+  ctaFr: string;
+  ctaEn: string | null;
+  url: string;
+  imageUrl: string;
+  position: number;
+  active: boolean;
+};
+
+/** A row narrowed to one locale, with both URLs already validated. */
+export type ResolvedCrowdfundingSlide = {
+  id: string;
+  title: string;
+  cta: string;
+  url: string;
+  imageUrl: string;
+};
