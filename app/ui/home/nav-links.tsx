@@ -14,7 +14,11 @@ import { cn } from '@/app/lib/utils';
 import { useTranslations } from 'next-intl';
 import { brand } from '@/config/brand';
 
-export default function NavLinks({ legalActive = false }: { legalActive?: boolean }) {
+export default function NavLinks({
+  legalLink = null,
+}: {
+  legalLink?: { name: string; href: string } | null;
+}) {
   const pathname = usePathname();
   const t = useTranslations('common');
 
@@ -26,10 +30,8 @@ export default function NavLinks({ legalActive = false }: { legalActive?: boolea
     { name: t('publishers'), href: '/publishers', icon: BuildingStorefrontIcon },
     { name: t('contact'), href: '/contact', icon: EnvelopeIcon },
     // Only once an admin has activated the page — this is a client component,
-    // so the flag is resolved in SideNav and passed down.
-    ...(legalActive
-      ? [{ name: t('legal'), href: '/legal', icon: DocumentTextIcon }]
-      : []),
+    // so its label and URL (both editable) are resolved in SideNav.
+    ...(legalLink ? [{ ...legalLink, icon: DocumentTextIcon }] : []),
   ];
 
   return (

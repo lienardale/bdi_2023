@@ -69,9 +69,17 @@ describe.skipIf(SKIP)('Dashboard pages (public)', () => {
   });
 
   // The legal page is hidden until an admin activates it, which is the state a
-  // freshly migrated database is in.
+  // freshly migrated database is in. /legal is also the slug it ships with.
   it('GET /fr/legal returns 404 while the page is inactive', async () => {
     const res = await fetchRoute('/fr/legal');
+    expect(res.status).toBe(404);
+  });
+
+  // The legal page is served by a dynamic segment at the top of the (dashboard)
+  // group, so it sees every otherwise-unmatched single-segment URL. Those must
+  // still 404 rather than render it.
+  it('GET /fr/<unknown> returns 404', async () => {
+    const res = await fetchRoute('/fr/pas-une-page');
     expect(res.status).toBe(404);
   });
 });

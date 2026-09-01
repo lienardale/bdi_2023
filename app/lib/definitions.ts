@@ -166,7 +166,10 @@ export type ResolvedContactSection = {
 };
 
 export type LegalPageRow = {
+  slug: string;
   active: boolean;
+  titleFr: string | null;
+  titleEn: string | null;
   contentFr: string | null;
   contentEn: string | null;
 };

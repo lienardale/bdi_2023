@@ -5,6 +5,8 @@ import { redirect } from 'next/navigation';
 import { ArrowUturnLeftIcon, PowerIcon } from '@heroicons/react/24/outline';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { brand } from '@/config/brand';
+import { fetchLegalPage } from '@/app/lib/data';
+import { resolveLegalTitle } from '@/app/lib/legal-page';
 
 export default async function AdminLayout({
   children,
@@ -25,6 +27,11 @@ export default async function AdminLayout({
   const t = await getTranslations('admin');
   const tCommon = await getTranslations('common');
 
+  // The legal page's name is admin-editable, so the sidebar entry follows it
+  // instead of the fixed translation. AdminSidebar is a client component.
+  const legalPage = await fetchLegalPage();
+  const legalLabel = resolveLegalTitle(legalPage, locale, t('legal'));
+
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
       <div className="w-full flex-none md:w-64">
@@ -40,7 +47,7 @@ export default async function AdminLayout({
             />
           </Link>
           <div className="flex grow flex-row justify-between space-x-2 overflow-x-auto md:flex-col md:space-x-0 md:space-y-2 md:overflow-x-visible">
-            <AdminSidebar />
+            <AdminSidebar legalLabel={legalLabel} />
             <div className="hidden h-auto w-full grow rounded-md bg-sidebar-border/20 md:block"></div>
             <div className="flex items-center gap-2 md:flex-col md:items-stretch">
               <Link

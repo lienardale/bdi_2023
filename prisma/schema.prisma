@@ -127,7 +127,14 @@ model WizardDraft {
 model LegalPage {
   id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   key       String   @unique @default("legal") @db.VarChar(50)
+  // URL segment under /[locale], so the page can be renamed (e.g. "chartes")
+  // from the back office rather than by moving a route folder.
+  slug      String   @unique @default("legal") @db.VarChar(60)
   active    Boolean  @default(false)
+  // Heading, tab title and nav label. Null falls back to the `legal.title`
+  // message; English falls back to French, like the content below.
+  titleFr   String?  @db.VarChar(120)
+  titleEn   String?  @db.VarChar(120)
   contentFr String?  @db.Text
   contentEn String?  @db.Text
   updatedAt DateTime @updatedAt

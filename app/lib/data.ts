@@ -816,7 +816,14 @@ export async function fetchLegalPage(): Promise<LegalPageRow | null> {
     () =>
       prisma.legalPage.findUnique({
         where: { key: 'legal' },
-        select: { active: true, contentFr: true, contentEn: true },
+        select: {
+          slug: true,
+          active: true,
+          titleFr: true,
+          titleEn: true,
+          contentFr: true,
+          contentEn: true,
+        },
       }),
     null,
     'fetchLegalPage',
