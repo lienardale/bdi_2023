@@ -12,6 +12,12 @@ import { parseInstagramUrl } from './instagram';
 import { sanitizeRichText } from './rich-text';
 import { contactSectionHref, defaultContactSections } from './contact-sections';
 import {
+  LEGAL_PAGE_MAX,
+  normalizeSlug,
+  validateSlug,
+  type SlugError,
+} from './legal-page';
+import {
   HIGHLIGHT_MAX,
   highlightImageSrc,
   highlightUrl,
@@ -1029,22 +1035,41 @@ export async function reorderInstagramPosts(orderedIds: string[]): Promise<void>
 // Legal page actions
 
 const LegalPageSchema = z.object({
+  slug: z.string(),
+  titleFr: z.string().max(LEGAL_PAGE_MAX.title, 'Titre trop long.').optional(),
+  titleEn: z.string().max(LEGAL_PAGE_MAX.title, 'Titre trop long.').optional(),
   contentFr: z.string().optional(),
   contentEn: z.string().optional(),
 });
 
 export type LegalPageState = {
-  errors?: { contentFr?: string[]; contentEn?: string[] };
+  errors?: {
+    slug?: string[];
+    titleFr?: string[];
+    titleEn?: string[];
+    contentFr?: string[];
+    contentEn?: string[];
+  };
   message?: string | null;
   success?: boolean;
 };
 
+const SLUG_ERROR_MESSAGES: Record<SlugError, string> = {
+  empty: 'Indiquez une adresse pour la page.',
+  invalid:
+    'Adresse invalide : utilisez au moins deux lettres minuscules, chiffres ou tirets (ex. "mentions-legales").',
+  tooLong: `Adresse trop longue (${LEGAL_PAGE_MAX.slug} caractères maximum).`,
+  reserved: 'Cette adresse est déjà utilisée par une autre page du site.',
+};
+
 // Routes physically live under /[locale], so the dynamic segment is spelled out
 // rather than using the bare '/contact' form used elsewhere in this file.
+// The page's own segment is dynamic too: spelling it as the route pattern
+// flushes every slug, which matters when the admin has just renamed it.
 // Activation moves a link in the side nav, which is part of the layout.
 function revalidateLegal() {
   revalidatePath('/[locale]/admin/legal', 'page');
-  revalidatePath('/[locale]/legal', 'page');
+  revalidatePath('/[locale]/[legalSlug]', 'page');
   revalidatePath('/[locale]', 'layout');
 }
 
@@ -1054,6 +1079,9 @@ export async function saveLegalPage(
 ): Promise<LegalPageState> {
   await requireAdmin();
   const validatedFields = LegalPageSchema.safeParse({
+    slug: formData.get('slug'),
+    titleFr: formData.get('titleFr'),
+    titleEn: formData.get('titleEn'),
     contentFr: formData.get('contentFr'),
     contentEn: formData.get('contentEn'),
   });
@@ -1065,6 +1093,23 @@ export async function saveLegalPage(
     };
   }
 
+  // The slug is the public URL, so it is normalized (accents folded, spaces to
+  // hyphens) before being checked against the format and the route names it
+  // could never win against.
+  const slug = normalizeSlug(validatedFields.data.slug);
+  const slugError = validateSlug(slug);
+  if (slugError) {
+    return {
+      errors: { slug: [SLUG_ERROR_MESSAGES[slugError]] },
+      message: 'Adresse de page invalide.',
+    };
+  }
+
+  // Empty titles are stored as NULL so the page falls back to the translated
+  // default rather than rendering a blank heading.
+  const titleFr = validatedFields.data.titleFr?.trim() || null;
+  const titleEn = validatedFields.data.titleEn?.trim() || null;
+
   // The editor is a rich-text field, so its HTML is cleaned against an
   // allowlist before it is stored — never trust what reaches the action.
   const contentFr = sanitizeRichText(validatedFields.data.contentFr);
@@ -1073,16 +1118,16 @@ export async function saveLegalPage(
   try {
     await prisma.legalPage.upsert({
       where: { key: 'legal' },
-      update: { contentFr, contentEn },
-      create: { key: 'legal', contentFr, contentEn },
+      update: { slug, titleFr, titleEn, contentFr, contentEn },
+      create: { key: 'legal', slug, titleFr, titleEn, contentFr, contentEn },
     });
   } catch (error) {
     console.error('Save legal page error:', error);
-    return { message: 'Erreur: impossible d\'enregistrer les mentions légales.' };
+    return { message: 'Erreur: impossible d\'enregistrer la page.' };
   }
 
   revalidateLegal();
-  return { success: true, message: 'Mentions légales enregistrées.' };
+  return { success: true, message: 'Page enregistrée.' };
 }
 
 export async function toggleLegalPage(active: boolean): Promise<void> {

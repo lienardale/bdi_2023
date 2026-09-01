@@ -64,6 +64,9 @@ vi.mock('@/app/lib/prisma', () => ({
       delete: vi.fn(),
       updateMany: vi.fn(),
     },
+    legalPage: {
+      upsert: vi.fn(),
+    },
   },
 }));
 
@@ -80,6 +83,7 @@ import {
   createPublisher,
   updatePublisher,
   deletePublisher,
+  saveLegalPage,
 } from '@/app/lib/actions';
 import { auth } from '@/auth';
 import prisma from '@/app/lib/prisma';
@@ -508,6 +512,85 @@ describe('Server Actions', () => {
       vi.mocked(prisma.publisher.create).mockRejectedValue(new Error('DB error'));
       const fd = makeFormData({ name: 'Test', parentId: '' });
       const result = await createPublisher({}, fd);
+      expect(result.message).toContain('Erreur');
+    });
+  });
+
+  // The legal page's name and URL are admin-editable, so the action is what
+  // stands between an admin's typing and the public route.
+  describe('saveLegalPage', () => {
+    const LEGAL_DEFAULTS: Record<string, string> = {
+      slug: 'chartes', titleFr: '', titleEn: '', contentFr: '', contentEn: '',
+    };
+
+    it('stores the normalized slug and the titles', async () => {
+      const fd = makeFormData(
+        { slug: '  Nos Chartes ! ', titleFr: 'Chartes', titleEn: 'Charters' },
+        LEGAL_DEFAULTS,
+      );
+      const result = await saveLegalPage({}, fd);
+
+      expect(result.success).toBe(true);
+      expect(vi.mocked(prisma.legalPage.upsert)).toHaveBeenCalledWith(
+        expect.objectContaining({
+          update: expect.objectContaining({
+            slug: 'nos-chartes',
+            titleFr: 'Chartes',
+            titleEn: 'Charters',
+          }),
+        }),
+      );
+    });
+
+    it('stores an empty title as null so the default label applies', async () => {
+      const fd = makeFormData({ titleFr: '   ', titleEn: '' }, LEGAL_DEFAULTS);
+      await saveLegalPage({}, fd);
+
+      expect(vi.mocked(prisma.legalPage.upsert)).toHaveBeenCalledWith(
+        expect.objectContaining({
+          update: expect.objectContaining({ titleFr: null, titleEn: null }),
+        }),
+      );
+    });
+
+    it('sanitizes the rich-text content', async () => {
+      const fd = makeFormData(
+        { contentFr: '<p>Texte<script>alert(1)</script></p>' },
+        LEGAL_DEFAULTS,
+      );
+      await saveLegalPage({}, fd);
+
+      const { update } = vi.mocked(prisma.legalPage.upsert).mock.calls[0][0] as any;
+      expect(update.contentFr).not.toContain('script');
+      expect(update.contentFr).toContain('Texte');
+    });
+
+    it('rejects a slug an existing route would swallow, without writing', async () => {
+      const fd = makeFormData({ slug: 'events' }, LEGAL_DEFAULTS);
+      const result = await saveLegalPage({}, fd);
+
+      expect(result.errors?.slug?.length).toBeGreaterThan(0);
+      expect(vi.mocked(prisma.legalPage.upsert)).not.toHaveBeenCalled();
+    });
+
+    it('rejects an empty slug, without writing', async () => {
+      const fd = makeFormData({ slug: '   ' }, LEGAL_DEFAULTS);
+      const result = await saveLegalPage({}, fd);
+
+      expect(result.errors?.slug?.length).toBeGreaterThan(0);
+      expect(vi.mocked(prisma.legalPage.upsert)).not.toHaveBeenCalled();
+    });
+
+    it('requires an admin', async () => {
+      mockAuth.mockResolvedValue(null);
+      await expect(saveLegalPage({}, makeFormData({}, LEGAL_DEFAULTS))).rejects.toThrow(
+        'Unauthorized',
+      );
+    });
+
+    it('returns an error message on Prisma failure', async () => {
+      vi.mocked(prisma.legalPage.upsert).mockRejectedValue(new Error('DB error'));
+      const result = await saveLegalPage({}, makeFormData({}, LEGAL_DEFAULTS));
       expect(result.message).toContain('Erreur');
     });
   });

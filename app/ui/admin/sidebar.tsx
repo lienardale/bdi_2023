@@ -18,7 +18,14 @@ import { cn } from '@/app/lib/utils';
 import { useTranslations } from 'next-intl';
 import { brand } from '@/config/brand';
 
-export default function AdminSidebar() {
+export default function AdminSidebar({
+  // The legal page can be renamed from the back office, so the admin entry
+  // shows the same name as the public site. Resolved in the layout — this is a
+  // client component. Falls back to the translated default when unnamed.
+  legalLabel,
+}: {
+  legalLabel?: string;
+}) {
   const pathname = usePathname();
   const t = useTranslations('common');
   const tAdmin = useTranslations('admin');
@@ -34,7 +41,7 @@ export default function AdminSidebar() {
     { name: t('publishers'), href: '/admin/publishers' as const, icon: BookOpenIcon },
     { name: tAdmin('homePage'), href: '/admin/home' as const, icon: WindowIcon },
     { name: tAdmin('contact'), href: '/admin/contact' as const, icon: EnvelopeIcon },
-    { name: tAdmin('legal'), href: '/admin/legal' as const, icon: DocumentTextIcon },
+    { name: legalLabel || tAdmin('legal'), href: '/admin/legal' as const, icon: DocumentTextIcon },
     { name: tAdmin('importExport'), href: '/admin/import-export' as const, icon: ArrowsRightLeftIcon },
   ];
 
